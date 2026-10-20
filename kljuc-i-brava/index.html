@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ključ i brava – ključar 0–24, Vračar i Zvezdara</title>
+<meta name="description" content="Hitno otvaranje vrata, zamena cilindra, sigurnosne brave, kopiranje ključeva i auto ključevi. Dolazak za 30–45 minuta na Vračaru i Zvezdari. Mileševska 12, Vračar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:wght@400;500;700;900&display=swap&subset=latin-ext" rel="stylesheet">
+<style>
+:root{
+  --steel:#3C4A57;
+  --steel-2:#2F3A45;
+  --yellow:#F2C14E;
+  --white:#FFFFFF;
+  --ink:#15191D;
+  --paper:#F4F5F6;
+  --slab:"Alfa Slab One","Rockwell","Roboto Slab","Arial Black",Georgia,serif;
+  --body:"Roboto","Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--body);font-size:1.0625rem;line-height:1.55;color:var(--ink);background:var(--white);padding-bottom:72px}
+img,svg{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;box-shadow:0 0 0 6px var(--ink)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 18px}
+h1,h2,h3{font-family:var(--slab);font-weight:400;line-height:1.02;margin:0}
+
+.demo-bar{background:var(--ink);color:#C9D1D8;font-size:.78rem}
+.demo-bar .wrap{display:flex;justify-content:space-between;gap:10px;padding-top:5px;padding-bottom:5px}
+.demo-bar a{color:var(--yellow)}
+
+/* zaglavlje */
+.head{background:var(--ink);color:var(--white);position:sticky;top:0;z-index:30;border-bottom:4px solid var(--yellow)}
+.head .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:62px}
+.brand{font-family:var(--slab);font-size:1.25rem;color:var(--yellow);text-decoration:none;white-space:nowrap}
+.brand small{display:block;font-family:var(--body);font-size:.68rem;color:#C9D1D8;font-weight:500;letter-spacing:.02em;margin-top:2px}
+.burger{width:46px;height:42px;background:var(--yellow);border:0;cursor:pointer;display:grid;place-content:center;gap:5px;padding:0}
+.burger span{display:block;width:22px;height:3px;background:var(--ink);transition:transform .2s,opacity .2s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.menu{display:none;position:absolute;top:66px;left:0;right:0;background:var(--ink);border-bottom:4px solid var(--yellow)}
+.menu.open{display:block}
+.menu ul{list-style:none;margin:0;padding:6px 18px 18px}
+.menu a{display:block;padding:13px 0;color:var(--white);text-decoration:none;font-weight:700;font-size:1.1rem;border-bottom:1px solid rgba(255,255,255,.12)}
+.menu a:hover{color:var(--yellow)}
+
+/* hitno */
+.urgent{background:var(--yellow);color:var(--ink);padding:22px 0 26px;border-bottom:4px solid var(--ink)}
+.eta{display:flex;align-items:center;gap:12px;font-weight:700;font-size:1.05rem;line-height:1.3;margin:0 0 10px}
+.eta svg{flex:none}
+.bigphone{display:block;font-family:var(--slab);font-size:clamp(2.2rem,11vw,6.2rem);line-height:1;color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+.bigphone:hover{text-decoration:underline;text-decoration-thickness:6px;text-underline-offset:8px}
+.urgent-sub{margin:10px 0 0;font-weight:500}
+
+.hero{background:var(--steel);color:var(--white);padding:46px 0 52px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 14px);pointer-events:none}
+.hero .wrap{position:relative}
+.title{position:relative;margin:0 0 30px;padding:6px 0;overflow:visible}
+.title h1{font-size:clamp(2.6rem,11.5vw,6.2rem);line-height:1.05;position:relative}
+.title h1 .l1,.title h1 .l2{display:block}
+.title h1 .l2{padding-left:.4em}
+.key{display:block;width:108%;max-width:none;height:auto;margin:-.16em 0 -.1em -5%;transform:rotate(-3.5deg);pointer-events:none;filter:drop-shadow(5px 7px 0 rgba(21,25,29,.55))}
+.hero p.lead{max-width:34em;font-size:1.12rem;color:#E6EBEF;margin:0 0 26px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.b{display:inline-flex;align-items:center;gap:10px;font-family:var(--slab);font-size:1.15rem;text-decoration:none;padding:15px 22px;border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);transition:transform .1s,box-shadow .1s;cursor:pointer;line-height:1.1}
+.b:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--ink)}
+.b:active{transform:translate(5px,5px);box-shadow:0 0 0 var(--ink)}
+.b-y{background:var(--yellow);color:var(--ink)}
+.b-w{background:var(--white);color:var(--ink)}
+.facts{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:10px;font-weight:500}
+.facts li{display:flex;gap:10px;align-items:flex-start}
+.facts li::before{content:"";flex:none;width:12px;height:12px;margin-top:6px;background:var(--yellow);transform:rotate(45deg)}
+
+/* sekcije */
+section{scroll-margin-top:74px}
+.s{padding:64px 0}
+.s h2{font-size:clamp(2.1rem,8vw,3.6rem);margin-bottom:12px}
+.s .sub{max-width:38em;margin:0 0 30px;font-size:1.05rem}
+
+/* usluge */
+.svc{display:grid;gap:22px}
+.card{border:3px solid var(--ink);background:var(--white);padding:22px 20px 20px;box-shadow:8px 8px 0 var(--yellow);display:flex;flex-direction:column}
+.card h3{font-size:1.5rem;margin-bottom:10px}
+.card p{margin:0 0 16px;color:#38424C}
+.card .price{margin-top:auto;border-top:3px solid var(--ink);padding-top:12px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.card .price b{font-family:var(--slab);font-weight:400;font-size:1.65rem;white-space:nowrap}
+.card .price span{font-size:.9rem;color:#4B5560}
+.card ul{margin:0 0 16px;padding-left:18px;color:#38424C}
+.card ul li{margin:2px 0}
+.svc-note{margin-top:28px;font-weight:500}
+
+/* tarife */
+.rates{background:var(--ink);color:var(--white)}
+.rates h2{color:var(--yellow)}
+.rgrid{display:grid;gap:0;border:3px solid var(--yellow)}
+.rate{padding:22px 20px;border-bottom:3px solid var(--yellow)}
+.rate:last-child{border-bottom:0}
+.rate .when{font-weight:700;color:#C9D1D8;font-size:.95rem;margin:0 0 6px}
+.rate .pct{font-family:var(--slab);font-size:clamp(2.6rem,10vw,3.8rem);line-height:1;color:var(--yellow);margin:0 0 8px}
+.rate p{margin:0;color:#DDE3E8}
+.rate.day .pct{color:var(--white);font-size:clamp(1.9rem,7vw,2.5rem);line-height:1.05}
+.zones{margin-top:30px;display:grid;gap:14px}
+.zone{display:flex;gap:14px;align-items:baseline;border-left:6px solid var(--yellow);padding:4px 0 4px 14px}
+.zone b{font-family:var(--slab);font-weight:400;font-size:1.3rem;color:var(--yellow);white-space:nowrap}
+.zone span{color:#DDE3E8}
+
+/* FAQ */
+.faq{background:var(--steel);color:var(--white)}
+.acc{border-top:3px solid var(--ink)}
+.acc-item{border-bottom:3px solid var(--ink)}
+.acc-item h3{font-family:var(--body);font-weight:700;font-size:1.1rem;line-height:1.35}
+.acc-btn{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;background:none;border:0;color:var(--white);font:inherit;text-align:left;padding:18px 0;cursor:pointer}
+.acc-btn:hover{color:var(--yellow)}
+.acc-btn .ic{flex:none;width:34px;height:34px;background:var(--yellow);position:relative;border:2px solid var(--ink)}
+.acc-btn .ic::before,.acc-btn .ic::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:3px;background:var(--ink);transform:translate(-50%,-50%)}
+.acc-btn .ic::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .2s}
+.acc-btn[aria-expanded="true"] .ic::after{transform:translate(-50%,-50%) rotate(0)}
+.acc-panel{padding:0 0 20px;max-width:44em;color:#E6EBEF}
+.acc-panel p{margin:0}
+.acc-panel[hidden]{display:none}
+
+/* radionica */
+.shop{background:var(--paper)}
+.shop-grid{display:grid;gap:30px}
+table.hrs{width:100%;border-collapse:collapse;border:3px solid var(--ink);background:var(--white)}
+.hrs caption{text-align:left;font-family:var(--slab);font-size:1.25rem;padding-bottom:10px}
+.hrs th,.hrs td{padding:10px 12px;border-bottom:1px solid #D5DAE0;text-align:left;font-size:.98rem}
+.hrs thead th{background:var(--ink);color:var(--yellow);font-weight:700;border-bottom:0}
+.hrs tbody th{font-weight:500}
+.hrs td.n{color:#5B6570}
+.hrs td.all{font-weight:700}
+.adr{font-family:var(--slab);font-size:1.6rem;margin:0 0 4px}
+.adr-note{margin:0 0 16px;color:#38424C}
+.map{border:3px solid var(--ink);height:300px;background:var(--steel)}
+.map iframe{display:block;width:100%;height:100%;border:0}
+.photo{height:180px;margin-top:22px;background:var(--steel);color:#DDE3E8;border:3px solid var(--ink);display:flex;align-items:flex-end;padding:12px 14px;font-size:.85rem;background-image:repeating-linear-gradient(45deg,rgba(242,193,78,.18) 0 12px,transparent 12px 24px)}
+
+/* forma */
+.form-s{background:var(--white)}
+.fgrid{display:grid;gap:30px}
+form{display:grid;gap:16px;border:3px solid var(--ink);padding:22px 18px;box-shadow:8px 8px 0 var(--steel)}
+label{display:block;font-weight:700;font-size:.95rem;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:1rem;padding:12px;border:2px solid var(--ink);background:var(--white);color:var(--ink);border-radius:0}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{background:#FFF9E8}
+.two{display:grid;gap:16px}
+.form-msg{display:none;margin:0;background:var(--yellow);border:3px solid var(--ink);padding:14px;font-weight:700}
+.form-msg.show{display:block}
+.form-aside p{margin:0 0 14px}
+.form-aside .callbox{background:var(--ink);color:var(--white);padding:20px;margin-top:20px}
+.form-aside .callbox a{font-family:var(--slab);font-size:1.7rem;color:var(--yellow);text-decoration:none;display:block;margin-top:4px}
+
+footer{background:var(--ink);color:#C9D1D8;padding:30px 0;font-size:.9rem}
+footer .wrap{display:grid;gap:8px}
+footer p{margin:0}
+footer a{color:var(--yellow)}
+
+/* stalna traka za poziv na telefonu */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;background:var(--ink);border-top:4px solid var(--yellow)}
+.callbar a{flex:1;text-align:center;padding:14px 8px;text-decoration:none;font-weight:900;font-size:1rem}
+.callbar .c1{background:var(--yellow);color:var(--ink)}
+.callbar .c2{color:var(--white)}
+
+@media (min-width:720px){
+  .svc{grid-template-columns:1fr 1fr}
+  .two{grid-template-columns:1fr 1fr}
+}
+@media (min-width:960px){
+  body{padding-bottom:0}
+  .callbar{display:none}
+  .wrap{padding:0 32px}
+  .burger{display:none}
+  .menu{display:block;position:static;background:none;border:0}
+  .menu ul{display:flex;gap:26px;padding:0}
+  .menu a{border:0;padding:4px 0;font-size:.98rem}
+  .urgent .wrap{display:grid;grid-template-columns:auto minmax(240px,1fr);align-items:end;gap:10px 40px}
+  .urgent .eta{grid-column:1/-1}
+  .urgent-sub{margin:0 0 14px;max-width:22em}
+  .hero{padding:70px 0 80px}
+  .hero-inner{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:end}
+  .facts{margin:0}
+  .svc{grid-template-columns:repeat(6,1fr)}
+  .svc .card{grid-column:span 2}
+  .svc .card.wide{grid-column:span 3}
+  .rgrid{grid-template-columns:1fr 1fr 1fr}
+  .rate{border-bottom:0;border-right:3px solid var(--yellow)}
+  .rate:last-child{border-right:0}
+  .zones{grid-template-columns:1fr 1fr}
+  .shop-grid{grid-template-columns:1fr 1.2fr;gap:50px}
+  .fgrid{grid-template-columns:1fr 1.5fr;gap:56px}
+  form{padding:30px}
+  .faq-grid{display:grid;grid-template-columns:1fr 2fr;gap:50px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-bar"><div class="wrap"><span>Primer sajta · izradio opsforma</span><a href="../">Svi primeri</a></div></div>
+
+<header class="head">
+  <div class="wrap">
+    <a class="brand" href="#hitno">Ključ i brava<small>ključar i bravar, Vračar</small></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Otvori meni"><span></span><span></span><span></span></button>
+    <nav class="menu" id="menu" aria-label="Glavna navigacija">
+      <ul>
+        <li><a href="#usluge">Usluge i cene</a></li>
+        <li><a href="#tarife">Noćna i vikend tarifa</a></li>
+        <li><a href="#pitanja">Pitanja</a></li>
+        <li><a href="#radionica">Radionica</a></li>
+        <li><a href="#upit">Upit</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="urgent" id="hitno" aria-label="Hitan poziv">
+  <div class="wrap">
+    <p class="eta">
+      <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="12.5" fill="none" stroke="#15191D" stroke-width="3"/><path d="M15 8v8l5 3" fill="none" stroke="#15191D" stroke-width="3" stroke-linecap="square"/></svg>
+      Dolazak za 30–45 minuta na Vračaru i Zvezdari
+    </p>
+    <a class="bigphone" href="tel:+381600000224" aria-label="Pozovite 060 000 02 24">060 000 02 24</a>
+    <p class="urgent-sub">Dežuramo 0–24, i vikendom i praznicima. Cenu kažemo telefonom, pre nego što krenemo.</p>
+  </div>
+</section>
+
+<section class="hero" aria-labelledby="naslov">
+  <div class="wrap hero-inner">
+    <div>
+      <div class="title">
+        <h1 id="naslov"><span class="l1">Ostali ste</span><svg class="key" viewBox="70 6 1310 158" aria-hidden="true" focusable="false">
+          <g stroke="#15191D" stroke-width="6" stroke-linejoin="round">
+            <path d="M80 85 a72 72 0 1 0 144 0 a72 72 0 1 0 -144 0 Z M124 85 a28 28 0 1 1 56 0 a28 28 0 1 1 -56 0 Z" fill="#F2C14E" fill-rule="evenodd"/>
+            <rect x="214" y="62" width="40" height="46" fill="#F2C14E"/>
+            <path d="M250 66 H1336 L1368 85 L1336 104 H1300 V124 H1272 L1260 140 H1236 V118 H1208 V146 H1180 L1168 128 H1144 V112 H1116 V138 H1090 V104 H250 Z" fill="#F2C14E"/>
+          </g>
+          <path d="M268 85 H1290" stroke="#15191D" stroke-width="4" stroke-linecap="round" opacity=".55"/>
+        </svg><span class="l2">ispred vrata?</span></h1>
+      </div>
+      <p class="lead">Otvaramo zaključana i zalupljena vrata, menjamo cilindre i brave, kopiramo ključeve. Standardne cilindre otvaramo bez oštećenja.</p>
+      <div class="btns">
+        <a class="b b-y" href="tel:+381600000224">Pozovite</a>
+        <a class="b b-w" href="viber://chat?number=%2B381600000224">Pišite na Viber</a>
+      </div>
+    </div>
+    <ul class="facts">
+      <li>Izlazak na Vračar i Zvezdaru uračunat u cenu</li>
+      <li>Plaćanje gotovinom ili karticom na licu mesta</li>
+      <li>Pre otvaranja proveravamo da li stanujete na adresi</li>
+    </ul>
+  </div>
+</section>
+
+<section class="s" id="usluge" aria-labelledby="usluge-h">
+  <div class="wrap">
+    <h2 id="usluge-h">Usluge i cene</h2>
+    <p class="sub">Cene važe za dnevnu tarifu, radnim danima od 7 do 20 h. Delovi (cilindar, brava) se plaćaju posebno, a pre ugradnje vam kažemo tačnu cenu.</p>
+    <div class="svc">
+      <article class="card wide">
+        <h3>Otvaranje vrata</h3>
+        <p>Zalupljena vrata, ključ ostao unutra, izgubljen ključ, zaglavljena brava. Stan, kuća, podrum, poslovni prostor.</p>
+        <div class="price"><b>od 4.000 RSD</b><span>sa izlaskom</span></div>
+      </article>
+      <article class="card wide">
+        <h3>Zamena cilindra</h3>
+        <p>Posle gubitka ključa ili useljenja. Donosimo više modela, birate na licu mesta. Uz cilindar dobijate 5 ključeva.</p>
+        <div class="price"><b>2.500 RSD</b><span>rad + cilindar od 2.000 RSD</span></div>
+      </article>
+      <article class="card">
+        <h3>Sigurnosne brave</h3>
+        <ul><li>ugradnja brave i okova</li><li>sigurnosni cilindar sa karticom</li><li>dodatna brava na vratima</li></ul>
+        <div class="price"><b>od 7.500 RSD</b><span>rad</span></div>
+      </article>
+      <article class="card">
+        <h3>Kopiranje ključeva</h3>
+        <ul><li>obični ključ: 300 RSD</li><li>sigurnosni ključ: od 1.500 RSD</li><li>u radionici, dok čekate</li></ul>
+        <div class="price"><b>od 300 RSD</b><span>po ključu</span></div>
+      </article>
+      <article class="card">
+        <h3>Auto ključevi</h3>
+        <ul><li>kopija ključa sa čipom</li><li>zamena kućišta: 2.500 RSD</li><li>programiranje daljinskog</li></ul>
+        <div class="price"><b>od 5.000 RSD</b><span>sa čipom</span></div>
+      </article>
+    </div>
+    <p class="svc-note">Za auto ključ ponesite saobraćajnu i ličnu kartu.</p>
+  </div>
+</section>
+
+<section class="s rates" id="tarife" aria-labelledby="tarife-h">
+  <div class="wrap">
+    <h2 id="tarife-h">Noćna i vikend tarifa</h2>
+    <p class="sub">Dolazimo u bilo koje doba. Doplata se računa na cenu rada, ne na delove, i ne sabira se: noću vikendom važi noćna tarifa.</p>
+    <div class="rgrid">
+      <div class="rate day"><p class="when">Radnim danima, 07–20 h</p><p class="pct">cena iz cenovnika</p><p>Otvaranje vrata: 4.000 RSD</p></div>
+      <div class="rate"><p class="when">Svake noći, 20–07 h</p><p class="pct">+50%</p><p>Otvaranje vrata: 6.000 RSD</p></div>
+      <div class="rate"><p class="when">Subota, nedelja i praznici, 07–20 h</p><p class="pct">+30%</p><p>Otvaranje vrata: 5.200 RSD</p></div>
+    </div>
+    <div class="zones">
+      <div class="zone"><b>30–45 min</b><span>Vračar i Zvezdara: Neimar, Crveni krst, Kalenić, Čubura, Đeram, Lion, Konjarnik, Učiteljsko naselje.</span></div>
+      <div class="zone"><b>45–90 min</b><span>Ostali delovi Beograda, uz doplatu izlaska od 1.000 RSD.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="s faq" id="pitanja" aria-labelledby="pitanja-h">
+  <div class="wrap faq-grid">
+    <div><h2 id="pitanja-h">Pitanja koja čujemo svaki dan</h2></div>
+    <div class="acc">
+      <div class="acc-item">
+        <h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="q1">Da li otvarate vrata bez oštećenja?<span class="ic" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="q1" hidden><p>Većinu standardnih cilindara otvaramo bez oštećenja. Ako je cilindar sigurnosni ili već oštećen, pre rada kažemo da ga treba izbušiti i zameniti, i koliko to košta.</p></div>
+      </div>
+      <div class="acc-item">
+        <h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="q2">Koliko košta otvaranje noću?<span class="ic" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="q2" hidden><p>Od 20 do 7 h cena rada je veća za 50%. Otvaranje vrata noću je 6.000 RSD, sa izlaskom na Vračar i Zvezdaru.</p></div>
+      </div>
+      <div class="acc-item">
+        <h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="q3">Zašto tražite ličnu kartu?<span class="ic" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="q3" hidden><p>Ne otvaramo vrata dok ne proverimo da stanujete tu: lična karta sa adresom, ugovor o zakupu ili potvrda komšije ili upravnika zgrade. To štiti i vas.</p></div>
+      </div>
+      <div class="acc-item">
+        <h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="q4">Kako se plaća?<span class="ic" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="q4" hidden><p>Gotovinom ili karticom, na licu mesta. Dobijate fiskalni račun.</p></div>
+      </div>
+      <div class="acc-item">
+        <h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="q5">Mogu li da kopiram ključ bez originala?<span class="ic" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="q5" hidden><p>Za sigurnosni ključ treba kartica koju ste dobili uz cilindar. Obični ključ kopiramo samo sa originala. Ako nemate ni jedno, isplativija je zamena cilindra.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s shop" id="radionica" aria-labelledby="radionica-h">
+  <div class="wrap">
+    <h2 id="radionica-h">Radionica u Mileševskoj</h2>
+    <p class="sub">U radionici kopiramo ključeve i prodajemo cilindre i brave. Hitni izlasci rade i kad je radionica zatvorena.</p>
+    <div class="shop-grid">
+      <div>
+        <table class="hrs">
+          <caption>Radno vreme</caption>
+          <thead><tr><th scope="col">Dan</th><th scope="col">Radionica</th><th scope="col">Hitni izlazak</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Ponedeljak</th><td>08–20</td><td class="all">0–24</td></tr>
+            <tr><th scope="row">Utorak</th><td>08–20</td><td class="all">0–24</td></tr>
+            <tr><th scope="row">Sreda</th><td>08–20</td><td class="all">0–24</td></tr>
+            <tr><th scope="row">Četvrtak</th><td>08–20</td><td class="all">0–24</td></tr>
+            <tr><th scope="row">Petak</th><td>08–20</td><td class="all">0–24</td></tr>
+            <tr><th scope="row">Subota</th><td>09–15</td><td class="all">0–24</td></tr>
+            <tr><th scope="row">Nedelja</th><td class="n">zatvoreno</td><td class="all">0–24</td></tr>
+          </tbody>
+        </table>
+        <div class="photo">Vaša fotografija: radionica i mašina za ključeve</div>
+      </div>
+      <div>
+        <p class="adr">Mileševska 12, Vračar</p>
+        <p class="adr-note">Između Kalenić pijace i Južnog bulevara. Parking u ulici, zona 2.</p>
+        <div class="map">
+          <iframe title="Mapa: Ključ i brava, Mileševska 12, Beograd" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Mile%C5%A1evska%2012%2C%20Beograd&z=15&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s form-s" id="upit" aria-labelledby="upit-h">
+  <div class="wrap fgrid">
+    <div class="form-aside">
+      <h2 id="upit-h">Nije hitno?</h2>
+      <p>Za zamenu cilindra ili ugradnju brave pošaljite upit. Javimo se istog dana sa cenom i terminom.</p>
+      <p>Ako ste zaključani napolju, nemojte pisati. Pozovite.</p>
+      <div class="callbox">Hitno, 0–24<a href="tel:+381600000224">060 000 02 24</a></div>
+    </div>
+    <!-- Web3Forms: action="https://api.web3forms.com/submit" + access_key -->
+    <form id="forma" novalidate>
+      <div class="two">
+        <div><label for="f-ime">Ime</label><input id="f-ime" name="ime" type="text" autocomplete="name" required></div>
+        <div><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" required></div>
+      </div>
+      <div><label for="f-adr">Adresa (ulica, broj, sprat)</label><input id="f-adr" name="adresa" type="text" autocomplete="street-address"></div>
+      <div class="two">
+        <div><label for="f-vrsta">Šta vam treba</label>
+          <select id="f-vrsta" name="usluga"><option>Zamena cilindra</option><option>Sigurnosna brava</option><option>Popravka brave</option><option>Auto ključ</option><option>Nešto drugo</option></select></div>
+        <div><label for="f-kad">Kada vam odgovara</label>
+          <select id="f-kad" name="termin"><option>Danas</option><option>Sutra</option><option>Ove nedelje</option><option>Javite se da dogovorimo</option></select></div>
+      </div>
+      <div><label for="f-opis">Opis (vrsta vrata, marka brave ako znate)</label><textarea id="f-opis" name="opis"></textarea></div>
+      <div><button class="b b-y" type="submit">Pošaljite upit</button></div>
+      <p class="form-msg" id="form-msg" role="status" tabindex="-1">Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Ključ i brava, Mileševska 12, Vračar. Hitno 0–24: <a href="tel:+381600000224">060 000 02 24</a></p>
+    <p>Primer sajta · izradio opsforma · <a href="../">Svi primeri</a></p>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Brz kontakt">
+  <a class="c1" href="tel:+381600000224">Pozovite 0–24</a>
+  <a class="c2" href="viber://chat?number=%2B381600000224">Viber</a>
+</nav>
+
+<script>
+(function(){
+  var btn=document.querySelector('.burger'),menu=document.getElementById('menu');
+  function set(o){btn.setAttribute('aria-expanded',String(o));btn.setAttribute('aria-label',o?'Zatvori meni':'Otvori meni');menu.classList.toggle('open',o);}
+  btn.addEventListener('click',function(){set(btn.getAttribute('aria-expanded')!=='true');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&btn.getAttribute('aria-expanded')==='true'){set(false);btn.focus();}});
+
+  document.querySelectorAll('.acc-btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      var open=b.getAttribute('aria-expanded')==='true';
+      b.setAttribute('aria-expanded',String(!open));
+      document.getElementById(b.getAttribute('aria-controls')).hidden=open;
+    });
+  });
+
+  var f=document.getElementById('forma'),m=document.getElementById('form-msg');
+  f.addEventListener('submit',function(e){e.preventDefault();m.classList.add('show');m.focus();});
+})();
+</script>
+</body>
+</html>

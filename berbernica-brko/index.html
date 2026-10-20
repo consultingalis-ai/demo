@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Berbernica Brko – šišanje i brada, Zvezdara</title>
+<meta name="description" content="Berbernica Brko, Bulevar kralja Aleksandra 214, Zvezdara. Šišanje 1.200 din, brada, brijanje britvom. Dođite bez zakazivanja ili rezervišite termin.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap&subset=latin-ext" rel="stylesheet">
+<style>
+:root{
+  --ugalj:#141414; --ugalj-2:#1f1f1f; --ugalj-3:#2a2a2a;
+  --mesing:#C9A227; --kost:#EDE6D6; --kost-tamna:#b9b1a0;
+  --display:"Bebas Neue","Oswald","Arial Narrow","DejaVu Sans Condensed",Impact,sans-serif;
+  --text:"Barlow","Helvetica Neue",Arial,"DejaVu Sans",sans-serif;
+  --pole:repeating-linear-gradient(-45deg,var(--mesing) 0 12px,var(--kost) 12px 24px,var(--ugalj) 24px 36px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--ugalj);color:var(--kost);font-family:var(--text);font-size:1.0625rem;line-height:1.55;-webkit-font-smoothing:antialiased}
+img,iframe{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--mesing);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.01em;line-height:.9;margin:0}
+p{margin:0 0 1em}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+
+/* demo traka */
+.demo-bar{background:#000;color:var(--kost-tamna);font-size:.8125rem;padding:6px 16px;text-align:center}
+.demo-bar a{color:var(--mesing);margin-left:.5em}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;background:rgba(20,20,20,.96);border-bottom:1px solid var(--ugalj-3)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:var(--display);font-size:2rem;text-decoration:none;letter-spacing:.04em;line-height:1}
+.logo span{color:var(--mesing)}
+.menu-btn{display:inline-flex;flex-direction:column;justify-content:center;gap:5px;width:46px;height:46px;padding:0 11px;background:transparent;border:1px solid var(--kost-tamna);color:var(--kost);cursor:pointer;border-radius:0}
+.menu-btn span{display:block;height:2px;background:currentColor;transition:transform .2s}
+.menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav{display:none;position:absolute;left:0;right:0;top:60px;background:var(--ugalj);border-bottom:4px solid var(--mesing)}
+.nav.open{display:block}
+.nav ul{list-style:none;margin:0;padding:8px 16px 16px}
+.nav a{display:block;font-family:var(--display);font-size:2rem;text-decoration:none;padding:6px 0;border-bottom:1px solid var(--ugalj-3)}
+.nav a:hover{color:var(--mesing)}
+@media (min-width:900px){
+  .menu-btn{display:none}
+  .nav{display:block;position:static;border:0;background:none}
+  .nav ul{display:flex;gap:28px;padding:0}
+  .nav a{font-family:var(--text);font-size:.9375rem;font-weight:600;border:0;padding:4px 0}
+}
+
+/* hero */
+.hero{min-height:calc(100svh - 92px);display:flex;flex-direction:column;justify-content:flex-end;padding:40px 0 48px;position:relative;overflow:hidden;
+  background:radial-gradient(120% 70% at 85% 0%,#262219 0%,var(--ugalj) 60%)}
+.status{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.9375rem;margin-bottom:22px}
+.status i{width:10px;height:10px;background:var(--kost-tamna);display:inline-block}
+.status.otvoreno i{background:var(--mesing);box-shadow:0 0 0 4px rgba(201,162,39,.25)}
+.hero h1{font-size:clamp(3rem,15vw,11rem);line-height:.82;color:var(--kost);text-transform:uppercase}
+.hero h1 .fit{display:inline-block;white-space:nowrap}
+.hero h1 .l2{color:var(--mesing);line-height:.8}
+.mapa{background:repeating-linear-gradient(45deg,#1a1a1a 0 10px,#202020 10px 20px);position:relative}
+.mapa::before{content:"Mapa: Bulevar kralja Aleksandra 214";position:absolute;left:14px;bottom:12px;font-size:.8125rem;color:var(--kost-tamna)}
+.mapa iframe{position:relative}
+.hero-low{display:grid;gap:28px;margin-top:28px;align-items:end}
+.hero-low p{max-width:34ch;font-size:1.1875rem;color:var(--kost);margin:0}
+.hero-low strong{color:var(--mesing);font-weight:600}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 26px;font-family:var(--display);font-size:1.6rem;letter-spacing:.04em;text-decoration:none;border:2px solid var(--mesing);border-radius:0;cursor:pointer;line-height:1}
+.btn-full{background:var(--mesing);color:var(--ugalj)}
+.btn-full:hover{background:var(--kost);border-color:var(--kost)}
+.btn-line{background:transparent;color:var(--kost)}
+.btn-line:hover{background:var(--mesing);color:var(--ugalj)}
+.addr-side{position:absolute;right:16px;top:40px;writing-mode:vertical-rl;font-size:.8125rem;letter-spacing:.12em;color:var(--kost-tamna)}
+@media (min-width:900px){
+  .hero{padding-bottom:64px}
+  .hero-low{grid-template-columns:1fr auto}
+}
+
+/* berberski stub — razdelnik */
+.pole{height:14px;background:var(--pole);border-block:2px solid var(--ugalj)}
+.pole.thin{height:8px}
+
+/* cenovnik */
+.cene{background:var(--kost);color:var(--ugalj);padding:72px 0}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:12px 24px;margin-bottom:32px}
+.sec-head h2{font-size:clamp(3.4rem,11vw,6rem)}
+.sec-head p{max-width:38ch;margin:0}
+.tabla{background:var(--ugalj);color:var(--kost);padding:28px 18px 18px;border:10px solid #3b2f17;outline:2px solid var(--mesing);outline-offset:-16px;max-width:860px}
+.tabla h3{font-size:1.25rem;letter-spacing:.2em;color:var(--mesing);text-align:center;margin-bottom:16px;font-family:var(--text);font-weight:600;letter-spacing:.08em}
+.stavka{display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;gap:10px;padding:12px 6px;border-bottom:1px solid var(--ugalj-3)}
+.stavka:last-child{border-bottom:0}
+.stavka .ime{font-family:var(--display);font-size:clamp(1.7rem,6vw,2.4rem);line-height:1}
+.stavka .tacke{border-bottom:3px dotted var(--kost-tamna);transform:translateY(-6px);min-width:16px}
+.stavka .cena{font-family:var(--display);font-size:clamp(1.7rem,6vw,2.4rem);color:var(--mesing);line-height:1;white-space:nowrap}
+.stavka small{grid-column:1/-1;color:var(--kost-tamna);font-size:.9375rem;margin-top:-2px}
+.tabla-note{margin:20px 0 0;font-size:.9375rem;color:#3d3a33}
+@media (min-width:900px){
+  .cene .wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:56px;align-items:start}
+  .sec-head{flex-direction:column;align-items:start;position:sticky;top:100px}
+  .tabla{padding:40px 40px 28px}
+}
+
+/* kako radimo */
+.kako{padding:80px 0}
+.kako h2{font-size:clamp(3.4rem,11vw,6rem);margin-bottom:36px}
+.kako-grid{display:grid;gap:0;border-top:2px solid var(--mesing)}
+.korak{padding:24px 0;border-bottom:1px solid var(--ugalj-3)}
+.korak h3{font-size:2.4rem;color:var(--mesing);margin-bottom:10px}
+.korak p{margin:0;max-width:40ch;color:var(--kost)}
+.foto{background:repeating-linear-gradient(90deg,var(--ugalj-2) 0 2px,transparent 2px 22px),var(--ugalj-3);min-height:260px;display:flex;align-items:flex-end;padding:14px;color:var(--kost-tamna);font-size:.8125rem;border:1px solid #3a3a3a;margin-top:28px}
+@media (min-width:900px){
+  .kako-grid{grid-template-columns:repeat(3,1fr)}
+  .korak{padding:28px 28px 28px 0;border-bottom:0;border-right:1px solid var(--ugalj-3);margin-right:28px}
+  .korak:last-child{border-right:0;margin-right:0}
+  .kako-low{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:stretch;margin-top:20px}
+  .foto{margin-top:0}
+}
+.kako-low .tip{background:var(--ugalj-2);padding:24px;margin-top:28px;border-left:6px solid var(--mesing)}
+.kako-low .tip p{margin:0}
+.kako-low .tip strong{font-family:var(--display);font-weight:400;font-size:1.8rem;display:block;color:var(--mesing);line-height:1;margin-bottom:8px}
+@media (min-width:900px){.kako-low .tip{margin-top:0}}
+
+/* radno vreme + lokacija */
+.gde{padding:80px 0;background:var(--ugalj-2)}
+.gde-grid{display:grid;gap:40px}
+.gde h2{font-size:clamp(3rem,9vw,4.6rem);margin-bottom:20px}
+table.vreme{width:100%;border-collapse:collapse;font-size:1.0625rem}
+.vreme th,.vreme td{padding:10px 0;border-bottom:1px solid #3a3a3a;text-align:left}
+.vreme th{font-weight:500}
+.vreme td{text-align:right;font-variant-numeric:tabular-nums}
+.vreme tr.danas th,.vreme tr.danas td{color:var(--mesing);font-weight:700}
+.vreme .zatv{color:var(--kost-tamna)}
+.adresa{font-family:var(--display);font-size:2.2rem;line-height:1;margin-bottom:8px}
+.mapa{border:2px solid var(--mesing);height:340px}
+.mapa iframe{width:100%;height:100%;border:0;filter:grayscale(1) contrast(1.05)}
+@media (min-width:900px){.gde-grid{grid-template-columns:1fr 1.3fr;gap:64px}.mapa{height:100%;min-height:420px}}
+
+/* forma */
+.termin{padding:80px 0}
+.termin h2{font-size:clamp(3.4rem,11vw,6rem);margin-bottom:14px}
+.termin .lead{max-width:46ch;margin-bottom:32px}
+form{display:grid;gap:18px;max-width:760px}
+.row2{display:grid;gap:18px}
+@media (min-width:700px){.row2{grid-template-columns:1fr 1fr}}
+label{display:block;font-weight:600;font-size:.9375rem;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;color:var(--ugalj);background:var(--kost);border:2px solid var(--kost);border-radius:0;padding:12px 14px;min-height:50px}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--mesing);outline-offset:0}
+.poruka{background:var(--mesing);color:var(--ugalj);padding:16px 18px;font-weight:600}
+.poruka[hidden]{display:none}
+
+footer{border-top:1px solid var(--ugalj-3);padding:40px 0 28px;font-size:.9375rem;color:var(--kost-tamna)}
+footer .wrap{display:grid;gap:18px}
+footer .logo{font-size:2.6rem;color:var(--kost)}
+footer a{color:var(--kost)}
+.demo-foot{font-size:.8125rem;border-top:1px solid var(--ugalj-3);padding-top:16px}
+.demo-foot a{color:var(--mesing)}
+@media (min-width:900px){footer .wrap{grid-template-columns:1fr 1fr 1fr}.demo-foot{grid-column:1/-1}}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="demo-bar">Primer sajta · izradio opsforma <a href="../">Svi primeri</a></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#pocetak">BRKO<span>.</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Meni"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Glavna navigacija">
+      <ul>
+        <li><a href="#cenovnik">Cenovnik</a></li>
+        <li><a href="#kako-radimo">Kako radimo</a></li>
+        <li><a href="#radno-vreme">Radno vreme</a></li>
+        <li><a href="#zakazivanje">Zakažite</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="pocetak">
+  <div class="wrap">
+    <p class="status" id="status"><i aria-hidden="true"></i><span>Pon–pet 9–20, subota 9–16</span></p>
+    <h1><span class="fit" data-max="30">Berbernica</span><br><span class="fit l2" data-max="40">Brko</span></h1>
+    <div class="hero-low">
+      <p>Muško šišanje <strong>1.200 din</strong>, brada, brijanje britvom. Dođite bez zakazivanja ili rezervišite termin.</p>
+      <div class="ctas">
+        <a class="btn btn-full" href="tel:+381600000112">Pozovite 060 000 01 12</a>
+        <a class="btn btn-line" href="#zakazivanje">Zakažite</a>
+      </div>
+    </div>
+  </div>
+  <span class="addr-side" aria-hidden="true">Bulevar kralja Aleksandra 214</span>
+</section>
+
+<div class="pole" role="presentation"></div>
+
+<section class="cene" id="cenovnik">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Cenovnik</h2>
+      <p>Cene su iste za termin i bez termina. Plaćate gotovinom ili karticom.</p>
+    </div>
+    <div>
+      <div class="tabla">
+        <h3>Usluge i cene</h3>
+        <div class="stavka"><span class="ime">Šišanje</span><span class="tacke"></span><span class="cena">1.200</span><small>Mašinica i makaze, pranje uključeno. Oko 30 min.</small></div>
+        <div class="stavka"><span class="ime">Šišanje + brada</span><span class="tacke"></span><span class="cena">1.800</span><small>Šišanje, oblikovanje brade, topli peškir. Oko 50 min.</small></div>
+        <div class="stavka"><span class="ime">Brada</span><span class="tacke"></span><span class="cena">800</span><small>Skraćivanje, konture britvom, ulje. Oko 20 min.</small></div>
+        <div class="stavka"><span class="ime">Dečije šišanje</span><span class="tacke"></span><span class="cena">900</span><small>Do 12 godina. Oko 20 min.</small></div>
+        <div class="stavka"><span class="ime">Brijanje britvom</span><span class="tacke"></span><span class="cena">1.200</span><small>Topli peškir, pena, dva prelaza, balzam. Oko 30 min.</small></div>
+        <div class="stavka"><span class="ime">Pranje i feniranje</span><span class="tacke"></span><span class="cena">500</span><small>Uz šišanje ili posebno. Oko 15 min.</small></div>
+      </div>
+      <p class="tabla-note">Sve cene su u dinarima.</p>
+    </div>
+  </div>
+</section>
+
+<div class="pole thin" role="presentation"></div>
+
+<section class="kako" id="kako-radimo">
+  <div class="wrap">
+    <h2>Kako radimo</h2>
+    <div class="kako-grid">
+      <div class="korak">
+        <h3>Bez zakazivanja</h3>
+        <p>Uđete, sednete, čekate po redu. Radimo dvojica, pa se obično čeka 10 do 30 minuta.</p>
+      </div>
+      <div class="korak">
+        <h3>Sa zakazivanjem</h3>
+        <p>Pozovite ili pošaljite zahtev preko forme. Termin vas čeka 10 minuta, posle toga ide sledeći iz reda.</p>
+      </div>
+      <div class="korak">
+        <h3>Čekanje</h3>
+        <p>Imamo kafu i vodu. Ako ne želite da čekate unutra, ostavite broj i javimo vam kad ste sledeći.</p>
+      </div>
+    </div>
+    <div class="kako-low">
+      <div class="foto" role="img" aria-label="Mesto za fotografiju radnje">Vaša fotografija: stolica i ogledalo</div>
+      <div class="tip">
+        <strong>Kad je najmanje gužve</strong>
+        <p>Utorkom i sredom pre podne. Subotom i petkom posle 17 h računajte na red, tada je bolje zakazati.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pole thin" role="presentation"></div>
+
+<section class="gde" id="radno-vreme">
+  <div class="wrap gde-grid">
+    <div>
+      <h2>Radno vreme</h2>
+      <table class="vreme" id="tabela-vreme">
+        <caption class="sr-only" style="position:absolute;left:-9999px">Radno vreme po danima</caption>
+        <tbody>
+          <tr data-d="1"><th scope="row">Ponedeljak</th><td>9:00 – 20:00</td></tr>
+          <tr data-d="2"><th scope="row">Utorak</th><td>9:00 – 20:00</td></tr>
+          <tr data-d="3"><th scope="row">Sreda</th><td>9:00 – 20:00</td></tr>
+          <tr data-d="4"><th scope="row">Četvrtak</th><td>9:00 – 20:00</td></tr>
+          <tr data-d="5"><th scope="row">Petak</th><td>9:00 – 20:00</td></tr>
+          <tr data-d="6"><th scope="row">Subota</th><td>9:00 – 16:00</td></tr>
+          <tr data-d="0"><th scope="row">Nedelja</th><td class="zatv">zatvoreno</td></tr>
+        </tbody>
+      </table>
+      <div style="margin-top:36px" id="lokacija">
+        <p class="adresa">Bulevar kralja Aleksandra 214</p>
+        <p>Zvezdara, ulaz direktno sa Bulevara. Tramvajska stanica je na par koraka. Parking u bočnim ulicama.</p>
+      </div>
+    </div>
+    <div class="mapa">
+      <iframe title="Mapa: Berbernica Brko, Bulevar kralja Aleksandra 214, Beograd" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Bulevar%20kralja%20Aleksandra%20214%2C%20Beograd&z=15&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<div class="pole" role="presentation"></div>
+
+<section class="termin" id="zakazivanje">
+  <div class="wrap">
+    <h2>Zakažite termin</h2>
+    <p class="lead">Pošaljite zahtev, javljamo se porukom da potvrdimo vreme. Za termin danas je brže da pozovete.</p>
+    <!-- Web3Forms: action="https://api.web3forms.com/submit" + access_key -->
+    <form id="forma" novalidate>
+      <div class="row2">
+        <div><label for="ime">Ime</label><input id="ime" name="ime" autocomplete="given-name" required></div>
+        <div><label for="tel">Telefon</label><input id="tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required></div>
+      </div>
+      <div class="row2">
+        <div><label for="usluga">Usluga</label>
+          <select id="usluga" name="usluga">
+            <option>Šišanje – 1.200 din</option>
+            <option>Šišanje + brada – 1.800 din</option>
+            <option>Brada – 800 din</option>
+            <option>Dečije šišanje – 900 din</option>
+            <option>Brijanje britvom – 1.200 din</option>
+            <option>Pranje i feniranje – 500 din</option>
+          </select></div>
+        <div><label for="dan">Dan</label><input id="dan" name="dan" type="date"></div>
+      </div>
+      <div><label for="vreme">Okvirno vreme</label>
+        <select id="vreme" name="vreme">
+          <option>Pre podne (9–12)</option>
+          <option>Sredina dana (12–16)</option>
+          <option>Posle 16 h</option>
+        </select></div>
+      <div><label for="napomena">Napomena (nije obavezno)</label><textarea id="napomena" name="napomena" placeholder="Npr. dolazimo otac i sin"></textarea></div>
+      <div><button class="btn btn-full" type="submit">Pošaljite zahtev</button></div>
+      <p class="poruka" id="poruka" role="status" hidden></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><span class="logo">BRKO.</span><p>Berbernica na Zvezdari.</p></div>
+    <div><p>Bulevar kralja Aleksandra 214<br>11050 Beograd, Zvezdara</p></div>
+    <div><p><a href="tel:+381600000112">060 000 01 12</a><br><a href="viber://chat?number=%2B381600000112">Viber poruka</a></p></div>
+    <p class="demo-foot">Primer sajta · izradio opsforma. Firma je izmišljena. <a href="../">Svi primeri</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
+  function setMenu(o){btn.setAttribute('aria-expanded',String(o));nav.classList.toggle('open',o);}
+  btn.addEventListener('click',function(){setMenu(btn.getAttribute('aria-expanded')!=='true');});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false);});
+
+  function fit(){
+    document.querySelectorAll('.fit').forEach(function(el){
+      el.style.fontSize='100px';
+      var w=el.parentNode.clientWidth,r=el.getBoundingClientRect().width;
+      var max=parseFloat(el.dataset.max)*window.innerHeight/100;
+      el.style.fontSize=Math.min(100*w/r*0.98,max)+'px';
+    });
+  }
+  fit(); window.addEventListener('resize',fit);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+
+  var sati={0:null,1:[9,20],2:[9,20],3:[9,20],4:[9,20],5:[9,20],6:[9,16]};
+  var now=new Date(),d=now.getDay(),h=now.getHours()+now.getMinutes()/60,s=sati[d];
+  var red=document.querySelector('#tabela-vreme tr[data-d="'+d+'"]'); if(red)red.classList.add('danas');
+  var st=document.getElementById('status');
+  if(s&&h>=s[0]&&h<s[1]){st.classList.add('otvoreno');st.querySelector('span').textContent='Sada otvoreno, radimo do '+s[1]+' h';}
+  else{st.querySelector('span').textContent='Sada zatvoreno. Pon–pet 9–20, subota 9–16';}
+
+  var f=document.getElementById('forma'),p=document.getElementById('poruka');
+  f.addEventListener('submit',function(e){e.preventDefault();p.textContent='Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.';p.hidden=false;});
+})();
+</script>
+</body>
+</html>

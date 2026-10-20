@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Auto servis Mićić – mehanika i dijagnostika, Ustanička 187, Zvezdara</title>
+<meta name="description" content="Auto servis Mićić na Zvezdari: mali i veliki servis, kočnice, trap, kompjuterska dijagnostika, klima i zupčasti kaiš. Cene rada unapred, zakazivanje termina online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&display=swap&subset=latin-ext" rel="stylesheet">
+<style>
+:root{
+  --asf:#1F1F1F;
+  --asf-2:#2B2B2B;
+  --nar:#FF6B00;
+  --siv:#8A8F98;
+  --bel:#FFFFFF;
+  --beton:#EDEDEB;
+  --tekst-tamni:#1F1F1F;
+  --tekst-sivi:#4A4E55;
+  --cut:clamp(28px,5vw,72px);
+  --head:"Archivo Black","Arial Black","Liberation Sans",Arial,sans-serif;
+  --body:"Archivo","Liberation Sans",Arial,Helvetica,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--asf);color:var(--bel);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img,svg{display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);font-weight:900;line-height:1.02;margin:0;letter-spacing:-.01em}
+p{margin:0}
+:focus-visible{outline:3px solid var(--nar);outline-offset:3px}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* demo traka */
+.demo{background:#000;color:#C9CCD1;font-size:13px;padding:6px 0;border-bottom:1px solid #333}
+.demo .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.demo a{color:var(--nar);font-weight:600}
+
+/* zaglavlje */
+.top{position:sticky;top:0;z-index:40;background:var(--asf);border-bottom:3px solid var(--nar)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:38px;height:38px;background:var(--nar);color:var(--asf);display:grid;place-items:center;font-family:var(--head);font-size:22px;clip-path:polygon(0 0,100% 0,100% 72%,72% 100%,0 100%)}
+.logo-txt{font-family:var(--head);font-size:19px;line-height:1;letter-spacing:.01em}
+.logo-txt small{display:block;font-family:var(--body);font-weight:600;font-size:12px;color:var(--siv);letter-spacing:.02em;margin-top:3px}
+.menu-btn{background:none;border:2px solid var(--siv);color:var(--bel);width:46px;height:42px;display:grid;place-items:center;cursor:pointer}
+.menu-btn span{display:block;width:20px;height:2px;background:currentColor;position:relative}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0;width:20px;height:2px;background:currentColor;transition:transform .2s}
+.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+.menu-btn[aria-expanded="true"] span{background:transparent}
+.menu-btn[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+.nav{position:absolute;left:0;right:0;top:100%;background:var(--asf-2);border-bottom:3px solid var(--nar);display:none}
+.nav.open{display:block}
+.nav ul{list-style:none;margin:0;padding:8px 16px 16px}
+.nav a{display:block;padding:12px 0;border-bottom:1px solid #3a3a3a;text-decoration:none;font-weight:600;font-size:18px}
+.nav a:hover{color:var(--nar)}
+@media (min-width:900px){
+  .menu-btn{display:none}
+  .nav{position:static;display:block;background:none;border:0}
+  .nav ul{display:flex;gap:28px;padding:0}
+  .nav a{border:0;font-size:15px;padding:6px 0;border-bottom:2px solid transparent}
+  .nav a:hover{border-bottom-color:var(--nar);color:var(--bel)}
+}
+
+/* dugmad: kosa kao rampa */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;font-family:var(--head);font-size:16px;text-decoration:none;border:0;cursor:pointer;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);letter-spacing:.01em}
+.btn:focus-visible{outline:3px solid var(--bel);outline-offset:-7px}
+.btn-nar{background:var(--nar);color:var(--asf)}
+.btn-nar:hover{background:#ff8226}
+.btn-bel{background:var(--bel);color:var(--asf)}
+.btn-bel:hover{background:var(--beton)}
+.btn svg{width:20px;height:20px}
+
+/* hazard traka */
+.hazard{height:20px;background:repeating-linear-gradient(-45deg,var(--asf) 0 14px,var(--nar) 14px 28px)}
+.hazard.tanka{height:10px;background:repeating-linear-gradient(-45deg,var(--asf) 0 8px,var(--nar) 8px 16px)}
+
+/* hero */
+.hero{position:relative;padding:44px 0 calc(var(--cut) + 48px);background:
+  linear-gradient(transparent 0 calc(100% - 1px),rgba(255,255,255,.05) 0) 0 0/100% 48px,
+  linear-gradient(90deg,transparent 0 calc(100% - 1px),rgba(255,255,255,.05) 0) 0 0/48px 100%,
+  var(--asf);clip-path:polygon(0 0,100% 0,100% calc(100% - var(--cut)),0 100%);overflow:hidden}
+.hero-grid{display:grid;gap:36px;position:relative;z-index:1}
+.logo-txt,.btn,.ploca .status,.adresa,.mbar a,.termin .tel a,.cena b,.koraci li::before{font-weight:900}
+.hero h1{font-size:clamp(44px,10.5vw,104px);text-transform:uppercase;line-height:.92}
+.hero h1 .l2{display:block;color:var(--nar)}
+.hero .podnaslov{margin-top:18px;font-size:clamp(18px,2.2vw,22px);font-weight:600;color:#D6D8DC}
+.hero .uvod{margin-top:14px;max-width:46ch;color:#C2C5CB}
+.hero .cta{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+.cinjenice{margin:30px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.cinjenice li{display:flex;gap:12px;align-items:center;font-weight:600}
+.cinjenice li::before{content:"";width:14px;height:14px;flex:none;background:var(--nar);clip-path:polygon(0 0,100% 50%,0 100%)}
+.ploca{position:relative;align-self:end;border:2px solid #3a3a3a;background:#1F1F1F}
+.ploca .hazard{height:14px}
+.ploca-in{padding:22px}
+.ploca h2{font-size:15px;font-family:var(--body);font-weight:700;color:var(--siv);letter-spacing:.02em}
+.ploca .status{margin-top:8px;font-family:var(--head);font-size:30px;line-height:1.05}
+.ploca .status.zatv{color:var(--siv)}
+.ploca .sitno{margin-top:6px;color:#C2C5CB;font-size:15px}
+.foto{margin-top:18px;aspect-ratio:4/3;background:
+  repeating-linear-gradient(-45deg,rgba(255,107,0,.18) 0 2px,transparent 2px 14px),#262626;border:1px dashed var(--siv);display:flex;align-items:flex-end;padding:12px}
+.foto span{font-size:12px;color:var(--siv);font-weight:600}
+.broj-kuce{position:absolute;right:-10px;bottom:calc(var(--cut) - 10px);font-family:var(--head);font-size:clamp(120px,22vw,300px);line-height:1;color:transparent;-webkit-text-stroke:2px rgba(255,107,0,.22);pointer-events:none;user-select:none}
+@media (min-width:900px){
+  .hero{padding-top:72px}
+  .hero-grid{grid-template-columns:1.35fr .9fr;align-items:start}
+  .cinjenice{grid-template-columns:repeat(3,auto);justify-content:start;gap:24px}
+}
+
+/* usluge */
+.usluge{background:var(--beton);color:var(--tekst-tamni);margin-top:calc(var(--cut) * -1);padding:calc(var(--cut) + 56px) 0 calc(var(--cut) + 56px);clip-path:polygon(0 var(--cut),100% 0,100% calc(100% - var(--cut)),0 100%)}
+.sek-naslov{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px 32px;margin-bottom:30px}
+.sek-naslov h2{font-size:clamp(34px,6vw,60px);text-transform:uppercase}
+.sek-naslov p{max-width:44ch;color:var(--tekst-sivi)}
+.mreza{display:grid;gap:2px;background:#C9CBCF;border:2px solid #C9CBCF}
+.kartica{background:var(--bel);padding:22px 20px 20px;display:flex;flex-direction:column;gap:10px;position:relative}
+.kartica .ik{width:46px;height:46px;color:var(--nar)}
+.kartica h3{font-size:22px;text-transform:uppercase}
+.kartica p{color:var(--tekst-sivi);font-size:15.5px}
+.kartica .cena{margin-top:auto;padding-top:12px;border-top:2px solid var(--asf);display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.cena b{font-family:var(--head);font-size:22px;font-weight:900}
+.cena b small{font-family:var(--body);font-weight:600;font-size:13px;margin-right:4px;color:var(--tekst-sivi)}
+.cena span{font-size:14px;font-weight:600;color:var(--tekst-sivi)}
+.kartica.poziv{background:var(--asf);color:var(--bel)}
+.kartica.poziv p{color:#C2C5CB}
+.kartica.poziv h3{color:var(--nar)}
+.kartica.poziv .btn{margin-top:auto;align-self:flex-start}
+.napomena{margin-top:20px;display:grid;gap:8px;color:var(--tekst-sivi);font-size:15px;max-width:72ch}
+.napomena strong{color:var(--tekst-tamni)}
+@media (min-width:640px){.mreza{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.mreza{grid-template-columns:repeat(4,1fr)}}
+
+/* postupak */
+.postupak{padding:64px 0 calc(var(--cut) + 56px);position:relative}
+.postupak h2{font-size:clamp(34px,6vw,60px);text-transform:uppercase;margin-bottom:32px}
+.koraci{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:k}
+.koraci li{counter-increment:k;display:grid;grid-template-columns:72px 1fr;gap:16px;padding:20px 0;border-top:1px solid #3a3a3a}
+.koraci li::before{content:counter(k,decimal-leading-zero);font-family:var(--head);font-size:44px;line-height:1;color:var(--nar)}
+.koraci h3{font-size:20px;text-transform:uppercase;margin-bottom:6px}
+.koraci p{color:#C2C5CB;max-width:52ch}
+@media (min-width:900px){
+  .koraci{grid-template-columns:repeat(4,1fr);gap:28px}
+  .koraci li{grid-template-columns:1fr;border-top:4px solid var(--nar);padding-top:18px}
+}
+
+/* termin */
+.termin{background:var(--nar);color:var(--asf);margin-top:calc(var(--cut) * -1);padding:calc(var(--cut) + 52px) 0 calc(var(--cut) + 56px);clip-path:polygon(0 0,100% var(--cut),100% 100%,0 calc(100% - var(--cut)))}
+.termin-grid{display:grid;gap:28px}
+.termin h2{font-size:clamp(36px,7vw,72px);text-transform:uppercase}
+.termin .uvod{margin-top:14px;font-weight:600;max-width:40ch}
+.termin .tel{margin-top:22px;font-weight:600}
+.termin .tel a{font-family:var(--head);font-size:26px;text-decoration:none;display:inline-block;margin-top:4px;border-bottom:3px solid var(--asf)}
+form.f{background:var(--asf);color:var(--bel);padding:24px 18px;display:grid;gap:16px;position:relative}
+form.f::before{content:"";position:absolute;left:0;right:0;top:-10px;height:10px;background:repeating-linear-gradient(-45deg,var(--asf) 0 8px,var(--bel) 8px 16px)}
+.polje{display:grid;gap:6px}
+.polje label{font-weight:600;font-size:15px}
+.polje label i{font-style:normal;color:var(--siv);font-weight:500}
+.f input,.f select,.f textarea{width:100%;font:inherit;font-size:16px;color:var(--bel);background:#2B2B2B;border:2px solid #4a4a4a;border-radius:0;padding:12px}
+.f textarea{min-height:110px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--nar);box-shadow:0 0 0 2px var(--nar)}
+.f input::placeholder,.f textarea::placeholder{color:#9b9fa6}
+.red-2{display:grid;gap:16px}
+.poruka{display:none;border-left:6px solid var(--nar);background:#2B2B2B;padding:14px 16px;font-weight:600}
+.poruka.vidi{display:block}
+@media (min-width:560px){.red-2{grid-template-columns:1fr 1fr}}
+@media (min-width:900px){.termin-grid{grid-template-columns:.8fr 1.2fr;align-items:start}form.f{padding:32px}}
+
+/* vreme + lokacija */
+.info{padding:56px 0 64px}
+.info-grid{display:grid;gap:36px}
+.info h2{font-size:clamp(30px,5vw,46px);text-transform:uppercase;margin-bottom:20px}
+table.vreme{width:100%;border-collapse:collapse;font-size:17px}
+.vreme th,.vreme td{padding:12px 0;border-bottom:1px solid #3a3a3a;text-align:left}
+.vreme th{font-weight:600}
+.vreme td{text-align:right;font-family:var(--head);font-weight:900;letter-spacing:.02em}
+.vreme td.zat{color:var(--siv);font-family:var(--body);font-weight:600}
+.vreme tr.danas th,.vreme tr.danas td{color:var(--nar)}
+.vreme tr.danas th::after{content:" (danas)";font-weight:500;font-size:14px}
+.adresa{font-family:var(--head);font-size:24px;line-height:1.15}
+.adresa + p{margin-top:8px;color:#C2C5CB}
+.mapa{margin-top:18px;border:3px solid var(--nar);background:#2B2B2B;aspect-ratio:4/3}
+.mapa iframe{width:100%;height:100%;border:0;display:block}
+@media (min-width:900px){.info-grid{grid-template-columns:1fr 1.3fr;gap:64px}.mapa{aspect-ratio:16/10}}
+
+footer{background:#000;color:#C2C5CB;padding:32px 0 40px;font-size:15px}
+footer .wrap{display:grid;gap:14px}
+footer strong{color:var(--bel);font-family:var(--head);font-weight:900}
+footer a{color:var(--nar)}
+.footer-demo{border-top:1px solid #333;padding-top:14px;font-size:13px}
+
+/* lepljiva traka na mobilnom */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;background:var(--asf);border-top:3px solid var(--nar)}
+.mbar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:58px;font-family:var(--head);font-size:16px;text-decoration:none}
+.mbar a:first-child{color:var(--bel)}
+.mbar a:last-child{background:var(--nar);color:var(--asf)}
+.mbar a:focus-visible{outline:3px solid var(--bel);outline-offset:-6px}
+.mbar svg{width:20px;height:20px}
+body{padding-bottom:61px}
+@media (min-width:900px){.mbar{display:none}body{padding-bottom:0}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demo" role="note">
+  <div class="wrap"><span>Primer sajta · izradio opsforma</span><a href="../">Svi primeri</a></div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#pocetak" aria-label="Auto servis Mićić, na vrh strane">
+      <span class="logo-mark" aria-hidden="true">M</span>
+      <span class="logo-txt">MIĆIĆ<small>auto servis · Zvezdara</small></span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="glavni-meni" aria-label="Otvori meni"><span></span></button>
+    <nav class="nav" id="glavni-meni" aria-label="Glavni meni">
+      <ul>
+        <li><a href="#usluge">Usluge i cene</a></li>
+        <li><a href="#postupak">Kako radimo</a></li>
+        <li><a href="#termin">Zakažite</a></li>
+        <li><a href="#radno-vreme">Radno vreme</a></li>
+        <li><a href="#lokacija">Lokacija</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="pocetak">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Auto servis <span class="l2">Mićić</span></h1>
+        <p class="podnaslov">Mehanika i dijagnostika, Ustanička 187</p>
+        <p class="uvod">Prvo dijagnostika, pa ponuda, pa rad. Cenu rada znate pre nego što podignemo auto na dizalicu.</p>
+        <div class="cta">
+          <a class="btn btn-nar" href="tel:+381600000187">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>
+            Pozovite 060 000 01 87</a>
+          <a class="btn btn-bel" href="#termin">Zakažite termin</a>
+        </div>
+        <ul class="cinjenice">
+          <li>Garancija 6 meseci na rad</li>
+          <li>Kartice i gotovina</li>
+          <li>Parking u dvorištu</li>
+        </ul>
+      </div>
+      <aside class="ploca" aria-labelledby="status-naslov">
+        <div class="hazard"></div>
+        <div class="ploca-in">
+          <h2 id="status-naslov">Radionica danas</h2>
+          <p class="status" id="status">Pon–pet 08–18, sub 08–14</p>
+          <p class="sitno" id="status-sitno">Za dijagnostiku istog dana pozovite pre 11h.</p>
+          <div class="foto" role="img" aria-label="Mesto za fotografiju radionice"><span>Vaša fotografija: radionica sa dizalicama</span></div>
+        </div>
+      </aside>
+    </div>
+    <div class="broj-kuce" aria-hidden="true">187</div>
+  </section>
+
+  <section class="usluge" id="usluge" aria-labelledby="usluge-naslov">
+    <div class="wrap">
+      <div class="sek-naslov">
+        <h2 id="usluge-naslov">Usluge i cene rada</h2>
+        <p>Cene su za rad, bez delova. Tačan iznos zavisi od modela; kažemo ga posle pregleda, pre nego što krenemo.</p>
+      </div>
+      <div class="mreza">
+        <article class="kartica">
+          <svg class="ik" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path d="M24 6c6 9 11 15 11 22a11 11 0 0 1-22 0c0-7 5-13 11-22z"/><path d="M19 30a5 5 0 0 0 5 5"/></svg>
+          <h3>Mali servis</h3>
+          <p>Ulje, filter ulja, vazduha i kabine. Provera tečnosti, kočnica i pakni.</p>
+          <div class="cena"><b><small>od</small>2.500 RSD</b><span>oko 45 min</span></div>
+        </article>
+        <article class="kartica">
+          <svg class="ik" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><path d="M30 6a10 10 0 0 0-9 14L7 34a4 4 0 0 0 6 6l14-14a10 10 0 0 0 14-9l-6 5-6-2-2-6 5-6z"/></svg>
+          <h3>Veliki servis</h3>
+          <p>Mali servis plus svećice ili grejači, filter goriva i pregled trapa na dizalici.</p>
+          <div class="cena"><b><small>od</small>6.000 RSD</b><span>2–3 h</span></div>
+        </article>
+        <article class="kartica">
+          <svg class="ik" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><circle cx="22" cy="26" r="16"/><circle cx="22" cy="26" r="5"/><path d="M33 9a20 20 0 0 1 9 12l-7 3a12 12 0 0 0-5-8z" stroke-linejoin="round"/></svg>
+          <h3>Kočnice</h3>
+          <p>Pločice i diskovi, napred ili nazad. Provera i zamena kočione tečnosti.</p>
+          <div class="cena"><b><small>od</small>2.500 RSD</b><span>po osovini, 1 h</span></div>
+        </article>
+        <article class="kartica">
+          <svg class="ik" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M24 4v6M24 38v6"/><path d="M14 10h20M14 38h20"/><path d="M14 14l20 4-20 4 20 4-20 4 20 4"/></svg>
+          <h3>Trap</h3>
+          <p>Krajevi spona, ramena, selen blokovi, amortizeri. Pregled lufta besplatan uz bilo koji servis.</p>
+          <div class="cena"><b><small>od</small>3.000 RSD</b><span>1–3 h</span></div>
+        </article>
+        <article class="kartica">
+          <svg class="ik" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="9" width="38" height="26"/><path d="M10 24h7l3-7 5 12 3-5h10"/><path d="M18 41h12M24 35v6"/></svg>
+          <h3>Dijagnostika</h3>
+          <p>Očitavanje grešaka i provera senzora. Dobijete spisak: šta je hitno, a šta može da sačeka.</p>
+          <div class="cena"><b>2.500 RSD</b><span>30–45 min</span></div>
+        </article>
+        <article class="kartica">
+          <svg class="ik" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M24 4v40M6.7 14l34.6 20M6.7 34l34.6-20"/><path d="M19 7l5 4 5-4M19 41l5-4 5 4"/></svg>
+          <h3>Klima</h3>
+          <p>Provera curenja, vakumiranje i punjenje gasom R134a ili R1234yf.</p>
+          <div class="cena"><b><small>od</small>5.000 RSD</b><span>oko 1 h</span></div>
+        </article>
+        <article class="kartica">
+          <svg class="ik" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><circle cx="14" cy="30" r="9"/><circle cx="36" cy="14" r="7"/><path d="M8 23L31 8M21 36l21-17" stroke-linecap="round"/><circle cx="14" cy="30" r="2.5" fill="currentColor"/><circle cx="36" cy="14" r="2" fill="currentColor"/></svg>
+          <h3>Zupčasti kaiš</h3>
+          <p>Kaiš, španer i vodena pumpa u kompletu. Upisujemo kilometražu za sledeću zamenu.</p>
+          <div class="cena"><b><small>od</small>12.000 RSD</b><span>3–5 h</span></div>
+        </article>
+        <article class="kartica poziv">
+          <svg class="ik" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M24 6L44 40H4z" stroke-linejoin="round"/><path d="M24 19v10"/><circle cx="24" cy="34" r="1.5" fill="currentColor"/></svg>
+          <h3>Nešto drugo?</h3>
+          <p>Lampica, zvuk, vibracija. Opišite šta se dešava i kada, javimo vam se sa terminom.</p>
+          <a class="btn btn-nar" href="#termin">Opišite kvar</a>
+        </article>
+      </div>
+      <div class="napomena">
+        <p><strong>Delovi:</strong> nabavljamo ih po ceni dobavljača, ili donesete svoje. Na delove koje donesete garancija važi samo za rad.</p>
+        <p><strong>Vozila:</strong> putnički automobili i laka dostavna vozila do 3,5 t. Ne radimo limariju i farbanje.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="postupak" id="postupak" aria-labelledby="postupak-naslov">
+    <div class="wrap">
+      <h2 id="postupak-naslov">Kako radimo</h2>
+      <ol class="koraci">
+        <li><div><h3>Prijem</h3><p>Zapišemo šta ste primetili: zvuk, lampicu, kad se javlja i na kojoj brzini.</p></div></li>
+        <li><div><h3>Pregled</h3><p>Dizalica i dijagnostika. Javljamo se telefonom sa nalazom, obično u roku od sat vremena.</p></div></li>
+        <li><div><h3>Ponuda</h3><p>Kažemo cenu rada i delova. Dok ne kažete da, ne počinjemo.</p></div></li>
+        <li><div><h3>Preuzimanje</h3><p>Račun, garancija na rad i stari delovi u gepeku, ako ih želite.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="termin" id="termin" aria-labelledby="termin-naslov">
+    <div class="wrap termin-grid">
+      <div>
+        <h2 id="termin-naslov">Zakažite termin</h2>
+        <p class="uvod">Popunite formu, a mi vas zovemo da potvrdimo dan i sat. Termine potvrđujemo isti radni dan.</p>
+        <p class="tel">Brže je telefonom:<br><a href="tel:+381600000187">060 000 01 87</a></p>
+      </div>
+      <!-- Web3Forms: action="https://api.web3forms.com/submit" + access_key -->
+      <form class="f" id="forma" novalidate>
+        <div class="red-2">
+          <div class="polje"><label for="ime">Ime i prezime</label><input id="ime" name="ime" autocomplete="name" required></div>
+          <div class="polje"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel" placeholder="06x xxx xx xx" required></div>
+        </div>
+        <div class="red-2">
+          <div class="polje"><label for="model">Marka i model</label><input id="model" name="model" placeholder="npr. Škoda Octavia 1.6 TDI"></div>
+          <div class="polje"><label for="godiste">Godište</label><input id="godiste" name="godiste" type="number" inputmode="numeric" min="1985" max="2026" placeholder="npr. 2014"></div>
+        </div>
+        <div class="red-2">
+          <div class="polje"><label for="registracija">Registracija <i>(nije obavezno)</i></label><input id="registracija" name="registracija" placeholder="BG 123-AB"></div>
+          <div class="polje"><label for="usluga">Usluga</label>
+            <select id="usluga" name="usluga">
+              <option>Nisam siguran, treba dijagnostika</option>
+              <option>Mali servis</option>
+              <option>Veliki servis</option>
+              <option>Kočnice</option>
+              <option>Trap</option>
+              <option>Klima</option>
+              <option>Zupčasti kaiš</option>
+            </select>
+          </div>
+        </div>
+        <div class="polje"><label for="opis">Opis problema</label><textarea id="opis" name="opis" placeholder="Šta se dešava, od kada, da li svetli neka lampica"></textarea></div>
+        <button class="btn btn-nar" type="submit">Pošaljite zahtev za termin</button>
+        <p class="poruka" id="poruka" role="status" tabindex="-1"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="info" aria-label="Radno vreme i lokacija">
+    <div class="wrap info-grid">
+      <div id="radno-vreme">
+        <h2>Radno vreme</h2>
+        <table class="vreme">
+          <caption class="sr-only">Radno vreme po danima</caption>
+          <tbody>
+            <tr data-dan="1"><th scope="row">Ponedeljak</th><td>08–18</td></tr>
+            <tr data-dan="2"><th scope="row">Utorak</th><td>08–18</td></tr>
+            <tr data-dan="3"><th scope="row">Sreda</th><td>08–18</td></tr>
+            <tr data-dan="4"><th scope="row">Četvrtak</th><td>08–18</td></tr>
+            <tr data-dan="5"><th scope="row">Petak</th><td>08–18</td></tr>
+            <tr data-dan="6"><th scope="row">Subota</th><td>08–14</td></tr>
+            <tr data-dan="0"><th scope="row">Nedelja</th><td class="zat">zatvoreno</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="lokacija">
+        <h2>Lokacija</h2>
+        <p class="adresa">Ustanička 187, Zvezdara</p>
+        <p>Ulaz u dvorište je iz Ustaničke. Parking za četiri vozila, auto možete ostaviti i dan ranije.</p>
+        <div class="mapa">
+          <iframe src="https://maps.google.com/maps?q=Ustani%C4%8Dka%20187%2C%20Beograd&amp;z=15&amp;output=embed" title="Mapa: Auto servis Mićić, Ustanička 187, Beograd" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="hazard tanka" aria-hidden="true"></div>
+<footer>
+  <div class="wrap">
+    <p><strong>Auto servis Mićić</strong><br>Ustanička 187, 11050 Beograd (Zvezdara)<br>Telefon: <a href="tel:+381600000187">060 000 01 87</a></p>
+    <p class="footer-demo">Primer sajta · izradio opsforma. Firma, telefon i cene su izmišljeni za potrebe primera. <a href="../">Svi primeri</a></p>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Brzi kontakt">
+  <a href="tel:+381600000187"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>Pozovite</a>
+  <a href="#termin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="3" y="5" width="18" height="16"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Zakažite</a>
+</nav>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'),nav=document.getElementById('glavni-meni');
+  function zatvori(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Otvori meni');}
+  btn.addEventListener('click',function(){
+    var otv=btn.getAttribute('aria-expanded')==='true';
+    if(otv){zatvori();}else{nav.classList.add('open');btn.setAttribute('aria-expanded','true');btn.setAttribute('aria-label','Zatvori meni');}
+  });
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',zatvori);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&btn.getAttribute('aria-expanded')==='true'){zatvori();btn.focus();}});
+
+  // radno vreme danas
+  var sati={0:null,1:[8,18],2:[8,18],3:[8,18],4:[8,18],5:[8,18],6:[8,14]};
+  var d=new Date(),dan=d.getDay(),h=d.getHours()+d.getMinutes()/60;
+  var red=document.querySelector('.vreme tr[data-dan="'+dan+'"]');if(red)red.classList.add('danas');
+  var st=document.getElementById('status'),sit=document.getElementById('status-sitno'),s=sati[dan];
+  if(s&&h>=s[0]&&h<s[1]){st.textContent='Otvoreno do '+s[1]+'h';}
+  else{st.textContent='Sada zatvoreno';st.classList.add('zatv');sit.textContent='Pošaljite zahtev preko forme, javljamo se prvog radnog dana od 08h.';}
+
+  // forma
+  var f=document.getElementById('forma'),p=document.getElementById('poruka');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    p.textContent='Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.';
+    p.classList.add('vidi');p.focus();
+  });
+})();
+</script>
+</body>
+</html>

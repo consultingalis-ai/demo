@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Auto perionica Sjaj – ručno pranje, Mitropolita Petra 24, Zvezdara</title>
+<meta name="description" content="Ručno pranje automobila na Zvezdari: paketi Osnovno, Komplet i Detaljno sa cenama i trajanjem, poliranje farova, dubinsko pranje sedišta i ozon. Mitropolita Petra 24.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&display=swap&subset=latin-ext" rel="stylesheet">
+<style>
+:root{
+  --aqua:#00C2D1;
+  --plava:#1B4DFF;
+  --noc:#0A1633;
+  --noc-2:#13234F;
+  --bela:#FFFFFF;
+  --magla:#EEF6FB;
+  --tekst:#0A1633;
+  --tekst-2:#3D4A6B;
+  --prelaz:linear-gradient(120deg,var(--aqua),var(--plava));
+  --staklo:rgba(255,255,255,.10);
+  --staklo-ivica:rgba(255,255,255,.28);
+  --r:22px;
+  --head:"Sora","Manrope","DejaVu Sans","Liberation Sans",Arial,sans-serif;
+  --body:"Manrope","Liberation Sans",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--noc);color:var(--tekst);font-family:var(--body);font-size:17px;line-height:1.55}
+svg{display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);margin:0;line-height:1.12;letter-spacing:-.02em}
+p{margin:0}
+:focus-visible{outline:3px solid var(--aqua);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1160px,100% - 32px);margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.demo{background:var(--noc);color:#B9C3DD;font-size:13px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.demo .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.demo a{color:#7FE6EE}
+
+/* tamna pozadina sa svetlosnim mrljama */
+.okean{position:relative;background:
+  radial-gradient(60% 50% at 85% 10%,rgba(0,194,209,.45),transparent 70%),
+  radial-gradient(55% 60% at 5% 80%,rgba(27,77,255,.55),transparent 70%),
+  var(--noc);color:var(--bela);overflow:hidden;overflow:clip}
+
+/* plutajuća navigacija */
+.nav-sloj{position:sticky;top:10px;z-index:40;padding:0 12px;margin:10px 0 -70px}
+.traka{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 8px 8px 18px;border-radius:999px;background:rgba(10,22,51,.62);border:1px solid var(--staklo-ivica);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);color:var(--bela);position:relative}
+.znak{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--head);font-weight:700;font-size:18px}
+.znak svg{width:28px;height:28px}
+.meni-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--staklo-ivica);background:var(--staklo);color:var(--bela);display:grid;place-items:center;cursor:pointer}
+.meni-btn svg{width:22px;height:22px}
+.meni-btn .x{display:none}
+.meni-btn[aria-expanded="true"] .x{display:block}
+.meni-btn[aria-expanded="true"] .h{display:none}
+.meni{position:absolute;top:calc(100% + 8px);left:0;right:0;border-radius:var(--r);background:rgba(10,22,51,.98);border:1px solid var(--staklo-ivica);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);padding:10px;display:none}
+.meni.otvoren{display:block}
+.meni ul{list-style:none;margin:0;padding:0}
+.meni a{display:block;padding:13px 14px;border-radius:14px;text-decoration:none;font-weight:600}
+.meni a:hover{background:rgba(255,255,255,.1)}
+@media (min-width:900px){
+  .meni-btn{display:none}
+  .meni{display:block;position:static;background:none;border:0;padding:0;-webkit-backdrop-filter:none;backdrop-filter:none}
+  .meni ul{display:flex;gap:4px}
+  .meni a{padding:9px 14px;border-radius:999px;font-size:15px}
+}
+
+/* dugmad: pilule */
+.dug{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:52px;padding:0 26px;border-radius:999px;font:700 16px var(--body);text-decoration:none;cursor:pointer;border:0}
+.dug svg{width:19px;height:19px}
+.dug-bela{background:var(--bela);color:var(--noc);box-shadow:0 0 0 3px rgba(0,194,209,.5)}
+.dug-bela:hover{box-shadow:0 0 0 5px rgba(0,194,209,.6)}
+.dug-staklo{background:var(--staklo);color:var(--bela);border:1px solid var(--staklo-ivica);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.dug-staklo:hover{background:rgba(255,255,255,.18)}
+.dug-prelaz{background:var(--prelaz);color:var(--bela);text-shadow:0 1px 1px rgba(10,22,51,.35)}
+.dug-prelaz:hover{filter:brightness(1.08)}
+
+/* hero */
+.hero{padding:120px 0 72px;position:relative;z-index:1}
+.status{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 12px;border-radius:999px;background:var(--staklo);border:1px solid var(--staklo-ivica);font-weight:600;font-size:15px;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.tacka{width:10px;height:10px;border-radius:50%;background:#3BE58E;box-shadow:0 0 0 0 rgba(59,229,142,.6);animation:puls 2s infinite}
+.status.zatvoreno .tacka{background:#FFB547;animation:none}
+@keyframes puls{70%{box-shadow:0 0 0 9px rgba(59,229,142,0)}100%{box-shadow:0 0 0 0 rgba(59,229,142,0)}}
+.hero h1{margin-top:22px;font-size:clamp(40px,8.4vw,84px);font-weight:800;max-width:12ch}
+.hero .uvod{margin-top:16px;font-size:clamp(17px,2vw,20px);color:#C9D3EC;max-width:44ch}
+.cene-brzo{margin:30px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:640px}
+.cene-brzo li{border-radius:18px;padding:14px 12px;background:var(--staklo);border:1px solid var(--staklo-ivica);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.cene-brzo span{display:block;font-size:14px;color:#C9D3EC;font-weight:600}
+.cene-brzo b{display:block;font-family:var(--head);font-size:clamp(19px,3.2vw,28px);margin-top:2px;white-space:nowrap}
+.cene-brzo small{font-size:13px;color:#C9D3EC}
+.hero .cta{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+
+/* mehurići */
+.mehurici{position:absolute;inset:0;pointer-events:none;z-index:0}
+.mehurici svg{position:absolute;right:-60px;top:40px;width:min(620px,110vw);height:auto;opacity:.95}
+.mh{animation:plovi 9s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.mh:nth-child(2n){animation-duration:12s;animation-delay:-3s}
+.mh:nth-child(3n){animation-duration:15s;animation-delay:-6s}
+.kap{animation:kapa 6s ease-in infinite;transform-box:fill-box}
+.kap:nth-of-type(2){animation-delay:-2s}
+@keyframes plovi{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+@keyframes kapa{0%{transform:translateY(-10px);opacity:0}15%{opacity:1}80%{opacity:1}100%{transform:translateY(40px);opacity:0}}
+@media (max-width:899px){.mehurici svg{top:auto;bottom:-40px;right:-120px;opacity:.55}}
+
+/* paketi: poređenje */
+.paketi{padding:24px 0 84px;position:relative;z-index:1}
+.paketi h2,.dodaci h2,.termin h2,.info h2{font-size:clamp(30px,5vw,48px);font-weight:800}
+.paketi .pod{margin-top:12px;color:#C9D3EC;max-width:56ch}
+.poredjenje{margin-top:30px;width:100%;border-collapse:separate;border-spacing:0}
+.poredjenje th,.poredjenje td{padding:13px 10px;text-align:center}
+.poredjenje thead th{vertical-align:bottom}
+.pk-ime{display:block;font-family:var(--head);font-size:clamp(16px,2.2vw,22px);font-weight:700}
+.pk-cena{display:block;font-family:var(--head);font-weight:800;font-size:clamp(20px,3vw,34px);margin-top:4px;white-space:nowrap}
+.pk-vreme{display:inline-block;margin-top:6px;font-size:13px;font-weight:700;padding:3px 10px;border-radius:999px;background:rgba(0,194,209,.22);color:#BFF6FA}
+.poredjenje tbody th{text-align:left;font-weight:500;color:#DCE3F5}
+.poredjenje tbody tr+tr th,.poredjenje tbody tr+tr td{border-top:1px solid rgba(255,255,255,.1)}
+.kol{background:var(--staklo);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-inline:1px solid var(--staklo-ivica)}
+thead .kol{border-top:1px solid var(--staklo-ivica);border-radius:var(--r) var(--r) 0 0;padding-top:20px}
+tfoot .kol{border-bottom:1px solid var(--staklo-ivica);border-radius:0 0 var(--r) var(--r)}
+.poredjenje tfoot td{padding:12px 10px 18px;font-size:13.5px;color:#C9D3EC}
+.da,.ne{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;vertical-align:middle}
+.da{background:var(--prelaz)}
+.da svg{width:16px;height:16px}
+.ne{border:1.5px solid rgba(255,255,255,.25)}
+.ne::before{content:"";width:10px;height:1.5px;background:rgba(255,255,255,.45)}
+@media (min-width:700px){
+  .poredjenje{table-layout:fixed}
+  .poredjenje .prvi{width:34%}
+  .kol+.kol{border-left:0}
+  .poredjenje thead .kol,.poredjenje tbody td,.poredjenje tfoot td{width:22%}
+  .poredjenje tbody td.kol + td.kol, thead .kol + .kol, tfoot .kol + .kol{box-shadow:inset 1px 0 0 rgba(255,255,255,.12)}
+}
+@media (max-width:699px){
+  .poredjenje,.poredjenje thead,.poredjenje tbody,.poredjenje tfoot{display:block}
+  .poredjenje tr{display:grid;grid-template-columns:repeat(3,1fr);column-gap:6px}
+  .poredjenje .prvi{display:none}
+  .poredjenje tbody th{grid-column:1/-1;padding:14px 4px 4px;font-size:15px}
+  .poredjenje tbody td{padding:6px 0 12px}
+  .poredjenje thead{position:sticky;top:76px;z-index:2}
+  .poredjenje thead .kol{border-radius:16px;padding:12px 4px;background:rgba(10,22,51,.86);border:1px solid var(--staklo-ivica)}
+  .kol{background:none;-webkit-backdrop-filter:none;backdrop-filter:none;border:0}
+  .poredjenje tbody tr+tr th,.poredjenje tbody tr+tr td{border-top:0}
+  .poredjenje tbody tr{border-top:1px solid rgba(255,255,255,.1)}
+  .poredjenje tfoot td{padding:12px 4px;font-size:13px}
+  .pk-vreme{font-size:12px;padding:2px 8px}
+}
+.doplata{margin-top:18px;color:#C9D3EC;font-size:15px}
+
+/* dodaci */
+.dodaci{padding:76px 0;background:var(--magla)}
+.dodaci .pod{margin-top:12px;color:var(--tekst-2);max-width:56ch}
+.dod-mreza{margin-top:30px;display:grid;gap:16px}
+.dod{background:var(--bela);border-radius:var(--r);padding:22px;display:grid;grid-template-columns:52px 1fr;gap:6px 16px;border:1px solid #D7E6F0}
+.dod .ik{grid-row:1/4;width:52px;height:52px;border-radius:16px;background:var(--prelaz);display:grid;place-items:center;color:var(--bela)}
+.dod .ik svg{width:28px;height:28px}
+.dod h3{font-size:19px;font-weight:700}
+.dod p{color:var(--tekst-2);font-size:15.5px}
+.dod .c{font-family:var(--head);font-weight:700;color:var(--plava);font-size:17px}
+.foto{margin-top:16px;border-radius:var(--r);min-height:200px;background:
+  radial-gradient(circle at 30% 30%,rgba(255,255,255,.5) 0 6px,transparent 7px) 0 0/46px 46px,
+  linear-gradient(135deg,#BDEFF3,#C9D6FF);display:flex;align-items:flex-end;padding:16px;border:1px solid #D7E6F0}
+.foto span{font-size:13px;font-weight:700;color:var(--noc-2);background:rgba(255,255,255,.7);padding:4px 10px;border-radius:999px}
+.cinj{margin:28px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:10px}
+.cinj li{padding:9px 16px;border-radius:999px;background:var(--bela);border:1px solid #D7E6F0;font-weight:600;font-size:15px}
+@media (min-width:760px){.dod-mreza{grid-template-columns:1fr 1fr}}
+@media (min-width:1080px){.dod-mreza{grid-template-columns:repeat(3,1fr)}.foto{margin-top:0;grid-column:span 2}}
+
+/* termin */
+.termin{padding:80px 0;position:relative;z-index:1}
+.termin-grid{display:grid;gap:30px}
+.termin .pod{margin-top:12px;color:#C9D3EC;max-width:42ch}
+.termin .pod a{color:#7FE6EE;font-weight:700}
+.forma{border-radius:28px;padding:22px 18px;background:rgba(255,255,255,.09);border:1px solid var(--staklo-ivica);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);display:grid;gap:16px}
+.red{display:grid;gap:16px}
+.pol{display:grid;gap:6px}
+.pol>label,.forma legend{font-weight:700;font-size:15px}
+.forma input[type=text],.forma input[type=tel],.forma input[type=date],.forma select,.forma textarea{width:100%;font:inherit;font-size:16px;color:var(--bela);background:rgba(10,22,51,.55);border:1px solid rgba(255,255,255,.3);border-radius:14px;padding:12px 14px}
+.forma select option{color:var(--noc)}
+.forma textarea{min-height:90px;resize:vertical}
+.forma input:focus,.forma select:focus,.forma textarea:focus{outline:none;border-color:var(--aqua);box-shadow:0 0 0 3px rgba(0,194,209,.4)}
+.forma ::placeholder{color:#93A0C2}
+.forma fieldset{border:0;margin:0;padding:0;min-width:0}
+.forma legend{margin-bottom:8px;padding:0}
+.izbori{display:flex;flex-wrap:wrap;gap:8px}
+.izbor{position:relative}
+.izbor input{position:absolute;opacity:0;width:1px;height:1px}
+.izbor label{display:inline-flex;align-items:center;min-height:42px;padding:8px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:rgba(10,22,51,.4);cursor:pointer;font-weight:600;font-size:15px}
+.izbor input:checked+label{background:var(--prelaz);border-color:transparent}
+.izbor input:focus-visible+label{outline:3px solid var(--aqua);outline-offset:2px}
+.poruka{display:none;border-radius:16px;padding:14px 16px;background:rgba(0,194,209,.18);border:1px solid var(--aqua);font-weight:700}
+.poruka.vidi{display:block}
+@media (min-width:600px){.red{grid-template-columns:1fr 1fr}}
+@media (min-width:960px){.termin-grid{grid-template-columns:.8fr 1.2fr;align-items:start}.forma{padding:30px}}
+
+/* info */
+.info{padding:76px 0 64px;background:var(--bela)}
+.info-grid{display:grid;gap:36px}
+.vreme{width:100%;border-collapse:collapse;margin-top:20px}
+.vreme th,.vreme td{padding:12px 0;border-bottom:1px solid #DCE6EE;text-align:left}
+.vreme td{text-align:right;font-family:var(--head);font-weight:600}
+.vreme tr.danas th,.vreme tr.danas td{color:var(--plava)}
+.vreme tr.danas th::after{content:"danas";margin-left:8px;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--prelaz);color:var(--bela);vertical-align:2px}
+.adresa{margin-top:20px;font-family:var(--head);font-size:22px;font-weight:700}
+.adresa+p{margin-top:6px;color:var(--tekst-2)}
+.mapa{margin-top:18px;border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;background:var(--magla);border:1px solid #D7E6F0}
+.mapa iframe{width:100%;height:100%;border:0;display:block}
+@media (min-width:900px){.info-grid{grid-template-columns:1fr 1.3fr;gap:60px}.mapa{aspect-ratio:16/10}}
+
+footer{background:var(--noc);color:#B9C3DD;padding:34px 0 40px;font-size:15px}
+footer .wrap{display:grid;gap:14px}
+footer strong{color:var(--bela);font-family:var(--head)}
+footer a{color:#7FE6EE}
+footer .dn{padding-top:14px;border-top:1px solid rgba(255,255,255,.1);font-size:13px}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .mh,.kap,.tacka{animation:none!important}
+  .kap{opacity:1}
+}
+</style>
+</head>
+<body>
+
+<div class="demo" role="note"><div class="wrap"><span>Primer sajta · izradio opsforma</span><a href="../">Svi primeri</a></div></div>
+
+  <div class="nav-sloj">
+    <header class="traka">
+      <a class="znak" href="#pocetak" aria-label="Auto perionica Sjaj, na vrh strane">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="zn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00C2D1"/><stop offset="1" stop-color="#1B4DFF"/></linearGradient></defs><path d="M16 2c6 9 10 14 10 19a10 10 0 0 1-20 0c0-5 4-10 10-19z" fill="url(#zn)"/><path d="M11 21a5 5 0 0 0 5 5" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        Sjaj
+      </a>
+      <button class="meni-btn" type="button" aria-expanded="false" aria-controls="meni" aria-label="Meni">
+        <svg class="h" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+        <svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <nav class="meni" id="meni" aria-label="Glavni meni">
+        <ul>
+          <li><a href="#paketi">Paketi</a></li>
+          <li><a href="#dodaci">Dodaci</a></li>
+          <li><a href="#termin">Zakažite</a></li>
+          <li><a href="#radno-vreme">Radno vreme</a></li>
+          <li><a href="#lokacija">Lokacija</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+<main>
+<div class="okean">
+  <div class="mehurici" aria-hidden="true">
+    <svg viewBox="0 0 600 560" fill="none">
+      <defs>
+        <radialGradient id="mh-g" cx="35%" cy="30%" r="70%">
+          <stop offset="0" stop-color="#fff" stop-opacity=".55"/>
+          <stop offset=".45" stop-color="#7FE6EE" stop-opacity=".12"/>
+          <stop offset="1" stop-color="#1B4DFF" stop-opacity=".25"/>
+        </radialGradient>
+        <linearGradient id="kap-g" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#7FE6EE"/>
+          <stop offset="1" stop-color="#1B4DFF"/>
+        </linearGradient>
+      </defs>
+      <g>
+        <g class="mh"><circle cx="420" cy="170" r="110" fill="url(#mh-g)" stroke="rgba(255,255,255,.55)" stroke-width="1.5"/><path d="M360 120a80 80 0 0 1 50-34" stroke="#fff" stroke-opacity=".8" stroke-width="5" stroke-linecap="round"/></g>
+        <g class="mh"><circle cx="250" cy="320" r="62" fill="url(#mh-g)" stroke="rgba(255,255,255,.5)" stroke-width="1.5"/><path d="M215 295a45 45 0 0 1 26-20" stroke="#fff" stroke-opacity=".75" stroke-width="4" stroke-linecap="round"/></g>
+        <g class="mh"><circle cx="520" cy="360" r="46" fill="url(#mh-g)" stroke="rgba(255,255,255,.5)" stroke-width="1.5"/><path d="M494 342a32 32 0 0 1 18-14" stroke="#fff" stroke-opacity=".75" stroke-width="3.5" stroke-linecap="round"/></g>
+        <g class="mh"><circle cx="350" cy="450" r="30" fill="url(#mh-g)" stroke="rgba(255,255,255,.45)" stroke-width="1.2"/><path d="M334 438a20 20 0 0 1 11-9" stroke="#fff" stroke-opacity=".7" stroke-width="3" stroke-linecap="round"/></g>
+        <g class="mh"><circle cx="560" cy="70" r="22" fill="url(#mh-g)" stroke="rgba(255,255,255,.45)" stroke-width="1.2"/></g>
+        <g class="mh"><circle cx="180" cy="190" r="16" fill="url(#mh-g)" stroke="rgba(255,255,255,.45)" stroke-width="1.2"/></g>
+        <g class="mh"><circle cx="460" cy="500" r="12" fill="url(#mh-g)" stroke="rgba(255,255,255,.45)" stroke-width="1"/></g>
+      </g>
+      <path class="kap" d="M300 40c10 16 18 26 18 37a18 18 0 0 1-36 0c0-11 8-21 18-37z" fill="url(#kap-g)" opacity=".9"/>
+      <path class="kap" d="M130 380c7 11 12 18 12 26a12 12 0 0 1-24 0c0-8 5-15 12-26z" fill="url(#kap-g)" opacity=".85"/>
+      <path class="kap" d="M570 230c6 10 10 16 10 22a10 10 0 0 1-20 0c0-6 4-12 10-22z" fill="url(#kap-g)" opacity=".85"/>
+    </svg>
+  </div>
+
+  <section class="hero" id="pocetak">
+    <div class="wrap">
+      <p class="status" id="status" role="status"><span class="tacka" aria-hidden="true"></span><span id="status-tekst">Pon–sub 08–20, nedelja 09–16</span></p>
+      <h1>Auto perionica Sjaj</h1>
+      <p class="uvod">Ručno pranje u Mitropolita Petra 24. Bez četki i valjaka: dve kante, sunđer i mikrofiber.</p>
+      <ul class="cene-brzo" aria-label="Cene paketa">
+        <li><span>Osnovno</span><b>1.200</b><small>RSD, 30 min</small></li>
+        <li><span>Komplet</span><b>2.200</b><small>RSD, 1 h</small></li>
+        <li><span>Detaljno</span><b>6.500</b><small>RSD, 3–4 h</small></li>
+      </ul>
+      <div class="cta">
+        <a class="dug dug-bela" href="#termin">Zakažite pranje</a>
+        <a class="dug dug-staklo" href="tel:+381600000224">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z" stroke-linejoin="round"/></svg>
+          Pozovite 060 000 02 24</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="paketi" id="paketi" aria-labelledby="paketi-n">
+    <div class="wrap">
+      <h2 id="paketi-n">Šta je u kom paketu</h2>
+      <p class="pod">Cene su za gradski auto, limuzinu i karavan. Trajanje je za jedan auto, bez čekanja u redu.</p>
+      <table class="poredjenje">
+        <caption class="sr-only">Poređenje paketa pranja: šta je uključeno, cena i trajanje</caption>
+        <thead>
+          <tr>
+            <td class="prvi"></td>
+            <th scope="col" class="kol"><span class="pk-ime">Osnovno</span><span class="pk-cena">1.200</span><span class="pk-vreme">30 min</span></th>
+            <th scope="col" class="kol"><span class="pk-ime">Komplet</span><span class="pk-cena">2.200</span><span class="pk-vreme">1 h</span></th>
+            <th scope="col" class="kol"><span class="pk-ime">Detaljno</span><span class="pk-cena">6.500</span><span class="pk-vreme">3–4 h</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Ručno pranje karoserije, dve kante</th><td class="kol"><span class="da"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span><span class="sr-only">uključeno</span></td><td class="kol"><span class="da"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span><span class="sr-only">uključeno</span></td><td class="kol"><span class="da"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span><span class="sr-only">uključeno</span></td></tr>
+          <tr><th scope="row">Felne, gume i crnjenje guma</th><td class="kol"><span class="da"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span><span class="sr-only">uključeno</span></td><td class="kol"><span class="da"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span><span class="sr-only">uključeno</span></td><td class="kol"><span class="da"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span><span class="sr-only">uključeno</span></td></tr>
+          <tr><th scope="row">Sušenje mikrofiberom</th><td class="kol"><span class="da"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span><span class="sr-only">uključeno</span></td><td class="kol"><span class="da"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span><span class="sr-only">uključeno</span></td><td class="kol"><span class="da"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span><span class="sr-only">uključeno</span></td></tr>
+          <tr><th scope="row">Usisavanje kabine i gepeka</th><td class="kol"><span class="ne"></span><span class="sr-only">nije uključeno</span></td><td class="kol"><span class="da"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span><span class="sr-only">uključeno</span></td><td class="kol"><span class="da"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span><span class="sr-only">uključeno</span></td></tr>
+          <tr><th scope="row">Brisanje table i plastike</th><td class="kol"><span class="ne"></span><span class="sr-only">nije uključeno</span></td><td class="kol"><span class="da"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span><span class="sr-only">uključeno</span></td><td class="kol"><span class="da"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span><span class="sr-only">uključeno</span></td></tr>
+          <tr><th scope="row">Stakla iznutra i patosnice</th><td class="kol"><span class="ne"></span><span class="sr-only">nije uključeno</span></td><td class="kol"><span class="da"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span><span class="sr-only">uključeno</span></td><td class="kol"><span class="da"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span><span class="sr-only">uključeno</span></td></tr>
+          <tr><th scope="row">Pragovi i šarke vrata</th><td class="kol"><span class="ne"></span><span class="sr-only">nije uključeno</span></td><td class="kol"><span class="ne"></span><span class="sr-only">nije uključeno</span></td><td class="kol"><span class="da"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span><span class="sr-only">uključeno</span></td></tr>
+          <tr><th scope="row">Ventilacija, šavovi i dubinsko čišćenje plastike</th><td class="kol"><span class="ne"></span><span class="sr-only">nije uključeno</span></td><td class="kol"><span class="ne"></span><span class="sr-only">nije uključeno</span></td><td class="kol"><span class="da"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span><span class="sr-only">uključeno</span></td></tr>
+          <tr><th scope="row">Ručno nanošenje voska</th><td class="kol"><span class="ne"></span><span class="sr-only">nije uključeno</span></td><td class="kol"><span class="ne"></span><span class="sr-only">nije uključeno</span></td><td class="kol"><span class="da"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3 3 7-7"/></svg></span><span class="sr-only">uključeno</span></td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td class="prvi"></td><td class="kol">SUV i kombi +300</td><td class="kol">SUV i kombi +400</td><td class="kol">SUV i kombi +1.500</td></tr>
+        </tfoot>
+      </table>
+      <p class="doplata">Sve cene su u dinarima. Za Detaljno ostavite auto ujutru, gotov je posle podne.</p>
+    </div>
+  </section>
+
+</div>
+
+<section class="dodaci" id="dodaci" aria-labelledby="dodaci-n">
+  <div class="wrap">
+    <h2 id="dodaci-n">Dodaci uz bilo koji paket</h2>
+    <p class="pod">Dodajte ih pri zakazivanju ili kad dovezete auto. Plaćaju se posebno.</p>
+    <div class="dod-mreza">
+      <article class="dod">
+        <span class="ik" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 14a10 8 0 0 1 10-8h2v16h-2A10 8 0 0 1 4 14z"/><path d="M20 9h5M20 14h5M20 19h5"/></svg></span>
+        <h3>Poliranje farova</h3>
+        <p>Za mutne i požutele farove. Brusimo, poliramo i štitimo lakom. Oko 45 minuta.</p>
+        <p class="c">3.000 RSD za par</p>
+      </article>
+      <article class="dod">
+        <span class="ik" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M8 4h9a3 3 0 0 1 3 3v9H8z"/><path d="M6 16h17v4H6zM8 20v4M21 20v4"/></svg></span>
+        <h3>Dubinsko pranje sedišta</h3>
+        <p>Ekstraktorom, tkanina. Sedišta se suše 2 do 3 sata. Kožna sedišta: čišćenje i nega 5.500 RSD.</p>
+        <p class="c">od 4.500 RSD</p>
+      </article>
+      <article class="dod">
+        <span class="ik" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="16" r="4"/><circle cx="18" cy="10" r="3"/><circle cx="20" cy="20" r="2.5"/><path d="M5 6c2 0 2 2 4 2s2-2 4-2"/></svg></span>
+        <h3>Ozon tretman</h3>
+        <p>Uklanja miris duvana, vlage i kućnih ljubimaca. Kabina se posle provetri. Oko 30 minuta.</p>
+        <p class="c">2.000 RSD</p>
+      </article>
+      <article class="dod">
+        <span class="ik" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 20c4-1 6-5 6-12M12 20c3-2 5-6 5-11M18 21c2-2 4-5 4-9"/></svg></span>
+        <h3>Dlake ljubimaca</h3>
+        <p>Gumenim četkama iz tkanine i tepiha. Cena zavisi od toga koliko ih ima.</p>
+        <p class="c">od 1.000 RSD</p>
+      </article>
+      <div class="foto" role="img" aria-label="Mesto za fotografiju boksa za pranje"><span>Vaša fotografija: boks za pranje</span></div>
+    </div>
+    <ul class="cinj" aria-label="Korisno je znati">
+      <li>Plaćanje karticom</li>
+      <li>Čekaonica sa kafom</li>
+      <li>Parking ispred za dva auta</li>
+      <li>Zakazani termini imaju prednost</li>
+    </ul>
+  </div>
+</section>
+
+<div class="okean">
+  <section class="termin" id="termin" aria-labelledby="termin-n">
+    <div class="wrap termin-grid">
+      <div>
+        <h2 id="termin-n">Zakažite pranje</h2>
+        <p class="pod">Izaberite paket i vreme. Potvrdu šaljemo SMS-om ili porukom na Viber. Za isti dan je brže da <a href="tel:+381600000224">pozovete</a>.</p>
+      </div>
+      <!-- Web3Forms: action="https://api.web3forms.com/submit" + access_key -->
+      <form class="forma" id="forma" novalidate>
+        <div class="red">
+          <div class="pol"><label for="ime">Ime</label><input id="ime" name="ime" type="text" autocomplete="given-name" required></div>
+          <div class="pol"><label for="tel">Telefon</label><input id="tel" name="telefon" type="tel" autocomplete="tel" placeholder="06x xxx xx xx" required></div>
+        </div>
+        <fieldset>
+          <legend>Paket</legend>
+          <div class="izbori">
+            <div class="izbor"><input type="radio" id="p1" name="paket" value="Osnovno"><label for="p1">Osnovno, 1.200</label></div>
+            <div class="izbor"><input type="radio" id="p2" name="paket" value="Komplet" checked><label for="p2">Komplet, 2.200</label></div>
+            <div class="izbor"><input type="radio" id="p3" name="paket" value="Detaljno"><label for="p3">Detaljno, 6.500</label></div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Dodaci</legend>
+          <div class="izbori">
+            <div class="izbor"><input type="checkbox" id="d1" name="dodaci" value="Farovi"><label for="d1">Poliranje farova</label></div>
+            <div class="izbor"><input type="checkbox" id="d2" name="dodaci" value="Sedišta"><label for="d2">Pranje sedišta</label></div>
+            <div class="izbor"><input type="checkbox" id="d3" name="dodaci" value="Ozon"><label for="d3">Ozon</label></div>
+          </div>
+        </fieldset>
+        <div class="red">
+          <div class="pol"><label for="vozilo">Vozilo</label>
+            <select id="vozilo" name="vozilo"><option>Gradski auto</option><option>Limuzina ili karavan</option><option>SUV ili kombi</option></select>
+          </div>
+          <div class="pol"><label for="model">Marka i model <span style="font-weight:500;color:#B9C3DD">(nije obavezno)</span></label><input id="model" name="model" type="text" placeholder="npr. VW Golf"></div>
+        </div>
+        <div class="red">
+          <div class="pol"><label for="dan">Dan</label><input id="dan" name="dan" type="date"></div>
+          <div class="pol"><label for="vreme">Okvirno vreme</label>
+            <select id="vreme" name="vreme"><option>08–10</option><option>10–12</option><option>12–14</option><option>14–16</option><option>16–18</option><option>18–20</option></select>
+          </div>
+        </div>
+        <div class="pol"><label for="nap">Napomena</label><textarea id="nap" name="napomena" placeholder="Npr. dosta dlaka od psa, fleka na zadnjem sedištu"></textarea></div>
+        <button class="dug dug-prelaz" type="submit">Pošaljite zahtev za termin</button>
+        <p class="poruka" id="poruka" role="status" tabindex="-1"></p>
+      </form>
+    </div>
+  </section>
+</div>
+
+<section class="info" aria-label="Radno vreme i lokacija">
+  <div class="wrap info-grid">
+    <div id="radno-vreme">
+      <h2>Radno vreme</h2>
+      <table class="vreme">
+        <caption class="sr-only">Radno vreme po danima</caption>
+        <tbody>
+          <tr data-dan="1"><th scope="row">Ponedeljak</th><td>08–20</td></tr>
+          <tr data-dan="2"><th scope="row">Utorak</th><td>08–20</td></tr>
+          <tr data-dan="3"><th scope="row">Sreda</th><td>08–20</td></tr>
+          <tr data-dan="4"><th scope="row">Četvrtak</th><td>08–20</td></tr>
+          <tr data-dan="5"><th scope="row">Petak</th><td>08–20</td></tr>
+          <tr data-dan="6"><th scope="row">Subota</th><td>08–20</td></tr>
+          <tr data-dan="0"><th scope="row">Nedelja</th><td>09–16</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="lokacija">
+      <h2>Lokacija</h2>
+      <p class="adresa">Mitropolita Petra 24, Zvezdara</p>
+      <p>Ulaz kroz kapiju iz Mitropolita Petra. Boks je natkriven, peremo i kad pada kiša.</p>
+      <div class="mapa">
+        <iframe src="https://maps.google.com/maps?q=Mitropolita%20Petra%2024%2C%20Beograd&amp;z=15&amp;output=embed" title="Mapa: Auto perionica Sjaj, Mitropolita Petra 24, Beograd" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Auto perionica Sjaj</strong><br>Ručno pranje, Mitropolita Petra 24, 11050 Beograd<br>Telefon: <a href="tel:+381600000224">060 000 02 24</a></p>
+    <p class="dn">Primer sajta · izradio opsforma. Firma, telefon i cene su izmišljeni za potrebe primera. <a href="../">Svi primeri</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.querySelector('.meni-btn'),m=document.getElementById('meni');
+  function postavi(o){m.classList.toggle('otvoren',o);b.setAttribute('aria-expanded',String(o));b.setAttribute('aria-label',o?'Zatvori meni':'Meni');}
+  b.addEventListener('click',function(){postavi(b.getAttribute('aria-expanded')!=='true');});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){postavi(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('otvoren')){postavi(false);b.focus();}});
+
+  // status otvoreno/zatvoreno
+  var sati={0:[9,16],1:[8,20],2:[8,20],3:[8,20],4:[8,20],5:[8,20],6:[8,20]};
+  var d=new Date(),dan=d.getDay(),h=d.getHours()+d.getMinutes()/60,s=sati[dan];
+  var st=document.getElementById('status'),t=document.getElementById('status-tekst');
+  if(h>=s[0]&&h<s[1]){t.textContent='Otvoreno sada, radimo do '+s[1]+'h';}
+  else{
+    st.classList.add('zatvoreno');
+    var sutra=h<s[0]?s:sati[(dan+1)%7];
+    t.textContent='Sada zatvoreno, otvaramo '+(h<s[0]?'danas':'sutra')+' u '+(sutra[0]<10?'0':'')+sutra[0]+'h';
+  }
+  var red=document.querySelector('.vreme tr[data-dan="'+dan+'"]');if(red)red.classList.add('danas');
+
+  var f=document.getElementById('forma'),p=document.getElementById('poruka');
+  f.addEventListener('submit',function(e){e.preventDefault();p.textContent='Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.';p.classList.add('vidi');p.focus();});
+})();
+</script>
+</body>
+</html>

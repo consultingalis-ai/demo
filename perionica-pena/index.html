@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Perionica Pena · samouslužna perionica veša, Zvezdara</title>
+<meta name="description" content="Samouslužna perionica veša u Vojislava Ilića 76 na Zvezdari. Pranje 8 kg 450 RSD, 12 kg 650 RSD, sušenje 150 RSD za 15 minuta. Radimo svaki dan, i peremo umesto vas do sutra.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap&subset=latin-ext" rel="stylesheet">
+<style>
+:root{
+  --blue:#1E5BFF;
+  --blue-deep:#1646C7;
+  --yellow:#FFD23F;
+  --ink:#0E1A3A;
+  --ink-2:#1B2A55;
+  --white:#FFFFFF;
+  --mist:#EEF2FF;
+  --line:#C9D4F5;
+  --muted:#4A5677;
+  --sans:"Space Grotesk",system-ui,"Segoe UI",Roboto,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,"DejaVu Sans Mono",monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.55;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:var(--blue)}
+h1,h2,h3{line-height:1.1;margin:0;letter-spacing:-.02em}
+p{margin:0}
+.num{font-family:var(--mono);font-feature-settings:"tnum" 1}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:6px;box-shadow:0 0 0 6px var(--ink)}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 18px}
+.skip{position:absolute;left:-999px;top:0;background:var(--yellow);color:var(--ink);padding:10px 14px;z-index:100}
+.skip:focus{left:10px;top:10px}
+
+/* opsforma traka */
+.demo-bar{background:var(--yellow);color:var(--ink);font-size:.82rem;padding:6px 0}
+.demo-bar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.demo-bar a{color:var(--ink);font-weight:700}
+
+/* header */
+.top{background:var(--ink);color:var(--white);position:sticky;top:0;z-index:50}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:62px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--white);text-decoration:none;font-weight:700;font-size:1.25rem;letter-spacing:-.02em}
+.brand svg{width:34px;height:34px}
+.menu-btn{background:transparent;border:2px solid rgba(255,255,255,.35);color:var(--white);border-radius:999px;height:42px;padding:0 16px;font:inherit;font-weight:500;display:inline-flex;align-items:center;gap:10px;cursor:pointer}
+.menu-btn .bars{width:18px;height:12px;position:relative}
+.menu-btn .bars::before,.menu-btn .bars::after{content:"";position:absolute;left:0;right:0;height:2px;background:currentColor;transition:transform .2s}
+.menu-btn .bars::before{top:1px}.menu-btn .bars::after{bottom:1px}
+.menu-btn[aria-expanded="true"] .bars::before{transform:translateY(4px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] .bars::after{transform:translateY(-5px) rotate(-45deg)}
+.nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--ink);border-top:1px solid var(--ink-2);padding:8px 18px 18px}
+.nav.open{display:block}
+.nav ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.nav a{display:block;color:var(--white);text-decoration:none;padding:12px 4px;border-bottom:1px solid var(--ink-2);font-weight:500}
+.nav a:hover{color:var(--yellow)}
+@media (min-width:920px){
+  .menu-btn{display:none}
+  .nav{display:block;position:static;background:none;border:0;padding:0}
+  .nav ul{display:flex;gap:4px}
+  .nav a{border:0;padding:8px 12px;border-radius:999px;font-size:.95rem}
+  .nav a:hover{background:var(--ink-2)}
+}
+
+/* hero / status ploča */
+.board{background:var(--ink);color:var(--white);position:relative;overflow:hidden;padding:28px 0 40px}
+.board .wrap{position:relative;z-index:1;display:grid;gap:28px}
+.status{display:grid;gap:14px}
+.status-pill{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.85rem;color:#B9C6EE}
+.lamp{width:14px;height:14px;border-radius:50%;background:#56607D;box-shadow:0 0 0 4px rgba(255,255,255,.08)}
+.is-open .lamp{background:var(--yellow);box-shadow:0 0 0 5px rgba(255,210,63,.22),0 0 18px rgba(255,210,63,.55)}
+.status-text{font-size:clamp(2.5rem,11vw,5.6rem);font-weight:700;line-height:.95;letter-spacing:-.045em}
+.is-open .status-text{color:var(--yellow)}
+.status-sub{font-size:1.15rem;color:#DCE3FA}
+.readouts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--ink-2);border:1px solid var(--ink-2);border-radius:14px;overflow:hidden;margin-top:6px}
+.readout{background:#13214A;padding:12px 12px 14px}
+.readout span{display:block;font-size:.78rem;color:#9FB0E0}
+.readout b{display:block;font-family:var(--mono);font-weight:500;font-size:1.25rem;margin-top:2px;color:var(--white)}
+.intro h1{font-size:clamp(1.6rem,5.4vw,2.4rem);font-weight:700;max-width:22ch}
+.intro p{color:#C9D3F2;margin-top:10px;max-width:46ch}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font-weight:700;text-decoration:none;font-size:1.02rem;border:2px solid transparent;cursor:pointer;font-family:inherit}
+.btn svg{width:20px;height:20px}
+.btn-yellow{background:var(--yellow);color:var(--ink)}
+.btn-yellow:hover{background:#FFE07A}
+.btn-ghost{border-color:rgba(255,255,255,.5);color:var(--white);background:transparent}
+.btn-ghost:hover{border-color:var(--white);background:rgba(255,255,255,.06)}
+.btn-blue{background:var(--blue);color:var(--white)}
+.btn-blue:hover{background:var(--blue-deep)}
+.drum-wrap{position:absolute;right:-120px;top:-40px;width:340px;opacity:.22;z-index:0;pointer-events:none}
+@media (min-width:920px){
+  .board{padding:48px 0 64px}
+  .board .wrap{grid-template-columns:1.25fr .9fr;align-items:center}
+  .drum-wrap{position:relative;right:auto;top:auto;width:100%;max-width:420px;opacity:1;justify-self:end;z-index:1}
+  .readouts{max-width:620px}
+}
+.drum-spin{transform-origin:200px 200px;animation:spin 14s linear infinite}
+.drum-wave{animation:slosh 5s ease-in-out infinite alternate;transform-origin:200px 250px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes slosh{from{transform:rotate(-7deg)}to{transform:rotate(7deg)}}
+
+/* sekcije */
+section,[id]{scroll-margin-top:70px}
+.sec{padding:56px 0}
+.sec-head{display:grid;gap:8px;margin-bottom:26px}
+.sec-head h2{font-size:clamp(1.8rem,6vw,2.8rem);font-weight:700}
+.sec-head p{color:var(--muted);max-width:56ch}
+
+/* cene */
+.prices{background:var(--white)}
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.tile{border:2px solid var(--ink);border-radius:18px;padding:16px 14px 16px;display:flex;flex-direction:column;gap:6px;background:var(--white);position:relative}
+.tile h3{font-size:1rem;font-weight:500;color:var(--muted)}
+.tile .price{font-family:var(--mono);font-weight:600;font-size:clamp(2rem,8vw,2.8rem);line-height:1;letter-spacing:-.03em;color:var(--ink)}
+.tile .price small{font-size:.9rem;font-weight:500;margin-left:4px;letter-spacing:0;color:var(--muted)}
+.tile .meta{font-size:.9rem;color:var(--muted)}
+.tile.hot{background:var(--blue);border-color:var(--blue);color:var(--white)}
+.tile.hot h3,.tile.hot .meta,.tile.hot .price small{color:#DCE5FF}
+.tile.hot .price{color:var(--white)}
+.tile .ico{width:38px;height:38px;margin-bottom:4px}
+@media (min-width:820px){.tiles{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.tile{padding:22px 20px}}
+
+.calc{margin-top:22px;background:var(--mist);border-radius:18px;padding:18px;display:grid;gap:16px}
+.calc h3{font-size:1.2rem}
+.calc-grid{display:grid;gap:12px}
+.calc label{font-size:.9rem;font-weight:500;display:block;margin-bottom:4px}
+.calc select{width:100%;min-height:46px;border:2px solid var(--ink);border-radius:12px;padding:0 12px;font:inherit;background:var(--white);color:var(--ink)}
+.chk{display:flex;align-items:center;gap:10px;min-height:46px;font-weight:500}
+.chk input{width:22px;height:22px;accent-color:var(--blue)}
+.calc-out{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-top:2px dashed var(--line);padding-top:14px}
+.calc-out span{color:var(--muted)}
+.calc-out b{font-family:var(--mono);font-size:2rem;font-weight:600}
+@media (min-width:820px){.calc{grid-template-columns:1fr 2fr;align-items:center;padding:24px 28px}.calc-grid{grid-template-columns:1fr 1fr 1fr;align-items:end}.calc-out{grid-column:1/-1}}
+
+.paynote{margin-top:16px;color:var(--muted);font-size:.95rem;max-width:70ch}
+
+/* koraci */
+.steps-sec{background:var(--mist)}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:22px;counter-reset:s}
+.step{display:grid;grid-template-columns:72px 1fr;gap:16px;align-items:start}
+.step-n{width:72px;height:72px;border-radius:50%;background:var(--white);border:6px solid var(--blue);display:grid;place-items:center;font-family:var(--mono);font-weight:600;font-size:1.8rem;color:var(--ink);box-shadow:inset 0 0 0 4px var(--white),inset 0 0 0 7px var(--line)}
+.step:nth-child(2) .step-n{background:var(--yellow)}
+.step:nth-child(3) .step-n{background:var(--ink);color:var(--yellow);box-shadow:inset 0 0 0 4px var(--ink),inset 0 0 0 7px var(--ink-2)}
+.step h3{font-size:1.3rem;margin-top:8px}
+.step p{color:var(--muted);margin-top:4px}
+.extras{display:grid;gap:10px;margin-top:30px;padding:0;list-style:none}
+.extras li{display:flex;gap:10px;align-items:flex-start;background:var(--white);border-radius:12px;padding:12px 14px}
+.extras svg{flex:0 0 22px;width:22px;height:22px;margin-top:2px}
+.photo{border-radius:50%;aspect-ratio:1;background:
+  repeating-radial-gradient(circle at 50% 50%,var(--blue) 0 10px,#2F69FF 10px 20px);display:grid;place-items:center;max-width:300px;margin:0 auto;border:10px solid var(--white);box-shadow:0 0 0 3px var(--line)}
+.photo span{background:var(--white);color:var(--ink);font-size:.85rem;padding:6px 12px;border-radius:999px;font-weight:500}
+@media (min-width:820px){
+  .steps{grid-template-columns:repeat(3,1fr);gap:28px}
+  .step{grid-template-columns:1fr;gap:12px}
+  .steps-layout{display:grid;grid-template-columns:2fr 1fr;gap:40px;align-items:center}
+  .extras{grid-template-columns:1fr 1fr}
+}
+.steps-layout .photo{margin-top:30px}
+@media (min-width:820px){.steps-layout .photo{margin-top:0}}
+
+/* operemo */
+.service{background:var(--blue);color:var(--white)}
+.service .sec-head p{color:#DCE5FF}
+.svc-grid{display:grid;gap:26px}
+.timeline{display:grid;gap:0;border-radius:18px;overflow:hidden;border:2px solid rgba(255,255,255,.35)}
+.tl-row{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:16px;align-items:center;border-bottom:1px solid rgba(255,255,255,.25)}
+.tl-row:last-child{border-bottom:0}
+.tl-row .when{font-family:var(--mono);font-weight:600;font-size:1.1rem;background:var(--white);color:var(--blue);padding:6px 10px;border-radius:999px;white-space:nowrap}
+.svc-prices{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.svc-prices li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.3)}
+.svc-prices b{font-family:var(--mono);font-weight:600;white-space:nowrap}
+.order{background:var(--white);color:var(--ink);border-radius:22px;padding:20px}
+.order h3{font-size:1.4rem;margin-bottom:4px}
+.order .hint{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+.field{display:grid;gap:4px;margin-bottom:12px}
+.field label{font-weight:500;font-size:.95rem}
+.field input,.field select,.field textarea{width:100%;min-height:48px;border:2px solid var(--ink);border-radius:12px;padding:10px 12px;font:inherit;color:var(--ink);background:var(--white)}
+.field textarea{min-height:90px;resize:vertical}
+.field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{outline:3px solid var(--blue);outline-offset:1px;box-shadow:none}
+.two{display:grid;gap:0 12px}
+@media (min-width:560px){.two{grid-template-columns:1fr 1fr}}
+.form-msg{margin-top:12px;padding:14px;border-radius:12px;background:var(--yellow);color:var(--ink);font-weight:500;display:none}
+.form-msg.show{display:block}
+@media (min-width:920px){.svc-grid{grid-template-columns:1fr 1fr;align-items:start;gap:40px}.order{padding:28px}}
+
+/* radno vreme + lokacija */
+.where-grid{display:grid;gap:28px}
+.hours{width:100%;border-collapse:collapse;font-size:1.02rem}
+.hours caption{text-align:left;font-weight:700;font-size:1.3rem;padding-bottom:10px}
+.hours th,.hours td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left}
+.hours td{font-family:var(--mono);text-align:right}
+.hours tr.today{background:var(--yellow)}
+.hours tr.today th::after{content:" (danas)";font-weight:400}
+.hours th{font-weight:500}
+.addr{font-size:1.25rem;font-weight:700;margin-bottom:6px}
+.map{width:100%;height:320px;border:0;border-radius:18px;background:var(--mist);margin-top:14px}
+.small-list{margin:10px 0 0;padding-left:18px;color:var(--muted)}
+@media (min-width:920px){.where-grid{grid-template-columns:1fr 1.3fr;gap:48px}}
+
+/* kontakt traka */
+.callbar{background:var(--ink);color:var(--white);padding:40px 0}
+.callbar .wrap{display:grid;gap:18px}
+.callbar h2{font-size:clamp(1.6rem,5vw,2.3rem)}
+.callbar .phone{font-family:var(--mono);font-size:clamp(1.6rem,7vw,2.6rem);color:var(--yellow);text-decoration:none;font-weight:600}
+@media (min-width:920px){.callbar .wrap{grid-template-columns:1fr auto;align-items:center}}
+
+footer{background:var(--ink);color:#AFBBE0;border-top:1px solid var(--ink-2);padding:22px 0 30px;font-size:.9rem}
+footer .wrap{display:grid;gap:8px}
+footer a{color:var(--yellow)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#status">Preskoči na sadržaj</a>
+
+<div class="demo-bar"><div class="wrap"><span>Primer sajta · izradio opsforma</span><a href="../">Svi primeri</a></div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#status" aria-label="Perionica Pena, početak">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="#FFD23F" stroke-width="3"/><circle cx="20" cy="20" r="11" fill="#1E5BFF"/><path d="M9.5 22c3-2 5.5-2 8.5 0s6 2 9 0 2.5-1.6 3.5-1" fill="none" stroke="#fff" stroke-width="2"/></svg>
+      Pena
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="bars" aria-hidden="true"></span>Meni</button>
+    <nav class="nav" id="nav" aria-label="Glavni meni">
+      <ul>
+        <li><a href="#cene">Cene mašina</a></li>
+        <li><a href="#kako">Kako radi</a></li>
+        <li><a href="#operemo">Operemo mi</a></li>
+        <li><a href="#vreme">Radno vreme</a></li>
+        <li><a href="#lokacija">Lokacija</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="board" id="status" aria-labelledby="status-text">
+  <div class="wrap">
+    <div class="status" id="statusBox">
+      <span class="status-pill"><span class="lamp" aria-hidden="true"></span><span>Vojislava Ilića 76, Zvezdara</span></span>
+      <p class="status-text" id="status-text" aria-live="polite">Radimo svaki dan</p>
+      <p class="status-sub" id="status-sub">Radnim danima 07:00–23:00, subotom 08:00–23:00, nedeljom 09:00–21:00.</p>
+      <div class="readouts" role="group" aria-label="Trenutno stanje">
+        <div class="readout"><span>Sada je</span><b id="r-now">--:--</b></div>
+        <div class="readout"><span id="r-next-l">Zatvaramo</span><b id="r-next">23:00</b></div>
+        <div class="readout"><span>Poslednje pranje</span><b id="r-last">21:45</b></div>
+      </div>
+      <div class="intro">
+        <h1>Samouslužna perionica veša na Zvezdari</h1>
+        <p>Pranje 8 kg za 450 dinara, sušenje po 15 minuta. Ili ostavite veš kod nas, pa ga sutra preuzmete opran i složen.</p>
+        <div class="ctas">
+          <a class="btn btn-yellow" href="tel:+381600000111"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>Pozovite 060 000 01 11</a>
+          <a class="btn btn-ghost" href="#naruci">Naručite pranje umesto vas</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="drum-wrap" aria-hidden="true">
+      <svg viewBox="0 0 400 400">
+        <defs>
+          <clipPath id="glass"><circle cx="200" cy="200" r="118"/></clipPath>
+          <pattern id="holes" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="11" cy="11" r="3.2" fill="#0E1A3A" opacity=".55"/></pattern>
+        </defs>
+        <circle cx="200" cy="200" r="190" fill="#1B2A55"/>
+        <circle cx="200" cy="200" r="168" fill="none" stroke="#FFD23F" stroke-width="16"/>
+        <circle cx="200" cy="200" r="146" fill="#E6ECFF"/>
+        <circle cx="200" cy="200" r="146" fill="none" stroke="#C9D4F5" stroke-width="10"/>
+        <g clip-path="url(#glass)">
+          <rect x="60" y="60" width="280" height="280" fill="#1E5BFF"/>
+          <g class="drum-spin">
+            <rect x="60" y="60" width="280" height="280" fill="url(#holes)"/>
+            <path d="M200 82v236M82 200h236" stroke="#0E1A3A" stroke-width="5" opacity=".35"/>
+            <circle cx="150" cy="150" r="20" fill="#FFD23F" opacity=".9"/>
+            <rect x="214" y="226" width="44" height="30" rx="8" fill="#fff" opacity=".85"/>
+          </g>
+          <g class="drum-wave">
+            <path d="M40 232c30-18 60-18 90 0s60 18 90 0 60-18 90 0 60 18 90 0V360H40z" fill="#0E1A3A" opacity=".5"/>
+            <circle cx="140" cy="270" r="7" fill="#fff" opacity=".7"/><circle cx="230" cy="290" r="5" fill="#fff" opacity=".7"/><circle cx="270" cy="262" r="9" fill="#fff" opacity=".55"/>
+          </g>
+        </g>
+        <circle cx="200" cy="200" r="118" fill="none" stroke="#0E1A3A" stroke-width="6"/>
+        <path d="M120 140a95 95 0 0 1 60-50" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".7"/>
+        <rect x="354" y="176" width="22" height="48" rx="8" fill="#FFD23F"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="sec prices" id="cene" aria-labelledby="cene-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="cene-h">Cene mašina</h2>
+      <p>Plaćate po pokretanju, bez članarine i kartica lojalnosti. Cena uključuje vodu i struju.</p>
+    </div>
+    <div class="tiles">
+      <article class="tile">
+        <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="3" width="30" height="34" rx="5" fill="none" stroke="#0E1A3A" stroke-width="2.5"/><circle cx="20" cy="22" r="9" fill="none" stroke="#1E5BFF" stroke-width="3"/><circle cx="11" cy="9" r="1.8" fill="#0E1A3A"/><circle cx="16" cy="9" r="1.8" fill="#0E1A3A"/></svg>
+        <h3>Pranje 8 kg</h3>
+        <p class="price">450<small>RSD</small></p>
+        <p class="meta">oko 40 min · 6 mašina</p>
+      </article>
+      <article class="tile hot">
+        <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="2" width="34" height="36" rx="5" fill="none" stroke="#fff" stroke-width="2.5"/><circle cx="20" cy="22" r="11" fill="none" stroke="#FFD23F" stroke-width="3"/><circle cx="9" cy="8" r="1.8" fill="#fff"/><circle cx="14" cy="8" r="1.8" fill="#fff"/></svg>
+        <h3>Pranje 12 kg</h3>
+        <p class="price">650<small>RSD</small></p>
+        <p class="meta">oko 45 min · jorgani, ćebad · 2 mašine</p>
+      </article>
+      <article class="tile">
+        <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="none" stroke="#0E1A3A" stroke-width="2.5"/><path d="M20 9v11l7 5" fill="none" stroke="#1E5BFF" stroke-width="3" stroke-linecap="round"/></svg>
+        <h3>Sušenje 15 min</h3>
+        <p class="price">150<small>RSD</small></p>
+        <p class="meta">dodajete po 15 min · 4 sušilice</p>
+      </article>
+      <article class="tile">
+        <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><path d="M13 4h14v6l4 5v19a3 3 0 0 1-3 3H12a3 3 0 0 1-3-3V15l4-5z" fill="none" stroke="#0E1A3A" stroke-width="2.5" stroke-linejoin="round"/><path d="M9 22h22" stroke="#1E5BFF" stroke-width="3"/></svg>
+        <h3>Deterdžent i omekšivač</h3>
+        <p class="price">80<small>RSD</small></p>
+        <p class="meta">automatsko doziranje · možete i svoj</p>
+      </article>
+    </div>
+
+    <div class="calc" id="calc" role="group" aria-labelledby="calc-h">
+      <h3 id="calc-h">Koliko će izaći?</h3>
+      <div class="calc-grid">
+        <div>
+          <label for="c-wash">Pranje</label>
+          <select id="c-wash">
+            <option value="450">Mašina 8 kg</option>
+            <option value="650">Mašina 12 kg</option>
+            <option value="0">Samo sušenje</option>
+          </select>
+        </div>
+        <div>
+          <label for="c-dry">Sušenje</label>
+          <select id="c-dry">
+            <option value="0">Bez sušenja</option>
+            <option value="1">15 min</option>
+            <option value="2">30 min</option>
+            <option value="3" selected>45 min</option>
+            <option value="4">60 min</option>
+          </select>
+        </div>
+        <label class="chk" for="c-det"><input type="checkbox" id="c-det" checked> Naš deterdžent</label>
+      </div>
+      <div class="calc-out" aria-live="polite"><span>Ukupno</span><b id="c-total" class="num">980 RSD</b></div>
+    </div>
+    <p class="paynote">Plaćate na centralnom terminalu karticom ili gotovinom, terminal vraća kusur. Za 8 kg pamučnog veša obično je dovoljno 45 minuta sušenja.</p>
+  </div>
+</section>
+
+<section class="sec steps-sec" id="kako" aria-labelledby="kako-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="kako-h">Kako se koristi</h2>
+      <p>Prvi put ste ovde? Treba vam oko sat i po za pranje i sušenje.</p>
+    </div>
+    <div class="steps-layout">
+      <div>
+        <ol class="steps">
+          <li class="step"><span class="step-n" aria-hidden="true">1</span><div><h3>Ubacite veš</h3><p>Izaberite slobodnu perilicu, ubacite veš i dobro zatvorite vrata. Broj mašine piše iznad vrata.</p></div></li>
+          <li class="step"><span class="step-n" aria-hidden="true">2</span><div><h3>Platite na terminalu</h3><p>Ukucajte broj mašine, izaberite program (30, 40, 60 ili 90 °C) i platite. Mašina kreće sama.</p></div></li>
+          <li class="step"><span class="step-n" aria-hidden="true">3</span><div><h3>Prebacite u sušilicu</h3><p>Kad pranje završi, prebacite veš u sušilicu i platite 15 minuta. Dodajete koliko vam treba.</p></div></li>
+        </ol>
+        <ul class="extras">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#1E5BFF"/><path d="M7 12.5l3 3 7-7" fill="none" stroke="#fff" stroke-width="2.4"/></svg>Besplatan Wi-Fi i stolovi za slaganje veša</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#1E5BFF"/><path d="M7 12.5l3 3 7-7" fill="none" stroke="#fff" stroke-width="2.4"/></svg>Kese i vešalice za poneti, besplatno</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#1E5BFF"/><path d="M7 12.5l3 3 7-7" fill="none" stroke="#fff" stroke-width="2.4"/></svg>Mašine za 12 kg primaju bračni jorgan</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#1E5BFF"/><path d="M7 12.5l3 3 7-7" fill="none" stroke="#fff" stroke-width="2.4"/></svg>Zapelo nešto? Pozovite broj na zidu, javljamo se odmah.</li>
+        </ul>
+      </div>
+      <div class="photo" role="img" aria-label="Mesto za fotografiju perionice"><span>Vaša fotografija</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec service" id="operemo" aria-labelledby="operemo-h">
+  <div class="wrap svc-grid">
+    <div>
+      <div class="sec-head">
+        <h2 id="operemo-h">Operemo umesto vas</h2>
+        <p>Nemate vremena da čekate? Ostavite veš na pultu, mi ga peremo, sušimo i slažemo.</p>
+      </div>
+      <div class="timeline">
+        <div class="tl-row"><span class="when">do 12:00</span><span>Predate veš u kesi, izmerimo ga pred vama.</span></div>
+        <div class="tl-row"><span class="when">istog dana</span><span>Peremo po etiketama, belo i šareno odvojeno.</span></div>
+        <div class="tl-row"><span class="when">sutra 16:00</span><span>Preuzimate opran, osušen i složen veš.</span></div>
+      </div>
+      <ul class="svc-prices" style="margin-top:22px">
+        <li><span>Pranje, sušenje i slaganje</span><b>280 RSD/kg</b></li>
+        <li><span>Najmanje 5 kg</span><b>1.400 RSD</b></li>
+        <li><span>Jorgan ili ćebe, po komadu</span><b>1.200 RSD</b></li>
+        <li><span>Peglanje košulje</span><b>200 RSD</b></li>
+      </ul>
+      <p style="margin-top:14px;color:#DCE5FF">Pult radi od 09 do 19 h, od ponedeljka do subote.</p>
+    </div>
+
+    <div class="order" id="naruci">
+      <h3>Najavite predaju veša</h3>
+      <p class="hint">Javimo vam se da potvrdimo termin i okvirnu cenu.</p>
+      <!-- Web3Forms: action="https://api.web3forms.com/submit" + access_key -->
+      <form id="orderForm" novalidate>
+        <div class="two">
+          <div class="field"><label for="f-name">Ime</label><input id="f-name" name="ime" autocomplete="name" required></div>
+          <div class="field"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="f-kg">Okvirno koliko veša</label>
+            <select id="f-kg" name="kolicina"><option>do 5 kg (jedna kesa)</option><option>5 do 8 kg</option><option>8 do 12 kg</option><option>preko 12 kg</option></select></div>
+          <div class="field"><label for="f-day">Dan predaje</label><input id="f-day" name="dan" type="date"></div>
+        </div>
+        <div class="field"><label for="f-shirts">Broj košulja za peglanje</label><input id="f-shirts" name="kosulje" type="number" min="0" max="40" value="0" inputmode="numeric"></div>
+        <div class="field"><label for="f-note">Napomena</label><textarea id="f-note" name="napomena" placeholder="npr. osetljiv veš, bez omekšivača"></textarea></div>
+        <button class="btn btn-blue" type="submit">Pošaljite najavu</button>
+        <p class="form-msg" id="orderMsg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="vreme" aria-labelledby="vreme-cap">
+  <div class="wrap where-grid">
+    <div>
+      <table class="hours" id="hoursTable">
+        <caption id="vreme-cap">Radno vreme perionice</caption>
+        <tbody>
+          <tr data-day="1"><th scope="row">Ponedeljak</th><td>07:00–23:00</td></tr>
+          <tr data-day="2"><th scope="row">Utorak</th><td>07:00–23:00</td></tr>
+          <tr data-day="3"><th scope="row">Sreda</th><td>07:00–23:00</td></tr>
+          <tr data-day="4"><th scope="row">Četvrtak</th><td>07:00–23:00</td></tr>
+          <tr data-day="5"><th scope="row">Petak</th><td>07:00–23:00</td></tr>
+          <tr data-day="6"><th scope="row">Subota</th><td>08:00–23:00</td></tr>
+          <tr data-day="0"><th scope="row">Nedelja</th><td>09:00–21:00</td></tr>
+        </tbody>
+      </table>
+      <p class="paynote">Poslednje pranje počinje sat i 15 minuta pre zatvaranja. Praznicima radimo nedeljnim radnim vremenom.</p>
+    </div>
+    <div id="lokacija">
+      <h2 class="addr">Vojislava Ilića 76, Zvezdara</h2>
+      <p>Lokal u prizemlju, ulaz direktno sa ulice.</p>
+      <ul class="small-list">
+        <li>Parking u ulici, ispred lokala</li>
+        <li>Ulaz bez stepenika, može i sa kolicima</li>
+      </ul>
+      <iframe class="map" loading="lazy" title="Mapa: Perionica Pena, Vojislava Ilića 76, Beograd" src="https://maps.google.com/maps?q=Vojislava%20Ili%C4%87a%2076%2C%20Beograd&amp;z=15&amp;output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="callbar" aria-label="Kontakt telefonom">
+  <div class="wrap">
+    <div>
+      <h2>Pitanje o mašinama ili porudžbini?</h2>
+      <p style="color:#C9D3F2;margin-top:6px">Javljamo se od 09 do 19 h. Na Viberu odgovaramo i uveče.</p>
+    </div>
+    <div class="ctas" style="margin-top:0">
+      <a class="phone" href="tel:+381600000111">060 000 01 11</a>
+      <a class="btn btn-ghost" href="viber://chat?number=%2B381600000111">Pišite na Viber</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Perionica Pena · Vojislava Ilića 76, Beograd · <a href="tel:+381600000111">060 000 01 11</a></p>
+    <p>Primer sajta · izradio opsforma. Firma je izmišljena. <a href="../">Svi primeri</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* meni */
+  var btn=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
+  function setMenu(open){btn.setAttribute('aria-expanded',open?'true':'false');nav.classList.toggle('open',open);}
+  btn.addEventListener('click',function(){setMenu(btn.getAttribute('aria-expanded')!=='true');});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&btn.getAttribute('aria-expanded')==='true'){setMenu(false);btn.focus();}});
+
+  /* status: otvoreno / zatvoreno, po beogradskom vremenu */
+  var HOURS={0:[540,1260],1:[420,1380],2:[420,1380],3:[420,1380],4:[420,1380],5:[420,1380],6:[480,1380]};
+  var DAYS=['nedelja','ponedeljak','utorak','sreda','četvrtak','petak','subota'];
+  function pad(n){return (n<10?'0':'')+n;}
+  function hm(m){return pad(Math.floor(m/60))+':'+pad(m%60);}
+  function belgradeNow(){
+    try{
+      var parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Belgrade',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+      var o={};parts.forEach(function(p){o[p.type]=p.value;});
+      var wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday];
+      return {day:wd,min:(parseInt(o.hour,10)%24)*60+parseInt(o.minute,10)};
+    }catch(e){var d=new Date();return {day:d.getDay(),min:d.getHours()*60+d.getMinutes()};}
+  }
+  function dur(m){var h=Math.floor(m/60),mm=m%60;return (h?h+' h ':'')+mm+' min';}
+  function render(){
+    var n=belgradeNow(),h=HOURS[n.day],box=document.getElementById('statusBox');
+    var t=document.getElementById('status-text'),s=document.getElementById('status-sub');
+    document.getElementById('r-now').textContent=hm(n.min);
+    var open=n.min>=h[0]&&n.min<h[1];
+    box.classList.toggle('is-open',open);
+    if(open){
+      t.textContent='Otvoreno sada';
+      s.textContent='Zatvaramo u '+hm(h[1])+', za '+dur(h[1]-n.min)+'.';
+      document.getElementById('r-next-l').textContent='Zatvaramo';
+      document.getElementById('r-next').textContent=hm(h[1]);
+      document.getElementById('r-last').textContent=hm(h[1]-75);
+    }else{
+      var d=n.day,when='';
+      if(n.min<h[0]){when='danas';}else{d=(n.day+1)%7;when='sutra, '+DAYS[d];}
+      var nh=HOURS[d];
+      t.textContent='Zatvoreno, otvaramo u '+hm(nh[0]);
+      s.textContent='Otvaramo '+when+' u '+hm(nh[0])+'. Do tada nam možete pisati na Viber.';
+      document.getElementById('r-next-l').textContent='Otvaramo';
+      document.getElementById('r-next').textContent=hm(nh[0]);
+      document.getElementById('r-last').textContent=hm(nh[1]-75);
+    }
+    var rows=document.querySelectorAll('#hoursTable tr');
+    rows.forEach(function(r){r.classList.toggle('today',+r.getAttribute('data-day')===n.day);});
+  }
+  render();setInterval(render,30000);
+
+  /* kalkulator */
+  var w=document.getElementById('c-wash'),dr=document.getElementById('c-dry'),dt=document.getElementById('c-det'),out=document.getElementById('c-total');
+  function calc(){
+    var wash=+w.value,total=wash+(+dr.value)*150+(dt.checked&&wash>0?80:0);
+    dt.disabled=wash===0;
+    out.textContent=total.toLocaleString('sr-RS')+' RSD';
+  }
+  [w,dr,dt].forEach(function(el){el.addEventListener('change',calc);});calc();
+
+  /* forma: primer, ne šalje nigde */
+  var f=document.getElementById('orderForm'),msg=document.getElementById('orderMsg');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    msg.textContent='Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.';
+    msg.classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>

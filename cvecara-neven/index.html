@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cvećara Neven · buketi i dostava cveća, Vračar</title>
+<meta name="description" content="Cvećara Neven, Južni bulevar 77, Vračar. Buketi za rođendan, godišnjicu, venčanje i sahranu, sa cenama. Dostava po Beogradu isti dan, od 300 RSD.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2324382B'/%3E%3Cg fill='%23C2185B'%3E%3Cellipse cx='16' cy='9' rx='3.2' ry='6'/%3E%3Cellipse cx='16' cy='23' rx='3.2' ry='6'/%3E%3Cellipse cx='9' cy='16' rx='6' ry='3.2'/%3E%3Cellipse cx='23' cy='16' rx='6' ry='3.2'/%3E%3C/g%3E%3Ccircle cx='16' cy='16' r='3.4' fill='%23FBF7F0'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Italiana nema latin-ext (č ć š ž đ), zato su naslovi u Bodoni Moda -->
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Karla:wght@400;500;700&display=swap&subset=latin-ext" rel="stylesheet">
+<style>
+:root{
+  --zalfija:#9CAF88;
+  --zalfija-svetla:#E4EADB;
+  --krem:#FBF7F0;
+  --krem-2:#F3ECDF;
+  --magenta:#C2185B;
+  --magenta-tamna:#9A1048;
+  --roze:#F6E1EA;
+  --zelena:#24382B;
+  --zelena-2:#3A5243;
+  --serif:"Bodoni Moda","Bodoni 72",Didot,"Libre Bodoni",Georgia,serif;
+  --sans:"Karla","Helvetica Neue",Arial,system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--krem);color:var(--zelena);font-family:var(--sans);font-size:1.0625rem;line-height:1.65;overflow-x:hidden}
+svg{display:block;max-width:100%}
+a{color:var(--magenta-tamna)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;margin:0 0 .45em;letter-spacing:-.01em}
+p{margin:0 0 1em}
+:focus-visible{outline:2px solid var(--magenta);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--zelena-2);display:block;margin-bottom:14px}
+.eyebrow::before{content:"";display:inline-block;width:28px;height:1px;background:currentColor;vertical-align:middle;margin-right:10px}
+
+.demo-bar{background:var(--zelena);color:var(--krem);font-size:.78rem;letter-spacing:.06em;text-align:center;padding:5px 12px}
+.demo-bar a{color:#F4B7CE;font-weight:700;margin-left:.5em}
+
+/* zaglavlje */
+.site-head{position:sticky;top:0;z-index:30;background:rgba(251,247,240,.96);border-bottom:1px solid rgba(36,56,43,.18)}
+.head-in{display:flex;align-items:center;justify-content:space-between;min-height:68px}
+.logo{text-decoration:none;color:var(--zelena);display:flex;align-items:baseline;gap:10px}
+.logo b{font-family:var(--serif);font-style:italic;font-weight:500;font-size:2rem;line-height:1}
+.logo small{font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700}
+.menu-btn{width:46px;height:46px;border:1px solid var(--zelena);background:transparent;cursor:pointer;display:grid;place-content:center;gap:7px;padding:0}
+.menu-btn span{display:block;width:22px;height:1.5px;background:var(--zelena);transition:transform .2s}
+.menu-btn[aria-expanded="true"] span:first-child{transform:translateY(4.25px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:last-child{transform:translateY(-4.25px) rotate(-45deg)}
+.nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--krem);border-bottom:1px solid rgba(36,56,43,.2);padding:6px 20px 20px}
+.nav.open{display:block}
+.nav ul{list-style:none;margin:0;padding:0}
+.nav a{display:block;padding:13px 0;color:var(--zelena);text-decoration:none;font-family:var(--serif);font-size:1.4rem;border-bottom:1px solid rgba(36,56,43,.12)}
+.nav a:hover{color:var(--magenta)}
+
+/* dugmad */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 24px;font:700 .8rem var(--sans);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;border:1px solid var(--zelena);cursor:pointer;transition:background .2s,color .2s}
+.btn-mag{background:var(--magenta);border-color:var(--magenta);color:#fff}
+.btn-mag:hover{background:var(--magenta-tamna);border-color:var(--magenta-tamna)}
+.btn-line{background:transparent;color:var(--zelena)}
+.btn-line:hover{background:var(--zelena);color:var(--krem)}
+.btn svg{width:18px;height:18px}
+
+/* botanički uglovi */
+.has-corners{position:relative;overflow:hidden}
+.corner{position:absolute;width:110px;height:110px;color:var(--zelena-2);opacity:.45;pointer-events:none}
+.corner.tl{top:-6px;left:-6px;transform:scale(-1,-1)}
+.corner.tr{top:-6px;right:-6px;transform:scaleY(-1)}
+.corner.bl{bottom:-6px;left:-6px;transform:scaleX(-1)}
+.corner.br{bottom:-6px;right:-6px}
+.corner.light{color:var(--krem);opacity:.35}
+
+/* hero */
+.hero{padding:34px 0 40px}
+.hero-grid{display:grid;gap:30px;align-items:end}
+.hero h1{font-size:clamp(2.6rem,11vw,5.6rem);font-weight:400;margin-bottom:.3em}
+.hero h1 i{color:var(--magenta);font-weight:400}
+.hero .lead{font-size:1.12rem;max-width:30em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 0}
+.arch{position:relative;border-radius:999px 999px 0 0;background:var(--zalfija);aspect-ratio:4/5;max-width:340px;width:100%;margin:0 auto;overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
+.arch svg.big{width:86%;height:auto;margin-bottom:-2px}
+.arch .corner{opacity:.45}
+.facts{display:grid;grid-template-columns:1fr;border-top:1px solid rgba(36,56,43,.25);margin-top:30px}
+.facts div{padding:14px 0;border-bottom:1px solid rgba(36,56,43,.25)}
+.facts b{font-family:var(--serif);font-size:1.35rem;font-weight:500;display:block;line-height:1.2}
+.facts span{font-size:.9rem}
+
+/* galerija */
+section{scroll-margin-top:76px}
+.sec{padding:56px 0}
+.sec-head{display:grid;gap:8px;margin-bottom:26px;max-width:46em}
+.sec-head h2{font-size:clamp(2.1rem,8vw,3.6rem)}
+#buketi{background:var(--krem-2)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.filter{font:700 .78rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--zelena);background:transparent;border:1px solid rgba(36,56,43,.5);padding:11px 15px;cursor:pointer;min-height:44px}
+.filter:hover{border-color:var(--zelena)}
+.filter[aria-pressed="true"]{background:var(--zelena);color:var(--krem);border-color:var(--zelena)}
+.filter .n{opacity:.7;margin-left:4px;font-weight:500}
+.masonry{columns:2;column-gap:12px}
+.card{break-inside:avoid;display:inline-block;width:100%;margin:0 0 12px;background:var(--krem);border:1px solid rgba(36,56,43,.14)}
+.card[hidden]{display:none}
+.card .art{display:block;padding:14px 10px 0}
+.card .art svg{width:100%;height:auto;margin:0 auto}
+.card.t-zal .art{background:var(--zalfija-svetla)}
+.card.t-roz .art{background:var(--roze)}
+.card.t-krem .art{background:#EFE6D6}
+.card.t-zel .art{background:var(--zelena)}
+.card .txt{padding:12px 12px 14px}
+.card h3{font-size:1.2rem;margin-bottom:.25em}
+.card p{font-size:.86rem;line-height:1.45;margin-bottom:.6em;color:var(--zelena-2)}
+.card .row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 10px}
+.card .price{font-family:var(--serif);font-size:1.12rem;color:var(--magenta-tamna)}
+.card .pick{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--zelena);text-underline-offset:4px}
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
+.tags span{font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--zelena-2);border-bottom:1px solid var(--zalfija)}
+.empty-note{display:none}
+
+/* cenovnik */
+.price-cols{display:grid;gap:0 48px}
+.plist{list-style:none;margin:0;padding:0}
+.plist li{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:15px 0;border-bottom:1px solid rgba(36,56,43,.18)}
+.plist li b{font-family:var(--serif);font-weight:500;font-size:1.18rem}
+.plist li small{grid-column:1;font-size:.88rem;color:var(--zelena-2)}
+.plist li em{font-style:normal;font-weight:700;white-space:nowrap;grid-row:1;grid-column:2;align-self:baseline}
+
+/* porudžbina */
+#porudzbina{background:var(--zalfija)}
+.order-grid{display:grid;gap:28px}
+.order-intro h2{font-size:clamp(2.1rem,8vw,3.4rem)}
+.order-intro ol{padding-left:1.2em;margin:0}
+.order-intro li{margin-bottom:8px}
+form.bouquet{background:var(--krem);padding:24px 20px;position:relative;z-index:1}
+.f{margin-bottom:16px}
+.f > label,.f legend{display:block;font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:6px;padding:0}
+.f input[type=text],.f input[type=tel],.f input[type=date],.f select,.f textarea{width:100%;font:inherit;color:var(--zelena);background:transparent;border:0;border-bottom:1px solid var(--zelena);padding:10px 2px;min-height:46px;border-radius:0}
+.f select{background:transparent}
+.f textarea{min-height:84px;resize:vertical;border:1px solid var(--zelena);padding:10px}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--magenta);box-shadow:0 2px 0 var(--magenta)}
+fieldset.f{border:0;margin:0 0 16px;padding:0;min-width:0}
+.budget{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.budget label{position:relative;display:block;cursor:pointer}
+.budget input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.budget span{display:block;text-align:center;border:1px solid var(--zelena);padding:11px 6px;font-weight:500;font-size:.95rem}
+.budget input:checked + span{background:var(--zelena);color:var(--krem)}
+.budget input:focus-visible + span{outline:2px solid var(--magenta);outline-offset:2px}
+.two{display:grid;gap:0 16px}
+.form-msg{margin:16px 0 0;padding:14px;border-left:3px solid var(--magenta);background:var(--roze);font-weight:500}
+.form-msg[hidden]{display:none}
+
+/* dostava */
+.zone-grid{display:grid;gap:28px;align-items:center}
+.zone-map{max-width:420px;width:100%;margin:0 auto}
+.zones{width:100%;border-collapse:collapse}
+.zones th,.zones td{padding:14px 0;border-bottom:1px solid rgba(36,56,43,.2);text-align:left;vertical-align:top}
+.zones td{text-align:right;font-family:var(--serif);font-size:1.2rem;white-space:nowrap;padding-left:12px}
+.zones th b{font-family:var(--serif);font-weight:500;font-size:1.15rem;display:block}
+.zones th span{font-weight:400;font-size:.9rem;color:var(--zelena-2)}
+.zones .sw{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:8px;vertical-align:1px;border:1px solid var(--zelena)}
+.zone-notes{margin-top:18px;font-size:.95rem}
+
+/* radnja */
+#radnja{background:var(--zelena);color:var(--krem)}
+#radnja .eyebrow{color:var(--zalfija)}
+#radnja h2{color:var(--krem)}
+.shop-grid{display:grid;gap:30px}
+.hours{width:100%;border-collapse:collapse}
+.hours th,.hours td{padding:11px 0;border-bottom:1px solid rgba(251,247,240,.22);text-align:left;font-weight:400}
+.hours td{text-align:right}
+.hours tr.today th,.hours tr.today td{color:#F4B7CE;font-weight:700}
+.addr{font-family:var(--serif);font-size:1.6rem;line-height:1.2;margin-bottom:12px}
+.map{aspect-ratio:4/3;min-height:240px;background:var(--zelena-2);border:1px solid rgba(251,247,240,.3)}
+.map iframe{width:100%;height:100%;border:0;display:block;filter:saturate(.7)}
+.photo{min-height:200px;background:var(--zelena-2);display:grid;place-content:center;text-align:center;border:1px solid rgba(251,247,240,.3);position:relative;overflow:hidden}
+.photo small{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--zalfija)}
+#radnja a{color:#F4B7CE}
+#radnja .btn-line{color:var(--krem);border-color:var(--krem)}
+#radnja .btn-line:hover{background:var(--krem);color:var(--zelena)}
+
+footer{background:var(--krem);padding:34px 0 30px;border-top:1px solid rgba(36,56,43,.2);font-size:.95rem}
+.foot{display:grid;gap:16px}
+.foot .logo b{font-size:2.2rem}
+.demo-foot{font-size:.82rem;margin-top:20px;letter-spacing:.04em;color:var(--zelena-2)}
+
+@media (min-width:640px){
+  .facts{grid-template-columns:repeat(3,1fr)}
+  .facts div{padding:16px 18px 16px 0;border-bottom:0}
+  .facts div + div{border-left:1px solid rgba(36,56,43,.25);padding-left:18px}
+  .two{grid-template-columns:1fr 1fr}
+  .budget{grid-template-columns:repeat(4,1fr)}
+  .masonry{column-gap:18px}
+  .card{margin-bottom:18px}
+  .card .txt{padding:16px 18px 18px}
+  .card h3{font-size:1.4rem}
+  .card p{font-size:.94rem}
+}
+@media (min-width:960px){
+  .menu-btn{display:none}
+  .nav{display:block;position:static;background:none;border:0;padding:0}
+  .nav ul{display:flex;gap:28px}
+  .nav a{font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;border:0;padding:6px 0;border-bottom:1px solid transparent}
+  .nav a:hover{border-bottom-color:var(--magenta)}
+  .hero{padding:56px 0 50px}
+  .hero-grid{grid-template-columns:1.35fr 1fr;gap:56px}
+  .arch{max-width:420px}
+  .masonry{columns:3}
+  .price-cols{grid-template-columns:1fr 1fr}
+  .order-grid{grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+  form.bouquet{padding:34px 34px}
+  .zone-grid{grid-template-columns:1fr 1fr;gap:56px}
+  .shop-grid{grid-template-columns:1fr 1.25fr;gap:56px}
+  .sec{padding:84px 0}
+  .corner{width:210px;height:210px}
+  .foot{grid-template-columns:1.4fr 1fr 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- ruža -->
+    <symbol id="ruza" viewBox="0 0 40 40" overflow="visible">
+      <circle cx="20" cy="20" r="16" style="fill:var(--c,#C2185B)"/>
+      <path d="M20 20m-3 0a3 3 0 1 1 6 0a6.5 6.5 0 1 1-13 0a10 10 0 1 1 20 1a13.5 13.5 0 0 1-25 4" fill="none" style="stroke:var(--s,rgba(36,56,43,.35))" stroke-width="1.4" stroke-linecap="round"/>
+    </symbol>
+    <!-- margareta -->
+    <symbol id="rada" viewBox="0 0 40 40" overflow="visible">
+      <g style="fill:var(--c,#fff);stroke:var(--s,rgba(36,56,43,.3))" stroke-width=".8">
+        <ellipse cx="20" cy="8" rx="4" ry="9"/><ellipse cx="20" cy="8" rx="4" ry="9" transform="rotate(40 20 20)"/><ellipse cx="20" cy="8" rx="4" ry="9" transform="rotate(80 20 20)"/><ellipse cx="20" cy="8" rx="4" ry="9" transform="rotate(120 20 20)"/><ellipse cx="20" cy="8" rx="4" ry="9" transform="rotate(160 20 20)"/><ellipse cx="20" cy="8" rx="4" ry="9" transform="rotate(200 20 20)"/><ellipse cx="20" cy="8" rx="4" ry="9" transform="rotate(240 20 20)"/><ellipse cx="20" cy="8" rx="4" ry="9" transform="rotate(280 20 20)"/><ellipse cx="20" cy="8" rx="4" ry="9" transform="rotate(320 20 20)"/>
+      </g>
+      <circle cx="20" cy="20" r="5.5" style="fill:var(--k,#C2185B)"/>
+    </symbol>
+    <!-- lala -->
+    <symbol id="lala" viewBox="0 0 40 40" overflow="visible">
+      <path d="M8 12 L14 20 L20 8 L26 20 L32 12 C33 26 28 34 20 34 C12 34 7 26 8 12Z" style="fill:var(--c,#C2185B);stroke:var(--s,rgba(36,56,43,.3))" stroke-width="1"/>
+    </symbol>
+    <!-- list -->
+    <symbol id="list" viewBox="0 0 40 16" overflow="visible">
+      <path d="M0 8 C10 -2 28 -2 40 8 C28 18 10 18 0 8Z" style="fill:var(--c,#9CAF88)"/>
+      <path d="M2 8 H36" style="stroke:var(--s,rgba(36,56,43,.4))" stroke-width=".9"/>
+    </symbol>
+    <!-- gipsofila -->
+    <symbol id="gips" viewBox="0 0 30 30" overflow="visible">
+      <g style="fill:var(--c,#fff)"><circle cx="6" cy="8" r="2.6"/><circle cx="14" cy="4" r="2.4"/><circle cx="22" cy="9" r="2.6"/><circle cx="10" cy="15" r="2.4"/><circle cx="19" cy="17" r="2.6"/><circle cx="26" cy="20" r="2.2"/><circle cx="4" cy="20" r="2.2"/><circle cx="13" cy="24" r="2.4"/></g>
+    </symbol>
+    <!-- eukaliptus grančica -->
+    <symbol id="euk" viewBox="0 0 30 80" overflow="visible">
+      <path d="M15 80 C14 55 16 30 15 0" fill="none" style="stroke:var(--s,#3A5243)" stroke-width="1.4"/>
+      <g style="fill:var(--c,#A9BC9A)"><circle cx="8" cy="66" r="6"/><circle cx="22" cy="56" r="6"/><circle cx="8" cy="44" r="5.5"/><circle cx="22" cy="33" r="5"/><circle cx="9" cy="22" r="4.5"/><circle cx="20" cy="12" r="4"/><circle cx="15" cy="3" r="3.4"/></g>
+    </symbol>
+    <!-- botanička grana, linijski crtež za uglove -->
+    <symbol id="grana" viewBox="0 0 200 200" overflow="visible">
+      <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M200 200 C160 170 120 140 92 100 C72 70 62 44 40 22"/>
+        <path d="M168 176 C160 150 166 132 184 120 C188 142 182 162 168 176Z"/><path d="M168 176 L182 124"/>
+        <path d="M150 162 C126 162 112 150 106 132 C128 130 142 142 150 162Z"/><path d="M150 162 L110 134"/>
+        <path d="M120 136 C116 110 124 94 142 86 C144 108 136 124 120 136Z"/><path d="M120 136 L140 90"/>
+        <path d="M100 112 C78 114 64 104 58 86 C80 84 94 94 100 112Z"/><path d="M100 112 L62 88"/>
+        <path d="M82 84 C82 62 92 50 108 46 C106 66 98 78 82 84Z"/><path d="M82 84 L104 50"/>
+        <path d="M64 56 C46 54 36 44 34 30 C50 30 62 40 64 56Z"/>
+        <circle cx="38" cy="20" r="4"/>
+        <path d="M38 16 C34 6 42 2 42 10 M42 18 C52 14 54 22 44 22 M38 24 C38 34 30 32 34 24 M34 20 C24 22 24 14 34 16"/>
+        <path d="M140 188 C122 196 104 192 94 180"/><circle cx="92" cy="177" r="2.5"/><circle cx="104" cy="186" r="2"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="demo-bar">Primer sajta · izradio opsforma <a href="../">Svi primeri</a></div>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="logo" href="#vrh"><b>Neven</b><small>cvećara · Vračar</small></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Otvori meni"><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Glavni meni">
+      <ul>
+        <li><a href="#buketi">Buketi</a></li>
+        <li><a href="#cenovnik">Cenovnik</a></li>
+        <li><a href="#porudzbina">Porudžbina</a></li>
+        <li><a href="#dostava">Dostava</a></li>
+        <li><a href="#radnja">Radnja</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero has-corners" id="vrh">
+  <svg class="corner tr" aria-hidden="true"><use href="#grana"/></svg>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Južni bulevar 77 · Vračar</span>
+        <h1>Buket složen <i>danas,</i> na vratima do večeri.</h1>
+        <p class="lead">Sezonsko cveće, ruže i zelenilo, složeno u radnji po vašoj želji. Porudžbine do 16 h dostavljamo istog dana.</p>
+        <div class="cta">
+          <a class="btn btn-mag" href="#porudzbina">Pošaljite upit</a>
+          <a class="btn btn-line" href="tel:+381600000234">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>
+            Pozovite 060 000 02 34</a>
+        </div>
+      </div>
+      <div class="arch">
+        <svg class="corner tl light" aria-hidden="true"><use href="#grana"/></svg>
+        <svg class="big" viewBox="0 0 240 300" role="img" aria-label="Ilustracija buketa ruža i margareta u papiru">
+          <g stroke="#24382B" stroke-width="2" fill="none"><path d="M120 300 L112 150"/><path d="M120 300 L96 160"/><path d="M120 300 L140 150"/><path d="M120 300 L150 170"/><path d="M120 300 L84 180"/></g>
+          <use href="#euk" x="40" y="70" width="40" height="110" transform="rotate(-24 60 130)"/>
+          <use href="#euk" x="160" y="66" width="40" height="110" transform="rotate(26 180 120)"/>
+          <use href="#list" x="44" y="150" width="54" height="22" transform="rotate(-30 70 160)"/>
+          <use href="#list" x="146" y="148" width="54" height="22" transform="rotate(210 172 158)"/>
+          <use href="#ruza" x="78" y="96" width="46" height="46" style="--c:#C2185B"/>
+          <use href="#ruza" x="118" y="88" width="50" height="50" style="--c:#E57AA3"/>
+          <use href="#rada" x="58" y="118" width="40" height="40"/>
+          <use href="#ruza" x="140" y="124" width="40" height="40" style="--c:#C2185B"/>
+          <use href="#rada" x="104" y="60" width="38" height="38"/>
+          <use href="#gips" x="64" y="76" width="32" height="32"/>
+          <use href="#gips" x="152" y="84" width="30" height="30"/>
+          <use href="#ruza" x="100" y="128" width="40" height="40" style="--c:#F4B7CE"/>
+          <path d="M58 168 L120 300 L182 168 C160 186 140 160 120 178 C100 160 80 186 58 168Z" fill="#FBF7F0" stroke="#24382B" stroke-width="1.5"/>
+          <path d="M120 178 L120 300" stroke="#24382B" stroke-width="1" opacity=".4"/>
+          <path d="M98 232 C110 240 130 240 142 232" stroke="#C2185B" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M120 236 C104 254 98 270 104 280 M120 236 C134 252 142 268 138 280" stroke="#C2185B" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+    <div class="facts">
+      <div><b>Buketi od 2.500 RSD</b><span>Cena zavisi od cveća u sezoni</span></div>
+      <div><b>Dostava od 300 RSD</b><span>Isti dan za porudžbine do 16 h</span></div>
+      <div><b>Pon–Sub 8–20 h</b><span>Nedeljom 9–15 h</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="buketi" class="sec has-corners">
+  <svg class="corner tl" aria-hidden="true"><use href="#grana"/></svg>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Galerija</span>
+      <h2>Buketi i aranžmani</h2>
+      <p>Ovo su primeri koje najčešće pravimo. Cvet i boju menjamo po želji, cena je okvirna i zavisi od sezone.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filtrirajte po prilici">
+      <button class="filter" type="button" data-f="sve" aria-pressed="true">Sve</button>
+      <button class="filter" type="button" data-f="rodjendan" aria-pressed="false">Rođendan</button>
+      <button class="filter" type="button" data-f="godisnjica" aria-pressed="false">Godišnjica</button>
+      <button class="filter" type="button" data-f="sahrana" aria-pressed="false">Sahrana</button>
+      <button class="filter" type="button" data-f="vencanje" aria-pressed="false">Venčanje</button>
+    </div>
+    <p class="sr-only" id="filter-status" aria-live="polite"></p>
+
+    <div class="masonry" id="galerija">
+      <article class="card t-roz" data-tags="rodjendan">
+        <div class="art"><svg viewBox="0 0 200 250" role="img" aria-label="Šaren buket u papiru">
+          <g stroke="#24382B" stroke-width="1.6"><path d="M100 250 L90 130"/><path d="M100 250 L110 120"/><path d="M100 250 L70 140"/><path d="M100 250 L132 136"/></g>
+          <use href="#list" x="30" y="128" width="46" height="18" transform="rotate(-28 52 136)"/>
+          <use href="#list" x="124" y="124" width="46" height="18" transform="rotate(208 146 132)"/>
+          <use href="#lala" x="40" y="74" width="40" height="40" style="--c:#E8A33D"/>
+          <use href="#ruza" x="70" y="62" width="44" height="44"/>
+          <use href="#rada" x="110" y="66" width="40" height="40"/>
+          <use href="#lala" x="130" y="88" width="36" height="36" style="--c:#E57AA3"/>
+          <use href="#rada" x="56" y="100" width="34" height="34" style="--k:#E8A33D"/>
+          <use href="#ruza" x="92" y="98" width="38" height="38" style="--c:#F4B7CE"/>
+          <use href="#gips" x="84" y="40" width="28" height="28"/>
+          <path d="M48 140 L100 250 L152 140 C130 154 116 136 100 150 C84 136 70 154 48 140Z" fill="#D9B98C" stroke="#24382B" stroke-width="1.4"/>
+          <path d="M80 196 C92 202 108 202 120 196" stroke="#C2185B" stroke-width="5" fill="none" stroke-linecap="round"/>
+        </svg></div>
+        <div class="txt">
+          <div class="tags"><span>Rođendan</span></div>
+          <h3>Šareni buket</h3>
+          <p>Sezonsko cveće u kraft papiru, 9–11 cvetova.</p>
+          <div class="row"><span class="price">od 3.200 RSD</span><a class="pick" href="#porudzbina" data-pick="Šareni buket" data-prilika="Rođendan">Poruči</a></div>
+        </div>
+      </article>
+
+      <article class="card t-zal" data-tags="godisnjica">
+        <div class="art"><svg viewBox="0 0 200 300" role="img" aria-label="Jedanaest ruža na dugim stabljikama">
+          <g stroke="#24382B" stroke-width="1.5" fill="none">
+            <path d="M100 300 L60 70"/><path d="M100 300 L76 60"/><path d="M100 300 L92 52"/><path d="M100 300 L108 52"/><path d="M100 300 L124 60"/><path d="M100 300 L140 70"/><path d="M100 300 L84 84"/><path d="M100 300 L116 84"/><path d="M100 300 L68 98"/><path d="M100 300 L132 98"/><path d="M100 300 L100 80"/>
+          </g>
+          <use href="#list" x="50" y="150" width="40" height="16" transform="rotate(-50 70 158)"/>
+          <use href="#list" x="110" y="160" width="40" height="16" transform="rotate(230 130 168)"/>
+          <g style="--c:#9A1048">
+            <use href="#ruza" x="46" y="54" width="28" height="28"/><use href="#ruza" x="62" y="42" width="28" height="28" style="--c:#C2185B"/><use href="#ruza" x="78" y="36" width="28" height="28"/><use href="#ruza" x="94" y="36" width="28" height="28" style="--c:#C2185B"/><use href="#ruza" x="110" y="42" width="28" height="28"/><use href="#ruza" x="126" y="54" width="28" height="28" style="--c:#C2185B"/>
+            <use href="#ruza" x="70" y="68" width="28" height="28" style="--c:#C2185B"/><use href="#ruza" x="86" y="64" width="28" height="28"/><use href="#ruza" x="102" y="68" width="28" height="28" style="--c:#C2185B"/>
+            <use href="#ruza" x="54" y="84" width="28" height="28"/><use href="#ruza" x="118" y="84" width="28" height="28"/>
+          </g>
+          <path d="M70 200 L100 300 L130 200" fill="rgba(251,247,240,.55)" stroke="#24382B" stroke-width="1"/>
+          <path d="M84 236 C94 242 106 242 116 236" stroke="#9A1048" stroke-width="5" fill="none" stroke-linecap="round"/>
+        </svg></div>
+        <div class="txt">
+          <div class="tags"><span>Godišnjica</span></div>
+          <h3>11 crvenih ruža</h3>
+          <p>Ruže dužine 60 cm, providni omot i mašna.</p>
+          <div class="row"><span class="price">4.400 RSD</span><a class="pick" href="#porudzbina" data-pick="11 crvenih ruža" data-prilika="Godišnjica">Poruči</a></div>
+        </div>
+      </article>
+
+      <article class="card t-zel" data-tags="sahrana">
+        <div class="art"><svg viewBox="0 0 200 220" role="img" aria-label="Venac od zelenila i belih ruža sa trakom">
+          <circle cx="100" cy="100" r="66" fill="none" stroke="#3A5243" stroke-width="26"/>
+          <g style="--c:#9CAF88">
+            <use href="#list" x="28" y="62" width="34" height="14" transform="rotate(-60 45 69)"/><use href="#list" x="50" y="34" width="34" height="14" transform="rotate(-25 67 41)"/><use href="#list" x="94" y="26" width="34" height="14" transform="rotate(10 111 33)"/><use href="#list" x="134" y="44" width="34" height="14" transform="rotate(50 151 51)"/><use href="#list" x="146" y="96" width="34" height="14" transform="rotate(95 163 103)"/><use href="#list" x="128" y="144" width="34" height="14" transform="rotate(135 145 151)"/><use href="#list" x="20" y="110" width="34" height="14" transform="rotate(-95 37 117)"/><use href="#list" x="36" y="150" width="34" height="14" transform="rotate(-135 53 157)"/>
+          </g>
+          <g style="--c:#FBF7F0;--s:rgba(36,56,43,.45)">
+            <use href="#ruza" x="30" y="76" width="30" height="30"/><use href="#ruza" x="60" y="34" width="30" height="30"/><use href="#ruza" x="110" y="34" width="30" height="30"/><use href="#ruza" x="140" y="76" width="30" height="30"/><use href="#ruza" x="128" y="126" width="30" height="30"/><use href="#ruza" x="44" y="126" width="30" height="30"/>
+          </g>
+          <use href="#gips" x="86" y="22" width="24" height="24" style="--c:#E4EADB"/>
+          <path d="M84 158 L72 216 L86 206 L96 218 L100 160Z M116 158 L128 216 L114 206 L104 218 L100 160Z" fill="#FBF7F0"/>
+          <rect x="80" y="152" width="40" height="14" fill="#FBF7F0"/>
+        </svg></div>
+        <div class="txt">
+          <div class="tags"><span>Sahrana</span></div>
+          <h3>Venac sa trakom</h3>
+          <p>Prečnik 60 cm, bele ruže i zelenilo. Natpis na traci uključen.</p>
+          <div class="row"><span class="price">od 9.000 RSD</span><a class="pick" href="#porudzbina" data-pick="Venac sa trakom" data-prilika="Sahrana">Poruči</a></div>
+        </div>
+      </article>
+
+      <article class="card t-krem" data-tags="rodjendan godisnjica">
+        <div class="art"><svg viewBox="0 0 200 170" role="img" aria-label="Okrugla kutija puna ruža">
+          <g style="--c:#C2185B">
+            <use href="#ruza" x="40" y="22" width="34" height="34" style="--c:#E57AA3"/><use href="#ruza" x="70" y="14" width="34" height="34"/><use href="#ruza" x="100" y="14" width="34" height="34" style="--c:#F4B7CE"/><use href="#ruza" x="128" y="22" width="34" height="34"/>
+            <use href="#ruza" x="52" y="44" width="34" height="34"/><use href="#ruza" x="84" y="40" width="34" height="34" style="--c:#E57AA3"/><use href="#ruza" x="116" y="44" width="34" height="34"/>
+          </g>
+          <use href="#euk" x="20" y="20" width="22" height="58" transform="rotate(-40 31 49)"/>
+          <path d="M34 70 L34 150 C34 164 166 164 166 150 L166 70" fill="#24382B"/>
+          <ellipse cx="100" cy="70" rx="66" ry="14" fill="#3A5243"/>
+          <path d="M34 110 C70 120 130 120 166 110" stroke="#C2185B" stroke-width="5" fill="none"/>
+          <text x="100" y="142" text-anchor="middle" fill="#FBF7F0" font-family="Georgia,serif" font-style="italic" font-size="16">Neven</text>
+        </svg></div>
+        <div class="txt">
+          <div class="tags"><span>Rođendan</span><span>Godišnjica</span></div>
+          <h3>Kutija sa ružama</h3>
+          <p>Okrugla kutija, 9 ruža na sunđeru, traje oko nedelju dana.</p>
+          <div class="row"><span class="price">5.400 RSD</span><a class="pick" href="#porudzbina" data-pick="Kutija sa ružama" data-prilika="Rođendan">Poruči</a></div>
+        </div>
+      </article>
+
+      <article class="card t-zal" data-tags="vencanje">
+        <div class="art"><svg viewBox="0 0 200 230" role="img" aria-label="Okrugao bidermajer za mladu">
+          <path d="M92 150 L90 222 M100 150 L100 226 M108 150 L110 222" stroke="#24382B" stroke-width="2"/>
+          <path d="M86 168 L114 168 L116 196 L84 196Z" fill="#FBF7F0" stroke="#24382B" stroke-width="1"/>
+          <use href="#list" x="26" y="104" width="44" height="18" transform="rotate(-150 48 113)" style="--c:#9CAF88"/>
+          <use href="#list" x="130" y="104" width="44" height="18" transform="rotate(-30 152 113)" style="--c:#9CAF88"/>
+          <g style="--c:#FBF7F0">
+            <use href="#ruza" x="44" y="70" width="38" height="38"/><use href="#ruza" x="78" y="54" width="42" height="42" style="--c:#F6E1EA"/><use href="#ruza" x="118" y="70" width="38" height="38"/>
+            <use href="#ruza" x="58" y="100" width="40" height="40" style="--c:#F6E1EA"/><use href="#ruza" x="100" y="100" width="40" height="40"/>
+            <use href="#ruza" x="80" y="26" width="38" height="38"/><use href="#ruza" x="82" y="120" width="34" height="34"/>
+          </g>
+          <use href="#gips" x="52" y="44" width="26" height="26"/><use href="#gips" x="122" y="44" width="26" height="26"/>
+          <path d="M100 180 C80 196 74 214 80 226 M100 180 C120 196 126 214 120 226" stroke="#C2185B" stroke-width="3" fill="none"/>
+        </svg></div>
+        <div class="txt">
+          <div class="tags"><span>Venčanje</span></div>
+          <h3>Bidermajer za mladu</h3>
+          <p>Bele i puder roze ruže, drška u satenu. Probni dogovor u radnji besplatno.</p>
+          <div class="row"><span class="price">od 6.500 RSD</span><a class="pick" href="#porudzbina" data-pick="Bidermajer" data-prilika="Venčanje">Poruči</a></div>
+        </div>
+      </article>
+
+      <article class="card t-zal" data-tags="godisnjica rodjendan">
+        <div class="art"><svg viewBox="0 0 200 230" role="img" aria-label="Buket ruža sa eukaliptusom">
+          <g stroke="#24382B" stroke-width="1.6"><path d="M100 230 L84 120"/><path d="M100 230 L116 120"/><path d="M100 230 L100 110"/></g>
+          <use href="#euk" x="34" y="40" width="34" height="96" transform="rotate(-30 51 88)"/>
+          <use href="#euk" x="132" y="40" width="34" height="96" transform="rotate(30 149 88)"/>
+          <use href="#euk" x="86" y="16" width="28" height="80"/>
+          <use href="#ruza" x="58" y="78" width="42" height="42" style="--c:#C2185B"/>
+          <use href="#ruza" x="100" y="78" width="42" height="42" style="--c:#E57AA3"/>
+          <use href="#ruza" x="78" y="106" width="44" height="44" style="--c:#C2185B"/>
+          <use href="#ruza" x="80" y="58" width="38" height="38" style="--c:#F4B7CE"/>
+          <path d="M64 146 L100 230 L136 146 C122 156 112 146 100 154 C88 146 78 156 64 146Z" fill="#FBF7F0" stroke="#24382B" stroke-width="1.2"/>
+        </svg></div>
+        <div class="txt">
+          <div class="tags"><span>Godišnjica</span><span>Rođendan</span></div>
+          <h3>Ruže i eukaliptus</h3>
+          <p>Sedam ruža u dve nijanse sa svežim eukaliptusom.</p>
+          <div class="row"><span class="price">3.800 RSD</span><a class="pick" href="#porudzbina" data-pick="Ruže i eukaliptus" data-prilika="Godišnjica">Poruči</a></div>
+        </div>
+      </article>
+
+      <article class="card t-krem" data-tags="sahrana">
+        <div class="art"><svg viewBox="0 0 200 140" role="img" aria-label="Nizak ležeći aranžman od belog cveća">
+          <ellipse cx="100" cy="112" rx="84" ry="16" fill="#24382B"/>
+          <g style="--c:#9CAF88"><use href="#list" x="6" y="84" width="46" height="18" transform="rotate(-10 29 93)"/><use href="#list" x="148" y="84" width="46" height="18" transform="rotate(190 171 93)"/><use href="#list" x="40" y="60" width="40" height="16" transform="rotate(-40 60 68)"/><use href="#list" x="120" y="60" width="40" height="16" transform="rotate(220 140 68)"/></g>
+          <g style="--c:#FBF7F0;--s:rgba(36,56,43,.4)"><use href="#ruza" x="36" y="74" width="30" height="30"/><use href="#ruza" x="64" y="62" width="34" height="34"/><use href="#ruza" x="100" y="62" width="34" height="34"/><use href="#ruza" x="134" y="74" width="30" height="30"/></g>
+          <use href="#rada" x="84" y="40" width="32" height="32" style="--k:#9CAF88"/>
+          <use href="#gips" x="54" y="48" width="22" height="22"/><use href="#gips" x="124" y="48" width="22" height="22"/>
+        </svg></div>
+        <div class="txt">
+          <div class="tags"><span>Sahrana</span></div>
+          <h3>Ležeći aranžman</h3>
+          <p>Nizak aranžman za grob ili kapelu, belo cveće i zelenilo, dužine oko 50 cm.</p>
+          <div class="row"><span class="price">od 5.500 RSD</span><a class="pick" href="#porudzbina" data-pick="Ležeći aranžman" data-prilika="Sahrana">Poruči</a></div>
+        </div>
+      </article>
+
+      <article class="card t-roz" data-tags="vencanje">
+        <div class="art"><svg viewBox="0 0 200 160" role="img" aria-label="Tri cveta za rever">
+          <g transform="translate(14 10)">
+            <path d="M28 60 L28 130" stroke="#24382B" stroke-width="2"/><use href="#list" x="6" y="80" width="28" height="12" transform="rotate(-40 20 86)"/><use href="#ruza" x="12" y="30" width="32" height="32" style="--c:#FBF7F0"/><use href="#gips" x="30" y="22" width="18" height="18"/>
+          </g>
+          <g transform="translate(72 0)">
+            <path d="M28 60 L28 140" stroke="#24382B" stroke-width="2"/><use href="#list" x="24" y="84" width="28" height="12" transform="rotate(-140 38 90)"/><use href="#ruza" x="10" y="26" width="36" height="36" style="--c:#C2185B"/><use href="#euk" x="34" y="10" width="14" height="40"/>
+          </g>
+          <g transform="translate(130 14)">
+            <path d="M28 60 L28 130" stroke="#24382B" stroke-width="2"/><use href="#list" x="6" y="80" width="28" height="12" transform="rotate(-40 20 86)"/><use href="#rada" x="10" y="30" width="34" height="34" style="--k:#C2185B"/>
+          </g>
+        </svg></div>
+        <div class="txt">
+          <div class="tags"><span>Venčanje</span></div>
+          <h3>Cvet za rever i kitice</h3>
+          <p>Za mladoženju i kumove 900 RSD, kitice za goste 400 RSD po komadu.</p>
+          <div class="row"><span class="price">od 400 RSD</span><a class="pick" href="#porudzbina" data-pick="Cvet za rever / kitice" data-prilika="Venčanje">Poruči</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="cenovnik" class="sec has-corners">
+  <svg class="corner br" aria-hidden="true"><use href="#grana"/></svg>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Cene 2026.</span>
+      <h2>Cenovnik</h2>
+      <p>Cene su u dinarima, sa PDV-om. Plaćanje gotovinom, karticom ili uplatom na račun za firme.</p>
+    </div>
+    <div class="price-cols">
+      <ul class="plist">
+        <li><b>Ruža, na komad</b><em>250 RSD</em><small>Holandska, 50–60 cm</small></li>
+        <li><b>Lala, gerber, karanfil</b><em>180–220 RSD</em><small>Na komad, zavisno od sezone</small></li>
+        <li><b>Mali buket</b><em>2.500 RSD</em><small>5–7 cvetova sa zelenilom</small></li>
+        <li><b>Srednji buket</b><em>3.500–5.000 RSD</em><small>9–15 cvetova, papir i mašna</small></li>
+      </ul>
+      <ul class="plist">
+        <li><b>Cvetna kutija</b><em>od 4.500 RSD</em><small>Ruže ili sezonsko cveće na sunđeru</small></li>
+        <li><b>Venac za sahranu</b><em>od 9.000 RSD</em><small>Traka sa natpisom uključena</small></li>
+        <li><b>Dekoracija za venčanje</b><em>od 25.000 RSD</em><small>Sala, stolovi ili crkva, dogovor u radnji</small></li>
+        <li><b>Cveće u saksiji</b><em>od 1.200 RSD</em><small>Orhideje, sukulenti, sobne biljke</small></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="porudzbina" class="sec has-corners">
+  <svg class="corner tr light" aria-hidden="true"><use href="#grana"/></svg>
+  <svg class="corner bl" aria-hidden="true"><use href="#grana"/></svg>
+  <div class="wrap order-grid">
+    <div class="order-intro">
+      <span class="eyebrow">Porudžbina</span>
+      <h2>Poručite buket</h2>
+      <p>Napišite priliku, budžet i adresu. Javimo se u roku od pola sata u radno vreme da potvrdimo cveće i cenu.</p>
+      <ol>
+        <li>Popunite formu ili pozovite <a href="tel:+381600000234" style="color:inherit;font-weight:700">060 000 02 34</a>.</li>
+        <li>Potvrdimo cenu i vreme dostave.</li>
+        <li>Platite karticom pri preuzimanju ili gotovinom dostavljaču.</li>
+      </ol>
+    </div>
+
+    <!-- Web3Forms: action="https://api.web3forms.com/submit" + access_key -->
+    <form class="bouquet" id="forma" novalidate>
+      <div class="two">
+        <div class="f"><label for="o-prilika">Prilika</label>
+          <select id="o-prilika" name="prilika" required>
+            <option value="">Izaberite</option><option>Rođendan</option><option>Godišnjica</option><option>Sahrana</option><option>Venčanje</option><option>Nešto drugo</option>
+          </select></div>
+        <div class="f"><label for="o-buket">Buket iz galerije <span style="text-transform:none;letter-spacing:0;font-weight:400">(nije obavezno)</span></label><input id="o-buket" name="buket" type="text" placeholder="npr. Ruže i eukaliptus"></div>
+      </div>
+      <fieldset class="f">
+        <legend>Budžet</legend>
+        <div class="budget">
+          <label><input type="radio" name="budzet" value="do 3.000" required><span>do 3.000</span></label>
+          <label><input type="radio" name="budzet" value="3.000–5.000"><span>3.000–5.000</span></label>
+          <label><input type="radio" name="budzet" value="5.000–8.000"><span>5.000–8.000</span></label>
+          <label><input type="radio" name="budzet" value="preko 8.000"><span>preko 8.000</span></label>
+        </div>
+      </fieldset>
+      <div class="f"><label for="o-adresa">Adresa dostave</label><input id="o-adresa" name="adresa" type="text" autocomplete="street-address" placeholder="Ulica i broj, sprat, interfon" required></div>
+      <div class="two">
+        <div class="f"><label for="o-datum">Datum dostave</label><input id="o-datum" name="datum" type="date" required></div>
+        <div class="f"><label for="o-vreme">Vreme</label>
+          <select id="o-vreme" name="vreme"><option>9–12 h</option><option>12–16 h</option><option>16–20 h</option></select></div>
+      </div>
+      <div class="f"><label for="o-kartica">Poruka na kartici</label><textarea id="o-kartica" name="kartica" placeholder="Srećan rođendan, Ana!"></textarea></div>
+      <div class="two">
+        <div class="f"><label for="o-ime">Vaše ime</label><input id="o-ime" name="ime" type="text" autocomplete="name" required></div>
+        <div class="f"><label for="o-tel">Telefon</label><input id="o-tel" name="telefon" type="tel" autocomplete="tel" required></div>
+      </div>
+      <button class="btn btn-mag" type="submit">Pošaljite upit</button>
+      <p class="form-msg" role="status" hidden></p>
+    </form>
+  </div>
+</section>
+
+<section id="dostava" class="sec">
+  <div class="wrap zone-grid">
+    <div class="zone-map">
+      <svg viewBox="0 0 320 320" role="img" aria-label="Šema zona dostave: Vračar u centru, zatim susedne opštine, pa ostatak grada">
+        <circle cx="160" cy="160" r="152" fill="#F3ECDF" stroke="#24382B" stroke-width="1"/>
+        <circle cx="160" cy="160" r="112" fill="#E4EADB" stroke="#24382B" stroke-width="1"/>
+        <circle cx="160" cy="160" r="72" fill="#C8D3BA" stroke="#24382B" stroke-width="1"/>
+        <circle cx="160" cy="160" r="34" fill="#9CAF88" stroke="#24382B" stroke-width="1"/>
+        <g stroke="#24382B" stroke-width=".6" stroke-dasharray="2 4" fill="none" opacity=".6"><path d="M8 160 H312"/><path d="M160 8 V312"/></g>
+        <circle cx="160" cy="160" r="6" fill="#C2185B"/>
+        <g font-family="Karla,Arial,sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#24382B" text-anchor="middle">
+          <text x="160" y="182">VRAČAR</text>
+          <text x="160" y="106">ZONA 2</text>
+          <text x="160" y="66">ZONA 3</text>
+          <text x="160" y="28">ZONA 4</text>
+        </g>
+      </svg>
+    </div>
+    <div>
+      <span class="eyebrow">Dostava</span>
+      <h2 style="font-size:clamp(2.1rem,8vw,3.4rem)">Zone i cene dostave</h2>
+      <table class="zones">
+        <tbody>
+          <tr><th scope="row"><b><span class="sw" style="background:#9CAF88"></span>Vračar</b><span>Zona 1, dostava za oko sat vremena</span></th><td>300 RSD</td></tr>
+          <tr><th scope="row"><b><span class="sw" style="background:#C8D3BA"></span>Zona 2</b><span>Stari grad, Savski venac, Zvezdara, Palilula</span></th><td>500 RSD</td></tr>
+          <tr><th scope="row"><b><span class="sw" style="background:#E4EADB"></span>Zona 3</b><span>Voždovac, Novi Beograd, Čukarica, Rakovica</span></th><td>700 RSD</td></tr>
+          <tr><th scope="row"><b><span class="sw" style="background:#F3ECDF"></span>Zona 4</b><span>Zemun, Mirijevo, Banovo brdo i dalje</span></th><td>1.000 RSD</td></tr>
+        </tbody>
+      </table>
+      <p class="zone-notes">Porudžbine do 16 h stižu istog dana. Na Vračaru je dostava besplatna za porudžbine preko 6.000 RSD. Za sahrane dostavljamo direktno na groblje ili u kapelu, javite termin.</p>
+    </div>
+  </div>
+</section>
+
+<section id="radnja" class="sec has-corners">
+  <svg class="corner tl light" aria-hidden="true"><use href="#grana"/></svg>
+  <svg class="corner br light" aria-hidden="true"><use href="#grana"/></svg>
+  <div class="wrap shop-grid">
+    <div>
+      <span class="eyebrow">Radnja</span>
+      <h2 style="font-size:clamp(2.1rem,8vw,3.4rem)">Radno vreme</h2>
+      <table class="hours" id="hours">
+        <tbody>
+          <tr data-d="1"><th scope="row">Ponedeljak</th><td>8–20 h</td></tr>
+          <tr data-d="2"><th scope="row">Utorak</th><td>8–20 h</td></tr>
+          <tr data-d="3"><th scope="row">Sreda</th><td>8–20 h</td></tr>
+          <tr data-d="4"><th scope="row">Četvrtak</th><td>8–20 h</td></tr>
+          <tr data-d="5"><th scope="row">Petak</th><td>8–20 h</td></tr>
+          <tr data-d="6"><th scope="row">Subota</th><td>8–20 h</td></tr>
+          <tr data-d="0"><th scope="row">Nedelja</th><td>9–15 h</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:18px">Za 8. mart i Dan zaljubljenih radimo od 7 do 21 h.</p>
+      <div class="photo" role="img" aria-label="Mesto za fotografiju izloga radnje">
+        <div><small>Vaša fotografija</small><br><span style="font-family:var(--serif);font-size:1.3rem">izlog radnje</span></div>
+      </div>
+    </div>
+    <div>
+      <p class="addr">Južni bulevar 77<br>11000 Beograd, Vračar</p>
+      <p><a href="tel:+381600000234">060 000 02 34</a> · Parking u bočnim ulicama, zona 2.</p>
+      <div class="map">
+        <iframe title="Mapa: Cvećara Neven, Južni bulevar 77, Beograd" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Ju%C5%BEni%20bulevar%2077%2C%20Beograd&amp;z=15&amp;output=embed"></iframe>
+      </div>
+      <p style="margin-top:20px"><a class="btn btn-line" href="#porudzbina">Pošaljite upit</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><a class="logo" href="#vrh"><b>Neven</b><small>cvećara</small></a></div>
+      <div>Južni bulevar 77<br>Vračar, Beograd</div>
+      <div><a href="tel:+381600000234">060 000 02 34</a><br>Pon–Sub 8–20, Ned 9–15</div>
+    </div>
+    <p class="demo-foot">Primer sajta · izradio opsforma · <a href="../">Svi primeri</a>. Firma, cene i broj telefona su izmišljeni.</p>
+  </div>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}</style>
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'), nav=document.getElementById('nav');
+  function setMenu(open){btn.setAttribute('aria-expanded',String(open));btn.setAttribute('aria-label',open?'Zatvori meni':'Otvori meni');nav.classList.toggle('open',open);}
+  btn.addEventListener('click',function(){setMenu(btn.getAttribute('aria-expanded')!=='true');});
+  nav.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){setMenu(false);btn.focus();}});
+
+  // filteri po prilici
+  var filters=[].slice.call(document.querySelectorAll('.filter')), cards=[].slice.call(document.querySelectorAll('#galerija .card')), st=document.getElementById('filter-status');
+  filters.forEach(function(f){
+    var key=f.dataset.f, n=key==='sve'?cards.length:cards.filter(function(c){return c.dataset.tags.split(' ').indexOf(key)>-1}).length;
+    var s=document.createElement('span'); s.className='n'; s.textContent=n; f.appendChild(s);
+    f.addEventListener('click',function(){
+      filters.forEach(function(x){x.setAttribute('aria-pressed',String(x===f))});
+      var shown=0;
+      cards.forEach(function(c){var on=key==='sve'||c.dataset.tags.split(' ').indexOf(key)>-1;c.hidden=!on;if(on)shown++;});
+      st.textContent='Prikazano: '+shown;
+    });
+  });
+
+  // "Poruči" popunjava formu
+  var sel=document.getElementById('o-prilika'), buket=document.getElementById('o-buket');
+  document.querySelectorAll('[data-pick]').forEach(function(a){
+    a.addEventListener('click',function(){buket.value=a.dataset.pick; sel.value=a.dataset.prilika;});
+  });
+
+  // današnji dan
+  var now=new Date(), row=document.querySelector('#hours tr[data-d="'+now.getDay()+'"]'); if(row) row.classList.add('today');
+  var d=document.getElementById('o-datum'); d.min=now.toISOString().slice(0,10);
+
+  // forma
+  var form=document.getElementById('forma'), msg=form.querySelector('.form-msg');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var missing=[];
+    form.querySelectorAll('input[required],select[required]').forEach(function(el){
+      if(el.type==='radio'){ if(!form.querySelector('input[name="'+el.name+'"]:checked')) missing.push('budžet'); }
+      else if(!el.value.trim()) missing.push(form.querySelector('label[for="'+el.id+'"]').firstChild.textContent.trim().toLowerCase());
+    });
+    msg.hidden=false;
+    if(missing.length){msg.textContent='Nedostaje: '+missing.join(', ')+'.';return;}
+    msg.textContent='Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.';
+    form.reset();
+  });
+})();
+</script>
+</body>
+</html>

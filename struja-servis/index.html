@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Struja servis – električar, Vračar i Zvezdara</title>
+<meta name="description" content="Električar sa Vračara: osigurači, utičnice, rasveta, razvodne table, bojler, interfon i provera instalacija. Cene u RSD, ponuda za stan, kuću i lokal. Kralja Milutina 33.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&display=swap&subset=latin-ext" rel="stylesheet">
+<style>
+:root{
+  --black:#0A0A0A;
+  --yellow:#FFE500;
+  --white:#FFFFFF;
+  --gray:#1C1C1C;
+  --line:rgba(255,255,255,.16);
+  --soft:#B9B9B9;
+  --head:"Chakra Petch","Bahnschrift","DIN Alternate","Arial Narrow",Arial,sans-serif;
+  --body:"Inter","Segoe UI","Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;color:var(--white);font-family:var(--body);font-size:1rem;line-height:1.6;
+  background-color:var(--black);
+  background-image:
+    linear-gradient(rgba(255,255,255,.065) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.065) 1px,transparent 1px),
+    linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
+  background-size:50px 50px,50px 50px,10px 10px,10px 10px;
+}
+a{color:var(--yellow)}
+svg{max-width:100%}
+:focus-visible{outline:2px dashed var(--yellow);outline-offset:4px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+h1,h2,h3{font-family:var(--head);font-weight:600;line-height:1.08;margin:0}
+
+.demo-bar{background:var(--black);border-bottom:1px solid var(--line);font-size:.76rem;color:var(--soft)}
+.demo-bar .wrap{display:flex;justify-content:space-between;gap:10px;padding-top:6px;padding-bottom:6px}
+
+/* zaglavlje */
+.hdr{position:sticky;top:0;z-index:30;background:rgba(10,10,10,.94);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--head);font-weight:700;font-size:1.2rem;color:var(--white);text-decoration:none}
+.logo svg{flex:none}
+.sw{display:flex;align-items:center;gap:8px;background:var(--gray);color:var(--white);border:1px solid var(--line);padding:6px 12px 6px 8px;font:600 .9rem var(--head);cursor:pointer}
+.sw svg .arm{transform-origin:12px 20px;transition:transform .2s}
+.sw[aria-expanded="true"] svg .arm{transform:rotate(28deg)}
+.sw[aria-expanded="true"]{border-color:var(--yellow)}
+.nav{display:none;position:absolute;left:0;right:0;top:64px;background:var(--black);border-bottom:2px solid var(--yellow)}
+.nav.open{display:block}
+.nav ul{list-style:none;margin:0;padding:8px 18px 18px;counter-reset:n}
+.nav a{display:flex;gap:14px;padding:12px 0;color:var(--white);text-decoration:none;font-family:var(--head);font-weight:600;font-size:1.1rem;border-bottom:1px solid var(--line)}
+.nav a:hover{color:var(--yellow)}
+
+/* dugmad */
+.btn{display:inline-flex;align-items:center;gap:10px;font:700 1.02rem var(--head);text-decoration:none;padding:14px 24px;cursor:pointer;border:0;clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px)}
+.btn-y{background:var(--yellow);color:var(--black)}
+.btn-y:hover{background:var(--white)}
+.btn-o{background:transparent;color:var(--yellow);box-shadow:inset 0 0 0 2px var(--yellow)}
+.btn-o:hover{background:rgba(255,229,0,.1)}
+.btn:focus-visible{outline:none;box-shadow:inset 0 0 0 3px var(--white)}
+
+/* oznake ugla, kao na crtežu */
+.sheet{position:relative;border:1px solid var(--line);background:rgba(28,28,28,.92)}
+.sheet::before,.sheet::after{content:"";position:absolute;width:14px;height:14px;border-color:var(--yellow);border-style:solid}
+.sheet::before{top:-1px;left:-1px;border-width:2px 0 0 2px}
+.sheet::after{bottom:-1px;right:-1px;border-width:0 2px 2px 0}
+
+/* hero */
+.hero{padding:34px 0 40px}
+.hero-grid{display:grid;gap:26px}
+.hero h1{font-size:clamp(2.3rem,9.4vw,4.4rem);letter-spacing:-.01em;margin-bottom:16px}
+.hero h1 span{display:block;color:var(--yellow)}
+.hero .lead{color:#DADADA;font-size:1.06rem;max-width:33em;margin:0 0 24px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.meta{margin:26px 0 0;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-left:1px solid var(--line);max-width:520px}
+.meta div{padding:10px 12px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.meta dt{font-size:.75rem;color:var(--soft)}
+.meta dd{margin:0;font-family:var(--head);font-weight:600;font-size:1.05rem}
+.schem{padding:12px}
+.schem svg{display:block;width:100%;height:auto}
+.schem figcaption{display:flex;justify-content:space-between;gap:8px;font-family:var(--head);font-size:.78rem;color:var(--soft);border-top:1px solid var(--line);padding-top:8px;margin-top:6px}
+.bolt{animation:flash 1.1s ease-out 1 .2s both}
+@keyframes flash{0%{opacity:0}12%{opacity:1}18%{opacity:.25}26%{opacity:1}100%{opacity:1}}
+
+/* sekcije */
+section{scroll-margin-top:72px}
+.s{padding:56px 0}
+.sh{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:24px;border-bottom:2px solid var(--yellow);padding-bottom:12px}
+.sh h2{font-size:clamp(1.9rem,6.4vw,3rem)}
+.sh p{margin:0;color:var(--soft);font-size:.92rem;max-width:30em}
+
+/* usluge */
+.svc{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.svc li{display:grid;grid-template-columns:52px 1fr;gap:4px 14px;padding:18px 16px;border-bottom:1px dashed var(--line)}
+.svc .no{font-family:var(--head);font-weight:700;font-size:1.7rem;color:var(--yellow);line-height:1;grid-row:span 3}
+.svc h3{font-size:1.25rem;font-weight:600}
+.svc p{margin:0;color:#CFCFCF;font-size:.94rem}
+.svc .pr{font-family:var(--head);font-weight:700;font-size:1.15rem;color:var(--white)}
+.svc .pr small{font-family:var(--body);font-weight:400;font-size:.8rem;color:var(--soft)}
+.svc li.hot{background:var(--yellow);color:var(--black)}
+.svc li.hot .no{color:var(--black)}
+.svc li.hot p,.svc li.hot .pr,.svc li.hot .pr small{color:var(--black)}
+.foot-note{margin:18px 0 0;color:var(--soft);font-size:.92rem}
+
+/* upozorenje */
+.warn{display:grid;gap:16px;padding:22px 20px;border:2px solid var(--yellow);background:
+  linear-gradient(var(--gray),var(--gray)) padding-box,
+  repeating-linear-gradient(-45deg,var(--yellow) 0 10px,var(--black) 10px 20px) border-box;border-width:8px;border-color:transparent}
+.warn h3{font-size:1.4rem;color:var(--yellow)}
+.warn ol{margin:0;padding-left:20px;color:#E4E4E4}
+.warn li{margin:4px 0}
+
+/* forma */
+.form-grid{display:grid;gap:26px}
+form{display:grid;gap:18px;padding:22px 18px}
+.f2{display:grid;gap:18px}
+label,.lg{display:block;font-family:var(--head);font-weight:600;font-size:.95rem;margin-bottom:6px;color:var(--white)}
+input[type=text],input[type=tel],select,textarea{width:100%;font:inherit;color:var(--white);background:var(--black);border:1px solid rgba(255,255,255,.35);border-radius:0;padding:12px}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--yellow) 50%),linear-gradient(135deg,var(--yellow) 50%,transparent 50%);background-position:calc(100% - 18px) 52%,calc(100% - 13px) 52%;background-size:5px 5px;background-repeat:no-repeat}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--yellow);outline:none;box-shadow:0 0 0 1px var(--yellow)}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.types{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.types label{margin:0;font-weight:500}
+.types input{position:absolute;opacity:0;width:1px;height:1px}
+.types span{display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:12px;border:1px solid rgba(255,255,255,.35);cursor:pointer;font-size:.95rem;height:100%}
+.types span svg{width:30px;height:30px}
+.types input:checked+span{border-color:var(--yellow);background:rgba(255,229,0,.12);color:var(--yellow)}
+.types input:focus-visible+span{outline:2px dashed var(--yellow);outline-offset:3px}
+.form-msg{display:none;margin:0;padding:14px;background:var(--yellow);color:var(--black);font-weight:600}
+.form-msg.show{display:block}
+.aside p{color:#D5D5D5;margin:0 0 14px;max-width:32em}
+.aside ul{margin:0;padding-left:18px;color:#D5D5D5}
+.photo{margin-top:22px;height:200px;border:1px dashed rgba(255,255,255,.4);display:flex;align-items:flex-end;padding:12px;font-family:var(--head);font-size:.85rem;color:var(--soft);background:repeating-linear-gradient(90deg,transparent 0 24px,rgba(255,229,0,.08) 24px 25px),var(--gray)}
+
+/* sastavnica: radno vreme i lokacija */
+.tb{display:grid;grid-template-columns:1fr;border:2px solid var(--white)}
+.tb>div{padding:16px;border-bottom:1px solid var(--white)}
+.tb>div:last-child{border-bottom:0}
+.tb .k{display:block;font-size:.75rem;color:var(--soft);margin-bottom:4px}
+.tb .v{font-family:var(--head);font-weight:600;font-size:1.2rem}
+table.hours{width:100%;border-collapse:collapse;font-family:var(--head)}
+.hours th,.hours td{padding:7px 0;border-bottom:1px dashed var(--line);text-align:left;font-weight:500}
+.hours td{text-align:right;font-weight:600}
+.hours tr:last-child th,.hours tr:last-child td{border-bottom:0}
+.hours .off{color:var(--soft)}
+.map{height:300px;background:var(--gray);border:1px solid var(--line)}
+.map iframe{display:block;width:100%;height:100%;border:0;filter:grayscale(1) contrast(1.05)}
+
+footer{border-top:2px solid var(--yellow);background:var(--black);padding:26px 0 34px;font-size:.86rem;color:var(--soft)}
+footer .wrap{display:grid;gap:6px}
+footer p{margin:0}
+
+@media (min-width:760px){
+  .svc{grid-template-columns:1fr 1fr;column-gap:0}
+  .svc li{border-right:1px dashed var(--line)}
+  .f2{grid-template-columns:1fr 1fr}
+  .types{grid-template-columns:repeat(4,1fr)}
+}
+@media (min-width:980px){
+  .wrap{padding:0 32px}
+  .sw{display:none}
+  .nav{display:block;position:static;background:none;border:0}
+  .nav ul{display:flex;gap:28px;padding:0}
+  .nav a{border:0;padding:4px 0;font-size:1rem}
+  .hero{padding:64px 0 70px}
+  .hero-grid{grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}
+  .form-grid{grid-template-columns:.8fr 1.4fr;gap:48px;align-items:start}
+  form{padding:30px}
+  .tb{grid-template-columns:1.2fr 1fr 1fr}
+  .tb>div{border-bottom:0;border-right:1px solid var(--white)}
+  .tb>div:last-child{border-right:0}
+  .tb .mapcell{grid-column:1/-1;border-top:1px solid var(--white);padding:0}
+  .tb .mapcell .map{border:0;height:340px}
+  .warn{grid-template-columns:.7fr 1.3fr;align-items:center;padding:28px 32px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-bar"><div class="wrap"><span>Primer sajta · izradio opsforma</span><a href="../">Svi primeri</a></div></div>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="logo" href="#pocetak">
+      <svg width="26" height="30" viewBox="0 0 26 30" aria-hidden="true"><path d="M15 1 3 17h8l-2 12 13-17h-8z" fill="#FFE500"/></svg>
+      Struja servis
+    </a>
+    <button class="sw" type="button" aria-expanded="false" aria-controls="nav" aria-label="Meni">
+      <svg width="34" height="26" viewBox="0 0 34 26" aria-hidden="true"><g stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"><path d="M1 20H8"/><circle cx="10" cy="20" r="2" fill="#0A0A0A"/><path class="arm" d="M12 20 26 11"/><circle cx="26" cy="20" r="2" fill="#0A0A0A"/><path d="M28 20H33"/></g></svg>
+      Meni
+    </button>
+    <nav class="nav" id="nav" aria-label="Glavna navigacija">
+      <ul>
+        <li><a href="#usluge">Usluge</a></li>
+        <li><a href="#bezbednost">Pre poziva</a></li>
+        <li><a href="#ponuda">Ponuda</a></li>
+        <li><a href="#radionica">Radno vreme</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="pocetak">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Električar za Vračar <span>i Zvezdaru</span></h1>
+      <p class="lead">Osigurači, utičnice, rasveta, razvodne table, bojleri i interfoni. Za stan, kuću i lokal. Pre rada dobijate cenu, posle rada račun i merenje.</p>
+      <div class="ctas">
+        <a class="btn btn-y" href="tel:+381600000433">Pozovite 060 000 04 33</a>
+        <a class="btn btn-o" href="#ponuda">Zatražite ponudu</a>
+      </div>
+      <dl class="meta">
+        <div><dt>izlazak</dt><dd>1.500 RSD</dd></div>
+        <div><dt>hitno</dt><dd>07–23 h, svaki dan</dd></div>
+        <div><dt>garancija na rad</dt><dd>24 meseca</dd></div>
+        <div><dt>plaćanje</dt><dd>gotovina, kartica</dd></div>
+      </dl>
+    </div>
+
+    <figure class="sheet schem" style="margin:0" aria-hidden="true">
+      <svg viewBox="0 0 520 380">
+        <g fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square">
+          <!-- glavni vod -->
+          <path d="M60 70 H150"/>
+          <path d="M190 70 H260"/>
+          <path d="M300 70 H460 V130"/>
+          <path d="M460 210 V300 H330"/>
+          <path d="M270 300 H60 V230"/>
+          <path d="M60 150 V70"/>
+          <!-- izvor naizmenicne struje -->
+          <circle cx="60" cy="190" r="38" fill="#0A0A0A"/>
+          <path d="M40 190 q10 -18 20 0 t20 0"/>
+          <!-- osigurač -->
+          <rect x="150" y="60" width="40" height="20" fill="#0A0A0A"/>
+          <path d="M150 70 H190"/>
+          <!-- prekidač -->
+          <circle cx="262" cy="70" r="3.5" fill="#FFFFFF"/>
+          <path d="M262 70 L296 50"/>
+          <circle cx="300" cy="70" r="3.5" fill="#FFFFFF"/>
+          <!-- otpornik -->
+          <path d="M460 130 l-12 6 24 12 -24 12 24 12 -24 12 24 12 -12 6 V210" stroke-linejoin="miter"/>
+          <!-- sijalica -->
+          <circle cx="300" cy="300" r="30" fill="#0A0A0A"/>
+          <path d="M279 279 L321 321 M321 279 L279 321"/>
+          <!-- uzemljenje -->
+          <path d="M160 300 V330"/>
+          <path d="M138 330 H182 M146 340 H174 M154 350 H166"/>
+        </g>
+        <g fill="#FFFFFF"><circle cx="160" cy="300" r="4"/><circle cx="460" cy="70" r="4"/><circle cx="60" cy="70" r="4"/></g>
+        <!-- oznake -->
+        <g font-family="Chakra Petch, Bahnschrift, Arial Narrow, sans-serif" font-size="15" font-weight="600" fill="#B9B9B9">
+          <text x="148" y="50">F1 16 A</text>
+          <text x="258" y="40">S1</text>
+          <text x="480" y="176">R1</text>
+          <text x="282" y="356">L1 230 V</text>
+          <text x="188" y="352">PE</text>
+          <text x="104" y="150">~ 230 V</text>
+        </g>
+        <!-- munja -->
+        <path class="bolt" d="M262 88 L188 214 H246 L214 330 L330 176 H270 L316 88 Z" fill="#FFE500" stroke="#0A0A0A" stroke-width="5" stroke-linejoin="round"/>
+      </svg>
+      <figcaption><span>Šema 01: strujno kolo stana</span><span>razmera 1:1</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="s" id="usluge" aria-labelledby="usl-h">
+  <div class="wrap">
+    <div class="sh"><h2 id="usl-h">Usluge i cene</h2><p>Cene su za rad. Materijal po računu iz prodavnice ili donosite svoj.</p></div>
+    <ol class="svc sheet">
+      <li><span class="no">01</span><h3>Zamena osigurača</h3><p>Topljivi u automatski, ili zamena neispravnog automata. Po komadu.</p><span class="pr">2.500 RSD</span></li>
+      <li><span class="no">02</span><h3>Nova utičnica</h3><p>Zamena postojeće 2.000 RSD. Nova sa razvodom kabla kroz kanalicu ili zid.</p><span class="pr">od 2.000 RSD</span></li>
+      <li><span class="no">03</span><h3>Rasveta</h3><p>Luster, plafonjera, zidna lampa, LED traka sa napajanjem. Po komadu.</p><span class="pr">od 2.500 RSD</span></li>
+      <li><span class="no">04</span><h3>Razvodna tabla</h3><p>Nova tabla za stan sa automatima i FID sklopkom. Tabla i oprema posebno.</p><span class="pr">od 25.000 RSD <small>rad</small></span></li>
+      <li><span class="no">05</span><h3>Priključak za bojler</h3><p>Poseban vod sa osiguračem i prekidačem, ili zamena oštećenog priključka.</p><span class="pr">4.000 RSD</span></li>
+      <li><span class="no">06</span><h3>Provera instalacija</h3><p>Merenje izolacije, uzemljenja i FID sklopke. Pisani izveštaj, stan do 70 m².</p><span class="pr">9.000 RSD</span></li>
+      <li><span class="no">07</span><h3>Interfon</h3><p>Zamena slušalice ili video interfona, popravka instalacije u stanu.</p><span class="pr">od 3.000 RSD</span></li>
+      <li class="hot"><span class="no">08</span><h3>Hitne intervencije</h3><p>Nestalo struje u stanu, izbacuje osigurač, miriše na izgorelo. Svaki dan 07–23 h.</p><span class="pr">izlazak 3.500 RSD <small>posle 20 h: 5.000 RSD</small></span></li>
+    </ol>
+    <p class="foot-note">Izlazak na Vračar i Zvezdaru je 1.500 RSD i ne naplaćuje se ako radimo. Garancija na rad 24 meseca.</p>
+  </div>
+</section>
+
+<section class="s" id="bezbednost" aria-labelledby="bez-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="warn">
+      <h3 id="bez-h">Pre nego što pozovete</h3>
+      <ol>
+        <li>Ako vidite varnice ili osetite miris izgorelog, isključite glavni osigurač u tabli.</li>
+        <li>Ne dirajte mokre utičnice i prekidače. Isključite vodu i struju za to kupatilo.</li>
+        <li>Zabeležite koji osigurač izbacuje i šta je tada bilo uključeno. To skraćuje traženje kvara.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="ponuda" aria-labelledby="pon-h">
+  <div class="wrap">
+    <div class="sh"><h2 id="pon-h">Zatražite ponudu</h2><p>Za veće radove: nova tabla, rasveta u lokalu, zamena instalacija.</p></div>
+    <div class="form-grid">
+      <div class="aside">
+        <p>Napišite koji je objekat i šta treba uraditi. Za razvodnu tablu ili zamenu instalacija dolazimo na procenu, pa šaljemo ponudu sa stavkama: rad, materijal, rok.</p>
+        <ul>
+          <li>Odgovor u roku od jednog radnog dana</li>
+          <li>Procena na licu mesta: 1.500 RSD, odbija se od radova</li>
+          <li>Ponuda važi 30 dana</li>
+        </ul>
+        <div class="photo">Vaša fotografija: nova razvodna tabla</div>
+      </div>
+      <!-- Web3Forms: action="https://api.web3forms.com/submit" + access_key -->
+      <form id="forma" class="sheet" novalidate>
+        <fieldset>
+          <legend class="lg">Tip objekta</legend>
+          <div class="types">
+            <label><input type="radio" name="objekat" value="stan" checked><span><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M4 27V8h22v19M4 27h22M10 13h4M16 13h4M10 19h4M16 19h4" stroke="currentColor" stroke-width="2" fill="none"/></svg>Stan</span></label>
+            <label><input type="radio" name="objekat" value="kuća"><span><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M3 14 15 4l12 10M6 12v15h18V12M12 27v-8h6v8" stroke="currentColor" stroke-width="2" fill="none"/></svg>Kuća</span></label>
+            <label><input type="radio" name="objekat" value="lokal"><span><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M3 11h24l-2-6H5zM5 11v16h20V11M9 27v-9h6v9M18 16h4v4h-4z" stroke="currentColor" stroke-width="2" fill="none"/></svg>Lokal ili kancelarija</span></label>
+            <label><input type="radio" name="objekat" value="zgrada"><span><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M7 27V3h16v24M3 27h24M11 8h3M16 8h3M11 13h3M16 13h3M11 18h3M16 18h3M13 27v-4h4v4" stroke="currentColor" stroke-width="2" fill="none"/></svg>Zgrada, zajednički delovi</span></label>
+          </div>
+        </fieldset>
+        <div class="f2">
+          <div><label for="f-usl">Šta treba uraditi</label>
+            <select id="f-usl" name="usluga"><option>Razvodna tabla</option><option>Rasveta</option><option>Utičnice i prekidači</option><option>Bojler priključak</option><option>Provera instalacija</option><option>Interfon</option><option>Zamena instalacija</option><option>Nešto drugo</option></select></div>
+          <div><label for="f-m2">Površina (m²)</label><input type="text" id="f-m2" name="povrsina" inputmode="numeric" placeholder="npr. 55"></div>
+        </div>
+        <div><label for="f-opis">Opis posla</label><textarea id="f-opis" name="opis" placeholder="Npr. stara tabla sa topljivim osiguračima, zgrada iz 1970-ih, treba i FID sklopka"></textarea></div>
+        <div class="f2">
+          <div><label for="f-ime">Ime</label><input type="text" id="f-ime" name="ime" autocomplete="name" required></div>
+          <div><label for="f-tel">Telefon</label><input type="tel" id="f-tel" name="telefon" autocomplete="tel" required></div>
+        </div>
+        <div><label for="f-adr">Adresa ili deo grada</label><input type="text" id="f-adr" name="adresa" autocomplete="street-address" placeholder="npr. Njegoševa, Vračar"></div>
+        <div><button class="btn btn-y" type="submit">Zatražite ponudu</button></div>
+        <p class="form-msg" id="form-msg" role="status" tabindex="-1">Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="radionica" aria-labelledby="rad-h" style="padding-top:10px">
+  <div class="wrap">
+    <div class="sh"><h2 id="rad-h">Radno vreme i adresa</h2><p>Kancelarija i magacin materijala. Za dolazak se najavite.</p></div>
+    <div class="tb">
+      <div>
+        <span class="k">radno vreme</span>
+        <table class="hours">
+          <caption style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Radno vreme Struja servis</caption>
+          <tbody>
+            <tr><th scope="row">Ponedeljak</th><td>08–20</td></tr>
+            <tr><th scope="row">Utorak</th><td>08–20</td></tr>
+            <tr><th scope="row">Sreda</th><td>08–20</td></tr>
+            <tr><th scope="row">Četvrtak</th><td>08–20</td></tr>
+            <tr><th scope="row">Petak</th><td>08–20</td></tr>
+            <tr><th scope="row">Subota</th><td>09–15</td></tr>
+            <tr><th scope="row">Nedelja</th><td class="off">samo hitno</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <span class="k">adresa</span>
+        <p class="v" style="margin:0 0 12px">Kralja Milutina 33, Vračar</p>
+        <span class="k">kako do nas</span>
+        <p style="margin:0;color:#D5D5D5">Između Njegoševe i Resavske. Parking u ulici, zona 1.</p>
+      </div>
+      <div>
+        <span class="k">telefon i Viber</span>
+        <p class="v" style="margin:0 0 12px"><a href="tel:+381600000433" style="color:var(--yellow);text-decoration:none">060 000 04 33</a></p>
+        <span class="k">hitne intervencije</span>
+        <p style="margin:0;color:#D5D5D5">Svaki dan 07–23 h, i nedeljom.</p>
+      </div>
+      <div class="mapcell">
+        <div class="map">
+          <iframe title="Mapa: Struja servis, Kralja Milutina 33, Beograd" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Kralja%20Milutina%2033%2C%20Beograd&z=15&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Struja servis, električar · Kralja Milutina 33, Vračar · <a href="tel:+381600000433">060 000 04 33</a></p>
+    <p>Primer sajta · izradio opsforma · <a href="../">Svi primeri</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.querySelector('.sw'),nav=document.getElementById('nav');
+  function set(o){b.setAttribute('aria-expanded',String(o));nav.classList.toggle('open',o);}
+  b.addEventListener('click',function(){set(b.getAttribute('aria-expanded')!=='true');});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&b.getAttribute('aria-expanded')==='true'){set(false);b.focus();}});
+  var f=document.getElementById('forma'),m=document.getElementById('form-msg');
+  f.addEventListener('submit',function(e){e.preventDefault();m.classList.add('show');m.focus();});
+})();
+</script>
+</body>
+</html>

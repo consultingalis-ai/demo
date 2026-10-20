@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Studio Lana – ženski frizerski salon, Njegoševa 41, Vračar</title>
+<meta name="description" content="Studio Lana, ženski frizerski salon na Vračaru. Šišanje, feniranje, farbanje, pramenovi, balayage, keratin i svečane frizure. Cene po dužini kose, rad uz zakazan termin.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap&subset=latin-ext" rel="stylesheet">
+<style>
+:root{
+  --puder:#F3E3DC; --puder-2:#f9efea; --sljiva:#4A2C3A; --sljiva-2:#6b4a59; --zlatna:#B8925A; --bela:#ffffff;
+  --linija:rgba(74,44,58,.22);
+  --serif:"Cormorant Garamond","Cormorant",Garamond,"EB Garamond",Georgia,"DejaVu Serif",serif;
+  --sans:"Jost","Futura","Century Gothic","Avenir Next","Segoe UI","DejaVu Sans",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bela);color:var(--sljiva);font-family:var(--sans);font-weight:400;font-size:1rem;line-height:1.65}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--sljiva);outline-offset:4px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;font-style:italic;margin:0;line-height:1.05}
+p{margin:0 0 1em}
+.wrap{width:min(1240px,100% - 32px);margin-inline:auto}
+
+.demo-bar{background:var(--sljiva);color:var(--puder);font-size:.8125rem;text-align:center;padding:6px 16px;letter-spacing:.02em}
+.demo-bar a{color:var(--bela);margin-left:.5em}
+
+/* header */
+.top{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.97);border-bottom:1px solid var(--linija)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.znak{font-family:var(--serif);font-style:italic;font-size:1.9rem;text-decoration:none;line-height:1}
+.menu-btn{font:inherit;font-size:.9375rem;letter-spacing:.06em;background:none;border:0;border-bottom:1px solid var(--sljiva);color:var(--sljiva);padding:4px 0;cursor:pointer;position:relative;z-index:40}
+.menu-btn .z{display:none}
+.menu-btn[aria-expanded="true"] .o{display:none}
+.menu-btn[aria-expanded="true"] .z{display:inline}
+.nav{position:fixed;inset:0;background:var(--puder);display:flex;align-items:center;padding:96px 24px 40px;visibility:hidden;opacity:0;transition:opacity .25s,visibility .25s;z-index:35}
+.nav.open{visibility:visible;opacity:1}
+.nav ol{list-style:none;margin:0;padding:0;counter-reset:n}
+.nav li{counter-increment:n;margin-bottom:10px}
+.nav a{font-family:var(--serif);font-style:italic;font-size:2.6rem;text-decoration:none;line-height:1.1}
+.nav a::before{content:"0" counter(n);font-size:1rem;color:var(--zlatna);margin-right:14px;vertical-align:middle;font-style:italic}
+@media (min-width:960px){
+  .menu-btn{display:none}
+  .nav{position:static;visibility:visible;opacity:1;background:none;padding:0;display:block}
+  .nav ol{display:flex;gap:36px}
+  .nav li{margin:0}
+  .nav a{font-family:var(--sans);font-style:normal;font-size:.9375rem;letter-spacing:.04em}
+  .nav a::before{font-size:.8125rem;margin-right:6px;font-family:var(--serif)}
+  .nav a:hover{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
+}
+
+/* hero */
+.hero{padding:44px 0 72px}
+.hero-grid{display:grid;gap:40px}
+.hero .mesto{font-size:.9375rem;letter-spacing:.03em;margin-bottom:28px;display:flex;gap:14px;align-items:center}
+.hero .mesto::before{content:"";width:48px;height:1px;background:var(--zlatna)}
+.hero h1{font-size:clamp(3rem,12vw,6.6rem);line-height:.98;letter-spacing:-.01em;max-width:13ch}
+.hero .uvod{max-width:42ch;margin:30px 0 34px;font-size:1.0625rem;font-weight:300}
+.akcije{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center}
+.dugme{display:inline-flex;align-items:center;min-height:52px;padding:0 30px;border-radius:999px;background:var(--sljiva);color:var(--bela);text-decoration:none;font-size:.9375rem;letter-spacing:.05em;border:1px solid var(--sljiva);cursor:pointer;font-family:var(--sans)}
+.dugme:hover{background:var(--bela);color:var(--sljiva)}
+.tekst-link{text-decoration:none;border-bottom:1px solid var(--zlatna);padding:6px 0;font-size:.9375rem;letter-spacing:.04em}
+.tekst-link:hover{border-bottom-color:var(--sljiva)}
+.foto{background:var(--puder);position:relative;display:flex;align-items:flex-end;justify-content:flex-end;padding:18px;font-size:.8125rem;color:var(--sljiva-2)}
+.foto::before{content:"";position:absolute;inset:14px;border:1px solid var(--zlatna)}
+.foto span{position:relative;background:var(--puder);padding:0 6px}
+.foto-uspravna{aspect-ratio:3/4;width:min(78%,420px);margin-left:auto}
+@media (min-width:960px){
+  .hero{padding:72px 0 120px}
+  .hero-grid{grid-template-columns:7fr 4fr;gap:72px;align-items:start}
+  .foto-uspravna{margin-top:96px;width:100%}
+}
+
+/* sekcije */
+.sekcija{padding:80px 0;border-top:1px solid var(--linija)}
+.glava{display:grid;gap:8px;margin-bottom:44px}
+.broj{font-family:var(--serif);font-style:italic;color:var(--zlatna);font-size:clamp(5rem,20vw,9.5rem);line-height:.8;letter-spacing:-.03em}
+.glava h2{font-size:clamp(2.4rem,8vw,3.8rem)}
+.glava p{max-width:52ch;font-weight:300;margin:10px 0 0}
+@media (min-width:960px){
+  .sekcija{padding:120px 0}
+  .s-grid{display:grid;grid-template-columns:3fr 9fr;gap:48px}
+  .glava{margin-bottom:56px;align-self:start;align-content:start;position:sticky;top:110px}
+}
+
+/* usluge */
+.usluge{display:grid;gap:0}
+.usluga{padding:26px 0;border-bottom:1px solid var(--linija)}
+.usluga:first-child{border-top:1px solid var(--linija)}
+.usluga h3{font-size:1.9rem;margin-bottom:4px}
+.usluga .opis{font-size:.9375rem;font-weight:300;margin-bottom:14px;max-width:44ch}
+.cene{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.cene div{font-size:.8125rem;color:var(--sljiva-2);letter-spacing:.02em}
+.cene b{display:block;font-family:var(--serif);font-weight:500;font-style:normal;font-size:1.35rem;color:var(--sljiva);letter-spacing:0;font-variant-numeric:lining-nums}
+.napomena-cene{font-size:.875rem;font-weight:300;margin-top:28px;max-width:60ch}
+@media (min-width:860px){
+  .usluge{grid-template-columns:1fr 1fr;column-gap:64px}
+  .usluga:nth-child(2){border-top:1px solid var(--linija)}
+}
+
+/* prvi dolazak */
+.dolazak{display:grid;gap:40px}
+.dolazak ul{list-style:none;margin:0;padding:0}
+.dolazak li{padding:20px 0;border-bottom:1px solid var(--linija);display:grid;grid-template-columns:auto 1fr;gap:18px}
+.dolazak li:first-child{border-top:1px solid var(--linija)}
+.dolazak li em{font-family:var(--serif);color:var(--zlatna);font-size:1.6rem;line-height:1}
+.dolazak li strong{font-weight:500;display:block;margin-bottom:2px}
+.dolazak li p{margin:0;font-weight:300}
+.foto-polozena{aspect-ratio:4/3}
+@media (min-width:960px){.dolazak{grid-template-columns:1.2fr 1fr;gap:64px;align-items:start}}
+
+/* termin */
+.termin-sekcija{background:var(--puder)}
+.termin-sekcija .sekcija-in{padding:80px 0}
+.termin-grid{display:grid;gap:56px}
+form{display:grid;gap:22px}
+label,.leg{display:block;font-size:.8125rem;letter-spacing:.05em;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-weight:400;color:var(--sljiva);background:transparent;border:0;border-bottom:1px solid var(--sljiva);border-radius:0;padding:10px 0;min-height:46px}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--sljiva) 50%),linear-gradient(135deg,var(--sljiva) 50%,transparent 50%);background-position:calc(100% - 12px) 55%,calc(100% - 7px) 55%;background-size:5px 5px;background-repeat:no-repeat}
+textarea{min-height:90px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-bottom:2px solid var(--sljiva);background:rgba(255,255,255,.5)}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--sljiva);outline-offset:2px}
+fieldset{border:0;padding:0;margin:0}
+.duzine{display:flex;flex-wrap:wrap;gap:10px}
+.duzine label{margin:0;cursor:pointer}
+.duzine input{position:absolute;opacity:0;width:1px;height:1px;min-height:0}
+.duzine span{display:inline-block;padding:8px 20px;border:1px solid var(--sljiva);border-radius:999px;font-size:.9375rem;letter-spacing:.02em}
+.duzine input:checked+span{background:var(--sljiva);color:var(--bela)}
+.duzine input:focus-visible+span{outline:2px solid var(--sljiva);outline-offset:3px}
+.dva{display:grid;gap:22px}
+@media (min-width:640px){.dva{grid-template-columns:1fr 1fr}}
+.poruka{border:1px solid var(--sljiva);padding:16px 18px;background:var(--bela);margin:0}
+.poruka[hidden]{display:none}
+table.vreme{width:100%;border-collapse:collapse}
+.vreme caption{text-align:left;font-family:var(--serif);font-style:italic;font-size:1.9rem;padding-bottom:14px}
+.vreme th,.vreme td{padding:12px 0;border-bottom:1px solid var(--linija);text-align:left;font-weight:300}
+.vreme td{text-align:right;font-variant-numeric:tabular-nums}
+.vreme tr.danas th,.vreme tr.danas td{font-weight:500}
+.vreme tr.danas th::after{content:" danas";font-family:var(--serif);font-style:italic;color:var(--zlatna);font-weight:400;margin-left:6px}
+.uz-tabelu{font-size:.875rem;font-weight:300;margin-top:18px}
+@media (min-width:960px){
+  .termin-sekcija .sekcija-in{padding:120px 0}
+  .termin-grid{grid-template-columns:1.4fr 1fr;gap:96px}
+}
+
+/* lokacija */
+.lok{display:grid;gap:36px}
+.lok .adresa{font-family:var(--serif);font-style:italic;font-size:2.2rem;line-height:1.1;margin-bottom:12px}
+.mapa{aspect-ratio:4/3;background:var(--puder-2);position:relative}
+.mapa::before{content:"Mapa: Njegoševa 41, Beograd";position:absolute;left:16px;bottom:14px;font-size:.8125rem;color:var(--sljiva-2)}
+.mapa iframe{position:relative;width:100%;height:100%;border:0;display:block;filter:grayscale(.6) sepia(.15)}
+@media (min-width:960px){.lok{grid-template-columns:1fr 1.6fr;gap:64px;align-items:start}.mapa{aspect-ratio:16/10}}
+
+footer{background:var(--sljiva);color:var(--puder);padding:56px 0 28px}
+footer .wrap{display:grid;gap:24px}
+footer .znak{font-size:2.6rem;color:var(--bela)}
+footer p{margin:0;font-weight:300}
+footer a{color:var(--bela)}
+.demo-foot{border-top:1px solid rgba(243,227,220,.3);padding-top:18px;font-size:.8125rem}
+@media (min-width:960px){footer .wrap{grid-template-columns:2fr 1fr 1fr}.demo-foot{grid-column:1/-1}}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="demo-bar">Primer sajta · izradio opsforma <a href="../">Svi primeri</a></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="znak" href="#pocetak">Studio Lana</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><span class="o">Meni</span><span class="z">Zatvori</span></button>
+    <nav class="nav" id="nav" aria-label="Glavna navigacija">
+      <ol>
+        <li><a href="#usluge">Usluge i cene</a></li>
+        <li><a href="#prvi-dolazak">Prvi dolazak</a></li>
+        <li><a href="#termin">Termin</a></li>
+        <li><a href="#salon">Gde smo</a></li>
+      </ol>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="pocetak">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="mesto">Ženski frizerski salon, Vračar</p>
+      <h1>Šišanje, boja i feniranje u Njegoševoj 41</h1>
+      <p class="uvod">Mali salon sa dve stolice. Radimo samo uz zakazan termin, pa se ne čeka. Pre svake boje kažemo tačnu cenu.</p>
+      <div class="akcije">
+        <a class="dugme" href="#termin">Zakažite termin</a>
+        <a class="tekst-link" href="tel:+381600000234">Pozovite 060 000 02 34</a>
+      </div>
+    </div>
+    <div class="foto foto-uspravna" role="img" aria-label="Mesto za fotografiju salona"><span>Vaša fotografija</span></div>
+  </div>
+</section>
+
+<section class="sekcija" id="usluge">
+  <div class="wrap s-grid">
+    <div class="glava">
+      <span class="broj" aria-hidden="true">01</span>
+      <h2>Usluge i cene</h2>
+      <p>Cene su početne i zavise od dužine kose. Kratka je do brade, srednja do ramena, duga ispod ramena.</p>
+    </div>
+    <div>
+      <div class="usluge">
+        <article class="usluga">
+          <h3>Žensko šišanje</h3>
+          <p class="opis">Pranje, šišanje i feniranje. 45 do 60 minuta.</p>
+          <div class="cene"><div>Kratka<b>od 2.000</b></div><div>Srednja<b>od 2.400</b></div><div>Duga<b>od 2.800</b></div></div>
+        </article>
+        <article class="usluga">
+          <h3>Feniranje</h3>
+          <p class="opis">Pranje, nega i feniranje na četku ili lokne. 30 do 45 minuta.</p>
+          <div class="cene"><div>Kratka<b>od 1.200</b></div><div>Srednja<b>od 1.500</b></div><div>Duga<b>od 1.900</b></div></div>
+        </article>
+        <article class="usluga">
+          <h3>Farbanje izrasta</h3>
+          <p class="opis">Boja do 3 cm izrasta, feniranje uključeno. Oko 2 sata.</p>
+          <div class="cene"><div>Kratka<b>od 3.800</b></div><div>Srednja<b>od 4.200</b></div><div>Duga<b>od 4.600</b></div></div>
+        </article>
+        <article class="usluga">
+          <h3>Pramenovi</h3>
+          <p class="opis">Folije, preliv i feniranje. 2,5 do 3,5 sata.</p>
+          <div class="cene"><div>Kratka<b>od 6.500</b></div><div>Srednja<b>od 8.000</b></div><div>Duga<b>od 9.500</b></div></div>
+        </article>
+        <article class="usluga">
+          <h3>Balayage</h3>
+          <p class="opis">Ručno posvetljivanje, preliv, nega i feniranje. 3 do 4 sata.</p>
+          <div class="cene"><div>Kratka<b>od 9.000</b></div><div>Srednja<b>od 11.000</b></div><div>Duga<b>od 13.500</b></div></div>
+        </article>
+        <article class="usluga">
+          <h3>Keratinski tretman</h3>
+          <p class="opis">Ispravljanje i nega, traje 3 do 4 meseca. 2 do 3 sata.</p>
+          <div class="cene"><div>Kratka<b>od 7.000</b></div><div>Srednja<b>od 9.500</b></div><div>Duga<b>od 12.000</b></div></div>
+        </article>
+        <article class="usluga">
+          <h3>Svečane frizure</h3>
+          <p class="opis">Punđe, poluvezane frizure, lokne. Za venčanja probna frizura po dogovoru. 60 do 90 minuta.</p>
+          <div class="cene"><div>Kratka<b>od 3.000</b></div><div>Srednja<b>od 3.800</b></div><div>Duga<b>od 4.500</b></div></div>
+        </article>
+      </div>
+      <p class="napomena-cene">Sve cene su u dinarima. Gusta kosa ili dodatna boja mogu da povećaju cenu, to uvek kažemo pre početka. Plaćanje gotovinom ili karticom.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sekcija" id="prvi-dolazak">
+  <div class="wrap s-grid">
+    <div class="glava">
+      <span class="broj" aria-hidden="true">02</span>
+      <h2>Prvi dolazak</h2>
+      <p>Šta da znate pre prvog termina kod nas.</p>
+    </div>
+    <div class="dolazak">
+      <ul>
+        <li><em>a</em><div><strong>Kratak razgovor pre početka</strong><p>Desetak minuta pričamo o tome šta želite. Donesite sliku ako je imate.</p></div></li>
+        <li><em>b</em><div><strong>Test pramen za posvetljivanje</strong><p>Za pramenove i balayage na kosi koja je ranije farbana radimo test dan ranije. Besplatno je.</p></div></li>
+        <li><em>c</em><div><strong>Kašnjenje i otkazivanje</strong><p>Ako kasnite više od 15 minuta, termin pomeramo. Otkažite bar dan ranije, porukom ili pozivom.</p></div></li>
+        <li><em>d</em><div><strong>Kosa pre farbanja</strong><p>Ne perite kosu na dan farbanja. Za šišanje može kako vam odgovara.</p></div></li>
+      </ul>
+      <div class="foto foto-polozena" role="img" aria-label="Mesto za fotografiju enterijera"><span>Vaša fotografija</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="termin-sekcija" id="termin">
+  <div class="wrap sekcija-in s-grid">
+    <div class="glava">
+      <span class="broj" aria-hidden="true">03</span>
+      <h2>Zakažite termin</h2>
+      <p>Pošaljite upit, javimo se istog dana sa slobodnim terminima.</p>
+    </div>
+    <div class="termin-grid">
+      <!-- Web3Forms: action="https://api.web3forms.com/submit" + access_key -->
+      <form id="forma" novalidate>
+        <div class="dva">
+          <div><label for="ime">Ime i prezime</label><input id="ime" name="ime" autocomplete="name" required></div>
+          <div><label for="tel">Telefon</label><input id="tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required></div>
+        </div>
+        <div><label for="usluga">Usluga</label>
+          <select id="usluga" name="usluga">
+            <option>Žensko šišanje</option><option>Feniranje</option><option>Farbanje izrasta</option><option>Pramenovi</option><option>Balayage</option><option>Keratinski tretman</option><option>Svečana frizura</option><option>Nisam sigurna, želim savet</option>
+          </select></div>
+        <fieldset>
+          <legend class="leg">Dužina kose</legend>
+          <div class="duzine">
+            <label><input type="radio" name="duzina" value="kratka"><span>Kratka</span></label>
+            <label><input type="radio" name="duzina" value="srednja" checked><span>Srednja</span></label>
+            <label><input type="radio" name="duzina" value="duga"><span>Duga</span></label>
+          </div>
+        </fieldset>
+        <div class="dva">
+          <div><label for="datum">Željeni dan</label><input id="datum" name="datum" type="date"></div>
+          <div><label for="doba">Deo dana</label>
+            <select id="doba" name="doba"><option>Pre podne</option><option>Posle podne</option><option>Svejedno</option></select></div>
+        </div>
+        <div><label for="napomena">Napomena</label><textarea id="napomena" name="napomena" placeholder="Npr. poslednje farbanje pre dva meseca, kućna boja"></textarea></div>
+        <div><button class="dugme" type="submit">Pošaljite upit</button></div>
+        <p class="poruka" id="poruka" role="status" hidden></p>
+      </form>
+      <div>
+        <table class="vreme" id="tabela-vreme">
+          <caption>Radno vreme</caption>
+          <tbody>
+            <tr data-d="1"><th scope="row">Ponedeljak</th><td>12–20</td></tr>
+            <tr data-d="2"><th scope="row">Utorak</th><td>10–20</td></tr>
+            <tr data-d="3"><th scope="row">Sreda</th><td>10–20</td></tr>
+            <tr data-d="4"><th scope="row">Četvrtak</th><td>10–20</td></tr>
+            <tr data-d="5"><th scope="row">Petak</th><td>10–20</td></tr>
+            <tr data-d="6"><th scope="row">Subota</th><td>9–15</td></tr>
+            <tr data-d="0"><th scope="row">Nedelja</th><td>ne radimo</td></tr>
+          </tbody>
+        </table>
+        <p class="uz-tabelu">Svečane frizure nedeljom po dogovoru, najkasnije pet dana unapred.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sekcija" id="salon">
+  <div class="wrap s-grid">
+    <div class="glava">
+      <span class="broj" aria-hidden="true">04</span>
+      <h2>Gde smo</h2>
+    </div>
+    <div class="lok">
+      <div>
+        <p class="adresa">Njegoševa 41<br>Vračar, Beograd</p>
+        <p>Prizemlje, ulaz iz dvorišta. Na zvonu piše Studio Lana.</p>
+        <p>Parking je u zoni, plaća se SMS porukom.</p>
+        <p><a class="tekst-link" href="tel:+381600000234">060 000 02 34</a></p>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Studio Lana, Njegoševa 41, Beograd" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Njego%C5%A1eva%2041%2C%20Beograd&z=15&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><span class="znak">Studio Lana</span><p>Ženski frizerski salon na Vračaru</p></div>
+    <p>Njegoševa 41<br>11000 Beograd</p>
+    <p><a href="tel:+381600000234">060 000 02 34</a><br><a href="viber://chat?number=%2B381600000234">Viber</a></p>
+    <p class="demo-foot">Primer sajta · izradio opsforma. Salon je izmišljen. <a href="../">Svi primeri</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
+  function setMenu(o){btn.setAttribute('aria-expanded',String(o));nav.classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';}
+  btn.addEventListener('click',function(){setMenu(btn.getAttribute('aria-expanded')!=='true');});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false);});
+  var mq=window.matchMedia('(min-width:960px)');mq.addEventListener('change',function(){setMenu(false);});
+
+  var r=document.querySelector('#tabela-vreme tr[data-d="'+new Date().getDay()+'"]');if(r)r.classList.add('danas');
+
+  var f=document.getElementById('forma'),p=document.getElementById('poruka');
+  f.addEventListener('submit',function(e){e.preventDefault();p.textContent='Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.';p.hidden=false;});
+})();
+</script>
+</body>
+</html>

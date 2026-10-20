@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Vulkanizer Guma Plus – zamena guma i hotel za gume, Bulevar kralja Aleksandra 342</title>
+<meta name="description" content="Vulkanizer Guma Plus na Zvezdari: zamena zimskih i letnjih guma, montaža i balansiranje po veličini felne, hotel za gume po sezoni. Bulevar kralja Aleksandra 342.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@400;500;700&display=swap&subset=latin-ext" rel="stylesheet">
+<style>
+:root{
+  --crna:#0D0D0D;
+  --lim:#C6F432;
+  --siva:#2A2A2A;
+  --siva-sv:#B9BDB0;
+  --bela:#F4F6EE;
+  --ivica:4px;
+  --head:"Rubik Mono One","Arial Black","DejaVu Sans",Verdana,sans-serif;
+  --body:"Rubik","Liberation Sans",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--crna);color:var(--bela);font-family:var(--body);font-size:17px;line-height:1.5}
+svg{display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);font-weight:900;margin:0;line-height:1.05;letter-spacing:-.01em}
+p{margin:0}
+:focus-visible{outline:4px solid var(--lim);outline-offset:3px}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.demo{background:var(--siva);font-size:13px;color:#D0D3C8;padding:6px 0}
+.demo .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.demo a{color:var(--lim)}
+
+/* sezonski baner */
+.sezona{background:var(--lim);color:var(--crna);border-bottom:var(--ivica) solid var(--crna)}
+.sezona .wrap{display:grid;gap:12px;padding:18px 0 20px}
+.sezona h2{font-size:clamp(20px,4.6vw,34px)}
+.sezona p{font-weight:500;max-width:60ch}
+.sezona a{font-weight:700;text-underline-offset:3px;text-decoration-thickness:2px}
+.sezona a:focus-visible{outline-color:var(--crna)}
+@media (min-width:900px){.sezona .wrap{grid-template-columns:auto 1fr auto;align-items:center;gap:32px}}
+
+/* zaglavlje */
+.top{position:sticky;top:0;z-index:30;background:var(--crna);border-bottom:var(--ivica) solid var(--lim)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:62px}
+.logo{font-family:var(--head);font-weight:900;font-size:18px;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo b{display:inline-grid;place-items:center;width:38px;height:38px;background:var(--lim);color:var(--crna);border:3px solid var(--lim);font-size:24px;line-height:1}
+.meni-dugme{font:700 15px var(--body);background:var(--crna);color:var(--lim);border:3px solid var(--lim);padding:8px 14px;cursor:pointer}
+.meni-dugme[aria-expanded="true"]{background:var(--lim);color:var(--crna)}
+.nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--crna);border-bottom:var(--ivica) solid var(--lim)}
+.nav.otvoren{display:block}
+.nav ul{list-style:none;margin:0;padding:0}
+.nav li+li{border-top:3px solid var(--siva)}
+.nav a{display:block;padding:15px 16px;font-weight:700;font-size:18px;text-decoration:none}
+.nav a:hover{background:var(--lim);color:var(--crna)}
+@media (min-width:960px){
+  .meni-dugme{display:none}
+  .nav{display:block;position:static;border:0;background:none}
+  .nav ul{display:flex;border-left:3px solid var(--siva)}
+  .nav li+li{border-top:0}
+  .nav li{border-right:3px solid var(--siva)}
+  .nav a{font-size:15px;padding:10px 16px}
+}
+
+/* dugmad: blok sa tvrdom senkom */
+.dug{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 22px;font:700 17px var(--body);text-decoration:none;border:3px solid var(--crna);box-shadow:6px 6px 0 var(--crna);transition:transform .1s,box-shadow .1s;cursor:pointer}
+.dug:active{transform:translate(4px,4px);box-shadow:2px 2px 0 var(--crna)}
+.dug-lim{background:var(--lim);color:var(--crna);border-color:var(--lim);box-shadow:6px 6px 0 #5d7314}
+.dug-crn{background:var(--crna);color:var(--lim);border-color:var(--lim);box-shadow:6px 6px 0 var(--lim)}
+.dug svg{width:22px;height:22px}
+
+/* gazni sloj */
+.gaz{height:56px;width:100%;border-block:var(--ivica) solid var(--crna)}
+.gaz.tanak{height:36px}
+
+/* hero */
+.hero{padding:28px 0 40px}
+.blokovi{display:grid;border:var(--ivica) solid var(--lim)}
+.blok{padding:22px 18px;border-bottom:var(--ivica) solid var(--lim)}
+.blok:last-child{border-bottom:0}
+.blok-ime h1{font-size:clamp(38px,11vw,112px);line-height:.95;color:var(--lim);word-break:break-word}
+.blok-ime p{margin-top:16px;font-size:clamp(18px,2.4vw,22px);font-weight:500}
+.blok-ime .cta{margin-top:24px;display:flex;flex-wrap:wrap;gap:16px}
+.blok-mali h2{font-family:var(--body);font-weight:700;font-size:15px;color:var(--siva-sv)}
+.blok-mali .vel{font-family:var(--head);font-size:clamp(26px,3.4vw,36px);line-height:1.05;margin-top:6px}
+.blok-mali .vel small{display:block;font-family:var(--body);font-size:16px;font-weight:500;color:var(--siva-sv);margin-top:8px;line-height:1.4}
+.blok-tel{background:var(--lim);color:var(--crna)}
+.blok-tel h2{color:#2d3a07}
+.blok-tel a{text-decoration:none}
+.blok-tel .vel small{color:#2d3a07}
+@media (min-width:900px){
+  .blokovi{grid-template-columns:1.7fr 1fr;grid-template-rows:auto auto auto}
+  .blok-ime{grid-row:1/4;border-bottom:0;border-right:var(--ivica) solid var(--lim);padding:40px 36px}
+  .blok-mali{padding:24px 26px}
+}
+
+/* sekcije */
+.sek{padding:56px 0}
+.sek-zag{display:grid;gap:12px;margin-bottom:28px}
+.sek-zag h2{font-size:clamp(26px,5.4vw,52px)}
+.sek-zag p{color:var(--siva-sv);max-width:62ch}
+@media (min-width:900px){.sek-zag{grid-template-columns:1fr 1fr;align-items:end}}
+
+/* tabela cena */
+.cene-tab{width:100%;border-collapse:collapse;border:var(--ivica) solid var(--lim);font-size:17px}
+.cene-tab th,.cene-tab td{border:3px solid var(--siva);padding:14px 14px;text-align:right}
+.cene-tab thead th{background:var(--lim);color:var(--crna);font-size:14px;font-weight:700;text-align:right;border-color:var(--crna);vertical-align:bottom;line-height:1.25}
+.cene-tab thead th:first-child,.cene-tab tbody th{text-align:left}
+.cene-tab tbody th{font-family:var(--head);font-weight:900;font-size:22px;white-space:nowrap}
+.cene-tab td{font-weight:500;font-variant-numeric:tabular-nums}
+.cene-tab td.uk{background:var(--siva);font-weight:700;color:var(--lim);font-size:19px}
+@media (max-width:699px){
+  .cene-tab,.cene-tab tbody,.cene-tab tr,.cene-tab th,.cene-tab td{display:block}
+  .cene-tab{border:0}
+  .cene-tab thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .cene-tab tr{border:var(--ivica) solid var(--lim);margin-bottom:16px}
+  .cene-tab tbody th{background:var(--lim);color:var(--crna);border:0;padding:12px 14px}
+  .cene-tab td{display:flex;justify-content:space-between;gap:12px;border:0;border-top:3px solid var(--siva);padding:12px 14px}
+  .cene-tab td::before{content:attr(data-l);text-align:left;font-weight:400;color:var(--siva-sv)}
+  .cene-tab td.uk::before{color:var(--lim);font-weight:700}
+}
+.dodatno{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:8px;color:var(--siva-sv)}
+.dodatno li{padding-left:22px;position:relative}
+.dodatno li::before{content:"";position:absolute;left:0;top:.5em;width:10px;height:10px;background:var(--lim)}
+
+/* hotel */
+.hotel{background:var(--siva)}
+.hotel .sek-zag p{color:#CFD2C6}
+.hotel-grid{display:grid;gap:20px}
+.paket{background:var(--crna);border:var(--ivica) solid var(--lim);box-shadow:10px 10px 0 var(--lim);padding:24px 20px;margin-right:10px}
+.paket h3{font-size:20px}
+.paket .rok{color:var(--siva-sv);margin-top:6px}
+.paket dl{margin:18px 0 0;display:grid;gap:0}
+.paket dl div{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-top:3px solid var(--siva)}
+.paket dt{font-weight:500}
+.paket dd{margin:0;font-family:var(--head);font-size:20px;color:var(--lim);white-space:nowrap}
+.ukljuceno{border:var(--ivica) solid var(--crna);background:var(--lim);color:var(--crna);padding:24px 20px}
+.ukljuceno h3{font-size:18px;margin-bottom:12px}
+.ukljuceno ol{margin:0;padding-left:22px;display:grid;gap:8px;font-weight:500}
+@media (min-width:900px){.hotel-grid{grid-template-columns:1fr 1fr 1.2fr;align-items:start}.paket{margin-right:0}}
+
+/* ostale usluge */
+.ostalo-grid{display:grid;grid-template-columns:1fr;border:var(--ivica) solid var(--lim)}
+.st{padding:18px;border-bottom:3px solid var(--siva);display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:baseline}
+.st:last-child{border-bottom:0}
+.st h3{font-family:var(--body);font-weight:700;font-size:18px}
+.st b{font-family:var(--head);font-weight:900;color:var(--lim);font-size:17px;white-space:nowrap}
+.st p{grid-column:1/-1;color:var(--siva-sv);font-size:15px}
+@media (min-width:700px){
+  .ostalo-grid{grid-template-columns:1fr 1fr}
+  .st{border-right:3px solid var(--siva)}
+  .st:nth-child(2n){border-right:0}
+  .st:nth-last-child(-n+2){border-bottom:0}
+}
+
+/* vreme i mesto */
+.vm{display:grid;gap:28px}
+.vm h2{font-size:clamp(24px,4.6vw,40px);margin-bottom:18px}
+.tab-v{width:100%;border-collapse:collapse;border:var(--ivica) solid var(--lim)}
+.tab-v th,.tab-v td{padding:11px 12px;border-bottom:3px solid var(--siva);text-align:left}
+.tab-v thead th{background:var(--lim);color:var(--crna);font-size:14px;line-height:1.25;border-color:var(--crna)}
+.tab-v td{font-variant-numeric:tabular-nums;font-weight:500}
+.tab-v tbody th{font-weight:700}
+.tab-v .z{color:var(--siva-sv)}
+.tab-v tr.danas{background:var(--siva)}
+.tab-v tr.danas th::before{content:"";display:inline-block;width:10px;height:10px;background:var(--lim);margin-right:8px}
+.vm .napom{margin-top:12px;color:var(--siva-sv);font-size:15px}
+.adresa{font-family:var(--head);font-size:clamp(19px,2.6vw,24px);line-height:1.2}
+.adresa+p{margin-top:8px;color:var(--siva-sv)}
+.mapa{margin-top:16px;border:var(--ivica) solid var(--lim);box-shadow:10px 10px 0 var(--siva);aspect-ratio:4/3;background:var(--siva);margin-right:10px}
+.mapa iframe{width:100%;height:100%;border:0;display:block}
+@media (min-width:900px){.vm{grid-template-columns:1fr 1fr;gap:48px}.mapa{aspect-ratio:16/11}}
+
+/* upit */
+.upit{background:var(--lim);color:var(--crna);border-top:var(--ivica) solid var(--crna)}
+.upit .sek-zag p{color:#2d3a07}
+.forma{display:grid;gap:16px;background:var(--crna);color:var(--bela);border:var(--ivica) solid var(--crna);box-shadow:10px 10px 0 var(--crna);padding:22px 18px;margin-right:10px}
+.red{display:grid;gap:16px}
+.pol{display:grid;gap:6px}
+.pol label{font-weight:700;font-size:15px}
+.pol label span{font-weight:400;color:var(--siva-sv)}
+.forma input,.forma select,.forma textarea{font:inherit;font-size:16px;width:100%;background:var(--siva);color:var(--bela);border:3px solid #4b4b4b;border-radius:0;padding:12px}
+.forma textarea{min-height:100px;resize:vertical}
+.forma input:focus,.forma select:focus,.forma textarea:focus{outline:none;border-color:var(--lim)}
+.forma input::placeholder,.forma textarea::placeholder{color:#9EA294}
+.forma .dug{justify-self:start}
+.poruka{display:none;border:3px solid var(--lim);padding:14px;font-weight:700;color:var(--lim)}
+.poruka.vidi{display:block}
+@media (min-width:640px){.red{grid-template-columns:1fr 1fr}}
+@media (min-width:900px){.upit-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}.forma{padding:30px;margin-right:0}.upit .sek-zag{grid-template-columns:1fr}}
+
+footer{padding:30px 0 36px;font-size:15px;color:var(--siva-sv)}
+footer .wrap{display:grid;gap:14px}
+footer strong{font-family:var(--head);color:var(--lim);font-weight:900}
+footer a{color:var(--lim)}
+footer .demo-n{border-top:3px solid var(--siva);padding-top:14px;font-size:13px}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="gazni" width="48" height="56" patternUnits="userSpaceOnUse">
+      <rect width="48" height="56" fill="#C6F432"/>
+      <rect y="25" width="48" height="6" fill="#0D0D0D"/>
+      <path d="M2 0h9l11 25H13zM13 31h9L11 56H2z" fill="#0D0D0D"/>
+      <path d="M30 4l5 10M30 42l5 10M40 6l-4 8M40 42l-4 8" stroke="#0D0D0D" stroke-width="3"/>
+    </pattern>
+    <pattern id="gazni-siv" width="48" height="36" patternUnits="userSpaceOnUse">
+      <rect width="48" height="36" fill="#2A2A2A"/>
+      <path d="M4 0h8l12 18L12 36H4l12-18z" fill="#0D0D0D"/>
+      <path d="M32 6l6 8M32 22l6 8" stroke="#0D0D0D" stroke-width="3"/>
+    </pattern>
+  </defs>
+</svg>
+
+<div class="demo" role="note"><div class="wrap"><span>Primer sajta · izradio opsforma</span><a href="../">Svi primeri</a></div></div>
+
+<aside class="sezona" id="sezona" aria-label="Sezonsko obaveštenje">
+  <div class="wrap">
+    <h2>Zamena zimskih guma</h2>
+    <p>Od 15. oktobra do 15. decembra radimo i nedeljom 09–14. Dođite bez zakazivanja ili zakažite termin preko Vibera.</p>
+    <a href="#cene">Cene po veličini felne</a>
+  </div>
+</aside>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#pocetak" aria-label="Vulkanizer Guma Plus, na vrh strane"><b aria-hidden="true">+</b>GUMA PLUS</a>
+    <button class="meni-dugme" type="button" aria-expanded="false" aria-controls="meni">Meni</button>
+    <nav class="nav" id="meni" aria-label="Glavni meni">
+      <ul>
+        <li><a href="#cene">Cene</a></li>
+        <li><a href="#hotel">Hotel za gume</a></li>
+        <li><a href="#ostalo">Ostale usluge</a></li>
+        <li><a href="#radno-vreme">Radno vreme</a></li>
+        <li><a href="#lokacija">Lokacija</a></li>
+        <li><a href="#upit">Upit</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="pocetak">
+    <div class="wrap">
+      <div class="blokovi">
+        <div class="blok blok-ime">
+          <h1>Guma Plus</h1>
+          <p>Vulkanizer na Bulevaru kralja Aleksandra 342. Zamena, montaža, balansiranje i čuvanje guma.</p>
+          <div class="cta">
+            <a class="dug dug-lim" href="tel:+381600000342">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>
+              Pozovite</a>
+            <a class="dug dug-crn" href="viber://chat?number=%2B381600000342">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M4 5h16v11H10l-5 4v-4H4z" stroke-linejoin="round"/></svg>
+              Zakažite na Viber</a>
+          </div>
+        </div>
+        <div class="blok blok-mali blok-tel">
+          <h2>Telefon i Viber</h2>
+          <p class="vel"><a href="tel:+381600000342">060 000 03 42</a><small>U sezoni se javljamo i kad je gužva, samo pustite da zvoni.</small></p>
+        </div>
+        <div class="blok blok-mali">
+          <h2>Zamena 4 točka sa balansiranjem</h2>
+          <p class="vel">oko 30 min<small>Za felne 15–16": 2.900 RSD.</small></p>
+        </div>
+        <div class="blok blok-mali">
+          <h2>Plaćanje</h2>
+          <p class="vel">Kartica ili keš<small>Parking ispred radionice za tri auta.</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <svg class="gaz" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#gazni)"/></svg>
+
+  <section class="sek" id="cene" aria-labelledby="cene-n">
+    <div class="wrap">
+      <div class="sek-zag">
+        <h2 id="cene-n">Cene po felni</h2>
+        <p>Cene su za komplet od četiri točka na putničkom vozilu. Ventili se plaćaju posebno, samo ako treba da se menjaju.</p>
+      </div>
+      <table class="cene-tab">
+        <caption class="sr-only">Cene skidanja, montaže i balansiranja po veličini felne, za četiri točka, u dinarima</caption>
+        <thead>
+          <tr><th scope="col">Felna</th><th scope="col">Skidanje i vraćanje točkova</th><th scope="col">Montaža i demontaža gume</th><th scope="col">Balansiranje</th><th scope="col">Sve zajedno</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">13–14"</th><td data-l="Skidanje i vraćanje">600 RSD</td><td data-l="Montaža i demontaža">1.000 RSD</td><td data-l="Balansiranje">1.000 RSD</td><td class="uk" data-l="Sve zajedno">2.400 RSD</td></tr>
+          <tr><th scope="row">15–16"</th><td data-l="Skidanje i vraćanje">800 RSD</td><td data-l="Montaža i demontaža">1.200 RSD</td><td data-l="Balansiranje">1.200 RSD</td><td class="uk" data-l="Sve zajedno">2.900 RSD</td></tr>
+          <tr><th scope="row">17–18"</th><td data-l="Skidanje i vraćanje">1.000 RSD</td><td data-l="Montaža i demontaža">1.600 RSD</td><td data-l="Balansiranje">1.600 RSD</td><td class="uk" data-l="Sve zajedno">3.800 RSD</td></tr>
+          <tr><th scope="row">19" i više</th><td data-l="Skidanje i vraćanje">1.200 RSD</td><td data-l="Montaža i demontaža">2.400 RSD</td><td data-l="Balansiranje">2.000 RSD</td><td class="uk" data-l="Sve zajedno">5.000 RSD</td></tr>
+        </tbody>
+      </table>
+      <ul class="dodatno">
+        <li>Džip, SUV i kombi: +20% na cene iz tabele.</li>
+        <li>Run-flat i niski profil (40 i manje): +400 RSD po točku.</li>
+        <li>Ako imate drugi set na felnama, plaćate samo skidanje, vraćanje i balansiranje.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sek hotel" id="hotel" aria-labelledby="hotel-n">
+    <div class="wrap">
+      <div class="sek-zag">
+        <h2 id="hotel-n">Hotel za gume</h2>
+        <p>Ostavite set kod nas do sledeće sezone. Gume stoje u suvom magacinu na stalcima, ne na podu i ne jedna na drugoj.</p>
+      </div>
+      <div class="hotel-grid">
+        <div class="paket">
+          <h3>Jedna sezona</h3>
+          <p class="rok">Do 6 meseci, zima ili leto</p>
+          <dl>
+            <div><dt>Felne do 16"</dt><dd>3.000 RSD</dd></div>
+            <div><dt>Felne 17" i više</dt><dd>3.600 RSD</dd></div>
+            <div><dt>Džip i kombi</dt><dd>4.200 RSD</dd></div>
+          </dl>
+        </div>
+        <div class="paket">
+          <h3>Cela godina</h3>
+          <p class="rok">Obe sezone, plaćate jednom</p>
+          <dl>
+            <div><dt>Felne do 16"</dt><dd>5.400 RSD</dd></div>
+            <div><dt>Felne 17" i više</dt><dd>6.600 RSD</dd></div>
+            <div><dt>Džip i kombi</dt><dd>7.600 RSD</dd></div>
+          </dl>
+        </div>
+        <div class="ukljuceno">
+          <h3>Kako ide</h3>
+          <ol>
+            <li>Skinemo gume pri zameni i operemo ih.</li>
+            <li>Izmerimo dubinu šare i upišemo je na etiketu.</li>
+            <li>Na etiketi su registracija i pozicija točka.</li>
+            <li>Pred sezonu vam pošaljemo poruku za termin.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <svg class="gaz tanak" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#gazni-siv)"/></svg>
+
+  <section class="sek" id="ostalo" aria-labelledby="ostalo-n">
+    <div class="wrap">
+      <div class="sek-zag">
+        <h2 id="ostalo-n">Ostale usluge</h2>
+        <p>Probušena guma usred nedelje? Krpljenje radimo odmah, bez zakazivanja.</p>
+      </div>
+      <div class="ostalo-grid">
+        <div class="st"><h3>Krpljenje gume</h3><b>od 800 RSD</b><p>Čep ili flaster sa unutrašnje strane, zavisno od rupe. Oko 20 minuta.</p></div>
+        <div class="st"><h3>Zamena ventila</h3><b>300 RSD</b><p>Po komadu, gumeni ventil. Metalni ventil 600 RSD.</p></div>
+        <div class="st"><h3>TPMS senzor</h3><b>1.500 RSD</b><p>Programiranje i učenje senzora pritiska, bez cene senzora.</p></div>
+        <div class="st"><h3>Ravnanje limene felne</h3><b>od 1.500 RSD</b><p>Po felni. Alu felne ne ravnamo, uputimo vas gde treba.</p></div>
+        <div class="st"><h3>Provera pritiska</h3><b>besplatno</b><p>Svratite i dopunimo vazduh, i kad nije vreme za zamenu.</p></div>
+        <div class="st"><h3>Odlaganje starih guma</h3><b>200 RSD</b><p>Po gumi. Predajemo ih ovlašćenom reciklažeru.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sek" aria-label="Radno vreme i lokacija" style="padding-top:8px">
+    <div class="wrap vm">
+      <div id="radno-vreme">
+        <h2>Radno vreme</h2>
+        <table class="tab-v">
+          <caption class="sr-only">Radno vreme po danima, u sezoni i van sezone</caption>
+          <thead><tr><th scope="col">Dan</th><th scope="col">U sezoni</th><th scope="col">Van sezone</th></tr></thead>
+          <tbody>
+            <tr data-dan="1"><th scope="row">Ponedeljak</th><td>08–20</td><td>08–17</td></tr>
+            <tr data-dan="2"><th scope="row">Utorak</th><td>08–20</td><td>08–17</td></tr>
+            <tr data-dan="3"><th scope="row">Sreda</th><td>08–20</td><td>08–17</td></tr>
+            <tr data-dan="4"><th scope="row">Četvrtak</th><td>08–20</td><td>08–17</td></tr>
+            <tr data-dan="5"><th scope="row">Petak</th><td>08–20</td><td>08–17</td></tr>
+            <tr data-dan="6"><th scope="row">Subota</th><td>08–17</td><td>08–14</td></tr>
+            <tr data-dan="0"><th scope="row">Nedelja</th><td>09–14</td><td class="z">zatvoreno</td></tr>
+          </tbody>
+        </table>
+        <p class="napom">Sezona: 15. oktobar – 15. decembar i 15. mart – 15. maj.</p>
+      </div>
+      <div id="lokacija">
+        <h2>Lokacija</h2>
+        <p class="adresa">Bulevar kralja Aleksandra 342, Zvezdara</p>
+        <p>Ulaz sa Bulevara, odmah do stanice. Parking ispred radionice.</p>
+        <div class="mapa">
+          <iframe src="https://maps.google.com/maps?q=Bulevar%20kralja%20Aleksandra%20342%2C%20Beograd&amp;z=15&amp;output=embed" title="Mapa: Vulkanizer Guma Plus, Bulevar kralja Aleksandra 342, Beograd" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sek upit" id="upit" aria-labelledby="upit-n">
+    <div class="wrap upit-grid">
+      <div class="sek-zag">
+        <h2 id="upit-n">Pošaljite upit</h2>
+        <p>Napišite dimenziju gume sa boka (npr. 205/55 R16) i šta vam treba. Javljamo se sa terminom i cenom, obično u roku od sat vremena.</p>
+      </div>
+      <!-- Web3Forms: action="https://api.web3forms.com/submit" + access_key -->
+      <form class="forma" id="forma" novalidate>
+        <div class="red">
+          <div class="pol"><label for="ime">Ime</label><input id="ime" name="ime" autocomplete="given-name" required></div>
+          <div class="pol"><label for="tel">Telefon</label><input id="tel" name="telefon" type="tel" autocomplete="tel" placeholder="06x xxx xx xx" required></div>
+        </div>
+        <div class="red">
+          <div class="pol"><label for="dim">Dimenzija gume</label><input id="dim" name="dimenzija" placeholder="205/55 R16"></div>
+          <div class="pol"><label for="vozilo">Vozilo</label>
+            <select id="vozilo" name="vozilo"><option>Putnički automobil</option><option>Džip / SUV</option><option>Kombi</option></select>
+          </div>
+        </div>
+        <div class="red">
+          <div class="pol"><label for="usluga">Šta vam treba</label>
+            <select id="usluga" name="usluga">
+              <option>Zamena sezonskih guma</option>
+              <option>Zamena + hotel za gume</option>
+              <option>Preuzimanje guma iz hotela</option>
+              <option>Krpljenje</option>
+              <option>Nešto drugo</option>
+            </select>
+          </div>
+          <div class="pol"><label for="dan">Željeni dan</label><input id="dan" name="dan" type="date"></div>
+        </div>
+        <div class="pol"><label for="nap">Napomena <span>(nije obavezno)</span></label><textarea id="nap" name="napomena" placeholder="Npr. gume su na felnama, imam TPMS senzore"></textarea></div>
+        <button class="dug dug-lim" type="submit">Pošaljite upit</button>
+        <p class="poruka" id="poruka" role="status" tabindex="-1"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<svg class="gaz tanak" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#gazni-siv)"/></svg>
+<footer>
+  <div class="wrap">
+    <p><strong>Guma Plus</strong><br>Vulkanizer, Bulevar kralja Aleksandra 342, 11050 Beograd<br>Telefon i Viber: <a href="tel:+381600000342">060 000 03 42</a></p>
+    <p class="demo-n">Primer sajta · izradio opsforma. Firma, telefon i cene su izmišljeni za potrebe primera. <a href="../">Svi primeri</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.querySelector('.meni-dugme'),n=document.getElementById('meni');
+  function postavi(o){n.classList.toggle('otvoren',o);b.setAttribute('aria-expanded',String(o));b.textContent=o?'Zatvori':'Meni';}
+  b.addEventListener('click',function(){postavi(b.getAttribute('aria-expanded')!=='true');});
+  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){postavi(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&n.classList.contains('otvoren')){postavi(false);b.focus();}});
+
+  var r=document.querySelector('.tab-v tr[data-dan="'+new Date().getDay()+'"]');if(r)r.classList.add('danas');
+
+  var f=document.getElementById('forma'),p=document.getElementById('poruka');
+  f.addEventListener('submit',function(e){e.preventDefault();p.textContent='Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.';p.classList.add('vidi');p.focus();});
+})();
+</script>
+</body>
+</html>

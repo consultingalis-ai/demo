@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Nokti Tačka – manikir, gel lak i depilacija, Krunska 58</title>
+<meta name="description" content="Nokti Tačka, salon za nokte i depilaciju u Krunskoj 58 na Vračaru. Manikir, gel lak, izlivanje, korekcija, pedikir i depilacija voskom. Zakažite online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap&subset=latin-ext" rel="stylesheet">
+<style>
+:root{
+  --menta:#DDF3EA; --menta-2:#bfe6d6; --koral:#FF6F59; --mastilo:#1D1D29; --krem:#FFF8F0; --bela:#fff;
+  --siva:#55556a;
+  --r:24px;
+  --serif:"DM Serif Display","DejaVu Serif",Georgia,"Times New Roman",serif;
+  --sans:"DM Sans","Helvetica Neue",Arial,"DejaVu Sans",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--krem);color:var(--mastilo);font-family:var(--sans);font-size:1rem;line-height:1.55}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--mastilo);outline-offset:3px;border-radius:8px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;line-height:1.05}
+p{margin:0 0 .8em}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+.tacka{display:inline-block;border-radius:50%;flex:none}
+
+.demo-bar{background:var(--mastilo);color:var(--krem);font-size:.8125rem;text-align:center;padding:6px 16px}
+.demo-bar a{color:var(--menta);margin-left:.5em}
+
+/* header */
+.top{position:sticky;top:0;z-index:30;background:var(--krem);border-bottom:2px solid var(--mastilo)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:inline-flex;align-items:baseline;gap:2px;font-family:var(--serif);font-size:1.75rem;text-decoration:none;line-height:1}
+.logo .tacka{width:.36em;height:.36em;background:var(--koral)}
+.menu-btn{width:52px;height:52px;border-radius:50%;border:2px solid var(--mastilo);background:var(--menta);display:grid;place-content:center;gap:4px;grid-template-columns:repeat(2,8px);cursor:pointer;padding:0}
+.menu-btn i{width:8px;height:8px;border-radius:50%;background:var(--mastilo);transition:transform .2s,background .2s}
+.menu-btn[aria-expanded="true"]{background:var(--koral)}
+.menu-btn[aria-expanded="true"] i:nth-child(1){transform:translate(4px,4px)}
+.menu-btn[aria-expanded="true"] i:nth-child(2){transform:translate(-4px,4px)}
+.menu-btn[aria-expanded="true"] i:nth-child(3){transform:translate(4px,-4px)}
+.menu-btn[aria-expanded="true"] i:nth-child(4){transform:translate(-4px,-4px)}
+.nav{position:absolute;top:72px;left:16px;right:16px;background:var(--mastilo);border-radius:var(--r);padding:12px;display:none}
+.nav.open{display:block}
+.nav ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.nav a{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:16px;color:var(--krem);text-decoration:none;font-size:1.25rem;font-weight:500}
+.nav a:hover{background:#2c2c3c}
+.nav a .tacka{width:14px;height:14px}
+@media (min-width:900px){
+  .menu-btn{display:none}
+  .nav{display:block;position:static;background:none;padding:0}
+  .nav ul{display:flex;gap:6px}
+  .nav a{color:var(--mastilo);font-size:.9375rem;padding:8px 14px;border-radius:999px}
+  .nav a:hover{background:var(--menta)}
+  .nav a .tacka{width:10px;height:10px}
+}
+
+/* bento */
+.bento{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+.kartica{border-radius:var(--r);padding:22px;position:relative;overflow:hidden;grid-column:span 2}
+.k-menta{background:var(--menta)}
+.k-mastilo{background:var(--mastilo);color:var(--krem)}
+.k-koral{background:var(--koral)}
+.k-bela{background:var(--bela);border:2px solid var(--mastilo)}
+.k-krem{background:var(--krem);border:2px solid var(--mastilo)}
+
+.hero{padding:16px 0 56px}
+.k-glavna{padding:176px 22px 26px;display:flex;flex-direction:column;justify-content:flex-end}
+.k-glavna h1{font-size:clamp(2.6rem,10.5vw,5rem);line-height:1;letter-spacing:-.01em;position:relative;max-width:12ch}
+.k-glavna p{position:relative;max-width:38ch;font-size:1.0625rem;margin:16px 0 22px}
+.dekor-1{position:absolute;width:220px;height:220px;background:var(--koral);right:-60px;top:-60px}
+.dekor-2{position:absolute;width:58px;height:58px;background:var(--mastilo);right:190px;top:34px}
+.dekor-3{position:absolute;width:26px;height:26px;border:3px solid var(--mastilo);left:22px;top:110px}
+.dugmad{display:flex;flex-wrap:wrap;gap:10px;position:relative}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 22px;border-radius:16px;border:2px solid var(--mastilo);font-family:var(--sans);font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-koral{background:var(--koral);color:var(--mastilo)}
+.btn-mastilo{background:var(--mastilo);color:var(--krem)}
+.k-status{display:flex;flex-direction:column;justify-content:space-between;gap:24px;min-height:190px}
+.k-status .red{display:flex;align-items:center;gap:12px;font-weight:500}
+.k-status .red .tacka{width:16px;height:16px;background:#8b8ba0}
+.k-status.otvoreno .red .tacka{background:var(--menta);box-shadow:0 0 0 6px rgba(221,243,234,.2)}
+.k-status strong{font-family:var(--serif);font-weight:400;font-size:2.2rem;line-height:1.05;display:block}
+.k-status small{color:#c9c9d6;font-size:.9375rem}
+.k-gel{display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.k-gel h2{font-size:1.9rem}
+.k-gel .cena{font-weight:700;font-size:1.0625rem}
+.nijanse{display:flex;gap:8px;flex-wrap:wrap}
+.nijanse .tacka{width:34px;height:34px;border:2px solid var(--mastilo)}
+.k-foto{background:repeating-radial-gradient(circle at 30% 40%,var(--menta-2) 0 10px,var(--menta) 10px 22px);min-height:200px;display:flex;align-items:flex-end;border:2px solid var(--mastilo)}
+.k-foto span{background:var(--krem);border-radius:999px;padding:4px 12px;font-size:.8125rem;border:2px solid var(--mastilo)}
+.k-cinjenice ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.k-cinjenice li{display:flex;gap:12px;align-items:flex-start}
+.k-cinjenice li .tacka{width:12px;height:12px;background:var(--koral);margin-top:6px}
+.k-adresa{display:flex;flex-direction:column;justify-content:space-between;gap:12px}
+.k-adresa strong{font-family:var(--serif);font-weight:400;font-size:1.75rem;line-height:1.1}
+.k-adresa a{font-weight:700}
+@media (min-width:640px){
+  .span-1{grid-column:span 1}
+}
+@media (min-width:900px){
+  .bento{grid-template-columns:repeat(12,1fr);gap:16px}
+  .hero .k-glavna{grid-column:1/8;grid-row:1/3;min-height:540px;padding:44px}
+  .k-glavna h1{font-size:clamp(2.6rem,5vw,4.4rem);max-width:10ch}
+  .hero .k-status{grid-column:8/13}
+  .hero .k-gel{grid-column:8/13}
+  .hero .k-foto{grid-column:1/5}
+  .hero .k-cinjenice{grid-column:5/10}
+  .hero .k-adresa{grid-column:10/13}
+  .dekor-1{width:320px;height:320px;right:-80px;top:-90px}
+  .dekor-2{width:96px;height:96px;right:64px;top:270px}
+  .dekor-3{left:auto;right:190px;top:360px;width:36px;height:36px}
+}
+
+/* naslovi sekcija */
+.naslov{display:flex;align-items:center;gap:16px;margin-bottom:22px}
+.naslov h2{font-size:clamp(2.4rem,8vw,3.6rem)}
+.naslov .tacka{width:46px;height:46px;background:var(--koral)}
+.podnaslov{max-width:52ch;margin:-8px 0 28px;color:var(--siva)}
+
+/* cenovnik */
+.cenovnik{padding:56px 0}
+.kat{padding:24px}
+.kat-glava{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.kat-glava .tacka{width:40px;height:40px;border:2px solid var(--mastilo)}
+.kat-glava h3{font-size:1.75rem}
+.kat ul{list-style:none;margin:0;padding:0}
+.kat li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-top:1.5px dashed rgba(29,29,41,.3)}
+.kat li span small{display:block;color:var(--siva);font-size:.875rem}
+.k-mastilo .kat li span small,.k-mastilo li span small{color:#c9c9d6}
+.k-mastilo li{border-top-color:rgba(255,248,240,.3)}
+.kat li b{white-space:nowrap;font-weight:700;font-variant-numeric:tabular-nums}
+.kat .garancija{margin:14px 0 0;font-size:.9375rem;background:var(--krem);color:var(--mastilo);border-radius:14px;padding:10px 14px}
+.t-man{background:var(--menta)}
+.t-gel{background:var(--koral)}
+.t-izl{background:var(--mastilo);border-color:var(--krem)!important}
+.t-ped{background:conic-gradient(var(--koral) 0 50%,var(--menta) 50% 100%)}
+.t-dep{background:var(--krem)}
+.cene-napomena{margin-top:16px;color:var(--siva);font-size:.9375rem}
+@media (min-width:900px){
+  .cenovnik .k-man{grid-column:1/5}
+  .cenovnik .k-gel2{grid-column:5/9}
+  .cenovnik .k-izl{grid-column:9/13;grid-row:1/3}
+  .cenovnik .k-ped{grid-column:1/5}
+  .cenovnik .k-dep{grid-column:5/9}
+}
+
+/* zakazivanje */
+.zakazivanje{padding:24px 0 56px}
+.k-forma{padding:26px 22px}
+.k-forma .dekor{position:absolute;width:160px;height:160px;background:var(--menta);right:-50px;bottom:-50px}
+form{display:grid;gap:16px;position:relative}
+.polja2{display:grid;gap:16px}
+@media (min-width:640px){.polja2{grid-template-columns:1fr 1fr}}
+label,legend{display:block;font-weight:700;font-size:.9375rem;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;color:var(--mastilo);background:var(--krem);border:2px solid var(--mastilo);border-radius:14px;padding:12px 14px;min-height:50px}
+textarea{min-height:96px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--koral);outline-offset:1px}
+fieldset{border:0;padding:0;margin:0;min-width:0}
+.delovi{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.delovi label{margin:0;font-weight:500;cursor:pointer}
+.delovi input{position:absolute;opacity:0;width:1px;height:1px;min-height:0}
+.delovi span{display:flex;flex-direction:column;align-items:center;gap:2px;padding:12px 6px;border:2px solid var(--mastilo);border-radius:16px;background:var(--krem);text-align:center;font-size:.9375rem;line-height:1.2}
+.delovi span small{font-size:.8125rem;color:var(--siva)}
+.delovi span::before{content:"";width:14px;height:14px;border-radius:50%;border:2px solid var(--mastilo);margin-bottom:6px}
+.delovi input:checked+span{background:var(--menta)}
+.delovi input:checked+span::before{background:var(--koral)}
+.delovi input:focus-visible+span{outline:3px solid var(--mastilo);outline-offset:2px}
+.poruka{background:var(--mastilo);color:var(--krem);border-radius:16px;padding:14px 16px;margin:0}
+.poruka[hidden]{display:none}
+.k-uz-formu{display:flex;flex-direction:column;gap:14px}
+.k-uz-formu h3{font-size:1.9rem}
+.k-uz-formu ol{margin:0;padding:0;list-style:none;display:grid;gap:12px;counter-reset:k}
+.k-uz-formu li{display:flex;gap:12px;align-items:flex-start;counter-increment:k}
+.k-uz-formu li::before{content:counter(k);flex:none;width:30px;height:30px;border-radius:50%;background:var(--krem);color:var(--mastilo);display:grid;place-items:center;font-weight:700;font-size:.875rem}
+@media (min-width:900px){
+  .zakazivanje .k-forma{grid-column:1/9;padding:36px}
+  .zakazivanje .k-uz-formu{grid-column:9/13}
+}
+
+/* info */
+.info{padding:24px 0 64px}
+table.vreme{width:100%;border-collapse:collapse}
+.vreme th,.vreme td{padding:9px 0;text-align:left;border-top:1.5px dashed rgba(29,29,41,.3);font-weight:500}
+.vreme td{text-align:right;font-variant-numeric:tabular-nums}
+.vreme tr.danas th,.vreme tr.danas td{font-weight:700}
+.vreme tr.danas th::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--koral);margin-right:8px}
+.k-vreme h3,.k-lok h3{font-size:1.9rem;margin-bottom:12px}
+.k-mapa{padding:0;min-height:320px;border:2px solid var(--mastilo);background:var(--menta)}
+.k-mapa::before{content:"Mapa: Krunska 58, Beograd";position:absolute;left:18px;bottom:16px;font-size:.8125rem}
+.k-mapa iframe{position:relative;width:100%;height:100%;min-height:320px;border:0;display:block}
+@media (min-width:900px){
+  .info .k-vreme{grid-column:1/5}
+  .info .k-mapa{grid-column:5/10;grid-row:1/3}
+  .info .k-lok{grid-column:10/13;grid-row:1/3}
+}
+
+footer{background:var(--mastilo);color:var(--krem);padding:44px 0 26px;border-radius:var(--r) var(--r) 0 0}
+footer .wrap{display:grid;gap:20px}
+footer .logo{color:var(--krem);font-size:2.2rem}
+footer p{margin:0}
+footer a{color:var(--krem)}
+.demo-foot{font-size:.8125rem;color:#c9c9d6;border-top:1px solid #3a3a4c;padding-top:16px}
+.demo-foot a{color:var(--menta)}
+@media (min-width:900px){footer .wrap{grid-template-columns:2fr 1fr 1fr}.demo-foot{grid-column:1/-1}}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="demo-bar">Primer sajta · izradio opsforma <a href="../">Svi primeri</a></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#pocetak">Nokti Tačka<span class="tacka" aria-hidden="true"></span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Meni"><i></i><i></i><i></i><i></i></button>
+    <nav class="nav" id="nav" aria-label="Glavna navigacija">
+      <ul>
+        <li><a href="#cenovnik"><span class="tacka" style="background:var(--koral)"></span>Cenovnik</a></li>
+        <li><a href="#zakazivanje"><span class="tacka" style="background:var(--menta);box-shadow:inset 0 0 0 2px var(--mastilo)"></span>Zakazivanje</a></li>
+        <li><a href="#radno-vreme"><span class="tacka" style="background:var(--mastilo);box-shadow:inset 0 0 0 3px var(--koral)"></span>Radno vreme</a></li>
+        <li><a href="#lokacija"><span class="tacka" style="background:var(--koral)"></span>Kako do nas</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="pocetak">
+  <div class="wrap bento">
+    <div class="kartica k-menta k-glavna">
+      <span class="tacka dekor-1" aria-hidden="true"></span>
+      <span class="tacka dekor-2" aria-hidden="true"></span>
+      <span class="tacka dekor-3" aria-hidden="true"></span>
+      <h1>Nokti i depilacija u Krunskoj 58</h1>
+      <p>Manikir, gel lak, izlivanje, pedikir i depilacija voskom. Radimo uz zakazan termin, svaki radni dan do 21 h.</p>
+      <div class="dugmad">
+        <a class="btn btn-koral" href="#zakazivanje">Zakažite termin</a>
+        <a class="btn btn-mastilo" href="tel:+381600000356">Pozovite 060 000 03 56</a>
+      </div>
+    </div>
+    <div class="kartica k-mastilo k-status" id="status">
+      <p class="red"><span class="tacka" aria-hidden="true"></span><span id="status-tekst">Pon–pet 9–21, subota 9–17</span></p>
+      <div><strong id="status-veliko">Radimo i subotom</strong><small>Najviše slobodnih termina ima pre podne.</small></div>
+    </div>
+    <div class="kartica k-krem k-gel">
+      <div>
+        <h2>Gel lak 2.200 din</h2>
+        <p class="cena">Oko 60 minuta, skidanje starog uključeno.</p>
+      </div>
+      <div class="nijanse" aria-label="Primeri nijansi">
+        <span class="tacka" style="background:#FF6F59"></span><span class="tacka" style="background:#DDF3EA"></span><span class="tacka" style="background:#1D1D29"></span><span class="tacka" style="background:#f2c4c0"></span><span class="tacka" style="background:#b3263b"></span><span class="tacka" style="background:#fff"></span>
+      </div>
+    </div>
+    <div class="kartica k-foto span-1" role="img" aria-label="Mesto za fotografiju radova"><span>Vaša fotografija</span></div>
+    <div class="kartica k-bela k-cinjenice">
+      <ul>
+        <li><span class="tacka" aria-hidden="true"></span><span>Alat se steriliše posle svake mušterije, turpije su jednokratne.</span></li>
+        <li><span class="tacka" aria-hidden="true"></span><span>Plaćanje gotovinom ili karticom.</span></li>
+        <li><span class="tacka" aria-hidden="true"></span><span>Ako nokat pukne u prvih 5 dana, popravka je besplatna.</span></li>
+      </ul>
+    </div>
+    <div class="kartica k-koral k-adresa span-1">
+      <strong>Krunska 58, Vračar</strong>
+      <a href="#lokacija">Kako do nas</a>
+    </div>
+  </div>
+</section>
+
+<section class="cenovnik" id="cenovnik">
+  <div class="wrap">
+    <div class="naslov"><span class="tacka" aria-hidden="true"></span><h2>Cenovnik</h2></div>
+    <p class="podnaslov">Cene su u dinarima. Tačka u boji pored naslova je oznaka kategorije, ista je i u formi za zakazivanje.</p>
+    <div class="bento">
+      <div class="kartica k-bela kat k-man">
+        <div class="kat-glava"><span class="tacka t-man" aria-hidden="true"></span><h3>Manikir</h3></div>
+        <ul>
+          <li><span>Klasični manikir<small>Oblikovanje, zanoktice, krema. 40 min</small></span><b>1.200</b></li>
+          <li><span>Manikir sa lakiranjem<small>Običan lak po izboru. 50 min</small></span><b>1.500</b></li>
+        </ul>
+      </div>
+      <div class="kartica k-bela kat k-gel2">
+        <div class="kat-glava"><span class="tacka t-gel" aria-hidden="true"></span><h3>Gel lak</h3></div>
+        <ul>
+          <li><span>Gel lak na prirodnim noktima<small>Sa skidanjem starog. 60 min</small></span><b>2.200</b></li>
+          <li><span>French ili ombre<small>Doplata uz gel lak</small></span><b>+300</b></li>
+          <li><span>Samo skidanje gel laka<small>20 min</small></span><b>500</b></li>
+        </ul>
+      </div>
+      <div class="kartica k-mastilo kat k-izl">
+        <div class="kat-glava"><span class="tacka t-izl" aria-hidden="true"></span><h3>Izlivanje i korekcija</h3></div>
+        <ul>
+          <li><span>Izlivanje gelom<small>Nadogradnja na šablon, oblik i dužina po želji. Oko 2 h</small></span><b>3.500</b></li>
+          <li><span>Korekcija<small>Do 4 nedelje od izlivanja. Oko 90 min</small></span><b>2.800</b></li>
+          <li><span>Korekcija posle 4 nedelje<small>Oko 2 h</small></span><b>3.200</b></li>
+          <li><span>Popravka jednog nokta<small>15 min</small></span><b>300</b></li>
+          <li><span>Skidanje izlivenih noktiju<small>30 min</small></span><b>800</b></li>
+        </ul>
+        <p class="garancija">Ako nokat pukne u prvih 5 dana, popravljamo ga besplatno.</p>
+      </div>
+      <div class="kartica k-bela kat k-ped">
+        <div class="kat-glava"><span class="tacka t-ped" aria-hidden="true"></span><h3>Pedikir</h3></div>
+        <ul>
+          <li><span>Estetski pedikir<small>Kupka, nokti, peta, krema. 60 min</small></span><b>2.000</b></li>
+          <li><span>Pedikir sa gel lakom<small>75 min</small></span><b>2.800</b></li>
+          <li><span>Gel lak na nogama<small>Bez pedikira. 40 min</small></span><b>1.600</b></li>
+        </ul>
+      </div>
+      <div class="kartica k-menta kat k-dep">
+        <div class="kat-glava"><span class="tacka t-dep" aria-hidden="true"></span><h3>Depilacija voskom</h3></div>
+        <ul>
+          <li><span>Nausnice</span><b>400</b></li>
+          <li><span>Pazuh</span><b>700</b></li>
+          <li><span>Ruke</span><b>1.200</b></li>
+          <li><span>Bikini zona</span><b>1.200</b></li>
+          <li><span>Pola nogu</span><b>1.300</b></li>
+          <li><span>Cele noge</span><b>2.200</b></li>
+          <li><span>Cele noge + bikini + pazuh<small>Paket</small></span><b>3.500</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="zakazivanje" id="zakazivanje">
+  <div class="wrap">
+    <div class="naslov"><span class="tacka" style="background:var(--menta);border:2px solid var(--mastilo)" aria-hidden="true"></span><h2>Zakažite termin</h2></div>
+    <div class="bento">
+      <div class="kartica k-bela k-forma">
+        <span class="tacka dekor" aria-hidden="true"></span>
+        <!-- Web3Forms: action="https://api.web3forms.com/submit" + access_key -->
+        <form id="forma" novalidate>
+          <div class="polja2">
+            <div><label for="ime">Ime</label><input id="ime" name="ime" autocomplete="given-name" required></div>
+            <div><label for="tel">Telefon</label><input id="tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel" required></div>
+          </div>
+          <div class="polja2">
+            <div><label for="usluga">Usluga</label>
+              <select id="usluga" name="usluga">
+                <optgroup label="Manikir"><option>Klasični manikir</option><option>Manikir sa lakiranjem</option></optgroup>
+                <optgroup label="Gel lak"><option selected>Gel lak</option><option>Gel lak, french ili ombre</option></optgroup>
+                <optgroup label="Izlivanje i korekcija"><option>Izlivanje gelom</option><option>Korekcija</option></optgroup>
+                <optgroup label="Pedikir"><option>Estetski pedikir</option><option>Pedikir sa gel lakom</option></optgroup>
+                <optgroup label="Depilacija voskom"><option>Depilacija, jedna zona</option><option>Depilacija, više zona</option></optgroup>
+              </select></div>
+            <div><label for="datum">Datum</label><input id="datum" name="datum" type="date"></div>
+          </div>
+          <fieldset>
+            <legend>Deo dana</legend>
+            <div class="delovi">
+              <label><input type="radio" name="deo" value="pre podne" checked><span>Pre podne<small>9–13</small></span></label>
+              <label><input type="radio" name="deo" value="popodne"><span>Popodne<small>13–17</small></span></label>
+              <label><input type="radio" name="deo" value="vece"><span>Veče<small>17–21</small></span></label>
+            </div>
+          </fieldset>
+          <div><label for="napomena">Napomena (nije obavezno)</label><textarea id="napomena" name="napomena" placeholder="Npr. želim kraće nokte, zone za depilaciju"></textarea></div>
+          <div><button class="btn btn-koral" type="submit">Pošaljite zahtev za termin</button></div>
+          <p class="poruka" id="poruka" role="status" hidden></p>
+        </form>
+      </div>
+      <div class="kartica k-mastilo k-uz-formu">
+        <h3>Šta se dešava posle</h3>
+        <ol>
+          <li><span>Pošaljete zahtev sa danom i delom dana.</span></li>
+          <li><span>U roku od sat vremena (radnim danima) šaljemo tačno vreme porukom.</span></li>
+          <li><span>Dan pre termina stiže podsetnik. Otkazivanje najkasnije 12 h ranije.</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="info" id="radno-vreme">
+  <div class="wrap bento">
+    <div class="kartica k-bela k-vreme">
+      <h3>Radno vreme</h3>
+      <table class="vreme" id="tabela-vreme">
+        <tbody>
+          <tr data-d="1"><th scope="row">Ponedeljak</th><td>9–21</td></tr>
+          <tr data-d="2"><th scope="row">Utorak</th><td>9–21</td></tr>
+          <tr data-d="3"><th scope="row">Sreda</th><td>9–21</td></tr>
+          <tr data-d="4"><th scope="row">Četvrtak</th><td>9–21</td></tr>
+          <tr data-d="5"><th scope="row">Petak</th><td>9–21</td></tr>
+          <tr data-d="6"><th scope="row">Subota</th><td>9–17</td></tr>
+          <tr data-d="0"><th scope="row">Nedelja</th><td>zatvoreno</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="kartica k-mapa">
+      <iframe title="Mapa: Nokti Tačka, Krunska 58, Beograd" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Krunska%2058%2C%20Beograd&z=15&output=embed"></iframe>
+    </div>
+    <div class="kartica k-koral k-lok" id="lokacija">
+      <h3>Krunska 58</h3>
+      <p>Vračar, prizemlje, ulaz sa ulice. Na izlogu je velika koral tačka.</p>
+      <p>Parking u zoni, plaća se SMS porukom.</p>
+      <p><a href="tel:+381600000356"><b>060 000 03 56</b></a><br><a href="viber://chat?number=%2B381600000356"><b>Viber poruka</b></a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><span class="logo">Nokti Tačka<span class="tacka" aria-hidden="true"></span></span><p>Salon za nokte i depilaciju, Vračar</p></div>
+    <p>Krunska 58<br>11000 Beograd</p>
+    <p><a href="tel:+381600000356">060 000 03 56</a><br><a href="viber://chat?number=%2B381600000356">Viber</a></p>
+    <p class="demo-foot">Primer sajta · izradio opsforma. Salon je izmišljen. <a href="../">Svi primeri</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
+  function setMenu(o){btn.setAttribute('aria-expanded',String(o));nav.classList.toggle('open',o);}
+  btn.addEventListener('click',function(){setMenu(btn.getAttribute('aria-expanded')!=='true');});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false);});
+
+  var sati={0:null,1:[9,21],2:[9,21],3:[9,21],4:[9,21],5:[9,21],6:[9,17]};
+  var n=new Date(),d=n.getDay(),h=n.getHours()+n.getMinutes()/60,s=sati[d];
+  var r=document.querySelector('#tabela-vreme tr[data-d="'+d+'"]');if(r)r.classList.add('danas');
+  var st=document.getElementById('status'),t=document.getElementById('status-tekst'),v=document.getElementById('status-veliko');
+  if(s&&h>=s[0]&&h<s[1]){st.classList.add('otvoreno');t.textContent='Sada otvoreno';v.textContent='Danas radimo do '+s[1]+' h';}
+  else if(s&&h<s[0]){t.textContent='Još nismo otvorili';v.textContent='Danas radimo od '+s[0]+' do '+s[1]+' h';}
+  else{
+    var dani=['u nedelju','u ponedeljak','u utorak','u sredu','u četvrtak','u petak','u subotu'];
+    for(var i=1;i<8;i++){var x=(d+i)%7;if(sati[x]){t.textContent='Sada zatvoreno';v.textContent='Otvaramo '+(i===1?'sutra':dani[x])+' u '+sati[x][0]+' h';break;}}
+  }
+
+  var dt=document.getElementById('datum');if(dt){var m=new Date();dt.min=m.toISOString().slice(0,10);}
+
+  var f=document.getElementById('forma'),p=document.getElementById('poruka');
+  f.addEventListener('submit',function(e){e.preventDefault();p.textContent='Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.';p.hidden=false;});
+})();
+</script>
+</body>
+</html>

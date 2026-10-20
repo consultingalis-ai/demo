@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Servis bicikala Pedala – popravka bicikala i trotineta, Dimitrija Tucovića 95</title>
+<meta name="description" content="Servis bicikala Pedala na Zvezdari: prolećni servis, paketi servisa, krpljenje, kočnice, centriranje točka, menjač i lanac sa cenama. Popravljamo i električne trotinete.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Figtree:wght@400;500;600;700;800&display=swap&subset=latin-ext" rel="stylesheet">
+<style>
+:root{
+  --crvena:#E63946;
+  --crvena-tamna:#B8202D;
+  --krem:#F1FAEE;
+  --teget:#1D3557;
+  --teget-sv:#3B5275;
+  --linija:#C9D3CB;
+  --head:"Anton","Impact","Haettenschweiler","Arial Narrow Bold","DejaVu Sans Condensed","Liberation Sans Narrow",sans-serif;
+  --body:"Figtree","Liberation Sans",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--krem);color:var(--teget);font-family:var(--body);font-size:17px;line-height:1.55}
+svg{display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);font-weight:400;margin:0;line-height:.95;text-transform:uppercase;letter-spacing:.005em}
+p{margin:0}
+:focus-visible{outline:3px solid var(--crvena);outline-offset:3px}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.demo{background:var(--teget);color:#D5DEE8;font-size:13px;padding:6px 0}
+.demo .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.demo a{color:#FFB3B9}
+
+/* zaglavlje */
+.zag{position:sticky;top:0;z-index:30;background:var(--krem);border-bottom:2px solid var(--teget)}
+.zag .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:var(--head);font-size:30px;line-height:1;color:var(--crvena);text-decoration:none;text-transform:uppercase;display:flex;align-items:baseline;gap:8px}
+.logo small{font-family:var(--body);font-size:13px;font-weight:700;color:var(--teget);text-transform:none}
+.meni-dugme{font-family:var(--head);font-size:20px;text-transform:uppercase;background:none;border:0;color:var(--teget);padding:8px 4px;cursor:pointer;display:flex;align-items:center;gap:10px}
+.meni-dugme i{display:block;width:26px;height:14px;border-block:3px solid currentColor;position:relative;transition:transform .2s}
+.meni-dugme[aria-expanded="true"] i{border-color:transparent}
+.meni-dugme[aria-expanded="true"] i::before,.meni-dugme[aria-expanded="true"] i::after{content:"";position:absolute;left:0;right:0;top:4px;height:3px;background:currentColor;transform:rotate(45deg)}
+.meni-dugme[aria-expanded="true"] i::after{transform:rotate(-45deg)}
+.meni{display:none;position:absolute;left:0;right:0;top:100%;background:var(--teget);color:var(--krem)}
+.meni.otvoren{display:block}
+.meni ul{list-style:none;margin:0;padding:10px 16px 20px}
+.meni a{display:block;font-family:var(--head);font-size:34px;text-transform:uppercase;text-decoration:none;padding:6px 0;line-height:1.1}
+.meni a:hover{color:#FF8A93}
+@media (min-width:980px){
+  .meni-dugme{display:none}
+  .meni{display:block;position:static;background:none;color:var(--teget)}
+  .meni ul{display:flex;gap:22px;padding:0}
+  .meni a{font-family:var(--body);font-weight:700;font-size:15px;text-transform:none;padding:4px 0;border-bottom:3px solid transparent}
+  .meni a:hover{color:var(--teget);border-bottom-color:var(--crvena)}
+}
+
+/* dugmad */
+.dug{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:6px 24px;font-family:var(--head);font-size:22px;text-transform:uppercase;text-decoration:none;border:3px solid var(--teget);border-radius:4px;cursor:pointer;line-height:1}
+.dug svg{width:22px;height:22px}
+.dug-teget{background:var(--teget);color:var(--krem)}
+.dug-teget:hover{background:var(--crvena);border-color:var(--crvena);color:#fff}
+.dug-prazno{background:transparent;color:var(--teget)}
+.dug-prazno:hover{background:var(--teget);color:var(--krem)}
+.dug-krem{background:var(--krem);color:var(--teget);border-color:var(--krem)}
+.dug-krem:hover{background:var(--teget);border-color:var(--teget);color:var(--krem)}
+
+/* lanac */
+.lanac{height:22px;width:100%;margin:0}
+.lanac-blok{padding:6px 0}
+
+/* hero */
+.hero{padding:34px 0 26px;overflow:hidden}
+.hero-grid{display:grid;gap:8px}
+.hero h1{font-size:clamp(72px,21vw,170px);line-height:.96;color:var(--teget)}
+.hero h1 span{display:block}
+.hero h1 .r{color:var(--crvena)}
+.hero .ime{margin-top:18px;font-weight:800;font-size:19px}
+.hero .uvod{margin-top:6px;max-width:40ch;color:var(--teget-sv);font-size:18px}
+.hero .cta{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px}
+.bicikl{width:100%;height:auto;margin-top:10px}
+.bicikl .t{fill:none;stroke:var(--teget);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.bicikl .c{fill:none;stroke:var(--crvena);stroke-width:2.4;stroke-linecap:round}
+.bicikl .tanko{stroke-width:1.1}
+.crta{stroke-dasharray:1;stroke-dashoffset:1;animation:crtaj 1.6s cubic-bezier(.6,.1,.3,1) forwards}
+@keyframes crtaj{to{stroke-dashoffset:0}}
+@media (min-width:900px){
+  .hero{padding:50px 0 30px}
+  .hero-grid{grid-template-columns:1fr 1.15fr;align-items:center;gap:28px}
+  .bicikl{margin-top:0}
+}
+
+/* prolećni */
+.prolece{background:var(--crvena);color:#fff;padding:56px 0 60px;position:relative;overflow:hidden}
+.prolece-grid{display:grid;gap:28px;position:relative}
+.prolece h2{font-size:clamp(64px,17vw,180px);line-height:.9}
+.prolece .meseci{margin-top:16px;font-weight:700;font-size:18px}
+.cena-velika{font-family:var(--head);font-size:clamp(56px,10vw,110px);line-height:.9}
+.cena-velika small{font-size:.38em;margin-left:6px}
+.prolece ul{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:8px;font-weight:600;font-size:17.5px}
+.prolece li{padding-left:28px;position:relative}
+.prolece li::before{content:"";position:absolute;left:0;top:.45em;width:16px;height:10px;border:3px solid var(--krem);border-radius:6px}
+.prolece .dug{margin-top:26px}
+.prolece .napom{margin-top:14px;font-size:15px;color:#FFE3E5}
+@media (min-width:900px){.prolece-grid{grid-template-columns:1.25fr 1fr;align-items:end;gap:60px}}
+
+/* paketi: horizontalni niz */
+.paketi{padding:64px 0 56px}
+.naslov-red{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:10px 30px;margin-bottom:26px}
+.naslov-red h2{font-size:clamp(52px,10vw,104px);color:var(--teget)}
+.naslov-red p{max-width:40ch;color:var(--teget-sv)}
+.niz{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 16px 18px;margin:0 -16px;scrollbar-width:thin;scrollbar-color:var(--teget) transparent;overscroll-behavior-x:contain}
+.niz:focus-visible{outline-offset:-3px}
+.pk{scroll-snap-align:start;scroll-margin-left:16px;background:#fff;border:3px solid var(--teget);border-radius:4px;padding:20px 18px 22px;display:flex;flex-direction:column}
+.pk h3{font-size:34px}
+.pk .cena{font-family:var(--head);font-size:44px;color:var(--crvena);line-height:1;margin-top:12px}
+.pk .cena small{font-size:18px;margin-left:4px}
+.pk .rok{font-weight:700;font-size:15px;margin-top:6px}
+.pk ul{margin:16px 0 0;padding:16px 0 0;border-top:2px solid var(--teget);list-style:none;display:grid;gap:7px;font-size:15.5px;color:var(--teget-sv)}
+.pk li{padding-left:16px;position:relative}
+.pk li::before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;border-radius:50%;background:var(--crvena)}
+.pk.istaknut{background:var(--teget);color:var(--krem)}
+.pk.istaknut ul{border-color:var(--krem);color:#D5DEE8}
+.pk.istaknut .cena{color:#FF8A93}
+.pk .oznaka{align-self:flex-start;font-weight:800;font-size:13px;background:var(--crvena);color:#fff;padding:3px 10px;border-radius:3px;margin-bottom:10px}
+.niz-hint{font-size:14px;color:var(--teget-sv);font-weight:600}
+@media (min-width:640px){.niz{grid-auto-columns:46%}}
+@media (min-width:1100px){
+  .niz{grid-auto-flow:row;grid-template-columns:repeat(5,1fr);overflow:visible;margin:0;padding:0}
+  .niz-hint{display:none}
+}
+
+/* popravke */
+.popravke{padding:56px 0 64px}
+.pop-grid{display:grid;gap:34px}
+.cenovnik{list-style:none;margin:0;padding:0}
+.cenovnik li{display:flex;align-items:baseline;gap:10px;padding:13px 0;border-bottom:2px solid var(--linija)}
+.cenovnik .st{font-weight:700;font-size:18px}
+.cenovnik .st small{display:block;font-weight:500;font-size:14.5px;color:var(--teget-sv)}
+.cenovnik .tk{flex:1;border-bottom:2px dotted var(--teget-sv);transform:translateY(-6px);min-width:16px}
+.cenovnik b{font-family:var(--head);font-weight:400;font-size:26px;white-space:nowrap;color:var(--teget)}
+.cenovnik + .napom{margin-top:16px;color:var(--teget-sv);font-size:15px}
+.foto{aspect-ratio:4/5;border:3px solid var(--teget);border-radius:4px;background:
+  repeating-radial-gradient(circle at 50% 120%,transparent 0 22px,rgba(29,53,87,.08) 22px 24px),#E4EEE2;display:flex;align-items:flex-end;padding:14px}
+.foto span{background:var(--krem);border:2px solid var(--teget);padding:4px 10px;font-weight:700;font-size:13px}
+@media (min-width:900px){.pop-grid{grid-template-columns:1.5fr 1fr;gap:60px;align-items:start}.foto{position:sticky;top:90px}}
+
+/* trotineti */
+.trotineti{background:var(--teget);color:var(--krem);padding:56px 0 60px}
+.tr-grid{display:grid;gap:28px}
+.trotineti h2{font-size:clamp(56px,13vw,140px);line-height:.9}
+.trotineti h2 span{color:#FF8A93}
+.trotineti .uvod{margin-top:16px;color:#D5DEE8;max-width:42ch}
+.tr-lista{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.tr-lista li{border:2px solid #5B7398;border-radius:4px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:2px 14px;align-items:baseline}
+.tr-lista strong{font-size:17.5px}
+.tr-lista b{font-family:var(--head);font-weight:400;font-size:26px;color:#FF8A93;white-space:nowrap}
+.tr-lista span{grid-column:1/-1;font-size:14.5px;color:#C5D1DF}
+@media (min-width:900px){.tr-grid{grid-template-columns:1fr 1fr;gap:60px;align-items:start}}
+
+/* gde i kada */
+.gde{padding:60px 0}
+.gde-grid{display:grid;gap:36px}
+.gde h2{font-size:clamp(46px,8vw,80px);margin-bottom:18px}
+.vreme{width:100%;border-collapse:collapse;font-size:18px}
+.vreme th,.vreme td{text-align:left;padding:10px 0;border-bottom:2px solid var(--linija)}
+.vreme th{font-weight:700}
+.vreme td{text-align:right;font-family:var(--head);font-size:24px}
+.vreme td.z{font-family:var(--body);font-size:16px;font-weight:600;color:var(--teget-sv)}
+.vreme tr.danas th,.vreme tr.danas td{color:var(--crvena)}
+.vreme tr.danas th::after{content:" danas";font-size:14px;font-weight:600}
+.preuz{margin-top:22px;border:3px solid var(--crvena);border-radius:4px;padding:16px 18px;background:#fff}
+.preuz strong{display:block;font-family:var(--head);font-weight:400;text-transform:uppercase;font-size:26px;color:var(--crvena);line-height:1.05;margin-bottom:6px}
+.adresa{font-family:var(--head);font-size:clamp(30px,4vw,40px);line-height:1;text-transform:uppercase}
+.adresa+p{margin-top:8px;color:var(--teget-sv)}
+.mapa{margin-top:18px;border:3px solid var(--teget);border-radius:4px;aspect-ratio:4/3;background:#E4EEE2}
+.mapa iframe{width:100%;height:100%;border:0;display:block}
+@media (min-width:900px){.gde-grid{grid-template-columns:1fr 1.25fr;gap:60px}.mapa{aspect-ratio:16/11}}
+
+/* upit */
+.upit{background:#fff;border-top:3px solid var(--teget);padding:60px 0 70px}
+.upit-grid{display:grid;gap:28px}
+.upit h2{font-size:clamp(56px,11vw,120px);color:var(--crvena)}
+.upit .uvod{margin-top:14px;max-width:38ch;color:var(--teget-sv)}
+.upit .uvod a{color:var(--teget);font-weight:800}
+.forma{display:grid;gap:18px}
+.red{display:grid;gap:18px}
+.pol{display:grid;gap:4px}
+.pol>label{font-weight:800;font-size:15px}
+.forma input[type=text],.forma input[type=tel],.forma input[type=date],.forma select,.forma textarea{width:100%;font:inherit;font-size:17px;color:var(--teget);background:var(--krem);border:0;border-bottom:3px solid var(--teget);border-radius:0;padding:12px 10px}
+.forma textarea{min-height:100px;resize:vertical}
+.forma input:focus,.forma select:focus,.forma textarea:focus{outline:none;border-bottom-color:var(--crvena);background:#FFF3F4}
+.forma ::placeholder{color:#6F8099}
+.ceki{display:flex;gap:12px;align-items:flex-start;font-weight:600}
+.ceki input{width:22px;height:22px;accent-color:var(--crvena);margin:2px 0 0;flex:none}
+.forma .dug{justify-self:start}
+.poruka{display:none;border-left:8px solid var(--crvena);background:var(--krem);padding:14px 16px;font-weight:700}
+.poruka.vidi{display:block}
+@media (min-width:640px){.red{grid-template-columns:1fr 1fr}}
+@media (min-width:900px){.upit-grid{grid-template-columns:.85fr 1.15fr;gap:60px;align-items:start}}
+
+footer{background:var(--teget);color:#D5DEE8;padding:30px 0 38px;font-size:15px}
+footer .wrap{display:grid;gap:14px}
+footer strong{font-family:var(--head);font-weight:400;text-transform:uppercase;font-size:24px;color:var(--krem)}
+footer a{color:#FFB3B9}
+footer .dn{border-top:1px solid #3B5275;padding-top:14px;font-size:13px}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .crta{animation:none;stroke-dasharray:none;stroke-dashoffset:0}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="karike" width="36" height="22" patternUnits="userSpaceOnUse">
+      <rect x="2" y="4" width="32" height="14" rx="7" fill="none" stroke="#1D3557" stroke-width="2.4"/>
+      <circle cx="9" cy="11" r="2.6" fill="#E63946"/>
+      <circle cx="27" cy="11" r="2.6" fill="#E63946"/>
+    </pattern>
+  </defs>
+</svg>
+
+<div class="demo" role="note"><div class="wrap"><span>Primer sajta · izradio opsforma</span><a href="../">Svi primeri</a></div></div>
+
+<header class="zag">
+  <div class="wrap">
+    <a class="logo" href="#pocetak" aria-label="Servis bicikala Pedala, na vrh strane">Pedala <small>servis bicikala</small></a>
+    <button class="meni-dugme" type="button" aria-expanded="false" aria-controls="meni">Meni <i aria-hidden="true"></i></button>
+    <nav class="meni" id="meni" aria-label="Glavni meni">
+      <ul>
+        <li><a href="#prolecni">Prolećni servis</a></li>
+        <li><a href="#paketi">Paketi</a></li>
+        <li><a href="#popravke">Popravke</a></li>
+        <li><a href="#trotineti">Trotineti</a></li>
+        <li><a href="#radno-vreme">Radno vreme</a></li>
+        <li><a href="#upit">Upit</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="pocetak">
+    <div class="wrap hero-grid">
+      <div>
+        <h1><span>Bicikl</span><span class="r">škripi?</span><span>Donesi.</span></h1>
+        <p class="ime">Servis bicikala Pedala, Dimitrija Tucovića 95</p>
+        <p class="uvod">Ako donesete do 12h, većinu popravki vraćamo isti dan. Radimo i električne bicikle i trotinete.</p>
+        <div class="cta">
+          <a class="dug dug-teget" href="tel:+381600000950">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z" stroke-linejoin="round"/></svg>
+            Pozovite</a>
+          <a class="dug dug-prazno" href="#upit">Pošaljite upit</a>
+        </div>
+      </div>
+      <svg class="bicikl" viewBox="30 70 565 315" role="img" aria-label="Ilustracija bicikla tankom linijom">
+        <!-- zadnji točak -->
+        <circle class="t crta" pathLength="1" cx="150" cy="270" r="112"/>
+        <circle class="t tanko crta" pathLength="1" cx="150" cy="270" r="100"/>
+        <!-- prednji točak -->
+        <circle class="t crta" pathLength="1" cx="478" cy="270" r="112"/>
+        <circle class="t tanko crta" pathLength="1" cx="478" cy="270" r="100"/>
+        <!-- žbice -->
+        <g class="t tanko">
+          <path class="crta" pathLength="1" d="M150 170V370M50 270H250M79 199l142 142M221 199L79 341M112 178l76 184M188 178l-76 184M58 232l184 76M242 232L58 308"/>
+          <path class="crta" pathLength="1" d="M478 170V370M378 270H578M407 199l142 142M549 199L407 341M440 178l76 184M516 178l-76 184M386 232l184 76M570 232l-184 76"/>
+        </g>
+        <circle class="t" cx="150" cy="270" r="7"/>
+        <circle class="t" cx="478" cy="270" r="7"/>
+        <!-- ram -->
+        <path class="t crta" pathLength="1" d="M150 270L300 272L262 128Z"/>
+        <path class="t crta" pathLength="1" d="M262 128L432 116L300 272"/>
+        <path class="t crta" pathLength="1" d="M432 116L422 152L478 270"/>
+        <!-- sedište i volan -->
+        <path class="t crta" pathLength="1" d="M262 128L254 98M222 94c18-6 44-6 62 0c-12 7-46 7-62 0z"/>
+        <path class="t crta" pathLength="1" d="M432 116L438 82M438 82h-8M438 82c22-4 40 4 44 18c3 10-6 18-14 14"/>
+        <!-- pogon -->
+        <circle class="c crta" pathLength="1" cx="300" cy="272" r="24"/>
+        <circle class="c tanko" cx="300" cy="272" r="18"/>
+        <path class="c tanko crta" pathLength="1" d="M300 248L150 262M300 296L150 278"/>
+        <path class="t crta" pathLength="1" d="M300 272L328 318M316 318h26"/>
+        <circle class="c" cx="150" cy="270" r="13"/>
+      </svg>
+    </div>
+  </section>
+
+  <div class="lanac-blok" aria-hidden="true"><svg class="lanac" focusable="false"><rect width="100%" height="100%" fill="url(#karike)"/></svg></div>
+
+  <section class="prolece" id="prolecni" aria-labelledby="prolece-n">
+    <div class="wrap prolece-grid">
+      <div>
+        <h2 id="prolece-n">Prolećni servis</h2>
+        <p class="meseci">Mart, april i maj. Bicikl je gotov za 24 sata.</p>
+      </div>
+      <div>
+        <p class="cena-velika">3.900<small>RSD</small></p>
+        <ul>
+          <li>Pranje bicikla i čišćenje pogona</li>
+          <li>Podešavanje kočnica i menjača</li>
+          <li>Centriranje oba točka</li>
+          <li>Provera sajli, ležajeva i guma</li>
+          <li>Pumpanje i podmazivanje lanca</li>
+        </ul>
+        <a class="dug dug-krem" href="#upit">Zakažite prolećni servis</a>
+        <p class="napom">Delovi koji se menjaju naplaćuju se posebno. Pre zamene vas zovemo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="paketi" id="paketi" aria-labelledby="paketi-n">
+    <div class="wrap">
+      <div class="naslov-red">
+        <h2 id="paketi-n">Paketi servisa</h2>
+        <p>Od brze provere do potpunog rasklapanja. Cena je za rad, delovi posebno.</p>
+      </div>
+      <p class="niz-hint">Prevucite levo za ostale pakete</p>
+      <div class="niz" tabindex="0" role="region" aria-label="Paketi servisa, horizontalni niz">
+        <article class="pk">
+          <h3>Brza provera</h3>
+          <p class="cena">1.200<small>RSD</small></p>
+          <p class="rok">30 minuta, dok čekate</p>
+          <ul><li>Pritisak u gumama</li><li>Kočnice i menjač, osnovno podešavanje</li><li>Zatezanje vijaka</li></ul>
+        </article>
+        <article class="pk">
+          <h3>Osnovni</h3>
+          <p class="cena">2.500<small>RSD</small></p>
+          <p class="rok">Isti dan</p>
+          <ul><li>Podešavanje kočnica i menjača</li><li>Blago centriranje točkova</li><li>Podmazivanje lanca</li><li>Provera ležajeva</li></ul>
+        </article>
+        <article class="pk istaknut">
+          <span class="oznaka">Mart–maj</span>
+          <h3>Prolećni</h3>
+          <p class="cena">3.900<small>RSD</small></p>
+          <p class="rok">24 sata</p>
+          <ul><li>Sve iz osnovnog</li><li>Pranje i čišćenje pogona</li><li>Centriranje oba točka</li><li>Provera sajli i guma</li></ul>
+        </article>
+        <article class="pk">
+          <h3>Kompletni</h3>
+          <p class="cena">7.500<small>RSD</small></p>
+          <p class="rok">2–3 dana</p>
+          <ul><li>Rasklapanje celog bicikla</li><li>Čišćenje i mazanje ležajeva: glava, osovina, točkovi</li><li>Zamena sajli i košuljica (rad)</li><li>Sklapanje i podešavanje</li></ul>
+        </article>
+        <article class="pk">
+          <h3>E-bicikl</h3>
+          <p class="cena">4.500<small>RSD</small></p>
+          <p class="rok">24 sata</p>
+          <ul><li>Sve iz osnovnog</li><li>Provera motora, baterije i konektora</li><li>Očitavanje grešaka gde sistem dozvoljava</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="lanac-blok" aria-hidden="true"><svg class="lanac" focusable="false"><rect width="100%" height="100%" fill="url(#karike)"/></svg></div>
+
+  <section class="popravke" id="popravke" aria-labelledby="popravke-n">
+    <div class="wrap">
+      <div class="naslov-red">
+        <h2 id="popravke-n">Pojedinačne popravke</h2>
+        <p>Kad ne treba ceo servis. Cene su za rad.</p>
+      </div>
+      <div class="pop-grid">
+        <div>
+          <ul class="cenovnik">
+            <li><span class="st">Krpljenje unutrašnje gume<small>Dok čekate, oko 15 minuta</small></span><span class="tk"></span><b>500 RSD</b></li>
+            <li><span class="st">Zamena unutrašnje gume<small>Guma od 600 RSD, imamo sve veličine</small></span><span class="tk"></span><b>400 RSD</b></li>
+            <li><span class="st">Zamena spoljne gume</span><span class="tk"></span><b>600 RSD</b></li>
+            <li><span class="st">Podešavanje kočnica<small>Po točku, V-kočnice i mehaničke disk</small></span><span class="tk"></span><b>500 RSD</b></li>
+            <li><span class="st">Odzračivanje hidraulične kočnice<small>Po kočnici, sa tečnošću</small></span><span class="tk"></span><b>1.500 RSD</b></li>
+            <li><span class="st">Zamena kočionih pločica</span><span class="tk"></span><b>600 RSD</b></li>
+            <li><span class="st">Centriranje točka<small>Bez zamene žbica</small></span><span class="tk"></span><b>900 RSD</b></li>
+            <li><span class="st">Podešavanje menjača<small>Prednji ili zadnji</small></span><span class="tk"></span><b>700 RSD</b></li>
+            <li><span class="st">Zamena lanca<small>Proveravamo i istrošenost kasete</small></span><span class="tk"></span><b>500 RSD</b></li>
+            <li><span class="st">Čišćenje i podmazivanje lanca</span><span class="tk"></span><b>600 RSD</b></li>
+          </ul>
+          <p class="napom">Plaćanje gotovinom ili karticom. Na rad dajemo garanciju 30 dana: ako se isto podešavanje poremeti, ispravljamo bez naplate.</p>
+        </div>
+        <div class="foto" role="img" aria-label="Mesto za fotografiju radionice"><span>Vaša fotografija: radionica</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trotineti" id="trotineti" aria-labelledby="trotineti-n">
+    <div class="wrap tr-grid">
+      <div>
+        <h2 id="trotineti-n">I električni <span>trotineti</span></h2>
+        <p class="uvod">Gume, kočnice i mehanika. Baterije i elektronske ploče ne popravljamo, ali vam kažemo gde da odnesete.</p>
+      </div>
+      <ul class="tr-lista">
+        <li><strong>Krpljenje ili zamena gume</strong><b>1.500 RSD</b><span>Rad, za točkove 8,5 i 10 inča. Unutrašnja guma od 900 RSD.</span></li>
+        <li><strong>Podešavanje kočnica</strong><b>1.000 RSD</b><span>Disk ili bubanj, prednja i zadnja.</span></li>
+        <li><strong>Mehanizam za sklapanje</strong><b>800 RSD</b><span>Zatezanje i podmazivanje kad volan klacka.</span></li>
+        <li><strong>Dijagnostika</strong><b>1.000 RSD</b><span>Odbija se od cene ako popravku radimo kod nas.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="gde" aria-label="Radno vreme i lokacija">
+    <div class="wrap gde-grid">
+      <div id="radno-vreme">
+        <h2>Radno vreme</h2>
+        <table class="vreme">
+          <caption class="sr-only">Radno vreme po danima</caption>
+          <tbody>
+            <tr data-dan="1"><th scope="row">Ponedeljak</th><td class="z">zatvoreno</td></tr>
+            <tr data-dan="2"><th scope="row">Utorak</th><td>10–19</td></tr>
+            <tr data-dan="3"><th scope="row">Sreda</th><td>10–19</td></tr>
+            <tr data-dan="4"><th scope="row">Četvrtak</th><td>10–19</td></tr>
+            <tr data-dan="5"><th scope="row">Petak</th><td>10–19</td></tr>
+            <tr data-dan="6"><th scope="row">Subota</th><td>10–16</td></tr>
+            <tr data-dan="0"><th scope="row">Nedelja</th><td class="z">zatvoreno</td></tr>
+          </tbody>
+        </table>
+        <div class="preuz">
+          <strong>Preuzimanje u kraju</strong>
+          <p>Na Zvezdari i Vračaru dođemo po bicikl i vratimo ga posle servisa. 800 RSD za oba pravca.</p>
+        </div>
+      </div>
+      <div id="lokacija">
+        <h2>Gde smo</h2>
+        <p class="adresa">Dimitrija Tucovića 95</p>
+        <p>Zvezdara, lokal u prizemlju sa ulice. Bicikl možete uvesti unutra, ima mesta za čekanje.</p>
+        <div class="mapa">
+          <iframe src="https://maps.google.com/maps?q=Dimitrija%20Tucovi%C4%87a%2095%2C%20Beograd&amp;z=15&amp;output=embed" title="Mapa: Servis bicikala Pedala, Dimitrija Tucovića 95, Beograd" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="upit" id="upit" aria-labelledby="upit-n">
+    <div class="wrap upit-grid">
+      <div>
+        <h2 id="upit-n">Pošaljite upit</h2>
+        <p class="uvod">Napišite šta vozite i šta ne radi. Javljamo se sa cenom i danom kada možete da donesete. Hitno? <a href="tel:+381600000950">060 000 09 50</a></p>
+      </div>
+      <!-- Web3Forms: action="https://api.web3forms.com/submit" + access_key -->
+      <form class="forma" id="forma" novalidate>
+        <div class="red">
+          <div class="pol"><label for="ime">Ime</label><input id="ime" name="ime" type="text" autocomplete="given-name" required></div>
+          <div class="pol"><label for="tel">Telefon</label><input id="tel" name="telefon" type="tel" autocomplete="tel" placeholder="06x xxx xx xx" required></div>
+        </div>
+        <div class="red">
+          <div class="pol"><label for="vozilo">Šta donosite</label>
+            <select id="vozilo" name="vozilo"><option>Bicikl</option><option>Električni bicikl</option><option>Električni trotinet</option></select>
+          </div>
+          <div class="pol"><label for="usluga">Usluga</label>
+            <select id="usluga" name="usluga"><option>Ne znam, treba pregled</option><option>Prolećni servis</option><option>Osnovni servis</option><option>Kompletni servis</option><option>Pojedinačna popravka</option></select>
+          </div>
+        </div>
+        <div class="pol"><label for="opis">Šta ne radi</label><textarea id="opis" name="opis" placeholder="Npr. lanac spada na najmanjem zupčaniku, zadnja kočnica slabo koči"></textarea></div>
+        <div class="pol"><label for="dan">Kada biste doneli</label><input id="dan" name="dan" type="date"></div>
+        <div class="ceki"><input type="checkbox" id="preuzimanje" name="preuzimanje"><label for="preuzimanje">Treba mi preuzimanje i vraćanje u kraju (800 RSD)</label></div>
+        <button class="dug dug-teget" type="submit">Pošaljite upit</button>
+        <p class="poruka" id="poruka" role="status" tabindex="-1"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div class="lanac-blok" aria-hidden="true" style="background:var(--krem)"><svg class="lanac" focusable="false"><rect width="100%" height="100%" fill="url(#karike)"/></svg></div>
+<footer>
+  <div class="wrap">
+    <p><strong>Pedala</strong><br>Servis bicikala, Dimitrija Tucovića 95, 11050 Beograd<br>Telefon: <a href="tel:+381600000950">060 000 09 50</a></p>
+    <p class="dn">Primer sajta · izradio opsforma. Firma, telefon i cene su izmišljeni za potrebe primera. <a href="../">Svi primeri</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.querySelector('.meni-dugme'),m=document.getElementById('meni');
+  function postavi(o){m.classList.toggle('otvoren',o);b.setAttribute('aria-expanded',String(o));b.firstChild.nodeValue=o?'Zatvori ':'Meni ';}
+  b.addEventListener('click',function(){postavi(b.getAttribute('aria-expanded')!=='true');});
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){postavi(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('otvoren')){postavi(false);b.focus();}});
+
+  var r=document.querySelector('.vreme tr[data-dan="'+new Date().getDay()+'"]');if(r)r.classList.add('danas');
+
+  var f=document.getElementById('forma'),p=document.getElementById('poruka');
+  f.addEventListener('submit',function(e){e.preventDefault();p.textContent='Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.';p.classList.add('vidi');p.focus();});
+})();
+</script>
+</body>
+</html>
