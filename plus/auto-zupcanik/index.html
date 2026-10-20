@@ -1,0 +1,834 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Auto centar Zupčanik – servis i dijagnostika, Živka Davidovića 52, Zvezdara</title>
+<meta name="description" content="Auto centar Zupčanik na Zvezdari: mali servis, dijagnostika, kočnice, trap, klima i zupčasti kaiš. Dve dizalice, cene rada unapred i zakazivanje termina online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600&family=Titillium+Web:wght@400;600;700&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --graf:#263238;
+  --graf-2:#2E3D44;
+  --graf-3:#36474F;
+  --plava:#29B6F6;
+  --bela:#ECEFF1;
+  --crvena:#D32F2F;
+  --siva:#A7B6BD;
+  --linija:rgba(236,239,241,.16);
+  --linija-j:rgba(41,182,246,.45);
+  --head:"Teko","Bahnschrift","Arial Narrow",sans-serif;
+  --body:"Titillium Web","Segoe UI","Trebuchet MS",Arial,sans-serif;
+  --cell:48px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--graf);color:var(--bela);font-family:var(--body);font-size:17px;line-height:1.55;
+  background-image:linear-gradient(var(--linija) 1px,transparent 1px),linear-gradient(90deg,var(--linija) 1px,transparent 1px);
+  background-size:100% 120px,120px 100%;background-attachment:fixed}
+h1,h2,h3{font-family:var(--head);font-weight:500;line-height:.95;margin:0;letter-spacing:.01em}
+p{margin:0}
+a{color:var(--plava)}
+button,input,textarea,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--plava);outline-offset:3px}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* traka primera */
+.demo{background:#1B2429;color:var(--siva);font-size:14px;border-bottom:1px solid var(--linija)}
+.demo .wrap{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;justify-content:space-between;padding:7px 0}
+.demo a{color:var(--bela);font-weight:600}
+.paket{display:inline-block;border:1px solid var(--plava);color:var(--plava);padding:0 8px;border-radius:3px;font-weight:700;font-size:13px;letter-spacing:.02em;white-space:nowrap}
+
+/* zaglavlje */
+.top{position:sticky;top:0;z-index:30;background:rgba(38,50,56,.96);border-bottom:1px solid var(--linija);backdrop-filter:blur(6px)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:62px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--bela);font-family:var(--head);font-size:30px;line-height:1;padding-top:4px}
+.logo svg{width:34px;height:34px;flex:none;margin-top:-4px}
+.meni-dugme{display:none;min-height:44px;min-width:44px;padding:0 14px;background:transparent;border:1px solid var(--linija-j);border-radius:4px;cursor:pointer;font-weight:600}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:4px}
+.nav a{display:block;padding:10px 12px;color:var(--bela);text-decoration:none;font-weight:600;font-size:15px;border-radius:4px}
+.nav a:hover{background:var(--graf-3)}
+
+/* paneli */
+.panel{position:relative;background:var(--graf-2);border:1px solid var(--linija);border-radius:6px;padding:22px}
+.panel::before{content:"";position:absolute;left:22px;right:22px;top:0;height:7px;
+  background:repeating-linear-gradient(90deg,var(--linija-j) 0 1px,transparent 1px 12px);opacity:.8}
+.oznaka{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--siva);font-weight:600;margin-bottom:12px}
+.oznaka i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--plava);box-shadow:0 0 0 3px rgba(41,182,246,.18)}
+
+/* hero */
+.hero{padding:34px 0 50px}
+.hero-g{display:grid;grid-template-columns:auto 1fr;gap:20px 48px;align-items:end;margin-bottom:28px}
+.hero-g .uvod{margin:0 0 12px;justify-self:end}
+.hero h1{font-size:clamp(64px,13vw,168px);font-weight:500;line-height:.82;margin-top:6px}
+.hero h1 span{display:block;color:var(--siva);font-size:.42em;font-weight:400;line-height:1.05;margin-bottom:.06em}
+.hero .uvod{max-width:56ch;color:var(--siva);font-size:18px;margin:14px 0 26px}
+.tabla{display:grid;grid-template-columns:1fr 1.35fr 1fr;gap:16px;align-items:stretch}
+.status-vel{font-family:var(--head);font-size:44px;line-height:.9;margin:4px 0 8px}
+.status-vel.zatv{color:#FF8A80}
+.mali{font-size:15px;color:var(--siva)}
+.skala-dan{margin-top:18px}
+.skala-dan .traka{position:relative;height:16px;border:1px solid var(--linija);border-radius:3px;background:repeating-linear-gradient(90deg,transparent 0 calc(100%/24 - 1px),var(--linija) calc(100%/24 - 1px) calc(100%/24))}
+.skala-dan .otv{position:absolute;top:2px;bottom:2px;background:var(--plava);border-radius:2px;opacity:.85}
+.skala-dan .sad{position:absolute;top:-5px;bottom:-5px;width:2px;background:#FF8A80}
+.skala-dan .br{display:flex;justify-content:space-between;font-size:12px;color:var(--siva);margin-top:4px}
+.najr{margin-top:22px;border-top:1px solid var(--linija);padding-top:16px}
+.najr-v{font-family:var(--head);font-size:32px;line-height:1;margin-bottom:6px}
+.najr-l{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
+.gauge-p{display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:12px}
+.gauge{width:100%;max-width:380px;height:auto}
+.gauge .igla{transform-origin:150px 150px;transition:transform 1.6s cubic-bezier(.25,1.4,.4,1)}
+.gauge-cap{font-size:15px;color:var(--siva);text-align:center;margin-top:-6px;max-width:30ch}
+.tel-vel{font-family:var(--head);font-size:46px;line-height:1;color:var(--bela);text-decoration:none;display:block;margin:4px 0 14px}
+.dug{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:10px 18px;border-radius:5px;font-weight:700;text-decoration:none;border:1px solid transparent;cursor:pointer;font-size:16px;line-height:1.2;text-align:center}
+.dug svg{width:20px;height:20px;flex:none}
+.dug-pl{background:var(--plava);color:#0E2430}
+.dug-pl:hover{background:#4FC3F7}
+.dug-cr{background:var(--crvena);color:#fff}
+.dug-cr:hover{background:#B71C1C}
+.dug-ok{background:transparent;color:var(--bela);border-color:var(--linija-j)}
+.dug-ok:hover{background:var(--graf-3)}
+.dugmad{display:grid;gap:10px}
+
+/* sekcije */
+section{padding:56px 0}
+.sek-g{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px 24px;border-bottom:1px solid var(--linija);padding-bottom:14px;margin-bottom:24px}
+.sek-g h2{font-size:clamp(46px,7vw,72px)}
+.sek-g p{color:var(--siva);max-width:52ch}
+
+/* usluge */
+.usluge{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.usl h3{font-size:31px;line-height:1;margin-bottom:6px}
+.usl p{color:var(--siva);font-size:15.5px}
+.usl .cena{font-family:var(--head);font-size:40px;line-height:1;color:var(--bela);margin-top:14px}
+.usl .cena small{font-family:var(--body);font-size:14px;color:var(--siva);margin-left:4px}
+.trajanje{margin-top:14px}
+.trajanje .t{display:flex;justify-content:space-between;font-size:13px;color:var(--siva);margin-bottom:4px}
+.trajanje .s{height:10px;border-radius:2px;border:1px solid var(--linija);position:relative;background:repeating-linear-gradient(90deg,transparent 0 calc(12.5% - 1px),var(--linija) calc(12.5% - 1px) 12.5%)}
+.trajanje .s b{position:absolute;left:0;top:1px;bottom:1px;background:var(--plava);border-radius:1px}
+.napomena{margin-top:18px;color:var(--siva);font-size:15px;max-width:70ch}
+
+/* zakazivanje */
+.zak{border-color:var(--linija-j)}
+.zak-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
+.izmisljeno{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#0E2430;background:#FFD54F;padding:3px 10px;border-radius:3px}
+.korak{border-top:1px solid var(--linija);padding:20px 0 4px;margin-top:16px}
+.korak h3{font-size:30px;display:flex;align-items:baseline;gap:10px;margin-bottom:12px}
+.korak h3 .br{font-family:var(--body);font-size:13px;font-weight:700;color:var(--graf);background:var(--plava);border-radius:50%;width:24px;height:24px;display:inline-grid;place-items:center;flex:none;transform:translateY(-3px)}
+.usl-izbor{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.usl-izbor button{min-height:64px;text-align:left;padding:10px 14px;background:var(--graf);border:1px solid var(--linija);border-radius:5px;cursor:pointer;display:grid;gap:2px}
+.usl-izbor button b{font-weight:700;font-size:16px;line-height:1.25}
+.usl-izbor button span{font-size:14px;color:var(--siva)}
+.usl-izbor button[aria-pressed="true"]{border-color:var(--plava);background:#20404F;box-shadow:inset 4px 0 0 var(--plava)}
+.dan-red{display:flex;align-items:stretch;gap:8px}
+.strel{min-width:48px;min-height:52px;border:1px solid var(--linija);background:var(--graf);border-radius:5px;cursor:pointer;font-size:22px;line-height:1}
+.strel:disabled{opacity:.35;cursor:not-allowed}
+.dan-dugme{flex:1 1 0;min-width:0;min-height:52px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:6px 16px;background:var(--graf);border:1px solid var(--plava);border-radius:5px;cursor:pointer;text-align:left}
+.dan-dugme .d{font-family:var(--head);font-size:30px;line-height:1;padding-top:4px}
+.dan-dugme .x{font-size:14px;color:var(--siva)}
+.dan-dugme svg{width:18px;height:18px;transition:transform .2s}
+.dan-dugme[aria-expanded="true"] svg{transform:rotate(180deg)}
+.dani-pad{margin-top:8px;background:var(--graf);border:1px solid var(--linija);border-radius:6px;padding:10px;max-width:470px}
+.dani-pad[hidden]{display:none}
+.seg{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--linija);border:1px solid var(--linija);border-radius:5px;overflow:hidden}
+.seg .h{background:var(--graf-2);font-size:12px;text-align:center;color:var(--siva);padding:4px 0}
+.seg button,.seg .prazno{min-height:48px;background:var(--graf);border:0;padding:4px 0;cursor:pointer;display:grid;place-items:center;line-height:1.1}
+.seg button b{font-family:var(--head);font-size:24px;font-weight:500;line-height:1;padding-top:3px}
+.seg button small{font-size:10.5px;color:var(--siva)}
+.seg button:hover:not(:disabled){background:var(--graf-3)}
+.seg button[aria-pressed="true"]{background:var(--plava);color:#0E2430}
+.seg button[aria-pressed="true"] small{color:#0E2430}
+.seg button:disabled{cursor:not-allowed;color:#71838B;background:repeating-linear-gradient(135deg,var(--graf) 0 6px,#2A383E 6px 8px)}
+.seg button:disabled b{text-decoration:line-through}
+.seg .prazno{cursor:default}
+.dani-legenda{font-size:13px;color:var(--siva);margin-top:8px}
+
+.tl-bar{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between;margin-bottom:10px}
+.legenda{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;color:var(--siva);list-style:none;margin:0;padding:0}
+.legenda li{display:flex;align-items:center;gap:6px}
+.legenda i{width:18px;height:12px;border-radius:2px;display:inline-block}
+.legenda .l1{background:var(--graf);border:1px solid var(--linija-j)}
+.legenda .l2{background:repeating-linear-gradient(135deg,#5C6E76 0 4px,#46575F 4px 8px)}
+.legenda .l3{background:var(--plava)}
+.legenda .l4{background:rgba(236,239,241,.08);border:1px solid var(--linija)}
+.tl-skrol{overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;border:1px solid var(--linija);border-radius:6px;background:var(--graf);scroll-snap-type:x proximity;scrollbar-color:var(--plava) var(--graf-2)}
+.tl{position:relative;padding:8px 10px 12px;width:max-content}
+.lenjir{display:grid;height:24px;font-size:12px;color:var(--siva);position:relative}
+.lenjir span{border-left:1px solid var(--linija);padding-left:4px;line-height:24px}
+.lenjir span.p{border-left-style:dashed}
+.lane-ime{position:sticky;left:10px;display:inline-flex;gap:8px;align-items:baseline;margin:10px 0 6px;font-size:14px;font-weight:700;background:var(--graf);padding-right:8px}
+.lane-ime em{font-style:normal;font-weight:400;color:var(--siva);font-size:13px}
+.lane{display:grid;grid-auto-rows:54px;border-top:1px solid var(--linija);border-bottom:1px solid var(--linija)}
+.lane > *{grid-row:1}
+.lane .c{border:0;border-right:1px solid var(--linija);background:transparent;cursor:pointer;padding:0;scroll-snap-align:start;position:relative;font-size:11.5px;color:var(--siva)}
+.lane .c::after{content:"";position:absolute;inset:8px 6px;border-radius:3px;border:1px dashed var(--linija-j)}
+.lane .c:hover::after,.lane .c:focus-visible::after{background:rgba(41,182,246,.18);border-style:solid;border-color:var(--plava)}
+.lane .c:focus-visible{outline-offset:-3px}
+.lane .k{border-right:1px solid var(--linija);background:rgba(236,239,241,.035)}
+.lane .z{margin:7px 2px;border-radius:4px;background:repeating-linear-gradient(135deg,#5C6E76 0 6px,#46575F 6px 12px);color:#E3E9EC;font-size:12.5px;font-weight:600;display:flex;align-items:center;padding:0 8px;overflow:hidden;white-space:nowrap;z-index:1}
+.lane .izb{margin:5px 1px;border-radius:4px;background:var(--plava);color:#0E2430;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:space-between;gap:6px;padding:0 10px;z-index:2;white-space:nowrap;overflow:hidden;box-shadow:0 0 0 2px #0E2430,0 0 0 4px var(--plava);pointer-events:none}
+.tl-prazno{padding:18px;color:var(--siva)}
+.svejedno{min-height:44px}
+.izabrano{margin-top:12px;min-height:26px;font-weight:600;color:var(--plava)}
+
+.forma-z{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.polje{display:grid;gap:5px}
+.polje.puno{grid-column:1/-1}
+.polje label{font-weight:600;font-size:15px}
+.polje input,.polje textarea{min-height:48px;padding:10px 12px;background:var(--graf);border:1px solid #5F737C;border-radius:5px;width:100%}
+.polje textarea{min-height:90px;resize:vertical}
+.polje input:focus-visible,.polje textarea:focus-visible{outline-offset:0;border-color:var(--plava)}
+.polje .gr{color:#FF8A80;font-size:14px;min-height:0}
+.polje [aria-invalid="true"]{border-color:#FF8A80}
+.cek{display:flex;gap:12px;align-items:flex-start;grid-column:1/-1;background:#20404F;border-left:4px solid var(--plava);padding:12px 14px;border-radius:4px;cursor:pointer}
+.cek input{width:24px;height:24px;margin:2px 0 0;accent-color:var(--plava);flex:none}
+.cek small{display:block;color:var(--siva);font-size:14px}
+.zak-dno{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:16px}
+.zak-gr{color:#FF8A80;font-weight:600}
+
+.potvrda{padding:6px 0}
+.potvrda h3{font-size:44px;color:var(--plava);margin-bottom:6px}
+.rez{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--linija);border:1px solid var(--linija);border-radius:6px;overflow:hidden;margin:16px 0}
+.rez div{background:var(--graf);padding:12px 14px}
+.rez dt{font-size:13px;color:var(--siva)}
+.rez dd{margin:0;font-family:var(--head);font-size:26px;line-height:1.05;padding-top:3px;overflow-wrap:anywhere}
+
+/* radno vreme */
+.rv{display:grid;gap:0}
+.rv-red{display:grid;grid-template-columns:120px 1fr 120px;align-items:center;gap:16px;padding:10px 0;border-bottom:1px solid var(--linija)}
+.rv-red .dn{font-weight:700}
+.rv-red .vr{font-family:var(--head);font-size:26px;line-height:1;text-align:right;padding-top:3px}
+.rv-red.zat .vr{color:#FF8A80}
+.rv-red.danas{background:linear-gradient(90deg,rgba(41,182,246,.12),transparent)}
+.rv-red.danas .dn::after{content:" (danas)";font-weight:400;color:var(--plava)}
+.rv-s{position:relative;height:14px;border:1px solid var(--linija);border-radius:3px;background:repeating-linear-gradient(90deg,transparent 0 calc(100%/14 - 1px),var(--linija) calc(100%/14 - 1px) calc(100%/14))}
+.rv-s b{position:absolute;top:2px;bottom:2px;background:var(--plava);border-radius:2px}
+.rv-osa{display:grid;grid-template-columns:120px 1fr 120px;gap:16px;font-size:12px;color:var(--siva);padding-top:6px}
+.rv-osa div{display:flex;justify-content:space-between}
+
+/* lokacija i kontakt */
+.dva{display:grid;grid-template-columns:1.1fr 1fr;gap:16px}
+.mapa{width:100%;height:100%;min-height:330px;border:0;border-radius:4px;display:block;filter:grayscale(.3)}
+.adr{font-family:var(--head);font-size:40px;line-height:1;margin:2px 0 10px}
+.lista{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:8px;color:var(--siva)}
+.lista li{padding-left:18px;position:relative}
+.lista li::before{content:"";position:absolute;left:0;top:.65em;width:8px;height:2px;background:var(--plava)}
+.foto{margin-top:16px;aspect-ratio:16/9;border-radius:4px;background:repeating-linear-gradient(135deg,#33444B 0 14px,#2F3F46 14px 28px);display:flex;align-items:flex-end;padding:10px;font-size:13px;color:var(--siva)}
+.k-forma{display:grid;gap:14px}
+.k-poruka{font-weight:600;color:var(--plava);min-height:1.5em}
+
+footer{border-top:1px solid var(--linija);padding:30px 0 40px;color:var(--siva);font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 30px;justify-content:space-between}
+footer strong{color:var(--bela);font-family:var(--head);font-size:26px;font-weight:500;display:block;line-height:1}
+footer a{color:var(--bela)}
+
+@media (max-width:1000px){
+  .tabla{grid-template-columns:1fr 1fr}
+  .hero-g{grid-template-columns:1fr}
+  .hero-g .uvod{justify-self:start}
+  .gauge-p{grid-column:1/-1;order:-1}
+  .usluge{grid-template-columns:1fr 1fr}
+  .usl-izbor{grid-template-columns:1fr 1fr}
+  .rez{grid-template-columns:repeat(2,1fr)}
+  .rez div:last-child:nth-child(odd){grid-column:1/-1}
+}
+@media (max-width:760px){
+  .meni-dugme{display:inline-flex;align-items:center;gap:8px}
+  .nav{position:absolute;left:0;right:0;top:100%;background:var(--graf);border-bottom:1px solid var(--linija-j);display:none}
+  .nav.otvoren{display:block}
+  .nav ul{flex-direction:column;padding:8px 16px 16px}
+  .nav a{padding:12px 6px;font-size:18px;border-bottom:1px solid var(--linija)}
+  .tabla,.usluge,.dva{grid-template-columns:1fr}
+  .usl-izbor{grid-template-columns:1fr}
+  .forma-z{grid-template-columns:1fr}
+  .panel{padding:18px 16px}
+  .panel::before{left:16px;right:16px}
+  .rv-red{grid-template-columns:92px 1fr;gap:6px 12px}
+  .rv-red .rv-s{grid-column:1/-1;grid-row:2}
+  .rv-osa{display:none}
+  .hero{padding-top:22px}
+  section{padding:40px 0}
+  .tel-vel{font-size:40px}
+  .mapa{min-height:260px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demo" role="note"><div class="wrap"><span>Primer sajta · izradio opsforma</span><span class="paket">Paket 3: Plus</span><a href="../../">Svi primeri</a></div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#pocetak" aria-label="Auto centar Zupčanik, na vrh strane">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#29B6F6" stroke-width="2.4"><circle cx="20" cy="20" r="10"/><circle cx="20" cy="20" r="3.5"/></g><g fill="#29B6F6"><rect x="17.5" y="3" width="5" height="6" rx="1"/><rect x="17.5" y="31" width="5" height="6" rx="1"/><rect x="3" y="17.5" width="6" height="5" rx="1"/><rect x="31" y="17.5" width="6" height="5" rx="1"/><rect x="17.5" y="3" width="5" height="6" rx="1" transform="rotate(45 20 20)"/><rect x="17.5" y="3" width="5" height="6" rx="1" transform="rotate(135 20 20)"/><rect x="17.5" y="3" width="5" height="6" rx="1" transform="rotate(225 20 20)"/><rect x="17.5" y="3" width="5" height="6" rx="1" transform="rotate(315 20 20)"/></g></svg>
+      Zupčanik
+    </a>
+    <button class="meni-dugme" type="button" aria-expanded="false" aria-controls="meni">
+      <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 5h16M2 10h16M2 15h16" stroke="currentColor" stroke-width="2"/></svg>Meni</button>
+    <nav class="nav" id="meni" aria-label="Glavni meni">
+      <ul>
+        <li><a href="#usluge">Usluge i cene</a></li>
+        <li><a href="#zakazivanje">Zakazivanje</a></li>
+        <li><a href="#radno-vreme">Radno vreme</a></li>
+        <li><a href="#lokacija">Lokacija</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="pocetak">
+    <div class="wrap">
+      <div class="hero-g">
+      <h1><span>Auto centar</span>Zupčanik</h1>
+      <p class="uvod">Servis, dijagnostika, kočnice i trap na dve dizalice, u Živka Davidovića 52. Termin zakažete ovde, auto ide na dizalicu u dogovoreno vreme. Cenu rada znate pre nego što dođete.</p>
+      </div>
+
+      <div class="tabla">
+        <div class="panel">
+          <p class="oznaka"><i></i>Radionica danas</p>
+          <p class="status-vel" id="status-vel">Pon–pet 08–17</p>
+          <p class="mali" id="status-mali">Subotom 08–14, nedeljom ne radimo.</p>
+          <div class="skala-dan" aria-hidden="true">
+            <div class="traka"><b class="otv" id="sk-otv" style="left:33.3%;width:37.5%"></b><b class="sad" id="sk-sad" hidden></b></div>
+            <div class="br"><span>00</span><span>06</span><span>12</span><span>18</span><span>24</span></div>
+          </div>
+          <div class="najr">
+            <p class="oznaka" style="margin:0 0 4px"><i></i>Prvi slobodan termin za mali servis</p>
+            <p class="najr-v" id="najr">–</p>
+            <a href="#zakazivanje" class="najr-l">Izaberite drugi termin</a>
+          </div>
+        </div>
+
+        <div class="panel gauge-p">
+          <p class="oznaka"><i></i><span id="g-oznaka">Slobodno danas na obe dizalice</span></p>
+          <svg class="gauge" id="gauge" viewBox="0 0 300 236" role="img" aria-labelledby="g-opis">
+            <title id="g-opis">Obrtomer slobodnih sati na dizalicama</title>
+            <g id="g-skala"></g>
+            <g class="igla" id="igla" style="transform:rotate(-120deg)">
+              <path d="M150 150 L146 154 L150 44 L154 154 Z" fill="#D32F2F"/>
+            </g>
+            <circle cx="150" cy="150" r="13" fill="#263238" stroke="#29B6F6" stroke-width="2"/>
+            <text x="150" y="210" text-anchor="middle" fill="#ECEFF1" font-family="Teko, 'Arial Narrow', sans-serif" font-size="46" id="g-broj">–</text>
+            <text x="150" y="230" text-anchor="middle" fill="#A7B6BD" font-family="'Titillium Web', Arial, sans-serif" font-size="13">sati slobodno</text>
+          </svg>
+          <p class="gauge-cap" id="g-cap">Kazaljka pokazuje koliko je sati na dizalicama još slobodno.</p>
+        </div>
+
+        <div class="panel">
+          <p class="oznaka"><i></i>Telefon i Viber</p>
+          <a class="tel-vel" href="tel:+381600000510">060 000 05 10</a>
+          <div class="dugmad">
+            <a class="dug dug-pl" href="tel:+381600000510">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>Pozovite</a>
+            <a class="dug dug-cr" href="#zakazivanje">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Zakažite termin</a>
+            <a class="dug dug-ok" href="viber://chat?number=%2B381600000510">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5h16v11H10l-5 4v-4H4z" stroke-linejoin="round"/></svg>Pišite na Viber</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="usluge" aria-labelledby="usluge-h">
+    <div class="wrap">
+      <div class="sek-g">
+        <h2 id="usluge-h">Usluge i cene rada</h2>
+        <p>Cene su za rad, sa PDV-om. Delove nabavljamo po ceni sa računa, a možete doneti i svoje.</p>
+      </div>
+      <div class="usluge" id="usluge-lista"></div>
+      <p class="napomena">Ako pri pregledu nađemo još nešto, javimo vam se pre nego što počnemo. Ništa se ne radi bez vašeg odobrenja.</p>
+    </div>
+  </section>
+
+  <section id="zakazivanje" aria-labelledby="zak-h">
+    <div class="wrap">
+      <div class="sek-g">
+        <h2 id="zak-h">Zakazivanje</h2>
+        <p>Izaberite uslugu, dan i slobodno mesto na jednoj od dve dizalice. Plaćate u radionici, gotovinom ili karticom.</p>
+      </div>
+
+<!--
+  PRODUKCIJA
+  Ovaj modul u pregledaču samo simulira zauzetost. Na pravom sajtu postoje dve varijante:
+
+  a) Zahtev za termin: dugme „Zakaži termin“ šalje rezime (usluga, dizalica, dan, vreme, ime, telefon,
+     napomena, podsetnik) na vlasnikov mejl preko Web3Forms:
+       <form action="https://api.web3forms.com/submit" method="POST">
+         <input type="hidden" name="access_key" value="VAŠ-WEB3FORMS-KLJUČ">
+         ...
+     ili otvara Viber poruku sa istim rezimeom (viber://forward?text=...). Vlasnik potvrđuje termin
+     pozivom ili porukom. Podsetnik dan ranije šalje se ručno ili preko SMS servisa.
+
+  b) Povezan kalendar: umesto ovog modula ugrađuje se Google Kalendar „Appointment schedule“,
+     Cal.com ili Calendly (iframe/embed), sa po jednim kalendarom za Dizalicu 1 i Dizalicu 2.
+     Termini se sami upisuju u vlasnikov Google Kalendar na telefonu, a servis šalje podsetnik dan ranije.
+-->
+      <div class="panel zak" id="zak-modul">
+        <div class="zak-top">
+          <span class="paket">Paket 3: Plus · dve dizalice · podsetnik</span>
+          <span class="izmisljeno">Primer: termini su izmišljeni</span>
+        </div>
+
+        <div id="zak-tok">
+          <div class="korak">
+            <h3><span class="br">1</span>Usluga</h3>
+            <div class="usl-izbor" id="usl-izbor" role="group" aria-label="Izbor usluge"></div>
+          </div>
+
+          <div class="korak">
+            <h3><span class="br">2</span>Dan</h3>
+            <div class="dan-red">
+              <button type="button" class="strel" id="dan-pre" aria-label="Prethodni radni dan">‹</button>
+              <button type="button" class="dan-dugme" id="dan-dugme" aria-expanded="false" aria-controls="dani-pad">
+                <span><span class="d" id="dan-tekst">–</span><br><span class="x" id="dan-x">Dodirnite za izbor dana</span></span>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 7l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>
+              </button>
+              <button type="button" class="strel" id="dan-sl" aria-label="Sledeći radni dan">›</button>
+            </div>
+            <div class="dani-pad" id="dani-pad" hidden>
+              <div class="seg" id="seg" role="group" aria-label="Narednih 14 dana"></div>
+              <p class="dani-legenda">Precrtano: ne radimo ili nema mesta za izabranu uslugu.</p>
+            </div>
+          </div>
+
+          <div class="korak">
+            <h3><span class="br">3</span>Dizalica i vreme</h3>
+            <div class="tl-bar">
+              <ul class="legenda" aria-hidden="true">
+                <li><i class="l1"></i>slobodno, dodirnite</li>
+                <li><i class="l2"></i>zauzeto</li>
+                <li><i class="l4"></i>premalo mesta za uslugu</li>
+                <li><i class="l3"></i>vaš termin</li>
+              </ul>
+              <button type="button" class="dug dug-ok svejedno" id="svejedno">Svejedno koja dizalica: prvi slobodan</button>
+            </div>
+            <div class="tl-skrol" id="tl-skrol" tabindex="-1">
+              <div class="tl" id="tl"></div>
+            </div>
+            <p class="izabrano" id="izabrano" aria-live="polite"></p>
+          </div>
+
+          <form class="korak" id="zak-forma" novalidate>
+            <h3><span class="br">4</span>Vaši podaci</h3>
+            <div class="forma-z">
+              <div class="polje">
+                <label for="z-ime">Ime i prezime</label>
+                <input id="z-ime" name="ime" autocomplete="name" required>
+                <span class="gr" id="z-ime-gr"></span>
+              </div>
+              <div class="polje">
+                <label for="z-tel">Telefon</label>
+                <input id="z-tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel" required placeholder="06x xxx xx xx">
+                <span class="gr" id="z-tel-gr"></span>
+              </div>
+              <div class="polje puno">
+                <label for="z-nap">Napomena (marka, model, godište, šta primećujete)</label>
+                <textarea id="z-nap" name="napomena"></textarea>
+              </div>
+              <label class="cek" for="z-pods">
+                <input type="checkbox" id="z-pods" name="podsetnik" checked>
+                <span><b>Podsetnik dan ranije</b><small>SMS u 18 h dan pre termina, sa adresom i vremenom.</small></span>
+              </label>
+            </div>
+            <div class="zak-dno">
+              <button type="submit" class="dug dug-cr">Zakaži termin</button>
+              <span class="zak-gr" id="zak-gr" aria-live="assertive"></span>
+            </div>
+          </form>
+        </div>
+
+        <div class="potvrda" id="potvrda" hidden tabindex="-1">
+          <h3>Termin je zakazan</h3>
+          <p class="mali">Ovo je primer. Na pravom sajtu potvrdu dobijate i mejlom, a radionica vidi termin odmah.</p>
+          <dl class="rez" id="rez"></dl>
+          <div class="zak-dno">
+            <button type="button" class="dug dug-pl" id="ics">Dodaj u kalendar</button>
+            <button type="button" class="dug dug-ok" id="novi">Novi termin</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="radno-vreme" aria-labelledby="rv-h">
+    <div class="wrap">
+      <div class="sek-g">
+        <h2 id="rv-h">Radno vreme</h2>
+        <p>Auto možete ostaviti i ujutru pre 08 h, uz dogovor.</p>
+      </div>
+      <div class="panel">
+        <div class="rv" id="rv"></div>
+        <div class="rv-osa" aria-hidden="true"><span></span><div><span>06</span><span>09</span><span>12</span><span>15</span><span>18</span><span>20</span></div><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lokacija" aria-labelledby="lok-h">
+    <div class="wrap">
+      <div class="sek-g">
+        <h2 id="lok-h">Lokacija</h2>
+        <p>Ulaz u radionicu iz dvorišta, parking za šest auta.</p>
+      </div>
+      <div class="dva">
+        <div class="panel" style="padding:8px">
+          <iframe class="mapa" title="Mapa: Živka Davidovića 52, Beograd" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=%C5%BDivka%20Davidovi%C4%87a%2052%2C%20Beograd&z=15&output=embed"></iframe>
+        </div>
+        <div class="panel">
+          <p class="oznaka"><i></i>Adresa</p>
+          <p class="adr">Živka Davidovića 52, Zvezdara</p>
+          <ul class="lista">
+            <li>Autobusi 32E i 25P, stanica Živka Davidovića.</li>
+            <li>Plaćanje gotovinom ili karticom u radionici.</li>
+            <li>Auto vraćamo opran spolja posle velikog servisa.</li>
+          </ul>
+          <div class="foto" aria-hidden="true">Vaša fotografija</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" aria-labelledby="kon-h">
+    <div class="wrap">
+      <div class="sek-g">
+        <h2 id="kon-h">Kontakt</h2>
+        <p>Pitanje za cenu ili deo? Pišite, odgovaramo isti dan.</p>
+      </div>
+      <div class="dva">
+        <div class="panel">
+<!--
+  PRODUKCIJA (kontakt forma): na pravom sajtu forma ide preko Web3Forms na vlasnikov mejl:
+    <form action="https://api.web3forms.com/submit" method="POST" data-form="kontakt">
+      <input type="hidden" name="access_key" value="VAŠ-WEB3FORMS-KLJUČ">
+      <input type="hidden" name="subject" value="Poruka sa sajta Zupčanik">
+  i ne poziva se preventDefault.
+-->
+          <form class="k-forma" data-form="kontakt" id="k-forma">
+            <div class="polje"><label for="k-ime">Ime</label><input id="k-ime" name="ime" autocomplete="name" required></div>
+            <div class="polje"><label for="k-tel">Telefon ili mejl</label><input id="k-tel" name="kontakt" required></div>
+            <div class="polje"><label for="k-por">Poruka</label><textarea id="k-por" name="poruka" required></textarea></div>
+            <button type="submit" class="dug dug-pl">Pošaljite poruku</button>
+            <p class="k-poruka" id="k-poruka" aria-live="polite"></p>
+          </form>
+        </div>
+        <div class="panel">
+          <p class="oznaka"><i></i>Direktno</p>
+          <a class="tel-vel" href="tel:+381600000510">060 000 05 10</a>
+          <div class="dugmad">
+            <a class="dug dug-pl" href="tel:+381600000510">Pozovite</a>
+            <a class="dug dug-ok" href="viber://chat?number=%2B381600000510">Pišite na Viber</a>
+          </div>
+          <ul class="lista">
+            <li>Za hitne stvari pozovite, poruke čitamo između dva auta.</li>
+            <li>Pošaljite broj šasije i dobićete tačnu cenu delova.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong>Auto centar Zupčanik</strong>Živka Davidovića 52, Zvezdara · <a href="tel:+381600000510">060 000 05 10</a></div>
+    <div>Primer sajta · izradio opsforma · <a href="../../">Svi primeri</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var FIRMA="Auto centar Zupčanik", ADRESA="Živka Davidovića 52, Beograd", SLUG="auto-zupcanik";
+var pad=function(n){return String(n).padStart(2,"0")};
+var DN=["nedelja","ponedeljak","utorak","sreda","četvrtak","petak","subota"];
+var DK=["Ned","Pon","Uto","Sre","Čet","Pet","Sub"];
+var MES=["januara","februara","marta","aprila","maja","juna","jula","avgusta","septembra","oktobra","novembra","decembra"];
+// radno vreme u minutima od ponoći, indeks = getDay()
+var RV={0:null,1:[480,1020],2:[480,1020],3:[480,1020],4:[480,1020],5:[480,1020],6:[480,840]};
+var KORAK=30;
+var USLUGE=[
+  {id:"dij",ime:"Kompjuterska dijagnostika",min:60,cena:3000,opis:"Očitavanje grešaka i kratak izveštaj: šta je hitno, a šta može da sačeka."},
+  {id:"mali",ime:"Mali servis",min:90,cena:7500,opis:"Ulje, filter ulja, vazduha i kabine, provera kočnica i tečnosti."},
+  {id:"koc",ime:"Kočnice, jedna osovina",min:90,cena:5500,opis:"Zamena pločica i diskova, čišćenje i podmazivanje čeljusti."},
+  {id:"trap",ime:"Trap, pregled i zamena",min:120,cena:6500,od:true,opis:"Spone, krajevi, ramena i amortizeri. Cena zavisi od broja delova."},
+  {id:"klima",ime:"Klima, servis i punjenje",min:60,cena:4800,opis:"Provera curenja, punjenje gasom i zamena filtera kabine."},
+  {id:"kais",ime:"Zupčasti kaiš sa pumpom",min:240,cena:14000,od:true,opis:"Kaiš, zatezač i pumpa za vodu u jednom dolasku. Auto je gotov isti dan."}
+];
+var DIZ=[{id:1,ime:"Dizalica 1",opis:"dvostubna"},{id:2,ime:"Dizalica 2",opis:"makaze, za trap"}];
+var rsd=function(n){return n.toLocaleString("sr-RS").replace(/,/g,".")+" RSD"};
+var hm=function(m){return pad(Math.floor(m/60))+":"+pad(m%60)};
+
+/* usluge na stranici */
+var ul=document.getElementById("usluge-lista");
+USLUGE.forEach(function(u){
+  var a=document.createElement("article");a.className="panel usl";
+  var h=u.min/60;
+  a.innerHTML='<h3>'+u.ime+'</h3><p>'+u.opis+'</p><div class="trajanje"><div class="t"><span>Trajanje</span><span>'+(h%1?String(h).replace(".",","):h)+' h</span></div><div class="s" aria-hidden="true"><b style="width:'+(u.min/240*100)+'%"></b></div></div><p class="cena">'+(u.od?"od ":"")+rsd(u.cena)+'<small>rad</small></p>';
+  ul.appendChild(a);
+});
+
+/* datumi */
+var sada=new Date();
+var danas=new Date(sada.getFullYear(),sada.getMonth(),sada.getDate());
+var sadaMin=sada.getHours()*60+sada.getMinutes();
+var DANI=[];
+for(var i=0;i<14;i++){var d=new Date(danas);d.setDate(danas.getDate()+i);DANI.push(d)}
+var kljuc=function(d){return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())};
+
+/* deterministična zauzetost po danu i dizalici */
+function seed(s){var h=2166136261;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
+function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+var kes={};
+function zauzeto(d,diz){
+  var k=kljuc(d)+"#"+diz;if(kes[k])return kes[k];
+  var rv=RV[d.getDay()];if(!rv)return kes[k]=[];
+  var n=(rv[1]-rv[0])/KORAK,b=[],r=rng(seed(k));
+  for(var i=0;i<n;i++)b.push(false);
+  var j=Math.floor(r()*3);
+  while(j<n){if(r()<0.36){var L=2+Math.floor(r()*3);for(var q=j;q<Math.min(n,j+L);q++)b[q]=true;j+=L}else{j+=1+Math.floor(r()*4)}}
+  return kes[k]=b;
+}
+/* početni termini koji staju: sve ćelije slobodne, kraj pre zatvaranja, za danas ne u prošlosti */
+function pocetci(d,diz,min){
+  var rv=RV[d.getDay()];if(!rv)return [];
+  var b=zauzeto(d,diz),n=b.length,L=min/KORAK,out=[],jeDanas=kljuc(d)===kljuc(danas);
+  for(var i=0;i+L<=n;i++){
+    var t=rv[0]+i*KORAK;
+    if(jeDanas&&t<=sadaMin+30)continue;
+    var ok=true;for(var q=i;q<i+L;q++)if(b[q]){ok=false;break}
+    if(ok)out.push(i);
+  }
+  return out;
+}
+function imaMesta(d,min){return DIZ.some(function(z){return pocetci(d,z.id,min).length>0})}
+
+/* stanje */
+var S={usl:USLUGE[1],dan:null,diz:null,idx:null};
+
+/* obrtomer */
+(function(){
+  var g=document.getElementById("g-skala"),cx=150,cy=150,R=118,MAX=18,A0=-120,A1=120,NS="http://www.w3.org/2000/svg";
+  function pt(a,r){var rad=(a-90)*Math.PI/180;return [cx+r*Math.cos(rad),cy+r*Math.sin(rad)]}
+  function ang(v){return A0+(A1-A0)*v/MAX}
+  function arc(v0,v1,r){var p0=pt(ang(v0),r),p1=pt(ang(v1),r),big=(ang(v1)-ang(v0))>180?1:0;return "M"+p0[0]+" "+p0[1]+" A"+r+" "+r+" 0 "+big+" 1 "+p1[0]+" "+p1[1]}
+  function el(n,at){var e=document.createElementNS(NS,n);for(var k in at)e.setAttribute(k,at[k]);g.appendChild(e);return e}
+  el("path",{d:arc(0,MAX,R+6),fill:"none",stroke:"rgba(236,239,241,.16)","stroke-width":"1"});
+  el("path",{d:arc(0,2,R-4),fill:"none",stroke:"#D32F2F","stroke-width":"8"});
+  el("path",{d:arc(2,MAX,R-4),fill:"none",stroke:"rgba(41,182,246,.25)","stroke-width":"8"});
+  for(var v=0;v<=MAX;v+=0.5){
+    var maj=v%2===0,p0=pt(ang(v),R+2),p1=pt(ang(v),maj?R-18:R-10);
+    el("line",{x1:p0[0],y1:p0[1],x2:p1[0],y2:p1[1],stroke:maj?"#ECEFF1":"#A7B6BD","stroke-width":maj?2.4:1});
+    if(maj){var tp=pt(ang(v),R-32);var t=el("text",{x:tp[0],y:tp[1]+7,"text-anchor":"middle",fill:"#ECEFF1","font-size":"21","font-family":"Teko, 'Arial Narrow', sans-serif"});t.textContent=v}
+  }
+  // koliko je slobodno: danas ako još radimo, inače prvi sledeći radni dan
+  var cilj=null,naziv="danas";
+  for(var i=0;i<DANI.length;i++){
+    var d=DANI[i],rv=RV[d.getDay()];if(!rv)continue;
+    if(i===0&&sadaMin>=rv[1]-30)continue;
+    cilj=d;naziv=i===0?"danas":(i===1?"sutra":"u "+(d.getDay()===3?"sredu":d.getDay()===6?"subotu":DN[d.getDay()]));break;
+  }
+  var sati=0;
+  if(cilj){var rv2=RV[cilj.getDay()],jd=kljuc(cilj)===kljuc(danas);
+    DIZ.forEach(function(z){zauzeto(cilj,z.id).forEach(function(b,i){var t=rv2[0]+i*KORAK;if(!b&&(!jd||t>=sadaMin))sati+=0.5})})}
+  document.getElementById("g-broj").textContent=String(sati).replace(".",",");
+  document.getElementById("g-oznaka").textContent="Slobodno "+naziv+" na obe dizalice";
+  document.getElementById("g-cap").textContent=naziv==="danas"?"Još toliko sati danas imamo mesta. Primer: brojka je izmišljena.":"Danas smo završili. Ovoliko sati je slobodno "+naziv+". Primer: brojka je izmišljena.";
+  var igla=document.getElementById("igla");
+  requestAnimationFrame(function(){requestAnimationFrame(function(){igla.style.transform="rotate("+ang(Math.min(sati,MAX))+"deg)"})});
+})();
+
+/* status danas + skala dana */
+(function(){
+  var rv=RV[danas.getDay()],v=document.getElementById("status-vel"),m=document.getElementById("status-mali");
+  var sl=null;for(var i=1;i<8;i++){var d=new Date(danas);d.setDate(danas.getDate()+i);if(RV[d.getDay()]){sl=d;break}}
+  var otv=document.getElementById("sk-otv"),sad=document.getElementById("sk-sad");
+  if(rv){otv.style.left=(rv[0]/1440*100)+"%";otv.style.width=((rv[1]-rv[0])/1440*100)+"%"}else{otv.style.width="0"}
+  sad.hidden=false;sad.style.left=(sadaMin/1440*100)+"%";
+  if(rv&&sadaMin>=rv[0]&&sadaMin<rv[1]){v.textContent="Otvoreno do "+hm(rv[1]).slice(0,2)+" h";m.textContent="Crvena crta je sada. Plavo je radno vreme danas."}
+  else{v.textContent="Sada zatvoreno";v.classList.add("zatv");var sr=RV[sl.getDay()];
+    m.textContent=(rv&&sadaMin<rv[0])?"Otvaramo danas u "+hm(rv[0])+".":"Otvaramo "+(sl.getTime()-danas.getTime()===864e5?"sutra":DN[sl.getDay()])+" u "+hm(sr[0])+". Termin možete zakazati već sada."}
+})();
+
+/* radno vreme */
+(function(){
+  var rv=document.getElementById("rv"),red=[1,2,3,4,5,6,0];
+  red.forEach(function(g){
+    var r=RV[g],div=document.createElement("div");
+    div.className="rv-red"+(r?"":" zat")+(g===danas.getDay()?" danas":"");
+    var bar=r?'<b style="left:'+((r[0]-360)/840*100)+'%;width:'+((r[1]-r[0])/840*100)+'%"></b>':"";
+    div.innerHTML='<span class="dn">'+DN[g].charAt(0).toUpperCase()+DN[g].slice(1)+'</span><div class="rv-s" aria-hidden="true">'+bar+'</div><span class="vr">'+(r?hm(r[0])+"–"+hm(r[1]):"zatvoreno")+'</span>';
+    rv.appendChild(div);
+  });
+})();
+
+/* korak 1: usluge */
+var ui=document.getElementById("usl-izbor");
+USLUGE.forEach(function(u){
+  var b=document.createElement("button");b.type="button";b.dataset.id=u.id;
+  b.innerHTML="<b>"+u.ime+"</b><span>"+(u.min>=60?(u.min/60+"").replace(".",",")+" h":u.min+" min")+" · "+(u.od?"od ":"")+rsd(u.cena)+"</span>";
+  b.setAttribute("aria-pressed",u===S.usl?"true":"false");
+  b.addEventListener("click",function(){S.usl=u;S.idx=null;S.diz=null;
+    [].forEach.call(ui.children,function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});
+    if(!S.dan||!imaMesta(S.dan,u.min))S.dan=prviDan();crtajDane();crtajTL();});
+  ui.appendChild(b);
+});
+
+/* korak 2: dani */
+var seg=document.getElementById("seg"),danDug=document.getElementById("dan-dugme"),pad2=document.getElementById("dani-pad");
+function radan(d){return !!RV[d.getDay()]&&imaMesta(d,S.usl.min)}
+function prviDan(){for(var i=0;i<DANI.length;i++)if(radan(DANI[i]))return DANI[i];return null}
+function opisDana(d){var i=Math.round((d-danas)/864e5);return (i===0?"danas, ":i===1?"sutra, ":"")+DN[d.getDay()]}
+function crtajDane(){
+  seg.innerHTML="";
+  ["Pon","Uto","Sre","Čet","Pet","Sub","Ned"].forEach(function(h){var s=document.createElement("span");s.className="h";s.textContent=h;s.setAttribute("aria-hidden","true");seg.appendChild(s)});
+  var pomeraj=(danas.getDay()+6)%7;
+  for(var p=0;p<pomeraj;p++){var e=document.createElement("span");e.className="prazno";seg.appendChild(e)}
+  DANI.forEach(function(d){
+    var b=document.createElement("button");b.type="button";var ok=radan(d),zat=!RV[d.getDay()];
+    b.innerHTML="<b>"+d.getDate()+"</b><small>"+(zat?"ne radimo":ok?MES[d.getMonth()].slice(0,3):"puno")+"</small>";
+    b.dataset.datum=kljuc(d);b.disabled=!ok;
+    b.setAttribute("aria-label",DN[d.getDay()]+" "+d.getDate()+". "+MES[d.getMonth()]+(zat?", ne radimo":ok?"":", nema mesta"));
+    b.setAttribute("aria-pressed",S.dan&&kljuc(S.dan)===kljuc(d)?"true":"false");
+    b.addEventListener("click",function(){S.dan=d;S.idx=null;S.diz=null;zatvoriPad();crtajDane();crtajTL();danDug.focus()});
+    seg.appendChild(b);
+  });
+  var t=document.getElementById("dan-tekst"),x=document.getElementById("dan-x");
+  if(S.dan){t.textContent=DK[S.dan.getDay()]+" "+S.dan.getDate()+". "+MES[S.dan.getMonth()];x.textContent=opisDana(S.dan)+" · dodirnite za drugi dan"}
+  else{t.textContent="Nema slobodnih dana";x.textContent="Pozovite nas za termin"}
+  document.getElementById("dan-pre").disabled=!susedni(-1);
+  document.getElementById("dan-sl").disabled=!susedni(1);
+}
+function susedni(sm){if(!S.dan)return null;var i=DANI.findIndex(function(d){return kljuc(d)===kljuc(S.dan)});for(var j=i+sm;j>=0&&j<DANI.length;j+=sm)if(radan(DANI[j]))return DANI[j];return null}
+function zatvoriPad(){pad2.hidden=true;danDug.setAttribute("aria-expanded","false")}
+danDug.addEventListener("click",function(){var o=pad2.hidden;pad2.hidden=!o;danDug.setAttribute("aria-expanded",o?"true":"false");if(o){var s=seg.querySelector('[aria-pressed="true"]')||seg.querySelector("button:not(:disabled)");if(s)s.focus()}});
+pad2.addEventListener("keydown",function(e){if(e.key==="Escape"){zatvoriPad();danDug.focus()}});
+document.getElementById("dan-pre").addEventListener("click",function(){var d=susedni(-1);if(d){S.dan=d;S.idx=null;S.diz=null;crtajDane();crtajTL()}});
+document.getElementById("dan-sl").addEventListener("click",function(){var d=susedni(1);if(d){S.dan=d;S.idx=null;S.diz=null;crtajDane();crtajTL()}});
+
+/* korak 3: vremenska linija po dizalici */
+var tl=document.getElementById("tl"),skrol=document.getElementById("tl-skrol"),izab=document.getElementById("izabrano");
+function crtajTL(){
+  tl.innerHTML="";
+  if(!S.dan){tl.innerHTML='<p class="tl-prazno">Nema slobodnih termina u narednih 14 dana. Pozovite nas.</p>';izab.textContent="";return}
+  var rv=RV[S.dan.getDay()],n=(rv[1]-rv[0])/KORAK,L=S.usl.min/KORAK,cell,cell=Math.max(48,Math.floor((skrol.clientWidth-22)/n)),cols="repeat("+n+","+cell+"px)";
+  var len=document.createElement("div");len.className="lenjir";len.style.gridTemplateColumns=cols;len.setAttribute("aria-hidden","true");
+  for(var i=0;i<n;i++){var s=document.createElement("span");var t=rv[0]+i*KORAK;s.textContent=t%60===0?pad(t/60):"";if(t%60)s.className="p";len.appendChild(s)}
+  tl.appendChild(len);
+  var prviX=null;
+  DIZ.forEach(function(z){
+    var ime=document.createElement("div");ime.className="lane-ime";ime.id="lane-"+z.id;ime.innerHTML=z.ime+" <em>"+z.opis+"</em>";tl.appendChild(ime);
+    var lane=document.createElement("div");lane.className="lane";lane.dataset.diz=z.id;lane.style.gridTemplateColumns=cols;
+    lane.setAttribute("role","group");lane.setAttribute("aria-labelledby","lane-"+z.id);
+    var b=zauzeto(S.dan,z.id),ok=pocetci(S.dan,z.id,S.usl.min);
+    var i=0;
+    while(i<n){
+      if(b[i]){var j=i;while(j<n&&b[j])j++;var zz=document.createElement("div");zz.className="z";zz.style.gridColumn=(i+1)+" / span "+(j-i);
+        zz.dataset.od=hm(rv[0]+i*KORAK);zz.textContent=j-i>1?"zauzeto":"";zz.setAttribute("aria-label","zauzeto "+hm(rv[0]+i*KORAK)+"–"+hm(rv[0]+j*KORAK));zz.setAttribute("role","img");
+        lane.appendChild(zz);i=j;continue}
+      var t=rv[0]+i*KORAK;
+      if(ok.indexOf(i)>=0){
+        var c=document.createElement("button");c.type="button";c.className="c";c.style.gridColumn=String(i+1);
+        c.dataset.vreme=hm(t);c.dataset.diz=z.id;c.textContent=hm(t);
+        c.setAttribute("aria-label",z.ime+", početak "+hm(t)+", kraj "+hm(t+S.usl.min));
+        c.setAttribute("aria-pressed",S.diz===z.id&&S.idx===i?"true":"false");
+        (function(ii){c.addEventListener("click",function(){izaberi(z.id,ii)})})(i);
+        lane.appendChild(c);if(prviX===null||i<prviX)prviX=i;
+      }else{var k=document.createElement("div");k.className="k";k.style.gridColumn=String(i+1);k.title="Ne staje do sledećeg zauzetog ili do zatvaranja";lane.appendChild(k)}
+      i++;
+    }
+    if(S.diz===z.id&&S.idx!==null){var bar=document.createElement("div");bar.className="izb";bar.style.gridColumn=(S.idx+1)+" / span "+L;
+      bar.innerHTML="<span>"+hm(rv[0]+S.idx*KORAK)+"–"+hm(rv[0]+S.idx*KORAK+S.usl.min)+"</span><span>"+S.usl.ime.split(",")[0]+"</span>";lane.appendChild(bar)}
+    tl.appendChild(lane);
+  });
+  if(S.idx===null){izab.textContent="Dodirnite slobodno polje na jednoj od dizalica. Linija se pomera levo-desno.";
+    if(prviX!==null){var pc=tl.querySelector(".c");skrol.scrollLeft=0;if(pc)skrol.scrollLeft=Math.max(0,pc.offsetLeft-30)}}
+}
+function izaberi(diz,i){
+  S.diz=diz;S.idx=i;var x=skrol.scrollLeft;crtajTL();skrol.scrollLeft=x;
+  var rv=RV[S.dan.getDay()],t=rv[0]+i*KORAK;
+  izab.textContent="Izabrano: "+DIZ[diz-1].ime+", "+DN[S.dan.getDay()]+" "+S.dan.getDate()+". "+MES[S.dan.getMonth()]+", "+hm(t)+"–"+hm(t+S.usl.min)+".";
+  var f=tl.querySelector('.c[data-diz="'+diz+'"][data-vreme="'+hm(t)+'"]');if(f)f.focus({preventScroll:true});
+  document.getElementById("zak-gr").textContent="";
+}
+document.getElementById("svejedno").addEventListener("click",function(){
+  if(!S.dan)return;var best=null;
+  DIZ.forEach(function(z){var p=pocetci(S.dan,z.id,S.usl.min);if(p.length&&(!best||p[0]<best[1]))best=[z.id,p[0]]});
+  if(best){izaberi(best[0],best[1]);var bb=tl.querySelector(".izb");if(bb)skrol.scrollLeft=Math.max(0,bb.offsetLeft-30)}
+});
+
+/* korak 4: forma */
+var forma=document.getElementById("zak-forma");
+function greska(id,txt){var i=document.getElementById(id);document.getElementById(id+"-gr").textContent=txt;i.setAttribute("aria-invalid",txt?"true":"false");if(txt)i.setAttribute("aria-describedby",id+"-gr");return !txt}
+forma.addEventListener("submit",function(e){
+  e.preventDefault();
+  var ime=document.getElementById("z-ime").value.trim(),tel=document.getElementById("z-tel").value.trim();
+  var a=greska("z-ime",ime.length<2?"Upišite ime da znamo koga čekamo.":"");
+  var b=greska("z-tel",tel.replace(/\D/g,"").length<8?"Upišite broj telefona, najmanje 8 cifara.":"");
+  var g=document.getElementById("zak-gr");
+  if(S.idx===null){g.textContent="Izaberite slobodno polje na vremenskoj liniji (korak 3).";return}
+  if(!a||!b){g.textContent="Proverite ime i telefon.";(a?document.getElementById("z-tel"):document.getElementById("z-ime")).focus();return}
+  g.textContent="";potvrdi(ime,tel);
+});
+var T=null;
+function potvrdi(ime,tel){
+  var rv=RV[S.dan.getDay()],t=rv[0]+S.idx*KORAK,pods=document.getElementById("z-pods").checked;
+  var poc=new Date(S.dan);poc.setHours(Math.floor(t/60),t%60,0,0);var kraj=new Date(poc.getTime()+S.usl.min*6e4);
+  T={poc:poc,kraj:kraj,usl:S.usl,diz:DIZ[S.diz-1],ime:ime,tel:tel,pods:pods,nap:document.getElementById("z-nap").value.trim()};
+  var pre=new Date(S.dan);pre.setDate(pre.getDate()-1);
+  var red=[["Usluga",S.usl.ime],["Dizalica",T.diz.ime],["Dan",DN[poc.getDay()]+" "+poc.getDate()+". "+MES[poc.getMonth()]],["Vreme",hm(t)+"–"+hm(t+S.usl.min)],
+    ["Trajanje",(S.usl.min/60+"").replace(".",",")+" h"],["Cena rada",(S.usl.od?"od ":"")+rsd(S.usl.cena)],["Ime",ime],["Telefon",tel],
+    ["Podsetnik",pods?"SMS, "+DN[pre.getDay()]+" u 18 h":"bez podsetnika"]];
+  var rez=document.getElementById("rez");rez.innerHTML="";
+  red.forEach(function(r){var d=document.createElement("div");var dt=document.createElement("dt");dt.textContent=r[0];var dd=document.createElement("dd");dd.textContent=r[1];d.appendChild(dt);d.appendChild(dd);rez.appendChild(d)});
+  document.getElementById("zak-tok").hidden=true;var p=document.getElementById("potvrda");p.hidden=false;
+  document.getElementById("zak-modul").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});p.focus({preventScroll:true});
+}
+function icsD(d){return d.getUTCFullYear()+pad(d.getUTCMonth()+1)+pad(d.getUTCDate())+"T"+pad(d.getUTCHours())+pad(d.getUTCMinutes())+"00Z"}
+function esc(s){return String(s).replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\r?\n/g,"\\n")}
+document.getElementById("ics").addEventListener("click",function(){
+  if(!T)return;
+  var L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//opsforma//primer "+SLUG+"//SR","CALSCALE:GREGORIAN","METHOD:PUBLISH","BEGIN:VEVENT",
+    "UID:"+Date.now()+"-"+Math.random().toString(36).slice(2,9)+"@"+SLUG+".opsforma",
+    "DTSTAMP:"+icsD(new Date()),"DTSTART:"+icsD(T.poc),"DTEND:"+icsD(T.kraj),
+    "SUMMARY:"+esc(FIRMA+": "+T.usl.ime),"LOCATION:"+esc(ADRESA),
+    "DESCRIPTION:"+esc(T.diz.ime+". Cena rada "+(T.usl.od?"od ":"")+rsd(T.usl.cena)+". Telefon radionice 060 000 05 10."+(T.nap?" Napomena: "+T.nap:""))];
+  if(T.pods)L.push("BEGIN:VALARM","ACTION:DISPLAY","DESCRIPTION:"+esc("Sutra: "+FIRMA),"TRIGGER:-P1D","END:VALARM");
+  L.push("END:VEVENT","END:VCALENDAR");
+  var blob=new Blob([L.join("\r\n")+"\r\n"],{type:"text/calendar;charset=utf-8"});
+  var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="termin-"+SLUG+".ics";document.body.appendChild(a);a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},1500);
+});
+document.getElementById("novi").addEventListener("click",function(){
+  T=null;S.idx=null;S.diz=null;forma.reset();document.getElementById("potvrda").hidden=true;document.getElementById("zak-tok").hidden=false;
+  crtajDane();crtajTL();document.querySelector("#usl-izbor button[aria-pressed='true']").focus();
+});
+
+S.dan=prviDan();crtajDane();crtajTL();
+(function(){var u=USLUGE[1];for(var i=0;i<DANI.length;i++){var d=DANI[i],best=null;DIZ.forEach(function(z){var p=pocetci(d,z.id,u.min);if(p.length&&(!best||p[0]<best[1]))best=[z,p[0]]});
+  if(best){var t=RV[d.getDay()][0]+best[1]*KORAK;document.getElementById("najr").textContent=(i===0?"Danas":i===1?"Sutra":DK[d.getDay()]+" "+d.getDate()+".")+" u "+hm(t)+", "+best[0].ime;return}}})();
+
+/* meni */
+var mb=document.querySelector(".meni-dugme"),nav=document.getElementById("meni");
+function meni(o){nav.classList.toggle("otvoren",o);mb.setAttribute("aria-expanded",o?"true":"false")}
+mb.addEventListener("click",function(){meni(mb.getAttribute("aria-expanded")!=="true")});
+nav.addEventListener("click",function(e){if(e.target.closest("a"))meni(false)});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&mb.getAttribute("aria-expanded")==="true"){meni(false);mb.focus()}});
+
+/* kontakt */
+document.getElementById("k-forma").addEventListener("submit",function(e){e.preventDefault();
+  document.getElementById("k-poruka").textContent="Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku."});
+})();
+</script>
+</body>
+</html>

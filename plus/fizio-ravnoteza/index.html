@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Fizio kabinet Ravnoteža – fizioterapija, Vjekoslava Kovača 11, Zvezdara</title>
+<meta name="description" content="Fizio kabinet Ravnoteža na Zvezdari. Manuelna terapija, vežbe za kičmu, oporavak posle povreda i operacija. Dva fizioterapeuta, online zakazivanje termina.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --krem:#F5F1E6; --suma:#10372E; --kajsija:#FF8552; --lan:#E9E2CF;
+  --suma-2:#2B5248; --kajsija-tamna:#B4461A; --linija:rgba(16,55,46,.18);
+  --naslov:"Bricolage Grotesque","Trebuchet MS","Segoe UI",sans-serif;
+  --tekst:"Public Sans","Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--krem);color:var(--suma);font-family:var(--tekst);font-size:1.0625rem;line-height:1.6;-webkit-text-size-adjust:100%}
+img,svg{max-width:100%}
+a{color:inherit}
+p{margin:0 0 1em}
+h1,h2,h3{font-family:var(--naslov);margin:0;line-height:1.02;letter-spacing:-.02em;font-weight:800}
+:focus-visible{outline:3px solid var(--kajsija-tamna);outline-offset:3px;border-radius:2px}
+[hidden]{display:none!important}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:min(1240px,100% - 32px);margin-inline:auto}
+
+/* demo traka */
+.demo{background:var(--suma);color:var(--lan);font-size:.8125rem;padding:7px 0;border-bottom:1px solid rgba(233,226,207,.2)}
+.demo .wrap{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;justify-content:space-between}
+.demo a{color:#fff}
+.paket{display:inline-block;background:var(--kajsija);color:var(--suma);font-weight:700;border-radius:99px;padding:2px 10px;font-size:.75rem}
+
+/* zaglavlje */
+.top{position:sticky;top:0;z-index:40;background:var(--krem);border-bottom:1px solid var(--linija)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--naslov);font-weight:800;font-size:1.3rem;letter-spacing:-.02em}
+.logo small{display:block;font-family:var(--tekst);font-weight:400;font-size:.75rem;letter-spacing:0;opacity:.8}
+.menu-btn{display:none;min-width:44px;min-height:44px;border:1.5px solid var(--suma);background:transparent;color:var(--suma);border-radius:99px;font:600 .9375rem var(--tekst);padding:0 16px;cursor:pointer}
+#meni{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+#meni a{display:block;padding:10px 12px;text-decoration:none;font-weight:600;font-size:.9375rem;border-radius:99px}
+#meni a:hover{background:var(--lan)}
+#meni .cta a{background:var(--suma);color:var(--krem)}
+@media (max-width:860px){
+  .menu-btn{display:inline-flex;align-items:center}
+  #meni{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;background:var(--krem);border-bottom:1px solid var(--linija);padding:8px 16px 16px}
+  #meni.open{display:flex}
+  #meni a{padding:14px 12px;font-size:1.0625rem}
+}
+
+/* hero */
+.hero{background:var(--suma);color:var(--krem);overflow:hidden;position:relative}
+.hero .wrap{padding:56px 0 0}
+@media (min-width:861px){.hero .wrap:first-child{padding-top:72px}}
+.hero h1{font-size:clamp(2.75rem,8.4vw,6.4rem);max-width:12ch;font-weight:800}
+.hero .uvod{max-width:46ch;margin:22px 0 0;font-size:1.125rem;color:var(--lan)}
+.hero .akcije{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:99px;font:700 1rem var(--tekst);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-k{background:var(--kajsija);color:var(--suma)}
+.btn-k:hover{background:#ff9a6e}
+.btn-o{border-color:var(--lan);color:var(--krem);background:transparent}
+.btn-o:hover{background:rgba(233,226,207,.1)}
+.btn-s{background:var(--suma);color:var(--krem)}
+.btn-s:hover{background:var(--suma-2)}
+.btn-l{border-color:var(--suma);color:var(--suma);background:transparent}
+.figura{display:block;width:100%;height:auto;margin-top:-210px;position:relative;z-index:0;pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.kicma circle{opacity:0;animation:pal .3s ease forwards}
+.kicma circle:nth-child(1){animation-delay:1.6s}.kicma circle:nth-child(2){animation-delay:1.75s}.kicma circle:nth-child(3){animation-delay:1.9s}.kicma circle:nth-child(4){animation-delay:2.05s}.kicma circle:nth-child(5){animation-delay:2.2s}
+@keyframes pal{to{opacity:1}}
+@media (max-width:860px){.figura{margin-top:8px;height:230px}}
+.figura .ln{fill:none;stroke:var(--kajsija);stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.figura .tlo{stroke:var(--lan);stroke-width:2}
+.figura .ln{stroke-dasharray:3200;stroke-dashoffset:3200;animation:crt 2.6s cubic-bezier(.6,.1,.3,1) .2s forwards}
+@keyframes crt{to{stroke-dashoffset:0}}
+.hero .cinjenice{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(233,226,207,.25);margin-top:-2px}
+.hero .cinjenice div{padding:16px 16px 20px 0;font-size:.9375rem;color:var(--lan)}
+.hero .cinjenice b{display:block;color:var(--krem);font-family:var(--naslov);font-size:1.25rem;font-weight:600}
+@media (max-width:640px){.hero .cinjenice{grid-template-columns:1fr}.hero .cinjenice div{padding:12px 0;border-bottom:1px solid rgba(233,226,207,.15)}}
+
+/* podeljene sekcije: leva polovina lepljiva */
+.sek{border-bottom:1px solid var(--linija)}
+.sek .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:0}
+.sek .levo{position:sticky;top:64px;align-self:start;padding:72px 48px 48px 0}
+.sek .levo h2{font-size:clamp(2.1rem,4.4vw,3.6rem)}
+.sek .levo p{margin-top:16px;max-width:34ch;color:var(--suma-2)}
+.sek .desno{padding:72px 0 72px 56px;position:relative;min-width:0}
+.sek .desno::before{content:"";position:absolute;left:0;top:0;bottom:0;width:24px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='160' viewBox='0 0 24 160'%3E%3Cpath d='M4 0 C 4 40, 20 40, 20 80 S 4 120, 4 160' fill='none' stroke='%2310372E' stroke-width='1.5'/%3E%3Ccircle cx='12' cy='80' r='2.5' fill='%23FF8552'/%3E%3C/svg%3E") repeat-y;opacity:.55}
+.sek.lan{background:var(--lan)}
+@media (max-width:860px){
+  .sek .wrap{grid-template-columns:1fr}
+  .sek .levo{position:static;padding:48px 0 8px}
+  .sek .desno{padding:24px 0 52px 32px}
+}
+
+/* sa čim dolazite */
+.tegobe{list-style:none;margin:0;padding:0}
+.tegobe li{padding:20px 0;border-bottom:1px solid var(--linija);display:grid;grid-template-columns:minmax(0,1fr);gap:4px}
+.tegobe li:first-child{padding-top:0}
+.tegobe h3{font-size:1.5rem;font-weight:600}
+.tegobe p{margin:0;color:var(--suma-2);max-width:56ch}
+
+/* cene */
+.cene{width:100%;border-collapse:collapse}
+.cene td{padding:16px 0;border-bottom:1px solid var(--linija);vertical-align:top}
+.cene td:last-child{text-align:right;white-space:nowrap;font-family:var(--naslov);font-weight:600;font-size:1.25rem;padding-left:16px}
+.cene .ime{font-weight:700;display:block}
+.cene .opis{display:block;font-size:.9375rem;line-height:1.45;color:var(--suma-2);margin-top:2px}
+.napomena{margin-top:20px;font-size:.9375rem;color:var(--suma-2)}
+
+/* terapeuti */
+.tim{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.foto{aspect-ratio:4/5;background:repeating-linear-gradient(135deg,#ddd4bd 0 10px,#e3dbc6 10px 20px);border-radius:180px 180px 8px 8px;display:flex;align-items:flex-end;padding:14px;font-size:.75rem;color:var(--suma-2)}
+.tim h3{font-size:1.6rem;margin-top:16px}
+.tim p{margin:6px 0 0;color:var(--suma-2)}
+@media (max-width:520px){.tim{grid-template-columns:1fr}}
+
+/* prvi dolazak */
+.koraci{list-style:none;counter-reset:k;margin:0;padding:0}
+.koraci li{counter-increment:k;position:relative;padding:0 0 28px 64px}
+.koraci li::before{content:counter(k);position:absolute;left:0;top:-4px;width:44px;height:44px;border-radius:50%;background:var(--kajsija);color:var(--suma);font:800 1.25rem var(--naslov);display:grid;place-items:center}
+.koraci h3{font-size:1.3rem;font-weight:600;margin-bottom:4px}
+.koraci p{margin:0;color:var(--suma-2)}
+
+/* ZAKAZIVANJE */
+.zak{background:#fff;border:1.5px solid var(--suma);border-radius:20px;padding:24px;min-width:0}
+.zak-glava{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;align-items:center;margin-bottom:18px}
+.primer{display:inline-block;background:var(--lan);border-radius:6px;padding:4px 10px;font-size:.8125rem;font-weight:600}
+.korak{margin:0 0 22px}
+.korak > .lbl{display:block;font-weight:700;margin-bottom:10px;font-size:.9375rem}
+.usluge{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.izbor{min-height:44px;text-align:left;border:1.5px solid var(--linija);background:var(--krem);color:var(--suma);border-radius:12px;padding:10px 14px;font:inherit;cursor:pointer;line-height:1.3}
+.izbor small{display:block;font-size:.8125rem;color:var(--suma-2)}
+.izbor[aria-pressed="true"]{border-color:var(--suma);background:var(--suma);color:var(--krem)}
+.izbor[aria-pressed="true"] small{color:var(--lan)}
+.terapeut{display:inline-flex;background:var(--lan);border-radius:99px;padding:4px;gap:4px}
+.terapeut button{min-height:44px;min-width:104px;border:0;border-radius:99px;background:transparent;font:700 1rem var(--tekst);color:var(--suma);cursor:pointer;padding:0 18px}
+.terapeut button[aria-pressed="true"]{background:var(--suma);color:var(--krem)}
+.ter-info{font-size:.875rem;color:var(--suma-2);margin:8px 0 0}
+.nedelja{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
+.nedelja strong{font-family:var(--naslov);font-weight:600;font-size:1.15rem;text-align:center}
+.strela{min-width:44px;min-height:44px;border-radius:50%;border:1.5px solid var(--suma);background:transparent;color:var(--suma);font-size:1.2rem;cursor:pointer}
+.strela:disabled{opacity:.3;cursor:not-allowed}
+.legenda{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.8125rem;color:var(--suma-2);margin:10px 0 0}
+.legenda span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.legenda .l1::before{background:#fff;border:1.5px solid var(--suma)}
+.legenda .l2::before{background:repeating-linear-gradient(135deg,#cfc6ad 0 3px,var(--lan) 3px 6px)}
+.legenda .l3::before{background:var(--kajsija)}
+
+/* tabela nedelje (desktop) */
+.tabela-wrap{overflow:hidden}
+table.ned{width:100%;border-collapse:separate;border-spacing:3px;table-layout:fixed;font-size:.8125rem}
+table.ned th{font-weight:600;padding:4px 0 6px;line-height:1.2}
+table.ned thead th span{display:block;font-family:var(--naslov);font-size:1.05rem;font-weight:800}
+table.ned thead th.zatv{color:#8a8673}
+table.ned tbody th{text-align:right;padding-right:6px;color:var(--suma-2);font-weight:400;width:48px}
+table.ned td{padding:0;height:30px}
+.c{width:100%;height:30px;border-radius:5px;border:1.5px solid var(--suma);background:#fff;color:var(--suma);font:600 .75rem var(--tekst);cursor:pointer;padding:0}
+.c:hover{background:#ffe1d3}
+.c[aria-pressed="true"]{background:var(--kajsija);border-color:var(--kajsija);color:var(--suma)}
+.c-z{display:block;height:30px;border-radius:5px;background:repeating-linear-gradient(135deg,#cfc6ad 0 3px,var(--lan) 3px 6px)}
+.c-n{display:block;height:30px;border-radius:5px;background:transparent}
+td.zatv{background:rgba(233,226,207,.55);border-radius:0}
+/* mobilni prikaz: dani kao tabovi */
+.mob{display:none}
+.tabovi{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;margin-bottom:12px}
+.tab{min-height:56px;border:1.5px solid var(--linija);border-radius:10px;background:var(--krem);color:var(--suma);font:600 .75rem var(--tekst);cursor:pointer;padding:4px 0;line-height:1.15}
+.tab b{display:block;font-family:var(--naslov);font-size:1.1rem}
+.tab[aria-selected="true"]{background:var(--suma);color:var(--krem);border-color:var(--suma)}
+.tab:disabled{opacity:.45;cursor:not-allowed;text-decoration:line-through}
+.redovi{list-style:none;margin:0;padding:0;border-top:1px solid var(--linija)}
+.redovi li{border-bottom:1px solid var(--linija)}
+.red{display:flex;width:100%;justify-content:space-between;align-items:center;min-height:48px;padding:0 12px;background:transparent;border:0;font:inherit;color:var(--suma);cursor:pointer;text-align:left}
+.red b{font-family:var(--naslov);font-size:1.15rem;font-weight:600}
+.red span{font-size:.875rem;font-weight:600}
+button.red:hover{background:#fff4ee}
+.red[aria-pressed="true"]{background:var(--kajsija)}
+.red.zauz{cursor:default;color:#7d786a;background:repeating-linear-gradient(135deg,transparent 0 6px,rgba(16,55,46,.05) 6px 9px)}
+.red.zauz b{text-decoration:line-through;font-weight:400}
+.prazno{padding:16px 0;color:var(--suma-2)}
+@media (max-width:760px){.desk{display:none}.mob{display:block}.usluge{grid-template-columns:1fr}}
+
+.forma-z{display:grid;gap:14px;margin-top:6px}
+.izabrano{background:var(--krem);border-radius:12px;padding:12px 14px;font-weight:600}
+.polje label{display:block;font-weight:700;font-size:.9375rem;margin-bottom:6px}
+.polje input,.polje textarea,.polje select{width:100%;min-height:48px;border:1.5px solid var(--suma);border-radius:10px;background:#fff;padding:10px 12px;font:inherit;color:var(--suma)}
+.polje textarea{min-height:90px;resize:vertical}
+.greska{color:#A3300B;font-size:.875rem;font-weight:600;margin-top:4px;min-height:0}
+.ck{display:flex;gap:12px;align-items:flex-start;font-size:.9375rem;cursor:pointer}
+.ck input{width:24px;height:24px;margin:2px 0 0;accent-color:var(--suma);flex:none}
+.potvrda{text-align:left}
+.potvrda h3{font-size:2rem;margin-bottom:10px}
+.potvrda dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 18px;margin:18px 0;padding:16px;background:var(--krem);border-radius:12px}
+.potvrda dt{color:var(--suma-2)}
+.potvrda dd{margin:0;font-weight:700}
+.potvrda .akcije{display:flex;flex-wrap:wrap;gap:10px}
+.mala{font-size:.875rem;color:var(--suma-2)}
+
+/* radno vreme */
+.vreme{width:100%;border-collapse:collapse;font-size:1rem}
+.vreme th,.vreme td{text-align:left;padding:11px 0;border-bottom:1px solid var(--linija);font-weight:400}
+.vreme th{font-weight:700;width:38%}
+.vreme tr.danas th,.vreme tr.danas td{color:var(--kajsija-tamna)}
+.mapa{margin-top:28px;border-radius:16px;overflow:hidden;border:1.5px solid var(--suma);aspect-ratio:4/3}
+.mapa iframe{width:100%;height:100%;border:0;display:block}
+.adresa{font-family:var(--naslov);font-size:1.6rem;font-weight:600;line-height:1.2;margin:0 0 6px}
+
+/* kontakt */
+form.kontakt{display:grid;gap:16px}
+.poruka{background:var(--suma);color:var(--krem);padding:14px 16px;border-radius:12px;font-weight:600}
+.kont-dugmad{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+
+footer{background:var(--suma);color:var(--lan);padding:48px 0 40px;font-size:.9375rem}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}
+footer .logo{color:var(--krem)}
+footer a{color:var(--krem)}
+.demo-podn{grid-column:1/-1;border-top:1px solid rgba(233,226,207,.25);padding-top:18px;margin:8px 0 0}
+@media (max-width:640px){footer .wrap{grid-template-columns:1fr}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .figura .ln{stroke-dashoffset:0}
+  .kicma circle{opacity:1}
+}
+</style>
+</head>
+<body>
+
+<div class="demo">
+  <div class="wrap">
+    <span>Primer sajta · izradio opsforma · <a href="../../">Svi primeri</a></span>
+    <span class="paket">Paket 3: Plus</span>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#pocetak">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#FF8552"/><path d="M12 30 C 8 22, 22 18, 17 11 S 14 5, 19 3" fill="none" stroke="#10372E" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span>Ravnoteža<small>fizio kabinet · Zvezdara</small></span>
+    </a>
+    <nav aria-label="Glavni meni" style="position:static">
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meni">Meni</button>
+      <ul id="meni">
+        <li><a href="#tegobe">Sa čim dolazite</a></li>
+        <li><a href="#cene">Cene</a></li>
+        <li><a href="#terapeuti">Terapeuti</a></li>
+        <li><a href="#vreme">Radno vreme</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li class="cta"><a href="#zakazivanje">Zakažite</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="pocetak">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <h1 id="h1">Pokret bez bola, korak po korak.</h1>
+    <p class="uvod">Fizioterapija na Zvezdari, u Vjekoslava Kovača 11. Leđa, vrat, kolena i oporavak posle povreda. Na svakom dolasku radite sa istim terapeutom i nosite kući plan vežbi.</p>
+    <div class="akcije">
+      <a class="btn btn-k" href="#zakazivanje">Zakažite termin</a>
+      <a class="btn btn-o" href="tel:+381600000504">Pozovite 060 000 05 04</a>
+      <a class="btn btn-o" href="viber://chat?number=%2B381600000504">Viber</a>
+    </div>
+  </div>
+  <svg class="figura" viewBox="0 0 1200 340" preserveAspectRatio="xMaxYMax slice" role="img" aria-label="Figura u iskoraku sa podignutom rukom, nacrtana jednom linijom; kičma označena tačkama">
+    <circle class="sunce" cx="920" cy="150" r="130" fill="#FF8552" opacity=".12"/>
+    <path class="ln" d="M-20 320 H700 C716 320 724 319 730 318 C780 296 822 250 860 205 C846 176 858 150 874 130 C886 114 896 104 902 94 C886 80 888 50 908 41 C928 34 940 58 926 74 C920 82 914 88 912 96 C952 78 990 48 1022 18 C1000 54 966 92 930 122 C932 152 924 182 902 210 C934 214 962 220 984 234 C988 264 984 296 988 318 C1004 320 1020 320 1050 320 H1220"/>
+    <g class="kicma" fill="#F5F1E6"><circle cx="862" cy="186" r="4"/><circle cx="860" cy="166" r="4"/><circle cx="866" cy="146" r="4"/><circle cx="878" cy="126" r="4"/><circle cx="892" cy="108" r="4"/></g>
+  </svg>
+  <div class="wrap">
+    <div class="cinjenice">
+      <div><b>45 ili 60 minuta</b>trajanje jednog dolaska</div>
+      <div><b>Dva terapeuta</b>Jelena i Ivan, svako svoje termine</div>
+      <div><b>Bez uputa</b>dolazite privatno, plaćanje na licu mesta</div>
+    </div>
+  </div>
+</section>
+
+<section class="sek" id="tegobe" aria-labelledby="h-teg">
+  <div class="wrap">
+    <div class="levo">
+      <h2 id="h-teg">Sa čim nam ljudi najčešće dolaze</h2>
+      <p>Ako niste sigurni da li je fizioterapija pravo mesto za vaš problem, pozovite pa ćemo vam reći iskreno.</p>
+    </div>
+    <div class="desno">
+      <ul class="tegobe">
+        <li><h3>Bol u donjem delu leđa</h3><p>Ukočenost ujutru, bol posle dugog sedenja, lumbalni sindrom. Kombinujemo manuelnu terapiju i vežbe za stabilnost trupa.</p></li>
+        <li><h3>Vrat i ramena</h3><p>Glavobolje od vrata, „zaključano“ rame, napetost od rada za računarom. Radimo na pokretljivosti i držanju.</p></li>
+        <li><h3>Koleno i kuk posle operacije</h3><p>Rehabilitacija posle rekonstrukcije ligamenata, artroskopije ili ugradnje proteze, prema uputstvu vašeg ortopeda.</p></li>
+        <li><h3>Sportske povrede</h3><p>Uganuće skočnog zgloba, istegnuće mišića zadnje lože, „teniski lakat“. Postepen povratak treningu, sa jasnim rokovima.</p></li>
+        <li><h3>Loše držanje kod dece i tinejdžera</h3><p>Pregled kičme i stopala, vežbe koje se mogu raditi kod kuće uz roditelja.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sek lan" id="cene" aria-labelledby="h-cene">
+  <div class="wrap">
+    <div class="levo">
+      <h2 id="h-cene">Usluge i cene</h2>
+      <p>Cena je po dolasku. Plaćate na licu mesta, gotovinom ili karticom.</p>
+    </div>
+    <div class="desno">
+      <table class="cene">
+        <tbody>
+          <tr><td><span class="ime">Prvi pregled i procena</span><span class="opis">60 min · razgovor, testovi pokretljivosti, plan terapije</span></td><td>3.500 RSD</td></tr>
+          <tr><td><span class="ime">Fizioterapija, jedan dolazak</span><span class="opis">45 min · terapija po planu, uz vežbe</span></td><td>3.000 RSD</td></tr>
+          <tr><td><span class="ime">Manuelna terapija</span><span class="opis">45 min · mobilizacija zglobova i mekih tkiva</span></td><td>3.300 RSD</td></tr>
+          <tr><td><span class="ime">Kineziterapija za kičmu</span><span class="opis">60 min · vežbe za leđa i vrat, individualno</span></td><td>3.200 RSD</td></tr>
+          <tr><td><span class="ime">Sportska rehabilitacija</span><span class="opis">60 min · posle povrede, sa testom za povratak treningu</span></td><td>3.400 RSD</td></tr>
+          <tr><td><span class="ime">Paket od 10 dolazaka</span><span class="opis">45 min po dolasku · važi 8 nedelja</span></td><td>27.000 RSD</td></tr>
+        </tbody>
+      </table>
+      <p class="napomena">Ponesite nalaze i snimke ako ih imate. Udobna odeća, bez nakita.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sek" id="terapeuti" aria-labelledby="h-ter">
+  <div class="wrap">
+    <div class="levo">
+      <h2 id="h-ter">Ko vas prima</h2>
+      <p>Dva fizioterapeuta, svako sa svojim rasporedom. U zakazivanju birate kod koga dolazite.</p>
+    </div>
+    <div class="desno">
+      <div class="tim">
+        <div>
+          <div class="foto">Vaša fotografija</div>
+          <h3>Jelena</h3>
+          <p>Viša fizioterapeutkinja. Manuelna terapija, bol u leđima i vratu, posturalni problemi kod dece.</p>
+        </div>
+        <div>
+          <div class="foto">Vaša fotografija</div>
+          <h3>Ivan</h3>
+          <p>Fizioterapeut. Sportske povrede, rehabilitacija kolena i kuka posle operacije.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sek lan" id="prvi-dolazak" aria-labelledby="h-prvi">
+  <div class="wrap">
+    <div class="levo">
+      <h2 id="h-prvi">Kako izgleda prvi dolazak</h2>
+      <p>Prvi put rezervišite „Prvi pregled i procenu“, 60 minuta.</p>
+    </div>
+    <div class="desno">
+      <ol class="koraci">
+        <li><h3>Razgovor</h3><p>Pričamo o tome kada je bol počeo, šta ga pogoršava i šta radite tokom dana. Pogledamo nalaze koje ste doneli.</p></li>
+        <li><h3>Procena pokreta</h3><p>Testovi pokretljivosti i snage. Odmah vam kažemo šta vidimo i šta možemo da promenimo.</p></li>
+        <li><h3>Prva terapija</h3><p>Već na prvom dolasku radimo terapiju, da biste osetili razliku.</p></li>
+        <li><h3>Plan i vežbe za kod kuće</h3><p>Dobijate kratak plan: koliko dolazaka, koje vežbe i koliko često. Vežbe vam šaljemo i na Viber.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sek" id="zakazivanje" aria-labelledby="h-zak">
+  <div class="wrap">
+    <div class="levo">
+      <h2 id="h-zak">Zakažite termin</h2>
+      <p>Izaberite uslugu i terapeuta, pa slobodno polje u tabeli. Dan pre termina stiže SMS podsetnik, ako ga uključite.</p>
+      <p><span class="paket">Paket 3: Plus</span></p>
+    </div>
+    <div class="desno">
+<!--
+  PRODUKCIJA
+  Ovaj modul u demou radi samo u pregledaču: termini i zauzetost su izmišljeni.
+  Varijanta a) Zahtev za termin:
+    forma na kraju šalje rezime (usluga, terapeut, dan, vreme, ime, telefon, SMS podsetnik)
+    na mejl vlasnika preko Web3Forms (POST na https://api.web3forms.com/submit sa hidden
+    poljem access_key), ili otvara Viber poruku sa rezimeom
+    (viber://forward?text=...). Vlasnik potvrđuje termin pozivom ili porukom.
+  Varijanta b) Povezan kalendar:
+    umesto ovog modula ugrađuje se Google Kalendar "Appointment schedule" (po jedan za
+    Jelenu i Ivana), Cal.com ili Calendly embed. Termini se sami upisuju u Google Kalendar
+    na telefonu terapeuta, a podsetnik dan ranije šalje sam servis (SMS/mejl).
+-->
+      <div class="zak" id="zak">
+        <div class="zak-glava">
+          <strong style="font-family:var(--naslov);font-size:1.3rem">Online zakazivanje</strong>
+          <span class="primer">Primer: termini su izmišljeni</span>
+        </div>
+        <div id="zak-izbor">
+          <div class="korak" role="group" aria-labelledby="l-usl">
+            <span class="lbl" id="l-usl">1. Usluga</span>
+            <div class="usluge" id="usluge"></div>
+          </div>
+          <div class="korak" role="group" aria-labelledby="l-ter">
+            <span class="lbl" id="l-ter">2. Terapeut</span>
+            <div class="terapeut" id="terapeut"></div>
+            <p class="ter-info" id="ter-info"></p>
+          </div>
+          <div class="korak">
+            <span class="lbl" id="l-ter2">3. Dan i vreme</span>
+            <div class="nedelja">
+              <button class="strela" type="button" id="prev" aria-label="Prethodnih 7 dana">&#8249;</button>
+              <strong id="raspon" aria-live="polite"></strong>
+              <button class="strela" type="button" id="next" aria-label="Sledećih 7 dana">&#8250;</button>
+            </div>
+            <div class="desk tabela-wrap" id="tabela"></div>
+            <div class="mob" id="mob"></div>
+            <div class="legenda" aria-hidden="true"><span class="l1">slobodno</span><span class="l2">zauzeto</span><span class="l3">vaš izbor</span></div>
+          </div>
+          <form class="forma-z" id="forma-z" novalidate hidden>
+            <div class="izabrano" id="izabrano" aria-live="polite"></div>
+            <div class="polje"><label for="z-ime">Ime i prezime</label><input id="z-ime" name="ime" autocomplete="name" required><div class="greska" id="e-ime" aria-live="polite"></div></div>
+            <div class="polje"><label for="z-tel">Telefon</label><input id="z-tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="06x xxx xxxx" required><div class="greska" id="e-tel" aria-live="polite"></div></div>
+            <div class="polje"><label for="z-nap">Napomena (nije obavezno)</label><textarea id="z-nap" name="napomena" placeholder="Npr. bol u desnom kolenu posle trčanja"></textarea></div>
+            <label class="ck" for="z-sms"><input type="checkbox" id="z-sms" name="sms" checked> <span>Pošaljite mi SMS podsetnik dan pre termina</span></label>
+            <button class="btn btn-s" type="submit">Potvrdite termin</button>
+          </form>
+        </div>
+        <div class="potvrda" id="potvrda" hidden tabindex="-1" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sek lan" id="vreme" aria-labelledby="h-vreme">
+  <div class="wrap">
+    <div class="levo">
+      <h2 id="h-vreme">Radno vreme i adresa</h2>
+      <p>Prizemlje zgrade, ulaz iz dvorišta. Parking u ulici, a do nas vozi i autobus 32E.</p>
+    </div>
+    <div class="desno">
+      <p class="adresa">Vjekoslava Kovača 11<br>11050 Beograd, Zvezdara</p>
+      <table class="vreme" id="tabela-vreme">
+        <tbody>
+          <tr data-d="1"><th scope="row">Ponedeljak</th><td>08:00 – 20:00</td></tr>
+          <tr data-d="2"><th scope="row">Utorak</th><td>08:00 – 20:00</td></tr>
+          <tr data-d="3"><th scope="row">Sreda</th><td>08:00 – 20:00</td></tr>
+          <tr data-d="4"><th scope="row">Četvrtak</th><td>08:00 – 20:00</td></tr>
+          <tr data-d="5"><th scope="row">Petak</th><td>08:00 – 20:00</td></tr>
+          <tr data-d="6"><th scope="row">Subota</th><td>09:00 – 14:00</td></tr>
+          <tr data-d="0"><th scope="row">Nedelja</th><td>zatvoreno</td></tr>
+        </tbody>
+      </table>
+      <div class="mapa">
+        <iframe title="Mapa: Vjekoslava Kovača 11, Zvezdara, Beograd" loading="lazy" src="https://maps.google.com/maps?q=Vjekoslava%20Kova%C4%8Da%2011%2C%20Zvezdara%2C%20Beograd&amp;z=15&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sek" id="kontakt" aria-labelledby="h-kont">
+  <div class="wrap">
+    <div class="levo">
+      <h2 id="h-kont">Pitajte pre nego što dođete</h2>
+      <p>Odgovaramo istog dana, između dva pacijenta. Za hitno je brže da pozovete.</p>
+      <div class="kont-dugmad">
+        <a class="btn btn-s" href="tel:+381600000504">Pozovite</a>
+        <a class="btn btn-l" href="viber://chat?number=%2B381600000504">Viber</a>
+      </div>
+    </div>
+    <div class="desno">
+      <!--
+        Web3Forms: na pravom sajtu forma ima action="https://api.web3forms.com/submit" method="POST"
+        i skriveno polje <input type="hidden" name="access_key" value="KLJUČ-VLASNIKA">.
+        Poruka tada stiže direktno na mejl kabineta.
+      -->
+      <form class="kontakt" data-form="kontakt" id="kontakt-forma" novalidate>
+        <div class="polje"><label for="k-ime">Ime</label><input id="k-ime" name="ime" autocomplete="name"></div>
+        <div class="polje"><label for="k-tel">Telefon ili mejl</label><input id="k-tel" name="kontakt"></div>
+        <div class="polje"><label for="k-por">Poruka</label><textarea id="k-por" name="poruka" placeholder="Opišite ukratko šta vas muči"></textarea></div>
+        <button class="btn btn-s" type="submit">Pošaljite poruku</button>
+        <div id="k-odg" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#pocetak"><span>Ravnoteža<small style="color:var(--lan)">fizio kabinet · Zvezdara</small></span></a>
+      <p style="margin-top:12px">Fizioterapija, manuelna terapija i rehabilitacija posle povreda.</p>
+    </div>
+    <p>Vjekoslava Kovača 11<br>11050 Beograd</p>
+    <p><a href="tel:+381600000504">060 000 05 04</a><br><a href="viber://chat?number=%2B381600000504">Viber</a></p>
+    <p class="demo-podn">Primer sajta · izradio opsforma. Kabinet je izmišljen. <a href="../../">Svi primeri</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* meni */
+  var mb = document.querySelector('.menu-btn'), meni = document.getElementById('meni');
+  function zatvori(){ meni.classList.remove('open'); mb.setAttribute('aria-expanded','false'); }
+  mb.addEventListener('click', function(){
+    var o = mb.getAttribute('aria-expanded') === 'true';
+    if (o) zatvori(); else { meni.classList.add('open'); mb.setAttribute('aria-expanded','true'); }
+  });
+  meni.addEventListener('click', function(e){ if (e.target.closest('a')) zatvori(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && mb.getAttribute('aria-expanded') === 'true'){ zatvori(); mb.focus(); } });
+
+  /* današnji dan u radnom vremenu */
+  var dr = document.querySelector('#tabela-vreme tr[data-d="' + new Date().getDay() + '"]');
+  if (dr) dr.classList.add('danas');
+
+  /* kontakt forma */
+  document.getElementById('kontakt-forma').addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('k-odg').innerHTML = '<p class="poruka">Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.</p>';
+  });
+
+  /* ===== ZAKAZIVANJE ===== */
+  var FIRMA = 'Fizio kabinet Ravnoteža', ADRESA = 'Vjekoslava Kovača 11, Zvezdara, Beograd', SLUG = 'fizio-ravnoteza';
+  var USLUGE = [
+    {id:'pregled', n:'Prvi pregled i procena', min:60, c:3500},
+    {id:'fizio', n:'Fizioterapija, jedan dolazak', min:45, c:3000},
+    {id:'manuelna', n:'Manuelna terapija', min:45, c:3300},
+    {id:'kinezi', n:'Kineziterapija za kičmu', min:60, c:3200},
+    {id:'sport', n:'Sportska rehabilitacija', min:60, c:3400}
+  ];
+  /* radno vreme po terapeutu, u minutima od ponoći; indeks = getDay() (0 = nedelja) */
+  var TER = {
+    jelena: {n:'Jelena', g:'Jelene', info:'Jelena: pon, sre, pet pre podne · uto, čet popodne · subota', h:[null,[480,900],[780,1200],[480,900],[780,1200],[480,900],[540,840]]},
+    ivan:   {n:'Ivan', g:'Ivana',   info:'Ivan: pon, sre, pet popodne · uto, čet pre podne · subotom ne radi', h:[null,[780,1200],[480,900],[780,1200],[480,900],[780,1200],null]}
+  };
+    var DANI = ['nedelja','ponedeljak','utorak','sreda','četvrtak','petak','subota'];
+  var DK = ['ned','pon','uto','sre','čet','pet','sub'];
+  var MES = ['januara','februara','marta','aprila','maja','juna','jula','avgusta','septembra','oktobra','novembra','decembra'];
+  function p2(n){ return (n < 10 ? '0' : '') + n; }
+  function hm(m){ return p2(Math.floor(m/60)) + ':' + p2(m%60); }
+  function ymd(d){ return d.getFullYear() + '-' + p2(d.getMonth()+1) + '-' + p2(d.getDate()); }
+  function hash(s){ var h = 2166136261; for (var i=0;i<s.length;i++){ h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return ((h >>> 0) % 10000) / 10000; }
+
+  var danas = new Date(); danas.setHours(0,0,0,0);
+  var dani = []; for (var i=0;i<14;i++){ var d = new Date(danas); d.setDate(danas.getDate()+i); dani.push(d); }
+
+  var st = {u: USLUGE[0], t: 'jelena', ned: 0, dan: null, vreme: null};
+
+  function zauzetBlok(d, t, m){ return hash(ymd(d) + '|' + t + '|' + m) < 0.34; }
+  /* termini za dan: [{m, slob}] ili null ako ne radi */
+  function termini(d, t, trajanje){
+    var h = TER[t].h[d.getDay()];
+    if (!h) return null;
+    var out = [], sad = new Date(), granica = -1;
+    if (ymd(d) === ymd(sad)) granica = sad.getHours()*60 + sad.getMinutes() + 60;
+    for (var m = h[0]; m + trajanje <= h[1]; m += 30){
+      if (m < granica) continue;
+      out.push({m:m, slob:!zauzetBlok(d, t, m)});
+    }
+    return out;
+  }
+
+  var elUsl = document.getElementById('usluge'), elTer = document.getElementById('terapeut');
+  USLUGE.forEach(function(u){
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'izbor'; b.dataset.id = u.id;
+    b.innerHTML = u.n + '<small>' + u.min + ' min · ' + u.c.toLocaleString('sr-RS') + ' RSD</small>';
+    b.setAttribute('aria-pressed', u === st.u ? 'true' : 'false');
+    b.addEventListener('click', function(){ st.u = u; st.vreme = null; osvezi(); });
+    elUsl.appendChild(b);
+  });
+  ['jelena','ivan'].forEach(function(k){
+    var b = document.createElement('button'); b.type = 'button'; b.dataset.t = k; b.textContent = TER[k].n;
+    b.addEventListener('click', function(){ st.t = k; st.vreme = null; if (st.dan && !TER[k].h[st.dan.getDay()]) st.dan = null; osvezi(); });
+    elTer.appendChild(b);
+  });
+  document.getElementById('prev').addEventListener('click', function(){ st.ned = 0; st.dan = null; st.vreme = null; osvezi(); });
+  document.getElementById('next').addEventListener('click', function(){ st.ned = 1; st.dan = null; st.vreme = null; osvezi(); });
+
+  function kratkiDatum(d){ return d.getDate() + '.' + (d.getMonth()+1) + '.'; }
+  function dugiDatum(d){ return DANI[d.getDay()] + ', ' + d.getDate() + '. ' + MES[d.getMonth()]; }
+
+  function izaberi(d, m){ st.dan = d; st.vreme = m; osvezi();
+    var f = document.getElementById('forma-z');
+    if (window.matchMedia('(max-width:760px)').matches) f.scrollIntoView({block:'nearest'}); }
+
+  function osvezi(){
+    [].forEach.call(elUsl.children, function(b){ b.setAttribute('aria-pressed', b.dataset.id === st.u.id ? 'true' : 'false'); });
+    [].forEach.call(elTer.children, function(b){ b.setAttribute('aria-pressed', b.dataset.t === st.t ? 'true' : 'false'); });
+    document.getElementById('ter-info').textContent = TER[st.t].info;
+    var nd = dani.slice(st.ned*7, st.ned*7+7);
+    document.getElementById('raspon').textContent = kratkiDatum(nd[0]) + ' – ' + kratkiDatum(nd[6]);
+    document.getElementById('prev').disabled = st.ned === 0;
+    document.getElementById('next').disabled = st.ned === 1;
+    var lista = nd.map(function(d){ return termini(d, st.t, st.u.min); });
+
+    /* desktop: tabela dan x vreme */
+    var sva = {}; lista.forEach(function(l){ if (l) l.forEach(function(x){ sva[x.m] = 1; }); });
+    var sati = Object.keys(sva).map(Number).sort(function(a,b){return a-b;});
+    var h = '<table class="ned"><caption class="sr">Slobodni termini za ' + TER[st.t].n + ', ' + st.u.n + '</caption><thead><tr><th scope="col"><span class="sr">Vreme</span></th>';
+    nd.forEach(function(d, i){ h += '<th scope="col"' + (lista[i] ? '' : ' class="zatv"') + '>' + DK[d.getDay()] + '<span>' + d.getDate() + '.</span></th>'; });
+    h += '</tr></thead><tbody>';
+    if (!sati.length) h += '<tr><td colspan="8" class="prazno">Ove nedelje nema slobodnih termina kod ' + TER[st.t].g + '. Pogledajte sledeću nedelju ili drugog terapeuta.</td></tr>';
+    sati.forEach(function(m){
+      h += '<tr><th scope="row">' + hm(m) + '</th>';
+      nd.forEach(function(d, i){
+        var l = lista[i];
+        if (!l){ h += '<td class="zatv"><span class="sr">zatvoreno</span></td>'; return; }
+        var x = l.filter(function(y){ return y.m === m; })[0];
+        if (!x) h += '<td><span class="c-n"></span></td>';
+        else if (!x.slob) h += '<td><span class="c-z" title="Zauzeto"><span class="sr">' + hm(m) + ' zauzeto</span></span></td>';
+        else {
+          var sel = st.dan && ymd(st.dan) === ymd(d) && st.vreme === m;
+          h += '<td><button type="button" class="c" data-d="' + (st.ned*7+i) + '" data-m="' + m + '" aria-pressed="' + (sel?'true':'false') + '" aria-label="' + dugiDatum(d) + ', ' + hm(m) + ', slobodno">' + hm(m) + '</button></td>';
+        }
+      });
+      h += '</tr>';
+    });
+    h += '</tbody></table>';
+    var tab = document.getElementById('tabela'); tab.innerHTML = h;
+    [].forEach.call(tab.querySelectorAll('button.c'), function(b){ b.addEventListener('click', function(){ izaberi(dani[+b.dataset.d], +b.dataset.m); }); });
+
+    /* mobilni: dani kao tabovi */
+    if (!st.dan || nd.indexOf(st.dan) < 0){
+      var prvi = null; for (var i=0;i<7;i++){ if (lista[i] && lista[i].some(function(x){return x.slob;})){ prvi = nd[i]; break; } }
+      st.mdan = prvi;
+    } else st.mdan = st.dan;
+    var mh = '<div class="tabovi" role="tablist" aria-label="Dani">';
+    nd.forEach(function(d, i){
+      var sel = st.mdan && ymd(st.mdan) === ymd(d);
+      mh += '<button type="button" role="tab" class="tab" data-i="' + i + '" aria-selected="' + (sel?'true':'false') + '"' + (lista[i] ? '' : ' disabled aria-disabled="true"') + ' aria-label="' + dugiDatum(d) + (lista[i] ? '' : ', zatvoreno') + '">' + DK[d.getDay()] + '<b>' + d.getDate() + '</b></button>';
+    });
+    mh += '</div><ul class="redovi" role="tabpanel" aria-label="Termini">';
+    var mi = st.mdan ? nd.indexOf(st.mdan) : -1, ml = mi >= 0 ? lista[mi] : null;
+    if (!ml || !ml.length) mh += '<li class="prazno">Nema slobodnih termina. Izaberite drugi dan ili terapeuta.</li>';
+    else ml.forEach(function(x){
+      if (!x.slob) mh += '<li><div class="red zauz"><b>' + hm(x.m) + '</b><span>zauzeto</span></div></li>';
+      else {
+        var sel = st.dan && ymd(st.dan) === ymd(st.mdan) && st.vreme === x.m;
+        mh += '<li><button type="button" class="red" data-m="' + x.m + '" aria-pressed="' + (sel?'true':'false') + '"><b>' + hm(x.m) + '</b><span>' + (sel ? 'izabrano' : 'slobodno') + '</span></button></li>';
+      }
+    });
+    mh += '</ul>';
+    var mob = document.getElementById('mob'); mob.innerHTML = mh;
+    [].forEach.call(mob.querySelectorAll('.tab'), function(b){ b.addEventListener('click', function(){ st.dan = nd[+b.dataset.i]; st.vreme = null; osvezi(); var t = document.querySelector('#mob .tab[aria-selected="true"]'); if (t) t.focus(); }); });
+    [].forEach.call(mob.querySelectorAll('button.red'), function(b){ b.addEventListener('click', function(){ izaberi(st.mdan, +b.dataset.m); }); });
+
+    var f = document.getElementById('forma-z');
+    if (st.dan && st.vreme !== null){
+      f.hidden = false;
+      document.getElementById('izabrano').textContent = st.u.n + ' kod ' + TER[st.t].g + ' · ' + dugiDatum(st.dan) + ' u ' + hm(st.vreme) + ' · ' + st.u.c.toLocaleString('sr-RS') + ' RSD';
+    } else f.hidden = true;
+  }
+
+  document.getElementById('forma-z').addEventListener('submit', function(e){
+    e.preventDefault();
+    var ime = document.getElementById('z-ime'), tel = document.getElementById('z-tel'), ok = true;
+    var ei = document.getElementById('e-ime'), et = document.getElementById('e-tel');
+    ei.textContent = et.textContent = '';
+    ime.removeAttribute('aria-invalid'); tel.removeAttribute('aria-invalid');
+    if (ime.value.trim().length < 2){ ei.textContent = 'Upišite ime i prezime.'; ime.setAttribute('aria-invalid','true'); ok = false; }
+    if (tel.value.replace(/\D/g,'').length < 9){ et.textContent = 'Upišite broj telefona, npr. 064 123 4567.'; tel.setAttribute('aria-invalid','true'); ok = false; }
+    if (!ok){ (ime.getAttribute('aria-invalid') ? ime : tel).focus(); return; }
+    var sms = document.getElementById('z-sms').checked;
+    var r = {usl: st.u, ter: TER[st.t].n, dan: st.dan, m: st.vreme, ime: ime.value.trim(), tel: tel.value.trim(), nap: document.getElementById('z-nap').value.trim(), sms: sms};
+    var p = document.getElementById('potvrda');
+    p.innerHTML = '<h3>Termin je zabeležen.</h3><p>Vidimo se ' + dugiDatum(r.dan) + ' u ' + hm(r.m) + '. Na pravom sajtu potvrda stiže i SMS-om.</p>' +
+      '<dl><dt>Usluga</dt><dd>' + r.usl.n + '</dd><dt>Terapeut</dt><dd>' + r.ter + '</dd><dt>Dan</dt><dd>' + dugiDatum(r.dan) + '</dd><dt>Vreme</dt><dd>' + hm(r.m) + ' – ' + hm(r.m + r.usl.min) + '</dd><dt>Trajanje</dt><dd>' + r.usl.min + ' min</dd><dt>Cena</dt><dd>' + r.usl.c.toLocaleString('sr-RS') + ' RSD, plaćanje na licu mesta</dd><dt>Ime</dt><dd></dd><dt>Telefon</dt><dd></dd><dt>Podsetnik</dt><dd>' + (r.sms ? 'SMS dan ranije u 18 h' : 'bez podsetnika') + '</dd></dl>' +
+      '<div class="akcije"><button type="button" class="btn btn-k" id="ics">Dodaj u kalendar</button><button type="button" class="btn btn-l" id="novi">Novi termin</button></div>' +
+      '<p class="mala" style="margin-top:14px">Primer: termin nije stvarno zakazan.</p>';
+    var dd = p.querySelectorAll('dd'); dd[6].textContent = r.ime; dd[7].textContent = r.tel;
+    document.getElementById('zak-izbor').hidden = true; p.hidden = false; p.focus();
+    document.getElementById('ics').addEventListener('click', function(){ ics(r); });
+    document.getElementById('novi').addEventListener('click', function(){
+      st.dan = null; st.vreme = null; document.getElementById('forma-z').reset();
+      p.hidden = true; document.getElementById('zak-izbor').hidden = false; osvezi();
+      document.getElementById('zak').scrollIntoView({block:'start'});
+    });
+  });
+
+  function utc(d){ return d.getUTCFullYear() + p2(d.getUTCMonth()+1) + p2(d.getUTCDate()) + 'T' + p2(d.getUTCHours()) + p2(d.getUTCMinutes()) + '00Z'; }
+  function esc(s){ return String(s).replace(/([,;\\])/g,'\\$1').replace(/\n/g,'\\n'); }
+  function ics(r){
+    var s = new Date(r.dan); s.setHours(0, r.m, 0, 0);
+    var e = new Date(s.getTime() + r.usl.min*60000);
+    var L = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//opsforma//' + SLUG + '//SR','CALSCALE:GREGORIAN','METHOD:PUBLISH','BEGIN:VEVENT',
+      'UID:' + Date.now() + '-' + Math.floor(Math.random()*1e6) + '@' + SLUG + '.opsforma',
+      'DTSTAMP:' + utc(new Date()), 'DTSTART:' + utc(s), 'DTEND:' + utc(e),
+      'SUMMARY:' + esc(FIRMA + ' – ' + r.usl.n),
+      'DESCRIPTION:' + esc('Terapeut: ' + r.ter + '. Ponesite nalaze i udobnu odeću. Tel 060 000 05 04.'),
+      'LOCATION:' + esc(ADRESA),
+      'BEGIN:VALARM','ACTION:DISPLAY','DESCRIPTION:' + esc('Sutra: ' + FIRMA),'TRIGGER:-P1D','END:VALARM',
+      'END:VEVENT','END:VCALENDAR'];
+    var blob = new Blob([L.join('\r\n') + '\r\n'], {type:'text/calendar;charset=utf-8'});
+    var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'termin-' + SLUG + '.ics';
+    document.body.appendChild(a); a.click(); setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 500);
+  }
+
+  osvezi();
+})();
+</script>
+</body>
+</html>

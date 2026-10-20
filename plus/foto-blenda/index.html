@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Foto studio Blenda – portreti, porodične i produktne fotografije, Baba Višnjina 31</title>
+<meta name="description" content="Foto studio Blenda na Vračaru, Baba Višnjina 31. Portreti, porodične sesije, poslovne i produktne fotografije u studiju. Cene i online zakazivanje sesije.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --crna:#0A0A0A;
+  --crna-2:#141414;
+  --crna-3:#1E1E1E;
+  --papir:#F2F2F2;
+  --crvena:#B3001B;
+  --crvena-svetla:#FF4D5E;
+  --siva:#8C8C8C;
+  --siva-tamna:#5A5A5A;
+  --naslov:"Syne","Futura","Century Gothic","Trebuchet MS",sans-serif;
+  --mono:"Space Mono","Courier New",ui-monospace,monospace;
+  --rupe:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='18'%3E%3Crect x='7' y='3' width='14' height='12' rx='2.5' fill='%23F2F2F2'/%3E%3C/svg%3E");
+  --rupe-v:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='28'%3E%3Crect x='3' y='7' width='12' height='14' rx='2.5' fill='%23F2F2F2'/%3E%3C/svg%3E");
+  --rupe-tamne:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='18'%3E%3Crect x='7' y='3' width='14' height='12' rx='2.5' fill='%230A0A0A'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--crna);color:var(--papir);font-family:var(--mono);font-size:.96875rem;line-height:1.65;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3{font-family:var(--naslov);margin:0;line-height:1;letter-spacing:-.02em;font-weight:800}
+p{margin:0 0 1em}
+:focus-visible{outline:2px solid var(--papir);outline-offset:3px;box-shadow:0 0 0 5px var(--crvena)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.okvir{width:min(1180px,100% - 32px);margin-inline:auto}
+
+/* traka primera */
+.demo{background:var(--papir);color:var(--crna);font-size:.75rem;padding:6px 16px;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 14px;text-align:center}
+.demo a{font-weight:700}
+.demo .paket{font-size:.6875rem;padding:1px 7px}
+
+/* zaglavlje */
+.zag{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.92);backdrop-filter:blur(6px);border-bottom:1px solid #262626}
+.zag .okvir{display:flex;align-items:center;gap:14px;min-height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto}
+.logo svg{width:30px;height:30px}
+.logo span{font-family:var(--naslov);font-weight:800;font-size:1.3rem;letter-spacing:.02em}
+.paket{font-size:.6875rem;font-weight:700;background:var(--crvena);color:#fff;padding:4px 8px;border-radius:2px;white-space:nowrap}
+.meni-btn{min-width:44px;min-height:44px;border:1px solid #3a3a3a;background:transparent;color:var(--papir);font:700 .75rem var(--mono);border-radius:2px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;padding:0 12px}
+.meni-btn i{width:16px;height:16px;border-radius:50%;border:2px solid currentColor;position:relative}
+.meni-btn i::after{content:"";position:absolute;inset:3px;border-radius:50%;background:currentColor;transition:inset .2s}
+.meni-btn[aria-expanded="true"] i::after{inset:1px;background:var(--crvena)}
+#nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--crna);border-bottom:1px solid #262626;padding:8px 16px 18px}
+#nav.otvoren{display:block}
+#nav ul{list-style:none;margin:0;padding:0}
+#nav a{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid #222;text-decoration:none;font-family:var(--naslov);font-weight:700;font-size:1.3rem}
+#nav a small{font-family:var(--mono);font-size:.75rem;color:var(--siva);font-weight:400;align-self:center}
+@media (min-width:900px){
+  .meni-btn{display:none}
+  #nav{display:block;position:static;background:none;border:0;padding:0}
+  #nav ul{display:flex;gap:2px}
+  #nav a{font-family:var(--mono);font-size:.8125rem;font-weight:400;border:0;padding:10px 12px}
+  #nav a small{display:none}
+  #nav a:hover{color:#fff;background:#1c1c1c}
+}
+
+/* filmska traka: perforacija */
+.traka{position:relative;background:var(--crna-2);padding:34px 0}
+.traka::before,.traka::after{content:"";position:absolute;left:0;right:0;height:18px;background:var(--rupe) repeat-x;background-size:28px 18px;opacity:.9}
+.traka::before{top:6px}
+.traka::after{bottom:6px}
+.ivica{position:absolute;left:16px;right:16px;font-size:.625rem;color:#d9a35a;opacity:.85;letter-spacing:.08em;display:flex;justify-content:space-between;pointer-events:none;white-space:nowrap;overflow:hidden}
+.ivica.gore{top:24px}
+.ivica.dole{bottom:24px}
+
+/* hero */
+.hero{text-align:center;padding:36px 0 64px;position:relative}
+.blenda-wrap{width:min(78vw,440px);margin:0 auto;position:relative}
+.blenda-wrap svg{display:block;width:100%;height:auto}
+.ocitavanje{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;font-size:.8125rem;color:var(--siva);margin:18px 0 26px}
+.ocitavanje b{color:var(--papir);font-weight:700}
+.hero h1{font-size:clamp(2.6rem,11vw,6.6rem);text-transform:none;max-width:12ch;margin:0 auto}
+.hero h1 span{display:block;color:transparent;-webkit-text-stroke:1.5px var(--papir)}
+.hero .uvod{max-width:52ch;margin:22px auto 0;color:#cfcfcf}
+.akcije{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 22px;font:700 .875rem var(--mono);text-decoration:none;border:1px solid var(--papir);color:var(--papir);background:transparent;cursor:pointer;border-radius:2px}
+.btn-crveno{background:var(--crvena);border-color:var(--crvena);color:#fff}
+.btn-crveno:hover{background:#cc0020}
+.btn-svetlo{background:var(--papir);color:var(--crna)}
+.btn:hover{border-color:#fff}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* sekcija */
+.sekcija{padding:72px 0}
+.exif{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.75rem;color:var(--siva);margin-bottom:14px}
+.exif span::before{content:"";display:inline-block;width:6px;height:6px;background:var(--crvena);margin-right:7px;vertical-align:1px}
+.sekcija h2{font-size:clamp(2.2rem,8vw,4.4rem);margin-bottom:18px;max-width:14ch}
+.sekcija .uvod{max-width:58ch;color:#cfcfcf}
+
+/* usluge: kontakt-kopija na filmu */
+.film{margin-top:30px;position:relative;background:#050505;padding:0 26px;border-radius:2px}
+.film::before,.film::after{content:"";position:absolute;top:0;bottom:0;width:18px;background:var(--rupe-v) repeat-y;background-size:18px 28px;opacity:.85}
+.film::before{left:4px}
+.film::after{right:4px}
+.kadrovi{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:10px;padding:10px 0}
+.kadar{background:var(--crna-3);border:1px solid #2c2c2c;padding:18px 16px 16px;position:relative;min-height:200px;display:flex;flex-direction:column}
+.kadar .br{font-size:.6875rem;color:#d9a35a;letter-spacing:.08em}
+.kadar h3{font-size:1.6rem;margin:10px 0 8px;letter-spacing:-.01em}
+.kadar p{font-size:.8125rem;color:#c4c4c4;margin:0 0 14px}
+.kadar .dole{margin-top:auto;display:flex;justify-content:space-between;align-items:baseline;gap:10px;border-top:1px dashed #3a3a3a;padding-top:10px}
+.kadar .cena{font-family:var(--naslov);font-weight:700;font-size:1.3rem}
+.kadar .min{font-size:.75rem;color:var(--siva)}
+@media (min-width:760px){
+  .film{padding:26px 0}
+  .film::before,.film::after{left:0;right:0;width:auto;height:18px;background:var(--rupe) repeat-x;background-size:28px 18px}
+  .film::before{top:4px;bottom:auto}
+  .film::after{bottom:4px;top:auto}
+  .kadrovi{grid-template-columns:repeat(4,1fr);padding:0 10px}
+}
+.dodaci{display:grid;gap:8px 30px;margin-top:26px;font-size:.8125rem;color:#cfcfcf;grid-template-columns:1fr}
+@media (min-width:760px){.dodaci{grid-template-columns:1fr 1fr}}
+.dodaci div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #262626;padding:8px 0}
+.dodaci b{white-space:nowrap;color:var(--papir)}
+
+/* polja za fotografije */
+.foto-red{display:grid;grid-template-columns:1fr;gap:12px;margin-top:34px}
+@media (min-width:760px){.foto-red{grid-template-columns:2fr 1fr}}
+.foto{position:relative;min-height:240px;background:
+  linear-gradient(135deg,#2a2a2a,#161616);border:1px solid #2c2c2c}
+.foto::after{content:"";position:absolute;inset:14px;border:1px solid rgba(242,242,242,.18)}
+.foto span{position:absolute;left:22px;bottom:20px;font-size:.6875rem;color:var(--siva)}
+.foto i{position:absolute;right:22px;top:20px;font-style:normal;font-size:.6875rem;color:#d9a35a}
+
+/* kako izgleda sesija (na papiru) */
+.papir{background:var(--papir);color:var(--crna)}
+.papir .exif{color:#555}
+.papir .uvod{color:#333}
+.koraci{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:0;grid-template-columns:1fr}
+@media (min-width:760px){.koraci{grid-template-columns:repeat(3,1fr);gap:0 28px}}
+.koraci li{border-top:2px solid var(--crna);padding:14px 0 22px}
+.koraci b{display:block;font-family:var(--naslov);font-size:1.35rem;margin-bottom:6px}
+.koraci p{font-size:.875rem;margin:0;color:#333}
+
+/* zakazivanje */
+.modul{margin-top:30px;background:#111;border:1px solid #2c2c2c;padding:20px 16px 24px}
+@media (min-width:760px){.modul{padding:28px}}
+.modul-zag{display:flex;flex-wrap:wrap;gap:8px 12px;justify-content:space-between;align-items:center;margin-bottom:18px}
+.primer-oznaka{font-size:.75rem;color:#fff;border:1px dashed var(--crvena-svetla);padding:4px 10px}
+.korak-naslov{font-family:var(--naslov);font-weight:700;font-size:1.25rem;margin:22px 0 10px;display:flex;gap:10px;align-items:baseline}
+.korak-naslov small{font-family:var(--mono);font-weight:400;font-size:.75rem;color:var(--siva)}
+.sesije{display:grid;grid-template-columns:1fr;gap:8px}
+@media (min-width:640px){.sesije{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.sesije{grid-template-columns:repeat(4,1fr)}}
+.sesija{text-align:left;background:var(--crna);color:var(--papir);border:1px solid #3a3a3a;padding:12px 14px;min-height:64px;cursor:pointer;font:400 .8125rem var(--mono);display:flex;flex-direction:column;gap:2px;border-radius:2px}
+.sesija b{font-family:var(--naslov);font-size:1.0625rem;font-weight:700}
+.sesija span{color:var(--siva)}
+.sesija[aria-pressed="true"]{border-color:var(--papir);background:var(--papir);color:var(--crna)}
+.sesija[aria-pressed="true"] span{color:#444}
+.sesija:hover:not([aria-pressed="true"]){border-color:var(--siva)}
+
+.niz-wrap{position:relative;margin:0 -16px}
+@media (min-width:760px){.niz-wrap{margin:0}}
+.niz{display:flex;gap:0;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+  background:#050505;padding:30px 16px;scroll-padding:0 16px;scrollbar-width:thin;scrollbar-color:#444 #050505;position:relative;
+  background-image:var(--rupe),var(--rupe);background-repeat:repeat-x;background-size:28px 18px;background-position:0 6px,0 calc(100% - 6px);background-attachment:local}
+.dan{flex:0 0 82%;max-width:310px;scroll-snap-align:start;background:var(--crna-3);border:1px solid #2c2c2c;border-left:6px solid #050505;border-right:6px solid #050505;padding:14px 14px 16px;display:flex;flex-direction:column;min-height:300px}
+@media (min-width:640px){.dan{flex-basis:44%}}
+@media (min-width:1000px){.dan{flex-basis:26%}}
+.dan-zag{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #333;padding-bottom:8px;margin-bottom:10px}
+.dan-zag b{font-family:var(--naslov);font-weight:800;font-size:1.6rem;line-height:1}
+.dan-zag span{font-size:.75rem;color:var(--siva);text-align:right}
+.dan-zag .k{font-size:.625rem;color:#d9a35a;display:block}
+.dan.zatvoren{background:repeating-linear-gradient(45deg,#161616 0 10px,#1b1b1b 10px 20px)}
+.dan.zatvoren .zatv{margin:auto 0;text-align:center;color:var(--siva);font-size:.8125rem}
+.dan.zatvoren .zatv b{display:block;font-family:var(--naslov);font-size:1.3rem;color:#bdbdbd;margin-bottom:4px}
+.termini{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.t{min-height:44px;border:1px solid #444;background:transparent;color:var(--papir);font:700 .875rem var(--mono);cursor:pointer;border-radius:2px}
+.t:hover:not(:disabled){border-color:var(--papir)}
+.t[aria-pressed="true"]{background:var(--crvena);border-color:var(--crvena);color:#fff}
+.t:disabled{cursor:not-allowed;color:#6b6b6b;border-style:dashed;border-color:#333;text-decoration:line-through;font-weight:400}
+.dan .nema{color:var(--siva);font-size:.8125rem;margin:auto 0;text-align:center}
+.niz-kontrole{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;font-size:.75rem;color:var(--siva)}
+.niz-kontrole div{display:flex;gap:8px}
+.strelica{min-width:44px;min-height:44px;border:1px solid #3a3a3a;background:transparent;color:var(--papir);cursor:pointer;border-radius:2px;font:700 1rem var(--mono)}
+.strelica:disabled{opacity:.35;cursor:default}
+.legenda{display:flex;gap:14px;flex-wrap:wrap}
+.legenda i{display:inline-block;width:14px;height:10px;border:1px solid #888;vertical-align:-1px;margin-right:6px}
+.legenda i.z{border-style:dashed;border-color:#555}
+.izbor-traka{margin-top:18px;padding:12px 14px;border-left:4px solid var(--crvena);background:#0c0c0c;font-size:.875rem}
+.polja{display:grid;gap:14px;margin-top:14px;max-width:620px}
+@media (min-width:760px){.polja.dva{grid-template-columns:1fr 1fr}.polja.dva .ceo{grid-column:1/-1}}
+.polje label{display:block;font-size:.75rem;color:#cfcfcf;margin-bottom:5px}
+.polje input,.polje textarea,.polje select{width:100%;min-height:48px;padding:10px 12px;border:1px solid #444;background:#050505;color:var(--papir);font:400 1rem var(--mono);border-radius:2px}
+.polje textarea{min-height:90px;resize:vertical}
+.polje input:focus,.polje textarea:focus,.polje select:focus{border-color:var(--papir)}
+.polje input[aria-invalid="true"]{border-color:var(--crvena-svetla)}
+.greska{font-size:.75rem;color:var(--crvena-svetla);min-height:1em;margin-top:4px}
+.potvrda h3{font-size:clamp(1.8rem,7vw,3rem);margin:6px 0 14px}
+.rezime{display:grid;grid-template-columns:auto 1fr;max-width:620px;margin:16px 0;border-top:1px solid #333}
+.rezime dt,.rezime dd{margin:0;padding:9px 0;border-bottom:1px solid #2a2a2a}
+.rezime dt{color:var(--siva);font-size:.75rem;padding-right:20px;padding-top:11px}
+.rezime dd{overflow-wrap:anywhere}
+.mala{font-size:.75rem;color:var(--siva)}
+
+/* radno vreme, kontakt */
+.dva-st{display:grid;gap:30px;margin-top:28px}
+@media (min-width:900px){.dva-st{grid-template-columns:1fr 1fr}}
+.raspored{list-style:none;margin:0;padding:0}
+.raspored li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #2a2a2a;font-size:.875rem}
+.raspored li.danas{color:#fff;font-weight:700}
+.raspored li.danas span:first-child::after{content:" (danas)";font-weight:400;color:var(--siva)}
+.raspored li.zatv span:last-child{color:var(--siva)}
+.mapa{border:1px solid #333;aspect-ratio:4/3;max-height:400px;width:100%;background:#1a1a1a;filter:grayscale(1) contrast(1.05)}
+.mapa iframe{width:100%;height:100%;border:0;display:block}
+.adresa{font-family:var(--naslov);font-weight:700;font-size:1.6rem;margin:22px 0 6px}
+.poruka-ok{margin-top:12px;padding:10px 14px;border-left:4px solid var(--crvena);background:#161616}
+.poruka-ok:empty{display:none}
+
+.podnozje{border-top:1px solid #262626;padding:36px 0 30px;font-size:.8125rem;color:#cfcfcf}
+.podnozje .red{display:flex;flex-wrap:wrap;gap:16px 44px;justify-content:space-between}
+.podnozje p{margin:.25em 0}
+.podnozje .napomena{margin-top:24px;color:var(--siva)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demo"><span class="paket">Paket 2: zakazivanje</span><span>Primer sajta · izradio opsforma</span><a href="../../">Svi primeri</a></div>
+
+<header class="zag">
+  <div class="okvir">
+    <a class="logo" href="#pocetak" aria-label="Foto studio Blenda, početak">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="none" stroke="#F2F2F2" stroke-width="1.5"/><g fill="none" stroke="#F2F2F2" stroke-width="1.5"><path d="M16 1.5 L22 11"/><path d="M28.6 9 L19 10"/><path d="M28.6 23 L23 15"/><path d="M16 30.5 L10 21"/><path d="M3.4 23 L13 22"/><path d="M3.4 9 L9 17"/></g><circle cx="16" cy="16" r="4" fill="#B3001B"/></svg>
+      <span>BLENDA</span>
+    </a>
+    <button class="meni-btn" type="button" aria-expanded="false" aria-controls="nav"><i aria-hidden="true"></i>Meni</button>
+    <nav id="nav" aria-label="Glavni meni">
+      <ul>
+        <li><a href="#cene">Sesije i cene <small>01</small></a></li>
+        <li><a href="#tok">Kako izgleda sesija <small>02</small></a></li>
+        <li><a href="#zakazivanje">Zakažite <small>03</small></a></li>
+        <li><a href="#studio">Studio i radno vreme <small>04</small></a></li>
+        <li><a href="#kontakt">Kontakt <small>05</small></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="pocetak">
+  <div class="okvir">
+    <div class="blenda-wrap">
+      <svg id="blenda" viewBox="-120 -120 240 240" role="img" aria-labelledby="blendaNaslov">
+        <title id="blendaNaslov">Otvor objektiva čije se lamele zatvaraju dok skrolujete</title>
+        <defs>
+          <clipPath id="otvor"><circle r="100"/></clipPath>
+          <radialGradient id="svetlo" cx="50%" cy="46%" r="55%">
+            <stop offset="0" stop-color="#F2F2F2"/>
+            <stop offset=".35" stop-color="#ffb3ba"/>
+            <stop offset=".7" stop-color="#B3001B"/>
+            <stop offset="1" stop-color="#3a0008"/>
+          </radialGradient>
+          <linearGradient id="lamela" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#262626"/>
+            <stop offset="1" stop-color="#121212"/>
+          </linearGradient>
+        </defs>
+        <circle r="116" fill="#111" stroke="#2a2a2a" stroke-width="2"/>
+        <g id="skala" fill="#8C8C8C" font-family="Space Mono, monospace" font-size="7" text-anchor="middle"></g>
+        <circle r="100" fill="url(#svetlo)"/>
+        <g clip-path="url(#otvor)" id="lamele"></g>
+        <circle r="100" fill="none" stroke="#050505" stroke-width="5"/>
+        <circle r="103" fill="none" stroke="#3a3a3a" stroke-width="1"/>
+      </svg>
+    </div>
+    <p class="ocitavanje" aria-live="off"><span>otvor <b id="fBroj">f/2.8</b></span><span>blenda <b id="vreme">1/125</b></span><span>ISO <b>100</b></span></p>
+    <h1>Portret koji <span>liči na vas.</span></h1>
+    <p class="uvod">Studio u Baba Višnjinoj 31. Portreti, porodične sesije, slike za biografiju i proizvode. Odabrane fotografije dobijate za 7 dana.</p>
+    <div class="akcije">
+      <a class="btn btn-crveno" href="#zakazivanje"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="13.5" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 7l1.5-3h5L16 7" fill="none" stroke="currentColor" stroke-width="2"/></svg>Zakažite sesiju</a>
+      <a class="btn" href="tel:+381600000508"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3h3l1.6 4.6-2.2 1.6a12 12 0 0 0 5.8 5.8l1.6-2.2L21 14.4v3a2.6 2.6 0 0 1-2.8 2.6C10 19.4 4.6 14 4 5.8A2.6 2.6 0 0 1 6.6 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Pozovite 060 000 05 08</a>
+      <a class="btn" href="viber://chat?number=%2B381600000508"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c5 0 8.5 2.6 8.5 7.6S17 18 12 18c-.9 0-1.8-.1-2.6-.3L6 20.5v-3.6C4.3 15.6 3.5 13.4 3.5 10.6 3.5 5.6 7 3 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Viber</a>
+    </div>
+  </div>
+</section>
+
+<section class="sekcija traka" id="cene">
+  <p class="ivica gore" aria-hidden="true"><span>BLENDA 100</span><span>14</span><span>14A</span><span>15</span><span>15A</span><span>16</span></p>
+  <div class="okvir">
+    <p class="exif"><span>f/2.8</span><span>1/125</span><span>85 mm</span></p>
+    <h2>Sesije i cene</h2>
+    <p class="uvod">U ceni su studio, svetlo, osnovna obrada i galerija za preuzimanje. Plaća se u studiju, gotovinom ili karticom.</p>
+    <div class="film">
+      <ul class="kadrovi">
+        <li class="kadar"><span class="br">KADAR 01</span><h3>Portret</h3><p>Jedna osoba, dve pozadine, do 2 presvlačenja. 10 obrađenih fotografija.</p><div class="dole"><span class="min">60 min</span><span class="cena">9.000 RSD</span></div></li>
+        <li class="kadar"><span class="br">KADAR 02</span><h3>Poslovni portret</h3><p>Za LinkedIn, sajt firme i biografiju. Brza sesija, 5 obrađenih fotografija.</p><div class="dole"><span class="min">60 min</span><span class="cena">10.500 RSD</span></div></li>
+        <li class="kadar"><span class="br">KADAR 03</span><h3>Porodica i deca</h3><p>Do 5 osoba i ljubimac. Pauza za decu je uračunata. 20 obrađenih fotografija.</p><div class="dole"><span class="min">90 min</span><span class="cena">14.000 RSD</span></div></li>
+        <li class="kadar"><span class="br">KADAR 04</span><h3>Proizvodi</h3><p>Do 15 proizvoda na beloj ili obojenoj pozadini, za web prodavnicu i mreže.</p><div class="dole"><span class="min">120 min</span><span class="cena">18.000 RSD</span></div></li>
+      </ul>
+    </div>
+    <div class="dodaci">
+      <div><span>Dodatna obrađena fotografija</span><b>800 RSD</b></div>
+      <div><span>Šminkerka u studiju</span><b>4.500 RSD</b></div>
+      <div><span>Štampa 20×30 cm na mat papiru</span><b>1.200 RSD</b></div>
+      <div><span>Isporuka za 48 sati</span><b>2.500 RSD</b></div>
+    </div>
+    <div class="foto-red">
+      <div class="foto"><i>f/4 · 1/160</i><span>Vaša fotografija</span></div>
+      <div class="foto"><i>f/2 · 1/250</i><span>Vaša fotografija</span></div>
+    </div>
+  </div>
+  <p class="ivica dole" aria-hidden="true"><span>16A</span><span>17</span><span>17A</span><span>18</span><span>BLENDA 100</span></p>
+</section>
+
+<section class="sekcija papir" id="tok">
+  <div class="okvir">
+    <p class="exif"><span>f/8</span><span>1/60</span><span>ISO 100</span></p>
+    <h2>Kako izgleda sesija</h2>
+    <p class="uvod">Ne morate da znate da pozirate. Pokazujemo vam gde da stanete i šta da radite sa rukama.</p>
+    <ol class="koraci">
+      <li><b>Pre dolaska</b><p>Dan ranije šaljemo poruku sa predlogom odeće. Ponesite dve majice različite boje i nešto što volite da nosite.</p></li>
+      <li><b>U studiju</b><p>Dođite 10 minuta ranije. Kafa, ogledalo, presvlačenje. Snimamo dok ne budete zadovoljni.</p></li>
+      <li><b>Posle sesije</b><p>Za 3 dana dobijate link sa svim kadrovima, birate omiljene. Obrađene stižu za 7 dana.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!--
+================================================================
+PRODUKCIJA
+Modul ispod radi samo u pregledaču: slobodni i zauzeti termini su izmišljeni
+(računaju se iz datuma). Na pravom sajtu bira se jedna od dve varijante:
+
+a) Zahtev za termin: dugme "Pošalji zahtev" šalje rezime (sesija, dan, vreme,
+   ime, telefon, napomena) na mejl studija preko Web3Forms
+   (POST https://api.web3forms.com/submit, skriveno polje access_key),
+   ili otvara Viber poruku sa istim rezimeom. Studio potvrđuje termin
+   pozivom ili porukom.
+
+b) Povezan kalendar: umesto ovog modula ugrađuje se Google Kalendar
+   "Appointment schedule", Cal.com ili Calendly embed sa trajanjima 60/90/120 min.
+   Termini se sami upisuju u Google Kalendar na telefonu fotografa,
+   a zauzeti se automatski sklanjaju.
+================================================================
+-->
+<section class="sekcija traka" id="zakazivanje">
+  <p class="ivica gore" aria-hidden="true"><span>BLENDA 400</span><span>21</span><span>21A</span><span>22</span><span>22A</span><span>23</span></p>
+  <div class="okvir">
+    <p class="exif"><span>f/1.4</span><span>1/250</span><span>50 mm</span></p>
+    <h2>Zakažite sesiju</h2>
+    <p class="uvod">Izaberite sesiju, pa prevucite traku sa danima i kliknite na slobodno vreme. Termin potvrđujemo porukom.</p>
+
+    <div class="modul" id="modul">
+      <div class="modul-zag">
+        <span class="paket">Paket 2: zakazivanje</span>
+        <span class="primer-oznaka">Primer: termini su izmišljeni</span>
+      </div>
+      <div id="tokZakazivanja">
+        <p class="korak-naslov" id="lSesija">1. Sesija</p>
+        <div class="sesije" id="sesije" role="group" aria-labelledby="lSesija"></div>
+
+        <p class="korak-naslov" id="lDan">2. Dan i vreme <small id="dužina"></small></p>
+        <div class="niz-wrap">
+          <div class="niz" id="niz" role="group" aria-labelledby="lDan" tabindex="0"></div>
+        </div>
+        <div class="niz-kontrole">
+          <div class="legenda"><span><i></i>slobodno</span><span><i class="z"></i>zauzeto</span></div>
+          <div><button type="button" class="strelica" id="levo" aria-label="Prethodni dani">&lsaquo;</button><button type="button" class="strelica" id="desno" aria-label="Sledeći dani">&rsaquo;</button></div>
+        </div>
+        <p class="izbor-traka" id="izbor" aria-live="polite">Još niste izabrali vreme.</p>
+
+        <form id="forma" novalidate>
+          <p class="korak-naslov">3. Vaši podaci</p>
+          <div class="polja dva">
+            <div class="polje"><label for="ime">Ime i prezime</label><input id="ime" name="ime" autocomplete="name"><div class="greska" id="imeG" aria-live="polite"></div></div>
+            <div class="polje"><label for="tel">Telefon</label><input id="tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="060 123 4567"><div class="greska" id="telG" aria-live="polite"></div></div>
+            <div class="polje ceo"><label for="nap">Napomena (broj osoba, ideja, proizvodi)</label><textarea id="nap" name="napomena"></textarea></div>
+            <div class="ceo"><button type="submit" class="btn btn-crveno">Pošalji zahtev</button></div>
+          </div>
+        </form>
+      </div>
+
+      <div class="potvrda" id="potvrda" hidden tabindex="-1">
+        <p class="exif"><span>kadar sačuvan</span></p>
+        <h3>Termin je zabeležen.</h3>
+        <p>Na pravom sajtu studio dobija zahtev odmah i javlja vam se porukom u roku od sat vremena da potvrdi.</p>
+        <dl class="rezime" id="rezime"></dl>
+        <p class="mala">Ovo je primer sajta, termin nije stvarno zakazan.</p>
+        <div class="akcije" style="justify-content:flex-start">
+          <button type="button" class="btn btn-svetlo" id="ics">Dodaj u kalendar</button>
+          <button type="button" class="btn" id="novi">Novi termin</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="ivica dole" aria-hidden="true"><span>23A</span><span>24</span><span>24A</span><span>25</span><span>BLENDA 400</span></p>
+</section>
+
+<section class="sekcija" id="studio">
+  <div class="okvir">
+    <p class="exif"><span>f/5.6</span><span>1/30</span><span>24 mm</span></p>
+    <h2>Studio i radno vreme</h2>
+    <div class="dva-st">
+      <div>
+        <ul class="raspored" id="raspored">
+          <li data-d="1"><span>Ponedeljak</span><span>12–20 h</span></li>
+          <li data-d="2"><span>Utorak</span><span>10–20 h</span></li>
+          <li data-d="3"><span>Sreda</span><span>10–20 h</span></li>
+          <li data-d="4"><span>Četvrtak</span><span>10–20 h</span></li>
+          <li data-d="5"><span>Petak</span><span>10–20 h</span></li>
+          <li data-d="6"><span>Subota</span><span>10–16 h</span></li>
+          <li data-d="0" class="zatv"><span>Nedelja</span><span>zatvoreno</span></li>
+        </ul>
+        <p class="adresa">Baba Višnjina 31</p>
+        <p>Vračar, prizemlje u dvorištu. Studio 40 m², svlačionica i parking na ulici. Dođite samo uz zakazan termin.</p>
+      </div>
+      <div class="mapa"><iframe title="Mapa: Baba Višnjina 31, Beograd" loading="lazy" src="https://maps.google.com/maps?q=Baba%20Vi%C5%A1njina%2031%2C%20Beograd&z=15&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section class="sekcija traka" id="kontakt">
+  <p class="ivica gore" aria-hidden="true"><span>BLENDA 100</span><span>36</span><span>36A</span><span>37</span></p>
+  <div class="okvir">
+    <p class="exif"><span>f/2.8</span><span>1/125</span></p>
+    <h2>Pišite nam</h2>
+    <p class="uvod">Pitanje za venčanje, krštenje ili veći posao za firmu? Opišite šta vam treba i poslaćemo ponudu.</p>
+    <!--
+      Na pravom sajtu forma ide preko Web3Forms:
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="VAŠ-ACCESS-KEY">
+        <input type="hidden" name="subject" value="Upit sa sajta Blenda">
+      Poruka stiže direktno na mejl studija.
+    -->
+    <form data-form="kontakt" class="polja dva" novalidate>
+      <div class="polje"><label for="kIme">Ime</label><input id="kIme" name="ime" autocomplete="name"></div>
+      <div class="polje"><label for="kMejl">Mejl ili telefon</label><input id="kMejl" name="kontakt"></div>
+      <div class="polje ceo"><label for="kPoruka">Poruka</label><textarea id="kPoruka" name="poruka"></textarea></div>
+      <div class="ceo"><button type="submit" class="btn btn-svetlo">Pošalji poruku</button></div>
+      <p class="poruka-ok ceo" id="kontaktOk" role="status"></p>
+    </form>
+  </div>
+  <p class="ivica dole" aria-hidden="true"><span>37A</span><span>38</span><span>BLENDA 100</span></p>
+</section>
+</main>
+
+<footer class="podnozje">
+  <div class="okvir">
+    <div class="red">
+      <div><p><b style="font-family:var(--naslov);font-size:1.2rem">BLENDA</b></p><p>Foto studio, Baba Višnjina 31, Vračar</p></div>
+      <div><p><a href="tel:+381600000508">060 000 05 08</a></p><p><a href="viber://chat?number=%2B381600000508">Viber</a></p></div>
+      <div><p>pon 12–20 · uto–pet 10–20</p><p>sub 10–16 · ned zatvoreno</p></div>
+    </div>
+    <p class="napomena">Primer sajta · izradio opsforma · <a href="../../">Svi primeri</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var SLUG = "foto-blenda", FIRMA = "Foto studio Blenda", ADRESA = "Baba Višnjina 31, Beograd";
+var smanji = matchMedia("(prefers-reduced-motion: reduce)");
+
+/* ---------- meni ---------- */
+var mb = document.querySelector(".meni-btn"), nav = document.getElementById("nav");
+function zatvori(){ mb.setAttribute("aria-expanded","false"); nav.classList.remove("otvoren"); }
+mb.addEventListener("click", function(){ var o = mb.getAttribute("aria-expanded") === "true"; mb.setAttribute("aria-expanded", String(!o)); nav.classList.toggle("otvoren", !o); });
+nav.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", zatvori); });
+document.addEventListener("keydown", function(e){ if (e.key === "Escape" && mb.getAttribute("aria-expanded") === "true"){ zatvori(); mb.focus(); } });
+
+/* ---------- blenda ---------- */
+var NS = "http://www.w3.org/2000/svg", lamele = document.getElementById("lamele"), N = 9, putanje = [];
+for (var i = 0; i < N; i++){ var p = document.createElementNS(NS, "path"); p.setAttribute("fill", "url(#lamela)"); p.setAttribute("stroke", "#3f3f3f"); p.setAttribute("stroke-width", "1"); lamele.appendChild(p); putanje.push(p); }
+var skala = document.getElementById("skala");
+["1.4","2","2.8","4","5.6","8","11","16"].forEach(function(f, k){
+  var a = (-150 + k * 300 / 7) * Math.PI / 180, t = document.createElementNS(NS, "text");
+  t.setAttribute("x", (Math.sin(a) * 109).toFixed(1)); t.setAttribute("y", (-Math.cos(a) * 109 + 2.5).toFixed(1)); t.textContent = f; skala.appendChild(t);
+});
+var STOP = ["f/1.4","f/2","f/2.8","f/4","f/5.6","f/8","f/11","f/16"], BRZ = ["1/1000","1/500","1/250","1/125","1/60","1/30","1/15","1/8"];
+function postaviBlendu(z){ /* z: 0 = otvoreno, 1 = zatvoreno */
+  var r = 92 - z * 76, t = r * Math.tan(Math.PI / N), tw = z * 34;
+  putanje.forEach(function(p, k){
+    p.setAttribute("transform", "rotate(" + (k * 360 / N + tw).toFixed(2) + ")");
+    p.setAttribute("d", "M" + (-t).toFixed(2) + " " + (-r).toFixed(2) + " L 240 " + (-r).toFixed(2) + " L 240 -240 Q " + (-t - 40).toFixed(1) + " -230 " + (-t - 26).toFixed(1) + " -150 Z");
+  });
+  var idx = Math.min(7, Math.round(z * 7));
+  document.getElementById("fBroj").textContent = STOP[idx];
+  document.getElementById("vreme").textContent = BRZ[idx];
+}
+var hero = document.getElementById("pocetak"), zakazano = false;
+function naSkrol(){
+  zakazano = false;
+  if (smanji.matches){ postaviBlendu(.28); return; }
+  var vis = hero.offsetHeight, y = Math.min(Math.max(window.scrollY / (vis * .9), 0), 1);
+  postaviBlendu(.08 + y * .92);
+}
+window.addEventListener("scroll", function(){ if (!zakazano){ zakazano = true; requestAnimationFrame(naSkrol); } }, {passive:true});
+smanji.addEventListener && smanji.addEventListener("change", naSkrol);
+naSkrol();
+
+/* ---------- radno vreme ---------- */
+var li = document.querySelector('#raspored li[data-d="' + new Date().getDay() + '"]'); if (li) li.classList.add("danas");
+
+/* ---------- zakazivanje ---------- */
+var RADNO = {0:null,1:[12,20],2:[10,20],3:[10,20],4:[10,20],5:[10,20],6:[10,16]};
+var SESIJE = [
+  {id:"portret", naziv:"Portret", min:60, cena:9000},
+  {id:"posao", naziv:"Poslovni portret", min:60, cena:10500},
+  {id:"porodica", naziv:"Porodica i deca", min:90, cena:14000},
+  {id:"proizvod", naziv:"Proizvodi", min:120, cena:18000}
+];
+var KORAK = 30;
+var DANI_K = ["ned","pon","uto","sre","čet","pet","sub"], DANI_P = ["nedelja","ponedeljak","utorak","sreda","četvrtak","petak","subota"];
+var MES = ["januar","februar","mart","april","maj","jun","jul","avgust","septembar","oktobar","novembar","decembar"];
+var MES_G = ["januara","februara","marta","aprila","maja","juna","jula","avgusta","septembra","oktobra","novembra","decembra"];
+function cena(n){ return n.toLocaleString("de-DE") + " RSD"; }
+function iso(d){ return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0"); }
+function hhmm(m){ return String(Math.floor(m/60)).padStart(2,"0") + ":" + String(m%60).padStart(2,"0"); }
+function hes(s){ var h = 2166136261; for (var i=0;i<s.length;i++){ h ^= s.charCodeAt(i); h = Math.imul(h,16777619); } return h >>> 0; }
+
+var DANI = []; (function(){ var t = new Date(); t.setHours(0,0,0,0); for (var i=0;i<14;i++){ var d = new Date(t); d.setDate(t.getDate()+i); DANI.push(d); } })();
+
+/* Zauzetost: studio ima jednu salu. Svaki dan ima izmišljene rezervacije (blokove)
+   koje su deterministične iz datuma; termin je zauzet ako bi se preklopio sa blokom. */
+function blokovi(dan){
+  var r = RADNO[dan.getDay()]; if (!r) return [];
+  var od = r[0]*60, doo = r[1]*60, out = [], m = od, k = 0, s = iso(dan);
+  while (m < doo){
+    var h = hes(s + "|" + k++);
+    if (h % 100 < 27){ var dur = [60,90,120][h % 3]; out.push([m, Math.min(m + dur, doo)]); m += dur; }
+    else m += 60;
+  }
+  return out;
+}
+function termini(dan, trajanje){
+  var r = RADNO[dan.getDay()]; if (!r) return [];
+  var b = blokovi(dan), sada = new Date(), danas = iso(dan) === iso(sada), sadaMin = sada.getHours()*60 + sada.getMinutes(), out = [];
+  for (var m = r[0]*60; m + trajanje <= r[1]*60; m += KORAK){
+    if (danas && m <= sadaMin + 60) continue;
+    var zauzet = b.some(function(x){ return m < x[1] && m + trajanje > x[0]; });
+    out.push({m:m, zauzet:zauzet});
+  }
+  return out;
+}
+window.__blenda = {termini:termini, DANI:DANI, iso:iso, RADNO:RADNO};
+
+var st = {ses:SESIJE[0], dan:null, m:null};
+var elSes = document.getElementById("sesije"), niz = document.getElementById("niz"), elIzbor = document.getElementById("izbor");
+
+function crtajSesije(){
+  elSes.innerHTML = "";
+  SESIJE.forEach(function(s){
+    var b = document.createElement("button"); b.type = "button"; b.className = "sesija";
+    b.setAttribute("aria-pressed", st.ses === s ? "true" : "false");
+    b.innerHTML = "<b>" + s.naziv + "</b><span>" + s.min + " min · " + cena(s.cena) + "</span>";
+    b.addEventListener("click", function(){ st.ses = s; st.dan = null; st.m = null; crtajSesije(); crtajNiz(); });
+    elSes.appendChild(b);
+  });
+  document.getElementById("dužina").textContent = "sesija traje " + st.ses.min + " min";
+}
+function crtajNiz(){
+  var x = niz.scrollLeft; niz.innerHTML = "";
+  DANI.forEach(function(d, idx){
+    var kart = document.createElement("div"); kart.className = "dan"; kart.dataset.dan = iso(d);
+    var zag = '<div class="dan-zag"><b>' + d.getDate() + '.</b><span><span class="k">' + String(idx + 1).padStart(2, "0") + 'A</span>' + DANI_K[d.getDay()] + ", " + MES[d.getMonth()] + '</span></div>';
+    if (!RADNO[d.getDay()]){
+      kart.classList.add("zatvoren"); kart.setAttribute("aria-disabled", "true");
+      kart.innerHTML = zag + '<p class="zatv"><b>Zatvoreno</b>nedeljom ne radimo</p>';
+      niz.appendChild(kart); return;
+    }
+    kart.innerHTML = zag;
+    var ts = termini(d, st.ses.min);
+    if (!ts.length || ts.every(function(t){ return t.zauzet; })){
+      kart.insertAdjacentHTML("beforeend", '<p class="nema">' + (ts.length ? "Sve je zauzeto" : "Danas više nema termina") + '</p>');
+      if (!ts.length){ niz.appendChild(kart); return; }
+    }
+    var mreza = document.createElement("div"); mreza.className = "termini";
+    ts.forEach(function(t){
+      var b = document.createElement("button"); b.type = "button"; b.className = "t"; b.textContent = hhmm(t.m);
+      b.dataset.m = t.m;
+      var sel = st.dan && iso(st.dan) === iso(d) && st.m === t.m;
+      b.setAttribute("aria-pressed", sel ? "true" : "false");
+      b.setAttribute("aria-label", DANI_P[d.getDay()] + " " + d.getDate() + ". " + MES_G[d.getMonth()] + ", " + hhmm(t.m) + (t.zauzet ? ", zauzeto" : ", slobodno"));
+      if (t.zauzet){ b.disabled = true; }
+      else b.addEventListener("click", function(){ st.dan = d; st.m = t.m; crtajNiz(); pokaziIzbor(); });
+      mreza.appendChild(b);
+    });
+    kart.appendChild(mreza);
+    niz.appendChild(kart);
+  });
+  niz.scrollLeft = x;
+  pokaziIzbor(); strelice();
+}
+function pokaziIzbor(){
+  if (!st.dan){ elIzbor.textContent = "Još niste izabrali vreme."; return; }
+  elIzbor.textContent = "Izabrano: " + st.ses.naziv + ", " + DANI_P[st.dan.getDay()] + " " + st.dan.getDate() + ". " + MES_G[st.dan.getMonth()] + ", " + hhmm(st.m) + "–" + hhmm(st.m + st.ses.min) + ", " + cena(st.ses.cena);
+}
+function korakNiza(){ var k = niz.querySelector(".dan"); return k ? k.offsetWidth : 260; }
+function strelice(){
+  document.getElementById("levo").disabled = niz.scrollLeft < 4;
+  document.getElementById("desno").disabled = niz.scrollLeft + niz.clientWidth >= niz.scrollWidth - 4;
+}
+document.getElementById("levo").addEventListener("click", function(){ niz.scrollBy({left:-korakNiza(), behavior: smanji.matches ? "auto" : "smooth"}); });
+document.getElementById("desno").addEventListener("click", function(){ niz.scrollBy({left:korakNiza(), behavior: smanji.matches ? "auto" : "smooth"}); });
+niz.addEventListener("scroll", strelice, {passive:true});
+
+var forma = document.getElementById("forma"), potvrda = document.getElementById("potvrda"), tok = document.getElementById("tokZakazivanja"), rez = null;
+function greska(id, txt){ document.getElementById(id + "G").textContent = txt; document.getElementById(id).setAttribute("aria-invalid", txt ? "true" : "false"); return !txt; }
+forma.addEventListener("submit", function(e){
+  e.preventDefault();
+  var ime = document.getElementById("ime").value.trim(), tel = document.getElementById("tel").value.trim();
+  var a = greska("ime", ime.length >= 2 ? "" : "Upišite ime i prezime.");
+  var b = greska("tel", tel.replace(/\D/g, "").length >= 9 ? "" : "Upišite broj telefona (najmanje 9 cifara).");
+  if (!st.dan){ elIzbor.textContent = "Izaberite dan i vreme na traci iznad."; elIzbor.scrollIntoView({block:"center"}); return; }
+  if (!a){ document.getElementById("ime").focus(); return; }
+  if (!b){ document.getElementById("tel").focus(); return; }
+  rez = {ses:st.ses, dan:st.dan, m:st.m, ime:ime, tel:tel, nap:document.getElementById("nap").value.trim()};
+  var red = [["Sesija", rez.ses.naziv], ["Dan", DANI_P[rez.dan.getDay()] + ", " + rez.dan.getDate() + ". " + MES_G[rez.dan.getMonth()]], ["Vreme", hhmm(rez.m) + "–" + hhmm(rez.m + rez.ses.min)], ["Trajanje", rez.ses.min + " min"], ["Cena", cena(rez.ses.cena)], ["Ime", rez.ime], ["Telefon", rez.tel]];
+  if (rez.nap) red.push(["Napomena", rez.nap]);
+  var dl = document.getElementById("rezime"); dl.innerHTML = "";
+  red.forEach(function(r){ var dt = document.createElement("dt"); dt.textContent = r[0]; var dd = document.createElement("dd"); dd.textContent = r[1]; dl.appendChild(dt); dl.appendChild(dd); });
+  tok.hidden = true; potvrda.hidden = false; potvrda.focus();
+  document.getElementById("modul").scrollIntoView({block:"start"});
+});
+document.getElementById("novi").addEventListener("click", function(){ rez = null; st.dan = null; st.m = null; forma.reset(); potvrda.hidden = true; tok.hidden = false; crtajNiz(); document.getElementById("modul").scrollIntoView({block:"start"}); });
+
+function esc(s){ return String(s).replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\n/g,"\\n"); }
+function utc(d){ return d.toISOString().replace(/[-:]/g,"").replace(/\.\d{3}/,""); }
+document.getElementById("ics").addEventListener("click", function(){
+  if (!rez) return;
+  var s = new Date(rez.dan.getFullYear(), rez.dan.getMonth(), rez.dan.getDate(), 0, rez.m), k = new Date(s.getTime() + rez.ses.min * 60000);
+  var L = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//opsforma//Blenda primer//SR","CALSCALE:GREGORIAN","METHOD:PUBLISH","BEGIN:VEVENT",
+    "UID:" + utc(s) + "-" + rez.ses.id + "-" + Math.random().toString(36).slice(2,10) + "@blenda.primer",
+    "DTSTAMP:" + utc(new Date()), "DTSTART:" + utc(s), "DTEND:" + utc(k),
+    "SUMMARY:" + esc(FIRMA + " - " + rez.ses.naziv), "LOCATION:" + esc(ADRESA),
+    "DESCRIPTION:" + esc("Sesija " + rez.ses.min + " min, " + cena(rez.ses.cena) + ". Dođite 10 minuta ranije. Tel. 060 000 05 08"),
+    "END:VEVENT","END:VCALENDAR"];
+  var url = URL.createObjectURL(new Blob([L.join("\r\n") + "\r\n"], {type:"text/calendar;charset=utf-8"})), a = document.createElement("a");
+  a.href = url; a.download = "termin-" + SLUG + ".ics"; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(function(){ URL.revokeObjectURL(url); }, 2000);
+});
+
+document.querySelector('form[data-form="kontakt"]').addEventListener("submit", function(e){
+  e.preventDefault(); document.getElementById("kontaktOk").textContent = "Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.";
+});
+
+crtajSesije(); crtajNiz();
+})();
+</script>
+</body>
+</html>

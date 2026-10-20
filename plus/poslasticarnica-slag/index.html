@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Poslastičarnica Šlag · torte po porudžbini, Katanićeva 15, Vračar</title>
+<meta name="description" content="Poslastičarnica Šlag, Katanićeva 15 na Vračaru. Složite tortu na sajtu: broj osoba, biskvit, fil i ukras, odmah vidite izgled i cenu. Preuzimanje ili dostava po Beogradu.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FFC8DD'/%3E%3Crect x='7' y='14' width='18' height='11' rx='2' fill='%236B2737'/%3E%3Cellipse cx='16' cy='14' rx='9' ry='3' fill='%23FFFDF7'/%3E%3Ccircle cx='16' cy='9' r='3' fill='%23D7263D'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Rethink+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --roze:#FFC8DD;
+  --roze-2:#FFE4EE;
+  --roze-3:#FFF2F7;
+  --nebo:#A2D2FF;
+  --nebo-2:#D9ECFF;
+  --nebo-3:#EEF6FF;
+  --visnja:#6B2737;
+  --visnja-2:#4A1825;
+  --krem:#FFFDF7;
+  --tekst:#4A1825;
+  --display:"Shrikhand","Cooper Black","Georgia",serif;
+  --body:"Rethink Sans","Segoe UI","Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--krem);color:var(--tekst);font-family:var(--body);font-size:1.0625rem;line-height:1.55}
+img,svg{max-width:100%;display:block}
+a{color:var(--visnja)}
+h1,h2,h3{font-family:var(--display);font-weight:400;color:var(--visnja);line-height:1.08;margin:0}
+h2{font-size:clamp(2rem,6vw,3rem)}
+h3{font-size:1.5rem}
+p{margin:0 0 .8em}
+button,input,textarea,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--visnja);outline-offset:3px;border-radius:6px}
+section[id],article[id],#potvrda{scroll-margin-top:76px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:min(1240px,100% - 32px);margin-inline:auto}
+
+/* gornja traka */
+.demo-bar{background:var(--visnja-2);color:var(--krem);font-size:.85rem;padding:7px 16px;display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:center;align-items:center;text-align:center}
+.demo-bar a{color:var(--roze);font-weight:600}
+.demo-bar :focus-visible{outline-color:var(--nebo)}
+.pkg{display:inline-block;background:var(--nebo);color:var(--visnja-2);font-weight:700;font-size:.78rem;padding:3px 10px;border-radius:99px;white-space:nowrap}
+
+/* zaglavlje */
+.head{position:sticky;top:0;z-index:30;background:rgba(255,200,221,.94);backdrop-filter:blur(6px);border-bottom:2px solid var(--visnja)}
+.head-in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.logo{font-family:var(--display);font-size:2rem;color:var(--visnja);text-decoration:none;line-height:1;display:flex;align-items:baseline;gap:8px}
+.logo small{font-family:var(--body);font-size:.8rem;font-weight:600;color:var(--visnja-2)}
+.menu-btn{display:none;width:48px;height:48px;border:2px solid var(--visnja);border-radius:16px;background:var(--krem);cursor:pointer;position:relative}
+.menu-btn span{position:absolute;left:12px;right:12px;height:2px;background:var(--visnja);transition:transform .2s}
+.menu-btn span:nth-child(1){top:17px}.menu-btn span:nth-child(2){top:27px}
+.menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:nth-child(2){transform:translateY(-5px) rotate(-45deg)}
+.nav{display:flex;gap:4px;align-items:center}
+.nav a{text-decoration:none;font-weight:600;padding:10px 14px;border-radius:99px;color:var(--visnja-2)}
+.nav a:hover{background:var(--krem)}
+.nav a.cta{background:var(--visnja);color:var(--krem)}
+@media (max-width:860px){
+  .menu-btn{display:block}
+  .nav{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;background:var(--roze);border-bottom:2px solid var(--visnja);padding:8px 16px 16px;display:none}
+  .nav.open{display:flex}
+  .nav a{padding:13px 16px;font-size:1.1rem}
+}
+
+/* hero */
+.hero{background:var(--roze);position:relative;padding:44px 0 74px;text-align:center}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:30px;
+  background:radial-gradient(circle at 20px 30px,var(--krem) 19px,transparent 20px) 0 0/40px 30px repeat-x}
+.hero h1{font-size:clamp(1.15rem,3.6vw,1.6rem);font-family:var(--body);font-weight:700;color:var(--visnja-2);letter-spacing:.01em}
+.hero h1 .word{display:block;font-family:var(--display);font-weight:400;font-size:clamp(5.5rem,24vw,11rem);line-height:.95;color:var(--visnja);
+  text-shadow:4px 4px 0 var(--nebo),8px 8px 0 var(--krem);margin:.06em 0 .12em}
+.hero .lead{max-width:36rem;margin:0 auto 26px;font-size:1.15rem}
+.btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:99px;border:2px solid var(--visnja);background:var(--krem);color:var(--visnja);font-weight:700;text-decoration:none;cursor:pointer;font-size:1rem}
+.btn.solid{background:var(--visnja);color:var(--krem)}
+.btn.nebo{background:var(--nebo);}
+.btn:hover{transform:translateY(-1px)}
+.btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+.facts{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:26px auto 0;padding:0;list-style:none;font-size:.95rem}
+.facts li{background:var(--krem);border-radius:99px;padding:6px 14px;font-weight:600}
+
+/* konfigurator */
+.konf{padding:30px 0 56px}
+.konf-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;justify-content:center;text-align:center;margin-bottom:6px}
+.konf-sub{text-align:center;max-width:40rem;margin:0 auto 22px}
+.ex-note{display:inline-block;background:var(--nebo-2);border:1.5px dashed var(--visnja);color:var(--visnja-2);font-weight:700;font-size:.88rem;border-radius:12px;padding:5px 12px}
+.konf-grid{display:grid;grid-template-columns:230px minmax(0,1fr) 420px;gap:20px;align-items:start}
+.stepper{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;position:sticky;top:84px}
+.stepper button{width:100%;display:grid;grid-template-columns:34px 1fr;gap:2px 10px;align-items:center;text-align:left;border:0;background:transparent;border-radius:18px;padding:10px 12px;cursor:pointer;min-height:48px}
+.stepper .n{grid-row:span 2;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:800;background:var(--roze-2);color:var(--visnja)}
+.stepper .t{font-weight:700;font-size:.95rem;line-height:1.2}
+.stepper .v{font-size:.82rem;color:#7A3B4A;line-height:1.2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.stepper button[aria-current="step"]{background:var(--roze)}
+.stepper button[aria-current="step"] .n{background:var(--visnja);color:var(--krem)}
+.stepper button.done .n{background:var(--nebo)}
+.stepper button:disabled{cursor:default;opacity:.5}
+.stage{position:sticky;top:84px;background:var(--roze-3);border-radius:40px;padding:22px 18px 18px;
+  background-image:radial-gradient(var(--roze-2) 22%,transparent 24%);background-size:22px 22px}
+.cake{width:100%;max-width:520px;margin:0 auto;aspect-ratio:400/294}
+.cake svg{width:100%;height:100%}
+.cake.pop svg .torta{animation:pop .45s cubic-bezier(.3,1.6,.5,1)}
+@keyframes pop{0%{transform:scale(.97) translateY(4px)}100%{transform:none}}
+.cake svg .torta{transform-origin:200px 300px}
+.total{text-align:center;background:var(--krem);border-radius:24px;padding:12px 16px;margin-top:10px;border:2px solid var(--visnja)}
+.total .lbl{font-size:.88rem;font-weight:600}
+.total strong{display:block;font-family:var(--display);font-weight:400;font-size:2rem;color:var(--visnja);line-height:1.1}
+.total small{display:block;font-size:.85rem;color:#6A3342}
+.panel{background:var(--nebo-3);border-radius:28px;padding:22px 20px;border:2px solid var(--nebo)}
+.panel{scroll-margin-top:96px}
+@media (max-width:860px){.panel{scroll-margin-top:250px}}
+.step h3{margin-bottom:6px}
+.step .hint{font-size:.92rem;color:#6A3342;margin-bottom:14px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.opts.one{grid-template-columns:1fr}
+.opt{display:flex;align-items:center;gap:10px;text-align:left;min-height:52px;padding:10px 12px;border-radius:16px;border:2px solid transparent;background:var(--krem);cursor:pointer;line-height:1.2}
+.opt .sw{flex:none;width:24px;height:24px;border-radius:50%;border:2px solid rgba(74,24,37,.25)}
+.opt b{display:block;font-weight:700;font-size:.97rem}
+.opt small{display:block;font-size:.82rem;color:#6A3342;margin-top:2px}
+.opt[aria-pressed="true"]{border-color:var(--visnja);background:var(--roze)}
+.opt:hover{border-color:rgba(107,39,55,.4)}
+.lab{display:block;font-weight:700;margin:16px 0 6px;font-size:.95rem}
+.field{width:100%;min-height:48px;padding:10px 14px;border-radius:14px;border:2px solid #C79AA8;background:var(--krem)}
+.field:focus-visible{border-color:var(--visnja);outline-offset:1px}
+textarea.field{min-height:84px;resize:vertical}
+.count{font-size:.8rem;color:#6A3342;text-align:right;margin-top:4px}
+.seg{display:grid;grid-template-columns:1fr 1fr;background:var(--krem);border-radius:99px;padding:4px;gap:4px;border:2px solid var(--nebo)}
+.seg button{min-height:46px;border:0;border-radius:99px;background:transparent;font-weight:700;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--visnja);color:var(--krem)}
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}
+.day{min-height:56px;border-radius:14px;border:2px solid transparent;background:var(--krem);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.05;padding:4px 0}
+.day .dw{font-size:.72rem;font-weight:600}
+.day .dn{font-size:1.15rem;font-weight:800}
+.day .dx{font-size:.6rem;font-weight:600}
+.day[aria-pressed="true"]{background:var(--visnja);color:var(--krem)}
+.day:disabled{cursor:not-allowed;background:repeating-linear-gradient(135deg,#F3E6EA 0 5px,#FBF3F6 5px 10px);color:#8E6873}
+.slots{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.slots.win{grid-template-columns:1fr}
+.slot{min-height:46px;border-radius:12px;border:2px solid var(--nebo);background:var(--krem);font-weight:700;cursor:pointer;font-size:.95rem}
+.slot[aria-pressed="true"]{background:var(--visnja);border-color:var(--visnja);color:var(--krem)}
+.slot:disabled{cursor:not-allowed;text-decoration:line-through;color:#9A7C84;background:#F5EEF0;border-color:#E8DADF;font-weight:500}
+.legend{display:flex;gap:14px;font-size:.8rem;margin-top:8px;color:#6A3342;flex-wrap:wrap}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:5px;border:2px solid var(--nebo);background:var(--krem)}
+.legend i.z{background:#F5EEF0;border-color:#E8DADF}
+.empty{padding:12px 14px;background:var(--krem);border-radius:14px;font-size:.93rem}
+.err{color:#A3172F;font-weight:700;font-size:.9rem;margin:8px 0 0;min-height:1em}
+.check{display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-size:.95rem;cursor:pointer}
+.check input{width:22px;height:22px;margin:2px 0 0;accent-color:var(--visnja);flex:none}
+.stepnav{display:flex;gap:10px;justify-content:space-between;margin-top:20px}
+.stepnav .btn{flex:1}
+.potvrda{background:var(--roze-3);border-radius:40px;padding:26px 22px;border:2px solid var(--visnja);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px;align-items:center}
+.potvrda[hidden]{display:none}
+.potvrda h3{font-size:2rem;margin-bottom:8px}
+.sum{margin:14px 0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:.97rem}
+.sum dt{font-weight:700}
+.sum dd{margin:0}
+.potvrda .btns{justify-content:flex-start}
+.potvrda .small{font-size:.88rem;color:#6A3342;margin-top:14px}
+
+@media (max-width:1180px){
+  .konf-grid{grid-template-columns:minmax(0,1fr) 420px}
+  .stepper{grid-column:1/-1;position:static;flex-direction:row;overflow-x:auto;padding-bottom:4px}
+  .stepper li{flex:1 0 auto}
+  .stepper button{grid-template-columns:30px auto;padding:8px 12px}
+  .stepper .n{width:30px;height:30px}
+  .stepper .v{display:none}
+}
+@media (max-width:860px){
+  .konf-grid{grid-template-columns:minmax(0,1fr);gap:12px}
+  .stepper{gap:4px;overflow:visible;justify-content:space-between}
+  .stepper li{flex:0 0 auto}
+  .stepper button{grid-template-columns:1fr;padding:4px;justify-items:center;min-width:44px}
+  .stepper .t{display:none}
+  .stepper .n{width:40px;height:40px;grid-row:auto}
+  .konf-grid{display:block}
+  .stepper{margin-bottom:10px}
+  .stage{top:66px;z-index:5;border-radius:24px;padding:6px 10px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:8px;margin-bottom:12px;box-shadow:0 8px 18px -12px rgba(74,24,37,.45)}
+  .cake{max-width:none}
+  .total{margin:0;padding:8px 10px;border-radius:18px;text-align:left}
+  .total strong{font-size:1.3rem;white-space:nowrap}
+  .total small{font-size:.75rem;line-height:1.3}
+  .panel{padding:18px 14px}
+  .potvrda{grid-template-columns:1fr;padding:20px 16px;border-radius:28px}
+}
+@media (max-width:420px){
+  .opts{grid-template-columns:1fr}
+  .slots{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .days{gap:4px}
+}
+
+/* meke kartice okolo */
+.okolo{padding:10px 0 60px}
+.cards{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}
+.card{border-radius:32px;padding:26px 24px;background:var(--roze-3)}
+.card.nebo{background:var(--nebo-3)}
+.card.roze{background:var(--roze-2)}
+.card.krem{background:#FFF;border:2px solid var(--roze)}
+.c-cen{grid-column:span 4}
+.c-vreme{grid-column:span 2}
+.c-gal{grid-column:1/-1}
+.c-mapa{grid-column:span 3}
+.c-kontakt{grid-column:span 3}
+.card h2{font-size:clamp(1.9rem,4.5vw,2.5rem);margin-bottom:8px}
+.card .meta{font-size:.9rem;color:#6A3342}
+.cen-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 28px;margin-top:12px}
+.cen-cols h3{font-size:1.15rem;margin:14px 0 6px}
+.cen-row{display:flex;gap:10px;justify-content:space-between;align-items:baseline;padding:6px 0;border-bottom:1.5px dotted #D6A9B7;font-size:.97rem}
+.cen-row span:last-child{font-weight:700;white-space:nowrap}
+.sheet-note{display:flex;gap:12px;align-items:flex-start;background:var(--krem);border-radius:20px;padding:12px 14px;margin-top:18px;font-size:.9rem}
+.sheet-note svg{flex:none;width:32px;height:32px}
+.hours{list-style:none;padding:0;margin:10px 0 0}
+.hours li{display:flex;justify-content:space-between;padding:9px 12px;border-radius:12px;font-size:1rem}
+.hours li.today{background:var(--krem);font-weight:700}
+.hours li .x{color:#8E3A4D}
+.gal-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:16px}
+.g-item{margin:0;background:var(--krem);border-radius:24px;padding:12px;display:flex;flex-direction:column}
+.g-item .pic{aspect-ratio:400/294;border-radius:18px;background:var(--roze-3)}
+.g-item.foto .pic{background:repeating-linear-gradient(45deg,#F6D5E2 0 12px,#FBE3EC 12px 24px);display:flex;align-items:flex-end;justify-content:flex-end;padding:10px}
+.g-item.foto .pic span{font-size:.75rem;background:var(--krem);padding:3px 8px;border-radius:8px;color:#6A3342}
+.g-item figcaption{padding:10px 4px 4px;font-size:.93rem;flex:1;display:flex;flex-direction:column;gap:8px}
+.g-item figcaption b{font-weight:700}
+.g-item .btn{min-height:44px;padding:8px 14px;font-size:.9rem;align-self:flex-start;margin-top:auto;white-space:nowrap}
+.map{border:0;width:100%;height:280px;border-radius:24px;display:block;margin-top:12px;background:#E8DDE0}
+.addr{font-size:1.05rem}
+.form-row{margin-bottom:12px}
+.form-row label{display:block;font-weight:700;margin-bottom:5px;font-size:.95rem}
+.form-msg{font-weight:700;color:var(--visnja);margin-top:10px}
+@media (max-width:1000px){
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .c-cen,.c-gal,.c-mapa,.c-kontakt{grid-column:1/-1}
+  .c-vreme{grid-column:1/-1}
+  .gal-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  .card{padding:22px 16px;border-radius:26px}
+  .cen-cols{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .g-item{padding:8px;border-radius:18px}
+  .g-item figcaption{font-size:.85rem}
+  .g-item .btn{align-self:stretch;padding:8px 6px;font-size:.85rem}
+}
+
+/* podnožje */
+.foot{background:var(--visnja-2);color:var(--krem);padding:40px 0 30px}
+.foot a{color:var(--roze)}
+.foot :focus-visible{outline-color:var(--nebo)}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}
+.foot .logo{color:var(--roze)}
+.foot .demo-note{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,253,247,.25);font-size:.88rem}
+@media (max-width:760px){.foot-grid{grid-template-columns:1fr}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">
+  <span>Primer sajta · izradio opsforma</span>
+  <a href="../../">Svi primeri</a>
+  <span class="pkg">Paket 3: Plus</span>
+</div>
+
+<header class="head">
+  <div class="wrap head-in">
+    <a class="logo" href="#vrh">Šlag <small>poslastičarnica</small></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meni" aria-label="Otvori meni"><span></span><span></span></button>
+    <nav class="nav" id="meni" aria-label="Glavni meni">
+      <a href="#torta">Torta po meri</a>
+      <a href="#cenovnik">Cenovnik</a>
+      <a href="#galerija">Galerija</a>
+      <a href="#vreme">Radno vreme</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="cta" href="tel:+381600000518">060 000 05 18</a>
+    </nav>
+  </div>
+</header>
+
+<main id="vrh">
+<section class="hero">
+  <div class="wrap">
+    <h1>Poslastičarnica <span class="word">Šlag</span></h1>
+    <p class="lead">Torte po porudžbini i kolači na komad, Katanićeva 15 na Vračaru. Ispod složite svoju tortu: birate biskvit, fil i ukras, a slika i cena se menjaju dok birate.</p>
+    <div class="btns">
+      <a class="btn solid" href="#torta">Naručite tortu</a>
+      <a class="btn" href="tel:+381600000518">Pozovite 060 000 05 18</a>
+      <a class="btn nebo" href="viber://chat?number=%2B381600000518">Viber poruka</a>
+    </div>
+    <ul class="facts">
+      <li>Torte od 4.200 RSD po kg</li>
+      <li>Poručuje se 3 dana unapred</li>
+      <li>Dostava na Vračaru 400 RSD</li>
+    </ul>
+  </div>
+</section>
+
+<!--
+  PRODUKCIJA
+  Ovaj modul radi samo u pregledaču (demo). Na pravom sajtu postoje dve varijante:
+  a) Zahtev za porudžbinu: na kraju koraka 6 forma šalje rezime porudžbine na vlasnikov mejl
+     preko Web3Forms (POST na https://api.web3forms.com/submit, hidden polje access_key sa
+     vlasnikovim ključem) ili otvara Viber poruku sa rezimeom
+     (viber://forward?text=<URL-enkodiran rezime>). Vlasnik proveri kapacitet i potvrdi
+     porudžbinu pozivom ili porukom. Kupac dobija kopiju na mejl.
+  b) Povezan kalendar: umesto koraka 5 (dan i vreme) ugrađuje se Google Kalendar
+     „Appointment schedule“, Cal.com ili Calendly embed sa terminima preuzimanja;
+     svaki termin se sam upisuje u vlasnikov Google Kalendar na telefonu, a izbor torte
+     se prosleđuje kao napomena termina.
+  Podsetnik dan ranije: Cal.com/Calendly šalju SMS ili mejl podsetnik automatski; u varijanti a
+  vlasnik koristi Google Kalendar podsetnik ili Zapier/Make scenario za SMS.
+-->
+<section id="torta" class="konf" aria-labelledby="torta-h">
+  <div class="wrap">
+    <div class="konf-head">
+      <h2 id="torta-h">Složite tortu</h2>
+      <span class="pkg">Paket 3: Plus</span>
+    </div>
+    <p class="konf-sub">Šest koraka, a torta se slaže pred vama. Plaća se pri preuzimanju ili dostavi. <br><span class="ex-note">Primer: termini su izmišljeni</span></p>
+
+    <div class="konf-grid" id="konfGrid">
+      <ol class="stepper" id="stepper" aria-label="Koraci porudžbine">
+        <li><button type="button" data-go="0"><span class="n">1</span><span class="t">Broj osoba</span><span class="v" data-v="0"></span></button></li>
+        <li><button type="button" data-go="1"><span class="n">2</span><span class="t">Biskvit</span><span class="v" data-v="1"></span></button></li>
+        <li><button type="button" data-go="2"><span class="n">3</span><span class="t">Fil</span><span class="v" data-v="2"></span></button></li>
+        <li><button type="button" data-go="3"><span class="n">4</span><span class="t">Ukras i natpis</span><span class="v" data-v="3"></span></button></li>
+        <li><button type="button" data-go="4"><span class="n">5</span><span class="t">Dan i preuzimanje</span><span class="v" data-v="4"></span></button></li>
+        <li><button type="button" data-go="5"><span class="n">6</span><span class="t">Vaši podaci</span><span class="v" data-v="5"></span></button></li>
+      </ol>
+
+      <div class="stage">
+        <div class="cake" id="cake" role="img" aria-label="Izgled torte"></div>
+        <div class="total" aria-live="polite">
+          <span class="lbl">Ukupno</span>
+          <strong id="total">0 RSD</strong>
+          <small id="breakdown"></small>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="step" data-step="0">
+          <h3>1. Za koliko osoba?</h3>
+          <p class="hint">Računamo oko 150 g po osobi. Torta za 30 osoba ide na dva sprata.</p>
+          <div class="opts" role="group" aria-label="Broj osoba" id="o-osobe"></div>
+        </div>
+        <div class="step" data-step="1" hidden>
+          <h3>2. Biskvit</h3>
+          <p class="hint">Vidi se na odsečenom parčetu, desno na tanjiru.</p>
+          <div class="opts" role="group" aria-label="Biskvit" id="o-biskvit"></div>
+        </div>
+        <div class="step" data-step="2" hidden>
+          <h3>3. Fil</h3>
+          <p class="hint">Fil određuje cenu po kilogramu.</p>
+          <div class="opts one" role="group" aria-label="Fil" id="o-fil"></div>
+        </div>
+        <div class="step" data-step="3" hidden>
+          <h3>4. Ukras i natpis</h3>
+          <p class="hint">Boja premaza</p>
+          <div class="opts" role="group" aria-label="Boja premaza" id="o-premaz"></div>
+          <p class="hint" style="margin:16px 0 8px">Ukrasi (može više)</p>
+          <div class="opts" role="group" aria-label="Ukrasi" id="o-dekor"></div>
+          <label class="lab" for="natpis">Natpis na čokoladnoj pločici</label>
+          <input class="field" id="natpis" maxlength="18" placeholder="npr. Srećan rođendan, Mila" autocomplete="off">
+          <p class="count" id="natpis-c">0 / 18 znakova</p>
+        </div>
+        <div class="step" data-step="4" hidden>
+          <h3>5. Kada i kako?</h3>
+          <p class="hint">Tortu pravimo najmanje 3 dana. Nedeljom ne radimo.</p>
+          <div class="seg" role="group" aria-label="Način preuzimanja" id="o-nacin">
+            <button type="button" data-nacin="preuzimanje" aria-pressed="true">Preuzimam u radnji</button>
+            <button type="button" data-nacin="dostava" aria-pressed="false">Dostava</button>
+          </div>
+          <div id="zone-wrap" hidden>
+            <p class="lab" id="zone-l">Zona dostave</p>
+            <div class="opts one" role="group" aria-labelledby="zone-l" id="o-zona"></div>
+          </div>
+          <p class="lab" id="dani-l">Dan</p>
+          <div class="days" role="group" aria-labelledby="dani-l" id="o-dan"></div>
+          <p class="lab" id="slot-l">Vreme preuzimanja</p>
+          <div id="o-slot" role="group" aria-labelledby="slot-l"></div>
+          <div class="legend" aria-hidden="true"><span><i></i>slobodno</span><span><i class="z"></i>popunjeno</span></div>
+        </div>
+        <form class="step" data-step="5" hidden id="porudzbina" novalidate>
+          <h3>6. Vaši podaci</h3>
+          <p class="hint">Javljamo se istog dana da potvrdimo porudžbinu.</p>
+          <label class="lab" for="p-ime">Ime i prezime</label>
+          <input class="field" id="p-ime" name="ime" autocomplete="name" required>
+          <label class="lab" for="p-tel">Telefon</label>
+          <input class="field" id="p-tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="06x xxx xx xx" required>
+          <div id="adr-wrap" hidden>
+            <label class="lab" for="p-adr">Adresa dostave</label>
+            <input class="field" id="p-adr" name="adresa" autocomplete="street-address" placeholder="Ulica i broj, sprat, interfon">
+          </div>
+          <label class="lab" for="p-nap">Napomena (alergije, sveće, tema)</label>
+          <textarea class="field" id="p-nap" name="napomena" rows="3"></textarea>
+          <label class="check" for="p-pods"><input type="checkbox" id="p-pods" name="podsetnik" checked> Pošaljite mi SMS podsetnik dan pre preuzimanja</label>
+          <p class="err" id="p-err" role="alert"></p>
+          <button class="btn solid" type="submit" style="width:100%;margin-top:6px">Pošaljite porudžbinu</button>
+        </form>
+        <p class="err" id="step-err" role="alert"></p>
+        <div class="stepnav">
+          <button class="btn" type="button" id="nazad">Nazad</button>
+          <button class="btn solid" type="button" id="dalje">Dalje</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="potvrda" id="potvrda" hidden tabindex="-1" aria-live="polite">
+      <div class="cake" id="cake-potvrda" role="img" aria-label="Vaša torta"></div>
+      <div>
+        <h3>Porudžbina je zapisana</h3>
+        <p id="potvrda-txt"></p>
+        <dl class="sum" id="sum"></dl>
+        <div class="btns">
+          <button class="btn solid" type="button" id="ics">Dodaj u kalendar</button>
+          <button class="btn" type="button" id="nova">Nova porudžbina</button>
+        </div>
+        <p class="small">Ovo je primer. Na pravom sajtu porudžbina stiže vlasniku na mejl i Viber, a vi dobijate potvrdu mejlom. Plaća se pri preuzimanju.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="okolo" aria-label="Cenovnik, galerija i kontakt">
+  <div class="wrap cards">
+
+    <article class="card roze c-cen" id="cenovnik">
+      <h2>Cenovnik</h2>
+      <p class="meta" id="cen-azur">Cene u dinarima.</p>
+      <div class="cen-cols" id="cen-cols"></div>
+      <div class="sheet-note">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="3" width="22" height="26" rx="3" fill="#A2D2FF"/><path d="M9 10h14M9 15h14M9 20h14M9 25h8M15 10v15" stroke="#4A1825" stroke-width="1.6"/></svg>
+        <p style="margin:0">Cene se čitaju iz Google tabele. Kad poslastičarnica promeni cenu u tabeli na telefonu, nova cena je odmah i ovde i u konfiguratoru torte.</p>
+      </div>
+    </article>
+
+    <article class="card nebo c-vreme" id="vreme">
+      <h2>Radno vreme</h2>
+      <ul class="hours" id="hours">
+        <li data-d="1"><span>Ponedeljak</span><span>09–20</span></li>
+        <li data-d="2"><span>Utorak</span><span>09–20</span></li>
+        <li data-d="3"><span>Sreda</span><span>09–20</span></li>
+        <li data-d="4"><span>Četvrtak</span><span>09–20</span></li>
+        <li data-d="5"><span>Petak</span><span>09–20</span></li>
+        <li data-d="6"><span>Subota</span><span>09–17</span></li>
+        <li data-d="0"><span>Nedelja</span><span class="x">zatvoreno</span></li>
+      </ul>
+      <p class="meta" style="margin-top:12px">Dostava radnim danima 10–19, subotom 10–16.</p>
+    </article>
+
+    <article class="card krem c-gal" id="galerija">
+      <h2>Torte koje smo pravili</h2>
+      <p class="meta">Svaku tortu iz galerije možete poručiti istu, ili je promeniti u konfiguratoru.</p>
+      <!-- Galeriju dopunjava vlasnik: u Google tabeli, list „Galerija“, doda red (naziv, opis, link ka fotografiji
+           iz Google Drive foldera). Sajt čita list kao objavljen CSV, isto kao cenovnik, i nova torta se pojavi ovde.
+           U demou su dve fotografije zamenjene poljima „Vaša fotografija“, ostale torte su SVG crteži iz konfiguratora. -->
+      <div class="gal-grid" id="gal"></div>
+    </article>
+
+    <article class="card nebo c-mapa" id="lokacija">
+      <h2>Gde smo</h2>
+      <p class="addr">Katanićeva 15, Vračar, Beograd<br>Pet minuta od Kalenić pijace.</p>
+      <div class="btns" style="justify-content:flex-start">
+        <a class="btn solid" href="tel:+381600000518">Pozovite</a>
+        <a class="btn" href="viber://chat?number=%2B381600000518">Viber</a>
+      </div>
+      <iframe class="map" title="Mapa: Katanićeva 15, Beograd" loading="lazy" src="https://maps.google.com/maps?q=Katani%C4%87eva%2015%2C%20Beograd&amp;z=15&amp;output=embed"></iframe>
+    </article>
+
+    <article class="card roze c-kontakt" id="kontakt">
+      <h2>Pitajte nas</h2>
+      <p>Torta za posebnu priliku, bez glutena ili sa slikom? Pišite, odgovaramo isti dan.</p>
+      <!-- Na pravom sajtu: <form action="https://api.web3forms.com/submit" method="POST">
+           sa <input type="hidden" name="access_key" value="VLASNIKOV-KLJUČ">, poruka stiže na mejl poslastičarnice. -->
+      <form data-form="kontakt" novalidate>
+        <div class="form-row"><label for="k-ime">Ime</label><input class="field" id="k-ime" name="ime" autocomplete="name"></div>
+        <div class="form-row"><label for="k-tel">Telefon ili mejl</label><input class="field" id="k-tel" name="kontakt" autocomplete="tel"></div>
+        <div class="form-row"><label for="k-por">Poruka</label><textarea class="field" id="k-por" name="poruka" rows="4"></textarea></div>
+        <button class="btn solid" type="submit">Pošaljite poruku</button>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </article>
+
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#vrh">Šlag</a>
+        <p style="margin-top:10px">Poslastičarnica, Katanićeva 15, Vračar, Beograd</p>
+      </div>
+      <div>
+        <p><a href="tel:+381600000518">060 000 05 18</a><br><a href="viber://chat?number=%2B381600000518">Viber</a></p>
+      </div>
+      <div>
+        <p>Pon–pet 09–20<br>Sub 09–17<br>Ned zatvoreno</p>
+      </div>
+    </div>
+    <p class="demo-note">Primer sajta · izradio opsforma · <a href="../../">Svi primeri</a>. Firma, cene, termini i broj telefona su izmišljeni.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+
+/* ===== CENOVNIK =====
+   U demou je cenovnik JSON objekat ispod. Svaki ključ odgovara jednom listu Google tabele
+   (kolone: id, naziv, cena / cena_kg / kg ...).
+   U produkciji vlasnik u Google Sheets uradi Datoteka → Deli → Objavi na vebu → list → CSV,
+   a sajt ga čita ovako:
+
+   const CSV = "https://docs.google.com/spreadsheets/d/e/<ID-OBJAVE>/pub?gid=<GID-LISTA>&single=true&output=csv";
+   async function ucitajList(gid){
+     const txt = await (await fetch(CSV.replace("<GID-LISTA>", gid), {cache:"no-store"})).text();
+     const [glava, ...redovi] = txt.trim().split(/\r?\n/).map(r => r.split(","));
+     return redovi.map(r => Object.fromEntries(glava.map((k, i) => [k.trim(), isNaN(r[i]) ? r[i] : Number(r[i])])));
+   }
+   // CENOVNIK.fil = await ucitajList("0"); CENOVNIK.dostava = await ucitajList("123"); ... pa renderAll();
+   Ako fetch ne uspe, sajt ostaje na ovim ugrađenim cenama. */
+const CENOVNIK = {
+  azurirano: "18. 10. 2026.",
+  velicina: [
+    {id:"8",  naziv:"8 osoba",  kg:1.2},
+    {id:"12", naziv:"12 osoba", kg:1.8},
+    {id:"16", naziv:"16 osoba", kg:2.4},
+    {id:"20", naziv:"20 osoba", kg:3.0},
+    {id:"30", naziv:"30 osoba", kg:4.5, napomena:"dva sprata"}
+  ],
+  biskvit: [
+    {id:"vanila",  naziv:"Vanila",        doplata_kg:0},
+    {id:"cokolada",naziv:"Čokoladni",     doplata_kg:0},
+    {id:"orah",    naziv:"Orah",          doplata_kg:200},
+    {id:"somot",   naziv:"Crveni somot",  doplata_kg:300}
+  ],
+  fil: [
+    {id:"visnja",  naziv:"Vanila i višnja",            cena_kg:4200},
+    {id:"plazma",  naziv:"Plazma i karamel",           cena_kg:4400},
+    {id:"ganas",   naziv:"Čokoladni ganaš",            cena_kg:4600},
+    {id:"malina",  naziv:"Malina i bela čokolada",     cena_kg:4800},
+    {id:"pistac",  naziv:"Pistać",                     cena_kg:5200}
+  ],
+  dekor: [
+    {id:"rozete", naziv:"Šlag rozete",       cena:0},
+    {id:"jagode", naziv:"Sveže jagode",      cena:700},
+    {id:"drip",   naziv:"Čokoladni preliv",  cena:500},
+    {id:"mrvice", naziv:"Šarene mrvice",     cena:300}
+  ],
+  natpis: {naziv:"Natpis na pločici", cena:300},
+  dostava: [
+    {id:"vracar",   naziv:"Vračar",                  cena:400},
+    {id:"zvezdara", naziv:"Zvezdara",                cena:500},
+    {id:"ostalo",   naziv:"Ostali delovi Beograda",  cena:800}
+  ],
+  kolaci: [
+    {naziv:"Šampita",              cena:280, jedinica:"komad"},
+    {naziv:"Krempita",             cena:300, jedinica:"komad"},
+    {naziv:"Reforma",              cena:350, jedinica:"komad"},
+    {naziv:"Tiramisu u čaši",      cena:420, jedinica:"komad"},
+    {naziv:"Sitni kolači, mešano", cena:2600, jedinica:"kg"}
+  ]
+};
+
+/* boje za crtež torte */
+const BISKVIT_BOJA = {vanila:"#F2D59B", cokolada:"#5B3325", orah:"#B98656", somot:"#A3283A"};
+const FIL_BOJA = {visnja:"#F6DDE0", plazma:"#D9A15E", ganas:"#3E1F18", malina:"#F27C9A", pistac:"#B9D38E"};
+const FIL_TACKE = {visnja:"#9E1B32", malina:"#C2185B", pistac:"#6E8F3A", plazma:"#A86A2E", ganas:"#2A140F"};
+const PREMAZ = [
+  {id:"bela", naziv:"Beli šlag", fill:"#FFF7EE", top:"#FFFDF8", dark:"#E9D9C8"},
+  {id:"roze", naziv:"Roze",      fill:"#FFC8DD", top:"#FFDCE9", dark:"#E8A3BE"},
+  {id:"nebo", naziv:"Nebo plava",fill:"#BFE0FF", top:"#D6EBFF", dark:"#8EBDEA"}
+];
+const TIERS = {"8":[{w:170,h:92}], "12":[{w:200,h:100}], "16":[{w:224,h:108}], "20":[{w:250,h:114}], "30":[{w:256,h:98},{w:168,h:82}]};
+const FIRMA = "Poslastičarnica Šlag", ADRESA = "Katanićeva 15, Vračar, Beograd", SLUG = "poslasticarnica-slag";
+const HOURS = {0:null,1:[9,20],2:[9,20],3:[9,20],4:[9,20],5:[9,20],6:[9,17]};
+const PROZORI = [[10,13],[13,16],[16,19]];
+const MIN_DANA = 3;
+const DW = ["ned","pon","uto","sre","čet","pet","sub"];
+const DW_LONG = ["nedelja","ponedeljak","utorak","sreda","četvrtak","petak","subota"];
+const MES = ["januar","februar","mart","april","maj","jun","jul","avgust","septembar","oktobar","novembar","decembar"];
+
+const $ = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => [...(r || document).querySelectorAll(s)];
+const rsd = n => Math.round(n).toLocaleString("de-DE").replace(/,/g, ".") + " RSD";
+const kgTxt = n => String(n).replace(".", ",") + " kg";
+const byId = (arr, id) => arr.find(x => x.id === id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* ===== crtež torte (SVG) ===== */
+function rnd(seed){ let x = seed * 9301 + 49297; return () => { x = (x * 9301 + 49297) % 233280; return x / 233280; }; }
+function cakeSVG(c, pfx){
+  const P = byId(PREMAZ, c.premaz) || PREMAZ[0];
+  const tiers = TIERS[c.osobe] || TIERS["12"];
+  const cx = 200, dek = c.dekor;
+  let s = `<svg viewBox="0 56 400 294" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <linearGradient id="${pfx}sh" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#4A1825" stop-opacity=".16"/><stop offset=".22" stop-color="#4A1825" stop-opacity="0"/>
+      <stop offset=".38" stop-color="#fff" stop-opacity=".35"/><stop offset=".55" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#4A1825" stop-opacity=".2"/></linearGradient></defs>`;
+  // stalak
+  s += `<ellipse cx="200" cy="340" rx="78" ry="7" fill="#4A1825" opacity=".12"/>
+    <path d="M150 336 Q200 322 250 336 L250 340 Q200 330 150 340 Z" fill="#7FB4E6"/>
+    <path d="M184 304 L178 334 L222 334 L216 304 Z" fill="#8FC2F2"/>
+    <ellipse cx="200" cy="301" rx="182" ry="25" fill="#7FB4E6"/>
+    <ellipse cx="200" cy="296" rx="182" ry="25" fill="#A2D2FF"/>
+    <ellipse cx="200" cy="296" rx="166" ry="20" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2"/>`;
+  s += `<g class="torta">`;
+  let bottom = 296, topTop = 0, topW = 0;
+  tiers.forEach((t, i) => {
+    const top = bottom - t.h, w = t.w, x0 = cx - w/2, x1 = cx + w/2, ry = w * 0.11;
+    const body = `M${x0} ${top} L${x0} ${bottom} A${w/2} ${ry} 0 0 0 ${x1} ${bottom} L${x1} ${top} Z`;
+    s += `<path d="${body}" fill="${P.fill}"/><path d="${body}" fill="url(#${pfx}sh)"/>`;
+    // ivica od šlaga dole
+    const nb = Math.round(w / 15);
+    for (let k = 0; k <= nb; k++){
+      const a = Math.PI * k / nb, x = cx - (w/2) * Math.cos(a), y = bottom + ry * Math.sin(a);
+      s += `<circle cx="${x.toFixed(1)}" cy="${(y-3).toFixed(1)}" r="6" fill="${P.top}" stroke="${P.dark}" stroke-width="1"/>`;
+    }
+    // mrvice po stranama
+    if (dek.includes("mrvice")){
+      const r = rnd(w + i), cols = ["#FF6FA3","#5AA9F0","#F7C948","#7BC67E","#FFFDF7","#6B2737"];
+      for (let k = 0; k < Math.round(w/5); k++){
+        const x = x0 + 8 + r() * (w - 16), y = top + ry + 8 + r() * (t.h - ry - 14), a = Math.round(r()*180);
+        s += `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="7" height="2.6" rx="1.3" fill="${cols[k % cols.length]}" transform="rotate(${a} ${x.toFixed(1)} ${y.toFixed(1)})"/>`;
+      }
+    }
+    // gornja površina
+    const drip = dek.includes("drip");
+    s += `<ellipse cx="${cx}" cy="${top}" rx="${w/2}" ry="${ry}" fill="${drip ? "#5A2A22" : P.top}"/>`;
+    if (drip){
+      const n = Math.max(7, Math.round(w / 24)), r = rnd(w * 3 + i);
+      let d = `M${x0} ${top} `;
+      for (let k = 0; k < n; k++){
+        const xa = x0 + w * k / n, xb = x0 + w * (k + 1) / n, xm = (xa + xb) / 2;
+        const ey = x => top + ry * Math.sqrt(Math.max(0, 1 - Math.pow((x - cx) / (w/2), 2)));
+        const L = 10 + r() * (t.h * 0.42);
+        d += `L${(xm-4).toFixed(1)} ${(ey(xm-4)).toFixed(1)} L${(xm-4).toFixed(1)} ${(ey(xm)+L).toFixed(1)} Q${xm.toFixed(1)} ${(ey(xm)+L+8).toFixed(1)} ${(xm+4).toFixed(1)} ${(ey(xm)+L).toFixed(1)} L${(xm+4).toFixed(1)} ${(ey(xm+4)).toFixed(1)} L${xb.toFixed(1)} ${ey(xb).toFixed(1)} `;
+      }
+      d += `A${w/2} ${ry} 0 0 0 ${x0} ${top} Z`;
+      s += `<path d="${d}" fill="#5A2A22"/><ellipse cx="${cx - w*0.12}" cy="${top - ry*0.25}" rx="${w*0.2}" ry="${ry*0.3}" fill="#fff" opacity=".14"/>`;
+    }
+    // rozete na prednjoj ivici
+    if (dek.includes("rozete")){
+      const n = Math.max(6, Math.round(w / 26));
+      for (let k = 0; k <= n; k++){
+        const a = Math.PI * (0.04 + 0.92 * k / n), x = cx - (w/2) * Math.cos(a), y = top + ry * Math.sin(a);
+        s += `<g transform="translate(${x.toFixed(1)} ${(y-5).toFixed(1)})"><circle r="9.5" fill="#FFFDF7" stroke="${P.dark}" stroke-width="1.2"/><path d="M-5 1 Q-4 -6 2 -5 Q6 -3 3 2 Q0 4 -1 0" fill="none" stroke="${P.dark}" stroke-width="1.3" stroke-linecap="round"/></g>`;
+      }
+    }
+    bottom = top; topTop = top; topW = w;
+  });
+  // jagode na vrhu
+  if (dek.includes("jagode")){
+    const w = topW, ry = w * 0.11, pts = [0.5, 1.2, 1.9, 2.6, 3.3, 4.0, 4.7, 5.4];
+    const items = pts.map(a => ({x: cx + (w/2 - 22) * Math.cos(a), y: topTop + (ry - 6) * Math.sin(a)})).sort((a,b) => a.y - b.y);
+    items.forEach(p => {
+      s += `<g transform="translate(${p.x.toFixed(1)} ${(p.y-10).toFixed(1)})"><path d="M0 -10 C10 -10 9 4 0 11 C-9 4 -10 -10 0 -10 Z" fill="#D7263D"/><path d="M-6 -10 L0 -6 L6 -10 L3 -13 L0 -10 L-3 -13 Z" fill="#3E8E41"/><circle cx="-3" cy="-2" r=".9" fill="#FFE08A"/><circle cx="3" cy="0" r=".9" fill="#FFE08A"/><circle cx="0" cy="5" r=".9" fill="#FFE08A"/></g>`;
+    });
+  }
+  // natpis na čokoladnoj pločici
+  if (c.natpis){
+    const txt = c.natpis.slice(0, 18), pw = Math.min(topW - 10, Math.max(84, txt.length * 9.5 + 28)), fs = Math.min(15, (pw - 18) / (txt.length * 0.62));
+    const py = topTop - 40;
+    s += `<g><rect x="${(cx-2).toFixed(1)}" y="${py+26}" width="4" height="16" fill="#3E1F18"/>
+      <rect x="${(cx - pw/2).toFixed(1)}" y="${py}" width="${pw.toFixed(1)}" height="30" rx="8" fill="#4A1825"/>
+      <text x="${cx}" y="${py + 20}" text-anchor="middle" font-family="Shrikhand, Georgia, serif" font-size="${fs.toFixed(1)}" fill="#FFE4EE">${esc(txt)}</text></g>`;
+  }
+  s += `</g>`;
+  // odsečeno parče na tanjiru
+  const sx = 270, sw = 62, H = 64, sb = 318, st = sb - H;
+  const B = BISKVIT_BOJA[c.biskvit], F = FIL_BOJA[c.fil];
+  const bands = [[B,.25],[F,.13],[B,.24],[F,.13],[B,.25]];
+  s += `<g class="parce"><ellipse cx="${sx + sw/2 + 8}" cy="${sb+2}" rx="${sw/2+16}" ry="6" fill="#4A1825" opacity=".12"/>
+    <polygon points="${sx+sw},${st} ${sx+sw+16},${st-14} ${sx+sw+16},${sb-14} ${sx+sw},${sb}" fill="${P.dark}"/>
+    <polygon points="${sx},${st} ${sx+sw},${st} ${sx+sw+16},${st-14} ${sx+16},${st-14}" fill="${dek.includes("drip") ? "#5A2A22" : P.top}"/>`;
+  let yy = st;
+  bands.forEach(([col, f], k) => {
+    const h = H * f;
+    s += `<rect x="${sx}" y="${yy.toFixed(1)}" width="${sw}" height="${(h+0.4).toFixed(1)}" fill="${col}"/>`;
+    if (col === F){ const r = rnd(k + 7); for (let q = 0; q < 5; q++) s += `<circle cx="${(sx + 6 + r()*(sw-12)).toFixed(1)}" cy="${(yy + h/2).toFixed(1)}" r="1.7" fill="${FIL_TACKE[c.fil]}"/>`; }
+    yy += h;
+  });
+  s += `<rect x="${sx}" y="${st}" width="${sw}" height="${H}" fill="none" stroke="#4A1825" stroke-opacity=".18"/>`;
+  if (dek.includes("rozete")) s += `<circle cx="${sx+sw/2+8}" cy="${st-9}" r="7" fill="#FFFDF7" stroke="${P.dark}"/>`;
+  if (dek.includes("jagode")) s += `<path transform="translate(${sx+sw/2+8} ${st-12})" d="M0 -7 C7 -7 6 3 0 8 C-6 3 -7 -7 0 -7 Z" fill="#D7263D"/>`;
+  s += `</g></svg>`;
+  return s;
+}
+function cakeLabel(c){
+  return `Torta za ${c.osobe} osoba, ${byId(CENOVNIK.biskvit,c.biskvit).naziv.toLowerCase()} biskvit, fil ${byId(CENOVNIK.fil,c.fil).naziv.toLowerCase()}, premaz ${byId(PREMAZ,c.premaz).naziv.toLowerCase()}` +
+    (c.dekor.length ? ", ukrasi: " + c.dekor.map(d => byId(CENOVNIK.dekor,d).naziv.toLowerCase()).join(", ") : "") + (c.natpis ? `, natpis „${c.natpis}“` : "");
+}
+
+/* ===== stanje ===== */
+const S = {osobe:"12", biskvit:"vanila", fil:"visnja", premaz:"bela", dekor:["rozete"], natpis:"",
+           nacin:"preuzimanje", zona:null, dan:null, slot:null, step:0, max:0};
+
+function cena(){
+  const v = byId(CENOVNIK.velicina, S.osobe), f = byId(CENOVNIK.fil, S.fil), b = byId(CENOVNIK.biskvit, S.biskvit);
+  const torta = Math.round(v.kg * (f.cena_kg + b.doplata_kg) / 10) * 10;
+  const dek = S.dekor.reduce((a, d) => a + byId(CENOVNIK.dekor, d).cena, 0) + (S.natpis ? CENOVNIK.natpis.cena : 0);
+  const dost = S.nacin === "dostava" && S.zona ? byId(CENOVNIK.dostava, S.zona).cena : 0;
+  return {torta, dek, dost, ukupno: torta + dek + dost, kg: v.kg, perKg: f.cena_kg + b.doplata_kg};
+}
+
+/* ===== opcije ===== */
+function optBtn(attrs, label, sub, sw){
+  return `<button type="button" class="opt" ${attrs}>${sw ? `<span class="sw" style="background:${sw}"></span>` : ""}<span><b>${label}</b>${sub ? `<small>${sub}</small>` : ""}</span></button>`;
+}
+function renderOpts(){
+  $("#o-osobe").innerHTML = CENOVNIK.velicina.map(v => optBtn(`data-k="osobe" data-id="${v.id}"`, v.naziv, kgTxt(v.kg) + (v.napomena ? ", " + v.napomena : ""))).join("");
+  $("#o-biskvit").innerHTML = CENOVNIK.biskvit.map(b => optBtn(`data-k="biskvit" data-id="${b.id}"`, b.naziv, b.doplata_kg ? "+" + rsd(b.doplata_kg) + " po kg" : "bez doplate", BISKVIT_BOJA[b.id])).join("");
+  $("#o-fil").innerHTML = CENOVNIK.fil.map(f => optBtn(`data-k="fil" data-id="${f.id}"`, f.naziv, rsd(f.cena_kg) + " po kg", FIL_BOJA[f.id])).join("");
+  $("#o-premaz").innerHTML = PREMAZ.map(p => optBtn(`data-k="premaz" data-id="${p.id}"`, p.naziv, "", p.fill)).join("");
+  $("#o-dekor").innerHTML = CENOVNIK.dekor.map(d => optBtn(`data-k="dekor" data-id="${d.id}"`, d.naziv, d.cena ? "+" + rsd(d.cena) : "uključeno")).join("");
+  $("#o-zona").innerHTML = CENOVNIK.dostava.map(z => optBtn(`data-k="zona" data-id="${z.id}"`, z.naziv, "dostava " + rsd(z.cena))).join("");
+}
+function syncPressed(){
+  $$(".opt[data-k]").forEach(b => {
+    const k = b.dataset.k, id = b.dataset.id;
+    const on = k === "dekor" ? S.dekor.includes(id) : S[k] === id;
+    b.setAttribute("aria-pressed", on ? "true" : "false");
+  });
+  $$("#o-nacin button").forEach(b => b.setAttribute("aria-pressed", b.dataset.nacin === S.nacin ? "true" : "false"));
+  $("#zone-wrap").hidden = S.nacin !== "dostava";
+  $("#adr-wrap").hidden = S.nacin !== "dostava";
+  $("#slot-l").textContent = S.nacin === "dostava" ? "Vreme dostave" : "Vreme preuzimanja";
+}
+
+/* ===== dani i termini ===== */
+function hash(str){ let h = 2166136261; for (let i = 0; i < str.length; i++){ h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); } return (h >>> 0) / 4294967295; }
+function dkey(d){ return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0"); }
+function days14(){
+  const t = new Date(); t.setHours(0,0,0,0);
+  return Array.from({length:14}, (_, i) => { const d = new Date(t); d.setDate(t.getDate() + i); return {d, i, key:dkey(d), h:HOURS[d.getDay()]}; });
+}
+function slotsFor(day){
+  if (!day || !day.h) return [];
+  const [o, c] = day.h, out = [];
+  if (S.nacin === "dostava"){
+    PROZORI.forEach(([a, b]) => { if (a >= o && b <= c) out.push({id:`${a}-${b}`, a:a*60, b:b*60, label:`${pad(a)}–${pad(b)} h`, busy: hash(day.key + "|d|" + a) < 0.38}); });
+  } else {
+    for (let m = o * 60; m + 30 <= c * 60; m += 30){
+      out.push({id:String(m), a:m, b:m+30, label:hm(m), busy: hash(day.key + "|p|" + m) < 0.38});
+    }
+  }
+  return out;
+}
+const pad = n => String(n).padStart(2, "0");
+const hm = m => pad(Math.floor(m/60)) + ":" + pad(m%60);
+let DAYS = days14();
+function renderDays(){
+  $("#o-dan").innerHTML = DAYS.map(x => {
+    const zatv = !x.h, rano = x.i < MIN_DANA, dis = zatv || rano;
+    const why = zatv ? "zatvoreno" : rano ? "rok 3 dana" : "";
+    const lbl = `${DW_LONG[x.d.getDay()]} ${x.d.getDate()}. ${MES[x.d.getMonth()]}` + (why ? `, ${why}` : "");
+    return `<button type="button" class="day" data-day="${x.key}" ${dis ? "disabled" : ""} aria-pressed="${S.dan === x.key}" aria-label="${lbl}"><span class="dw">${DW[x.d.getDay()]}</span><span class="dn">${x.d.getDate()}</span>${why ? `<span class="dx">${zatv ? "zatv." : "rok"}</span>` : ""}</button>`;
+  }).join("");
+}
+function renderSlots(){
+  const box = $("#o-slot"), day = DAYS.find(x => x.key === S.dan);
+  if (!day){ box.innerHTML = `<p class="empty">Prvo izaberite dan.</p>`; return; }
+  const sl = slotsFor(day);
+  if (S.slot && !sl.find(s => s.id === S.slot && !s.busy)) S.slot = null;
+  if (!sl.some(s => !s.busy)){ box.innerHTML = `<p class="empty">Ovaj dan je popunjen. Izaberite drugi dan.</p>`; return; }
+  box.innerHTML = `<div class="slots ${S.nacin === "dostava" ? "win" : ""}">` + sl.map(s =>
+    `<button type="button" class="slot" data-slot="${s.id}" ${s.busy ? "disabled" : ""} aria-pressed="${S.slot === s.id}" aria-label="${s.label}${s.busy ? ", popunjeno" : ""}">${s.label}${s.busy && S.nacin === "dostava" ? " (popunjeno)" : ""}</button>`).join("") + `</div>`;
+}
+
+/* ===== prikaz ===== */
+let popT;
+function renderCake(pop){
+  const el = $("#cake");
+  el.innerHTML = cakeSVG(S, "live");
+  el.setAttribute("aria-label", cakeLabel(S));
+  if (pop){ el.classList.remove("pop"); void el.offsetWidth; el.classList.add("pop"); clearTimeout(popT); popT = setTimeout(() => el.classList.remove("pop"), 500); }
+}
+function renderTotal(){
+  const c = cena();
+  $("#total").textContent = rsd(c.ukupno);
+  let b = `${kgTxt(c.kg)} × ${rsd(c.perKg)}`;
+  if (c.dek) b += ` + ukrasi ${rsd(c.dek)}`;
+  if (c.dost) b += ` + dostava ${rsd(c.dost)}`;
+  $("#breakdown").textContent = b;
+}
+function dayTxt(key){ const x = DAYS.find(d => d.key === key); return x ? `${DW_LONG[x.d.getDay()]}, ${x.d.getDate()}. ${MES[x.d.getMonth()]}` : ""; }
+function slotObj(){ const day = DAYS.find(x => x.key === S.dan); return day ? slotsFor(day).find(s => s.id === S.slot) : null; }
+function renderStepper(){
+  const v = [
+    byId(CENOVNIK.velicina, S.osobe).naziv,
+    byId(CENOVNIK.biskvit, S.biskvit).naziv,
+    byId(CENOVNIK.fil, S.fil).naziv,
+    S.dekor.map(d => byId(CENOVNIK.dekor, d).naziv).join(", ") || byId(PREMAZ, S.premaz).naziv,
+    S.dan && S.slot ? dayTxt(S.dan).split(",")[1].trim() + ", " + (slotObj() || {}).label : "nije izabrano",
+    ""
+  ];
+  $$(".stepper .v").forEach((el, i) => el.textContent = v[i]);
+  $$(".stepper button").forEach((b, i) => {
+    if (i === S.step) b.setAttribute("aria-current", "step"); else b.removeAttribute("aria-current");
+    b.classList.toggle("done", i < S.max && i !== S.step);
+    b.disabled = i > S.max;
+    b.setAttribute("aria-label", `Korak ${i+1}: ${b.querySelector(".t").textContent}`);
+  });
+}
+function showStep(n, focus){
+  S.step = n; S.max = Math.max(S.max, n);
+  $$(".step").forEach(s => s.hidden = Number(s.dataset.step) !== n);
+  $("#nazad").disabled = n === 0;
+  $("#dalje").hidden = n === 5;
+  $("#step-err").textContent = "";
+  renderStepper();
+  if (focus){ const h = $(`.step[data-step="${n}"] h3`); h.setAttribute("tabindex", "-1"); h.focus({preventScroll:true});
+    const p = $(".panel"); if (p.getBoundingClientRect().top < 60 || p.getBoundingClientRect().top > innerHeight * .6) p.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"}); }
+}
+function validStep(n){
+  if (n === 4){
+    if (S.nacin === "dostava" && !S.zona) return "Izaberite zonu dostave.";
+    if (!S.dan) return "Izaberite dan.";
+    if (!S.slot) return S.nacin === "dostava" ? "Izaberite vreme dostave." : "Izaberite vreme preuzimanja.";
+  }
+  return "";
+}
+function renderAll(pop){ syncPressed(); renderCake(pop); renderTotal(); renderStepper(); }
+
+/* ===== događaji ===== */
+document.addEventListener("click", e => {
+  const o = e.target.closest(".opt[data-k]");
+  if (o){
+    const k = o.dataset.k, id = o.dataset.id;
+    if (k === "dekor"){ S.dekor = S.dekor.includes(id) ? S.dekor.filter(x => x !== id) : [...S.dekor, id]; }
+    else S[k] = id;
+    renderAll(k !== "zona");
+    return;
+  }
+  const n = e.target.closest("#o-nacin button");
+  if (n){ S.nacin = n.dataset.nacin; S.slot = null; renderAll(false); renderSlots(); return; }
+  const d = e.target.closest(".day");
+  if (d && !d.disabled){ S.dan = d.dataset.day; S.slot = null; renderDays(); renderSlots(); renderStepper(); renderTotal();
+    const f = $("#o-slot button:not(:disabled)"); if (f) f.focus(); return; }
+  const sl = e.target.closest(".slot");
+  if (sl && !sl.disabled){ S.slot = sl.dataset.slot; $$(".slot").forEach(b => b.setAttribute("aria-pressed", b === sl ? "true" : "false")); renderStepper(); $("#step-err").textContent = ""; return; }
+  const g = e.target.closest(".stepper button");
+  if (g && !g.disabled){ const t = Number(g.dataset.go); if (t > 4 && validStep(4)){ showStep(4, true); $("#step-err").textContent = validStep(4); return; } showStep(t, true); return; }
+});
+$("#natpis").addEventListener("input", e => { S.natpis = e.target.value.trim(); $("#natpis-c").textContent = `${e.target.value.length} / 18 znakova`; renderCake(false); renderTotal(); });
+$("#dalje").addEventListener("click", () => { const er = validStep(S.step); if (er){ $("#step-err").textContent = er; return; } showStep(Math.min(5, S.step + 1), true); });
+$("#nazad").addEventListener("click", () => showStep(Math.max(0, S.step - 1), true));
+
+let LAST = null;
+$("#porudzbina").addEventListener("submit", e => {
+  e.preventDefault();
+  const ime = $("#p-ime").value.trim(), tel = $("#p-tel").value.trim(), adr = $("#p-adr").value.trim();
+  const errs = [];
+  if (ime.length < 2) errs.push("upišite ime");
+  if (tel.replace(/\D/g, "").length < 8) errs.push("upišite telefon (bar 8 cifara)");
+  if (S.nacin === "dostava" && adr.length < 4) errs.push("upišite adresu dostave");
+  const v4 = validStep(4); if (v4) errs.push(v4.toLowerCase().replace(/\.$/, ""));
+  $("#p-ime").setAttribute("aria-invalid", ime.length < 2); $("#p-tel").setAttribute("aria-invalid", tel.replace(/\D/g, "").length < 8);
+  if (errs.length){ $("#p-err").textContent = "Nedostaje: " + errs.join(", ") + "."; return; }
+  $("#p-err").textContent = "";
+  const c = cena(), s = slotObj();
+  LAST = {cfg: JSON.parse(JSON.stringify(S)), ime, tel, adr, nap: $("#p-nap").value.trim(), pods: $("#p-pods").checked, c, s, dan: S.dan};
+  const rows = [
+    ["Torta", `${byId(CENOVNIK.velicina,S.osobe).naziv} (${kgTxt(c.kg)})`],
+    ["Biskvit i fil", `${byId(CENOVNIK.biskvit,S.biskvit).naziv}, ${byId(CENOVNIK.fil,S.fil).naziv.toLowerCase()}`],
+    ["Ukras", [byId(PREMAZ,S.premaz).naziv, ...S.dekor.map(d => byId(CENOVNIK.dekor,d).naziv.toLowerCase())].join(", ") + (S.natpis ? `, natpis „${S.natpis}“` : "")],
+    [S.nacin === "dostava" ? "Dostava" : "Preuzimanje", S.nacin === "dostava" ? `${byId(CENOVNIK.dostava,S.zona).naziv}, ${adr}` : "u radnji, Katanićeva 15"],
+    ["Dan", dayTxt(S.dan)],
+    ["Vreme", s.label + (S.nacin === "preuzimanje" ? " (30 min)" : "")],
+    ["Cena", rsd(c.ukupno) + (c.dost ? `, sa dostavom ${rsd(c.dost)}` : "")],
+    ["Ime", ime], ["Telefon", tel]
+  ];
+  $("#sum").innerHTML = rows.map(([a, b]) => `<dt>${a}</dt><dd>${esc(b)}</dd>`).join("");
+  $("#potvrda-txt").textContent = `Hvala, ${ime.split(" ")[0]}. Javljamo se na ${tel} da potvrdimo porudžbinu.` + (LAST.pods ? " Dan ranije stiže SMS podsetnik." : "");
+  $("#cake-potvrda").innerHTML = cakeSVG(S, "pot");
+  $("#cake-potvrda").setAttribute("aria-label", cakeLabel(S));
+  $("#konfGrid").hidden = true; $("#potvrda").hidden = false;
+  $("#potvrda").focus({preventScroll:true});
+  $("#potvrda").scrollIntoView({block:"start"});
+});
+
+function icsEsc(s){ return String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n"); }
+function utc(d){ return d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, ""); }
+$("#ics").addEventListener("click", () => {
+  if (!LAST) return;
+  const [y, m, d] = LAST.dan.split("-").map(Number);
+  const start = new Date(y, m - 1, d, 0, LAST.s.a), end = new Date(y, m - 1, d, 0, LAST.s.b);
+  const dost = LAST.cfg.nacin === "dostava";
+  const lines = [
+    "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//opsforma//Poslasticarnica Slag//SR", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+    "BEGIN:VEVENT",
+    "UID:" + Date.now() + "-" + Math.random().toString(36).slice(2, 8) + "@" + SLUG + ".opsforma",
+    "DTSTAMP:" + utc(new Date()),
+    "DTSTART:" + utc(start), "DTEND:" + utc(end),
+    "SUMMARY:" + icsEsc(`${FIRMA}: ${dost ? "dostava torte" : "preuzimanje torte"}`),
+    "LOCATION:" + icsEsc(dost ? LAST.adr + ", Beograd" : ADRESA),
+    "DESCRIPTION:" + icsEsc(cakeLabel(LAST.cfg) + ". Cena: " + rsd(LAST.c.ukupno) + ". Telefon poslastičarnice: 060 000 05 18."),
+    ...(LAST.pods ? ["BEGIN:VALARM", "ACTION:DISPLAY", "DESCRIPTION:" + icsEsc("Sutra: torta iz Šlaga"), "TRIGGER:-P1D", "END:VALARM"] : []),
+    "END:VEVENT", "END:VCALENDAR"
+  ];
+  const blob = new Blob([lines.join("\r\n") + "\r\n"], {type:"text/calendar;charset=utf-8"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob); a.download = `termin-${SLUG}.ics`;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+});
+$("#nova").addEventListener("click", () => {
+  Object.assign(S, {dan:null, slot:null, max:0});
+  $("#porudzbina").reset(); $("#p-pods").checked = true;
+  $("#potvrda").hidden = true; $("#konfGrid").hidden = false;
+  renderDays(); renderSlots(); renderAll(false); showStep(0, true);
+});
+
+/* ===== cenovnik i galerija ===== */
+function renderCenovnik(){
+  const row = (a, b) => `<div class="cen-row"><span>${a}</span><span>${b}</span></div>`;
+  $("#cen-azur").textContent = `Cene u dinarima. Tabela ažurirana ${CENOVNIK.azurirano}`;
+  $("#cen-cols").innerHTML =
+    `<div><h3>Torte po kilogramu</h3>${CENOVNIK.fil.map(f => row(f.naziv, rsd(f.cena_kg))).join("")}
+      <h3>Doplate</h3>${CENOVNIK.biskvit.filter(b => b.doplata_kg).map(b => row(b.naziv + " biskvit", "+" + rsd(b.doplata_kg) + "/kg")).join("")}
+      ${CENOVNIK.dekor.filter(d => d.cena).map(d => row(d.naziv, "+" + rsd(d.cena))).join("")}${row(CENOVNIK.natpis.naziv, "+" + rsd(CENOVNIK.natpis.cena))}</div>
+     <div><h3>Kolači iz vitrine</h3>${CENOVNIK.kolaci.map(k => row(k.naziv, rsd(k.cena) + (k.jedinica === "kg" ? "/kg" : ""))).join("")}
+      <h3>Dostava torte</h3>${CENOVNIK.dostava.map(z => row(z.naziv, rsd(z.cena))).join("")}
+      <p class="meta" style="margin-top:10px">Kolače iz vitrine ne poručujete preko sajta, samo svratite.</p></div>`;
+}
+const GALERIJA = [
+  {naziv:"Rođendanska sa jagodama", opis:"Vanila, vanila i višnja, 16 osoba", cfg:{osobe:"16", biskvit:"vanila", fil:"visnja", premaz:"bela", dekor:["rozete","jagode"], natpis:"Mila 7"}},
+  {foto:true, naziv:"Torta za krštenje", opis:"Dodaje vlasnik, sa telefona"},
+  {naziv:"Čokoladna sa prelivom", opis:"Čokoladni biskvit, ganaš, 12 osoba", cfg:{osobe:"12", biskvit:"cokolada", fil:"ganas", premaz:"roze", dekor:["drip","rozete"], natpis:""}},
+  {naziv:"Dva sprata za slavlje", opis:"Orah, plazma i karamel, 30 osoba", cfg:{osobe:"30", biskvit:"orah", fil:"plazma", premaz:"bela", dekor:["rozete"], natpis:"Srećno"}},
+  {naziv:"Dečja sa mrvicama", opis:"Vanila, malina, 8 osoba", cfg:{osobe:"8", biskvit:"vanila", fil:"malina", premaz:"nebo", dekor:["mrvice"], natpis:"Luka 4"}},
+  {naziv:"Crveni somot", opis:"Crveni somot, malina i bela čokolada, 20 osoba", cfg:{osobe:"20", biskvit:"somot", fil:"malina", premaz:"roze", dekor:["rozete","jagode"], natpis:""}},
+  {foto:true, naziv:"Vaša nova torta", opis:"Mesto za sledeću fotografiju"},
+  {naziv:"Pistać i čokolada", opis:"Čokoladni biskvit, pistać, 12 osoba", cfg:{osobe:"12", biskvit:"cokolada", fil:"pistac", premaz:"nebo", dekor:["drip","mrvice"], natpis:""}}
+];
+function renderGal(){
+  $("#gal").innerHTML = GALERIJA.map((g, i) => g.foto
+    ? `<figure class="g-item foto"><div class="pic" role="img" aria-label="Mesto za fotografiju torte"><span>Vaša fotografija</span></div><figcaption><b>${g.naziv}</b><span>${g.opis}</span></figcaption></figure>`
+    : `<figure class="g-item"><div class="pic" role="img" aria-label="${esc(cakeLabel(g.cfg))}">${cakeSVG(g.cfg, "g" + i)}</div><figcaption><b>${g.naziv}</b><span>${g.opis}</span><button type="button" class="btn" data-gal="${i}">Poručite ovakvu</button></figcaption></figure>`).join("");
+  $$("#gal [data-gal]").forEach(b => b.addEventListener("click", () => {
+    const g = GALERIJA[Number(b.dataset.gal)].cfg;
+    Object.assign(S, JSON.parse(JSON.stringify(g)));
+    $("#natpis").value = S.natpis; $("#natpis-c").textContent = `${S.natpis.length} / 18 znakova`;
+    $("#potvrda").hidden = true; $("#konfGrid").hidden = false;
+    renderAll(true); showStep(3, false);
+    $("#torta").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+  }));
+}
+
+/* danas u radnom vremenu */
+const li = $(`#hours li[data-d="${new Date().getDay()}"]`); if (li){ li.classList.add("today"); li.firstElementChild.textContent += " (danas)"; }
+
+renderOpts(); renderDays(); renderSlots(); renderAll(false); showStep(0, false); renderCenovnik(); renderGal();
+
+/* ===== meni ===== */
+const mb = $(".menu-btn"), nav = $("#meni");
+function setMenu(o){ mb.setAttribute("aria-expanded", o ? "true" : "false"); mb.setAttribute("aria-label", o ? "Zatvori meni" : "Otvori meni"); nav.classList.toggle("open", o); }
+mb.addEventListener("click", () => setMenu(mb.getAttribute("aria-expanded") !== "true"));
+nav.addEventListener("click", e => { if (e.target.closest("a")) setMenu(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && mb.getAttribute("aria-expanded") === "true"){ setMenu(false); mb.focus(); } });
+
+/* ===== kontakt forma ===== */
+const kf = $('form[data-form="kontakt"]');
+kf.addEventListener("submit", e => {
+  e.preventDefault();
+  /* Na pravom sajtu: fetch("https://api.web3forms.com/submit", {method:"POST", body:new FormData(kf)})
+     uz hidden access_key polje; poruka ide na mejl poslastičarnice. */
+  kf.querySelector(".form-msg").textContent = "Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.";
+});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Servis Čip – popravka telefona, Batutova 8, Zvezdara</title>
+<meta name="description" content="Zamena ekrana, baterije, konektora punjenja i kamere za iPhone, Samsung i Xiaomi. Zakažite termin online. Batutova 8, Zvezdara.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;600;800&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;1,400&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F3F0E8;
+  --paper-2:#E9E4D8;
+  --card:#FBFAF6;
+  --green:#0B5D3B;
+  --green-deep:#084A2F;
+  --green-ink:#0B5D3B;
+  --copper:#C87533;
+  --copper-ink:#8E4B17;
+  --black:#1C1C1C;
+  --muted:#4F4B43;
+  --line:#CFC8B8;
+  --mono:"Martian Mono","DejaVu Sans Mono","Menlo","Consolas",monospace;
+  --sans:"Schibsted Grotesk","Helvetica Neue","Arial",sans-serif;
+  --gut:16px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--black);font:400 17px/1.55 var(--sans);overflow-x:hidden}
+img,svg{max-width:100%}
+a{color:var(--green-ink)}
+:focus-visible{outline:3px solid var(--copper);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--mono);font-weight:800;line-height:1.12;letter-spacing:-.02em;margin:0}
+p{margin:0 0 1em}
+.skip{position:absolute;left:-999px;top:0;background:var(--black);color:var(--paper);padding:10px 14px;z-index:99}
+.skip:focus{left:8px;top:8px}
+
+/* demo traka */
+.demo{background:var(--black);color:#E9E4D8;font:500 13px/1.3 var(--sans)}
+.demo .in{max-width:1200px;margin:0 auto;padding:8px var(--gut);display:flex;gap:10px 16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.demo a{color:#F0B98A;font-weight:700}
+.badge{display:inline-block;border:1.5px solid var(--copper);color:#F0B98A;padding:3px 9px;border-radius:3px;font:600 11.5px/1.2 var(--mono);letter-spacing:0}
+.demo .grow{flex:1 1 auto}
+
+/* ploča (hero) */
+.board{position:relative;background:var(--green);color:var(--paper);overflow:hidden;isolation:isolate}
+.board-bg{position:absolute;inset:0;width:100%;height:100%;z-index:-1;opacity:.55}
+.nav{max-width:1200px;margin:0 auto;padding:14px var(--gut);display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative;z-index:5}
+.logo{display:flex;align-items:center;gap:10px;color:var(--paper);text-decoration:none;font:800 18px/1 var(--mono);letter-spacing:-.03em}
+.logo svg{width:34px;height:34px;flex:none}
+.menu-btn{display:none;min-height:44px;min-width:44px;padding:0 14px;background:transparent;color:var(--paper);border:1.5px solid rgba(243,240,232,.6);border-radius:4px;font:600 14px/1 var(--mono);cursor:pointer}
+.menu-btn[aria-expanded="true"]{background:var(--paper);color:var(--green)}
+#meni{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+#meni a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;color:var(--paper);text-decoration:none;font:500 15px/1 var(--sans);border-radius:3px}
+#meni a:hover{background:rgba(0,0,0,.18)}
+
+.hero{max-width:1200px;margin:0 auto;padding:28px var(--gut) 0;position:relative}
+.chip-wrap{max-width:900px;margin:0 auto;display:grid;grid-template-columns:22px minmax(0,1fr) 22px;grid-template-rows:22px auto 22px}
+.pins{display:block;width:100%;height:100%}
+.pins-t{grid-column:2;grid-row:1}
+.pins-b{grid-column:2;grid-row:3}
+.pins-l{grid-column:1;grid-row:2}
+.pins-r{grid-column:3;grid-row:2}
+.chip{grid-column:2;grid-row:2;background:var(--black);color:var(--paper);border-radius:6px;padding:46px 56px 50px;position:relative;box-shadow:inset 0 0 0 1px #2c2c2c, 0 18px 0 -8px rgba(0,0,0,.25)}
+.chip::before{content:"";position:absolute;left:20px;top:20px;width:14px;height:14px;border-radius:50%;background:#2f2f2f;box-shadow:inset 0 1px 2px rgba(0,0,0,.8)}
+.chip .mark{font:400 12.5px/1.4 var(--mono);color:#B9B2A4;margin:0 0 22px 22px}
+.chip h1{font-size:clamp(28px,5.2vw,58px);max-width:15ch}
+.chip h1 span{display:block;color:var(--copper)}
+.chip .lead{max-width:52ch;margin:22px 0 28px;font-size:18px;color:#DCD6C8}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 20px;border-radius:4px;font:700 16px/1.1 var(--sans);text-decoration:none;cursor:pointer;border:2px solid transparent}
+.btn-copper{background:var(--copper);color:var(--black)}
+.btn-copper:hover{background:#D9884A}
+.btn-line{border-color:var(--paper);color:var(--paper);background:transparent}
+.btn-line:hover{background:var(--paper);color:var(--black)}
+.btn-green{background:var(--green);color:var(--paper)}
+.btn-green:hover{background:var(--green-deep)}
+.btn-ghost{border-color:var(--green);color:var(--green);background:transparent}
+.btn-ghost:hover{background:var(--green);color:var(--paper)}
+.btn svg{width:18px;height:18px;flex:none}
+.facts{display:flex;flex-wrap:wrap;gap:8px 26px;margin:30px 0 0;padding:18px 0 0;border-top:1px dashed #3d3d3d;list-style:none;font:400 13px/1.4 var(--mono);color:#CFC8B8}
+.facts b{color:var(--paper);font-weight:600}
+.edge{display:block;width:100%;height:56px;margin-top:6px}
+
+/* glavni deo sa magistralom */
+main{position:relative}
+.bus{position:absolute;top:0;bottom:0;left:calc(50% - 600px + 52px);width:22px;pointer-events:none}
+.bus i{position:absolute;top:0;bottom:0;width:2.5px;background:var(--green);opacity:.85}
+.bus i:nth-child(1){left:0}.bus i:nth-child(2){left:9px;opacity:.55}.bus i:nth-child(3){left:18px;opacity:.35}
+.bus b{position:absolute;left:-3px;width:9px;height:60px;border-radius:5px;background:linear-gradient(transparent,var(--copper));animation:teci 11s linear infinite}
+@keyframes teci{from{top:0}to{top:calc(100% - 60px)}}
+
+.sec{max-width:1200px;margin:0 auto;padding:72px var(--gut) 72px;display:grid;grid-template-columns:250px minmax(0,1fr);gap:0 40px;position:relative}
+.tag{position:relative;padding-top:4px}
+.tag-in{position:sticky;top:24px;padding-left:96px}
+.tag svg{position:absolute;left:44px;top:4px;width:56px;height:40px}
+.ref{display:block;font:800 30px/1 var(--mono);color:var(--copper-ink);letter-spacing:-.04em}
+.tag-name{display:block;margin-top:8px;font:500 15px/1.35 var(--sans);color:var(--muted)}
+.body{min-width:0;max-width:820px}
+.body h2{font-size:clamp(24px,3.2vw,36px);margin-bottom:14px;max-width:22ch}
+.intro{max-width:60ch;color:var(--muted);font-size:18px}
+
+/* cenovnik */
+.price-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px;margin-top:28px}
+.pr{border-top:2px solid var(--black);padding:16px 0 20px}
+.pr h3{font-size:17px;letter-spacing:-.01em;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.pr h3 small{font:500 13px/1 var(--sans);color:var(--muted);white-space:nowrap}
+.pr ul{list-style:none;margin:12px 0 0;padding:0}
+.pr li{display:flex;gap:8px;align-items:baseline;padding:4px 0;font-size:15.5px}
+.pr li span:first-child{flex:none}
+.pr li .dots{flex:1;border-bottom:1.5px dotted #A79E8C;transform:translateY(-4px);min-width:12px}
+.pr li b{font:600 14px/1 var(--mono);white-space:nowrap}
+.note{font-size:15px;color:var(--muted);margin-top:18px;max-width:62ch}
+
+/* zakazivanje */
+.bench{background:var(--card);border:2px solid var(--green);border-radius:8px;position:relative;margin-top:26px}
+.bench::before,.bench::after{content:"";position:absolute;top:12px;width:10px;height:10px;border-radius:50%;border:2px solid var(--green);background:var(--paper)}
+.bench::before{left:12px}.bench::after{right:12px}
+.bench-head{display:flex;flex-wrap:wrap;gap:8px 14px;justify-content:space-between;align-items:center;padding:16px 34px;border-bottom:1.5px dashed var(--line)}
+.bench-head .badge{color:var(--copper-ink);border-color:var(--copper)}
+.fake{font:600 13px/1.3 var(--sans);color:var(--copper-ink);background:#F6E6D6;padding:5px 10px;border-radius:3px}
+.step{padding:22px 34px 24px;border-bottom:1.5px dashed var(--line)}
+.step:last-of-type{border-bottom:0}
+.step-h{display:flex;gap:12px;align-items:baseline;margin-bottom:14px}
+.step-h .n{font:800 13px/1 var(--mono);color:var(--paper);background:var(--green);width:28px;height:28px;border-radius:50%;display:inline-grid;place-items:center;flex:none}
+.step-h h3{font-size:17px}
+.field label{display:block;font-weight:700;font-size:15px;margin-bottom:6px}
+select,input,textarea{font:400 17px/1.3 var(--sans);color:var(--black);background:#fff;border:1.5px solid #9C9483;border-radius:4px;padding:11px 12px;width:100%;min-height:48px}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%231C1C1C' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px}
+textarea{min-height:90px;resize:vertical}
+select:focus,input:focus,textarea:focus{border-color:var(--green);outline:none;box-shadow:0 0 0 3px rgba(11,93,59,.25)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chipb{min-height:44px;padding:8px 14px;border:1.5px solid var(--green);background:#fff;color:var(--green);border-radius:999px;font:600 15px/1.2 var(--sans);cursor:pointer}
+.chipb[aria-pressed="true"]{background:var(--green);color:var(--paper)}
+.chipb:disabled{border-color:#C9C2B3;color:#8A8376;background:transparent;cursor:not-allowed;text-decoration:line-through}
+.readout{margin-top:16px;padding:12px 14px;background:var(--black);color:var(--paper);border-radius:4px;font:400 13.5px/1.5 var(--mono);display:flex;flex-wrap:wrap;gap:4px 18px}
+.readout b{color:#F0B98A;font-weight:600}
+.days{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;scroll-snap-type:x proximity;scrollbar-width:thin}
+.day{flex:none;scroll-snap-align:start;width:66px;min-height:70px;border:1.5px solid #9C9483;background:#fff;border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;cursor:pointer;font:500 13px/1.2 var(--sans);color:var(--black)}
+.day b{font:800 19px/1 var(--mono)}
+.day[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:var(--paper)}
+.day:disabled{background:repeating-linear-gradient(135deg,transparent 0 6px,#E4DED0 6px 8px);color:#7B7466;border-style:dashed;cursor:not-allowed}
+.day:disabled small{font-size:11px}
+.groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.grp h4{margin:0 0 10px;font:600 14px/1.2 var(--mono);color:var(--green-ink);display:flex;justify-content:space-between;border-bottom:1.5px solid var(--green);padding-bottom:7px}
+.grp h4 span{font:400 12px/1.2 var(--sans);color:var(--muted)}
+.slots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.slot{min-height:44px;border:1.5px solid var(--green);background:#fff;color:var(--green);border-radius:4px;font:600 15px/1 var(--mono);cursor:pointer}
+.slot[aria-pressed="true"]{background:var(--copper);border-color:var(--copper);color:var(--black)}
+.slot:disabled{border-color:#D4CDBE;color:#9A9384;background:var(--paper);text-decoration:line-through;cursor:not-allowed}
+.empty{font-size:14px;color:var(--muted);margin:0}
+.hint{font-size:15px;color:var(--muted);margin:0}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.form-grid .full{grid-column:1/-1}
+.err{color:#A2261B;font-size:14px;font-weight:600;margin-top:5px;min-height:0}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:12px}
+.legend i{display:inline-block;width:14px;height:14px;border:1.5px solid var(--green);border-radius:3px;vertical-align:-2px;margin-right:6px;background:#fff}
+.legend i.z{border-color:#D4CDBE;background:var(--paper)}
+.submit-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:18px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* potvrda kao radni nalog */
+.order{padding:30px 34px 32px}
+.order h3{font-size:22px;margin-bottom:6px}
+.order .sub{color:var(--muted);margin-bottom:18px}
+.ticket{border:1.5px solid var(--black);border-radius:4px;background:#fff;max-width:560px}
+.ticket .th{display:flex;justify-content:space-between;gap:10px;padding:10px 14px;background:var(--black);color:var(--paper);font:400 12.5px/1.3 var(--mono)}
+.ticket dl{margin:0;padding:6px 14px 10px}
+.ticket .r{display:flex;gap:10px;padding:8px 0;border-bottom:1px dotted #BDB5A5}
+.ticket .r:last-child{border-bottom:0}
+.ticket dt{flex:0 0 96px;color:var(--muted);font-size:14.5px}
+.ticket dd{margin:0;font-weight:700;min-width:0;overflow-wrap:anywhere}
+.order .cta{margin-top:20px}
+
+/* koraci */
+.pinsteps{list-style:none;margin:30px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;position:relative}
+.pinsteps::before{content:"";position:absolute;left:0;right:0;top:21px;height:3px;background:var(--green)}
+.pinsteps li{position:relative;padding:58px 18px 0 0}
+.pinsteps li::before{content:attr(data-n);position:absolute;top:0;left:0;width:44px;height:44px;border-radius:50%;background:var(--paper);border:3px solid var(--green);display:grid;place-items:center;font:800 15px/1 var(--mono);color:var(--green)}
+.pinsteps h3{font-size:16px;margin-bottom:8px}
+.pinsteps p{font-size:15.5px;color:var(--muted)}
+
+/* foto + info */
+.split2{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;margin-top:26px}
+.hours{width:100%;border-collapse:collapse;font-size:16px}
+.hours th,.hours td{padding:10px 0;border-bottom:1px solid var(--line);text-align:left}
+.hours th{font-weight:500}
+.hours td{font:600 14.5px/1 var(--mono);text-align:right}
+.hours tr.today th,.hours tr.today td{color:var(--green-ink);font-weight:800}
+.hours tr.today th::after{content:" (danas)";font-weight:500;font-size:13px}
+.closed{color:#8A8376}
+.map{border:2px solid var(--black);border-radius:6px;overflow:hidden;background:var(--paper-2);min-height:280px}
+.map iframe{display:block;width:100%;height:100%;min-height:280px;border:0}
+.addr{font:600 15px/1.5 var(--mono);margin:16px 0 4px}
+.photo{background:repeating-linear-gradient(45deg,#DCD5C4 0 2px,#E5DFD1 2px 12px);border:1.5px solid var(--line);border-radius:6px;min-height:220px;display:flex;align-items:flex-end;padding:12px;margin-top:26px}
+.photo span{font-size:12.5px;color:var(--muted);background:var(--paper);padding:3px 8px;border-radius:3px}
+
+/* kontakt */
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:30px;margin-top:24px}
+.kform{display:grid;gap:14px}
+.form-msg{font-weight:700;color:var(--green-ink);background:#E3EEE7;border-left:4px solid var(--green);padding:12px 14px;border-radius:3px}
+.side-box{background:var(--black);color:var(--paper);border-radius:6px;padding:22px}
+.side-box h3{font-size:17px;margin-bottom:12px}
+.side-box p{color:#CFC8B8;font-size:15.5px}
+.side-box .btn{width:100%;margin-top:10px}
+.big-tel{font:800 22px/1.2 var(--mono);color:var(--paper);text-decoration:none;display:block;margin:6px 0 4px}
+
+footer{background:var(--green);color:var(--paper);margin-top:20px}
+footer .in{max-width:1200px;margin:0 auto;padding:34px var(--gut) 30px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:flex-end}
+footer a{color:#F0B98A;font-weight:700}
+footer p{margin:0;font-size:15px}
+footer .f-logo{font:800 20px/1 var(--mono)}
+
+@media (max-width:1240px){.bus{left:52px}}
+@media (max-width:960px){
+  .sec{grid-template-columns:minmax(0,1fr);padding:56px var(--gut) 56px 52px}
+  .bus{left:14px}
+  .tag{margin-bottom:18px}
+  .tag-in{position:relative;top:0;padding-left:0;display:flex;align-items:baseline;gap:12px}
+  .tag svg{left:-40px;top:2px;width:38px;height:28px}
+  .tag-name{margin-top:0}
+  .ref{font-size:22px}
+  .price-grid,.split2,.contact-grid{grid-template-columns:minmax(0,1fr)}
+  .pinsteps{grid-template-columns:minmax(0,1fr);gap:0}
+  .pinsteps::before{left:20px;right:auto;top:10px;bottom:10px;width:3px;height:auto}
+  .pinsteps li{padding:4px 0 18px 64px}
+}
+@media (max-width:760px){
+  .menu-btn{display:inline-flex;align-items:center}
+  #meni{display:none;position:absolute;left:var(--gut);right:var(--gut);top:64px;flex-direction:column;background:var(--black);padding:8px;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+  #meni.open{display:flex}
+  #meni a{width:100%;padding:0 14px}
+  .chip-wrap{grid-template-columns:0 minmax(0,1fr) 0;grid-template-rows:16px auto 16px}
+  .pins-l,.pins-r{display:none}
+  .chip{padding:34px 20px 26px}
+  .chip::before{left:14px;top:14px;width:10px;height:10px}
+  .chip .mark{margin-left:18px;font-size:11.5px}
+  .chip .lead{font-size:16.5px}
+  .cta .btn{flex:1 1 100%}
+  .bench-head,.step,.order{padding-left:18px;padding-right:18px}
+  .bench-head{padding-top:26px}
+  .groups{grid-template-columns:minmax(0,1fr);gap:16px}
+  .slots{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .form-grid{grid-template-columns:minmax(0,1fr)}
+  .ticket dt{flex-basis:84px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .bus b{display:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#sadrzaj">Preskoči na sadržaj</a>
+<div class="demo"><div class="in"><span>Primer sajta · izradio opsforma</span><span class="badge">Paket 2: zakazivanje</span><span class="grow"></span><a href="../../">Svi primeri</a></div></div>
+
+<header class="board" id="vrh">
+  <svg class="board-bg" viewBox="0 0 1366 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="#C87533" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity=".55">
+      <path d="M0 120H180l40 40h120"/><path d="M0 150H170l40 40h110"/><path d="M0 560H140l60-60h80"/>
+      <path d="M1366 90h-210l-50 50h-80"/><path d="M1366 600h-170l-40-40h-120"/><path d="M1366 630h-180l-40-40h-110"/>
+      <path d="M260 720V640l40-40h60"/><path d="M1090 720v-90l-30-30h-40"/>
+    </g>
+    <g fill="#0B5D3B" stroke="#C87533" stroke-width="2.5" opacity=".7">
+      <circle cx="340" cy="160" r="6"/><circle cx="320" cy="190" r="6"/><circle cx="280" cy="500" r="6"/>
+      <circle cx="1026" cy="140" r="6"/><circle cx="1036" cy="560" r="6"/><circle cx="1036" cy="590" r="6"/>
+      <circle cx="360" cy="600" r="6"/><circle cx="1020" cy="600" r="6"/>
+    </g>
+    <g fill="#F3F0E8" opacity=".12" font-family="monospace" font-size="13"><text x="60" y="108">R12</text><text x="1190" y="78">C7</text><text x="70" y="548">J1</text><text x="1180" y="588">U3</text></g>
+  </svg>
+  <div class="nav">
+    <a class="logo" href="#vrh" aria-label="Servis Čip, na vrh strane">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><g fill="#C87533"><rect x="9" y="1" width="3" height="5"/><rect x="15.5" y="1" width="3" height="5"/><rect x="22" y="1" width="3" height="5"/><rect x="9" y="28" width="3" height="5"/><rect x="15.5" y="28" width="3" height="5"/><rect x="22" y="28" width="3" height="5"/><rect x="1" y="9" width="5" height="3"/><rect x="1" y="15.5" width="5" height="3"/><rect x="1" y="22" width="5" height="3"/><rect x="28" y="9" width="5" height="3"/><rect x="28" y="15.5" width="5" height="3"/><rect x="28" y="22" width="5" height="3"/></g><rect x="6" y="6" width="22" height="22" rx="2.5" fill="#1C1C1C"/><circle cx="10.5" cy="10.5" r="1.6" fill="#555"/></svg>
+      Servis Čip
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meni">Meni</button>
+    <ul id="meni">
+      <li><a href="#cene">Cene</a></li>
+      <li><a href="#zakazivanje">Zakažite</a></li>
+      <li><a href="#tok">Kako radimo</a></li>
+      <li><a href="#radno-vreme">Radno vreme</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </div>
+
+  <div class="hero">
+    <div class="chip-wrap">
+      <svg class="pins pins-t" preserveAspectRatio="none" aria-hidden="true"><defs><pattern id="pt" width="34" height="22" patternUnits="userSpaceOnUse"><rect x="10" y="0" width="14" height="22" fill="#C87533"/><rect x="10" y="0" width="14" height="4" fill="#E0A26E"/></pattern></defs><rect width="100%" height="100%" fill="url(#pt)"/></svg>
+      <svg class="pins pins-l" preserveAspectRatio="none" aria-hidden="true"><defs><pattern id="pl" width="22" height="34" patternUnits="userSpaceOnUse"><rect x="0" y="10" width="22" height="14" fill="#C87533"/></pattern></defs><rect width="100%" height="100%" fill="url(#pl)"/></svg>
+      <div class="chip">
+        <p class="mark">ČIP-0513 / Batutova 8, Zvezdara</p>
+        <h1>Ekran za sat vremena. <span>Baterija za pola sata.</span></h1>
+        <p class="lead">Servis telefona u Batutovoj 8. Menjamo ekrane, baterije, konektore i kamere za iPhone, Samsung i Xiaomi. Zakažite termin, a mi do tada proverimo da li je deo na stanju.</p>
+        <div class="cta">
+          <a class="btn btn-copper" href="#zakazivanje">Zakažite termin</a>
+          <a class="btn btn-line" href="tel:+381600000513">Pozovite 060 000 05 13</a>
+        </div>
+        <ul class="facts">
+          <li><b>Pregled</b> 1.500 RSD, odbija se od popravke</li>
+          <li><b>Garancija</b> 6 meseci na deo</li>
+          <li><b>Plaćanje</b> gotovina ili kartica</li>
+        </ul>
+      </div>
+      <svg class="pins pins-r" preserveAspectRatio="none" aria-hidden="true"><defs><pattern id="pr" width="22" height="34" patternUnits="userSpaceOnUse"><rect x="0" y="10" width="22" height="14" fill="#C87533"/></pattern></defs><rect width="100%" height="100%" fill="url(#pr)"/></svg>
+      <svg class="pins pins-b" preserveAspectRatio="none" aria-hidden="true"><defs><pattern id="pb" width="34" height="22" patternUnits="userSpaceOnUse"><rect x="10" y="0" width="14" height="22" fill="#C87533"/><rect x="10" y="18" width="14" height="4" fill="#E0A26E"/></pattern></defs><rect width="100%" height="100%" fill="url(#pb)"/></svg>
+    </div>
+    <svg class="edge" viewBox="0 0 1200 56" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <g fill="#C87533"><rect x="0" y="36" width="1200" height="20" fill="#084A2F"/>
+      <rect x="40" y="40" width="18" height="16" rx="2"/><rect x="66" y="40" width="18" height="16" rx="2"/><rect x="92" y="40" width="18" height="16" rx="2"/><rect x="118" y="40" width="18" height="16" rx="2"/><rect x="144" y="40" width="18" height="16" rx="2"/><rect x="170" y="40" width="18" height="16" rx="2"/>
+      <rect x="1012" y="40" width="18" height="16" rx="2"/><rect x="1038" y="40" width="18" height="16" rx="2"/><rect x="1064" y="40" width="18" height="16" rx="2"/><rect x="1090" y="40" width="18" height="16" rx="2"/><rect x="1116" y="40" width="18" height="16" rx="2"/><rect x="1142" y="40" width="18" height="16" rx="2"/></g>
+      <text x="200" y="52" fill="#F3F0E8" opacity=".5" font-family="monospace" font-size="11">J1</text>
+    </svg>
+  </div>
+</header>
+
+<main id="sadrzaj">
+  <div class="bus" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
+
+  <section class="sec" id="cene" aria-labelledby="cene-h">
+    <div class="tag"><div class="tag-in">
+      <svg viewBox="0 0 56 40" aria-hidden="true"><path d="M-40 20H8l12-12h30" fill="none" stroke="#0B5D3B" stroke-width="2.5"/><circle cx="8" cy="20" r="5" fill="#F3F0E8" stroke="#C87533" stroke-width="2.5"/></svg>
+      <span class="ref">U1</span><span class="tag-name">Cene popravki</span>
+    </div></div>
+    <div class="body">
+      <h2 id="cene-h">Cena zavisi od modela. Kažemo je pre nego što otvorimo telefon.</h2>
+      <p class="intro">Cene su sa ugradnjom i delom. Za tačan iznos za vaš model izaberite telefon u zakazivanju ispod.</p>
+      <div class="price-grid">
+        <div class="pr"><h3>Zamena ekrana <small>do 60 min</small></h3><ul>
+          <li><span>Redmi Note 13, Galaxy A54</span><span class="dots"></span><b>7.500</b></li>
+          <li><span>iPhone 11, 12, Xiaomi 13T</span><span class="dots"></span><b>12.900</b></li>
+          <li><span>iPhone 13, 14, Galaxy S23</span><span class="dots"></span><b>18.900</b></li>
+          <li><span>iPhone 15</span><span class="dots"></span><b>26.500</b></li></ul></div>
+        <div class="pr"><h3>Zamena baterije <small>do 30 min</small></h3><ul>
+          <li><span>Redmi Note 13, Galaxy A54</span><span class="dots"></span><b>3.900</b></li>
+          <li><span>iPhone 11, 12, Xiaomi 13T</span><span class="dots"></span><b>5.500</b></li>
+          <li><span>iPhone 13, 14, Galaxy S23</span><span class="dots"></span><b>6.900</b></li>
+          <li><span>iPhone 15</span><span class="dots"></span><b>8.500</b></li></ul></div>
+        <div class="pr"><h3>Konektor punjenja <small>do 45 min</small></h3><ul>
+          <li><span>Android modeli</span><span class="dots"></span><b>od 3.500</b></li>
+          <li><span>iPhone 11 do 15</span><span class="dots"></span><b>od 4.900</b></li></ul></div>
+        <div class="pr"><h3>Kamera i zadnje staklo <small>45 do 90 min</small></h3><ul>
+          <li><span>Zadnja kamera</span><span class="dots"></span><b>od 4.500</b></li>
+          <li><span>Zadnje staklo</span><span class="dots"></span><b>od 4.000</b></li></ul></div>
+      </div>
+      <p class="note">Pregled i dijagnostika koštaju 1.500 RSD. Ako popravku radimo kod nas, pregled ne plaćate. Telefon koji je bio u vodi gledamo besplatno, ali ne obećavamo ništa dok ga ne otvorimo.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="zakazivanje" aria-labelledby="zak-h">
+    <div class="tag"><div class="tag-in">
+      <svg viewBox="0 0 56 40" aria-hidden="true"><path d="M-40 20H8l12-12h30" fill="none" stroke="#0B5D3B" stroke-width="2.5"/><circle cx="8" cy="20" r="5" fill="#F3F0E8" stroke="#C87533" stroke-width="2.5"/></svg>
+      <span class="ref">U2</span><span class="tag-name">Zakazivanje termina</span>
+    </div></div>
+    <div class="body">
+      <h2 id="zak-h">Zakažite popravku</h2>
+      <p class="intro">Izaberite telefon i kvar, pa dan i vreme koje vam odgovara. Dođete u zakazano vreme i ne čekate u redu.</p>
+
+<!--
+  PRODUKCIJA
+  Ovaj modul radi samo u pregledaču i termini su izmišljeni. Na pravom sajtu postoje dve varijante:
+
+  a) Zahtev za termin: kada kupac klikne „Zakaži termin“, isti podaci (model, kvar, dan, vreme, ime, telefon,
+     napomena) šalju se vlasniku na mejl preko Web3Forms (POST na https://api.web3forms.com/submit sa hidden
+     poljem access_key), ili se otvara Viber poruka sa rezimeom (viber://forward?text=...). Vlasnik zatim
+     potvrđuje termin pozivom ili porukom. Zauzete termine vlasnik može da vodi u jednostavnoj tabeli.
+
+  b) Povezan kalendar: umesto ovog modula ugrađuje se Google Kalendar „Appointment schedule“ (zakazivanje
+     termina), Cal.com ili Calendly embed. Kupac vidi stvarne slobodne termine, a zakazani termini se sami
+     upisuju u vlasnikov Google Kalendar na telefonu, sa podsetnikom.
+-->
+      <div class="bench" id="bench">
+        <div class="bench-head"><span class="badge">Paket 2: zakazivanje</span><span class="fake">Primer: termini su izmišljeni</span></div>
+        <div id="flow">
+          <div class="step">
+            <div class="step-h"><span class="n">1</span><h3>Telefon i kvar</h3></div>
+            <div class="field"><label for="model">Model telefona</label>
+              <select id="model"></select></div>
+            <div class="chips" id="kvarovi" role="group" aria-label="Kvar"></div>
+            <div class="readout" id="readout" aria-live="polite"></div>
+          </div>
+          <div class="step">
+            <div class="step-h"><span class="n">2</span><h3>Dan</h3></div>
+            <div class="days" id="days" role="group" aria-label="Dan, narednih 14 dana"></div>
+          </div>
+          <div class="step">
+            <div class="step-h"><span class="n">3</span><h3>Vreme</h3></div>
+            <div id="slots-wrap"><p class="hint">Prvo izaberite dan.</p></div>
+            <div class="legend"><span><i></i>slobodno</span><span><i class="z"></i>zauzeto</span></div>
+          </div>
+          <form class="step" id="bform" novalidate>
+            <div class="step-h"><span class="n">4</span><h3>Vaši podaci</h3></div>
+            <div class="form-grid">
+              <div class="field"><label for="b-ime">Ime i prezime</label><input id="b-ime" name="ime" autocomplete="name"><div class="err" id="e-ime"></div></div>
+              <div class="field"><label for="b-tel">Telefon</label><input id="b-tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="06x xxx xxxx"><div class="err" id="e-tel"></div></div>
+              <div class="field full"><label for="b-nap">Napomena (nije obavezno)</label><textarea id="b-nap" name="napomena" placeholder="Npr. ekran radi, ali ne reaguje na dodir u donjem delu"></textarea></div>
+            </div>
+            <div class="submit-row"><button class="btn btn-green" type="submit">Zakaži termin</button><span class="hint" id="pick-state" aria-live="polite">Izaberite kvar, dan i vreme.</span></div>
+          </form>
+        </div>
+        <div class="order" id="done" hidden tabindex="-1">
+          <h3>Termin je zakazan</h3>
+          <p class="sub">Vidimo se u Batutovoj 8. Ako kasnite više od 15 minuta, javite se na 060 000 05 13.</p>
+          <div class="ticket">
+            <div class="th"><span>Radni nalog</span><span id="t-no"></span></div>
+            <dl id="t-list"></dl>
+          </div>
+          <div class="cta">
+            <button class="btn btn-copper" type="button" id="ics">Dodaj u kalendar</button>
+            <button class="btn btn-ghost" type="button" id="again">Novi termin</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="tok" aria-labelledby="tok-h">
+    <div class="tag"><div class="tag-in">
+      <svg viewBox="0 0 56 40" aria-hidden="true"><path d="M-40 20H8l12-12h30" fill="none" stroke="#0B5D3B" stroke-width="2.5"/><circle cx="8" cy="20" r="5" fill="#F3F0E8" stroke="#C87533" stroke-width="2.5"/></svg>
+      <span class="ref">U3</span><span class="tag-name">Kako izgleda popravka</span>
+    </div></div>
+    <div class="body">
+      <h2 id="tok-h">Telefon ne ostavljate danima</h2>
+      <ol class="pinsteps">
+        <li data-n="1"><h3>Dođete u termin</h3><p>Ponesite punjač ako se telefon ne pali. Šifru ne morate da kažete za ekran i bateriju.</p></li>
+        <li data-n="2"><h3>Pregled pred vama</h3><p>Otvorimo telefon za stolom, pokažemo kvar i kažemo cenu. Tek onda radimo.</p></li>
+        <li data-n="3"><h3>Popravka dok čekate</h3><p>Baterija oko 30 minuta, ekran do sat vremena. Možete da sačekate ili da prošetate.</p></li>
+        <li data-n="4"><h3>Proba i garancija</h3><p>Zajedno proverimo dodir, kamere i punjenje. Dobijete račun i garantni list.</p></li>
+      </ol>
+      <div class="photo"><span>Vaša fotografija: radni sto servisa</span></div>
+    </div>
+  </section>
+
+  <section class="sec" id="radno-vreme" aria-labelledby="rv-h">
+    <div class="tag"><div class="tag-in">
+      <svg viewBox="0 0 56 40" aria-hidden="true"><path d="M-40 20H8l12-12h30" fill="none" stroke="#0B5D3B" stroke-width="2.5"/><circle cx="8" cy="20" r="5" fill="#F3F0E8" stroke="#C87533" stroke-width="2.5"/></svg>
+      <span class="ref">U4</span><span class="tag-name">Radno vreme i adresa</span>
+    </div></div>
+    <div class="body">
+      <h2 id="rv-h">Batutova 8, Zvezdara</h2>
+      <div class="split2">
+        <div>
+          <table class="hours" id="hours">
+            <caption class="sr">Radno vreme po danima</caption>
+            <tr data-d="1"><th scope="row">Ponedeljak</th><td>10:00–19:00</td></tr>
+            <tr data-d="2"><th scope="row">Utorak</th><td>10:00–19:00</td></tr>
+            <tr data-d="3"><th scope="row">Sreda</th><td>10:00–19:00</td></tr>
+            <tr data-d="4"><th scope="row">Četvrtak</th><td>10:00–19:00</td></tr>
+            <tr data-d="5"><th scope="row">Petak</th><td>10:00–19:00</td></tr>
+            <tr data-d="6"><th scope="row">Subota</th><td>10:00–15:00</td></tr>
+            <tr data-d="0"><th scope="row">Nedelja</th><td class="closed">zatvoreno</td></tr>
+          </table>
+          <p class="addr">Batutova 8, 11000 Beograd</p>
+          <p class="hint">Ulaz iz ulice, prizemlje. Parking u okolnim ulicama.</p>
+        </div>
+        <div class="map"><iframe title="Mapa: Servis Čip, Batutova 8, Beograd" loading="lazy" src="https://maps.google.com/maps?q=Batutova%208%2C%20Beograd&amp;z=15&amp;output=embed"></iframe></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="kontakt" aria-labelledby="k-h">
+    <div class="tag"><div class="tag-in">
+      <svg viewBox="0 0 56 40" aria-hidden="true"><path d="M-40 20H8l12-12h30" fill="none" stroke="#0B5D3B" stroke-width="2.5"/><circle cx="8" cy="20" r="5" fill="#F3F0E8" stroke="#C87533" stroke-width="2.5"/></svg>
+      <span class="ref">U5</span><span class="tag-name">Pitanja i kontakt</span>
+    </div></div>
+    <div class="body">
+      <h2 id="k-h">Niste sigurni šta je kvar? Pitajte.</h2>
+      <div class="contact-grid">
+        <!--
+          Web3Forms: na pravom sajtu forma dobija action="https://api.web3forms.com/submit" i method="POST",
+          plus <input type="hidden" name="access_key" value="VLASNIKOV-KLJUČ">. Poruka stiže na vlasnikov mejl.
+        -->
+        <form class="kform" data-form="kontakt" id="kform" novalidate>
+          <div class="field"><label for="k-ime">Ime</label><input id="k-ime" name="ime" autocomplete="name" required></div>
+          <div class="field"><label for="k-tel">Telefon ili mejl</label><input id="k-tel" name="kontakt" autocomplete="tel" required></div>
+          <div class="field"><label for="k-model">Model telefona</label><input id="k-model" name="model" placeholder="Npr. Galaxy A54"></div>
+          <div class="field"><label for="k-por">Šta se desilo?</label><textarea id="k-por" name="poruka" required placeholder="Npr. pao je na beton, slika radi, ali je ekran ispucao"></textarea></div>
+          <div><button class="btn btn-green" type="submit">Pošalji pitanje</button></div>
+          <div id="kform-msg" aria-live="polite"></div>
+        </form>
+        <aside class="side-box">
+          <h3>Brže je telefonom</h3>
+          <p>Ako vam je hitno, pozovite. Za fotografiju oštećenja pišite na Viber.</p>
+          <a class="big-tel" href="tel:+381600000513">060 000 05 13</a>
+          <a class="btn btn-copper" href="tel:+381600000513">Pozovite</a>
+          <a class="btn btn-line" href="viber://chat?number=%2B381600000513">Pišite na Viber</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="in">
+    <div><p class="f-logo">Servis Čip</p><p>Batutova 8, Zvezdara · 060 000 05 13</p></div>
+    <p>Primer sajta · izradio opsforma · <a href="../../">Svi primeri</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* meni */
+  var btn=document.querySelector('.menu-btn'),nav=document.getElementById('meni');
+  function setMenu(o){btn.setAttribute('aria-expanded',o?'true':'false');nav.classList.toggle('open',o);btn.textContent=o?'Zatvori':'Meni';}
+  btn.addEventListener('click',function(){setMenu(btn.getAttribute('aria-expanded')!=='true');});
+  nav.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&btn.getAttribute('aria-expanded')==='true'){setMenu(false);btn.focus();}});
+
+  /* današnji dan u tabeli */
+  var tr=document.querySelector('#hours tr[data-d="'+new Date().getDay()+'"]');if(tr)tr.classList.add('today');
+
+  /* kontakt forma */
+  document.getElementById('kform').addEventListener('submit',function(e){
+    e.preventDefault();
+    document.getElementById('kform-msg').innerHTML='<p class="form-msg">Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.</p>';
+  });
+
+  /* ===== zakazivanje ===== */
+  var FIRMA='Servis Čip',ADRESA='Batutova 8, Beograd',SLUG='servis-cip';
+  var MODELS=[['Redmi Note 13',0],['Galaxy A54',0],['iPhone 11',1],['iPhone 12',1],['Xiaomi 13T',1],['iPhone 13',2],['iPhone 14',2],['Galaxy S23',2],['iPhone 15',3],['Drugi model',-1]];
+  var KV=[
+    {id:'ekran',n:'Zamena ekrana',d:60,p:[7500,12900,18900,26500]},
+    {id:'baterija',n:'Zamena baterije',d:30,p:[3900,5500,6900,8500]},
+    {id:'konektor',n:'Konektor punjenja',d:45,p:[3500,4900,5900,7500]},
+    {id:'kamera',n:'Zadnja kamera',d:45,p:[4500,7900,11500,14900]},
+    {id:'staklo',n:'Zadnje staklo',d:90,p:[4000,6500,8900,11900]},
+    {id:'pregled',n:'Pregled i dijagnostika',d:30,p:[1500,1500,1500,1500],any:true}
+  ];
+  /* radno vreme u minutima, indeks = getDay() (0 = nedelja) */
+  var HOURS=[null,[600,1140],[600,1140],[600,1140],[600,1140],[600,1140],[600,900]];
+  var DAYN=['ned','pon','uto','sre','čet','pet','sub'];
+  var DAYL=['nedelja','ponedeljak','utorak','sreda','četvrtak','petak','subota'];
+  var MON=['januar','februar','mart','april','maj','jun','jul','avgust','septembar','oktobar','novembar','decembar'];
+  var S={model:5,kv:'ekran',day:null,time:null};
+
+  var sel=document.getElementById('model'),kvw=document.getElementById('kvarovi'),ro=document.getElementById('readout'),
+      daysEl=document.getElementById('days'),sw=document.getElementById('slots-wrap'),state=document.getElementById('pick-state');
+  MODELS.forEach(function(m,i){var o=document.createElement('option');o.value=i;o.textContent=m[0];sel.appendChild(o);});
+  sel.value=S.model;
+
+  function rsd(n){return n.toLocaleString('de-DE')+' RSD';}
+  function pad(n){return (n<10?'0':'')+n;}
+  function hm(m){return pad(Math.floor(m/60))+':'+pad(m%60);}
+  function ymd(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());}
+  function hash(s){var h=2166136261;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619);}return (h>>>0);}
+  function busy(d,m){return hash(SLUG+ymd(d)+'|'+m)%100<38;}
+  function tier(){return MODELS[S.model][1];}
+  function kv(){return KV.filter(function(k){return k.id===S.kv;})[0];}
+  function price(){var k=kv();if(!k)return 0;var t=tier();return k.p[t<0?0:t];}
+
+  function renderKv(){
+    kvw.innerHTML='';
+    KV.forEach(function(k){
+      var b=document.createElement('button');b.type='button';b.className='chipb';b.textContent=k.n;
+      var ok=tier()>=0||k.any;b.disabled=!ok;
+      if(!ok&&S.kv===k.id)S.kv=null;
+      b.setAttribute('aria-pressed',S.kv===k.id?'true':'false');
+      b.addEventListener('click',function(){S.kv=k.id;S.time=null;renderKv();renderDays();renderSlots();});
+      kvw.appendChild(b);
+    });
+    renderReadout();
+  }
+  function renderReadout(){
+    var k=kv(),m=MODELS[S.model][0];
+    if(tier()<0&&!k){ro.innerHTML='<span>Za ostale modele prvo radimo pregled: <b>1.500 RSD</b>, 30 min.</span>';return;}
+    if(!k){ro.innerHTML='<span>'+m+'</span><span>Izaberite kvar</span>';return;}
+    ro.innerHTML='<span>'+m+'</span><span>'+k.n+'</span><span>trajanje <b>'+k.d+' min</b></span><span>cena <b>'+rsd(price())+'</b></span>';
+  }
+  sel.addEventListener('change',function(){S.model=+sel.value;S.time=null;renderKv();renderDays();renderSlots();});
+
+  var DAYS=[];
+  (function(){var t=new Date();t.setHours(0,0,0,0);for(var i=0;i<14;i++){var d=new Date(t);d.setDate(t.getDate()+i);DAYS.push(d);}})();
+  function slotsFor(d){
+    var h=HOURS[d.getDay()],k=kv(),dur=k?k.d:30,out=[];if(!h)return out;
+    var now=new Date(),isToday=ymd(d)===ymd(now),nowM=now.getHours()*60+now.getMinutes();
+    for(var m=h[0];m+dur<=h[1];m+=30){
+      if(isToday&&m<=nowM+30)continue;
+      out.push({m:m,busy:busy(d,m)});
+    }
+    return out;
+  }
+  function renderDays(){
+    daysEl.innerHTML='';
+    DAYS.forEach(function(d,i){
+      var b=document.createElement('button');b.type='button';b.className='day';
+      var closed=!HOURS[d.getDay()];
+      var full=!closed&&i===0&&!slotsFor(d).some(function(x){return !x.busy;});
+      var lbl=i===0?'danas':(i===1?'sutra':DAYN[d.getDay()]);
+      b.innerHTML='<span>'+lbl+'</span><b>'+d.getDate()+'.</b><small>'+(closed?'zatvoreno':(full?'popunjeno':pad(d.getMonth()+1)+'.'))+'</small>';
+      b.setAttribute('aria-label',DAYL[d.getDay()]+' '+d.getDate()+'. '+MON[d.getMonth()]+(closed?', zatvoreno':(full?', popunjeno':'')));
+      b.disabled=closed||full;
+      if(b.disabled&&S.day===i){S.day=null;S.time=null;}
+      b.setAttribute('aria-pressed',S.day===i?'true':'false');
+      b.addEventListener('click',function(){S.day=i;S.time=null;renderDays();renderSlots();});
+      daysEl.appendChild(b);
+    });
+  }
+  function renderSlots(){
+    if(S.day===null){sw.innerHTML='<p class="hint">Prvo izaberite dan.</p>';updState();return;}
+    var d=DAYS[S.day],list=slotsFor(d);
+    var G=[['Pre podne','do 12 h',0,720],['Popodne','12 do 17 h',720,1020],['Uveče','od 17 h',1020,1440]];
+    var html='<div class="groups">';
+    G.forEach(function(g){
+      var items=list.filter(function(s){return s.m>=g[2]&&s.m<g[3];});
+      html+='<div class="grp"><h4>'+g[0]+' <span>'+g[1]+'</span></h4>';
+      if(!items.length){html+='<p class="empty">'+(g[2]>=1020&&d.getDay()===6?'Subotom radimo do 15 h.':'Nema slobodnih termina.')+'</p>';}
+      else{html+='<div class="slots">';items.forEach(function(s){
+        html+='<button type="button" class="slot" data-m="'+s.m+'"'+(s.busy?' disabled aria-label="'+hm(s.m)+', zauzeto"':' aria-pressed="'+(S.time===s.m?'true':'false')+'"')+'>'+hm(s.m)+'</button>';
+      });html+='</div>';}
+      html+='</div>';
+    });
+    html+='</div>';
+    if(!list.some(function(s){return !s.busy;}))html+='<p class="hint" style="margin-top:12px">Ovog dana nema slobodnih termina. Izaberite drugi dan.</p>';
+    sw.innerHTML=html;
+    sw.querySelectorAll('.slot:not(:disabled)').forEach(function(b){b.addEventListener('click',function(){S.time=+b.dataset.m;renderSlots();});});
+    updState();
+  }
+  function updState(){
+    var k=kv();
+    if(!k)state.textContent='Izaberite kvar.';
+    else if(S.day===null)state.textContent='Izaberite dan.';
+    else if(S.time===null)state.textContent='Izaberite vreme.';
+    else{var d=DAYS[S.day];state.textContent='Izabrano: '+DAYL[d.getDay()]+' '+d.getDate()+'. '+MON[d.getMonth()]+' u '+hm(S.time)+'.';}
+  }
+
+  var form=document.getElementById('bform'),done=document.getElementById('done'),flow=document.getElementById('flow');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var ime=document.getElementById('b-ime'),tel=document.getElementById('b-tel'),ok=true;
+    var eI=document.getElementById('e-ime'),eT=document.getElementById('e-tel');eI.textContent='';eT.textContent='';
+    ime.removeAttribute('aria-invalid');tel.removeAttribute('aria-invalid');
+    if(ime.value.trim().length<2){eI.textContent='Upišite ime.';ime.setAttribute('aria-invalid','true');ok=false;}
+    if(tel.value.replace(/\D/g,'').length<8){eT.textContent='Upišite broj telefona, npr. 064 123 4567.';tel.setAttribute('aria-invalid','true');ok=false;}
+    if(!kv()||S.day===null||S.time===null){state.textContent='Nedostaje: '+[!kv()?'kvar':null,S.day===null?'dan':null,S.time===null?'vreme':null].filter(Boolean).join(', ')+'.';ok=false;}
+    if(!ok){(ime.getAttribute('aria-invalid')?ime:(tel.getAttribute('aria-invalid')?tel:null))&&(ime.getAttribute('aria-invalid')?ime:tel).focus();return;}
+    var k=kv(),d=DAYS[S.day];
+    var start=new Date(d);start.setHours(Math.floor(S.time/60),S.time%60,0,0);
+    var end=new Date(start.getTime()+k.d*60000);
+    S.booking={k:k,model:MODELS[S.model][0],start:start,end:end,ime:ime.value.trim(),tel:tel.value.trim(),nap:document.getElementById('b-nap').value.trim(),price:price()};
+    var rows=[['Model',S.booking.model],['Usluga',k.n],['Serviser','Nikola'],['Dan',DAYL[d.getDay()]+', '+d.getDate()+'. '+MON[d.getMonth()]],['Vreme',hm(S.time)+' do '+hm(S.time+k.d)],['Trajanje',k.d+' min'],['Cena',rsd(S.booking.price)+', plaćate u radnji'],['Ime',S.booking.ime],['Telefon',S.booking.tel]];
+    if(S.booking.nap)rows.push(['Napomena',S.booking.nap]);
+    var dl=document.getElementById('t-list');dl.innerHTML='';
+    rows.forEach(function(r){var w=document.createElement('div');w.className='r';var dt=document.createElement('dt');dt.textContent=r[0];var dd=document.createElement('dd');dd.textContent=r[1];w.appendChild(dt);w.appendChild(dd);dl.appendChild(w);});
+    document.getElementById('t-no').textContent='br. '+(hash(ymd(d)+S.time+S.booking.ime)%9000+1000);
+    flow.hidden=true;done.hidden=false;done.focus();
+  });
+
+  function icsDate(dt){return dt.toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'');}
+  function esc(s){return String(s).replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/\n/g,'\\n');}
+  document.getElementById('ics').addEventListener('click',function(){
+    var b=S.booking;if(!b)return;
+    var lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//opsforma//'+SLUG+'//SR','CALSCALE:GREGORIAN','METHOD:PUBLISH','BEGIN:VEVENT',
+      'UID:'+Date.now()+'-'+Math.floor(Math.random()*1e6)+'@'+SLUG+'.primer',
+      'DTSTAMP:'+icsDate(new Date()),'DTSTART:'+icsDate(b.start),'DTEND:'+icsDate(b.end),
+      'SUMMARY:'+esc(FIRMA+': '+b.k.n+' ('+b.model+')'),
+      'LOCATION:'+esc(ADRESA),
+      'DESCRIPTION:'+esc('Cena: '+rsd(b.price)+'. Telefon servisa: 060 000 05 13.'),
+      'END:VEVENT','END:VCALENDAR'];
+    var blob=new Blob([lines.join('\r\n')+'\r\n'],{type:'text/calendar;charset=utf-8'});
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='termin-'+SLUG+'.ics';
+    document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},500);
+  });
+  document.getElementById('again').addEventListener('click',function(){
+    S.time=null;S.day=null;S.booking=null;form.reset();done.hidden=true;flow.hidden=false;renderDays();renderSlots();
+    document.getElementById('model').focus();
+  });
+
+  renderKv();renderDays();renderSlots();
+})();
+</script>
+</body>
+</html>

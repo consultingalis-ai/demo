@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cvećara Lala · buketi i dostava cveća, Cara Nikolaja II 41, Vračar</title>
+<meta name="description" content="Cvećara Lala na Vračaru, Cara Nikolaja II 41. Katalog buketa sa cenama, porudžbina na sajtu, dostava po Vračaru, Zvezdari i celom Beogradu, sa čestitkom.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23FDF8F2'/%3E%3Cpath d='M16 30V16' stroke='%233B5249' stroke-width='2'/%3E%3Cpath d='M9 8 Q9 19 16 19 Q23 19 23 8 L19.5 11 L16 6 L12.5 11 Z' fill='%23E5383B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --crvena:#E5383B;
+  --crvena-t:#B8232A;       /* tamnija lala za sitan tekst, AA na beličastoj */
+  --breskva:#F7B267;
+  --breskva-2:#FCE3C6;
+  --breskva-3:#FEF1E2;
+  --stabljika:#3B5249;
+  --stabljika-2:#2B3D36;
+  --stabljika-3:#E3E9E3;
+  --belicasta:#FDF8F2;
+  --papir:#FFFDFA;
+  --tekst:#2B3D36;
+  --tekst-2:#52645C;
+  --serif:"Bellefair","Cormorant Garamond","Georgia",serif;
+  --sans:"Raleway","Avenir Next","Segoe UI",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--belicasta);color:var(--tekst);font-family:var(--sans);font-size:1.0625rem;line-height:1.6;font-variant-numeric:lining-nums}
+svg{display:block;max-width:100%}
+a{color:var(--stabljika)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;line-height:1.1;color:var(--stabljika-2)}
+h2{font-size:clamp(2.3rem,7vw,3.6rem)}
+h3{font-size:1.6rem}
+p{margin:0 0 .8em}
+button,input,textarea,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--crvena-t);outline-offset:3px}
+section[id],#potvrda{scroll-margin-top:70px}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+
+/* traka */
+.demo-bar{background:var(--stabljika-2);color:var(--belicasta);font-size:.85rem;padding:7px 16px;display:flex;flex-wrap:wrap;gap:4px 14px;justify-content:center;align-items:center;text-align:center}
+.demo-bar a{color:var(--breskva);font-weight:600}
+.demo-bar :focus-visible{outline-color:var(--breskva)}
+.pkg{display:inline-block;background:var(--breskva);color:var(--stabljika-2);font-weight:700;font-size:.78rem;padding:2px 10px;border-radius:3px;white-space:nowrap}
+
+/* zaglavlje */
+.head{position:sticky;top:0;z-index:40;background:rgba(253,248,242,.96);border-bottom:1px solid #D8D2C6}
+.head-in{display:flex;align-items:center;gap:14px;min-height:62px}
+.logo{font-family:var(--serif);font-size:1.75rem;color:var(--stabljika-2);text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:8px;line-height:1}
+.logo svg{width:20px;height:28px}
+.nav{display:flex;gap:2px}
+.nav a{text-decoration:none;padding:10px 12px;font-weight:600;font-size:.95rem;color:var(--stabljika-2)}
+.nav a:hover{color:var(--crvena-t)}
+.lang{display:flex;border:1.5px solid var(--stabljika);border-radius:99px;overflow:hidden}
+.lang button{min-width:46px;min-height:44px;border:0;background:transparent;font-weight:700;font-size:.85rem;cursor:pointer;color:var(--stabljika-2)}
+.lang button[aria-pressed="true"]{background:var(--stabljika);color:var(--belicasta)}
+.menu-btn{display:none;min-width:48px;min-height:48px;border:1.5px solid var(--stabljika);background:transparent;border-radius:99px;cursor:pointer;padding:0 14px;font-weight:700;font-size:.9rem;color:var(--stabljika-2)}
+@media (max-width:900px){
+  .menu-btn{display:block}
+  .nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--belicasta);border-bottom:1px solid #D8D2C6;padding:6px 16px 14px;display:none}
+  .nav.open{display:flex}
+  .nav a{padding:13px 4px;font-size:1.1rem;border-bottom:1px solid #EAE3D7}
+}
+
+/* naslovna strana knjige */
+.title-page{padding:28px 0 0;background:var(--belicasta)}
+.tp{position:relative;max-width:760px;margin:0 auto;text-align:center;border:1px solid var(--stabljika);padding:10px;background:var(--papir)}
+.tp-in{border:1px solid rgba(59,82,73,.45);padding:44px 22px 0;overflow:hidden;position:relative}
+.tp .place{font-size:.95rem;letter-spacing:.06em;color:var(--tekst-2);margin-bottom:22px}
+.tp h1{font-size:clamp(1.6rem,5vw,2.2rem);color:var(--stabljika)}
+.tp h1 .big{display:block;font-size:clamp(6.5rem,30vw,12rem);line-height:.82;color:var(--crvena);margin:.06em 0 .02em}
+.tp .sub{font-style:italic;font-size:1.15rem;max-width:30rem;margin:18px auto 6px;color:var(--tekst)}
+.leaf-rule{display:flex;align-items:center;gap:12px;justify-content:center;margin:18px auto;max-width:300px}
+.leaf-rule::before,.leaf-rule::after{content:"";flex:1;height:1px;background:var(--stabljika);opacity:.5}
+.leaf-rule svg{width:46px;height:16px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:11px 22px;border-radius:99px;border:1.5px solid var(--stabljika);background:transparent;color:var(--stabljika-2);font-weight:700;text-decoration:none;cursor:pointer;font-size:1rem;line-height:1.2}
+.btn.solid{background:var(--stabljika);color:var(--belicasta)}
+.btn.red{background:var(--crvena-t);border-color:var(--crvena-t);color:#fff}
+.btn:hover{filter:brightness(1.06)}
+.tp .meta{margin:22px 0 4px;font-size:.92rem;color:var(--tekst-2)}
+.tp .meta a{font-weight:600}
+.tp .rv-note{font-size:.8rem;color:var(--tekst-2);max-width:26rem;margin:0 auto}
+.tp-tulips{height:150px;margin:18px -22px 0}
+.tp-tulips svg{width:100%;height:100%}
+.tp-tulips .tl{transform-box:fill-box;transform-origin:50% 100%;animation:rast 1.6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rast{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.tp .imprint{border-top:1px solid rgba(59,82,73,.45);margin:0 -22px;padding:12px 16px;font-size:.85rem;color:var(--tekst-2);background:var(--belicasta)}
+
+/* sekcije */
+.sec{padding:64px 0 0;position:relative}
+.sec-head{text-align:center;max-width:40rem;margin:0 auto 26px}
+.sec-head p{color:var(--tekst-2)}
+.tulip-row{height:72px;margin-top:40px;overflow:hidden}
+.tulip-row svg{width:100%;height:72px}
+
+/* katalog */
+.filters{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:14px 28px;align-items:end;background:var(--papir);border:1px solid #D8D2C6;padding:16px 18px;margin-bottom:22px}
+.f-lab{display:block;font-weight:700;font-size:.92rem;margin-bottom:4px}
+.range-row{display:flex;align-items:center;gap:12px}
+.range-row output{font-weight:700;white-space:nowrap;min-width:6.5em;text-align:right}
+input[type=range]{width:100%;accent-color:var(--crvena-t);height:44px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{min-height:44px;padding:8px 14px;border-radius:99px;border:1.5px solid #C9C1B3;background:transparent;cursor:pointer;font-weight:600;font-size:.92rem}
+.chip[aria-pressed="true"]{background:var(--stabljika);border-color:var(--stabljika);color:var(--belicasta)}
+.f-count{grid-column:1/-1;font-size:.9rem;color:var(--tekst-2);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.item{background:var(--papir);border:1px solid #DDD5C8;display:flex;flex-direction:column}
+.item .pic{aspect-ratio:1/1;display:grid;place-items:center;padding:8px}
+.item:nth-child(3n+1) .pic{background:var(--breskva-3)}
+.item:nth-child(3n+2) .pic{background:var(--stabljika-3)}
+.item:nth-child(3n) .pic{background:#FBE9E6}
+.item .pic svg{width:86%;height:86%}
+.item .body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
+.item h3{font-size:1.65rem}
+.item .desc{font-size:.95rem;color:var(--tekst-2);margin:6px 0 10px}
+.item .tags{font-size:.8rem;color:var(--tekst-2);margin-bottom:12px}
+.item .row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto}
+.item .price{font-family:var(--serif);font-size:1.6rem;color:var(--crvena-t);white-space:nowrap}
+.qty{display:inline-flex;align-items:center;border:1.5px solid var(--stabljika);border-radius:99px}
+.qty button{width:44px;height:44px;border:0;background:transparent;font-size:1.3rem;cursor:pointer;border-radius:99px;color:var(--stabljika-2)}
+.qty span{min-width:26px;text-align:center;font-weight:700}
+.empty-cat{text-align:center;padding:30px;border:1px dashed #C9C1B3}
+.foto-row{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+.foto{min-height:180px;background:repeating-linear-gradient(-45deg,var(--breskva-3) 0 14px,var(--breskva-2) 14px 28px);display:flex;align-items:flex-end;justify-content:flex-end;padding:10px}
+.foto span{font-size:.75rem;background:var(--papir);padding:3px 8px;color:var(--tekst-2)}
+@media (max-width:940px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){
+  .filters{grid-template-columns:1fr;padding:14px}
+  .grid{gap:12px}
+  .item .body{padding:12px}
+  .item h3{font-size:1.35rem}
+  .item .desc{font-size:.85rem}
+  .item .tags{display:none}
+  .item .row{flex-direction:column;align-items:stretch;gap:8px}
+  .item .price{font-size:1.4rem}
+  .item .btn{padding:10px 8px;font-size:.9rem}
+  .qty{justify-content:space-between}
+  .foto-row{grid-template-columns:1fr;gap:12px}
+  .foto{min-height:140px}
+}
+
+/* plutajuća korpa */
+.cartbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:35;display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--stabljika-2);color:var(--belicasta);border-radius:99px;padding:6px 6px 6px 20px;box-shadow:0 10px 24px -10px rgba(43,61,54,.6);max-width:520px;margin:0 auto}
+.cartbar span{font-size:.92rem;line-height:1.3}
+.cartbar a{white-space:nowrap;background:var(--breskva);color:var(--stabljika-2);text-decoration:none;font-weight:700;border-radius:99px;padding:11px 18px;min-height:44px;display:inline-flex;align-items:center}
+.cartbar :focus-visible{outline-color:var(--breskva)}
+body.has-bar{padding-bottom:76px}
+
+/* porudžbina */
+.order{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;align-items:start}
+.ex-note{display:inline-block;border:1.5px dashed var(--crvena-t);color:var(--crvena-t);font-weight:700;font-size:.88rem;padding:4px 12px;margin-top:6px}
+fieldset{border:0;border-top:1px solid var(--stabljika);margin:0 0 26px;padding:16px 0 0;min-width:0}
+legend{font-family:var(--serif);font-size:1.7rem;color:var(--stabljika-2);padding:0 12px 0 0;display:flex;align-items:baseline;gap:12px}
+legend .n{font-family:var(--sans);font-size:.85rem;font-weight:700;color:var(--belicasta);background:var(--crvena-t);width:28px;height:28px;border-radius:50%;display:inline-grid;place-items:center;flex:none;transform:translateY(-3px)}
+.hint{font-size:.92rem;color:var(--tekst-2)}
+.cart-list{list-style:none;margin:0;padding:0}
+.cart-list li{display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px dotted #C9C1B3}
+.cart-list .mini{width:52px;height:52px;background:var(--breskva-3)}
+.cart-list b{display:block;font-weight:600}
+.cart-list small{color:var(--tekst-2)}
+.cart-empty{padding:14px;border:1px dashed #C9C1B3}
+.subtotal{display:flex;justify-content:space-between;font-weight:700;padding-top:10px}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.choice{display:flex;justify-content:space-between;align-items:center;gap:10px;text-align:left;min-height:56px;padding:10px 14px;border:1.5px solid #C9C1B3;background:var(--papir);cursor:pointer;line-height:1.25}
+.choice small{display:block;color:var(--tekst-2);font-size:.82rem}
+.choice .pr{font-weight:700;white-space:nowrap}
+.choice[aria-pressed="true"]{border-color:var(--stabljika);background:var(--stabljika-3);box-shadow:inset 0 0 0 1.5px var(--stabljika)}
+.lab{display:block;font-weight:700;font-size:.93rem;margin:14px 0 5px}
+.field{width:100%;min-height:48px;padding:10px 12px;border:1.5px solid #B9B1A3;background:var(--papir);border-radius:2px}
+.field:focus-visible{border-color:var(--stabljika);outline-offset:1px}
+textarea.field{min-height:90px;resize:vertical}
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.day{min-height:58px;border:1.5px solid #C9C1B3;background:var(--papir);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;padding:2px 0}
+.day .dw{font-size:.72rem;font-weight:600}
+.day .dn{font-family:var(--serif);font-size:1.45rem}
+.day[aria-pressed="true"]{background:var(--stabljika);border-color:var(--stabljika);color:var(--belicasta)}
+.day:disabled{cursor:not-allowed;color:#9A928A;background:repeating-linear-gradient(-45deg,#F3EDE4 0 4px,#FBF7F1 4px 8px);border-color:#E2DBD0}
+.wins{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.win{min-height:50px;border:1.5px solid #C9C1B3;background:var(--papir);cursor:pointer;font-weight:700}
+.win[aria-pressed="true"]{background:var(--stabljika);border-color:var(--stabljika);color:var(--belicasta)}
+.win:disabled{cursor:not-allowed;color:#9A928A;background:#F3EDE4;border-color:#E2DBD0;font-weight:500}
+.win:disabled .x{font-weight:500;font-size:.8rem;display:block}
+.none{padding:12px;border:1px dashed #C9C1B3;font-size:.93rem}
+.count{font-size:.8rem;color:var(--tekst-2);text-align:right;margin:4px 0 0}
+.err{color:var(--crvena-t);font-weight:700;font-size:.92rem;min-height:1.2em;margin:8px 0}
+
+/* desna strana: čestitka i račun */
+.aside{position:sticky;top:78px}
+.tag-wrap{position:relative;padding:0 0 0 30px;margin-bottom:22px}
+.tag-wrap svg.string{position:absolute;left:0;top:-6px;width:60px;height:60px}
+.card-prev{background:var(--papir);border:1px solid #CFC6B7;box-shadow:6px 6px 0 var(--breskva-2);padding:26px 22px 20px;position:relative;min-height:170px;transform:rotate(-1.2deg)}
+.card-prev::before{content:"";position:absolute;left:14px;top:14px;width:12px;height:12px;border-radius:50%;border:1.5px solid #B9B1A3;background:var(--belicasta)}
+.card-prev .msg{font-family:var(--serif);font-size:1.45rem;line-height:1.3;color:var(--stabljika-2);white-space:pre-wrap;overflow-wrap:anywhere;margin:6px 0 10px}
+.card-prev .msg.ph{color:#A39A8E}
+.card-prev .sig{text-align:right;font-style:italic;color:var(--tekst-2)}
+.card-prev .mark{position:absolute;right:16px;top:12px;width:22px;height:30px}
+.receipt{background:var(--papir);border:1px solid #CFC6B7;padding:18px 18px 16px}
+.receipt h3{font-size:1.5rem;margin-bottom:8px}
+.rc-row{display:flex;justify-content:space-between;gap:10px;padding:4px 0;font-size:.95rem}
+.rc-row span:last-child{white-space:nowrap;font-weight:600}
+.rc-total{border-top:1px solid var(--stabljika);margin-top:8px;padding-top:8px;font-size:1.1rem;font-weight:700}
+.rc-total span:last-child{font-family:var(--serif);font-size:1.6rem;font-weight:400;color:var(--crvena-t)}
+.receipt .btn{width:100%;margin-top:12px}
+.potvrda{background:var(--papir);border:1px solid var(--stabljika);padding:26px 22px;max-width:760px;margin:0 auto}
+.potvrda h3{font-size:2.2rem;margin-bottom:6px}
+.sum{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 16px;margin:16px 0}
+.sum dt{font-weight:700}
+.sum dd{margin:0;overflow-wrap:anywhere}
+.potvrda .btns{justify-content:flex-start}
+.potvrda .small{font-size:.88rem;color:var(--tekst-2);margin-top:14px}
+@media (max-width:900px){
+  .order{grid-template-columns:1fr}
+  .aside{position:static}
+  .choices{grid-template-columns:1fr}
+}
+@media (max-width:420px){.days{gap:3px}.day .dn{font-size:1.25rem}}
+
+/* info: radno vreme, mapa, kontakt */
+.info{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid var(--stabljika);background:var(--papir)}
+.info > div{padding:24px 22px;border-right:1px solid rgba(59,82,73,.4);min-width:0}
+.info > div:last-child{border-right:0}
+.info h3{margin-bottom:10px}
+.hours{list-style:none;margin:0;padding:0}
+.hours li{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dotted #C9C1B3}
+.hours li.today{font-weight:700;color:var(--crvena-t)}
+.map{width:100%;height:240px;border:0;display:block;margin-top:12px;background:#E8E3DA}
+.form-row{margin-bottom:10px}
+.form-row label{display:block;font-weight:700;font-size:.93rem;margin-bottom:4px}
+.form-msg{font-weight:700;color:var(--stabljika-2);margin-top:10px}
+@media (max-width:900px){
+  .info{grid-template-columns:1fr}
+  .info > div{border-right:0;border-bottom:1px solid rgba(59,82,73,.4)}
+  .info > div:last-child{border-bottom:0}
+}
+
+.foot{background:var(--stabljika-2);color:var(--belicasta);padding:36px 0 28px;margin-top:0}
+.foot a{color:var(--breskva)}
+.foot :focus-visible{outline-color:var(--breskva)}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px}
+.foot .logo{color:var(--belicasta)}
+.foot .demo-note{border-top:1px solid rgba(253,248,242,.25);margin-top:22px;padding-top:16px;font-size:.88rem}
+@media (max-width:760px){.foot-grid{grid-template-columns:1fr}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">
+  <span data-en="Sample website · made by opsforma">Primer sajta · izradio opsforma</span>
+  <a href="../../" data-en="All samples">Svi primeri</a>
+  <span class="pkg" data-en="Package 3: Plus">Paket 3: Plus</span>
+</div>
+
+<header class="head">
+  <div class="wrap head-in">
+    <a class="logo" href="#vrh"><svg viewBox="0 0 20 28" aria-hidden="true"><path d="M10 27V12" stroke="#3B5249" stroke-width="1.6"/><path d="M10 22 Q4 20 3 14 Q8 16 10 20" fill="#3B5249"/><path d="M3 2 Q3 13 10 13 Q17 13 17 2 L13.5 5 L10 0.5 L6.5 5 Z" fill="#E5383B"/></svg>Lala</a>
+    <nav class="nav" id="meni" aria-label="Glavni meni" data-en-aria-label="Main menu">
+      <a href="#katalog" data-en="Bouquets">Buketi</a>
+      <a href="#porudzbina" data-en="Order">Porudžbina</a>
+      <a href="#dostava" data-en="Delivery">Dostava</a>
+      <a href="#kontakt" data-en="Hours and contact">Radno vreme i kontakt</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Jezik / Language">
+      <button type="button" data-lang="sr" aria-pressed="true" lang="sr" title="Srpski">SR</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
+    </div>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meni" data-en="Menu">Meni</button>
+  </div>
+</header>
+
+<main id="vrh">
+<section class="title-page" aria-labelledby="naslov">
+  <div class="wrap">
+    <div class="tp">
+      <div class="tp-in">
+        <p class="place">Cara Nikolaja II 41, Vračar</p>
+        <h1 id="naslov"><span data-en="Flower shop">Cvećara</span> <span class="big">Lala</span></h1>
+        <p class="sub" data-en="Hand-tied bouquets with prices up front. Same-day delivery across Vračar and Zvezdara, a handwritten card included.">Buketi vezani rukom, sa cenom unapred. Dostava po Vračaru i Zvezdari isti dan, uz čestitku napisanu rukom.</p>
+        <div class="leaf-rule" aria-hidden="true"><svg viewBox="0 0 46 16"><path d="M2 8 Q14 -2 30 6 Q38 10 44 8 Q38 6 30 10 Q14 18 2 8 Z" fill="#3B5249"/><path d="M4 8 Q22 6 42 8" stroke="#FDF8F2" stroke-width=".8" fill="none"/></svg></div>
+        <div class="btns">
+          <a class="btn solid" href="#katalog" data-en="Order a bouquet">Naručite buket</a>
+          <a class="btn" href="tel:+381600000519" data-en="Call 060 000 05 19">Pozovite 060 000 05 19</a>
+          <a class="btn" href="viber://chat?number=%2B381600000519" data-en="Viber message">Viber poruka</a>
+        </div>
+        <p class="meta"><a href="https://maps.google.com/maps?q=Cara%20Nikolaja%20II%2041%2C%20Beograd" target="_blank" rel="noopener" data-en="Read our Google reviews">Pogledajte naše Google recenzije</a></p>
+        <p class="rv-note" data-en="In this sample the link opens the map of the address; on the real site it opens the shop’s Google reviews.">U primeru link vodi na mapu adrese, a na pravom sajtu vodi na Google recenzije cvećare.</p>
+        <div class="tp-tulips" id="tp-tulips" aria-hidden="true"></div>
+        <p class="imprint" data-en="Belgrade, Vračar. Open Monday to Saturday.">Beograd, Vračar. Otvoreno od ponedeljka do subote.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="katalog" aria-labelledby="kat-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="kat-h" data-en="Bouquets">Buketi</h2>
+      <p data-en="Every bouquet is made the day it’s picked up or delivered. Flowers vary a little with the season, the price stays the same.">Svaki buket vežemo na dan preuzimanja ili dostave. Cveće se malo menja po sezoni, cena ostaje ista.</p>
+    </div>
+    <div class="filters">
+      <div>
+        <label class="f-lab" for="budzet" data-en="Budget up to">Budžet do</label>
+        <div class="range-row">
+          <input type="range" id="budzet" min="3000" max="9000" step="500" value="9000">
+          <output id="budzet-o" for="budzet">9.000 RSD</output>
+        </div>
+      </div>
+      <div>
+        <span class="f-lab" id="prilika-l" data-en="Occasion">Prilika</span>
+        <div class="chips" role="group" aria-labelledby="prilika-l" id="chips"></div>
+      </div>
+      <p class="f-count" id="f-count" aria-live="polite"></p>
+    </div>
+    <div class="grid" id="grid"></div>
+    <!-- Galeriju dopunjava vlasnik: fotografije novih buketa iz Google Drive foldera (ili Instagram profila).
+         U demou su to dva polja „Vaša fotografija“. -->
+    <div class="foto-row">
+      <div class="foto" role="img" aria-label="Mesto za fotografiju radnje"><span data-en="Your photo">Vaša fotografija</span></div>
+      <div class="foto" role="img" aria-label="Mesto za fotografiju buketa"><span data-en="Your photo">Vaša fotografija</span></div>
+    </div>
+  </div>
+  <div class="tulip-row" data-tulips="22" aria-hidden="true"></div>
+</section>
+
+<!--
+  PRODUKCIJA
+  Ovaj modul radi samo u pregledaču (demo). Na pravom sajtu:
+  a) Zahtev za porudžbinu: „Pošaljite porudžbinu“ šalje rezime (korpa, dostava, dan i prozor, čestitka,
+     ime, telefon) na mejl cvećare preko Web3Forms (POST https://api.web3forms.com/submit, hidden
+     access_key) ili otvara Viber poruku sa rezimeom (viber://forward?text=...). Vlasnik potvrđuje
+     pozivom ili porukom; plaća se pri preuzimanju ili kuriru.
+  b) Povezan kalendar: izbor dana i vremenskog prozora zamenjuje se Google Kalendar „Appointment schedule“,
+     Cal.com ili Calendly embedom (jedan „termin“ = jedan prozor isporuke); porudžbine se same upisuju u
+     vlasnikov Google Kalendar, a korpa i čestitka idu u napomenu termina.
+  Cene buketa i dostave mogu da se čitaju iz Google Sheets tabele (objavljen CSV), kao na drugim Plus primerima.
+-->
+<section class="sec" id="porudzbina" aria-labelledby="por-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="por-h" data-en="Your order">Porudžbina</h2>
+      <p data-en="Pay on pickup or to the courier. We call to confirm every order.">Plaćate pri preuzimanju ili kuriru. Svaku porudžbinu potvrđujemo pozivom.</p>
+      <span class="ex-note" data-en="Sample: delivery times are made up">Primer: termini su izmišljeni</span>
+    </div>
+
+    <div class="order" id="order">
+      <form id="forma" novalidate>
+        <fieldset>
+          <legend><span class="n">1</span><span data-en="Basket">Korpa</span></legend>
+          <div id="cart"></div>
+        </fieldset>
+
+        <fieldset id="dostava">
+          <legend><span class="n">2</span><span data-en="Delivery or pickup">Dostava ili preuzimanje</span></legend>
+          <div class="choices" role="group" aria-label="Način" data-en-aria-label="Method" id="zone"></div>
+          <div id="adr-wrap" hidden>
+            <label class="lab" for="adr" data-en="Delivery address">Adresa dostave</label>
+            <input class="field" id="adr" name="adresa" autocomplete="street-address" placeholder="Ulica i broj, sprat, interfon" data-en-placeholder="Street and number, floor, buzzer">
+            <label class="lab" for="primalac" data-en="Recipient’s name (if not you)">Ime primaoca (ako niste vi)</label>
+            <input class="field" id="primalac" name="primalac" autocomplete="off">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="n">3</span><span id="kada-l" data-en="Day and time window">Dan i vremenski prozor</span></legend>
+          <p class="hint" data-en="Same-day orders are possible if the window starts at least 2 hours from now. We are closed on Sundays.">Za danas može ako prozor počinje bar za 2 sata. Nedeljom ne radimo.</p>
+          <div class="days" role="group" aria-label="Dan" data-en-aria-label="Day" id="days"></div>
+          <p class="lab" id="win-l" data-en="Time window">Vremenski prozor</p>
+          <div id="wins" role="group" aria-labelledby="win-l"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="n">4</span><span data-en="Card message">Poruka za čestitku</span></legend>
+          <label class="lab" for="poruka" data-en="We write it by hand on the card">Pišemo je rukom na kartici</label>
+          <textarea class="field" id="poruka" name="cestitka" maxlength="160" rows="3" placeholder="npr. Srećan rođendan, mama!" data-en-placeholder="e.g. Happy birthday, mum!"></textarea>
+          <p class="count" id="poruka-c">0 / 160</p>
+          <label class="lab" for="potpis" data-en="Signature (leave empty for an anonymous card)">Potpis (ostavite prazno za anonimnu čestitku)</label>
+          <input class="field" id="potpis" name="potpis" autocomplete="off">
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="n">5</span><span data-en="Your details">Vaši podaci</span></legend>
+          <label class="lab" for="ime" data-en="Name">Ime i prezime</label>
+          <input class="field" id="ime" name="ime" autocomplete="name" required>
+          <label class="lab" for="tel" data-en="Phone">Telefon</label>
+          <input class="field" id="tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="06x xxx xx xx" required>
+          <label class="lab" for="nap" data-en="Note (optional)">Napomena (nije obavezno)</label>
+          <textarea class="field" id="nap" name="napomena" rows="2"></textarea>
+        </fieldset>
+      </form>
+
+      <aside class="aside" aria-label="Pregled porudžbine" data-en-aria-label="Order summary">
+        <div class="tag-wrap">
+          <svg class="string" viewBox="0 0 60 60" aria-hidden="true"><path d="M4 2 Q20 30 40 22" fill="none" stroke="#B8232A" stroke-width="1.5"/></svg>
+          <div class="card-prev">
+            <svg class="mark" viewBox="0 0 20 28" aria-hidden="true"><path d="M10 27V12" stroke="#3B5249" stroke-width="1.4"/><path d="M3 2 Q3 13 10 13 Q17 13 17 2 L13.5 5 L10 0.5 L6.5 5 Z" fill="#E5383B"/></svg>
+            <p class="msg ph" id="msg-prev" aria-live="polite">Ovde se vidi vaša poruka.</p>
+            <p class="sig" id="sig-prev"></p>
+          </div>
+        </div>
+        <div class="receipt">
+          <h3 data-en="Summary">Račun</h3>
+          <div id="rc"></div>
+          <p class="err" id="err" role="alert"></p>
+          <button class="btn red" type="submit" form="forma" data-en="Send order">Pošaljite porudžbinu</button>
+        </div>
+      </aside>
+    </div>
+
+    <div class="potvrda" id="potvrda" hidden tabindex="-1">
+      <h3 data-en="Order received">Porudžbina je primljena</h3>
+      <p id="potvrda-txt"></p>
+      <dl class="sum" id="sum"></dl>
+      <div class="btns">
+        <button class="btn solid" type="button" id="ics" data-en="Add to calendar">Dodaj u kalendar</button>
+        <button class="btn" type="button" id="nova" data-en="New order">Nova porudžbina</button>
+      </div>
+      <p class="small" data-en="This is a sample. On the real site the order goes to the shop by email and Viber, and you get a confirmation email.">Ovo je primer. Na pravom sajtu porudžbina stiže cvećari na mejl i Viber, a vi dobijate potvrdu mejlom.</p>
+    </div>
+  </div>
+  <div class="tulip-row" data-tulips="18" aria-hidden="true"></div>
+</section>
+
+<section class="sec" id="kontakt" aria-labelledby="kon-h" style="padding-bottom:56px">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="kon-h" data-en="Hours and contact">Radno vreme i kontakt</h2></div>
+    <div class="info">
+      <div>
+        <h3 data-en="Opening hours">Radno vreme</h3>
+        <ul class="hours" id="hours">
+          <li data-d="1"><span data-en="Monday">Ponedeljak</span><span>08–20</span></li>
+          <li data-d="2"><span data-en="Tuesday">Utorak</span><span>08–20</span></li>
+          <li data-d="3"><span data-en="Wednesday">Sreda</span><span>08–20</span></li>
+          <li data-d="4"><span data-en="Thursday">Četvrtak</span><span>08–20</span></li>
+          <li data-d="5"><span data-en="Friday">Petak</span><span>08–20</span></li>
+          <li data-d="6"><span data-en="Saturday">Subota</span><span>08–18</span></li>
+          <li data-d="0"><span data-en="Sunday">Nedelja</span><span data-en="closed">zatvoreno</span></li>
+        </ul>
+        <p class="hint" style="margin-top:12px" data-en="Deliveries from 9 am to the end of the working day.">Dostava od 9 h do kraja radnog vremena.</p>
+      </div>
+      <div>
+        <h3 data-en="Where we are">Gde smo</h3>
+        <p>Cara Nikolaja II 41, Vračar<br><span data-en="Near the Crveni krst roundabout.">Blizu kružnog toka na Crvenom krstu.</span></p>
+        <div class="btns" style="justify-content:flex-start">
+          <a class="btn solid" href="tel:+381600000519" data-en="Call">Pozovite</a>
+          <a class="btn" href="viber://chat?number=%2B381600000519">Viber</a>
+        </div>
+        <iframe class="map" title="Mapa: Cara Nikolaja II 41, Beograd" loading="lazy" src="https://maps.google.com/maps?q=Cara%20Nikolaja%20II%2041%2C%20Beograd&amp;z=15&amp;output=embed"></iframe>
+      </div>
+      <div>
+        <h3 data-en="Write to us">Pišite nam</h3>
+        <!-- Na pravom sajtu: <form action="https://api.web3forms.com/submit" method="POST">
+             sa <input type="hidden" name="access_key" value="VLASNIKOV-KLJUČ">; poruka stiže na mejl cvećare. -->
+        <form data-form="kontakt" novalidate>
+          <div class="form-row"><label for="k-ime" data-en="Name">Ime</label><input class="field" id="k-ime" name="ime" autocomplete="name"></div>
+          <div class="form-row"><label for="k-tel" data-en="Phone or email">Telefon ili mejl</label><input class="field" id="k-tel" name="kontakt" autocomplete="tel"></div>
+          <div class="form-row"><label for="k-por" data-en="Message (wedding, event, larger order)">Poruka (venčanje, proslava, veća porudžbina)</label><textarea class="field" id="k-por" name="poruka" rows="3"></textarea></div>
+          <button class="btn solid" type="submit" data-en="Send message">Pošaljite poruku</button>
+          <p class="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="cartbar" id="cartbar" hidden>
+  <span id="cartbar-t"></span>
+  <a href="#porudzbina" data-en="Go to order">Na porudžbinu</a>
+</div>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><a class="logo" href="#vrh">Cvećara Lala</a><p style="margin-top:8px">Cara Nikolaja II 41, Vračar, Beograd</p></div>
+      <div><p><a href="tel:+381600000519">060 000 05 19</a><br><a href="viber://chat?number=%2B381600000519">Viber</a></p></div>
+      <div><p><span data-en="Mon–Fri 08–20">Pon–pet 08–20</span><br><span data-en="Sat 08–18">Sub 08–18</span><br><span data-en="Sun closed">Ned zatvoreno</span></p></div>
+    </div>
+    <p class="demo-note"><span data-en="Sample website · made by opsforma ·">Primer sajta · izradio opsforma ·</span> <a href="../../" data-en="All samples">Svi primeri</a>. <span data-en="The shop, prices, times and phone number are made up.">Firma, cene, termini i broj telefona su izmišljeni.</span></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+const $ = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => [...(r || document).querySelectorAll(s)];
+let LANG = "sr";
+const t = (sr, en) => LANG === "en" ? en : sr;
+const rsd = n => Math.round(n).toLocaleString("de-DE").replace(/,/g, ".") + " RSD";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const FIRMA = "Cvećara Lala", ADRESA = "Cara Nikolaja II 41, Vračar, Beograd", SLUG = "cvecara-lala";
+
+/* ===== katalog (u produkciji: list „Buketi“ iz Google tabele, objavljen CSV) ===== */
+const PRILIKE = [
+  {id:"sve", sr:"Sve prilike", en:"All occasions"},
+  {id:"rodjendan", sr:"Rođendan", en:"Birthday"},
+  {id:"ljubav", sr:"Ljubav", en:"Love"},
+  {id:"hvala", sr:"Hvala", en:"Thank you"},
+  {id:"beba", sr:"Beba", en:"New baby"},
+  {id:"saucesce", sr:"Saučešće", en:"Sympathy"}
+];
+const BUKETI = [
+  {id:"lale", sr:"Lale u papiru", en:"Tulips in paper", dsr:"15 crvenih lala, kraft papir i kanap.", den:"15 red tulips, kraft paper and twine.", cena:2800, pr:["rodjendan","ljubav"],
+   cvece:{tip:"tulip", boje:["#E5383B","#D62F35","#EF4B4E"], n:11, papir:"#D9B88F", traka:"#E5383B", zel:3}},
+  {id:"suncane", sr:"Sunčane lale", en:"Sunny tulips", dsr:"Žute i breskva lale, malo zelenila.", den:"Yellow and peach tulips with a little greenery.", cena:3200, pr:["rodjendan","hvala"],
+   cvece:{tip:"tulip", boje:["#F7B267","#F4C542","#F9A35B"], n:11, papir:"#FDF8F2", traka:"#3B5249", zel:4}},
+  {id:"livada", sr:"Livada", en:"Meadow", dsr:"Kamilice, crvene lale i grančice zelenila.", den:"Chamomile, red tulips and green sprigs.", cena:3400, pr:["hvala","rodjendan"],
+   cvece:{tip:"mix", tipovi:["daisy","tulip","daisy","daisy","tulip","daisy","euk"], boje:["#FFFFFF","#E5383B"], n:12, papir:"#E3E9E3", traka:"#F7B267", zel:5}},
+  {id:"ruze7", sr:"Sedam ruža", en:"Seven roses", dsr:"Sedam crvenih ruža sa eukaliptusom.", den:"Seven red roses with eucalyptus.", cena:3600, pr:["ljubav"],
+   cvece:{tip:"rose", boje:["#C81D25","#B3161E","#D62F35"], n:7, papir:"#2B3D36", traka:"#F7B267", zel:4}},
+  {id:"breskva", sr:"Breskva", en:"Peach", dsr:"Ruže boje breskve, eukaliptus i svilena traka.", den:"Peach roses, eucalyptus and a silk ribbon.", cena:4200, pr:["rodjendan","hvala"],
+   cvece:{tip:"rose", boje:["#F7B267","#F5A25D","#FBC98E"], n:9, papir:"#FDF8F2", traka:"#F7B267", zel:5}},
+  {id:"beba", sr:"Dobrodošlica", en:"Welcome", dsr:"Svetle ruže i kamilice za novu bebu.", den:"Soft roses and chamomile for a new baby.", cena:4800, pr:["beba"],
+   cvece:{tip:"mix", tipovi:["rose","daisy","rose","rose","daisy","euk"], boje:["#FBD3C4","#FFFFFF","#F7C6CF"], n:11, papir:"#FDF8F2", traka:"#F7B267", zel:4}},
+  {id:"tiha", sr:"Tiha", en:"Quiet", dsr:"Bele ruže i ljiljani, umireno zelenilo.", den:"White roses and lilies, muted greenery.", cena:5500, pr:["saucesce"],
+   cvece:{tip:"mix", tipovi:["lily","rose","lily","rose","euk"], boje:["#FFFFFF","#F3EFE8"], n:9, papir:"#E3E9E3", traka:"#3B5249", zel:6}},
+  {id:"bozur", sr:"Božuri", en:"Peonies", dsr:"Pet krupnih božura, u sezoni od maja. Van sezone ruže sličnog tona.", den:"Five large peonies, in season from May. Off season, roses in a similar tone.", cena:6800, pr:["ljubav","rodjendan"],
+   cvece:{tip:"peony", boje:["#F28C8C","#E5383B","#F7B2A8"], n:6, papir:"#FDF8F2", traka:"#E5383B", zel:4}},
+  {id:"veliko", sr:"Veliko hvala", en:"Big thank you", dsr:"Veliki mešoviti buket: ruže, lale, božuri i zelenilo.", den:"A large mixed bouquet: roses, tulips, peonies and greenery.", cena:8900, pr:["hvala","rodjendan"],
+   cvece:{tip:"mix", tipovi:["peony","tulip","rose","daisy","tulip","rose","peony","euk"], boje:["#E5383B","#F7B267","#FFFFFF","#F28C8C"], n:16, papir:"#D9B88F", traka:"#3B5249", zel:6}}
+];
+const ZONE = [
+  {id:"preuzimanje", sr:"Preuzimam u radnji", en:"I’ll pick it up", ssr:"Cara Nikolaja II 41", sen:"Cara Nikolaja II 41", cena:0},
+  {id:"vracar", sr:"Dostava: Vračar", en:"Delivery: Vračar", ssr:"ceo Vračar", sen:"all of Vračar", cena:350},
+  {id:"zvezdara", sr:"Dostava: Zvezdara", en:"Delivery: Zvezdara", ssr:"do Mirijeva", sen:"as far as Mirijevo", cena:500},
+  {id:"ostalo", sr:"Dostava: ostali Beograd", en:"Delivery: rest of Belgrade", ssr:"uključujući Novi Beograd", sen:"including New Belgrade", cena:800}
+];
+const HOURS = {0:null,1:[8,20],2:[8,20],3:[8,20],4:[8,20],5:[8,20],6:[8,18]};
+const PROZORI = [[9,12],[12,15],[15,18],[18,20]];
+const DW = {sr:["ned","pon","uto","sre","čet","pet","sub"], en:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]};
+const DWL = {sr:["nedelja","ponedeljak","utorak","sreda","četvrtak","petak","subota"], en:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]};
+const MES = {sr:["januar","februar","mart","april","maj","jun","jul","avgust","septembar","oktobar","novembar","decembar"], en:["January","February","March","April","May","June","July","August","September","October","November","December"]};
+
+/* ===== SVG buketa ===== */
+function rnd(seed){ let x = 0; for (const c of seed) x = (x * 31 + c.charCodeAt(0)) % 233280; return () => { x = (x * 9301 + 49297) % 233280; return x / 233280; }; }
+function shade(hex, f){ const n = parseInt(hex.slice(1), 16); let r = n >> 16, g = n >> 8 & 255, b = n & 255;
+  const m = v => Math.max(0, Math.min(255, Math.round(f < 0 ? v * (1 + f) : v + (255 - v) * f)));
+  return "#" + [m(r), m(g), m(b)].map(v => v.toString(16).padStart(2, "0")).join(""); }
+function fl(tip, x, y, r, c){
+  const d = shade(c, -.22), l = shade(c, .25);
+  if (tip === "tulip") return `<g transform="translate(${x} ${y})"><path d="M${-r} ${-r*.5} Q${-r*1.05} ${r*.95} 0 ${r} Q${r*1.05} ${r*.95} ${r} ${-r*.5} L${r*.45} ${-r*.05} L0 ${-r*.95} L${-r*.45} ${-r*.05} Z" fill="${c}"/><path d="M${-r*.45} ${-r*.05} L0 ${-r*.95} L${r*.45} ${-r*.05} Q0 ${r*.75} ${-r*.45} ${-r*.05} Z" fill="${d}"/><path d="M${-r*.7} ${r*.1} Q${-r*.6} ${r*.7} ${-r*.1} ${r*.85}" stroke="${l}" stroke-width="1.4" fill="none"/></g>`;
+  if (tip === "rose") return `<g transform="translate(${x} ${y})"><circle r="${r}" fill="${c}"/><path d="M${-r*.75} ${r*.2} Q${-r*.6} ${r*.85} 0 ${r*.85} Q${r*.65} ${r*.8} ${r*.75} ${r*.15}" stroke="${d}" stroke-width="1.5" fill="none"/><path d="M${-r*.45} ${-r*.05} Q${-r*.4} ${r*.5} ${r*.1} ${r*.45} Q${r*.5} ${r*.35} ${r*.4} ${-r*.1} Q${r*.3} ${-r*.45} ${-r*.05} ${-r*.4}" stroke="${d}" stroke-width="1.5" fill="none"/><path d="M${-r*.1} ${-r*.05} Q${r*.15} ${r*.2} ${r*.15} 0" stroke="${d}" stroke-width="1.4" fill="none"/></g>`;
+  if (tip === "peony"){ let s = `<g transform="translate(${x} ${y})">`; for (let k = 0; k < 8; k++){ const a = k * Math.PI / 4; s += `<circle cx="${(Math.cos(a)*r*.55).toFixed(1)}" cy="${(Math.sin(a)*r*.55).toFixed(1)}" r="${(r*.55).toFixed(1)}" fill="${c}" stroke="${d}" stroke-width="1"/>`; }
+    return s + `<circle r="${(r*.6).toFixed(1)}" fill="${l}"/><path d="M${-r*.3} 0 Q0 ${-r*.35} ${r*.3} 0 Q0 ${r*.25} ${-r*.3} 0" fill="${d}" opacity=".5"/></g>`; }
+  if (tip === "daisy"){ let s = `<g transform="translate(${x} ${y})">`; for (let k = 0; k < 12; k++) s += `<ellipse rx="${(r*.28).toFixed(1)}" ry="${(r*.62).toFixed(1)}" cy="${(-r*.5).toFixed(1)}" fill="#FFFFFF" stroke="#E2DBD0" stroke-width=".8" transform="rotate(${k*30})"/>`;
+    return s + `<circle r="${(r*.32).toFixed(1)}" fill="#F4C542"/></g>`; }
+  if (tip === "lily"){ let s = `<g transform="translate(${x} ${y})">`; for (let k = 0; k < 6; k++) s += `<path d="M0 0 Q${r*.35} ${-r*.5} 0 ${-r*1.1} Q${-r*.35} ${-r*.5} 0 0" fill="${c}" stroke="#D6CEC0" stroke-width="1" transform="rotate(${k*60})"/>`;
+    return s + `<circle r="${r*.12}" fill="#B9D38E"/>${[20,80,140,200,260,320].map(a => `<circle cx="${(Math.cos(a*Math.PI/180)*r*.38).toFixed(1)}" cy="${(Math.sin(a*Math.PI/180)*r*.38).toFixed(1)}" r="1.6" fill="#B8232A"/>`).join("")}</g>`; }
+  if (tip === "euk"){ let s = `<g transform="translate(${x} ${y})"><path d="M0 ${r} Q${r*.3} 0 0 ${-r*1.2}" stroke="#5E7D72" stroke-width="1.3" fill="none"/>`; for (let k = 0; k < 5; k++){ const yy = r - k * r * .5; s += `<circle cx="${(k%2 ? 5 : -5)}" cy="${yy.toFixed(1)}" r="${(r*.24).toFixed(1)}" fill="#8FAA9E"/>`; } return s + `</g>`; }
+  return "";
+}
+function bouquetSVG(b, uid){
+  const c = b.cvece, r = rnd(b.id + (uid || "")), cx = 120;
+  let s = `<svg viewBox="0 0 240 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">`;
+  // zadnji papir
+  s += `<path d="M38 112 L120 252 L202 112 Q160 96 120 100 Q80 96 38 112 Z" fill="${shade(c.papir, -.12)}"/>`;
+  // lišće
+  for (let k = 0; k < c.zel; k++){ const a = -1.1 + 2.2 * k / Math.max(1, c.zel - 1), x = cx + Math.sin(a) * 70, y = 108 - Math.cos(a) * 40;
+    s += `<path d="M${cx} 150 Q${(cx + x)/2 - 8} ${(150 + y)/2} ${x.toFixed(1)} ${y.toFixed(1)} Q${(cx + x)/2 + 10} ${(150 + y)/2 + 6} ${cx} 150 Z" fill="${k % 2 ? "#3B5249" : "#5E7D72"}"/>`; }
+  // cvetovi u kupoli
+  const pts = [];
+  const n = c.n, rings = n > 12 ? 3 : n > 7 ? 2 : 1;
+  let left = n;
+  for (let q = 0; q < rings; q++){
+    const cnt = q === rings - 1 ? left : Math.round(n / rings) + (q === 0 ? 1 : -1);
+    left -= cnt;
+    const rad = 26 + (rings - 1 - q) * 26, yc = 102 - q * 4;
+    for (let k = 0; k < cnt; k++){
+      const a = Math.PI * (1.08 + .84 * (cnt === 1 ? .5 : k / (cnt - 1)));
+      pts.push({x: cx + Math.cos(a) * (rad + 30) * 1.05 + (r() - .5) * 8, y: yc + Math.sin(a) * rad * 1.15 + (r() - .5) * 6});
+    }
+  }
+  pts.sort((a, b) => a.y - b.y);
+  pts.forEach((p, i) => {
+    const tip = c.tip === "mix" ? c.tipovi[i % c.tipovi.length] : c.tip;
+    const col = c.boje[i % c.boje.length];
+    const size = tip === "peony" ? 26 : tip === "rose" ? 17 : tip === "lily" ? 22 : tip === "daisy" ? 14 : tip === "euk" ? 14 : 17;
+    s += `<path d="M${p.x.toFixed(1)} ${p.y.toFixed(1)} L${(cx + (p.x - cx) * .15).toFixed(1)} 170" stroke="#3B5249" stroke-width="2"/>`;
+    s += fl(tip, +p.x.toFixed(1), +p.y.toFixed(1), size, col);
+  });
+  // prednji papir i traka
+  s += `<path d="M30 120 Q78 140 120 132 L120 254 Z" fill="${c.papir}" stroke="${shade(c.papir, -.18)}" stroke-width="1"/>
+        <path d="M210 120 Q162 140 120 132 L120 254 Z" fill="${shade(c.papir, -.05)}" stroke="${shade(c.papir, -.18)}" stroke-width="1"/>
+        <path d="M102 196 Q120 204 138 196 L136 206 Q120 212 104 206 Z" fill="${c.traka}"/>
+        <path d="M120 202 Q100 186 96 196 Q100 210 120 202 Q140 186 144 196 Q140 210 120 202 Z" fill="${shade(c.traka, -.12)}"/>
+        <path d="M118 204 L108 232 M122 204 L132 230" stroke="${c.traka}" stroke-width="4" stroke-linecap="round"/>`;
+  return s + `</svg>`;
+}
+
+/* ===== lale koje rastu (potpisni element) ===== */
+function tulipRow(n, h, seed, W){
+  W = W || 1200; const r = rnd(seed), step = W / n, cols = ["#E5383B","#F7B267","#E5383B","#D62F35","#F7B267"];
+  let s = `<svg viewBox="0 0 ${W} ${h}" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">`;
+  for (let i = 0; i < n; i++){
+    const x = step * (i + .5) + (r() - .5) * step * .4, th = h * (.45 + r() * .45), c = cols[i % cols.length], hs = Math.min(15, h * .12);
+    const lean = (r() - .5) * 14, delay = (r() * .6).toFixed(2);
+    s += `<g class="tl" style="animation-delay:${delay}s">
+      <path d="M${x.toFixed(1)} ${h} Q${(x + lean/2).toFixed(1)} ${(h - th/2).toFixed(1)} ${(x + lean).toFixed(1)} ${(h - th).toFixed(1)}" stroke="#3B5249" stroke-width="2.4" fill="none"/>
+      <path d="M${x.toFixed(1)} ${h} Q${(x - 16).toFixed(1)} ${(h - th*.4).toFixed(1)} ${(x - 4 + (i%2 ? 22 : -22)).toFixed(1)} ${(h - th*.55).toFixed(1)} Q${(x - 2).toFixed(1)} ${(h - th*.2).toFixed(1)} ${x.toFixed(1)} ${h} Z" fill="${i % 2 ? "#3B5249" : "#5E7D72"}"/>
+      ${fl("tulip", +(x + lean).toFixed(1), +(h - th - hs*.5).toFixed(1), hs, c)}</g>`;
+  }
+  return s + `</svg>`;
+}
+$("#tp-tulips").innerHTML = tulipRow(15, 150, "naslov");
+$$("[data-tulips]").forEach((el, i) => el.innerHTML = tulipRow(+el.dataset.tulips, 72, "red" + i, 2000));
+
+/* ===== stanje ===== */
+const S = {budzet:9000, prilika:"sve", korpa:{}, zona:null, dan:null, prozor:null};
+
+/* ===== katalog ===== */
+function renderChips(){
+  $("#chips").innerHTML = PRILIKE.map(p => `<button type="button" class="chip" data-pr="${p.id}" aria-pressed="${S.prilika === p.id}">${t(p.sr, p.en)}</button>`).join("");
+}
+function qtyHTML(id, name){
+  const q = S.korpa[id] || 0;
+  if (!q) return `<button type="button" class="btn solid" data-add="${id}">${t("Dodajte u korpu", "Add to basket")}</button>`;
+  return `<div class="qty"><button type="button" data-dec="${id}" aria-label="${t("Jedan manje", "One less")}: ${esc(name)}">−</button><span aria-live="polite">${q}</span><button type="button" data-inc="${id}" aria-label="${t("Jedan više", "One more")}: ${esc(name)}">+</button></div>`;
+}
+function renderGrid(){
+  const list = BUKETI.filter(b => b.cena <= S.budzet && (S.prilika === "sve" || b.pr.includes(S.prilika)));
+  $("#budzet-o").textContent = rsd(S.budzet);
+  $("#f-count").textContent = t(`Prikazano ${list.length} od ${BUKETI.length} buketa`, `Showing ${list.length} of ${BUKETI.length} bouquets`);
+  if (!list.length){ $("#grid").innerHTML = `<p class="empty-cat" style="grid-column:1/-1">${t("Nema buketa za ovaj budžet i priliku. Povećajte budžet ili izaberite „Sve prilike“.", "No bouquets for this budget and occasion. Raise the budget or pick “All occasions”.")}</p>`; return; }
+  $("#grid").innerHTML = list.map(b => {
+    const name = t(b.sr, b.en);
+    return `<article class="item" data-id="${b.id}"><div class="pic" role="img" aria-label="${esc(t("Ilustracija buketa", "Bouquet illustration") + ": " + name)}">${bouquetSVG(b)}</div>
+      <div class="body"><h3>${name}</h3><p class="desc">${t(b.dsr, b.den)}</p>
+      <p class="tags">${b.pr.map(p => t(PRILIKE.find(x => x.id === p).sr, PRILIKE.find(x => x.id === p).en)).join(", ")}</p>
+      <div class="row"><span class="price">${rsd(b.cena)}</span><span class="q" data-q="${b.id}">${qtyHTML(b.id, name)}</span></div></div></article>`;
+  }).join("");
+}
+function refreshQty(id){ const el = $(`[data-q="${id}"]`); if (el){ const b = BUKETI.find(x => x.id === id); el.innerHTML = qtyHTML(id, t(b.sr, b.en)); } }
+
+/* ===== korpa i dostava ===== */
+function cartItems(){ return Object.entries(S.korpa).filter(([, q]) => q > 0).map(([id, q]) => ({b: BUKETI.find(x => x.id === id), q})); }
+function sums(){ const it = cartItems(), sub = it.reduce((a, x) => a + x.b.cena * x.q, 0), z = ZONE.find(x => x.id === S.zona), dost = z ? z.cena : 0;
+  return {it, sub, dost, uk: sub + dost, kom: it.reduce((a, x) => a + x.q, 0)}; }
+function renderCart(){
+  const {it, sub} = sums();
+  if (!it.length){ $("#cart").innerHTML = `<p class="cart-empty">${t("Korpa je prazna.", "Your basket is empty.")} <a href="#katalog">${t("Izaberite buket iz kataloga", "Pick a bouquet from the catalogue")}</a>.</p>`; }
+  else $("#cart").innerHTML = `<ul class="cart-list">${it.map(x => { const name = t(x.b.sr, x.b.en); return `<li><div class="mini">${bouquetSVG(x.b, "m")}</div><div><b>${name}</b><small>${rsd(x.b.cena)}</small></div>
+      <div class="qty"><button type="button" data-dec="${x.b.id}" aria-label="${t("Jedan manje", "One less")}: ${esc(name)}">−</button><span>${x.q}</span><button type="button" data-inc="${x.b.id}" aria-label="${t("Jedan više", "One more")}: ${esc(name)}">+</button></div></li>`; }).join("")}</ul>
+      <p class="subtotal"><span>${t("Međuzbir", "Subtotal")}</span><span>${rsd(sub)}</span></p>`;
+}
+function renderZone(){
+  $("#zone").innerHTML = ZONE.map(z => `<button type="button" class="choice" data-zona="${z.id}" aria-pressed="${S.zona === z.id}"><span>${t(z.sr, z.en)}<small>${t(z.ssr, z.sen)}</small></span><span class="pr">${z.cena ? rsd(z.cena) : t("bez doplate", "free")}</span></button>`).join("");
+  $("#adr-wrap").hidden = !S.zona || S.zona === "preuzimanje";
+}
+function renderReceipt(){
+  const {it, sub, dost, uk, kom} = sums(), z = ZONE.find(x => x.id === S.zona);
+  let h = it.map(x => `<div class="rc-row"><span>${x.q} × ${t(x.b.sr, x.b.en)}</span><span>${rsd(x.b.cena * x.q)}</span></div>`).join("") ||
+    `<div class="rc-row"><span>${t("Još ništa u korpi", "Nothing in the basket yet")}</span><span></span></div>`;
+  h += `<div class="rc-row"><span>${z ? (z.id === "preuzimanje" ? t("Preuzimanje u radnji", "Pickup in the shop") : t("Dostava", "Delivery") + ", " + t(z.sr, z.en).split(": ")[1]) : t("Dostava ili preuzimanje", "Delivery or pickup")}</span><span>${z ? (dost ? rsd(dost) : "0 RSD") : "–"}</span></div>`;
+  if (S.dan && S.prozor) h += `<div class="rc-row"><span>${dayTxt(S.dan)}</span><span>${S.prozor.replace("-", "–")} h</span></div>`;
+  h += `<div class="rc-row rc-total"><span>${t("Ukupno", "Total")}</span><span>${rsd(uk)}</span></div>`;
+  $("#rc").innerHTML = h;
+  const bar = $("#cartbar");
+  bar.hidden = !kom || !$("#potvrda").hidden;
+  document.body.classList.toggle("has-bar", !bar.hidden);
+  $("#cartbar-t").textContent = t(`Korpa: ${kom} ${kom === 1 ? "buket" : kom < 5 ? "buketa" : "buketa"}, ${rsd(sub)}`, `Basket: ${kom} ${kom === 1 ? "bouquet" : "bouquets"}, ${rsd(sub)}`);
+}
+
+/* ===== dani i prozori ===== */
+function hash(str){ let h = 2166136261; for (let i = 0; i < str.length; i++){ h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); } return (h >>> 0) / 4294967295; }
+const pad = n => String(n).padStart(2, "0");
+function dkey(d){ return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); }
+function days14(){ const t0 = new Date(); t0.setHours(0, 0, 0, 0);
+  return Array.from({length:14}, (_, i) => { const d = new Date(t0); d.setDate(t0.getDate() + i); return {d, i, key:dkey(d), h:HOURS[d.getDay()]}; }); }
+let DAYS = days14();
+function winsFor(day){
+  if (!day || !day.h) return [];
+  const now = new Date(), nowH = now.getHours() + now.getMinutes() / 60;
+  return PROZORI.filter(([a, b]) => a >= day.h[0] && b <= day.h[1])
+    .filter(([a]) => day.i > 0 || a >= nowH + 2)
+    .map(([a, b]) => ({id:`${a}-${b}`, a, b, busy: hash(day.key + "|" + a + "|" + (S.zona === "preuzimanje" ? "p" : "d")) < 0.36}));
+}
+function dayOpen(day){ return day.h && winsFor(day).length > 0; }
+function dayTxt(key){ const x = DAYS.find(d => d.key === key); if (!x) return ""; const d = x.d;
+  return LANG === "en" ? `${DWL.en[d.getDay()]}, ${d.getDate()} ${MES.en[d.getMonth()]}` : `${DWL.sr[d.getDay()]}, ${d.getDate()}. ${MES.sr[d.getMonth()]}`; }
+function renderDays(){
+  $("#days").innerHTML = DAYS.map(x => {
+    const open = dayOpen(x), lbl = dayTxt(x.key) + (!x.h ? t(", zatvoreno", ", closed") : !open ? t(", nema više prozora", ", no windows left") : "");
+    return `<button type="button" class="day" data-day="${x.key}" ${open ? "" : "disabled"} aria-pressed="${S.dan === x.key}" aria-label="${lbl}"><span class="dw">${DW[LANG][x.d.getDay()]}</span><span class="dn">${x.d.getDate()}</span></button>`;
+  }).join("");
+}
+function renderWins(){
+  const box = $("#wins"), day = DAYS.find(x => x.key === S.dan);
+  $("#win-l").textContent = S.zona === "preuzimanje" ? t("Vreme preuzimanja", "Pickup window") : t("Vremenski prozor dostave", "Delivery window");
+  if (!day){ box.innerHTML = `<p class="none">${t("Prvo izaberite dan.", "Pick a day first.")}</p>`; return; }
+  const w = winsFor(day);
+  if (S.prozor && !w.find(x => x.id === S.prozor && !x.busy)) S.prozor = null;
+  if (!w.some(x => !x.busy)){ box.innerHTML = `<p class="none">${t("Ovaj dan je popunjen. Izaberite drugi dan.", "This day is fully booked. Pick another day.")}</p>`; return; }
+  box.innerHTML = `<div class="wins">${w.map(x => `<button type="button" class="win" data-win="${x.id}" ${x.busy ? "disabled" : ""} aria-pressed="${S.prozor === x.id}">${pad(x.a)}–${pad(x.b)} h${x.busy ? `<span class="x">${t("popunjeno", "full")}</span>` : ""}</button>`).join("")}</div>`;
+}
+
+/* ===== čestitka ===== */
+function renderCard(){
+  const m = $("#poruka").value.trim(), p = $("#potpis").value.trim(), el = $("#msg-prev");
+  el.textContent = m || t("Ovde se vidi vaša poruka.", "Your message appears here.");
+  el.classList.toggle("ph", !m);
+  $("#sig-prev").textContent = m ? (p ? p : t("bez potpisa", "unsigned")) : "";
+  $("#poruka-c").textContent = `${$("#poruka").value.length} / 160`;
+}
+
+function renderAll(){ renderChips(); renderGrid(); renderCart(); renderZone(); renderDays(); renderWins(); renderCard(); renderReceipt(); }
+
+/* ===== događaji ===== */
+function setQty(id, d){ S.korpa[id] = Math.max(0, Math.min(20, (S.korpa[id] || 0) + d)); if (!S.korpa[id]) delete S.korpa[id]; refreshQty(id); renderCart(); renderReceipt(); }
+document.addEventListener("click", e => {
+  const tg = e.target.closest("button"); if (!tg) return;
+  if (tg.dataset.add){ setQty(tg.dataset.add, 1); const f = $(`[data-q="${tg.dataset.add}"] [data-inc]`); if (f) f.focus(); return; }
+  if (tg.dataset.inc){ const id = tg.dataset.inc, inCart = !!tg.closest("#cart"); setQty(id, 1); if (inCart){ const f = $(`#cart [data-inc="${id}"]`); if (f) f.focus(); } else { const f = $(`[data-q="${id}"] [data-inc]`); if (f) f.focus(); } return; }
+  if (tg.dataset.dec){ const id = tg.dataset.dec, inCart = !!tg.closest("#cart"); setQty(id, -1); const f = $(`${inCart ? "#cart" : `[data-q="${id}"]`} [data-dec="${id}"]`) || $(`[data-q="${id}"] [data-add]`); if (f) f.focus(); return; }
+  if (tg.dataset.pr){ S.prilika = tg.dataset.pr; renderChips(); renderGrid(); $(`[data-pr="${S.prilika}"]`).focus(); return; }
+  if (tg.dataset.zona){ S.zona = tg.dataset.zona; renderZone(); renderDays(); renderWins(); renderReceipt(); $(`[data-zona="${S.zona}"]`).focus(); $("#err").textContent = ""; return; }
+  if (tg.dataset.day && !tg.disabled){ S.dan = tg.dataset.day; S.prozor = null; renderDays(); renderWins(); renderReceipt(); const f = $("#wins .win:not(:disabled)"); if (f) f.focus(); return; }
+  if (tg.dataset.win && !tg.disabled){ S.prozor = tg.dataset.win; $$(".win").forEach(b => b.setAttribute("aria-pressed", b === tg ? "true" : "false")); renderReceipt(); return; }
+});
+$("#budzet").addEventListener("input", e => { S.budzet = +e.target.value; renderGrid(); });
+$("#poruka").addEventListener("input", renderCard);
+$("#potpis").addEventListener("input", renderCard);
+
+let LAST = null;
+$("#forma").addEventListener("submit", e => {
+  e.preventDefault();
+  const s = sums(), ime = $("#ime").value.trim(), tel = $("#tel").value.trim(), adr = $("#adr").value.trim(), dost = S.zona && S.zona !== "preuzimanje";
+  const er = [];
+  if (!s.kom) er.push(t("dodajte bar jedan buket u korpu", "add at least one bouquet"));
+  if (!S.zona) er.push(t("izaberite dostavu ili preuzimanje", "choose delivery or pickup"));
+  if (dost && adr.length < 4) er.push(t("upišite adresu dostave", "enter the delivery address"));
+  if (!S.dan || !S.prozor) er.push(t("izaberite dan i vremenski prozor", "choose a day and a time window"));
+  if (ime.length < 2) er.push(t("upišite ime", "enter your name"));
+  if (tel.replace(/\D/g, "").length < 8) er.push(t("upišite telefon (bar 8 cifara)", "enter a phone number (at least 8 digits)"));
+  $("#ime").setAttribute("aria-invalid", ime.length < 2); $("#tel").setAttribute("aria-invalid", tel.replace(/\D/g, "").length < 8);
+  if (er.length){ $("#err").textContent = t("Nedostaje: ", "Missing: ") + er.join(", ") + "."; return; }
+  $("#err").textContent = "";
+  const [a, b] = S.prozor.split("-").map(Number);
+  LAST = {s, ime, tel, adr, dost, prim: $("#primalac").value.trim(), dan: S.dan, a, b, zona: S.zona, poruka: $("#poruka").value.trim(), potpis: $("#potpis").value.trim(), nap: $("#nap").value.trim()};
+  renderPotvrda();
+  $("#order").hidden = true; $("#potvrda").hidden = false; renderReceipt();
+  $("#potvrda").focus({preventScroll:true}); $("#potvrda").scrollIntoView({block:"start"});
+});
+function renderPotvrda(){
+  if (!LAST) return;
+  const L = LAST, z = ZONE.find(x => x.id === L.zona);
+  const rows = [
+    [t("Buketi", "Bouquets"), L.s.it.map(x => `${x.q} × ${t(x.b.sr, x.b.en)}`).join(", ")],
+    [L.dost ? t("Dostava", "Delivery") : t("Preuzimanje", "Pickup"), L.dost ? `${t(z.sr, z.en).split(": ")[1]}, ${L.adr}${L.prim ? ", " + t("za", "for") + " " + L.prim : ""}` : "Cara Nikolaja II 41"],
+    [t("Dan", "Day"), dayTxt(L.dan)],
+    [t("Vreme", "Time"), `${pad(L.a)}–${pad(L.b)} h`],
+    [t("Čestitka", "Card"), L.poruka ? `„${L.poruka}“${L.potpis ? " – " + L.potpis : ""}` : t("bez čestitke", "no card")],
+    [t("Ukupno", "Total"), rsd(L.s.uk) + (L.s.dost ? t(`, sa dostavom ${rsd(L.s.dost)}`, `, incl. delivery ${rsd(L.s.dost)}`) : "")],
+    [t("Ime", "Name"), L.ime], [t("Telefon", "Phone"), L.tel]
+  ];
+  $("#sum").innerHTML = rows.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("");
+  $("#potvrda-txt").textContent = t(`Hvala, ${L.ime.split(" ")[0]}. Zovemo vas na ${L.tel} da potvrdimo porudžbinu. Plaćate ${L.dost ? "kuriru" : "u radnji"}.`,
+    `Thank you, ${L.ime.split(" ")[0]}. We’ll call you on ${L.tel} to confirm. You pay ${L.dost ? "the courier" : "in the shop"}.`);
+}
+function icsEsc(s){ return String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n"); }
+function utc(d){ return d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, ""); }
+$("#ics").addEventListener("click", () => {
+  if (!LAST) return;
+  const [y, m, d] = LAST.dan.split("-").map(Number);
+  const st = new Date(y, m - 1, d, LAST.a, 0), en = new Date(y, m - 1, d, LAST.b, 0);
+  const lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//opsforma//Cvecara Lala//SR", "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "BEGIN:VEVENT",
+    "UID:" + Date.now() + "-" + Math.random().toString(36).slice(2, 8) + "@" + SLUG + ".opsforma",
+    "DTSTAMP:" + utc(new Date()), "DTSTART:" + utc(st), "DTEND:" + utc(en),
+    "SUMMARY:" + icsEsc(`${FIRMA}: ${LAST.dost ? t("dostava buketa", "bouquet delivery") : t("preuzimanje buketa", "bouquet pickup")}`),
+    "LOCATION:" + icsEsc(LAST.dost ? LAST.adr + ", Beograd" : ADRESA),
+    "DESCRIPTION:" + icsEsc(LAST.s.it.map(x => `${x.q} × ${t(x.b.sr, x.b.en)}`).join(", ") + ". " + t("Ukupno", "Total") + ": " + rsd(LAST.s.uk) + ". Tel. 060 000 05 19."),
+    "END:VEVENT", "END:VCALENDAR"];
+  const blob = new Blob([lines.join("\r\n") + "\r\n"], {type:"text/calendar;charset=utf-8"});
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `termin-${SLUG}.ics`;
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+});
+$("#nova").addEventListener("click", () => {
+  Object.assign(S, {korpa:{}, zona:null, dan:null, prozor:null}); LAST = null;
+  $("#forma").reset(); $("#potvrda").hidden = true; $("#order").hidden = false;
+  renderAll(); $("#katalog").scrollIntoView({block:"start"});
+});
+
+/* ===== jezik sr/en ===== */
+const META = {
+  sr: {title: document.title, desc: $('meta[name="description"]').content},
+  en: {title: "Lala Flower Shop · bouquets and flower delivery, Cara Nikolaja II 41, Vračar",
+       desc: "Lala flower shop in Vračar, Belgrade. Bouquet catalogue with prices, online ordering, delivery across Vračar, Zvezdara and the rest of Belgrade, with a card."}
+};
+function setLang(l){
+  LANG = l;
+  document.documentElement.lang = l;
+  document.title = META[l].title; $('meta[name="description"]').content = META[l].desc;
+  $$("[data-en]").forEach(el => { if (el.dataset.sr === undefined) el.dataset.sr = el.innerHTML; el.innerHTML = l === "en" ? el.dataset.en : el.dataset.sr; });
+  ["placeholder", "aria-label"].forEach(at => $$(`[data-en-${at}]`).forEach(el => {
+    const k = "sr" + at.replace("-", ""); if (el.dataset[k] === undefined) el.dataset[k] = el.getAttribute(at) || "";
+    el.setAttribute(at, l === "en" ? el.getAttribute(`data-en-${at}`) : el.dataset[k]); }));
+  $$(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === l ? "true" : "false"));
+  markToday(); renderAll(); renderPotvrda();
+  const fm = $('form[data-form="kontakt"] .form-msg'); if (fm.textContent) fm.textContent = kontaktMsg();
+  try { localStorage.setItem("lala-lang", l); } catch (_) {}
+}
+$$(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+function markToday(){ const li = $(`#hours li[data-d="${new Date().getDay()}"]`); if (li){ li.classList.add("today"); const sp = li.firstElementChild; sp.textContent = sp.textContent.replace(/ \((danas|today)\)$/, "") + t(" (danas)", " (today)"); } }
+
+/* ===== meni ===== */
+const mb = $(".menu-btn"), nav = $("#meni");
+function setMenu(o){ mb.setAttribute("aria-expanded", o ? "true" : "false"); nav.classList.toggle("open", o); }
+mb.addEventListener("click", () => setMenu(mb.getAttribute("aria-expanded") !== "true"));
+nav.addEventListener("click", e => { if (e.target.closest("a")) setMenu(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && mb.getAttribute("aria-expanded") === "true"){ setMenu(false); mb.focus(); } });
+
+/* ===== kontakt forma ===== */
+function kontaktMsg(){ return t("Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.", "This is a sample website. On the real site the message goes straight to the owner."); }
+const kf = $('form[data-form="kontakt"]');
+kf.addEventListener("submit", e => {
+  e.preventDefault();
+  /* Na pravom sajtu: fetch("https://api.web3forms.com/submit", {method:"POST", body:new FormData(kf)}) uz hidden access_key. */
+  kf.querySelector(".form-msg").textContent = kontaktMsg();
+});
+
+let start = "sr"; try { if (localStorage.getItem("lala-lang") === "en") start = "en"; } catch (_) {}
+if (start === "en") setLang("en"); else { markToday(); renderAll(); }
+})();
+</script>
+</body>
+</html>

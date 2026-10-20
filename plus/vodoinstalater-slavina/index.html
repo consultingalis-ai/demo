@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Vodoinstalater Slavina – izlazak na Zvezdari i Vračaru</title>
+<meta name="description" content="Curenje, zapušen odvod, kotlić, bojler, pukla cev. Pošaljite zahtev za izlazak i izaberite vremenski prozor. Dalmatinska 21, Zvezdara. 060 000 05 14.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@400;600;700&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cu:#B5651D;
+  --cu-hi:#E39A5B;
+  --cu-lo:#7A3F0C;
+  --dark:#1E2A2F;
+  --dark-2:#26353B;
+  --paper:#F4F1EC;
+  --white:#FFFDF9;
+  --water:#5FA8D3;
+  --water-ink:#1F6E9C;
+  --ink:#1E2A2F;
+  --muted:#4E5A5E;
+  --line:#D8D1C6;
+  --head:"Red Rose","Trebuchet MS","Segoe UI",sans-serif;
+  --text:"Libre Franklin","Helvetica Neue",Arial,sans-serif;
+  --pipe:18px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.55 var(--text);overflow-x:hidden}
+a{color:var(--water-ink)}
+:focus-visible{outline:3px solid var(--water);outline-offset:3px}
+h1,h2,h3{font-family:var(--head);margin:0;line-height:1.08;letter-spacing:-.01em}
+p{margin:0 0 1em}
+.skip{position:absolute;left:-999px;top:0;background:var(--white);color:var(--ink);padding:10px 14px;z-index:99}
+.skip:focus{left:8px;top:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.demo{background:#11191C;color:#D9E1E3;font:500 13px/1.3 var(--text)}
+.demo .in{max-width:1180px;margin:0 auto;padding:8px 16px;display:flex;gap:8px 16px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.demo a{color:#9FD0EC;font-weight:700}
+
+header.top{background:var(--dark);color:var(--paper);position:relative;z-index:10}
+.top .in{max-width:1180px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:16px;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;color:var(--paper);text-decoration:none;font:700 21px/1 var(--head)}
+.brand svg{width:36px;height:36px}
+.menu-btn{display:none;min-height:44px;min-width:44px;padding:0 14px;border:2px solid var(--cu);background:transparent;color:var(--paper);font:600 15px/1 var(--head);border-radius:22px;cursor:pointer}
+.menu-btn[aria-expanded="true"]{background:var(--cu)}
+#glavni-meni{display:flex;list-style:none;margin:0;padding:0;gap:2px}
+#glavni-meni a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;color:var(--paper);text-decoration:none;font:500 15px/1 var(--text);border-radius:22px}
+#glavni-meni a:hover{background:var(--dark-2)}
+
+/* HERO: cevi uokviruju zahtev */
+.hero{background:var(--dark);color:var(--paper);padding:26px 16px 70px;position:relative;overflow-x:clip}
+.frame{max-width:1180px;margin:0 auto;position:relative;padding:calc(var(--pipe) + 26px) calc(var(--pipe) + 30px) calc(var(--pipe) + 30px)}
+.p{position:absolute;pointer-events:none}
+.p-h{height:var(--pipe);background:linear-gradient(180deg,var(--cu-lo) 0%,var(--cu) 28%,var(--cu-hi) 46%,var(--cu) 64%,var(--cu-lo) 100%)}
+.p-v{width:var(--pipe);background:linear-gradient(90deg,var(--cu-lo) 0%,var(--cu) 28%,var(--cu-hi) 46%,var(--cu) 64%,var(--cu-lo) 100%)}
+.p-top{top:0;left:60px;right:60px}
+.p-bot{bottom:0;left:60px;right:60px}
+.p-l{left:0;top:60px;bottom:60px}
+.p-r{right:0;top:60px;bottom:60px}
+.elb{position:absolute;width:60px;height:60px;pointer-events:none}
+.elb.tl{left:0;top:0}
+.elb.tr{right:0;top:0;transform:scaleX(-1)}
+.elb.bl{left:0;bottom:0;transform:scaleY(-1)}
+.elb.br{right:0;bottom:0;transform:scale(-1,-1)}
+.coupling{position:absolute;width:14px;height:calc(var(--pipe) + 10px);border-radius:3px;background:linear-gradient(90deg,#5E300A,#9C5517 30%,#D08A4C 50%,#9C5517 70%,#5E300A);top:-5px}
+.coupling.v{width:calc(var(--pipe) + 10px);height:14px;left:-5px;background:linear-gradient(180deg,#5E300A,#9C5517 30%,#D08A4C 50%,#9C5517 70%,#5E300A)}
+.valve{position:absolute;right:120px;top:-31px;width:80px;height:80px;pointer-events:none}
+.drip{position:absolute;left:30%;bottom:-46px;width:16px;height:46px;pointer-events:none}
+.drip path{animation:kap 2.8s ease-in infinite;transform-origin:8px 6px}
+@keyframes kap{0%{transform:translateY(-4px) scale(.3);opacity:0}25%{transform:translateY(0) scale(1);opacity:1}70%{transform:translateY(0) scale(1);opacity:1}100%{transform:translateY(34px) scale(.9);opacity:0}}
+
+.call{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px 30px;margin-bottom:26px}
+.call h1{font-size:clamp(30px,4.6vw,52px);font-weight:700;max-width:17ch}
+.call .area{font:400 16px/1.4 var(--text);color:#B9C6CA;margin-top:12px;max-width:44ch}
+.tel-big{display:block;text-decoration:none;color:var(--paper);text-align:right}
+.tel-big small{display:block;font:500 15px/1.3 var(--text);color:#B9C6CA;margin-bottom:4px}
+.tel-big strong{display:block;font:700 clamp(36px,5.4vw,66px)/1 var(--head);letter-spacing:-.02em;color:var(--water);white-space:nowrap}
+.tel-big:hover strong{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px}
+.quick{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;margin-top:12px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:0 20px;border-radius:24px;font:600 16px/1.1 var(--text);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-cu{background:var(--cu);color:#fff}
+.btn-cu:hover{background:#9C5517}
+.btn-water{background:var(--water);color:var(--dark)}
+.btn-water:hover{background:#7DBCE0}
+.btn-out{border-color:#9FB3B9;color:var(--paper);background:transparent}
+.btn-out:hover{border-color:var(--paper)}
+.btn-ink{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-ink:hover{background:var(--ink);color:var(--paper)}
+
+/* zahtev */
+.req{background:var(--paper);color:var(--ink);border-radius:14px;position:relative;box-shadow:0 0 0 6px rgba(244,241,236,.08)}
+.req-head{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;padding:16px 26px;border-bottom:1px solid var(--line)}
+.req-head h2{font-size:22px;font-weight:700}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.pk{font:600 12.5px/1 var(--text);padding:6px 10px;border-radius:12px;background:var(--dark);color:var(--paper)}
+.fake{font:600 12.5px/1 var(--text);padding:6px 10px;border-radius:12px;background:#E1EEF6;color:var(--water-ink)}
+.req-body{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);}
+.col{padding:22px 26px 24px}
+.col + .col{border-left:1px solid var(--line)}
+fieldset{border:0;margin:0 0 22px;padding:0;min-width:0}
+fieldset:last-child{margin-bottom:0}
+legend{font:700 17px/1.2 var(--head);padding:0;margin-bottom:12px;display:flex;gap:10px;align-items:center}
+legend .n{width:26px;height:26px;border-radius:50%;background:var(--cu);color:#fff;display:inline-grid;place-items:center;font-size:14px;flex:none}
+.kvar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.kv{min-height:84px;border:2px solid var(--line);background:var(--white);border-radius:10px;padding:10px 8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font:600 14px/1.2 var(--text);color:var(--ink);cursor:pointer;text-align:center}
+.kv svg{width:30px;height:30px;flex:none}
+.kv:hover{border-color:var(--water)}
+.kv[aria-pressed="true"]{border-color:var(--cu);background:#FBEBDD;box-shadow:inset 0 0 0 1px var(--cu)}
+.urg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ug{min-height:72px;text-align:left;border:2px solid var(--line);background:var(--white);border-radius:10px;padding:10px 14px;cursor:pointer;color:var(--ink);font:400 14px/1.3 var(--text)}
+.ug b{display:block;font:700 16px/1.2 var(--head);margin-bottom:3px}
+.ug[aria-pressed="true"]{border-color:var(--cu);background:#FBEBDD;box-shadow:inset 0 0 0 1px var(--cu)}
+.days{display:flex;gap:6px;overflow-x:auto;padding:2px 2px 8px;scrollbar-width:thin}
+.day{flex:none;width:58px;min-height:62px;border:2px solid var(--line);background:var(--white);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;font:500 12.5px/1.15 var(--text);color:var(--ink);cursor:pointer}
+.day b{font:700 19px/1.1 var(--head)}
+.day[aria-pressed="true"]{background:var(--dark);border-color:var(--dark);color:var(--paper)}
+.day:disabled{font-size:11.5px;background:transparent;border-style:dashed;color:#7D8689;cursor:not-allowed}
+.today-note{font-size:15px;color:var(--muted);margin:0 0 10px}
+.wins{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.win{min-height:72px;border:2px solid var(--water);background:var(--white);border-radius:10px;cursor:pointer;color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font:400 13px/1.2 var(--text)}
+.win b{font:700 18px/1 var(--head)}
+.win[aria-pressed="true"]{background:var(--water);border-color:var(--water);color:var(--dark)}
+.win:disabled{border-color:var(--line);border-style:dashed;background:repeating-linear-gradient(135deg,transparent 0 7px,#E7E1D7 7px 9px);color:#6F777A;cursor:not-allowed}
+.field{margin-bottom:12px}
+.field label{display:block;font-weight:600;font-size:15px;margin-bottom:5px}
+input,textarea,select{width:100%;font:400 17px/1.3 var(--text);color:var(--ink);background:var(--white);border:2px solid #B9B1A4;border-radius:10px;padding:11px 12px;min-height:48px}
+textarea{min-height:84px;resize:vertical}
+input:focus,textarea:focus,select:focus{border-color:var(--water-ink);outline:none;box-shadow:0 0 0 3px rgba(95,168,211,.35)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.err{color:#A32519;font-size:14px;font-weight:600;margin-top:4px}
+.sum{background:var(--dark);color:var(--paper);border-radius:10px;padding:12px 14px;font-size:15px;line-height:1.45;margin:14px 0 12px}
+.sum b{color:var(--cu-hi)}
+.req-foot{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.state{font-size:14.5px;color:var(--muted)}
+.done{padding:28px 26px 30px}
+.done h3{font-size:26px;margin-bottom:8px}
+.done .lead{color:var(--muted);max-width:60ch}
+.slip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 26px;margin:16px 0 20px;padding:4px 0;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);max-width:760px}
+.slip div{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.slip dt{flex:0 0 112px;color:var(--muted);font-size:14.5px}
+.slip dd{margin:0;font-weight:600;min-width:0;overflow-wrap:anywhere}
+.done .row{display:flex;gap:10px;flex-wrap:wrap}
+
+/* ispod: jednostavne kartice */
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+.sec{padding:64px 0 10px}
+.sec h2{font-size:clamp(26px,3.4vw,38px);font-weight:700;margin-bottom:10px}
+.sec .lead{color:var(--muted);max-width:62ch;margin-bottom:24px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:20px 20px 18px}
+.card h3{font-size:19px;font-weight:700;margin-bottom:6px}
+.card p{color:var(--muted);font-size:15.5px;margin-bottom:12px}
+.price{font:700 18px/1 var(--head);color:var(--cu-lo)}
+.price small{font:500 13px/1 var(--text);color:var(--muted);margin-left:4px}
+.card.dark{background:var(--dark);color:var(--paper);border-color:var(--dark)}
+.card.dark p{color:#C2CDD0}
+.card.dark .price{color:var(--cu-hi)}
+.card.dark .price small{color:#C2CDD0}
+.wait{margin-top:22px;padding:16px 18px;border-radius:10px;background:#E6EEF2;border-left:5px solid var(--water)}
+.wait h3{font-size:16px;margin-bottom:8px}
+.wait ul{margin:0;padding-left:18px;font-size:15px;color:#2F3D42}
+.wait li{margin-bottom:4px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:s}
+.steps li{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px;position:relative}
+.steps li::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--water);color:var(--dark);font:700 16px/1 var(--head);margin-bottom:10px}
+.steps h3{font-size:17px;margin-bottom:6px}
+.steps p{color:var(--muted);font-size:15px;margin:0}
+.info{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:16px}
+table.hours{width:100%;border-collapse:collapse}
+.hours th,.hours td{text-align:left;padding:9px 0;border-bottom:1px solid var(--line);font-size:16px}
+.hours th{font-weight:500}
+.hours td{text-align:right;font:600 16px/1 var(--head)}
+.hours tr.today th,.hours tr.today td{color:var(--cu-lo);font-weight:700}
+.map{border-radius:14px;overflow:hidden;border:1px solid var(--line);min-height:300px;background:#E3DED5}
+.map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+.photo{border-radius:14px;min-height:200px;background:linear-gradient(135deg,#D9D2C6,#CBC2B3);display:flex;align-items:flex-end;padding:12px;margin-top:16px}
+.photo span{font-size:12.5px;background:var(--paper);color:var(--muted);padding:3px 8px;border-radius:8px}
+.contact{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:16px}
+.kform{display:grid;gap:4px}
+.form-msg{margin:10px 0 0;font-weight:600;background:#E1EEF6;color:#174F70;border-radius:10px;padding:12px 14px}
+
+footer{background:var(--dark);color:#C2CDD0;margin-top:70px}
+footer .in{max-width:1180px;margin:0 auto;padding:30px 16px;display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center}
+footer a{color:#9FD0EC;font-weight:700}
+footer p{margin:0;font-size:15px}
+footer .f-b{font:700 19px/1 var(--head);color:var(--paper)}
+
+@media (max-width:980px){
+  .req-body{grid-template-columns:minmax(0,1fr)}
+  .col + .col{border-left:0;border-top:1px solid var(--line)}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .info,.contact{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:760px){
+  :root{--pipe:12px}
+  .menu-btn{display:inline-flex;align-items:center}
+  #glavni-meni{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--dark-2);padding:8px 16px 14px;box-shadow:0 12px 24px rgba(0,0,0,.3)}
+  #glavni-meni.open{display:flex}
+  #glavni-meni a{width:100%;border-radius:8px}
+  .hero{padding:16px 10px 56px}
+  .frame{padding:calc(var(--pipe) + 16px) calc(var(--pipe) + 8px) calc(var(--pipe) + 12px)}
+  .p-top,.p-bot{left:40px;right:40px}
+  .p-l,.p-r{top:40px;bottom:40px}
+  .elb{width:40px;height:40px}
+  .valve{right:44px;top:-24px;width:58px;height:58px}
+  .call{display:block;margin-bottom:18px}
+  .call .area{margin-top:8px;font-size:15px}
+  .tel-big{text-align:left;margin-top:16px}
+  .tel-big strong{font-size:40px}
+  .quick{justify-content:flex-start}
+  .quick .btn{flex:1 1 140px}
+  .req-head,.col,.done{padding-left:14px;padding-right:14px}
+  .kvar{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .two{grid-template-columns:minmax(0,1fr)}
+  .slip{grid-template-columns:minmax(0,1fr)}
+  .slip dt{flex-basis:96px}
+  .cards,.steps{grid-template-columns:minmax(0,1fr)}
+  .req-foot .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#zahtev">Preskoči na zahtev za izlazak</a>
+<div class="demo"><div class="in"><span>Primer sajta · izradio opsforma</span><a href="../../">Svi primeri</a></div></div>
+
+<header class="top" id="vrh">
+  <div class="in">
+    <a class="brand" href="#vrh" aria-label="Vodoinstalater Slavina, na vrh strane">
+      <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M6 14h14a6 6 0 0 1 6 6v4" fill="none" stroke="#B5651D" stroke-width="6" stroke-linecap="round"/><rect x="11" y="6" width="4" height="8" fill="#B5651D"/><rect x="6" y="4" width="14" height="4" rx="2" fill="#E39A5B"/><path d="M26 28c0 2-1.6 3.5-3 3.5S20 30 20 28c0-1.6 3-5 3-5s3 3.4 3 5z" fill="#5FA8D3" transform="translate(3 0)"/></svg>
+      Slavina
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="glavni-meni">Meni</button>
+    <ul id="glavni-meni">
+      <li><a href="#zahtev">Zahtev za izlazak</a></li>
+      <li><a href="#usluge">Usluge i cene</a></li>
+      <li><a href="#kako">Kako radimo</a></li>
+      <li><a href="#radno-vreme">Radno vreme</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero" aria-labelledby="h1">
+  <div class="frame">
+    <!-- bakarne cevi oko hera -->
+    <div class="p p-h p-top" aria-hidden="true"><span class="coupling" style="left:28%"></span><span class="coupling" style="left:71%"></span></div>
+    <div class="p p-h p-bot" aria-hidden="true"><span class="coupling" style="left:46%"></span>
+      <svg class="drip" viewBox="0 0 16 46"><path d="M8 4c0 0 6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z" fill="#5FA8D3"/></svg></div>
+    <div class="p p-v p-l" aria-hidden="true"><span class="coupling v" style="top:40%"></span></div>
+    <div class="p p-v p-r" aria-hidden="true"><span class="coupling v" style="top:62%"></span></div>
+    <svg class="elb tl" viewBox="0 0 60 60" aria-hidden="true">
+      <defs><radialGradient id="eg" cx="60" cy="60" r="60" gradientUnits="userSpaceOnUse"><stop offset=".7" stop-color="#7A3F0C"/><stop offset=".78" stop-color="#B5651D"/><stop offset=".85" stop-color="#E39A5B"/><stop offset=".92" stop-color="#B5651D"/><stop offset="1" stop-color="#7A3F0C"/></radialGradient></defs>
+      <path d="M0 60V42A42 42 0 0 1 42 0h18v18H42A24 24 0 0 0 18 42v18z" fill="url(#eg)"/>
+      <rect x="0" y="52" width="18" height="8" fill="#9C5517"/><rect x="52" y="0" width="8" height="18" fill="#9C5517"/>
+    </svg>
+    <svg class="elb tr" viewBox="0 0 60 60" aria-hidden="true"><path d="M0 60V42A42 42 0 0 1 42 0h18v18H42A24 24 0 0 0 18 42v18z" fill="url(#eg)"/><rect x="0" y="52" width="18" height="8" fill="#9C5517"/><rect x="52" y="0" width="8" height="18" fill="#9C5517"/></svg>
+    <svg class="elb bl" viewBox="0 0 60 60" aria-hidden="true"><path d="M0 60V42A42 42 0 0 1 42 0h18v18H42A24 24 0 0 0 18 42v18z" fill="url(#eg)"/><rect x="0" y="52" width="18" height="8" fill="#9C5517"/><rect x="52" y="0" width="8" height="18" fill="#9C5517"/></svg>
+    <svg class="elb br" viewBox="0 0 60 60" aria-hidden="true"><path d="M0 60V42A42 42 0 0 1 42 0h18v18H42A24 24 0 0 0 18 42v18z" fill="url(#eg)"/><rect x="0" y="52" width="18" height="8" fill="#9C5517"/><rect x="52" y="0" width="8" height="18" fill="#9C5517"/></svg>
+    <svg class="valve" viewBox="0 0 80 80" aria-hidden="true">
+      <rect x="34" y="34" width="12" height="20" fill="#7A3F0C"/>
+      <circle cx="40" cy="30" r="24" fill="none" stroke="#D1495B" stroke-width="0"/>
+      <g fill="none" stroke="#5FA8D3" stroke-width="6" stroke-linecap="round"><circle cx="40" cy="30" r="22"/><path d="M40 8v44M18 30h44M24.5 14.5l31 31M55.5 14.5l-31 31"/></g>
+      <circle cx="40" cy="30" r="7" fill="#1E2A2F" stroke="#5FA8D3" stroke-width="4"/>
+    </svg>
+
+    <div class="call">
+      <div>
+        <h1 id="h1">Curi, kaplje ili je zapušeno? Pošaljite zahtev.</h1>
+        <p class="area">Vodoinstalater za Zvezdaru i Vračar. Izaberite kvar i kada vam odgovara, a mi vas zovemo da potvrdimo dolazak.</p>
+      </div>
+      <div>
+        <a class="tel-big" href="tel:+381600000514"><small>Hitno? Odmah pozovite</small><strong>060 000 05 14</strong></a>
+        <div class="quick">
+          <a class="btn btn-cu" href="tel:+381600000514">Pozovite</a>
+          <a class="btn btn-out" href="viber://chat?number=%2B381600000514">Viber</a>
+          <a class="btn btn-water" href="#zahtev">Pošaljite zahtev</a>
+        </div>
+      </div>
+    </div>
+
+<!--
+  PRODUKCIJA
+  Ovo je varijanta a (zahtev za izlazak). Modul radi samo u pregledaču, a popunjeni prozori su izmišljeni.
+  a) Na pravom sajtu dugme „Pošalji zahtev“ šalje sve podatke (kvar, hitnost, dan, prozor, adresa, ime,
+     telefon, napomena) vlasniku na mejl preko Web3Forms (POST na https://api.web3forms.com/submit sa hidden
+     poljem access_key), ili otvara Viber poruku sa rezimeom. Vlasnik zove kupca i potvrđuje tačno vreme.
+     Popunjene prozore vlasnik vodi u maloj tabeli (npr. Google Sheets) koju sajt čita.
+  b) Povezan kalendar: umesto ovog modula ugrađuje se Google Kalendar „Appointment schedule“, Cal.com ili
+     Calendly embed sa blokovima od četiri sata; zakazani izlasci se sami upisuju u vlasnikov Google Kalendar.
+-->
+    <div class="req" id="zahtev" tabindex="-1">
+      <div class="req-head">
+        <h2>Zahtev za izlazak majstora</h2>
+        <div class="tags"><span class="pk">Paket 2: zakazivanje</span><span class="fake">Primer: termini su izmišljeni</span></div>
+      </div>
+      <form id="rform" novalidate>
+        <div class="req-body">
+          <div class="col">
+            <fieldset>
+              <legend><span class="n">1</span>Šta je problem?</legend>
+              <div class="kvar" id="kvar"></div>
+            </fieldset>
+            <fieldset>
+              <legend><span class="n">2</span>Koliko je hitno?</legend>
+              <div class="urg" id="urg">
+                <button type="button" class="ug" data-u="danas" aria-pressed="false"><b>Hitno, danas</b>Izlazak 4.000 RSD</button>
+                <button type="button" class="ug" data-u="kasnije" aria-pressed="true"><b>U narednim danima</b>Izlazak 3.000 RSD</button>
+              </div>
+            </fieldset>
+            <div class="wait">
+              <h3>Dok čekate majstora</h3>
+              <ul>
+                <li>Ako curi, zatvorite ventil ispod lavaboa ili glavni ventil u stanu.</li>
+                <li>Kod bojlera isključite osigurač pre nego što bilo šta dirate.</li>
+                <li>Sklonite stvari ispod sudopere da majstor može odmah da radi.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <fieldset>
+              <legend><span class="n">3</span>Kada da dođemo?</legend>
+              <div id="day-area"></div>
+              <div class="wins" id="wins" role="group" aria-label="Vremenski prozor dolaska"></div>
+            </fieldset>
+            <fieldset>
+              <legend><span class="n">4</span>Gde i kome?</legend>
+              <div class="field"><label for="r-adr">Adresa (ulica, broj, sprat, stan)</label><input id="r-adr" name="adresa" autocomplete="street-address" placeholder="Npr. Cvijićeva 40, 3. sprat, stan 11"><div class="err" id="e-adr"></div></div>
+              <div class="two">
+                <div class="field"><label for="r-ime">Ime</label><input id="r-ime" name="ime" autocomplete="name"><div class="err" id="e-ime"></div></div>
+                <div class="field"><label for="r-tel">Telefon</label><input id="r-tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="06x xxx xxxx"><div class="err" id="e-tel"></div></div>
+              </div>
+              <div class="field"><label for="r-nap">Napomena (nije obavezno)</label><textarea id="r-nap" name="napomena" placeholder="Npr. curi ispod sudopere, zatvorio sam ventil"></textarea></div>
+            </fieldset>
+            <div class="sum" id="sum" aria-live="polite"></div>
+            <div class="req-foot"><button class="btn btn-cu" type="submit">Pošalji zahtev</button><span class="state" id="state" aria-live="polite"></span></div>
+          </div>
+        </div>
+      </form>
+      <div class="done" id="done" hidden tabindex="-1">
+        <h3>Zahtev je poslat</h3>
+        <p class="lead">Javljamo se na vaš telefon u roku od pola sata radnim danima da potvrdimo tačno vreme dolaska unutar izabranog prozora.</p>
+        <dl class="slip" id="slip"></dl>
+        <div class="row">
+          <button class="btn btn-cu" type="button" id="ics">Dodaj u kalendar</button>
+          <button class="btn btn-ink" type="button" id="again">Novi termin</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main id="sadrzaj">
+  <section class="sec wrap" id="usluge" aria-labelledby="us-h">
+    <h2 id="us-h">Usluge i cene</h2>
+    <p class="lead">Izlazak se plaća jednom i uključuje pregled. Cenu rada kažemo pre nego što počnemo. Delove kupujemo mi ili ih vi nabavite, kako vam je lakše.</p>
+    <div class="cards">
+      <article class="card dark"><h3>Izlazak i pregled</h3><p>Dolazak na adresu na Zvezdari ili Vračaru i procena kvara. Ostali delovi grada po dogovoru.</p><span class="price">3.000 RSD</span><br><span class="price" style="font-size:15px">4.000 RSD <small>hitno, isti dan</small></span></article>
+      <article class="card"><h3>Slavina i baterija</h3><p>Zamena dihtunga, kertridža ili cele baterije za sudoperu, lavabo i kadu.</p><span class="price">od 2.500 <small>RSD rad</small></span></article>
+      <article class="card"><h3>Zapušen odvod</h3><p>Sudopera, lavabo, kada i tuš kabina. Mašinsko odgušivanje spiralom.</p><span class="price">od 3.500 <small>RSD rad</small></span></article>
+      <article class="card"><h3>WC kotlić i šolja</h3><p>Kotlić koji stalno curi, mehanizam, plovak, zamena daske ili cele šolje.</p><span class="price">od 2.800 <small>RSD rad</small></span></article>
+      <article class="card"><h3>Bojler</h3><p>Zamena grejača i termostata, čišćenje kamenca, ugradnja novog bojlera.</p><span class="price">od 4.500 <small>RSD rad</small></span></article>
+      <article class="card"><h3>Cevi i ventili</h3><p>Pukla ili zarđala cev, propušta ventil, priključak za mašinu za veš ili sudove.</p><span class="price">od 3.500 <small>RSD rad</small></span></article>
+    </div>
+  </section>
+
+  <section class="sec wrap" id="kako" aria-labelledby="kako-h">
+    <h2 id="kako-h">Kako radimo</h2>
+    <p class="lead">Ne dajemo tačan sat danima unapred, jer se kod svake intervencije ne zna koliko traje. Zato birate prozor od četiri sata, a mi vas zovemo pre dolaska.</p>
+    <ol class="steps">
+      <li><h3>Pošaljete zahtev</h3><p>Kvar, adresa i prozor koji vam odgovara. Ako je hitno, bolje pozovite.</p></li>
+      <li><h3>Zovemo vas</h3><p>Potvrdimo dan i pitamo par stvari, da ponesemo prave delove.</p></li>
+      <li><h3>Javimo se pre dolaska</h3><p>Pola sata ranije dobijete poziv da smo krenuli.</p></li>
+      <li><h3>Popravka i račun</h3><p>Cenu kažemo pre rada. Plaćate gotovinom ili karticom na licu mesta.</p></li>
+    </ol>
+  </section>
+
+  <section class="sec wrap" id="radno-vreme" aria-labelledby="rv-h">
+    <h2 id="rv-h">Radno vreme i adresa</h2>
+    <p class="lead">Radionica je u Dalmatinskoj 21. Tu ne primamo stranke, ali možete svratiti po rezervni deo ako se dogovorimo.</p>
+    <div class="info">
+      <div class="card">
+        <table class="hours" id="hours">
+          <caption class="sr">Radno vreme po danima</caption>
+          <tr data-d="1"><th scope="row">Ponedeljak</th><td>08–20 h</td></tr>
+          <tr data-d="2"><th scope="row">Utorak</th><td>08–20 h</td></tr>
+          <tr data-d="3"><th scope="row">Sreda</th><td>08–20 h</td></tr>
+          <tr data-d="4"><th scope="row">Četvrtak</th><td>08–20 h</td></tr>
+          <tr data-d="5"><th scope="row">Petak</th><td>08–20 h</td></tr>
+          <tr data-d="6"><th scope="row">Subota</th><td>08–16 h</td></tr>
+          <tr data-d="0"><th scope="row">Nedelja</th><td>ne radimo</td></tr>
+        </table>
+        <p style="margin:14px 0 0;font-weight:600">Dalmatinska 21, Zvezdara</p>
+        <div class="photo"><span>Vaša fotografija: kombi ili radionica</span></div>
+      </div>
+      <div class="map"><iframe title="Mapa: Vodoinstalater Slavina, Dalmatinska 21, Beograd" loading="lazy" src="https://maps.google.com/maps?q=Dalmatinska%2021%2C%20Beograd&amp;z=15&amp;output=embed"></iframe></div>
+    </div>
+  </section>
+
+  <section class="sec wrap" id="kontakt" aria-labelledby="k-h">
+    <h2 id="k-h">Pitanje bez izlaska</h2>
+    <p class="lead">Treba vam procena za ugradnju ili zamenu bojlera? Napišite šta imate, javljamo se sa cenom.</p>
+    <div class="contact">
+      <div class="card">
+        <!--
+          Web3Forms: na pravom sajtu forma dobija action="https://api.web3forms.com/submit" i method="POST",
+          plus <input type="hidden" name="access_key" value="VLASNIKOV-KLJUČ">. Poruka stiže na vlasnikov mejl.
+        -->
+        <form class="kform" data-form="kontakt" id="kform" novalidate>
+          <div class="two">
+            <div class="field"><label for="k-ime">Ime</label><input id="k-ime" name="ime" autocomplete="name"></div>
+            <div class="field"><label for="k-tel">Telefon ili mejl</label><input id="k-tel" name="kontakt"></div>
+          </div>
+          <div class="field"><label for="k-por">Poruka</label><textarea id="k-por" name="poruka" placeholder="Npr. menjam bojler od 80 litara, stan na Vračaru, treći sprat"></textarea></div>
+          <div><button class="btn btn-ink" type="submit">Pošalji pitanje</button></div>
+          <div id="kform-msg" aria-live="polite"></div>
+        </form>
+      </div>
+      <div class="card dark">
+        <h3>Poplava ili pukla cev?</h3>
+        <p>Zatvorite glavni ventil vode i odmah pozovite. Ne čekajte odgovor na formu.</p>
+        <p style="font:700 30px/1.1 var(--head);color:var(--water);margin:0 0 14px">060 000 05 14</p>
+        <div class="row" style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn-cu" href="tel:+381600000514">Pozovite</a>
+          <a class="btn btn-out" href="viber://chat?number=%2B381600000514">Pišite na Viber</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="in">
+    <div><p class="f-b">Vodoinstalater Slavina</p><p>Dalmatinska 21, Zvezdara · 060 000 05 14</p></div>
+    <p>Primer sajta · izradio opsforma · <a href="../../">Svi primeri</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'),nav=document.getElementById('glavni-meni');
+  function setMenu(o){btn.setAttribute('aria-expanded',o?'true':'false');nav.classList.toggle('open',o);btn.textContent=o?'Zatvori':'Meni';}
+  btn.addEventListener('click',function(){setMenu(btn.getAttribute('aria-expanded')!=='true');});
+  nav.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&btn.getAttribute('aria-expanded')==='true'){setMenu(false);btn.focus();}});
+  var tr=document.querySelector('#hours tr[data-d="'+new Date().getDay()+'"]');if(tr)tr.classList.add('today');
+
+  document.getElementById('kform').addEventListener('submit',function(e){
+    e.preventDefault();
+    document.getElementById('kform-msg').innerHTML='<p class="form-msg">Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.</p>';
+  });
+
+  /* ===== zahtev za izlazak ===== */
+  var FIRMA='Vodoinstalater Slavina',SLUG='vodoinstalater-slavina';
+  var ICON={
+    slavina:'<path d="M5 12h13a5 5 0 0 1 5 5v2" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M10 7h6M13 7v5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M23 24c0 1.7-1.3 3-3 3" fill="none" stroke="#5FA8D3" stroke-width="2.5" stroke-linecap="round"/>',
+    odvod:'<circle cx="15" cy="15" r="11" fill="none" stroke="currentColor" stroke-width="3"/><path d="M9 15h12M15 9v12M10.8 10.8l8.4 8.4M19.2 10.8l-8.4 8.4" stroke="currentColor" stroke-width="2"/>',
+    wc:'<path d="M7 4h10v8H7zM5 12h20c0 6-4 9-8 9v5H11v-5c-3 0-6-3-6-9z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>',
+    bojler:'<rect x="8" y="3" width="14" height="22" rx="7" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M12 25v3M18 25v3" stroke="currentColor" stroke-width="2.6"/><path d="M15 9v7" stroke="#B5651D" stroke-width="3" stroke-linecap="round"/>',
+    cev:'<path d="M2 11h12a5 5 0 0 1 5 5v12" fill="none" stroke="currentColor" stroke-width="5"/><path d="M8 6v10M24 22h-10" stroke="currentColor" stroke-width="2"/><path d="M27 6l-3 4 3 1-2 4" fill="none" stroke="#5FA8D3" stroke-width="2.4" stroke-linecap="round"/>',
+    drugo:'<circle cx="8" cy="15" r="2.6" fill="currentColor"/><circle cx="15" cy="15" r="2.6" fill="currentColor"/><circle cx="22" cy="15" r="2.6" fill="currentColor"/>'
+  };
+  var KV=[['slavina','Slavina ili baterija'],['odvod','Zapušen odvod'],['wc','WC kotlić'],['bojler','Bojler'],['cev','Pukla cev'],['drugo','Nešto drugo']];
+  /* radno vreme po danu (getDay), u satima */
+  var HOURS=[null,[8,20],[8,20],[8,20],[8,20],[8,20],[8,16]];
+  var WINS=[[8,12],[12,16],[16,20]];
+  var DAYN=['ned','pon','uto','sre','čet','pet','sub'],DAYL=['nedelja','ponedeljak','utorak','sreda','četvrtak','petak','subota'];
+  var MON=['januar','februar','mart','april','maj','jun','jul','avgust','septembar','oktobar','novembar','decembar'];
+  var S={kv:null,u:'kasnije',day:null,win:null};
+
+  function pad(n){return (n<10?'0':'')+n;}
+  function ymd(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());}
+  function hash(s){var h=2166136261;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619);}return h>>>0;}
+  function full(d,w){return hash(SLUG+ymd(d)+'#'+w)%100<40;}
+  var DAYS=[];(function(){var t=new Date();t.setHours(0,0,0,0);for(var i=0;i<14;i++){var d=new Date(t);d.setDate(t.getDate()+i);DAYS.push(d);}})();
+  function winState(d,wi){
+    var h=HOURS[d.getDay()],w=WINS[wi];
+    if(!h||w[1]>h[1])return 'zatvoreno';
+    if(ymd(d)===ymd(new Date())){var n=new Date();if(n.getHours()+n.getMinutes()/60>w[1]-1.5)return 'prošlo';}
+    return full(d,wi)?'popunjeno':'slobodno';
+  }
+  function anyFree(d){for(var i=0;i<3;i++)if(winState(d,i)==='slobodno')return true;return false;}
+
+  var kvEl=document.getElementById('kvar');
+  KV.forEach(function(k){
+    var b=document.createElement('button');b.type='button';b.className='kv';b.dataset.k=k[0];
+    b.innerHTML='<svg viewBox="0 0 30 30" aria-hidden="true">'+ICON[k[0]]+'</svg><span>'+k[1]+'</span>';
+    b.setAttribute('aria-pressed','false');
+    b.addEventListener('click',function(){S.kv=k[0];kvEl.querySelectorAll('.kv').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});upd();});
+    kvEl.appendChild(b);
+  });
+  document.querySelectorAll('#urg .ug').forEach(function(b){
+    b.addEventListener('click',function(){S.u=b.dataset.u;S.day=S.u==='danas'?0:null;S.win=null;
+      document.querySelectorAll('#urg .ug').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});renderDay();});
+  });
+
+  var dayArea=document.getElementById('day-area'),winsEl=document.getElementById('wins');
+  function renderDay(){
+    if(S.u==='danas'){
+      var d=DAYS[0];
+      if(!HOURS[d.getDay()]){dayArea.innerHTML='<p class="today-note">Danas je nedelja i ne radimo. Za poplavu ili puklu cev pozovite 060 000 05 14, pa ćemo videti šta može.</p>';}
+      else if(!anyFree(d)){dayArea.innerHTML='<p class="today-note">Za danas više nema slobodnih prozora. Pozovite, možda se nešto oslobodi, ili izaberite „U narednim danima“.</p>';}
+      else dayArea.innerHTML='<p class="today-note">Danas, '+DAYL[d.getDay()]+' '+d.getDate()+'. '+MON[d.getMonth()]+'. Izaberite prozor:</p>';
+      S.day=0;
+    }else{
+      var html='<div class="days" role="group" aria-label="Dan dolaska">';
+      DAYS.forEach(function(d,i){
+        if(i===0)return;
+        var closed=!HOURS[d.getDay()],nf=!closed&&!anyFree(d),dis=closed||nf;
+        if(dis&&S.day===i){S.day=null;S.win=null;}
+        html+='<button type="button" class="day" data-i="'+i+'"'+(dis?' disabled':'')+' aria-pressed="'+(S.day===i)+'" aria-label="'+DAYL[d.getDay()]+' '+d.getDate()+'. '+MON[d.getMonth()]+(closed?', ne radimo':(nf?', popunjeno':''))+'"><span>'+(i===1?'sutra':DAYN[d.getDay()])+'</span><b>'+d.getDate()+'.</b><span>'+(closed?'neradni':(nf?'pun':pad(d.getMonth()+1)+'.'))+'</span></button>';
+      });
+      dayArea.innerHTML=html+'</div>';
+      dayArea.querySelectorAll('.day:not(:disabled)').forEach(function(b){b.addEventListener('click',function(){S.day=+b.dataset.i;S.win=null;renderDay();});});
+    }
+    renderWins();
+  }
+  function renderWins(){
+    winsEl.innerHTML='';
+    if(S.day===null){winsEl.innerHTML='<p class="today-note" style="grid-column:1/-1;margin:0">Izaberite dan da vidite slobodne prozore.</p>';upd();return;}
+    var d=DAYS[S.day];
+    WINS.forEach(function(w,i){
+      var st=winState(d,i),ok=st==='slobodno';
+      var b=document.createElement('button');b.type='button';b.className='win';b.dataset.w=i;
+      b.innerHTML='<b>'+pad(w[0])+'–'+pad(w[1])+'</b><span>'+(ok?'slobodno':st)+'</span>';
+      b.setAttribute('aria-label','od '+w[0]+' do '+w[1]+' h, '+st);
+      if(!ok){b.disabled=true;if(S.win===i)S.win=null;}else b.setAttribute('aria-pressed',S.win===i?'true':'false');
+      b.addEventListener('click',function(){S.win=i;renderWins();});
+      winsEl.appendChild(b);
+    });
+    upd();
+  }
+  function kvName(){var k=KV.filter(function(x){return x[0]===S.kv;})[0];return k?k[1]:null;}
+  function price(){return S.u==='danas'?4000:3000;}
+  function upd(){
+    var sum=document.getElementById('sum'),st=document.getElementById('state');
+    var parts=[];
+    parts.push(kvName()?'<b>'+kvName()+'</b>':'kvar nije izabran');
+    parts.push(S.u==='danas'?'hitno, danas':'u narednim danima');
+    if(S.day!==null&&S.win!==null){var d=DAYS[S.day],w=WINS[S.win];parts.push(DAYL[d.getDay()]+' '+d.getDate()+'. '+MON[d.getMonth()]+', <b>'+pad(w[0])+'–'+pad(w[1])+' h</b>');}
+    sum.innerHTML=parts.join(' · ')+'<br>Izlazak i pregled: <b>'+price().toLocaleString('de-DE')+' RSD</b>, rad po dogovoru na licu mesta.';
+    var miss=[!S.kv?'kvar':null,S.day===null?'dan':null,S.win===null?'vremenski prozor':null].filter(Boolean);
+    st.textContent=miss.length?'Još izaberite: '+miss.join(', ')+'.':'Spremno za slanje.';
+  }
+
+  var form=document.getElementById('rform'),done=document.getElementById('done');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var f={adr:document.getElementById('r-adr'),ime:document.getElementById('r-ime'),tel:document.getElementById('r-tel')},first=null;
+    ['adr','ime','tel'].forEach(function(k){document.getElementById('e-'+k).textContent='';f[k].removeAttribute('aria-invalid');});
+    function bad(k,m){document.getElementById('e-'+k).textContent=m;f[k].setAttribute('aria-invalid','true');if(!first)first=f[k];}
+    if(f.adr.value.trim().length<4)bad('adr','Upišite adresu na koju dolazimo.');
+    if(f.ime.value.trim().length<2)bad('ime','Upišite ime.');
+    if(f.tel.value.replace(/\D/g,'').length<8)bad('tel','Upišite broj telefona, npr. 064 123 4567.');
+    if(!S.kv||S.day===null||S.win===null){
+      document.getElementById('state').textContent='Nedostaje: '+[!S.kv?'kvar':null,S.day===null?'dan':null,S.win===null?'vremenski prozor':null].filter(Boolean).join(', ')+'.';
+      if(first)first.focus();
+      return;
+    }
+    if(first){first.focus();return;}
+    var d=DAYS[S.day],w=WINS[S.win];
+    var start=new Date(d);start.setHours(w[0],0,0,0);var end=new Date(d);end.setHours(w[1],0,0,0);
+    S.b={kv:kvName(),start:start,end:end,adr:f.adr.value.trim(),ime:f.ime.value.trim(),tel:f.tel.value.trim(),nap:document.getElementById('r-nap').value.trim(),price:price()};
+    var rows=[['Kvar',S.b.kv],['Majstor','Dragan, vodoinstalater'],['Hitnost',S.u==='danas'?'hitno, danas':'u narednim danima'],['Dan',DAYL[d.getDay()]+', '+d.getDate()+'. '+MON[d.getMonth()]],['Dolazak','između '+pad(w[0])+' i '+pad(w[1])+' h'],['Trajanje','prozor od 4 sata, rad zavisi od kvara'],['Cena','izlazak '+S.b.price.toLocaleString('de-DE')+' RSD, rad po dogovoru'],['Adresa',S.b.adr],['Ime',S.b.ime],['Telefon',S.b.tel]];
+    if(S.b.nap)rows.push(['Napomena',S.b.nap]);
+    var dl=document.getElementById('slip');dl.innerHTML='';
+    rows.forEach(function(r){var x=document.createElement('div'),a=document.createElement('dt'),b=document.createElement('dd');a.textContent=r[0];b.textContent=r[1];x.appendChild(a);x.appendChild(b);dl.appendChild(x);});
+    form.hidden=true;done.hidden=false;done.focus();
+  });
+
+  function icsDate(dt){return dt.toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'');}
+  function esc(s){return String(s).replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/\n/g,'\\n');}
+  document.getElementById('ics').addEventListener('click',function(){
+    var b=S.b;if(!b)return;
+    /* događaj počinje na početku prozora; kraj je kraj prozora */
+    var L=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//opsforma//'+SLUG+'//SR','CALSCALE:GREGORIAN','METHOD:PUBLISH','BEGIN:VEVENT',
+      'UID:'+Date.now()+'-'+Math.floor(Math.random()*1e6)+'@'+SLUG+'.primer','DTSTAMP:'+icsDate(new Date()),
+      'DTSTART:'+icsDate(b.start),'DTEND:'+icsDate(b.end),
+      'SUMMARY:'+esc(FIRMA+': '+b.kv+' (dolazak u prozoru)'),'LOCATION:'+esc(b.adr+', Beograd'),
+      'DESCRIPTION:'+esc('Majstor dolazi između '+pad(b.start.getHours())+' i '+pad(b.end.getHours())+' h i javlja se pola sata ranije. Telefon: 060 000 05 14.'),
+      'END:VEVENT','END:VCALENDAR'];
+    var blob=new Blob([L.join('\r\n')+'\r\n'],{type:'text/calendar;charset=utf-8'});
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='termin-'+SLUG+'.ics';document.body.appendChild(a);a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},500);
+  });
+  document.getElementById('again').addEventListener('click',function(){
+    form.reset();S.kv=null;S.win=null;S.day=S.u==='danas'?0:null;S.b=null;
+    kvEl.querySelectorAll('.kv').forEach(function(x){x.setAttribute('aria-pressed','false');});
+    done.hidden=true;form.hidden=false;renderDay();kvEl.querySelector('.kv').focus();
+  });
+  renderDay();
+})();
+</script>
+</body>
+</html>
