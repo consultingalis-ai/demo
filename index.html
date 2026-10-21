@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://opsforma.rs/">
 <title>opsforma | Sajtovi i online zakazivanje za firme</title>
 <meta name="description" content="opsforma: pravimo sajtove za firme koje žele bolju vidljivost na internetu: brzi na telefonu, sa cenama, radnim vremenom, mapom, dugmetom za poziv i po potrebi online zakazivanjem ili porudžbinama.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -694,11 +694,12 @@
     <div class="wrap sec-grid">
       <div>
         <h2 class="sec-title" id="kontakt-naslov">Javite se</h2>
-        <p class="contact-text">Pišite nam na Instagramu <a href="https://instagram.com/opsforma" rel="noopener">@opsforma</a> ili ostavite poruku ovde.</p>
+        <p class="contact-text">Pišite nam na Instagramu <a href="https://www.instagram.com/opsformars/" rel="noopener">@opsformars</a> ili ostavite poruku ovde.</p>
         <p class="contact-who">Mi smo mali tim. Sa Vama razgovaramo, pravimo sajt i predajemo ga, bez posrednika.</p>
       </div>
-      <!-- TODO: Web3Forms access_key, email, Instagram link -->
-      <form id="forma" action="#" method="post" novalidate>
+      <!-- Poruke idu preko Web3Forms na opsformars@gmail.com. Ključ je u WEB3FORMS_KEY u skripti ispod. -->
+      <form id="forma" action="https://api.web3forms.com/submit" method="post" novalidate>
+        <input type="checkbox" name="botcheck" class="sr" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div>
           <label for="f-ime">Ime</label>
           <input id="f-ime" name="ime" type="text" autocomplete="name" required>
@@ -729,7 +730,7 @@
     <img src="assets/opsforma-logo-light.svg" alt="opsforma" width="452" height="96">
     <div class="foot-meta">
       <span>opsforma · Beograd</span>
-      <a href="https://instagram.com/opsforma" rel="noopener">Instagram @opsforma</a>
+      <a href="https://www.instagram.com/opsformars/" rel="noopener">Instagram @opsformars</a>
       <span>© <span id="godina">2026</span></span>
     </div>
   </div>
@@ -788,12 +789,41 @@
     if (qp === '1' || qp === '2' || qp === '3') { state.paket = qp; apply(); }
   } catch (e) {}
 
-  // Form (not connected yet)
+  // Kontakt forma -> Web3Forms -> opsformars@gmail.com
+  var WEB3FORMS_KEY = '';
   var form = document.getElementById('forma');
   var msg = document.getElementById('form-msg');
+  var sendBtn = form.querySelector('button[type="submit"]');
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    msg.textContent = 'Hvala. Forma se upravo povezuje; dok ne proradi, pišite nam na Instagramu @opsforma.';
+    var ime = form.elements.ime.value.trim(), tel = form.elements.telefon.value.trim();
+    if (!ime || !tel) {
+      msg.textContent = 'Upišite ime i telefon, da bismo mogli da Vam se javimo.';
+      (ime ? form.elements.telefon : form.elements.ime).focus();
+      return;
+    }
+    if (!WEB3FORMS_KEY) {
+      msg.textContent = 'Forma se upravo povezuje. Do tada nam pišite na Instagramu @opsformars ili na opsformars@gmail.com.';
+      return;
+    }
+    var data = new FormData(form);
+    data.append('access_key', WEB3FORMS_KEY);
+    data.append('subject', 'Nova poruka sa opsforma.rs: ' + ime);
+    data.append('from_name', 'opsforma.rs');
+    sendBtn.disabled = true;
+    msg.textContent = 'Šaljemo poruku...';
+    fetch('https://api.web3forms.com/submit', { method: 'POST', body: data, headers: { Accept: 'application/json' } })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (j && j.success) {
+          form.reset();
+          msg.textContent = 'Hvala, poruka je stigla. Javljamo Vam se u toku dana.';
+        } else { throw new Error('send'); }
+      })
+      .catch(function () {
+        msg.textContent = 'Poruka nije poslata. Pokušajte ponovo ili nam pišite na opsformars@gmail.com.';
+      })
+      .then(function () { sendBtn.disabled = false; });
   });
 
   document.getElementById('godina').textContent = new Date().getFullYear();
