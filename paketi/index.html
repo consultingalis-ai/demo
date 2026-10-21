@@ -6,10 +6,24 @@
 <link rel="canonical" href="https://opsforma.rs/paketi/">
 <title>Paketi | opsforma</title>
 <meta name="description" content="Paketi sajta za firme: vizitkarta, zakazivanje ili porudžbine, Plus i online prodavnica. Radi sa telefonom, Viberom, Gmailom i Google Kalendarom koje već koristite.">
-<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#14161A">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="opsforma">
+<meta property="og:url" content="https://opsforma.rs/paketi/">
+<meta property="og:title" content="Paketi | opsforma">
+<meta property="og:description" content="Paketi sajta za firme: vizitkarta, zakazivanje ili porudžbine, Plus i online prodavnica. Radi sa telefonom, Viberom, Gmailom i Google Kalendarom koje već koristite.">
+<meta property="og:image" content="https://opsforma.rs/og-slika-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="opsforma: jednostavni sajtovi za male firme">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&subset=latin-ext&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&subset=latin-ext&display=swap">
 <style>
   :root {
     --paper: #F6F5F1;
@@ -174,6 +188,90 @@
   .site-foot a { color: var(--paper); text-underline-offset: 4px; }
   .site-foot :focus-visible { outline-color: var(--paper); }
   @media (min-width: 760px) { .foot-row { grid-template-columns: auto 1fr; align-items: center; } .foot-meta { justify-content: flex-end; } }
+
+  /* ===== Brend opsforma ===== */
+  :root {
+    --grafit: #14161A; --papir: #F5F5F2; --plava: #2F5BEA;
+    --siva: #6B6E73; --siva-tamno: #A4A7AD; --svetloplava: #E4EAFD; --linija: #E2E2DE;
+    --paper: var(--papir); --ink: var(--grafit); --signal: var(--plava); --gray: var(--siva); --rule: var(--linija);
+    --head: "Manrope", "Helvetica Neue", Arial, system-ui, sans-serif;
+    --serif: var(--head);
+    --sans: "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
+    --radius: 6px;
+  }
+  body { font-family: var(--sans); color: var(--grafit); background: var(--papir); }
+  h1, h2, h3 { font-family: var(--head); font-weight: 800; letter-spacing: -.02em; }
+  ::selection { background: var(--svetloplava); color: var(--grafit); }
+  .dot { display: inline-block; width: .19em; height: .19em; margin-left: .05em; background: var(--plava); vertical-align: baseline; }
+  .label, .eyebrow, .filter-label, .sk-label, .plan-block h4 {
+    font-family: var(--sans); font-weight: 600; text-transform: uppercase; letter-spacing: .08em;
+    color: var(--plava); font-size: .78rem; line-height: 1.4;
+  }
+  .eyebrow { margin-bottom: 18px; }
+  .hero h1 { letter-spacing: -.03em; }
+  .hero h1 em { font-style: normal; }
+  .sec-title { letter-spacing: -.025em; }
+  .site-head { border-bottom-color: var(--linija); }
+  .nav a:hover, .nav a[aria-current="page"] { text-decoration-color: var(--plava); }
+  .btn { border-color: var(--grafit); font-weight: 600; }
+  .btn-primary { background: var(--plava); border-color: var(--plava); color: #fff; }
+  .btn-primary:hover { background: var(--grafit); border-color: var(--grafit); color: var(--papir); }
+  .btn-quiet { color: var(--grafit); }
+  .btn-quiet:hover { background: var(--grafit); color: var(--papir); }
+  :focus-visible { outline-color: var(--plava); }
+  input, textarea { border-color: #B9BBB6; }
+  input:focus-visible, textarea:focus-visible { outline-color: var(--plava); border-color: var(--plava); }
+  .form-msg:not(:empty) { border-left-color: var(--plava); background: var(--svetloplava); }
+  .contact-text a, .ex-note a { text-decoration-color: var(--plava); }
+  .filter { border-color: var(--linija); }
+  .filter:hover { border-color: var(--grafit); }
+  .filter[aria-pressed="true"] { background: var(--grafit); color: var(--papir); border-color: var(--grafit); }
+  .filter-label { color: var(--plava); }
+  .card-name { letter-spacing: -.02em; }
+  .card-pkg { font-family: var(--sans); }
+  .step-num, .pk-list .step-num, .plan-num, .need .n, .price { font-family: var(--head); font-weight: 800; letter-spacing: -.03em; }
+  .step-num::after, .pk-list .step-num::after, .plan-num::after, .need .n::after {
+    content: ""; display: inline-block; width: .19em; height: .19em; margin-left: .04em; background: var(--plava);
+  }
+  .incl li::before { width: 8px; height: 8px; border: 0; background: var(--plava); margin-top: 9px; }
+  .plan-block ul li::before { width: 6px; height: 6px; border: 0; background: var(--plava); top: .6em; }
+  .plan-block ul li, .plan-block p, .faq details p { color: #2B2E33; }
+  .site-foot { background: var(--grafit); color: var(--papir); }
+  .foot-meta { color: var(--siva-tamno); }
+  .site-foot a { color: var(--papir); }
+  .site-foot img { height: 28px; }
+  /* skica telefona na naslovnoj */
+  .sketch { border-color: var(--grafit); background: #fff; }
+  .sk-name { font-family: var(--head); font-weight: 800; letter-spacing: -.02em; font-size: 1.35rem; }
+  .sk-open::before { background: var(--plava); }
+  .sk-label { font-size: .62rem; margin-bottom: 6px; }
+  .sk-map::after { background: var(--plava); }
+  .sk-call { background: var(--plava); color: #fff; }
+  .sk-viber { border-color: var(--grafit); }
+  /* paketi */
+  .plan { border-color: var(--grafit); }
+  .plan.featured { background: var(--grafit); }
+  .plan.featured .plan-sub, .plan.featured .plan-block p, .plan.featured .plan-block li { color: #D5D7DB; }
+  .plan.featured .plan-block h4 { color: var(--siva-tamno); }
+  .plan.featured .plan-block { border-top-color: rgba(245,245,242,.18); }
+  .plan-tag { background: var(--plava); color: #fff; }
+  .plan h3, .flow h3, .variant h3 { letter-spacing: -.02em; }
+  .price small, .price .upkeep { font-family: var(--sans); font-weight: 400; letter-spacing: 0; }
+  .tools li { border-color: var(--linija); background: #fff; }
+  .tools svg { color: var(--plava); }
+  .ico { border-color: var(--grafit); background: #fff; }
+  .ico svg { color: var(--grafit); }
+  .flow li h4 span { font-family: var(--head); font-weight: 800; color: var(--plava); }
+  .faq summary::after { font-family: var(--sans); font-weight: 400; color: var(--plava); }
+  .cta { background: var(--grafit); color: var(--papir); }
+  .cta p { color: #D5D7DB; }
+  .cta .btn-quiet { color: var(--papir); border-color: var(--papir); }
+  .cta .btn-quiet:hover { background: var(--papir); color: var(--grafit); }
+  .cta .btn-dark { background: var(--plava); border-color: var(--plava); color: #fff; }
+  .cta .btn-dark:hover { background: var(--papir); border-color: var(--papir); color: var(--grafit); }
+  .cta :focus-visible { outline-color: var(--papir); }
+  .steps li, .pk-list li { align-content: start; }
+  .site-foot { border-top: 1px solid rgba(245,245,242,.12); }
 </style>
 </head>
 <body>
@@ -181,7 +279,7 @@
 
 <header class="site-head">
   <div class="wrap head-row">
-    <a class="brand" href="../" aria-label="opsforma, naslovna strana"><img src="../assets/opsforma-logo.svg" alt="opsforma" width="452" height="96"></a>
+    <a class="brand" href="../" aria-label="opsforma, naslovna strana"><img src="/logo-zaglavlje.svg" alt="opsforma" width="477" height="106"></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meni"><span class="bars" aria-hidden="true"></span>Meni</button>
     <nav class="nav" id="meni" aria-label="Glavna navigacija">
       <ul>
@@ -200,7 +298,7 @@
   <section class="hero" aria-labelledby="naslov">
     <div class="wrap">
       <p class="eyebrow">Paketi · opsforma</p>
-      <h1 id="naslov">Pet paketa. Uzmite <em>koliko Vam treba.</em></h1>
+      <h1 id="naslov">Pet paketa. Uzmite <em>koliko Vam treba</em><span class="dot" aria-hidden="true"></span></h1>
       <p class="hero-text">Ne morate da učite novu aplikaciju. Sajt radi sa onim što već imate na telefonu: pozivima, Viberom, Gmailom i Google Kalendarom.</p>
       <ul class="tools" aria-label="Alati koje već koristite">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>Telefon</li>
@@ -214,7 +312,7 @@
   <section id="paketi" aria-labelledby="paketi-naslov">
     <div class="wrap">
       <div class="sec-grid">
-        <h2 class="sec-title" id="paketi-naslov">Paketi</h2>
+        <h2 class="sec-title" id="paketi-naslov">Paketi<span class="dot" aria-hidden="true"></span></h2>
         <p class="sec-lead" style="margin-top:0;align-self:end;max-width:52ch">Svaki sledeći paket ima sve iz prethodnog. Možete početi sa osnovnim i kasnije dodati zakazivanje.</p>
       </div>
       <div class="plans">
@@ -306,7 +404,7 @@
   <section id="prodaja" aria-labelledby="prodaja-naslov">
     <div class="wrap">
       <div class="sec-grid">
-        <h2 class="sec-title" id="prodaja-naslov">Online prodaja</h2>
+        <h2 class="sec-title" id="prodaja-naslov">Online prodaja<span class="dot" aria-hidden="true"></span></h2>
         <p class="sec-lead" style="margin-top:0;align-self:end;max-width:52ch">Za radnje koje žele da prodaju i preko sajta: katalog, korpa i poručivanje, sa plaćanjem koje Vašim kupcima odgovara.</p>
       </div>
       <div class="plans-2">
@@ -376,7 +474,7 @@
   <section id="zakazivanje" aria-labelledby="zak-naslov">
     <div class="wrap">
       <div class="sec-grid">
-        <h2 class="sec-title" id="zak-naslov">Kako ide zakazivanje</h2>
+        <h2 class="sec-title" id="zak-naslov">Kako ide zakazivanje<span class="dot" aria-hidden="true"></span></h2>
         <p class="sec-lead" style="margin-top:0;align-self:end;max-width:52ch">Isti termin, dva pogleda: šta vidi mušterija, a šta Vi.</p>
       </div>
       <div class="flows">
@@ -439,7 +537,7 @@
   <section id="varijante" aria-labelledby="var-naslov">
     <div class="wrap sec-grid">
       <div>
-        <h2 class="sec-title" id="var-naslov">Dva načina, birate Vi</h2>
+        <h2 class="sec-title" id="var-naslov">Dva načina, birate Vi<span class="dot" aria-hidden="true"></span></h2>
         <p class="sec-lead">U paketu 2 i Plus. Možete početi sa prvim, pa preći na drugi.</p>
       </div>
       <div class="variants">
@@ -459,7 +557,7 @@
 
   <section id="pitanja" aria-labelledby="pit-naslov">
     <div class="wrap sec-grid">
-      <h2 class="sec-title" id="pit-naslov">Pitanja</h2>
+      <h2 class="sec-title" id="pit-naslov">Pitanja<span class="dot" aria-hidden="true"></span></h2>
       <div class="faq">
         <details>
           <summary>Da li mušterije plaćaju preko sajta?</summary>
@@ -511,7 +609,7 @@
 
 <footer class="site-foot">
   <div class="wrap foot-row">
-    <img src="../assets/opsforma-logo-light.svg" alt="opsforma" width="452" height="96">
+    <img src="/logo-zaglavlje-za-tamnu-pozadinu.svg" alt="opsforma" width="477" height="106">
     <div class="foot-meta">
       <span>opsforma · Beograd</span>
       <a href="../">Naslovna</a>
