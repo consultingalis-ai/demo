@@ -1,0 +1,1005 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Pržionica kafe Svitanje · Karađorđeva 65, Savamala</title>
+<meta name="description" content="Sveže pržena kafa iz Savamale: jednorodne kafe, espreso mešavine i domaća kafa za džezvu. Mlevenje po izboru, pakovanja 250 g i 1 kg, dostava kurirom ili preuzimanje u radnji.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;600&family=Fira+Sans:wght@400;500&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --krem:#F6F1EA;
+  --kafa:#2A1D17;
+  --zora:#E2733D;
+  --siva:#8E8379;
+  --tiha:#655b53;          /* siva potamnjena za sitan tekst (AA na kremu) */
+  --papir:#FBF8F3;
+  --naslov:"Eczar", Georgia, "Times New Roman", serif;
+  --tekst:"Fira Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  --sirina:1180px;
+  --gutter:clamp(20px, 5vw, 48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--krem);color:var(--kafa);font:400 17px/1.6 var(--tekst);overflow-wrap:break-word}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{text-decoration-color:var(--zora)}
+a[href^="tel:"]{white-space:nowrap}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--kafa);outline-offset:3px}
+h1,h2,h3{font-family:var(--naslov);font-weight:600;line-height:1.08;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(2rem, 5.4vw, 3rem);font-weight:400}
+h3{font-size:1.4rem}
+p{margin:0 0 1em}
+.okvir{max-width:var(--sirina);margin:0 auto;padding:0 var(--gutter)}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.tiho{color:var(--tiha)}
+
+/* ---------- demo traka ---------- */
+.demo{border-bottom:1px solid #e3dbd0;font-size:.8rem;color:var(--tiha)}
+.demo .okvir{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;justify-content:space-between;min-height:36px;padding-top:4px;padding-bottom:4px}
+.demo a{color:var(--kafa)}
+.paket{display:inline-block;background:var(--kafa);color:var(--krem);padding:2px 8px;font-size:.75rem;font-weight:500;margin-left:6px;white-space:nowrap}
+
+/* ---------- zaglavlje ---------- */
+.zaglavlje{position:sticky;top:0;z-index:30;background:var(--krem);border-bottom:1px solid transparent;transition:border-color .2s}
+.zaglavlje.skrol{border-bottom-color:#e3dbd0}
+.zaglavlje .okvir{display:flex;align-items:center;gap:12px;min-height:68px}
+.znak{display:flex;flex-direction:column;text-decoration:none;line-height:1;margin-right:auto}
+.znak b{font:600 1.55rem/1 var(--naslov)}
+.znak span{font-size:.75rem;color:var(--tiha);margin-top:3px}
+.meni-dugme{order:3;display:none;min-height:44px;min-width:44px;padding:0 12px;background:none;border:1px solid var(--kafa);cursor:pointer}
+.meni{display:flex;gap:4px}
+.meni a{display:flex;align-items:center;min-height:44px;padding:0 12px;text-decoration:none}
+.meni a:hover{text-decoration:underline}
+.korpa-dugme{order:2;display:flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;background:var(--kafa);color:var(--krem);border:0;cursor:pointer;font-weight:500}
+.korpa-dugme .broj{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 5px;border-radius:11px;background:var(--krem);color:var(--kafa);font-size:.8rem}
+@media (max-width:820px){
+  .meni-dugme{display:block}
+  .meni{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;background:var(--krem);border-bottom:1px solid var(--kafa);padding:8px var(--gutter) 16px}
+  .meni.otvoren{display:flex}
+  .meni a{border-bottom:1px solid #e3dbd0}
+}
+
+/* ---------- dugmad ---------- */
+.dugme{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border:1px solid var(--kafa);background:transparent;color:var(--kafa);text-decoration:none;font-weight:500;cursor:pointer;text-align:center}
+.dugme:hover{background:#efe7dc}
+.dugme.glavno{background:var(--zora);border-color:var(--zora);color:var(--kafa)}
+.dugme.glavno:hover{background:#d9682f}
+.dugme.puno{background:var(--kafa);color:var(--krem)}
+.dugme.puno:hover{background:#3c2b23}
+.dugme[disabled]{opacity:.45;cursor:not-allowed}
+
+/* ---------- hero ---------- */
+.hero{padding-top:clamp(40px, 9vw, 96px)}
+.horizont{position:relative;height:clamp(120px, 20vw, 220px)}
+.horizont::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--kafa)}
+.sunce{position:absolute;bottom:0;right:clamp(24px, 16vw, 240px);width:clamp(200px, 38vw, 440px);height:auto}
+.horizont-oznaka{position:absolute;left:0;right:0;bottom:-28px;text-align:right}
+.horizont small{font-size:.78rem;color:var(--tiha)}
+.hero-tekst{padding-top:clamp(36px, 6vw, 64px);padding-bottom:clamp(72px, 11vw, 140px)}
+.hero h1{font-size:clamp(2.9rem, 10.5vw, 6.4rem);max-width:11ch}
+.hero .uvod{max-width:34em;font-size:1.12rem;margin:24px 0 32px}
+.akcije{display:flex;flex-wrap:wrap;gap:10px}
+.cinjenice{list-style:none;padding:0;margin:44px 0 0;display:grid;grid-template-columns:repeat(auto-fit, minmax(210px, 1fr));gap:16px 40px;font-size:.95rem;color:var(--tiha);max-width:900px}
+.cinjenice b{display:block;color:var(--kafa);font-weight:500}
+
+/* ---------- ponuda ---------- */
+.sekcija{padding:clamp(72px, 11vw, 140px) 0}
+.sekcija + .sekcija{border-top:1px solid #e3dbd0}
+.glava{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px 40px;margin-bottom:36px}
+.glava p{max-width:30em;margin:0;color:var(--tiha)}
+.filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+.filter button{min-height:44px;padding:0 16px;border:1px solid var(--siva);background:none;cursor:pointer}
+.filter button[aria-pressed="true"]{background:var(--kafa);border-color:var(--kafa);color:var(--krem)}
+.etikete{display:grid;grid-template-columns:repeat(auto-fill, minmax(min(100%, 330px), 1fr));gap:28px}
+.etiketa{background:var(--papir);border:1px solid var(--kafa);padding:22px 22px 20px;display:flex;flex-direction:column}
+.etiketa[hidden]{display:none}
+.et-vrh{display:flex;justify-content:space-between;gap:12px;font-size:.78rem;color:var(--tiha);padding-bottom:12px;border-bottom:1px solid #e3dbd0;margin-bottom:18px}
+.etiketa h3{font-size:1.65rem;font-weight:600}
+.note{margin:6px 0 16px;color:var(--tiha)}
+.skala{display:flex;align-items:center;gap:10px;font-size:.78rem;color:var(--tiha);margin-bottom:18px}
+.skala ol{display:flex;gap:7px;list-style:none;margin:0;padding:0}
+.skala li{width:12px;height:12px;border-radius:50%;border:1px solid var(--siva)}
+.skala li.da{border-color:transparent}
+.izbor{border:0;margin:0 0 12px;padding:0;min-width:0}
+.izbor legend{font-size:.78rem;color:var(--tiha);padding:0;margin-bottom:6px}
+.cipovi{display:flex;flex-wrap:wrap;gap:6px}
+.cip{position:relative}
+.cip input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.cip span{display:flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:0 12px;border:1px solid var(--siva);font-size:.92rem}
+.cip input:checked + span{background:var(--kafa);border-color:var(--kafa);color:var(--krem)}
+.cip input:focus-visible + span{outline:2px solid var(--kafa);outline-offset:2px}
+.et-dno{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:14px;border-top:1px solid #e3dbd0}
+.cena{font:600 1.45rem/1 var(--naslov);white-space:nowrap}
+.detalji-link{align-self:flex-start;min-height:44px;padding:0;margin-top:6px;background:none;border:0;text-decoration:underline;text-underline-offset:3px;cursor:pointer;color:var(--tiha);font-size:.92rem}
+.napomena-cene{margin-top:28px;font-size:.92rem;color:var(--tiha)}
+
+/* ---------- mlevenje ---------- */
+.mlev{display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:32px 40px;list-style:none;padding:0;margin:0}
+.mlev h3{font-size:1.25rem;margin-bottom:6px}
+.mlev p{color:var(--tiha);margin:0}
+
+/* ---------- dostava ---------- */
+.tri{display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:36px 48px}
+.tri h3{font-size:1.25rem;margin-bottom:8px}
+.tri p{margin:0;color:var(--tiha)}
+.tri .iznos{display:block;font:600 1.8rem/1.1 var(--naslov);color:var(--kafa);margin-bottom:6px}
+
+/* ---------- radnja ---------- */
+.radnja{display:grid;gap:48px}
+@media (min-width:900px){.radnja{grid-template-columns:1fr 1fr;align-items:start}}
+.sati{margin:0;display:grid;grid-template-columns:auto 1fr;gap:0}
+.sati dt,.sati dd{margin:0;padding:10px 0;border-bottom:1px solid #e3dbd0}
+.sati dd{text-align:right}
+.sati .danas{font-weight:500}
+.karta{width:100%;height:340px;border:1px solid var(--kafa);display:block}
+.pica{list-style:none;margin:0;padding:0}
+.pica li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #e3dbd0}
+.foto{display:grid;place-items:end start;background:#e7ddd0;aspect-ratio:4/3;padding:12px;font-size:.78rem;color:var(--tiha)}
+
+/* ---------- forme ---------- */
+.polje{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.polje label{font-size:.9rem;font-weight:500}
+.polje input,.polje textarea,.polje select{min-height:48px;padding:10px 12px;border:1px solid var(--siva);background:var(--papir);border-radius:0;width:100%}
+.polje textarea{min-height:120px;resize:vertical}
+.polje input:focus,.polje textarea:focus{border-color:var(--kafa)}
+.polje [aria-invalid="true"]{border-color:#a3341a}
+.greska{color:#a3341a;font-size:.88rem;min-height:0}
+.greska:empty{display:none}
+.poruka-ok{border:1px solid var(--kafa);padding:14px 16px;margin-top:12px;background:var(--papir)}
+.kontakt{display:grid;gap:48px}
+@media (min-width:900px){.kontakt{grid-template-columns:1fr 1.2fr}}
+.dva{display:grid;gap:0 16px}
+@media (min-width:600px){.dva{grid-template-columns:1fr 1fr}}
+
+/* ---------- pravne sekcije ---------- */
+.pravno{font-size:.95rem}
+.pravno .primer{font-size:.85rem;color:var(--tiha);border-left:2px solid var(--zora);padding-left:12px;margin-bottom:40px;max-width:40em}
+.clan{display:grid;gap:8px 48px;padding:28px 0;border-top:1px solid #e3dbd0}
+@media (min-width:900px){.clan{grid-template-columns:260px 1fr}}
+.clan h3{font-size:1.2rem}
+.clan > div{max-width:44em}
+.clan ul{padding-left:1.1em;margin:0 0 1em}
+.clan dl{display:grid;grid-template-columns:auto 1fr;gap:4px 18px;margin:0}
+.clan dt{color:var(--tiha)}
+.clan dd{margin:0}
+
+/* ---------- podnožje ---------- */
+.podnozje{background:var(--kafa);color:var(--krem);padding:56px 0 40px;font-size:.92rem}
+.podnozje a{color:var(--krem)}
+.podnozje .okvir{display:grid;gap:28px}
+.podnozje ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 20px}
+.podnozje li a{display:inline-flex;min-height:44px;align-items:center}
+.podnozje .demo-nap{border-top:1px solid #4a3a31;padding-top:20px;color:#d8cfc4}
+
+/* ---------- korpa (fioka) ---------- */
+.zavesa{position:fixed;inset:0;background:rgba(42,29,23,.38);z-index:60}
+.fioka{position:fixed;top:0;right:0;bottom:0;width:min(500px, 100%);background:var(--krem);border-left:1px solid var(--kafa);z-index:61;display:flex;flex-direction:column;animation:ulaz .25s ease-out}
+.fioka[hidden],.zavesa[hidden]{display:none}
+@keyframes ulaz{from{transform:translateX(24px);opacity:0}to{transform:none;opacity:1}}
+.fioka-vrh{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px;border-bottom:1px solid #e3dbd0}
+.fioka-vrh h2{font-size:1.6rem;font-weight:600}
+.zatvori{min-height:44px;min-width:44px;padding:0 12px;background:none;border:1px solid var(--siva);cursor:pointer}
+.fioka-telo{flex:1;overflow-y:auto;overflow-x:hidden;padding:20px}
+.prazno{padding:24px 0;color:var(--tiha)}
+.stavke{list-style:none;margin:0;padding:0}
+.stavka{display:grid;grid-template-columns:1fr auto;gap:6px 12px;padding:16px 0;border-bottom:1px solid #e3dbd0}
+.stavka h3{font-size:1.1rem}
+.stavka .opis{font-size:.85rem;color:var(--tiha)}
+.stavka .iznos{font-weight:500;text-align:right;white-space:nowrap}
+.kol{display:flex;align-items:center;gap:0;grid-column:1 / -1;flex-wrap:wrap}
+.kol button{min-width:44px;min-height:44px;border:1px solid var(--siva);background:none;cursor:pointer;font-size:1.1rem}
+.kol output{min-width:40px;text-align:center}
+.kol .ukloni{margin-left:auto;border:0;text-decoration:underline;text-underline-offset:3px;font-size:.88rem;color:var(--tiha);padding:0 4px}
+.zbir{margin:18px 0 0;display:grid;grid-template-columns:1fr auto;gap:6px 0}
+.zbir dt{padding-right:12px}
+.zbir dt,.zbir dd{margin:0}
+.zbir dd{text-align:right;white-space:nowrap}
+.zbir .ukupno{font:600 1.3rem/1.3 var(--naslov);padding-top:8px;border-top:1px solid var(--kafa)}
+.prag{margin:16px 0 0;font-size:.9rem}
+.prag-linija{height:2px;background:#e3dbd0;margin-top:8px}
+.prag-linija i{display:block;height:2px;background:var(--zora);width:0}
+.fioka-dno{padding:16px 20px;border-top:1px solid #e3dbd0;display:grid;gap:8px}
+.fioka-dno .dugme{width:100%}
+
+/* koraci */
+.koraci{list-style:none;margin:0 0 20px;padding:0;display:flex;gap:6px;font-size:.78rem;color:var(--tiha)}
+.koraci li{flex:1;padding-top:8px;border-top:2px solid #e3dbd0}
+.koraci li.akt{border-top-color:var(--kafa);color:var(--kafa)}
+.korak h3{font-size:1.4rem;margin-bottom:16px}
+.korak[hidden]{display:none}
+.opcija{display:flex;gap:12px;align-items:flex-start;padding:14px;border:1px solid var(--siva);margin-bottom:10px;cursor:pointer;background:var(--papir)}
+.opcija input{width:22px;height:22px;margin:2px 0 0;accent-color:var(--kafa);flex:none}
+.opcija b{display:block;font-weight:500}
+.opcija small{display:block;color:var(--tiha);font-size:.86rem;margin-top:2px}
+.opcija:has(input:checked){border-color:var(--kafa)}
+.opcija:has(input:disabled){opacity:.5;cursor:not-allowed}
+.saglasnost{display:flex;gap:12px;align-items:flex-start;margin:18px 0 8px;font-size:.92rem}
+.saglasnost input{width:24px;height:24px;flex:none;margin:0;accent-color:var(--kafa)}
+.pregled{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:.92rem}
+.pregled dt{color:var(--tiha)}
+.pregled dd{margin:0}
+.nav-koraka{display:flex;gap:8px}
+.nav-koraka .dugme{flex:1}
+
+/* potvrda */
+.oznaka-primer{display:inline-block;border:1px solid var(--zora);padding:4px 10px;font-size:.82rem;margin-bottom:14px}
+.br-por{font:600 1.7rem/1.1 var(--naslov);margin:4px 0 16px}
+.uplata{display:grid;gap:16px;border:1px solid var(--kafa);padding:16px;margin:16px 0;background:var(--papir)}
+@media (min-width:440px){.uplata{grid-template-columns:1fr 132px}}
+.uplata dl{margin:0;display:grid;gap:2px;font-size:.9rem}
+.uplata dt{color:var(--tiha);font-size:.8rem}
+.uplata dd{margin:0 0 6px;overflow-wrap:anywhere}
+.qr-mesto{width:132px;height:132px;border:1px solid var(--siva);display:grid;place-items:center;text-align:center;padding:10px;font-size:.74rem;color:var(--tiha)}
+
+/* detalj proizvoda */
+dialog.detalj{border:1px solid var(--kafa);background:var(--krem);color:var(--kafa);padding:0;width:min(560px, calc(100% - 24px));max-height:calc(100% - 24px)}
+dialog.detalj::backdrop{background:rgba(42,29,23,.38)}
+.detalj-in{padding:24px}
+.detalj-in h3{font-size:1.8rem;margin-bottom:8px}
+.detalj-in dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:16px 0;font-size:.95rem}
+.detalj-in dt{color:var(--tiha)}
+.detalj-in dd{margin:0}
+.detalj-dno{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-top:18px}
+.zakon-link{display:inline-flex;align-items:center;min-height:44px}
+
+.obavestenje{position:fixed;left:12px;right:12px;bottom:12px;z-index:40;max-width:440px;margin-left:auto;background:var(--kafa);color:var(--krem);padding:10px 10px 10px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:.92rem}
+.obavestenje[hidden]{display:none}
+.obavestenje button{min-height:44px;padding:0 14px;background:var(--krem);color:var(--kafa);border:0;cursor:pointer;font-weight:500;white-space:nowrap}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demo">
+  <div class="okvir">
+    <span>Primer sajta · izradio opsforma <span class="paket">Paket 4: Prodavnica</span></span>
+    <a href="../../">Svi primeri</a>
+  </div>
+</div>
+
+<header class="zaglavlje" id="zaglavlje">
+  <div class="okvir">
+    <a class="znak" href="#pocetak"><b>Svitanje</b><span>pržionica kafe, Savamala</span></a>
+    <button class="meni-dugme" type="button" aria-expanded="false" aria-controls="meni">Meni</button>
+    <nav class="meni" id="meni" aria-label="Glavni meni">
+      <a href="#ponuda">Ponuda</a>
+      <a href="#mlevenje">Mlevenje</a>
+      <a href="#dostava">Dostava i plaćanje</a>
+      <a href="#radnja">Radnja</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <button class="korpa-dugme" type="button" id="korpaDugme" aria-haspopup="dialog">Korpa <span class="broj" id="korpaBroj">0</span><span class="sr"> stavki</span></button>
+  </div>
+</header>
+
+<main id="pocetak">
+
+<section class="hero" aria-labelledby="naslov">
+  <div class="horizont" aria-hidden="true">
+    <svg class="sunce" viewBox="0 0 440 221" fill="none"><path d="M1 220.5 A219 219 0 0 1 439 220.5" stroke="#E2733D" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg>
+    <div class="okvir horizont-oznaka"><small>Karađorđeva 65</small></div>
+  </div>
+  <div class="okvir hero-tekst">
+    <h1 id="naslov">Kafa pržena ove nedelje.</h1>
+    <p class="uvod">Mala pržionica u Savamali. Pržimo utorkom i petkom, u turama od po pet kilograma, i šaljemo u zrnu ili mlevenu kako Vam treba: za espreso, filter ili džezvu.</p>
+    <div class="akcije">
+      <a class="dugme glavno" href="#ponuda">Pogledajte ponudu</a>
+      <a class="dugme" href="tel:+381600000701">Pozovite 060 000 07 01</a>
+      <a class="dugme" href="viber://chat?number=%2B381600000701">Viber</a>
+    </div>
+    <ul class="cinjenice">
+      <li><b>Pržimo utorkom i petkom</b>Kafa stiže najviše nedelju dana posle prženja.</li>
+      <li><b>Kurir 450 RSD</b>Besplatna dostava za porudžbine od 3.000 RSD.</li>
+      <li><b>Preuzimanje u radnji</b>Karađorđeva 65, radnim danima od 8 h.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sekcija" id="ponuda" aria-labelledby="ponudaNaslov">
+  <div class="okvir">
+    <div class="glava">
+      <h2 id="ponudaNaslov">Ponuda</h2>
+      <p>Svaka kesa ima skalu prženja, od svetlog do tamnog. Izaberite pakovanje i mlevenje, pa dodajte u korpu.</p>
+    </div>
+    <div class="filter" role="group" aria-label="Filter po vrsti kafe" id="filter">
+      <button type="button" data-kat="sve" aria-pressed="true">Sve</button>
+      <button type="button" data-kat="jednorodne" aria-pressed="false">Jednorodne</button>
+      <button type="button" data-kat="espreso" aria-pressed="false">Espreso mešavine</button>
+      <button type="button" data-kat="dzezva" aria-pressed="false">Za džezvu</button>
+      <button type="button" data-kat="bezkofeina" aria-pressed="false">Bez kofeina</button>
+    </div>
+    <div class="etikete" id="etikete"></div>
+    <p class="napomena-cene">Cene su konačne, u dinarima.</p>
+  </div>
+</section>
+
+<section class="sekcija" id="mlevenje" aria-labelledby="mlevNaslov">
+  <div class="okvir">
+    <div class="glava">
+      <h2 id="mlevNaslov">Mlevenje</h2>
+      <p>Meljemo na dan slanja, bez doplate. Ako niste sigurni, uzmite zrno: najduže čuva miris.</p>
+    </div>
+    <ul class="mlev">
+      <li><h3>Zrno</h3><p>Za kućni mlin. Meljite neposredno pred kuvanje.</p></li>
+      <li><h3>Espreso</h3><p>Fino mlevenje za aparat sa ručkom i moka lonče.</p></li>
+      <li><h3>Filter</h3><p>Srednje, kao krupan pesak. Za V60, Chemex i aparat za filter kafu.</p></li>
+      <li><h3>Džezva</h3><p>Najfinije, kao prah. Samo za kuvanu, domaću kafu.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sekcija" id="dostava" aria-labelledby="dostNaslov">
+  <div class="okvir">
+    <div class="glava">
+      <h2 id="dostNaslov">Dostava i plaćanje</h2>
+      <p>Šaljemo širom Srbije. Porudžbine do 12 h pakujemo isti dan.</p>
+    </div>
+    <div class="tri">
+      <div><span class="iznos">450 RSD</span><h3>Kurirom na adresu</h3><p>Rok 1–3 radna dana. Besplatno za porudžbine od 3.000 RSD.</p></div>
+      <div><span class="iznos">0 RSD</span><h3>Lično preuzimanje</h3><p>U radnji u Karađorđevoj 65, u radno vreme. Javimo Vam kad je spremno.</p></div>
+      <div><span class="iznos">Pouzeće ili uplata</span><h3>Plaćanje</h3><p>Pouzećem, uplatnicom ili IPS QR kodom iz aplikacije banke, i gotovinom pri preuzimanju u radnji.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sekcija" id="radnja" aria-labelledby="radnjaNaslov">
+  <div class="okvir radnja">
+    <div>
+      <h2 id="radnjaNaslov">Radnja</h2>
+      <p style="margin-top:16px">Karađorđeva 65, Savamala. Pržionica je u dnu radnje; ispred su šank i dva stola. Možete probati svaku kafu iz ponude pre nego što kupite kesu.</p>
+      <h3 style="margin:36px 0 8px;font-size:1.25rem">Radno vreme</h3>
+      <dl class="sati" id="sati">
+        <dt data-d="1">Ponedeljak</dt><dd data-d="1">8–19 h</dd>
+        <dt data-d="2">Utorak</dt><dd data-d="2">8–19 h</dd>
+        <dt data-d="3">Sreda</dt><dd data-d="3">8–19 h</dd>
+        <dt data-d="4">Četvrtak</dt><dd data-d="4">8–19 h</dd>
+        <dt data-d="5">Petak</dt><dd data-d="5">8–19 h</dd>
+        <dt data-d="6">Subota</dt><dd data-d="6">9–15 h</dd>
+        <dt data-d="0">Nedelja</dt><dd data-d="0">zatvoreno</dd>
+      </dl>
+      <h3 style="margin:36px 0 8px;font-size:1.25rem">Za šankom</h3>
+      <ul class="pica">
+        <li><span>Espreso</span><span>170 RSD</span></li>
+        <li><span>Kafa sa mlekom</span><span>230 RSD</span></li>
+        <li><span>Filter kafa, šolja</span><span>220 RSD</span></li>
+        <li><span>Domaća kafa iz džezve</span><span>160 RSD</span></li>
+        <li><span>Degustacija tri kafe, subotom</span><span>600 RSD</span></li>
+      </ul>
+    </div>
+    <div>
+      <iframe class="karta" title="Mapa: Karađorđeva 65, Beograd" loading="lazy" src="https://maps.google.com/maps?q=Kara%C4%91or%C4%91eva%2065%2C%20Beograd&z=15&output=embed"></iframe>
+      <div class="foto" style="margin-top:24px">Vaša fotografija</div>
+    </div>
+  </div>
+</section>
+
+<section class="sekcija" id="kontakt" aria-labelledby="kontaktNaslov">
+  <div class="okvir kontakt">
+    <div>
+      <h2 id="kontaktNaslov">Kontakt</h2>
+      <p style="margin-top:16px">Pitanja o kafi, porudžbini ili većim količinama za kancelariju: pozovite, pišite na Viber ili ostavite poruku.</p>
+      <div class="akcije" style="margin-top:24px">
+        <a class="dugme" href="tel:+381600000701">Pozovite 060 000 07 01</a>
+        <a class="dugme" href="viber://chat?number=%2B381600000701">Viber</a>
+      </div>
+      <p class="tiho" style="margin-top:24px">porudzbine@svitanje.primer</p>
+    </div>
+    <!--
+      PRODUKCIJA (kontakt forma, Web3Forms):
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="VLASNIKOV-KLJUC">
+        <input type="hidden" name="subject" value="Poruka sa sajta Svitanje">
+        ... ista polja ...
+      </form>
+      Poruka stiže direktno na vlasnikov mejl.
+    -->
+    <form data-form="kontakt" id="kontaktForma" novalidate>
+      <div class="dva">
+        <div class="polje"><label for="k-ime">Ime</label><input id="k-ime" name="ime" autocomplete="name" required></div>
+        <div class="polje"><label for="k-tel">Telefon ili mejl</label><input id="k-tel" name="kontakt" autocomplete="email" required></div>
+      </div>
+      <div class="polje"><label for="k-poruka">Poruka</label><textarea id="k-poruka" name="poruka" required></textarea></div>
+      <button class="dugme puno" type="submit">Pošaljite poruku</button>
+      <p class="poruka-ok" id="kontaktOk" role="status" hidden></p>
+    </form>
+  </div>
+</section>
+
+<section class="sekcija pravno" id="pravno" aria-labelledby="pravnoNaslov">
+  <div class="okvir">
+    <h2 id="pravnoNaslov">Uslovi i propisi</h2>
+    <p class="primer" style="margin-top:16px">Primer teksta. Na pravom sajtu tekst usklađujemo sa vlasnikom i važećim propisima.</p>
+
+    <div class="clan" id="trgovac">
+      <h3>Podaci o trgovcu</h3>
+      <div>
+        <dl>
+          <dt>Naziv</dt><dd>Pržionica kafe Svitanje, Marija Petrović preduzetnik, Beograd</dd>
+          <dt>Adresa</dt><dd>Karađorđeva 65, 11000 Beograd</dd>
+          <dt>PIB</dt><dd>100000000 (primer)</dd>
+          <dt>Matični broj</dt><dd>00000000 (primer)</dd>
+          <dt>Šifra delatnosti</dt><dd>1083, prerada čaja i kafe</dd>
+          <dt>Mejl</dt><dd>porudzbine@svitanje.primer</dd>
+          <dt>Telefon</dt><dd><a href="tel:+381600000701">060 000 07 01</a></dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="clan" id="uslovi">
+      <h3>Uslovi kupovine</h3>
+      <div>
+        <p>Porudžbina je prihvaćena kad je potvrdimo mejlom ili telefonom. Cene na sajtu su konačne, u dinarima, sa PDV-om. Važi cena prikazana u trenutku poručivanja. Ako neke kafe nema, javljamo Vam se pre slanja i nudimo zamenu ili povraćaj novca.</p>
+        <p>Ugovor zaključujemo na srpskom jeziku. Porudžbinu i ove uslove čuvamo i šaljemo Vam ih mejlom.</p>
+      </div>
+    </div>
+
+    <div class="clan" id="uslovi-dostava">
+      <h3>Dostava</h3>
+      <div>
+        <p>Šaljemo kurirskom službom na adrese u Srbiji. Cena dostave je 450 RSD, a za porudžbine od 3.000 RSD dostava je besplatna. Rok je 1–3 radna dana od potvrde porudžbine, odnosno od prijema uplate. Lično preuzimanje u radnji je besplatno.</p>
+      </div>
+    </div>
+
+    <div class="clan" id="uslovi-placanje">
+      <h3>Načini plaćanja</h3>
+      <div>
+        <ul>
+          <li>Pouzećem: plaćate kuriru gotovinom pri preuzimanju.</li>
+          <li>Uplatnicom ili IPS QR kodom: podatke za uplatu dobijate posle porudžbine. Porudžbinu šaljemo kad uplata stigne.</li>
+          <li>Gotovinom pri preuzimanju u radnji.</li>
+        </ul>
+        <p>Platne kartice za sada ne primamo preko sajta.</p>
+      </div>
+    </div>
+
+    <div class="clan" id="odustanak">
+      <h3>Pravo na odustanak</h3>
+      <div>
+        <p>Imate pravo da odustanete od ugovora u roku od 14 dana od dana kad ste primili robu, bez navođenja razloga. Dovoljno je da nam pošaljete obrazac za odustanak ispod, ili bilo koju jasnu izjavu, mejlom ili poštom.</p>
+        <p>Novac vraćamo bez odlaganja i u skladu sa zakonom, istim načinom plaćanja kojim ste platili, osim ako se drugačije ne dogovorimo. Troškove vraćanja robe snosi kupac, osim ako je drugačije navedeno.</p>
+        <p>Izuzetak: kafa je namirnica, pa pravo na odustanak ne važi za otvorene kese i za kafu mlevenu po Vašem izboru, jer je pripremljena prema Vašim zahtevima. Neotvorena kafa u zrnu može se vratiti.</p>
+      </div>
+    </div>
+
+    <div class="clan" id="obrazac">
+      <h3>Obrazac za odustanak</h3>
+      <div>
+        <form data-form="odustanak" id="odustanakForma" novalidate>
+          <div class="dva">
+            <div class="polje"><label for="o-broj">Broj porudžbine</label><input id="o-broj" name="broj" placeholder="SV-2026-0000" required></div>
+            <div class="polje"><label for="o-datum">Datum prijema robe</label><input id="o-datum" name="datum" type="date" required></div>
+          </div>
+          <div class="polje"><label for="o-ime">Ime i prezime</label><input id="o-ime" name="ime" autocomplete="name" required></div>
+          <div class="polje"><label for="o-adresa">Adresa</label><input id="o-adresa" name="adresa" autocomplete="street-address" required></div>
+          <div class="polje"><label for="o-mejl">Mejl</label><input id="o-mejl" name="mejl" type="email" autocomplete="email" required></div>
+          <button class="dugme" type="submit">Pošaljite izjavu o odustanku</button>
+          <p class="poruka-ok" id="odustanakOk" role="status" hidden></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="clan" id="reklamacije">
+      <h3>Reklamacije, odustanak i vraćanje robe</h3>
+      <div>
+        <p>Ako je kesa oštećena ili kafa nije ono što ste poručili, reklamaciju možete podneti mejlom na porudzbine@svitanje.primer, telefonom na 060 000 07 01 ili lično u radnji. Uz reklamaciju priložite broj porudžbine ili račun.</p>
+        <p>Vodimo evidenciju primljenih reklamacija. Prijem potvrđujemo odmah, a odgovor i rešenje dajemo u rokovima u skladu sa Zakonom o zaštiti potrošača. Za odustanak od kupovine pogledajte <a href="#odustanak">pravo na odustanak</a>.</p>
+      </div>
+    </div>
+
+    <div class="clan" id="privatnost">
+      <h3>Politika privatnosti</h3>
+      <div>
+        <p>Ime, telefon, mejl i adresu koristimo samo da bismo isporučili porudžbinu i javili Vam se u vezi sa njom. Podatke dajemo jedino kurirskoj službi, u meri potrebnoj za dostavu. Možete tražiti uvid, ispravku ili brisanje podataka mejlom.</p>
+      </div>
+    </div>
+
+    <div class="clan" id="kolacici">
+      <h3>Kolačići</h3>
+      <div>
+        <p>Ovaj sajt ne koristi kolačiće za praćenje ni oglašavanje. Korpa postoji samo dok je stranica otvorena.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="podnozje">
+  <div class="okvir">
+    <div>
+      <b style="font:600 1.4rem/1 var(--naslov)">Svitanje</b>
+      <p style="margin-top:8px">Karađorđeva 65, Beograd · <a href="tel:+381600000701">060 000 07 01</a></p>
+    </div>
+    <ul aria-label="Pravne informacije">
+      <li><a href="#trgovac">Podaci o trgovcu</a></li>
+      <li><a href="#uslovi">Uslovi kupovine</a></li>
+      <li><a href="#uslovi-dostava">Dostava</a></li>
+      <li><a href="#uslovi-placanje">Plaćanje</a></li>
+      <li><a href="#odustanak">Pravo na odustanak</a></li>
+      <li><a href="#reklamacije">Reklamacije</a></li>
+      <li><a href="#privatnost">Privatnost</a></li>
+      <li><a href="#kolacici">Kolačići</a></li>
+    </ul>
+    <p class="demo-nap">Primer sajta · izradio opsforma. Firma je izmišljena. <a href="../../">Svi primeri</a></p>
+  </div>
+</footer>
+
+<!-- detalj proizvoda -->
+<dialog class="detalj" id="detalj" aria-labelledby="detaljNaslov">
+  <div class="detalj-in" id="detaljIn"></div>
+</dialog>
+
+<!-- korpa i poručivanje -->
+<div class="zavesa" id="zavesa" hidden></div>
+<aside class="fioka" id="korpa" role="dialog" aria-modal="true" aria-labelledby="fiokaNaslov" tabindex="-1" hidden>
+  <div class="fioka-vrh">
+    <h2 id="fiokaNaslov">Korpa</h2>
+    <button class="zatvori" type="button" id="zatvoriKorpu">Zatvori</button>
+  </div>
+  <div class="fioka-telo" id="fiokaTelo">
+    <!-- 1) pregled korpe -->
+    <div id="vKorpa">
+      <ul class="stavke" id="stavke"></ul>
+      <p class="prazno" id="prazno">Korpa je prazna. Izaberite kafu iz ponude.</p>
+      <div id="zbirKorpe"></div>
+    </div>
+
+    <!-- 2) poručivanje u koracima -->
+    <form id="vKasa" novalidate hidden>
+      <ol class="koraci" aria-label="Koraci poručivanja">
+        <li data-k="1">1. Kontakt</li><li data-k="2">2. Dostava</li><li data-k="3">3. Plaćanje</li><li data-k="4">4. Pregled</li>
+      </ol>
+
+      <fieldset class="korak izbor" data-korak="1">
+        <h3>Kontakt</h3>
+        <div class="polje"><label for="c-ime">Ime i prezime</label><input id="c-ime" name="ime" autocomplete="name" required><span class="greska" id="g-ime"></span></div>
+        <div class="polje"><label for="c-tel">Telefon</label><input id="c-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="060 123 4567" required><span class="greska" id="g-tel"></span></div>
+        <div class="polje"><label for="c-mejl">Mejl</label><input id="c-mejl" name="mejl" type="email" autocomplete="email" required><span class="greska" id="g-mejl"></span></div>
+      </fieldset>
+
+      <fieldset class="korak izbor" data-korak="2" hidden>
+        <h3>Dostava</h3>
+        <label class="opcija"><input type="radio" name="dostava" value="kurir" checked><span><b>Kurirom na adresu</b><small id="kurirCena">450 RSD, rok 1–3 radna dana</small></span></label>
+        <label class="opcija"><input type="radio" name="dostava" value="licno"><span><b>Lično preuzimanje u radnji</b><small>Karađorđeva 65. Pon–pet 8–19 h, subota 9–15 h. Besplatno.</small></span></label>
+        <div id="adresa">
+          <div class="polje"><label for="c-ulica">Ulica i broj</label><input id="c-ulica" name="ulica" autocomplete="street-address"><span class="greska" id="g-ulica"></span></div>
+          <div class="dva">
+            <div class="polje"><label for="c-mesto">Mesto</label><input id="c-mesto" name="mesto" autocomplete="address-level2"><span class="greska" id="g-mesto"></span></div>
+            <div class="polje"><label for="c-pb">Poštanski broj</label><input id="c-pb" name="pb" inputmode="numeric" autocomplete="postal-code" maxlength="5"><span class="greska" id="g-pb"></span></div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="korak izbor" data-korak="3" hidden>
+        <h3>Plaćanje</h3>
+        <div id="placanja"></div>
+      </fieldset>
+
+      <fieldset class="korak izbor" data-korak="4" hidden>
+        <h3>Pregled porudžbine</h3>
+        <div id="pregled"></div>
+        <label class="saglasnost"><input type="checkbox" id="saglasan"><span>Pročitao/la sam <a href="#uslovi">uslove kupovine</a> i <a href="#odustanak">obaveštenje o pravu na odustanak</a>.</span></label>
+        <p class="greska" id="g-saglasan"></p>
+      </fieldset>
+    </form>
+
+    <!-- 3) potvrda -->
+    <div id="vPotvrda" hidden tabindex="-1"></div>
+  </div>
+  <div class="fioka-dno" id="fiokaDno"></div>
+</aside>
+
+<div class="obavestenje" id="obavestenje" role="status" hidden><span id="obavTekst"></span><button type="button" id="obavDugme">Korpa</button></div>
+
+<script>
+/*
+  PRODUKCIJA
+  ----------
+  Ovaj primer radi samo u pregledaču i ništa ne šalje. Na pravom sajtu:
+  - Porudžbina (stavke, kontakt, dostava, način plaćanja, broj porudžbine) ide vlasniku
+    preko Web3Forms (POST https://api.web3forms.com/submit sa hidden access_key) na mejl,
+    i/ili kao Viber poruka (Viber bot ili obaveštenje sa telefona).
+  - Kupac dobija istu potvrdu i mejlom; za uplatnicu se u mejl stavljaju podaci za uplatu
+    i pravi IPS QR kod (NBS standard, generiše se iz podataka porudžbine).
+  - Plaćanje karticom nije deo paketa 4. Ako zatreba (paket 5): e-commerce usluga banke
+    (preusmeravanje na stranu banke, 3D Secure) ili platforma (WooCommerce/Shopify sa dodatkom
+    banke); IPS plaćanje aplikacijom ide preko banke.
+  - Ponuda i stanje mogu da se čitaju iz objavljene Google tabele (CSV + fetch).
+*/
+(function(){
+  'use strict';
+  var FIRMA = 'Pržionica kafe Svitanje';
+  var PRIMALAC = 'Pržionica kafe Svitanje, Marija Petrović PR, Karađorđeva 65, Beograd';
+  var PREFIKS = 'SV';
+  var KURIR = 450, PRAG = 3000;
+
+  var BOJE_PRZENJA = ['#C9A57A','#A87A4F','#7F5232','#55341F','#2A1D17'];
+  var NIVO = ['svetlo','svetlo do srednje','srednje','srednje do tamno','tamno'];
+  var MLEVENJE = {zrno:'Zrno', espreso:'Espreso', filter:'Filter', dzezva:'Džezva'};
+  var PAK = {'250':'250\u00a0g','1000':'1\u00a0kg'};
+  var KAT = {jednorodne:'Jednorodna kafa', espreso:'Espreso mešavina', dzezva:'Za džezvu', bezkofeina:'Bez kofeina'};
+
+  /* Ponuda (na pravom sajtu može da se čita iz Google tabele) */
+  var KAFE = [
+    {id:'etiopija', naziv:'Etiopija Jirgacheffe', kat:'jednorodne', note:'jasmin, bergamot, limun', p:1, cena:{'250':1290,'1000':4590}, mlev:'filter',
+     opis:'Lagana i cvetna kafa, sa izraženom kiselošću. Najbolja kao filter ili hladno ceđena.', poreklo:'Etiopija, region Jirgacheffe', sastav:'100 % arabika, etiopske lokalne sorte', obrada:'prana', visina:'1.900–2.200 m'},
+    {id:'kenija', naziv:'Kenija Nyeri', kat:'jednorodne', note:'crna ribizla, grejpfrut, med', p:2, cena:{'250':1390,'1000':4890}, mlev:'filter',
+     opis:'Sočna, voćna i jasna. Za filter i aeropress; kao espreso je oštra.', poreklo:'Kenija, okrug Nyeri', sastav:'100 % arabika, SL28 i SL34', obrada:'prana', visina:'1.700–1.900 m'},
+    {id:'kolumbija', naziv:'Kolumbija Huila', kat:'jednorodne', note:'karamel, crvena jabuka, kakao', p:3, cena:{'250':1150,'1000':4090}, mlev:'zrno',
+     opis:'Uravnotežena, slatka kafa za svaki dan. Dobra i kao espreso i kao filter.', poreklo:'Kolumbija, departman Huila', sastav:'100 % arabika, Caturra i Castillo', obrada:'prana', visina:'1.600–1.800 m'},
+    {id:'gvatemala', naziv:'Gvatemala Antigua', kat:'jednorodne', note:'kakao, šljiva, braon šećer', p:3, cena:{'250':1190,'1000':4190}, mlev:'zrno',
+     opis:'Puno telo i čokoladna slatkoća. Lepo podnosi mleko.', poreklo:'Gvatemala, dolina Antigua', sastav:'100 % arabika, Bourbon i Caturra', obrada:'prana', visina:'1.500–1.700 m'},
+    {id:'brazil', naziv:'Brazil Cerrado', kat:'jednorodne', note:'lešnik, mlečna čokolada', p:4, cena:{'250':990,'1000':3490}, mlev:'espreso',
+     opis:'Blaga, orašasta, sa malo kiselosti. Za moka lonče i espreso sa mlekom.', poreklo:'Brazil, Cerrado Mineiro', sastav:'100 % arabika, Mundo Novo i Catuaí', obrada:'prirodna (suva)', visina:'1.000–1.200 m'},
+    {id:'ruanda', naziv:'Ruanda Huye', kat:'jednorodne', note:'hibiskus, crvena pomorandža, šećerna trska', p:2, cena:{'250':1350,'1000':4790}, mlev:'filter',
+     opis:'Živa i čista, sa slatkim krajem. Za filter i aeropress.', poreklo:'Ruanda, okrug Huye', sastav:'100 % arabika, Red Bourbon', obrada:'prana', visina:'1.700–2.000 m'},
+    {id:'indija', naziv:'Indija Monsooned Malabar', kat:'jednorodne', note:'začini, kakao, malo kiselosti', p:5, cena:{'250':1090,'1000':3890}, mlev:'espreso',
+     opis:'Zrno odležalo na monsunskom vetru: teško telo, zemljani ukus i skoro bez kiselosti. Za espreso i džezvu.', poreklo:'Indija, obala Malabar', sastav:'100 % arabika', obrada:'suva, monsunsko odležavanje', visina:'1.000–1.500 m'},
+    {id:'zora', naziv:'Mešavina Zora', kat:'espreso', note:'tamna čokolada, pomorandža', p:4, cena:{'250':1050,'1000':3790}, mlev:'espreso',
+     opis:'Naša kućna mešavina za espreso. Slatka, sa gustom kremom; ista koju točimo za šankom.', poreklo:'Brazil 60 %, Etiopija 25 %, Kolumbija 15 %', sastav:'100 % arabika', obrada:'prirodna i prana', visina:'1.000–2.000 m'},
+    {id:'podne', naziv:'Mešavina Podne', kat:'espreso', note:'kakao, pečeni orah, gusta krema', p:5, cena:{'250':890,'1000':3190}, mlev:'espreso',
+     opis:'Jača mešavina sa robustom, za one koji vole italijanski espreso i kafu sa mnogo mleka.', poreklo:'Brazil 50 %, Indija 30 %, Gvatemala 20 %', sastav:'80 % arabika, 20 % robusta', obrada:'prirodna i prana', visina:'600–1.700 m'},
+    {id:'domaca', naziv:'Domaća Svitanje', kat:'dzezva', note:'puna, sa blagom gorčinom', p:4, cena:{'250':690,'1000':2490}, mlev:'dzezva',
+     opis:'Za kuvanu kafu u džezvi. Lepo se peni i nije kisela.', poreklo:'Brazil 70 %, Vijetnam 30 %', sastav:'70 % arabika, 30 % robusta', obrada:'prirodna', visina:'600–1.200 m'},
+    {id:'domaca-tamna', naziv:'Domaća tamna', kat:'dzezva', note:'jaka, gorka čokolada', p:5, cena:{'250':650,'1000':2350}, mlev:'dzezva',
+     opis:'Tamnije pržena domaća kafa, za one koji je piju jaku i bez šećera.', poreklo:'Brazil 60 %, Indija 40 %', sastav:'60 % arabika, 40 % robusta', obrada:'prirodna', visina:'600–1.100 m'},
+    {id:'bez-kofeina', naziv:'Kolumbija bez kofeina', kat:'bezkofeina', note:'karamel, mleko, blaga kiselost', p:3, cena:{'250':1250,'1000':4450}, mlev:'zrno',
+     opis:'Za veče i za one koji ne smeju kofein. Kofein je uklonjen prirodnim postupkom iz šećerne trske.', poreklo:'Kolumbija, departman Huila', sastav:'100 % arabika, bez kofeina (do 0,1 %)', obrada:'prana, dekofeinizacija etil-acetatom', visina:'1.600–1.800 m'}
+  ];
+  var poId = {}; KAFE.forEach(function(k){ poId[k.id] = k; });
+
+  function rsd(n){ return n.toLocaleString('de-DE') + ' RSD'; }
+  function el(id){ return document.getElementById(id); }
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+  /* ---------- katalog ---------- */
+  function skala(p){
+    var h = '<div class="skala"><span>svetlo</span><ol aria-label="Prženje: ' + NIVO[p-1] + '">';
+    for (var i = 1; i <= 5; i++){
+      h += i === p ? '<li class="da" style="background:' + BOJE_PRZENJA[i-1] + '"></li>' : '<li></li>';
+    }
+    return h + '</ol><span>tamno</span></div>';
+  }
+  function etiketa(k){
+    var pak = '', mlev = '';
+    Object.keys(PAK).forEach(function(v, i){
+      pak += '<label class="cip"><input type="radio" name="pak-' + k.id + '" value="' + v + '"' + (i === 0 ? ' checked' : '') + '><span>' + PAK[v] + '</span></label>';
+    });
+    Object.keys(MLEVENJE).forEach(function(v){
+      mlev += '<label class="cip"><input type="radio" name="mlev-' + k.id + '" value="' + v + '"' + (v === k.mlev ? ' checked' : '') + '><span>' + MLEVENJE[v] + '</span></label>';
+    });
+    return '<article class="etiketa" data-id="' + k.id + '" data-kat="' + k.kat + '">' +
+      '<div class="et-vrh"><span>' + KAT[k.kat] + '</span><span>' + k.visina + '</span></div>' +
+      '<h3>' + k.naziv + '</h3><p class="note">' + k.note + '</p>' + skala(k.p) +
+      '<fieldset class="izbor"><legend>Pakovanje</legend><div class="cipovi">' + pak + '</div></fieldset>' +
+      '<fieldset class="izbor"><legend>Mlevenje</legend><div class="cipovi">' + mlev + '</div></fieldset>' +
+      '<button type="button" class="detalji-link" data-detalj="' + k.id + '">Opis, poreklo i sastav</button>' +
+      '<div class="et-dno"><span class="cena" data-cena>' + rsd(k.cena['250']) + '</span>' +
+      '<button type="button" class="dugme puno" data-dodaj="' + k.id + '">Dodaj u korpu</button></div></article>';
+  }
+  el('etikete').innerHTML = KAFE.map(etiketa).join('');
+
+  function izborKartice(id){
+    var c = document.querySelector('.etiketa[data-id="' + id + '"]');
+    return {pak: c.querySelector('input[name="pak-' + id + '"]:checked').value,
+            mlev: c.querySelector('input[name="mlev-' + id + '"]:checked').value};
+  }
+  el('etikete').addEventListener('change', function(e){
+    var c = e.target.closest('.etiketa'); if (!c) return;
+    var id = c.dataset.id, iz = izborKartice(id);
+    c.querySelector('[data-cena]').textContent = rsd(poId[id].cena[iz.pak]);
+  });
+  el('etikete').addEventListener('click', function(e){
+    var b = e.target.closest('[data-dodaj]');
+    if (b){ var iz = izborKartice(b.dataset.dodaj); dodaj(b.dataset.dodaj, iz.pak, iz.mlev, b); return; }
+    var d = e.target.closest('[data-detalj]');
+    if (d) otvoriDetalj(d.dataset.detalj, d);
+  });
+
+  el('filter').addEventListener('click', function(e){
+    var b = e.target.closest('button'); if (!b) return;
+    [].forEach.call(this.querySelectorAll('button'), function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    [].forEach.call(document.querySelectorAll('.etiketa'), function(c){
+      c.hidden = !(b.dataset.kat === 'sve' || c.dataset.kat === b.dataset.kat);
+    });
+  });
+
+  /* ---------- detalj ---------- */
+  var detalj = el('detalj'), detaljOkidac = null;
+  function otvoriDetalj(id, okidac){
+    var k = poId[id]; detaljOkidac = okidac;
+    el('detaljIn').innerHTML =
+      '<h3 id="detaljNaslov">' + k.naziv + '</h3><p class="note" style="margin:0">' + k.note + '</p>' + skala(k.p) +
+      '<p>' + k.opis + '</p>' +
+      '<dl><dt>Poreklo</dt><dd>' + k.poreklo + '</dd><dt>Sastav</dt><dd>' + k.sastav + '</dd><dt>Obrada</dt><dd>' + k.obrada + '</dd>' +
+      '<dt>Nadmorska visina</dt><dd>' + k.visina + '</dd><dt>Pakovanje</dt><dd>250&nbsp;g (' + rsd(k.cena['250']) + ') ili 1&nbsp;kg (' + rsd(k.cena['1000']) + '), kesa sa ventilom</dd>' +
+      '<dt>Rok upotrebe</dt><dd>12 meseci od prženja; najbolja u prvih mesec dana</dd><dt>Čuvanje</dt><dd>zatvorena, na suvom i tamnom, ne u frižideru</dd></dl>' +
+      '<a class="zakon-link" href="#reklamacije">Reklamacije, odustanak i vraćanje robe</a>' +
+      '<div class="detalj-dno"><button type="button" class="dugme" data-zatvori-detalj>Zatvori</button>' +
+      '<button type="button" class="dugme puno" data-dodaj-detalj="' + id + '">Dodaj u korpu</button></div>';
+    detalj.showModal();
+  }
+  detalj.addEventListener('click', function(e){
+    if (e.target === detalj || e.target.closest('[data-zatvori-detalj]')) { detalj.close(); return; }
+    if (e.target.closest('.zakon-link')) { detalj.close(); return; }
+    var b = e.target.closest('[data-dodaj-detalj]');
+    if (b){ var iz = izborKartice(b.dataset.dodajDetalj); detalj.close(); dodaj(b.dataset.dodajDetalj, iz.pak, iz.mlev, detaljOkidac); }
+  });
+  detalj.addEventListener('close', function(){ if (detaljOkidac && document.body.contains(detaljOkidac)) detaljOkidac.focus(); });
+
+  /* ---------- korpa ---------- */
+  var korpa = [];   // {kljuc, id, pak, mlev, kol}
+  function cenaStavke(s){ return poId[s.id].cena[s.pak]; }
+  function medjuzbir(){ return korpa.reduce(function(a, s){ return a + cenaStavke(s) * s.kol; }, 0); }
+  function brojStavki(){ return korpa.reduce(function(a, s){ return a + s.kol; }, 0); }
+  function dostavaCena(nacin){ if (nacin === 'licno') return 0; return medjuzbir() >= PRAG ? 0 : KURIR; }
+
+  var obavTimer;
+  function dodaj(id, pak, mlev){
+    var kljuc = id + '|' + pak + '|' + mlev, s = korpa.filter(function(x){ return x.kljuc === kljuc; })[0];
+    if (s) s.kol++; else korpa.push({kljuc:kljuc, id:id, pak:pak, mlev:mlev, kol:1});
+    osvezi();
+    el('obavTekst').textContent = 'Dodato: ' + poId[id].naziv + ', ' + PAK[pak] + ', ' + MLEVENJE[mlev].toLowerCase() + '.';
+    el('obavDugme').textContent = 'Korpa (' + brojStavki() + ')';
+    el('obavestenje').hidden = false;
+    clearTimeout(obavTimer); obavTimer = setTimeout(function(){ el('obavestenje').hidden = true; }, 4000);
+  }
+  el('obavDugme').addEventListener('click', function(){ el('obavestenje').hidden = true; otvoriKorpu(el('korpaDugme')); });
+
+  function osvezi(){
+    el('korpaBroj').textContent = brojStavki();
+    var lista = el('stavke');
+    lista.innerHTML = korpa.map(function(s){
+      var k = poId[s.id];
+      return '<li class="stavka" data-kljuc="' + s.kljuc + '"><div><h3>' + k.naziv + '</h3><span class="opis">' + PAK[s.pak] + ', ' + MLEVENJE[s.mlev].toLowerCase() + ' · ' + rsd(cenaStavke(s)) + '</span></div>' +
+        '<span class="iznos">' + rsd(cenaStavke(s) * s.kol) + '</span>' +
+        '<div class="kol"><button type="button" class="manje" aria-label="Smanji količinu: ' + k.naziv + '">−</button><output aria-live="polite">' + s.kol + '</output>' +
+        '<button type="button" class="vise" aria-label="Povećaj količinu: ' + k.naziv + '">+</button>' +
+        '<button type="button" class="ukloni">Ukloni</button></div></li>';
+    }).join('');
+    el('prazno').hidden = korpa.length > 0;
+    var mz = medjuzbir(), d = dostavaCena('kurir');
+    el('zbirKorpe').innerHTML = korpa.length ? (
+      '<dl class="zbir"><dt>Međuzbir</dt><dd id="zMedju">' + rsd(mz) + '</dd>' +
+      '<dt>Dostava kurirom</dt><dd id="zDost">' + (d ? rsd(d) : 'besplatno') + '</dd>' +
+      '<dt class="ukupno">Ukupno</dt><dd class="ukupno" id="zUkupno">' + rsd(mz + d) + '</dd></dl>' +
+      '<p class="prag" id="zPrag">' + (mz >= PRAG ? 'Dostava je besplatna.' : 'Još ' + rsd(PRAG - mz) + ' do besplatne dostave.') +
+      '<span class="prag-linija" aria-hidden="true"><i style="width:' + Math.min(100, Math.round(mz / PRAG * 100)) + '%"></i></span></p>' +
+      '<p class="tiho" style="font-size:.86rem;margin-top:12px">Lično preuzimanje u radnji je besplatno. Cene su konačne, u dinarima.</p>') : '';
+    if (pogled === 'korpa') dnoKorpe();
+  }
+  el('stavke').addEventListener('click', function(e){
+    var li = e.target.closest('.stavka'); if (!li) return;
+    var s = korpa.filter(function(x){ return x.kljuc === li.dataset.kljuc; })[0]; if (!s) return;
+    var fokus = null;
+    if (e.target.closest('.vise')) { s.kol++; fokus = '.vise'; }
+    else if (e.target.closest('.manje')) { s.kol--; fokus = '.manje'; }
+    else if (e.target.closest('.ukloni')) s.kol = 0;
+    else return;
+    if (s.kol <= 0) korpa.splice(korpa.indexOf(s), 1);
+    osvezi();
+    var novi = fokus && document.querySelector('.stavka[data-kljuc="' + s.kljuc + '"] ' + fokus);
+    (novi || el('fiokaNaslov').parentNode.querySelector('.zatvori')).focus();
+  });
+
+  /* ---------- fioka ---------- */
+  var fioka = el('korpa'), zavesa = el('zavesa'), okidac = null, pogled = 'korpa';
+  function otvoriKorpu(o){
+    okidac = o || el('korpaDugme');
+    prikazi('korpa');   /* uvek počinje od korpe; uneti podaci ostaju u formi */
+    fioka.hidden = false; zavesa.hidden = false;
+    document.documentElement.style.overflow = 'hidden';
+    el('korpaDugme').setAttribute('aria-expanded', 'true');
+    fioka.focus();
+  }
+  function zatvoriKorpu(){
+    if (fioka.hidden) return;
+    fioka.hidden = true; zavesa.hidden = true;
+    document.documentElement.style.overflow = '';
+    el('korpaDugme').setAttribute('aria-expanded', 'false');
+    if (pogled === 'potvrda') { korpa = []; prikazi('korpa'); osvezi(); }
+    (okidac || el('korpaDugme')).focus();
+  }
+  el('korpaDugme').addEventListener('click', function(){ otvoriKorpu(this); });
+  el('zatvoriKorpu').addEventListener('click', zatvoriKorpu);
+  zavesa.addEventListener('click', zatvoriKorpu);
+  fioka.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="#"]');
+    if (a) { zatvoriKorpu(); }
+  });
+
+  var korak = 1;
+  function prikazi(p){
+    pogled = p;
+    el('vKorpa').hidden = p !== 'korpa';
+    el('vKasa').hidden = p !== 'kasa';
+    el('vPotvrda').hidden = p !== 'potvrda';
+    el('fiokaNaslov').textContent = p === 'korpa' ? 'Korpa' : p === 'kasa' ? 'Poručivanje' : 'Porudžbina primljena';
+    if (p === 'korpa') dnoKorpe();
+    if (p === 'kasa') idiNaKorak(korak);
+    if (p === 'potvrda') el('fiokaDno').innerHTML = '<button type="button" class="dugme puno" id="nazadProdavnica">Nazad na prodavnicu</button>';
+    el('fiokaTelo').scrollTop = 0;
+  }
+  function dnoKorpe(){
+    el('fiokaDno').innerHTML = '<button type="button" class="dugme glavno" id="naKasu"' + (korpa.length ? '' : ' disabled') + '>Nastavite na poručivanje</button>' +
+      '<button type="button" class="dugme" id="nastaviKupovinu">Nastavite kupovinu</button>';
+  }
+  el('fiokaDno').addEventListener('click', function(e){
+    var t = e.target.closest('button'); if (!t) return;
+    if (t.id === 'naKasu') { korak = 1; prikazi('kasa'); var f = el('c-ime'); f && f.focus(); }
+    else if (t.id === 'nastaviKupovinu') { zatvoriKorpu(); location.hash = '#ponuda'; }
+    else if (t.id === 'nazad') { if (korak === 1) prikazi('korpa'); else idiNaKorak(korak - 1); }
+    else if (t.id === 'dalje') { if (proveri(korak)) idiNaKorak(korak + 1); }
+    else if (t.id === 'poruci') poruci();
+    else if (t.id === 'nazadProdavnica') { zatvoriKorpu(); location.hash = '#ponuda'; }
+  });
+
+  /* ---------- poručivanje ---------- */
+  var forma = el('vKasa');
+  function vrednost(n){ var x = forma.querySelector('[name="' + n + '"]:checked'); return x ? x.value : null; }
+  function idiNaKorak(n){
+    korak = n;
+    [].forEach.call(forma.querySelectorAll('.korak'), function(f){ f.hidden = +f.dataset.korak !== n; });
+    [].forEach.call(forma.querySelectorAll('.koraci li'), function(li){ li.classList.toggle('akt', +li.dataset.k <= n); });
+    if (n === 2) { el('adresa').hidden = vrednost('dostava') !== 'kurir'; el('kurirCena').textContent = (dostavaCena('kurir') ? rsd(KURIR) : 'Besplatno (porudžbina od 3.000 RSD)') + ', rok 1–3 radna dana'; }
+    if (n === 3) crtajPlacanja();
+    if (n === 4) crtajPregled();
+    el('fiokaDno').innerHTML = n < 4
+      ? '<div class="nav-koraka"><button type="button" class="dugme" id="nazad">Nazad</button><button type="button" class="dugme glavno" id="dalje">Dalje</button></div>'
+      : '<button type="button" class="dugme glavno" id="poruci">Poruči sa obavezom plaćanja</button><button type="button" class="dugme" id="nazad">Nazad</button>';
+    el('fiokaTelo').scrollTop = 0;
+  }
+  forma.addEventListener('change', function(e){
+    if (e.target.name === 'dostava') el('adresa').hidden = e.target.value !== 'kurir';
+    if (e.target.id === 'saglasan' && e.target.checked) el('g-saglasan').textContent = '';
+  });
+  forma.addEventListener('submit', function(e){ e.preventDefault(); });
+
+  var PLACANJA = {
+    pouzece:   {naziv:'Pouzećem', opis:'Plaćate kuriru gotovinom pri preuzimanju.', za:['kurir']},
+    uplatnica: {naziv:'Uplatnicom ili IPS QR kodom', opis:'Posle porudžbine dobijate podatke za uplatu i IPS QR kod. Porudžbinu šaljemo kad uplata stigne.', za:['kurir','licno']},
+    gotovina:  {naziv:'Gotovinom pri preuzimanju u radnji', opis:'Plaćate na kasi u Karađorđevoj 65 kad dođete po kafu.', za:['licno']}
+  };
+  function crtajPlacanja(){
+    var d = vrednost('dostava'), staro = vrednost('placanje'), h = '';
+    Object.keys(PLACANJA).forEach(function(k){
+      var p = PLACANJA[k]; if (p.za.indexOf(d) < 0) return;
+      h += '<label class="opcija"><input type="radio" name="placanje" value="' + k + '"' + (k === staro ? ' checked' : '') + '><span><b>' + p.naziv + '</b><small>' + p.opis + '</small></span></label>';
+    });
+    el('placanja').innerHTML = h + '<p class="greska" id="g-placanje"></p><p class="tiho" style="font-size:.86rem">Plaćanje karticom za sada nije moguće.</p>';
+    if (!vrednost('placanje')) forma.querySelector('[name="placanje"]').checked = true;
+  }
+  function podaci(){
+    var d = vrednost('dostava'), mz = medjuzbir(), dc = dostavaCena(d);
+    return {ime:el('c-ime').value.trim(), tel:el('c-tel').value.trim(), mejl:el('c-mejl').value.trim(), dostava:d,
+      adresa: d === 'kurir' ? el('c-ulica').value.trim() + ', ' + el('c-pb').value.trim() + ' ' + el('c-mesto').value.trim() : 'Karađorđeva 65 (lično preuzimanje)',
+      placanje:vrednost('placanje'), medju:mz, dost:dc, ukupno:mz + dc};
+  }
+  function listaStavki(){
+    return '<ul class="stavke" style="margin-bottom:12px">' + korpa.map(function(s){
+      return '<li class="stavka" style="padding:10px 0"><div>' + s.kol + ' × ' + poId[s.id].naziv + '<br><span class="opis">' + PAK[s.pak] + ', ' + MLEVENJE[s.mlev].toLowerCase() + '</span></div><span class="iznos">' + rsd(cenaStavke(s) * s.kol) + '</span></li>';
+    }).join('') + '</ul>';
+  }
+  function crtajPregled(){
+    var p = podaci();
+    el('pregled').innerHTML = listaStavki() +
+      '<dl class="pregled"><dt>Kupac</dt><dd>' + esc(p.ime) + ', ' + esc(p.tel) + '</dd>' +
+      '<dt>Dostava</dt><dd>' + (p.dostava === 'kurir' ? 'Kurirom na adresu: ' + esc(p.adresa) : 'Lično preuzimanje, Karađorđeva 65') + '</dd>' +
+      '<dt>Plaćanje</dt><dd>' + PLACANJA[p.placanje].naziv + '</dd></dl>' +
+      '<dl class="zbir"><dt>Međuzbir</dt><dd>' + rsd(p.medju) + '</dd><dt>Dostava</dt><dd>' + (p.dost ? rsd(p.dost) : 'besplatno') + '</dd>' +
+      '<dt class="ukupno">Ukupno</dt><dd class="ukupno" id="pUkupno">' + rsd(p.ukupno) + '</dd></dl>';
+    el('saglasan').checked = false; el('g-saglasan').textContent = '';
+  }
+
+  function greska(id, poruka){
+    var g = el('g-' + id), f = el('c-' + id);
+    if (g) g.textContent = poruka || '';
+    if (f) { if (poruka) f.setAttribute('aria-invalid', 'true'); else f.removeAttribute('aria-invalid'); }
+    return !poruka;
+  }
+  function proveri(n){
+    var ok = true, prvi = null;
+    function p(id, uslov, poruka){ var r = greska(id, uslov ? '' : poruka); if (!r) { ok = false; if (!prvi) prvi = el('c-' + id); } }
+    if (n === 1) {
+      var ime = el('c-ime').value.trim();
+      p('ime', ime.split(/\s+/).length >= 2 && ime.length >= 4, 'Upišite ime i prezime.');
+      var cifre = el('c-tel').value.replace(/\D/g, '');
+      p('tel', cifre.length >= 9 && cifre.length <= 12, 'Upišite broj telefona, npr. 060 123 4567.');
+      p('mejl', /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(el('c-mejl').value.trim()), 'Upišite ispravan mejl, npr. ime@primer.rs.');
+    }
+    if (n === 2 && vrednost('dostava') === 'kurir') {
+      p('ulica', el('c-ulica').value.trim().length >= 3, 'Upišite ulicu i broj.');
+      p('mesto', el('c-mesto').value.trim().length >= 2, 'Upišite mesto.');
+      p('pb', /^\d{5}$/.test(el('c-pb').value.trim()), 'Poštanski broj ima 5 cifara, npr. 11000.');
+    }
+    if (n === 3 && !vrednost('placanje')) { el('g-placanje').textContent = 'Izaberite način plaćanja.'; ok = false; }
+    if (prvi) prvi.focus();
+    return ok;
+  }
+
+  function brojPorudzbine(){
+    var d = new Date(), pocetak = new Date(d.getFullYear(), 0, 0);
+    var dan = Math.floor((d - pocetak) / 864e5), n = 0;
+    try { n = +(localStorage.getItem('svitanje-brojac') || 0) + 1; localStorage.setItem('svitanje-brojac', n); } catch (e) { n = 1; }
+    return PREFIKS + '-' + d.getFullYear() + '-' + String(100 + dan + n).padStart(4, '0');
+  }
+
+  function poruci(){
+    if (!el('saglasan').checked) {
+      el('g-saglasan').textContent = 'Da biste poručili, potvrdite da ste pročitali uslove kupovine i obaveštenje o pravu na odustanak.';
+      el('saglasan').focus(); return;
+    }
+    var p = podaci(), br = brojPorudzbine(), uputstvo = '';
+    /* PRODUKCIJA: ovde ide fetch('https://api.web3forms.com/submit', {method:'POST', body: ...}) sa porudžbinom. */
+    if (p.placanje === 'pouzece') {
+      uputstvo = '<h3 style="font-size:1.2rem;margin:16px 0 6px">Plaćanje pouzećem</h3><p>Plaćate kuriru gotovinom pri preuzimanju. Iznos za plaćanje: <b>' + rsd(p.ukupno) + '</b>.</p>';
+    } else if (p.placanje === 'uplatnica') {
+      uputstvo = '<h3 style="font-size:1.2rem;margin:16px 0 6px">Podaci za uplatu</h3><div class="uplata"><dl>' +
+        '<dt>Primalac</dt><dd>' + PRIMALAC + '</dd>' +
+        '<dt>Račun primaoca</dt><dd>000-0000000000000-00 (primer)</dd>' +
+        '<dt>Svrha uplate</dt><dd>Porudžbina br. ' + br + '</dd>' +
+        '<dt>Poziv na broj</dt><dd>' + br + '</dd>' +
+        '<dt>Iznos</dt><dd><b>' + rsd(p.ukupno) + '</b></dd></dl>' +
+        '<div class="qr-mesto">Ovde stoji IPS QR kod (primer)</div></div>' +
+        '<p>' + (p.dostava === 'kurir' ? 'Porudžbinu šaljemo kad uplata stigne.' : 'Porudžbinu pripremamo kad uplata stigne i javljamo Vam da je spremna za preuzimanje.') + '</p>';
+    } else {
+      uputstvo = '<h3 style="font-size:1.2rem;margin:16px 0 6px">Gotovinom pri preuzimanju u radnji</h3><p>Plaćate <b>' + rsd(p.ukupno) + '</b> na kasi u Karađorđevoj 65. Javljamo Vam kad je porudžbina spremna, najkasnije sledećeg radnog dana.</p>';
+    }
+    el('vPotvrda').innerHTML =
+      '<span class="oznaka-primer">Primer: porudžbina se ne šalje</span>' +
+      '<p class="tiho" style="margin:0">Broj porudžbine</p><p class="br-por" id="brPor">' + br + '</p>' +
+      '<p>Hvala, ' + esc(p.ime.split(' ')[0]) + '. Potvrdu šaljemo na ' + esc(p.mejl) + '.</p>' +
+      listaStavki() +
+      '<dl class="zbir"><dt>Međuzbir</dt><dd>' + rsd(p.medju) + '</dd><dt>' + (p.dostava === 'kurir' ? 'Dostava kurirom' : 'Lično preuzimanje') + '</dt><dd>' + (p.dost ? rsd(p.dost) : 'besplatno') + '</dd>' +
+      '<dt class="ukupno">Ukupno</dt><dd class="ukupno" id="potUkupno">' + rsd(p.ukupno) + '</dd></dl>' +
+      '<p style="margin-top:14px">' + (p.dostava === 'kurir' ? 'Adresa: ' + esc(p.adresa) + '. Rok dostave 1–3 radna dana.' : 'Preuzimanje: Karađorđeva 65, pon–pet 8–19 h, subota 9–15 h.') + '</p>' +
+      uputstvo +
+      '<p>' + (p.dostava === 'kurir' ? 'Fiskalni račun stiže uz paket.' : 'Fiskalni račun dobijate u radnji.') + '</p>';
+    prikazi('potvrda');
+    el('vPotvrda').focus();
+    forma.reset(); korak = 1;
+  }
+
+  /* ---------- meni ---------- */
+  var meniDugme = document.querySelector('.meni-dugme'), meni = el('meni');
+  function meniStanje(o){ meniDugme.setAttribute('aria-expanded', o ? 'true' : 'false'); meni.classList.toggle('otvoren', o); }
+  meniDugme.addEventListener('click', function(){ meniStanje(meniDugme.getAttribute('aria-expanded') !== 'true'); });
+  meni.addEventListener('click', function(e){ if (e.target.closest('a')) meniStanje(false); });
+
+  document.addEventListener('keydown', function(e){
+    if (e.key !== 'Escape') return;
+    if (!fioka.hidden) { zatvoriKorpu(); return; }
+    if (meniDugme.getAttribute('aria-expanded') === 'true') { meniStanje(false); meniDugme.focus(); }
+  });
+
+  var zag = el('zaglavlje');
+  addEventListener('scroll', function(){ zag.classList.toggle('skrol', scrollY > 8); }, {passive:true});
+
+  /* danas u radnom vremenu */
+  var danas = new Date().getDay();
+  [].forEach.call(document.querySelectorAll('#sati [data-d="' + danas + '"]'), function(x){ x.classList.add('danas'); });
+
+  /* ---------- forme primera ---------- */
+  el('kontaktForma').addEventListener('submit', function(e){
+    e.preventDefault();
+    var o = el('kontaktOk'); o.textContent = 'Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.'; o.hidden = false;
+  });
+  el('odustanakForma').addEventListener('submit', function(e){
+    e.preventDefault();
+    var o = el('odustanakOk'); o.textContent = 'Ovo je primer sajta. Na pravom sajtu izjava o odustanku stiže vlasniku, a Vi dobijate potvrdu prijema mejlom.'; o.hidden = false;
+  });
+
+  osvezi();
+})();
+</script>
+</body>
+</html>

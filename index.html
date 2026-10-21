@@ -306,7 +306,7 @@
   .pk-list h3 { font-family: var(--sans); font-weight: 600; font-size: 1.0625rem; line-height: 1.5; }
   .pk-list p { color: var(--gray); margin-top: 4px; max-width: 46ch; }
   .pk-more { margin-top: 24px; }
-  @media (min-width: 900px) { .pk-list { grid-template-columns: repeat(3, 1fr); column-gap: 28px; } .pk-list li { grid-template-columns: 1fr; } .pk-list .step-num { margin-bottom: 18px; grid-row: auto; } }
+  @media (min-width: 900px) { .pk-list { grid-template-columns: repeat(4, 1fr); column-gap: 28px; } .pk-list li { grid-template-columns: 1fr; } .pk-list .step-num { margin-bottom: 18px; grid-row: auto; } }
 </style>
 </head>
 <body>
@@ -403,13 +403,14 @@
   <section id="paketi" aria-labelledby="paketi-naslov">
     <div class="wrap">
       <div class="sec-grid">
-        <h2 class="sec-title" id="paketi-naslov">Tri paketa</h2>
+        <h2 class="sec-title" id="paketi-naslov">Paketi</h2>
         <p class="sec-lead" style="margin-top:0;align-self:end;max-width:46ch">Svaki radi sa onim što već koristite: telefonom, Viberom, Gmailom i Google Kalendarom.</p>
       </div>
       <ol class="pk-list" style="margin-top:48px">
         <li><span class="step-num" aria-hidden="true">1</span><h3>Osnovni</h3><p>Sajt sa cenama, radnim vremenom, mapom, pozivom i Viberom. Poruke iz forme stižu Vam na mejl.</p></li>
         <li><span class="step-num" aria-hidden="true">2</span><h3>Zakazivanje ili porudžbine</h3><p>Mušterije same biraju slobodan termin ili naruče unapred. Vi ujutru pogledate kalendar na telefonu.</p></li>
         <li><span class="step-num" aria-hidden="true">3</span><h3>Plus</h3><p>Više radnika ili mesta, podsetnik dan ranije, cenovnik koji sami menjate, sajt i na engleskom.</p></li>
+        <li><span class="step-num" aria-hidden="true">4–5</span><h3>Online prodavnica</h3><p>Katalog, korpa i poručivanje. Plaćanje pouzećem, uplatnicom ili bankovnim transferom, a u paketu Plus i karticom.</p></li>
       </ol>
       <p class="pk-more"><a class="btn btn-quiet" href="./paketi/">Detaljno o paketima</a></p>
     </div>
@@ -429,6 +430,7 @@
             <button class="filter" type="button" data-kind="paket" data-filter="1" aria-pressed="false">Osnovni</button>
             <button class="filter" type="button" data-kind="paket" data-filter="2" aria-pressed="false">Zakazivanje</button>
             <button class="filter" type="button" data-kind="paket" data-filter="3" aria-pressed="false">Plus</button>
+            <button class="filter" type="button" data-kind="paket" data-filter="4" aria-pressed="false">Prodavnica</button>
           </div>
         </div>
         <div class="filter-row">
@@ -443,10 +445,11 @@
             <button class="filter" type="button" data-kind="grupa" data-filter="usluge" aria-pressed="false">Usluge u kraju</button>
             <button class="filter" type="button" data-kind="grupa" data-filter="poslovne" aria-pressed="false">Poslovne usluge</button>
             <button class="filter" type="button" data-kind="grupa" data-filter="ucenje" aria-pressed="false">Učenje i zabava</button>
+            <button class="filter" type="button" data-kind="grupa" data-filter="prodavnice" aria-pressed="false">Online prodavnice</button>
           </div>
         </div>
       </div>
-      <p class="filter-status" id="filter-status" aria-live="polite">Prikazano: 70 primera</p>
+      <p class="filter-status" id="filter-status" aria-live="polite">Prikazano: 76 primera</p>
       <ul class="cards" id="cards">
         <li class="card" data-paket="1" data-group="lepota" style="--bg:#141414;--ac:#C9A227;--fg:#F6F5F1">
           <p class="card-pkg">Paket 1 · osnovni</p>
@@ -868,6 +871,42 @@
           <h3 class="card-name">Plesni studio Korak</h3>
           <a class="card-link" href="./plus/ples-korak/">Otvori primer<span class="sr"> za Plesni studio Korak</span></a>
         </li>
+        <li class="card" data-paket="4" data-group="prodavnice" style="--bg:#F6F1EA;--ac:#E2733D;--fg:#2A1D17">
+          <p class="card-pkg">Paket 4 · Prodavnica</p>
+          <p class="card-craft">Kafa, online prodavnica</p>
+          <h3 class="card-name">Pržionica kafe Svitanje</h3>
+          <a class="card-link" href="./prodavnica/przionica-svitanje/">Otvori primer<span class="sr"> za Pržionica kafe Svitanje</span></a>
+        </li>
+        <li class="card" data-paket="4" data-group="prodavnice" style="--bg:#FBF3E0;--ac:#C98A1A;--fg:#2B2418">
+          <p class="card-pkg">Paket 4 · Prodavnica</p>
+          <p class="card-craft">Med, online prodavnica</p>
+          <h3 class="card-name">Pčelarstvo Saće</h3>
+          <a class="card-link" href="./prodavnica/pcelarstvo-sace/">Otvori primer<span class="sr"> za Pčelarstvo Saće</span></a>
+        </li>
+        <li class="card" data-paket="4" data-group="prodavnice" style="--bg:#B9B3D9;--ac:#7F9B87;--fg:#22252B">
+          <p class="card-pkg">Paket 4 · Prodavnica</p>
+          <p class="card-craft">Ručni sapuni, online prodavnica</p>
+          <h3 class="card-name">Sapunjara Kada</h3>
+          <a class="card-link" href="./prodavnica/sapunjara-kada/">Otvori primer<span class="sr"> za Sapunjara Kada</span></a>
+        </li>
+        <li class="card" data-paket="4" data-group="prodavnice" style="--bg:#F5F2ED;--ac:#3B6E8F;--fg:#1F1D1B">
+          <p class="card-pkg">Paket 5 · Prodavnica Plus</p>
+          <p class="card-craft">Keramika, online prodavnica</p>
+          <h3 class="card-name">Studio Grnčar</h3>
+          <a class="card-link" href="./prodavnica/studio-grncar/">Otvori primer<span class="sr"> za Studio Grnčar</span></a>
+        </li>
+        <li class="card" data-paket="4" data-group="prodavnice" style="--bg:#E9E1D6;--ac:#6B1F2A;--fg:#141414">
+          <p class="card-pkg">Paket 5 · Prodavnica Plus</p>
+          <p class="card-craft">Odeća, online prodavnica</p>
+          <h3 class="card-name">Butik Tkanica</h3>
+          <a class="card-link" href="./prodavnica/butik-tkanica/">Otvori primer<span class="sr"> za Butik Tkanica</span></a>
+        </li>
+        <li class="card" data-paket="4" data-group="prodavnice" style="--bg:#FFF8EE;--ac:#2F6B4F;--fg:#1D2A24">
+          <p class="card-pkg">Paket 5 · Prodavnica Plus</p>
+          <p class="card-craft">Hrana za ljubimce, online prodavnica</p>
+          <h3 class="card-name">Pet shop Zdela</h3>
+          <a class="card-link" href="./prodavnica/pet-shop-zdela/">Otvori primer<span class="sr"> za Pet shop Zdela</span></a>
+        </li>
       </ul>
     </div>
   </section>
@@ -968,7 +1007,7 @@
   });
   try {
     var qp = new URLSearchParams(location.search).get('paket');
-    if (qp === '1' || qp === '2' || qp === '3') { state.paket = qp; apply(); }
+    if (qp === '1' || qp === '2' || qp === '3' || qp === '4') { state.paket = qp; apply(); }
   } catch (e) {}
 
   // Kontakt forma -> Web3Forms -> opsformars@gmail.com

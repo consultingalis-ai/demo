@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://opsforma.rs/paketi/">
 <title>Paketi | opsforma</title>
-<meta name="description" content="Tri paketa sajta za firme: vizitkarta, zakazivanje ili porudžbine, i Plus. Radi sa telefonom, Viberom, Gmailom i Google Kalendarom koje već koristite.">
+<meta name="description" content="Paketi sajta za firme: vizitkarta, zakazivanje ili porudžbine, Plus i online prodavnica. Radi sa telefonom, Viberom, Gmailom i Google Kalendarom koje već koristite.">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -118,6 +118,14 @@
   .plan-link { font-weight: 600; text-underline-offset: 4px; text-decoration-thickness: 1.5px; display: inline-block; padding: 10px 0; }
   .plan.featured .plan-link { color: var(--paper); }
 
+  .plans-2 { display: grid; gap: 16px; margin-top: 48px; }
+  @media (min-width: 980px) { .plans-2 { grid-template-columns: repeat(2, 1fr); gap: 20px; } }
+  .need { display: grid; gap: 0; border-top: 1px solid var(--ink); margin-top: 40px; }
+  .need li { display: grid; grid-template-columns: 40px 1fr; gap: 0 12px; padding: 16px 0 18px; border-bottom: 1px solid var(--rule); }
+  .need .n { font-family: var(--serif); font-size: 1.8rem; line-height: 1; }
+  .need h4 { font: 600 1.0625rem/1.4 var(--sans); margin: 2px 0 0; }
+  .need p { grid-column: 2; color: var(--gray); margin-top: 4px; max-width: 60ch; }
+  @media (min-width: 900px) { .need { grid-template-columns: 1fr 1fr; column-gap: 40px; } }
   /* Koraci sa ikonama */
   .flows { display: grid; gap: 56px; margin-top: 48px; }
   @media (min-width: 980px) { .flows { grid-template-columns: 1fr 1fr; gap: 56px; } }
@@ -177,6 +185,7 @@
     <nav class="nav" id="meni" aria-label="Glavna navigacija">
       <ul>
         <li><a href="#paketi">Paketi</a></li>
+        <li><a href="#prodaja">Online prodaja</a></li>
         <li><a href="#zakazivanje">Kako ide zakazivanje</a></li>
         <li><a href="#pitanja">Pitanja</a></li>
         <li><a href="../#primeri">Primeri</a></li>
@@ -190,7 +199,7 @@
   <section class="hero" aria-labelledby="naslov">
     <div class="wrap">
       <p class="eyebrow">Paketi · opsforma</p>
-      <h1 id="naslov">Tri paketa. Uzmite <em>koliko Vam treba.</em></h1>
+      <h1 id="naslov">Pet paketa. Uzmite <em>koliko Vam treba.</em></h1>
       <p class="hero-text">Ne morate da učite novu aplikaciju. Sajt radi sa onim što već imate na telefonu: pozivima, Viberom, Gmailom i Google Kalendarom.</p>
       <ul class="tools" aria-label="Alati koje već koristite">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>Telefon</li>
@@ -293,6 +302,76 @@
     </div>
   </section>
 
+  <section id="prodaja" aria-labelledby="prodaja-naslov">
+    <div class="wrap">
+      <div class="sec-grid">
+        <h2 class="sec-title" id="prodaja-naslov">Online prodaja</h2>
+        <p class="sec-lead" style="margin-top:0;align-self:end;max-width:52ch">Za radnje koje žele da prodaju i preko sajta: katalog, korpa i poručivanje, sa plaćanjem koje Vašim kupcima odgovara.</p>
+      </div>
+      <div class="plans-2">
+        <article class="plan" aria-labelledby="p4">
+          <span class="plan-num" aria-hidden="true">4</span>
+          <h3 id="p4">Prodavnica</h3>
+          <p class="plan-sub">Kupci poručuju sa sajta, a plaćaju kao što su navikli.</p>
+          <div class="plan-block">
+            <h4>Šta dobijate</h4>
+            <ul>
+              <li>Katalog proizvoda sa cenama, korpa i poručivanje</li>
+              <li>Plaćanje pouzećem, uplatnicom sa IPS QR kodom, bankovnim transferom po predračunu ili gotovinom u radnji</li>
+              <li>Dostava kurirom ili lično preuzimanje, sa cenom dostave u korpi</li>
+              <li>Uslovi kupovine, pravo na odustanak, reklamacije i privatnost, kako zakon traži</li>
+            </ul>
+          </div>
+          <div class="plan-block">
+            <h4>Šta radite Vi</h4>
+            <p>Porudžbina Vam stigne na mejl ili Viber. Spakujete je, pošaljete kurirom i izdate fiskalni račun, kao i do sada.</p>
+          </div>
+          <div class="plan-block">
+            <h4>Šta radimo mi</h4>
+            <p>Unosimo proizvode, cene i dostavu, pišemo stranice o kupovini i proveravamo celo poručivanje sa Vama pre puštanja.</p>
+          </div>
+          <div class="plan-price">
+            <p class="price">[cena] <small>RSD</small></p>
+            <a class="plan-link" href="../?paket=4#primeri">Primeri<span class="sr"> prodavnica</span></a>
+          </div>
+        </article>
+        <article class="plan featured" aria-labelledby="p5">
+          <span class="plan-num" aria-hidden="true">5</span>
+          <h3 id="p5">Prodavnica Plus</h3>
+          <p class="plan-sub">Za prodavnice sa više proizvoda i kupcima koji plaćaju karticom.</p>
+          <div class="plan-block">
+            <h4>Šta dobijate</h4>
+            <ul>
+              <li>Sve iz paketa Prodavnica</li>
+              <li>Plaćanje karticom (Visa, Mastercard, DinaCard) preko Vaše banke i IPS plaćanje aplikacijom banke</li>
+              <li>Veličine, boje i druge varijante, sa stanjem zaliha koje menjate u tabeli na telefonu</li>
+              <li>Kuponi za popust, sajt na srpskom i engleskom</li>
+            </ul>
+          </div>
+          <div class="plan-block">
+            <h4>Šta radite Vi</h4>
+            <p>Vodite stanje u tabeli i šaljete porudžbine. Novac od kartica stiže na Vaš poslovni račun.</p>
+          </div>
+          <div class="plan-block">
+            <h4>Šta radimo mi</h4>
+            <p>Povezujemo naplatu sa Vašom bankom, podešavamo varijante i stanje i testiramo plaćanje pre puštanja.</p>
+          </div>
+          <div class="plan-price">
+            <p class="price">[cena] <small>RSD</small></p>
+            <a class="plan-link" href="../?paket=4#primeri">Primeri<span class="sr"> prodavnica</span></a>
+          </div>
+        </article>
+      </div>
+      <h3 style="font-size:2rem;margin-top:64px">Šta je potrebno pre početka</h3>
+      <ol class="need">
+        <li><span class="n" aria-hidden="true">1</span><h4>Registrovana firma ili preduzetnička radnja</h4><p>Online prodaja mora da ide preko firme ili radnje. Ako već imate radnju, potrebna je samo odluka o prodaji preko interneta.</p></li>
+        <li><span class="n" aria-hidden="true">2</span><h4>Fiskalna kasa za online prodaju</h4><p>Za svaku prodaju izdaje se fiskalni račun, uz paket ili elektronski.</p></li>
+        <li><span class="n" aria-hidden="true">3</span><h4>Poslovni račun i ugovor sa kurirskom službom</h4><p>Za uplate, predračune i naplatu pouzećem.</p></li>
+        <li><span class="n" aria-hidden="true">4</span><h4>Za kartice: ugovor sa bankom</h4><p>Samo za paket Prodavnica Plus. Banka odobrava online naplatu karticama, a mi je povezujemo sa sajtom.</p></li>
+      </ol>
+    </div>
+  </section>
+
   <section id="zakazivanje" aria-labelledby="zak-naslov">
     <div class="wrap">
       <div class="sec-grid">
@@ -383,7 +462,7 @@
       <div class="faq">
         <details>
           <summary>Da li mušterije plaćaju preko sajta?</summary>
-          <p>Ne. Mušterije Vam plaćaju gotovinom na licu mesta, uplatnicom ili bankovnim transferom, kako Vam odgovara. Sajt samo prima termine i porudžbine.</p>
+          <p>U paketima 1, 2 i 3 ne: mušterije Vam plaćaju gotovinom na licu mesta, uplatnicom ili bankovnim transferom, kako Vam odgovara. U paketu Prodavnica kupci plaćaju pouzećem, uplatnicom ili bankovnim transferom, a u paketu Prodavnica Plus i karticom preko Vaše banke.</p>
         </details>
         <details>
           <summary>Kako se plaća Vaš sajt?</summary>

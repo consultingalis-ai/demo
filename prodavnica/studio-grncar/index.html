@@ -1,0 +1,1083 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Studio Grnčar – ručno rađena keramika, Bulevar Arsenija Čarnojevića 58</title>
+<meta name="description" content="Studio Grnčar, Novi Beograd. Šolje, činije, tanjiri i vaze sa grnčarskog točka, u glazurama koje birate. Stanje komada u realnom vremenu, plaćanje karticom, IPS-om, uplatnicom ili pouzećem.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Taviraj:wght@300;500&family=Prompt:wght@400;500&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --glina:#F5F2ED; --tamna:#1F1D1B; --plava:#3B6E8F; --terakota:#C27A55;
+  --siva:#665F58; --linija:#DCD5CB; --polica:#ECE7DF;
+  --serif:"Taviraj","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --sans:"Prompt","Avenir Next","Segoe UI",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+html.zakljucano{overflow:hidden}
+body{margin:0;background:var(--glina);color:var(--tamna);font-family:var(--sans);font-weight:400;font-size:1rem;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-wrap:break-word}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--plava);outline-offset:3px}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:300;margin:0;line-height:1.12}
+p{margin:0 0 1em}
+strong,b{font-weight:500}
+button{font:inherit;color:inherit}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.okvir{max-width:1240px;margin:0 auto;padding:0 20px}
+@media (min-width:760px){.okvir{padding:0 48px}}
+
+/* traka primera */
+.demo{font-size:.8125rem;line-height:1.4;color:var(--siva)}
+.demo .okvir{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 14px;padding-top:9px;padding-bottom:9px}
+.demo a{color:var(--tamna);font-weight:500}
+.znacka{display:inline-block;background:var(--tamna);color:var(--glina);padding:2px 10px;font-weight:500;white-space:nowrap}
+
+/* zaglavlje */
+.zaglavlje{position:sticky;top:0;z-index:40;background:var(--glina);border-bottom:1px solid var(--linija)}
+.zaglavlje .okvir{height:64px;display:flex;align-items:center;gap:6px}
+.logo{font-family:var(--serif);font-weight:500;font-size:1.5rem;text-decoration:none;margin-right:auto;letter-spacing:.01em}
+.logo span{font-family:var(--sans);font-weight:400;font-size:.75rem;color:var(--siva);margin-left:8px;letter-spacing:0}
+.meni-dugme{width:48px;height:48px;border:0;background:none;cursor:pointer;display:grid;place-items:center;padding:0}
+.meni-dugme span{display:block;width:22px;height:1px;background:currentColor;box-shadow:0 -6px 0 currentColor,0 6px 0 currentColor}
+.meni{display:none;position:absolute;top:100%;left:0;right:0;background:var(--glina);border-bottom:1px solid var(--linija);padding:8px 20px 20px}
+.meni.otvoren{display:block}
+.meni ul{list-style:none;margin:0;padding:0}
+.meni a{display:flex;align-items:center;min-height:48px;font-family:var(--serif);font-size:1.5rem;text-decoration:none}
+.korpa-dugme{height:48px;padding:0 4px 0 12px;border:0;background:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;font-weight:500;font-size:.9375rem}
+.korpa-dugme b{display:inline-grid;place-items:center;min-width:28px;height:28px;border:1px solid var(--tamna);border-radius:50%;font-weight:500;font-size:.8125rem;padding:0 4px}
+@media (min-width:900px){
+  .meni-dugme{display:none}
+  .meni{display:block;position:static;border:0;padding:0;margin-right:28px}
+  .meni ul{display:flex;gap:30px}
+  .meni a{font-family:var(--sans);font-size:.9375rem;min-height:44px}
+}
+
+/* dugmad */
+.dugme{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border:1px solid var(--tamna);background:none;text-decoration:none;font-weight:500;font-size:.9375rem;cursor:pointer;line-height:1.2;text-align:center;border-radius:2px}
+.dugme.glavno{background:var(--plava);border-color:var(--plava);color:#fff}
+.dugme.glavno:hover{background:#2F5A75;border-color:#2F5A75}
+.dugme.tamno{background:var(--tamna);border-color:var(--tamna);color:var(--glina)}
+.dugme:disabled{opacity:.45;cursor:not-allowed}
+.link-dugme{border:0;background:none;padding:0;min-height:44px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;font-size:.875rem}
+
+/* hero: polica */
+.hero{padding:64px 0 56px}
+@media (min-width:900px){.hero{padding:96px 0 80px}}
+.hero h1{font-size:clamp(2.5rem,8.4vw,5.75rem);letter-spacing:-.02em;line-height:1.02;max-width:14ch}
+.hero .uvod{max-width:32em;margin:28px 0 0;color:var(--siva);font-size:1.0625rem}
+.polica{position:relative;margin:64px 0 0;height:220px;border-bottom:1px solid var(--tamna)}
+@media (min-width:900px){.polica{height:300px;margin-top:80px}}
+.polica svg{position:absolute;bottom:-1px;height:100%;width:auto;overflow:visible}
+.polica .p1{left:0;height:82%}
+.polica .p2{left:37%;height:40%}
+.polica .p3{right:0;height:22%}
+@media (min-width:900px){.polica .p1{left:2%;height:96%}.polica .p2{left:40%;height:58%}.polica .p3{height:46%}}
+.profil{fill:none;stroke-width:1.4;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke;transition:stroke .5s ease}
+.hero-dno{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:28px;margin-top:24px}
+.probaj{display:grid;gap:8px}
+.probaj p{margin:0;font-size:.875rem;color:var(--siva)}
+.akcije{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+
+/* glazure (swatch) */
+.glazure{display:flex;flex-wrap:wrap;gap:2px;margin:0;padding:0;border:0}
+.glazura{width:44px;height:44px;border:0;background:none;padding:0;cursor:pointer;display:grid;place-items:center;border-radius:50%;position:relative}
+.glazura i{display:block;width:24px;height:24px;border-radius:50%;background:var(--g);box-shadow:inset 0 0 0 1px rgba(31,29,27,.18)}
+.glazura[aria-pressed="true"]::after{content:"";position:absolute;inset:5px;border:1px solid var(--tamna);border-radius:50%}
+.glazura:disabled{cursor:not-allowed}
+.glazura:disabled i{opacity:.35}
+.glazura:disabled::before{content:"";position:absolute;left:10px;right:10px;top:50%;height:1px;background:var(--tamna);transform:rotate(-45deg)}
+
+/* sekcije */
+.sekcija{padding:88px 0}
+@media (min-width:900px){.sekcija{padding:136px 0}}
+.uvod-sekcije{display:grid;gap:14px;margin-bottom:44px;max-width:640px}
+.uvod-sekcije h2{font-size:clamp(2.25rem,6vw,3.5rem);letter-spacing:-.015em}
+.uvod-sekcije p{color:var(--siva);margin:0}
+.stanje-napomena{font-size:.8125rem;color:var(--siva)}
+.stanje-napomena b{font-weight:500;color:var(--tamna)}
+
+/* filter */
+.filter{display:flex;flex-wrap:wrap;gap:4px 12px;margin-bottom:56px;border-bottom:1px solid var(--linija)}
+.filter button{min-height:44px;padding:0;border:0;border-bottom:1px solid transparent;margin-bottom:-1px;background:none;cursor:pointer;font-size:.9375rem;color:var(--siva)}
+@media (min-width:600px){.filter{gap:4px 24px}}
+.filter button[aria-pressed="true"]{color:var(--tamna);border-bottom-color:var(--tamna);font-weight:500}
+
+/* galerija: asimetrična mreža */
+.galerija{display:grid;grid-template-columns:minmax(0,1fr);gap:72px 0}
+.komad{width:88%;display:grid;grid-template-columns:minmax(0,1fr);gap:0;min-width:0}
+.komad[data-pos-par="1"]{justify-self:end}
+@media (min-width:640px) and (max-width:1023px){
+  .galerija{grid-template-columns:repeat(2,minmax(0,1fr));gap:88px 48px;align-items:start}
+  .komad{width:100%}
+  .komad[data-pos-par="1"]{margin-top:120px}
+}
+@media (min-width:1024px){
+  .galerija{grid-template-columns:repeat(12,minmax(0,1fr));gap:104px 32px;align-items:start}
+  .komad{width:auto}
+  .komad[data-pos="1"]{grid-column:1 / span 5}
+  .komad[data-pos="2"]{grid-column:7 / span 4;margin-top:160px}
+  .komad[data-pos="3"]{grid-column:2 / span 4}
+  .komad[data-pos="4"]{grid-column:8 / span 5;margin-top:72px}
+  .komad[data-pos="5"]{grid-column:1 / span 4;margin-top:40px}
+  .komad[data-pos="6"]{grid-column:6 / span 3}
+  .komad[data-pos="7"]{grid-column:10 / span 3;margin-top:180px}
+  .komad[data-pos="8"]{grid-column:3 / span 4}
+  .komad[data-pos="9"]{grid-column:8 / span 4;margin-top:96px}
+  .komad[data-pos="10"]{grid-column:1 / span 5}
+}
+.postolje{aspect-ratio:5 / 4;background:var(--polica);position:relative;display:grid;grid-template-columns:minmax(0,1fr);place-items:end center;padding:0 12% 14%}
+.postolje svg{width:100%;height:auto;max-height:100%;overflow:visible}
+.postolje::after{content:"";position:absolute;left:10%;right:10%;bottom:14%;height:1px;background:rgba(31,29,27,.35)}
+.oznaka-komada{display:grid;gap:2px;padding-top:18px}
+.oznaka-komada h3{font-size:1.5rem;font-weight:500;letter-spacing:-.005em}
+.oznaka-komada .mera{font-size:.875rem;color:var(--siva)}
+.oznaka-komada .cena{font-weight:500;font-size:1rem;margin-top:4px}
+.izbor-glazure{margin-top:14px;display:grid;gap:4px}
+.izbor-glazure .legenda{font-size:.8125rem;color:var(--siva)}
+.status{font-size:.875rem;min-height:1.5em;margin:0}
+.status.upozorenje{color:#8C3A1B}
+.status.greska{color:#9B1C2C;font-weight:500}
+.komad-dno{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:12px}
+.komad-dno .dodaj{flex:1 1 auto;max-width:260px}
+.napomena-cene{margin-top:72px;font-size:.875rem;color:var(--siva)}
+
+/* studio, vreme, mapa */
+.studio{display:grid;gap:56px}
+@media (min-width:900px){.studio{grid-template-columns:5fr 7fr;gap:96px}}
+.vreme{list-style:none;margin:0;padding:0;font-size:.9375rem}
+.vreme li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--linija)}
+.vreme li.danas{font-weight:500}
+.vreme li span:last-child{color:var(--siva)}
+.vreme li.danas span:last-child{color:var(--tamna)}
+.mapa{width:100%;height:340px;border:0;display:block;background:var(--polica);filter:grayscale(.4)}
+.adresa{font-family:var(--serif);font-size:1.5rem;margin:0 0 4px}
+.foto{aspect-ratio:4 / 3;background:var(--polica);display:flex;align-items:flex-end;padding:12px;font-size:.75rem;color:var(--siva);margin-bottom:28px}
+.kontakt-akcije{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
+
+/* forme */
+.forma{display:grid;gap:18px;max-width:560px}
+.polje{display:grid;gap:6px}
+.polje label,.legenda{font-weight:500;font-size:.875rem}
+.polje input,.polje textarea{width:100%;min-height:48px;padding:10px 14px;border:1px solid #B9B0A4;border-radius:2px;background:#FBFAF7;font:inherit;font-size:1rem;color:var(--tamna)}
+.polje textarea{min-height:120px;resize:vertical}
+.polje input:focus-visible,.polje textarea:focus-visible{outline:2px solid var(--plava);outline-offset:0}
+.polje .greska{color:#9B1C2C;font-size:.8125rem}
+.polje [aria-invalid="true"]{border-color:#9B1C2C}
+.poruka-primera{border-left:1px solid var(--plava);padding:8px 14px;font-size:.9375rem}
+
+/* pravno */
+.pravno{border-top:1px solid var(--linija);font-size:.9375rem;color:#3A3633}
+.pravno .uvodna{color:var(--siva);font-style:italic;margin-bottom:48px}
+.pravno-mreza{display:grid;gap:48px}
+@media (min-width:900px){.pravno-mreza{grid-template-columns:1fr 1fr;gap:64px 96px}}
+.pravno h2{font-size:clamp(1.75rem,5vw,2.375rem);margin-bottom:14px}
+.pravno ul{padding-left:1.1em;margin:0 0 1em}
+.pravno dl{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;margin:0}
+.pravno dt{font-weight:500}
+.pravno dd{margin:0}
+
+/* podnožje */
+.podnozje{border-top:1px solid var(--linija);padding:48px 0 40px;font-size:.875rem}
+.podnozje .okvir{display:grid;gap:20px}
+.podnozje nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:0 22px}
+.podnozje nav a{display:inline-flex;min-height:44px;align-items:center}
+.podnozje .primer{color:var(--siva);margin:0}
+.podnozje .primer a{color:var(--tamna);font-weight:500}
+
+/* detalj */
+dialog.detalj{border:0;padding:0;width:min(640px,calc(100% - 24px));max-height:calc(100% - 24px);background:var(--glina);color:var(--tamna);border-radius:2px}
+dialog.detalj::backdrop{background:rgba(31,29,27,.5)}
+.detalj-mreza{display:grid}
+@media (min-width:600px){.detalj-mreza{grid-template-columns:220px 1fr}}
+.detalj .postolje{aspect-ratio:auto;min-height:200px}
+.detalj-in{padding:24px 22px}
+@media (min-width:600px){.detalj-in{padding:32px}}
+.detalj-gore{display:flex;align-items:flex-start;gap:12px}
+.detalj h2{font-size:1.875rem;font-weight:500}
+.detalj dl{display:grid;gap:10px;margin:18px 0}
+.detalj dt{font-size:.8125rem;color:var(--siva)}
+.detalj dd{margin:0;font-size:.9375rem}
+.detalj .zakon{display:inline-flex;min-height:44px;align-items:center;font-size:.875rem}
+.zatvori{margin-left:auto;width:44px;height:44px;flex:none;border:1px solid var(--linija);background:none;cursor:pointer;font-size:1.25rem;line-height:1;border-radius:50%}
+.stanje-lista{list-style:none;margin:6px 0 0;padding:0;font-size:.875rem}
+.stanje-lista li{display:flex;justify-content:space-between;gap:12px;padding:4px 0;border-bottom:1px solid var(--linija)}
+
+/* korpa */
+.zastor{position:fixed;inset:0;background:rgba(31,29,27,.4);z-index:60}
+.fioka{position:fixed;top:0;right:0;bottom:0;width:min(440px,calc(100% - 36px));background:var(--glina);z-index:61;display:flex;flex-direction:column;border-left:1px solid var(--linija);transform:translateX(100%);visibility:hidden;transition:transform .28s ease,visibility 0s linear .28s}
+.fioka.otvorena{transform:none;visibility:visible;transition:transform .28s ease}
+.fioka-vrh{display:flex;align-items:center;gap:12px;padding:10px 16px 10px 20px;border-bottom:1px solid var(--linija);min-height:68px}
+.fioka-vrh h2{font-size:1.75rem}
+.fioka-telo{flex:1;overflow-y:auto;overflow-x:hidden;padding:4px 20px 20px}
+.prazna{padding:40px 0;color:var(--siva)}
+.stavka{display:grid;grid-template-columns:52px 1fr auto;gap:2px 14px;padding:18px 0;border-bottom:1px solid var(--linija);align-items:start}
+.stavka .mini{width:52px;height:52px;background:var(--polica);display:grid;place-items:center;padding:6px}
+.stavka .mini svg{width:100%;height:100%}
+.stavka h3{font-family:var(--sans);font-weight:500;font-size:.9375rem;line-height:1.3}
+.stavka .jed{font-size:.8125rem;color:var(--siva)}
+.stavka .iznos{font-weight:500;text-align:right;white-space:nowrap;font-size:.9375rem}
+.stavka .kol{grid-column:2 / -1;display:flex;align-items:center;gap:6px;margin-top:6px}
+.kol button{width:44px;height:44px;border:1px solid var(--linija);background:none;cursor:pointer;font-size:1.125rem;line-height:1;border-radius:50%}
+.kol button:disabled{opacity:.35;cursor:not-allowed}
+.kol button:not(.ukloni),.zatvori{font-family:Arial,"Helvetica Neue",sans-serif;font-size:1.375rem;font-weight:400}
+.kol output{min-width:30px;text-align:center;font-weight:500}
+.kol .ukloni{width:auto;border:0;margin-left:auto;font-size:.8125rem;text-decoration:underline;text-underline-offset:3px;padding:0 4px;border-radius:2px}
+.stavka .maks{grid-column:2 / -1;font-size:.75rem;color:var(--siva);margin:0}
+.fioka-dno{border-top:1px solid var(--linija);padding:16px 20px 20px}
+.zbir{display:grid;grid-template-columns:1fr auto;gap:4px 0;margin:0 0 12px;font-size:.875rem}
+.zbir dt{color:var(--siva)}
+.zbir dd{margin:0;padding-left:12px;text-align:right}
+.zbir .ukupno{font-weight:500;font-size:1.0625rem;color:var(--tamna);padding-top:8px;border-top:1px solid var(--linija);margin-top:4px}
+.prag{font-size:.8125rem;margin:0 0 12px;color:var(--siva)}
+.prag-traka{display:block;height:1px;background:var(--linija);margin-top:6px}
+.prag-traka i{display:block;height:1px;background:var(--plava)}
+.fioka-dno .dugme{width:100%}
+
+/* kasa */
+.kasa{position:fixed;inset:0;z-index:70;background:var(--glina);display:flex;flex-direction:column;overflow:hidden}
+.kasa-vrh{border-bottom:1px solid var(--linija)}
+.kasa-vrh .okvir:first-child{display:flex;align-items:center;gap:12px;min-height:64px}
+.kasa-vrh h2{font-size:1.625rem;margin-right:auto}
+.koraci{list-style:none;margin:0;padding:0 0 12px;width:100%;display:flex;gap:6px;font-size:.75rem;color:var(--siva)}
+.koraci li{flex:1;border-top:1px solid var(--linija);padding-top:6px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.koraci li.gotov{border-color:var(--tamna);color:var(--tamna)}
+.koraci li[aria-current="step"]{border-top:2px solid var(--plava);padding-top:5px;color:var(--tamna);font-weight:500}
+.kasa-telo{flex:1;overflow-y:auto;overflow-x:hidden}
+.kasa-telo .okvir{max-width:660px;padding-top:32px;padding-bottom:40px}
+.korak h3{font-size:2rem;margin-bottom:24px}
+.izbor{display:grid;gap:8px;margin:0 0 20px;padding:0;border:0}
+.izbor legend{padding:0;margin-bottom:10px}
+.opcija{display:grid;grid-template-columns:22px 1fr auto;gap:2px 14px;align-items:start;padding:16px;border:1px solid var(--linija);cursor:pointer;background:#FBFAF7}
+.opcija:has(input:checked){border-color:var(--plava);box-shadow:inset 0 0 0 1px var(--plava)}
+.opcija input{width:20px;height:20px;margin:3px 0 0;accent-color:var(--plava)}
+.opcija strong{font-weight:500}
+.opcija .cena-op{white-space:nowrap;font-size:.9375rem}
+.opcija small{grid-column:2 / -1;color:var(--siva);font-size:.8125rem;line-height:1.5}
+.adresa-polja{display:grid;gap:16px}
+@media (min-width:560px){.adresa-polja{grid-template-columns:1fr 150px}.adresa-polja .siroko{grid-column:1 / -1}}
+.pregled-lista{list-style:none;margin:0 0 20px;padding:0;border-top:1px solid var(--linija)}
+.pregled-lista li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--linija);font-size:.9375rem}
+.pregled-lista li span:last-child{white-space:nowrap}
+.pregled-info{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0 0 20px;font-size:.9375rem}
+.pregled-info dt{color:var(--siva)}
+.pregled-info dd{margin:0}
+.saglasnost{display:grid;grid-template-columns:24px 1fr;gap:12px;align-items:start;padding:16px;border:1px solid var(--linija);cursor:pointer;font-size:.9375rem;background:#FBFAF7}
+.saglasnost input{width:22px;height:22px;margin:2px 0 0;accent-color:var(--plava)}
+.saglasnost.greska{border-color:#9B1C2C}
+.greska-tekst{color:#9B1C2C;font-size:.875rem;margin:8px 0 0}
+.kasa-dno{border-top:1px solid var(--linija);background:var(--glina)}
+.kasa-dno .okvir{max-width:660px;display:flex;flex-wrap:wrap;gap:10px;padding-top:12px;padding-bottom:14px;align-items:center}
+.kasa-dno .ukupno-mali{font-size:.8125rem;color:var(--siva);margin:0 auto 0 0;line-height:1.3;white-space:nowrap}
+.kasa-dno .ukupno-mali b{display:block;color:var(--tamna);font-size:1.0625rem;font-weight:500}
+.kasa-dno .dugme{flex:none}
+#poruci{flex:1 1 100%}
+@media (min-width:600px){#poruci{flex:none}}
+.banka{border:1px solid var(--linija);background:#FBFAF7;padding:24px}
+.banka .kartice{font-weight:500;letter-spacing:.01em}
+.banka .dugmad{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.primer-oznaka{display:inline-block;background:var(--tamna);color:var(--glina);padding:2px 10px;font-size:.75rem;margin-bottom:18px}
+.broj{font-family:var(--serif);font-weight:500;font-size:clamp(1.625rem,6vw,2.5rem);margin:0 0 20px;overflow-wrap:anywhere}
+.uspeh{border-left:2px solid var(--plava);padding:6px 14px;font-weight:500;margin:0 0 20px}
+.uputstvo{border-top:1px solid var(--linija);padding-top:20px}
+.uputstvo h4{font-family:var(--sans);font-weight:500;font-size:1rem;margin-bottom:10px}
+.uplata{display:grid;gap:20px;margin:12px 0 16px}
+@media (min-width:560px){.uplata{grid-template-columns:1fr 168px;align-items:start}}
+.uplata dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:0;font-size:.875rem}
+.uplata dt{color:var(--siva)}
+.uplata dd{margin:0;overflow-wrap:anywhere}
+.qr-mesto{width:168px;height:168px;border:1px solid var(--tamna);display:grid;place-items:center;text-align:center;padding:16px;font-size:.8125rem;color:var(--siva)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demo">
+  <div class="okvir">
+    <span>Primer sajta · izradio opsforma · <a href="../../">Svi primeri</a></span>
+    <span class="znacka">Paket 5: Prodavnica Plus</span>
+  </div>
+</div>
+
+<header class="zaglavlje">
+  <div class="okvir">
+    <a class="logo" href="#pocetak">Grnčar<span>keramički studio</span></a>
+    <button class="meni-dugme" id="meni-dugme" aria-expanded="false" aria-controls="glavni-meni"><span aria-hidden="true"></span><span class="sr">Meni</span></button>
+    <nav class="meni" id="glavni-meni" aria-label="Glavni meni">
+      <ul>
+        <li><a href="#police">Police</a></li>
+        <li><a href="#dostava">Dostava i plaćanje</a></li>
+        <li><a href="#studio">Studio</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <button class="korpa-dugme" id="korpa-dugme" aria-haspopup="dialog">Korpa <b id="broj-stavki" aria-live="polite">0</b><span class="sr"> komada</span></button>
+  </div>
+</header>
+
+<main id="pocetak">
+  <section class="hero" aria-labelledby="h-naslov">
+    <div class="okvir">
+      <h1 id="h-naslov">Keramika sa točka, u glazuri koju sami birate.</h1>
+      <p class="uvod">Šolje, činije, tanjiri i vaze iz našeg studija na Novom Beogradu. Svaki komad okrećemo, glaziramo i pečemo ovde, pa se dva ista nikad potpuno ne poklope.</p>
+      <div class="akcije">
+          <a class="dugme glavno" href="#police">Pogledajte ponudu</a>
+          <a class="dugme" href="tel:+381600000704">Pozovite 060 000 07 04</a>
+          <a class="dugme" href="viber://chat?number=%2B381600000704">Viber</a>
+      </div>
+      <div class="polica" aria-hidden="true">
+        <svg class="p1" viewBox="40 20 120 172"><path class="profil hero-profil" stroke="#3B6E8F" d="M80 190 H120 Q140 150 136 110 Q132 80 114 60 Q108 52 110 30 H90 Q92 52 86 60 Q68 80 64 110 Q60 150 80 190 Z"/></svg>
+        <svg class="p2" viewBox="50 100 112 92"><path class="profil hero-profil" stroke="#3B6E8F" d="M64 190 H128 Q134 190 134 182 V112 H58 V182 Q58 190 64 190 Z M134 128 Q158 128 158 150 Q158 170 134 170"/></svg>
+        <svg class="p3" viewBox="2 106 196 86"><path class="profil hero-profil" stroke="#3B6E8F" d="M60 190 H140 L142 186 Q190 160 194 110 H6 Q10 160 58 186 Z"/></svg>
+      </div>
+      <div class="hero-dno">
+        <div class="probaj">
+          <p id="hero-glazura-tekst">Glazura: plava</p>
+          <div class="glazure" role="group" aria-label="Probajte glazuru" id="hero-glazure"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sekcija" id="police" aria-labelledby="h-police" style="padding-top:40px">
+    <div class="okvir">
+      <div class="uvod-sekcije">
+        <h2 id="h-police">Na policama</h2>
+        <p>Izaberite glazuru, pa dodajte u korpu. Kod svake boje piše koliko komada je ostalo.</p>
+        <p class="stanje-napomena">Stanje sa police: <b id="azurirano">danas u 9:00</b>, iz tabele koju vodimo u studiju (primer).</p>
+      </div>
+      <div class="filter" role="group" aria-label="Kategorija">
+        <button type="button" data-kat="sve" aria-pressed="true">Sve</button>
+        <button type="button" data-kat="solje" aria-pressed="false">Šolje</button>
+        <button type="button" data-kat="cinije" aria-pressed="false">Činije i tanjiri</button>
+        <button type="button" data-kat="vaze" aria-pressed="false">Vaze i saksije</button>
+        <button type="button" data-kat="bokali" aria-pressed="false">Bokali</button>
+      </div>
+      <div class="galerija" id="galerija"></div>
+      <p class="napomena-cene">Cene su konačne, u dinarima. Kamenina, pečena na 1.240 °C, može u mašinu za sudove i mikrotalasnu.</p>
+    </div>
+  </section>
+
+  <section class="sekcija" id="studio" aria-labelledby="h-studio" style="padding-top:0">
+    <div class="okvir studio">
+      <div>
+        <div class="uvod-sekcije">
+          <h2 id="h-studio">Studio</h2>
+          <p>Porudžbine za lično preuzimanje spremamo za isti ili sledeći radni dan. U studiju možete da vidite i komade koji još nisu na sajtu.</p>
+        </div>
+        <ul class="vreme" aria-label="Radno vreme">
+          <li data-dan="1"><span>Ponedeljak</span><span>zatvoreno</span></li>
+          <li data-dan="2"><span>Utorak</span><span>12–20 h</span></li>
+          <li data-dan="3"><span>Sreda</span><span>12–20 h</span></li>
+          <li data-dan="4"><span>Četvrtak</span><span>12–20 h</span></li>
+          <li data-dan="5"><span>Petak</span><span>12–20 h</span></li>
+          <li data-dan="6"><span>Subota</span><span>10–16 h</span></li>
+          <li data-dan="0"><span>Nedelja</span><span>zatvoreno</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foto">Vaša fotografija</div>
+        <p class="adresa">Bulevar Arsenija Čarnojevića 58</p>
+        <p style="color:var(--siva)">Novi Beograd, ulaz iz dvorišta, prizemlje.</p>
+        <iframe class="mapa" title="Mapa: Bulevar Arsenija Čarnojevića 58, Beograd" loading="lazy" src="https://maps.google.com/maps?q=Bulevar%20Arsenija%20%C4%8Carnojevi%C4%87a%2058%2C%20Beograd&amp;z=15&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="sekcija" id="kontakt" aria-labelledby="h-kontakt" style="padding-top:0">
+    <div class="okvir studio">
+      <div>
+        <div class="uvod-sekcije">
+          <h2 id="h-kontakt">Kontakt</h2>
+          <p>Za komplet od više komada iste glazure ili za poklon pakovanje, pišite nam. Odgovaramo u toku radnog dana.</p>
+        </div>
+        <div class="kontakt-akcije">
+          <a class="dugme" href="tel:+381600000704">Pozovite 060 000 07 04</a>
+          <a class="dugme" href="viber://chat?number=%2B381600000704">Pišite na Viber</a>
+        </div>
+        <p style="color:var(--siva);font-size:.9375rem">Mejl: <a href="mailto:studio@grncar.rs">studio@grncar.rs</a></p>
+      </div>
+      <!--
+        PRODUKCIJA (kontakt forma): form action="https://api.web3forms.com/submit" method="POST"
+        i <input type="hidden" name="access_key" value="VLASNIKOV_KLJUČ">.
+        Web3Forms šalje poruku na vlasnikov mejl; preventDefault ispod se tada uklanja.
+      -->
+      <form class="forma" data-form="kontakt" novalidate>
+        <div class="polje"><label for="k-ime">Ime</label><input id="k-ime" name="ime" autocomplete="name" required></div>
+        <div class="polje"><label for="k-kontakt">Telefon ili mejl</label><input id="k-kontakt" name="kontakt" required></div>
+        <div class="polje"><label for="k-poruka">Poruka</label><textarea id="k-poruka" name="poruka" required></textarea></div>
+        <div><button class="dugme tamno" type="submit">Pošaljite poruku</button></div>
+        <p class="poruka-primera" role="status" hidden>Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="sekcija pravno" aria-label="Uslovi, dostava, odustanak i privatnost">
+    <div class="okvir">
+      <p class="uvodna">Primer teksta. Na pravom sajtu tekst usklađujemo sa vlasnikom i važećim propisima.</p>
+      <div class="pravno-mreza">
+        <section id="trgovac" aria-labelledby="h-trgovac">
+          <h2 id="h-trgovac">Podaci o trgovcu</h2>
+          <dl>
+            <dt>Naziv</dt><dd>Studio Grnčar, preduzetnik Jelena Nikolić, Beograd</dd>
+            <dt>Adresa</dt><dd>Bulevar Arsenija Čarnojevića 58, 11070 Novi Beograd</dd>
+            <dt>PIB</dt><dd>100000000 (primer)</dd>
+            <dt>Matični broj</dt><dd>00000000 (primer)</dd>
+            <dt>Šifra delatnosti</dt><dd>2341, proizvodnja keramičkih predmeta za domaćinstvo i ukrasnih predmeta</dd>
+            <dt>Mejl</dt><dd>studio@grncar.rs</dd>
+            <dt>Telefon</dt><dd>060 000 07 04</dd>
+          </dl>
+        </section>
+        <section id="uslovi" aria-labelledby="h-uslovi">
+          <h2 id="h-uslovi">Uslovi kupovine</h2>
+          <p>Porudžbina je prihvaćena kad dobijete potvrdu sa brojem porudžbine. Cene su konačne, u dinarima, sa PDV-om. Stanje na sajtu osvežavamo iz naše tabele više puta dnevno; ako je komad u međuvremenu prodat u studiju, javljamo Vam se i nudimo drugu glazuru ili povraćaj novca.</p>
+          <p>Svaki komad je ručno rađen. Male razlike u boji glazure, tragovi prstiju na dnu i sitni mehurići nisu greška.</p>
+        </section>
+        <section id="dostava" aria-labelledby="h-dostava">
+          <h2 id="h-dostava">Dostava</h2>
+          <ul>
+            <li>Kurirom na adresu u Srbiji: 590 RSD (pakovanje za lomljivu robu), rok 1–3 radna dana od slanja.</li>
+            <li>Besplatna dostava za porudžbine od 6.000 RSD.</li>
+            <li>Lično preuzimanje u studiju, Bulevar Arsenija Čarnojevića 58, u radno vreme.</li>
+          </ul>
+          <p>Svaki komad pakujemo pojedinačno u valovit karton. Šaljemo kurirskom službom uz oznaku „lomljivo“.</p>
+        </section>
+        <section id="placanje" aria-labelledby="h-placanje">
+          <h2 id="h-placanje">Načini plaćanja</h2>
+          <ul>
+            <li>Karticom: Visa · Mastercard · DinaCard. Podatke kartice unosite na sigurnoj strani banke, mi ih ne vidimo i ne čuvamo.</li>
+            <li>IPS plaćanje aplikacijom Vaše banke.</li>
+            <li>Uplatnicom ili IPS QR kodom: podatke za uplatu dobijate na potvrdi. Porudžbinu šaljemo kad uplata stigne.</li>
+            <li>Pouzećem: plaćate kuriru gotovinom pri preuzimanju.</li>
+          </ul>
+        </section>
+        <section id="odustanak" aria-labelledby="h-odustanak">
+          <h2 id="h-odustanak">Pravo na odustanak i vraćanje robe</h2>
+          <p>Od kupovine na daljinu možete da odustanete u roku od 14 dana od dana kada ste primili robu, bez navođenja razloga. Pošaljite nam popunjen obrazac ispod, mejlom ili poštom, ili izjavu o odustanku donesite u studio.</p>
+          <p>Novac vraćamo bez odlaganja i u skladu sa zakonom, istim načinom plaćanja kojim ste platili. Troškove vraćanja robe snosi kupac, osim ako je drugačije navedeno. Robu vratite upakovanu tako da ne može da se ošteti u transportu.</p>
+          <p>Izuzetak: komadi rađeni po Vašoj posebnoj narudžbini (na primer sa imenom ili u glazuri koju nemamo u ponudi) ne mogu da se vrate.</p>
+        </section>
+        <section id="obrazac" aria-labelledby="h-obrazac">
+          <h2 id="h-obrazac">Obrazac za odustanak</h2>
+          <form class="forma" data-form="odustanak" novalidate>
+            <div class="polje"><label for="o-broj">Broj porudžbine</label><input id="o-broj" name="broj" placeholder="SG-2026-…" required></div>
+            <div class="polje"><label for="o-datum">Datum prijema robe</label><input id="o-datum" name="datum" type="date" required></div>
+            <div class="polje"><label for="o-ime">Ime i prezime</label><input id="o-ime" name="ime" autocomplete="name" required></div>
+            <div class="polje"><label for="o-adresa">Adresa</label><input id="o-adresa" name="adresa" autocomplete="street-address" required></div>
+            <div class="polje"><label for="o-mejl">Mejl</label><input id="o-mejl" name="mejl" type="email" autocomplete="email" required></div>
+            <div><button class="dugme" type="submit">Pošaljite obrazac</button></div>
+            <p class="poruka-primera" role="status" hidden>Ovo je primer sajta. Na pravom sajtu obrazac stiže direktno vlasniku, a potvrdu prijema dobijate mejlom.</p>
+          </form>
+        </section>
+        <section id="reklamacije" aria-labelledby="h-reklamacije">
+          <h2 id="h-reklamacije">Reklamacije</h2>
+          <p>Ako komad stigne razbijen ili oštećen, fotografišite paket i komad i javite nam se mejlom na studio@grncar.rs, telefonom na 060 000 07 04 ili dođite u studio. Navedite broj porudžbine.</p>
+          <p>Svaku reklamaciju upisujemo u evidenciju reklamacija i odgovaramo u rokovima u skladu sa Zakonom o zaštiti potrošača.</p>
+        </section>
+        <section id="privatnost" aria-labelledby="h-privatnost">
+          <h2 id="h-privatnost">Politika privatnosti</h2>
+          <p>Ime, telefon, mejl i adresu koristimo samo za isporuku porudžbine i odgovor na Vašu poruku. Podatke dajemo samo kurirskoj službi za dostavu. Podatke kartice obrađuje banka, ne mi. Na zahtev brišemo Vaše podatke.</p>
+        </section>
+        <section id="kolacici" aria-labelledby="h-kolacici">
+          <h2 id="h-kolacici">Kolačići</h2>
+          <p>Sajt ne koristi kolačiće za praćenje ni oglase. Sadržaj korpe se čuva samo u Vašem pregledaču dok ne završite kupovinu.</p>
+        </section>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="podnozje">
+  <div class="okvir">
+    <nav aria-label="Pravne informacije">
+      <ul>
+        <li><a href="#trgovac">Podaci o trgovcu</a></li>
+        <li><a href="#uslovi">Uslovi kupovine</a></li>
+        <li><a href="#dostava">Dostava</a></li>
+        <li><a href="#placanje">Načini plaćanja</a></li>
+        <li><a href="#odustanak">Reklamacije, odustanak i vraćanje robe</a></li>
+        <li><a href="#obrazac">Obrazac za odustanak</a></li>
+        <li><a href="#privatnost">Privatnost</a></li>
+        <li><a href="#kolacici">Kolačići</a></li>
+      </ul>
+    </nav>
+    <p style="margin:0">Studio Grnčar · Bulevar Arsenija Čarnojevića 58, Novi Beograd · <a href="tel:+381600000704">060 000 07 04</a></p>
+    <p class="primer">Primer sajta · izradio opsforma · <a href="../../">Svi primeri</a></p>
+  </div>
+</footer>
+
+<!-- detalj komada -->
+<dialog class="detalj" id="detalj" aria-labelledby="d-naslov">
+  <div class="detalj-mreza">
+    <div class="postolje" id="d-crtez" aria-hidden="true"></div>
+    <div class="detalj-in">
+      <div class="detalj-gore">
+        <div>
+          <h2 id="d-naslov"></h2>
+          <p id="d-cena" style="margin:2px 0 0;font-weight:500"></p>
+        </div>
+        <button class="zatvori" type="button" data-zatvori-detalj aria-label="Zatvori">×</button>
+      </div>
+      <dl>
+        <div><dt>Opis</dt><dd id="d-opis"></dd></div>
+        <div><dt>Materijal</dt><dd id="d-materijal"></dd></div>
+        <div><dt>Mere i pakovanje</dt><dd id="d-mere"></dd></div>
+        <div><dt>Glazure na stanju</dt><dd><ul class="stanje-lista" id="d-stanje"></ul></dd></div>
+      </dl>
+      <a class="zakon" href="#odustanak" data-zatvori-detalj>Reklamacije, odustanak i vraćanje robe</a>
+    </div>
+  </div>
+</dialog>
+
+<!-- korpa -->
+<div class="zastor" id="zastor" hidden></div>
+<aside class="fioka" id="korpa" role="dialog" aria-modal="true" aria-labelledby="h-korpa" tabindex="-1">
+  <div class="fioka-vrh">
+    <h2 id="h-korpa">Korpa</h2>
+    <button class="zatvori" type="button" id="zatvori-korpu" aria-label="Zatvori korpu">×</button>
+  </div>
+  <div class="fioka-telo"><div id="stavke"></div></div>
+  <div class="fioka-dno" id="fioka-dno">
+    <p class="prag" id="k-prag"></p>
+    <dl class="zbir">
+      <dt>Međuzbir</dt><dd id="k-medjuzbir">0 RSD</dd>
+      <dt>Dostava kurirom</dt><dd id="k-dostava">590 RSD</dd>
+      <dt class="ukupno">Ukupno</dt><dd class="ukupno" id="k-ukupno">0 RSD</dd>
+    </dl>
+    <button class="dugme glavno" type="button" id="na-kasu">Nastavite na poručivanje</button>
+  </div>
+</aside>
+
+<!-- poručivanje -->
+<div class="kasa" id="kasa" role="dialog" aria-modal="true" aria-labelledby="h-kasa" hidden>
+  <div class="kasa-vrh">
+    <div class="okvir">
+      <h2 id="h-kasa">Poručivanje</h2>
+      <button class="zatvori" type="button" id="zatvori-kasu" aria-label="Zatvori poručivanje">×</button>
+    </div>
+    <div class="okvir">
+      <ol class="koraci" id="koraci"><li>Kontakt</li><li>Dostava</li><li>Plaćanje</li><li>Pregled</li></ol>
+    </div>
+  </div>
+  <div class="kasa-telo" id="kasa-telo">
+    <div class="okvir">
+      <form id="porudzbina" novalidate>
+        <section class="korak" data-korak="1">
+          <h3>Vaši podaci</h3>
+          <div class="forma">
+            <div class="polje"><label for="p-ime">Ime i prezime</label><input id="p-ime" name="ime" autocomplete="name" required><span class="greska" id="p-ime-g"></span></div>
+            <div class="polje"><label for="p-tel">Telefon</label><input id="p-tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="06x xxx xxxx" required><span class="greska" id="p-tel-g"></span></div>
+            <div class="polje"><label for="p-mejl">Mejl</label><input id="p-mejl" name="mejl" type="email" autocomplete="email" required><span class="greska" id="p-mejl-g"></span></div>
+          </div>
+        </section>
+
+        <section class="korak" data-korak="2" hidden>
+          <h3>Dostava</h3>
+          <fieldset class="izbor">
+            <legend class="legenda">Kako da stigne do Vas?</legend>
+            <label class="opcija"><input type="radio" name="dostava" value="kurir" checked><strong>Kurirom na adresu</strong><span class="cena-op" id="cena-kurir">590 RSD</span><small>Pakovanje za lomljivu robu. Rok 1–3 radna dana. Besplatno od 6.000 RSD.</small></label>
+            <label class="opcija"><input type="radio" name="dostava" value="licno"><strong>Lično preuzimanje u studiju</strong><span class="cena-op">0 RSD</span><small>Bulevar Arsenija Čarnojevića 58, uto–pet 12–20 h, subotom 10–16 h.</small></label>
+          </fieldset>
+          <div class="adresa-polja forma" id="adresa-polja" style="max-width:none">
+            <div class="polje siroko"><label for="p-ulica">Ulica i broj</label><input id="p-ulica" name="ulica" autocomplete="address-line1" required><span class="greska" id="p-ulica-g"></span></div>
+            <div class="polje"><label for="p-mesto">Mesto</label><input id="p-mesto" name="mesto" autocomplete="address-level2" required><span class="greska" id="p-mesto-g"></span></div>
+            <div class="polje"><label for="p-pb">Poštanski broj</label><input id="p-pb" name="pb" inputmode="numeric" autocomplete="postal-code" maxlength="5" required><span class="greska" id="p-pb-g"></span></div>
+          </div>
+        </section>
+
+        <section class="korak" data-korak="3" hidden>
+          <h3>Plaćanje</h3>
+          <fieldset class="izbor">
+            <legend class="legenda">Kako plaćate?</legend>
+            <label class="opcija" data-za="kurir licno"><input type="radio" name="placanje" value="kartica"><strong>Karticom</strong><span class="cena-op">Visa · Mastercard · DinaCard</span><small>Posle potvrde prelazite na sigurnu stranu banke i tamo unosite podatke kartice.</small></label>
+            <label class="opcija" data-za="kurir licno"><input type="radio" name="placanje" value="ips"><strong>IPS, aplikacijom banke</strong><span></span><small>Plaćanje potvrđujete u mobilnoj aplikaciji Vaše banke.</small></label>
+            <label class="opcija" data-za="kurir licno"><input type="radio" name="placanje" value="uplatnica"><strong>Uplatnicom ili IPS QR kodom</strong><span></span><small>Podatke za uplatu dobijate na potvrdi. Porudžbinu šaljemo kad uplata stigne.</small></label>
+            <label class="opcija" data-za="kurir"><input type="radio" name="placanje" value="pouzece"><strong>Pouzećem</strong><span></span><small>Plaćate kuriru gotovinom pri preuzimanju.</small></label>
+          </fieldset>
+          <p class="greska-tekst" id="placanje-g" hidden>Izaberite način plaćanja.</p>
+        </section>
+
+        <section class="korak" data-korak="4" hidden>
+          <h3>Pregled porudžbine</h3>
+          <ul class="pregled-lista" id="pregled-stavke"></ul>
+          <dl class="pregled-info" id="pregled-info"></dl>
+          <label class="saglasnost" id="saglasnost"><input type="checkbox" id="uslovi-ok"><span>Pročitao/la sam <a href="#uslovi" data-pravni>uslove kupovine</a> i <a href="#odustanak" data-pravni>obaveštenje o pravu na odustanak</a>.</span></label>
+          <p class="greska-tekst" id="uslovi-g" hidden>Da biste poručili, potvrdite da ste pročitali uslove kupovine.</p>
+        </section>
+
+        <section class="korak" data-korak="banka" hidden id="banka">
+          <h3 id="banka-naslov"></h3>
+          <div class="banka">
+            <div id="banka-tekst"></div>
+            <div class="dugmad">
+              <button class="dugme glavno" type="button" id="nastavi-placanje">Nastavi (primer plaćanja)</button>
+              <button class="dugme" type="button" id="odustani-placanje">Nazad na pregled</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="korak" data-korak="5" hidden id="potvrda" tabindex="-1">
+          <span class="primer-oznaka">Primer: porudžbina se ne šalje</span>
+          <h3 style="margin-bottom:6px">Hvala, porudžbina je primljena.</h3>
+          <p class="uspeh" id="pt-uspeh" hidden>Plaćanje je uspešno (primer)</p>
+          <p style="color:var(--siva);margin:0">Broj porudžbine</p>
+          <p class="broj" id="pt-broj"></p>
+          <ul class="pregled-lista" id="pt-stavke"></ul>
+          <dl class="pregled-info" id="pt-info"></dl>
+          <div class="uputstvo" id="pt-uputstvo"></div>
+          <p id="pt-racun"></p>
+          <button class="dugme tamno" type="button" id="nazad-prodavnica">Nazad na prodavnicu</button>
+        </section>
+      </form>
+    </div>
+  </div>
+  <div class="kasa-dno" id="kasa-dno">
+    <div class="okvir">
+      <p class="ukupno-mali">Ukupno<b id="kasa-ukupno">0 RSD</b></p>
+      <button class="dugme" type="button" id="nazad">Nazad</button>
+      <button class="dugme glavno" type="button" id="dalje">Dalje</button>
+      <button class="dugme glavno" type="button" id="poruci" hidden>Poruči sa obavezom plaćanja</button>
+    </div>
+  </div>
+</div>
+
+<div class="sr" aria-live="polite" id="najava"></div>
+
+<script>
+/*
+  PRODUKCIJA
+  - Porudžbina ide vlasniku preko Web3Forms (POST na https://api.web3forms.com/submit, hidden access_key;
+    broj porudžbine, stavke sa glazurom, dostava, plaćanje, ukupno, podaci kupca) na mejl, i/ili kao Viber poruka.
+  - Kartice (Visa, Mastercard, DinaCard): e-commerce usluga banke. Posle „Poruči“ kupac se preusmerava na
+    stranu banke (hosted payment page), unosi karticu i prolazi 3D Secure; banka vraća rezultat na našu stranu
+    potvrde. Alternativa: WooCommerce ili Shopify sa dodatkom banke. Sajt nikad ne prima podatke kartice.
+  - IPS plaćanje aplikacijom: preko banke (IPS „Pokaži“/„Skeniraj“, deep link ka m-banking aplikaciji na telefonu).
+  - Uplatnica: na potvrdi pravi IPS QR kod po NBS standardu, sa pravim računom firme.
+  - Stanje: vlasnik vodi Google tabelu (proizvod, glazura, komada). Tabela se objavi kao CSV
+    (Datoteka > Deli > Objavi na vebu > CSV), a sajt je čita pri učitavanju:
+      fetch(CSV_URL).then(r => r.text()).then(parseCSV).then(primeniStanje)
+    Ispod je isti oblik podataka, upisan ručno za demo.
+*/
+const GLAZURE = {
+  plava:{naziv:"plava", boja:"#3B6E8F"},
+  terakota:{naziv:"terakota", boja:"#C27A55"},
+  bela:{naziv:"bela mat", boja:"#E9E4DA", linija:"#8F877C"},
+  ugljena:{naziv:"ugljena", boja:"#3E3A37"},
+  seladon:{naziv:"seladon", boja:"#8DA898", linija:"#5F7E6D"}
+};
+/* oblik kao iz objavljene Google tabele: proizvod -> glazura -> komada */
+const STANJE = {
+  espreso:{plava:5, terakota:2, bela:0},
+  solja:{plava:6, bela:3, ugljena:1},
+  cinija:{seladon:4, plava:0, terakota:3},
+  duboki:{bela:8, ugljena:2},
+  plitki:{bela:6, plava:2, ugljena:0},
+  vaza:{plava:1, terakota:2, seladon:0},
+  vazica:{terakota:4, seladon:2, bela:3},
+  bokal:{plava:2, bela:0},
+  saksija:{terakota:5, ugljena:2},
+  salata:{seladon:1, plava:3}
+};
+const OBLICI = {
+  espreso:{vb:"60 132 96 60", d:"M76 190 H124 Q130 190 131 180 L134 140 H66 L69 180 Q70 190 76 190 Z M133 152 Q150 152 150 164 Q150 176 131 176"},
+  solja:{vb:"50 100 112 92", d:"M64 190 H128 Q134 190 134 182 V112 H58 V182 Q58 190 64 190 Z M134 128 Q158 128 158 150 Q158 170 134 170"},
+  cinija:{vb:"24 120 152 72", d:"M70 190 H130 L132 184 Q168 160 172 128 H28 Q32 160 68 184 Z"},
+  duboki:{vb:"8 150 184 42", d:"M54 190 H146 L150 184 Q180 176 188 160 H12 Q20 176 50 184 Z"},
+  plitki:{vb:"0 164 200 28", d:"M44 190 H156 L160 186 Q186 182 196 174 H4 Q14 182 40 186 Z"},
+  vaza:{vb:"40 20 120 172", d:"M80 190 H120 Q140 150 136 110 Q132 80 114 60 Q108 52 110 30 H90 Q92 52 86 60 Q68 80 64 110 Q60 150 80 190 Z"},
+  vazica:{vb:"56 92 88 100", d:"M84 190 H116 Q132 170 128 146 Q124 128 106 120 L106 100 H94 L94 120 Q76 128 72 146 Q68 170 84 190 Z"},
+  bokal:{vb:"56 52 108 140", d:"M72 190 H128 Q136 160 130 120 Q126 96 124 78 L140 62 H72 Q76 96 70 120 Q64 160 72 190 Z M127 92 Q156 94 156 124 Q156 150 132 160"},
+  saksija:{vb:"40 88 120 104", d:"M46 190 H154 L150 182 H50 Z M74 182 H126 L138 104 H62 Z M58 104 H142 V94 H58 Z"},
+  salata:{vb:"2 104 196 88", d:"M60 190 H140 L142 186 Q190 160 194 110 H6 Q10 160 58 186 Z"}
+};
+const PROIZVODI = [
+  {id:"espreso", kat:"solje", naziv:"Šolja za espreso", cena:1400, mera:"90 ml", opis:"Debelih zidova, da kafa duže ostane topla. Mala drška za dva prsta.", materijal:"kamenina, glazura iznutra i spolja, dno neglazirano"},
+  {id:"solja", kat:"solje", naziv:"Šolja", cena:1900, mera:"300 ml", opis:"Prava, široka šolja za čaj i kafu sa mlekom.", materijal:"kamenina, glazura iznutra i spolja"},
+  {id:"cinija", kat:"cinije", naziv:"Činija za doručak", cena:2200, mera:"Ø 15 cm, 500 ml", opis:"Za ovsenu kašu, supu ili voće. Široki obod lako se drži.", materijal:"kamenina, sjajna glazura"},
+  {id:"duboki", kat:"cinije", naziv:"Duboki tanjir", cena:2600, mera:"Ø 22 cm", opis:"Za testenine i čorbe. Ide u komplet sa plitkim tanjirom.", materijal:"kamenina, glazura sa neglaziranim obodom"},
+  {id:"plitki", kat:"cinije", naziv:"Plitki tanjir", cena:2800, mera:"Ø 26 cm", opis:"Ravno dno, nizak obod. Dovoljno težak da ne klizi po stolu.", materijal:"kamenina, glazura sa neglaziranim obodom"},
+  {id:"vaza", kat:"vaze", naziv:"Visoka vaza", cena:7400, mera:"visina 32 cm", opis:"Za granje i dugačke stabljike. Grlo je usko, pa cveće stoji uspravno.", materijal:"kamenina, glazura spolja, iznutra zalivena da ne propušta vodu"},
+  {id:"vazica", kat:"vaze", naziv:"Mala vaza", cena:2900, mera:"visina 14 cm", opis:"Za jedan ili dva cveta. Lepo stoji na prozoru ili noćnom stočiću.", materijal:"kamenina, glazura spolja i iznutra"},
+  {id:"bokal", kat:"bokali", naziv:"Bokal", cena:5200, mera:"1 l", opis:"Za vodu, limunadu ili mleko. Kljun ne curi kad sipate.", materijal:"kamenina, glazura iznutra i spolja"},
+  {id:"saksija", kat:"vaze", naziv:"Saksija sa podmetačem", cena:3600, mera:"Ø 16 cm, sa rupom za vodu", opis:"Za sobne biljke srednje veličine. Podmetač je u istoj glazuri.", materijal:"kamenina, glazura spolja, iznutra neglazirano"},
+  {id:"salata", kat:"cinije", naziv:"Činija za salatu", cena:4900, mera:"Ø 26 cm, 2,5 l", opis:"Široka i plitka, za salatu za četvoro ili voće na stolu.", materijal:"kamenina, sjajna glazura"}
+];
+const DOSTAVA = 590, PRAG = 6000, FIRMA = "Studio Grnčar";
+
+const fmt = n => Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " RSD";
+const $ = s => document.querySelector(s);
+const nadji = id => PROIZVODI.find(p => p.id === id);
+const linija = g => g ? (GLAZURE[g].linija || GLAZURE[g].boja) : "#1F1D1B";
+const najavi = t => { $("#najava").textContent = ""; setTimeout(() => $("#najava").textContent = t, 30); };
+const stanjeTekst = n => n === 0 ? "rasprodato" : n <= 2 ? `još ${n} ${n === 1 ? "komad" : "komada"}` : "na stanju";
+
+function crtez(id, g, mera){
+  const o = OBLICI[id];
+  /* u galeriji svi komadi dele istu razmeru (prava veličina jedan prema drugom); u korpi crtež popunjava sličicu */
+  return `<svg viewBox="${mera ? "0 10 200 180" : o.vb}" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><path class="profil" stroke="${linija(g)}" d="${o.d}"/></svg>`;
+}
+
+/* hero: probajte glazuru */
+const heroG = $("#hero-glazure");
+heroG.innerHTML = ["plava", "terakota", "seladon", "ugljena", "bela"].map(g =>
+  `<button type="button" class="glazura" data-g="${g}" aria-pressed="${g === "plava"}" style="--g:${GLAZURE[g].boja}"><i></i><span class="sr">${GLAZURE[g].naziv}</span></button>`).join("");
+heroG.addEventListener("click", e => {
+  const b = e.target.closest(".glazura"); if (!b) return;
+  heroG.querySelectorAll(".glazura").forEach(x => x.setAttribute("aria-pressed", x === b));
+  document.querySelectorAll(".hero-profil").forEach(p => p.setAttribute("stroke", linija(b.dataset.g)));
+  $("#hero-glazura-tekst").textContent = "Glazura: " + GLAZURE[b.dataset.g].naziv;
+});
+
+/* galerija */
+const izabrano = {};
+const gal = $("#galerija");
+gal.innerHTML = PROIZVODI.map(p => `
+  <article class="komad" data-id="${p.id}" data-kat="${p.kat}">
+    <div class="postolje" data-crtez>${crtez(p.id, null, true)}</div>
+    <div class="oznaka-komada">
+      <h3>${p.naziv}</h3>
+      <span class="mera">${p.mera}</span>
+      <span class="cena">${fmt(p.cena)}</span>
+    </div>
+    <fieldset class="izbor-glazure" style="border:0;padding:0;margin-inline:0">
+      <legend class="legenda">Glazura</legend>
+      <div class="glazure">
+        ${Object.entries(STANJE[p.id]).map(([g, n]) => `<button type="button" class="glazura" data-g="${g}" aria-pressed="false" ${n === 0 ? "disabled" : ""} style="--g:${GLAZURE[g].boja}" aria-label="${GLAZURE[g].naziv}, ${stanjeTekst(n)}"><i></i></button>`).join("")}
+      </div>
+      <p class="status" aria-live="polite"></p>
+    </fieldset>
+    <div class="komad-dno">
+      <button class="dugme glavno dodaj" type="button">Dodaj u korpu</button>
+      <button class="link-dugme detalji" type="button">Detalji<span class="sr"> o proizvodu ${p.naziv}</span></button>
+    </div>
+  </article>`).join("");
+
+function statusKomada(el){
+  const id = el.dataset.id, g = izabrano[id], s = el.querySelector(".status");
+  s.className = "status";
+  if (g){
+    const n = STANJE[id][g] - uKorpi(id, g);
+    s.textContent = `${GLAZURE[g].naziv[0].toUpperCase() + GLAZURE[g].naziv.slice(1)}: ${n <= 0 ? "svi komadi su u Vašoj korpi" : stanjeTekst(STANJE[id][g])}`;
+    if (STANJE[id][g] <= 2) s.classList.add("upozorenje");
+  } else {
+    const ras = Object.entries(STANJE[id]).filter(([, n]) => n === 0).map(([gg]) => GLAZURE[gg].naziv);
+    s.textContent = ras.length ? `Rasprodato: ${ras.join(", ")}` : "";
+  }
+}
+function rasporedi(){
+  let i = 0;
+  document.querySelectorAll(".komad").forEach(k => {
+    if (k.hidden){ delete k.dataset.pos; delete k.dataset.posPar; return; }
+    k.dataset.pos = (i % 10) + 1; k.dataset.posPar = i % 2; i++;
+  });
+}
+document.querySelectorAll(".komad").forEach(statusKomada);
+rasporedi();
+
+gal.addEventListener("click", e => {
+  const k = e.target.closest(".komad"); if (!k) return;
+  const id = k.dataset.id;
+  const gb = e.target.closest(".glazura");
+  if (gb && !gb.disabled){
+    izabrano[id] = gb.dataset.g;
+    k.querySelectorAll(".glazura").forEach(x => x.setAttribute("aria-pressed", x === gb));
+    k.querySelector("[data-crtez] .profil").setAttribute("stroke", linija(gb.dataset.g));
+    statusKomada(k); return;
+  }
+  if (e.target.closest(".dodaj")){
+    const g = izabrano[id], s = k.querySelector(".status");
+    if (!g){ s.className = "status greska"; s.textContent = "Izaberite glazuru."; k.querySelector(".glazura:not(:disabled)").focus(); return; }
+    if (!dodaj(id, g)){ s.className = "status greska"; s.textContent = `Na stanju je ${STANJE[id][g]} kom. u ovoj glazuri i svi su već u korpi.`; return; }
+    const d = e.target.closest(".dodaj"); d.textContent = "Dodato"; setTimeout(() => d.textContent = "Dodaj u korpu", 1100);
+    statusKomada(k); return;
+  }
+  if (e.target.closest(".detalji")) otvoriDetalj(id, e.target.closest(".detalji"));
+});
+
+document.querySelectorAll(".filter button").forEach(btn => btn.addEventListener("click", () => {
+  document.querySelectorAll(".filter button").forEach(b => b.setAttribute("aria-pressed", b === btn));
+  const kat = btn.dataset.kat;
+  document.querySelectorAll(".komad").forEach(a => a.hidden = !(kat === "sve" || a.dataset.kat === kat));
+  rasporedi();
+}));
+
+/* korpa */
+let korpa = [];
+try { korpa = JSON.parse(sessionStorage.getItem("grncar-korpa") || "[]").filter(s => nadji(s.id) && STANJE[s.id][s.g] > 0); } catch(e) { korpa = []; }
+const sacuvaj = () => { try { sessionStorage.setItem("grncar-korpa", JSON.stringify(korpa)); } catch(e) {} };
+const uKorpi = (id, g) => (korpa.find(x => x.id === id && x.g === g) || {kol:0}).kol;
+
+function dodaj(id, g){
+  const s = korpa.find(x => x.id === id && x.g === g);
+  if ((s ? s.kol : 0) >= STANJE[id][g]) return false;
+  if (s) s.kol++; else korpa.push({id, g, kol:1});
+  sacuvaj(); crtajKorpu();
+  najavi(`${nadji(id).naziv}, glazura ${GLAZURE[g].naziv}, je u korpi.`);
+  return true;
+}
+function racun(nacin){
+  const medjuzbir = korpa.reduce((s, x) => s + nadji(x.id).cena * x.kol, 0);
+  const dostava = nacin === "licno" || medjuzbir >= PRAG || !medjuzbir ? 0 : DOSTAVA;
+  return {medjuzbir, dostava, ukupno: medjuzbir + dostava, komada: korpa.reduce((s, x) => s + x.kol, 0)};
+}
+function crtajKorpu(){
+  const r = racun("kurir");
+  $("#broj-stavki").textContent = r.komada;
+  $("#stavke").innerHTML = korpa.length ? korpa.map(x => { const p = nadji(x.id), max = STANJE[x.id][x.g]; return `
+    <div class="stavka" data-key="${x.id}|${x.g}">
+      <span class="mini">${crtez(p.id, x.g)}</span>
+      <div><h3>${p.naziv}</h3><span class="jed">${GLAZURE[x.g].naziv} · ${p.mera}</span></div>
+      <span class="iznos">${fmt(p.cena * x.kol)}</span>
+      <div class="kol">
+        <button type="button" class="minus" aria-label="Manje: ${p.naziv}, ${GLAZURE[x.g].naziv}">−</button>
+        <output aria-live="polite">${x.kol}</output>
+        <button type="button" class="plus" aria-label="Više: ${p.naziv}, ${GLAZURE[x.g].naziv}" ${x.kol >= max ? "disabled" : ""}>+</button>
+        <button type="button" class="ukloni">Ukloni<span class="sr"> ${p.naziv}</span></button>
+      </div>
+      ${x.kol >= max ? `<p class="maks">Na stanju: ${max} kom. u ovoj glazuri.</p>` : ""}
+    </div>`; }).join("") : `<p class="prazna">Korpa je prazna. Izaberite komad i glazuru sa polica.</p>`;
+  $("#k-medjuzbir").textContent = fmt(r.medjuzbir);
+  $("#k-dostava").textContent = r.dostava ? fmt(r.dostava) : (r.medjuzbir ? "besplatna" : "–");
+  $("#k-ukupno").textContent = fmt(r.ukupno);
+  const prag = $("#k-prag");
+  if (!r.medjuzbir) prag.innerHTML = "";
+  else if (r.medjuzbir >= PRAG) prag.innerHTML = `Dostava je besplatna.<span class="prag-traka"><i style="width:100%"></i></span>`;
+  else prag.innerHTML = `Još ${fmt(PRAG - r.medjuzbir)} do besplatne dostave.<span class="prag-traka"><i style="width:${Math.round(r.medjuzbir / PRAG * 100)}%"></i></span>`;
+  $("#fioka-dno").hidden = !korpa.length;
+  document.querySelectorAll(".komad").forEach(statusKomada);
+}
+$("#stavke").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  const key = b.closest(".stavka").dataset.key, [id, g] = key.split("|");
+  const s = korpa.find(x => x.id === id && x.g === g);
+  if (b.classList.contains("plus") && s.kol < STANJE[id][g]) s.kol++;
+  else if (b.classList.contains("minus")) s.kol = Math.max(1, s.kol - 1);
+  else if (b.classList.contains("ukloni")){ korpa = korpa.filter(x => x !== s); najavi(`${nadji(id).naziv} je uklonjen iz korpe.`); }
+  sacuvaj(); crtajKorpu();
+  const isti = document.querySelector(`.stavka[data-key="${key}"] .${b.classList[0]}:not(:disabled)`);
+  (isti || $("#zatvori-korpu")).focus();
+});
+
+const fioka = $("#korpa"), zastor = $("#zastor");
+function otvoriKorpu(){
+  crtajKorpu();
+  zastor.hidden = false; fioka.classList.add("otvorena");
+  document.documentElement.classList.add("zakljucano");
+  setTimeout(() => $("#zatvori-korpu").focus(), 30);
+}
+function zatvoriKorpu(vrati = true){
+  fioka.classList.remove("otvorena"); zastor.hidden = true;
+  document.documentElement.classList.remove("zakljucano");
+  if (vrati) $("#korpa-dugme").focus();
+}
+$("#korpa-dugme").addEventListener("click", otvoriKorpu);
+$("#zatvori-korpu").addEventListener("click", () => zatvoriKorpu());
+zastor.addEventListener("click", () => zatvoriKorpu());
+fioka.addEventListener("keydown", e => {
+  if (e.key !== "Tab") return;
+  const f = [...fioka.querySelectorAll("button:not(:disabled),a[href]")].filter(x => x.offsetParent);
+  if (!f.length) return;
+  if (e.shiftKey && document.activeElement === f[0]){ e.preventDefault(); f[f.length - 1].focus(); }
+  else if (!e.shiftKey && document.activeElement === f[f.length - 1]){ e.preventDefault(); f[0].focus(); }
+});
+
+/* detalj */
+const dlg = $("#detalj");
+let izvor = null;
+function otvoriDetalj(id, src){
+  const p = nadji(id); izvor = src;
+  $("#d-crtez").innerHTML = crtez(id, izabrano[id], true);
+  $("#d-naslov").textContent = p.naziv;
+  $("#d-cena").textContent = fmt(p.cena);
+  $("#d-opis").textContent = p.opis;
+  $("#d-materijal").textContent = p.materijal + ". Ručno rađeno, svaki komad se malo razlikuje.";
+  $("#d-mere").textContent = p.mera + ", pakovano pojedinačno u valovit karton";
+  $("#d-stanje").innerHTML = Object.entries(STANJE[id]).map(([g, n]) => `<li><span>${GLAZURE[g].naziv}</span><span>${stanjeTekst(n)}</span></li>`).join("");
+  dlg.showModal();
+}
+dlg.addEventListener("close", () => { if (izvor && !dlg.dataset.bez) izvor.focus(); delete dlg.dataset.bez; });
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+dlg.querySelectorAll("[data-zatvori-detalj]").forEach(el => el.addEventListener("click", () => { if (el.tagName === "A") dlg.dataset.bez = "1"; dlg.close(); }));
+
+/* meni */
+const meniDugme = $("#meni-dugme"), meni = $("#glavni-meni");
+function meniStanje(o){ meni.classList.toggle("otvoren", o); meniDugme.setAttribute("aria-expanded", o); }
+meniDugme.addEventListener("click", () => meniStanje(meniDugme.getAttribute("aria-expanded") !== "true"));
+meni.addEventListener("click", e => { if (e.target.closest("a")) meniStanje(false); });
+
+/* kasa */
+const kasa = $("#kasa");
+let korak = 1;
+const vrednost = n => (document.querySelector(`input[name="${n}"]:checked`) || {}).value;
+const NAZIV_PL = {kartica:"Karticom (Visa · Mastercard · DinaCard)", ips:"IPS, aplikacijom banke", uplatnica:"Uplatnicom ili IPS QR kodom", pouzece:"Pouzećem"};
+
+function otvoriKasu(){
+  if (!korpa.length) return;
+  zatvoriKorpu(false);
+  kasa.hidden = false; document.documentElement.classList.add("zakljucano");
+  idiNa(typeof korak === "number" && korak < 5 ? korak : 4);
+}
+function sakrijKasu(){ kasa.hidden = true; document.documentElement.classList.remove("zakljucano"); }
+$("#na-kasu").addEventListener("click", otvoriKasu);
+$("#zatvori-kasu").addEventListener("click", () => { if (korak === 5) $("#nazad-prodavnica").click(); else { sakrijKasu(); $("#korpa-dugme").focus(); } });
+
+function osveziPlacanje(){
+  const d = vrednost("dostava");
+  document.querySelectorAll(".opcija[data-za]").forEach(o => {
+    const ok = o.dataset.za.split(" ").includes(d);
+    o.hidden = !ok; if (!ok) o.querySelector("input").checked = false;
+  });
+  $("#adresa-polja").hidden = d !== "kurir";
+  $("#cena-kurir").textContent = racun("kurir").dostava ? fmt(DOSTAVA) : "besplatno";
+  $("#kasa-ukupno").textContent = fmt(racun(d).ukupno);
+}
+document.querySelectorAll('input[name="dostava"]').forEach(i => i.addEventListener("change", osveziPlacanje));
+document.querySelectorAll('input[name="placanje"]').forEach(i => i.addEventListener("change", () => $("#placanje-g").hidden = true));
+
+function idiNa(n){
+  korak = n;
+  document.querySelectorAll(".korak").forEach(s => s.hidden = s.dataset.korak !== String(n));
+  document.querySelectorAll("#koraci li").forEach((li, i) => {
+    li.classList.toggle("gotov", typeof n === "number" ? i + 1 < n : true);
+    if (i + 1 === n) li.setAttribute("aria-current", "step"); else li.removeAttribute("aria-current");
+  });
+  const kraj = n === 5 || n === "banka";
+  $("#koraci").hidden = kraj; $("#kasa-dno").hidden = kraj;
+  $("#nazad").textContent = n === 1 ? "Korpa" : "Nazad";
+  $("#dalje").hidden = n >= 4;
+  $("#poruci").hidden = n !== 4;
+  osveziPlacanje();
+  if (n === 4) crtajPregled();
+  $("#kasa-telo").scrollTop = 0;
+  const h = document.querySelector(`.korak[data-korak="${n}"] h3`);
+  if (h){ h.tabIndex = -1; h.focus({preventScroll:true}); }
+}
+function proveri(id, uslov, poruka){
+  const el = $("#" + id), g = $("#" + id + "-g"), ok = uslov(el.value.trim());
+  el.setAttribute("aria-invalid", !ok);
+  g.textContent = ok ? "" : poruka; el.setAttribute("aria-describedby", id + "-g");
+  return ok;
+}
+function validan(n){
+  if (n === 1) return [
+    proveri("p-ime", v => v.split(/\s+/).length >= 2, "Upišite ime i prezime."),
+    proveri("p-tel", v => v.replace(/[^\d]/g, "").length >= 9, "Upišite broj telefona, na primer 060 123 4567."),
+    proveri("p-mejl", v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v), "Upišite ispravan mejl, na primer ime@primer.rs.")
+  ].every(Boolean);
+  if (n === 2 && vrednost("dostava") === "kurir") return [
+    proveri("p-ulica", v => v.length >= 3, "Upišite ulicu i broj."),
+    proveri("p-mesto", v => v.length >= 2, "Upišite mesto."),
+    proveri("p-pb", v => /^\d{5}$/.test(v), "Poštanski broj ima 5 cifara.")
+  ].every(Boolean);
+  if (n === 3){ const ok = !!vrednost("placanje"); $("#placanje-g").hidden = ok; return ok; }
+  return true;
+}
+$("#dalje").addEventListener("click", () => { if (validan(korak)) idiNa(korak + 1); else { const el = kasa.querySelector('[aria-invalid="true"]'); if (el) el.focus(); } });
+$("#nazad").addEventListener("click", () => { if (korak === 1){ sakrijKasu(); otvoriKorpu(); } else idiNa(korak - 1); });
+
+const stavkeHTML = () => korpa.map(x => { const p = nadji(x.id); return `<li><span>${x.kol} × ${p.naziv}, ${GLAZURE[x.g].naziv}</span><span>${fmt(p.cena * x.kol)}</span></li>`; }).join("");
+function infoHTML(r, d, pl){
+  const adr = d === "kurir" ? `${$("#p-ulica").value.trim()}, ${$("#p-pb").value.trim()} ${$("#p-mesto").value.trim()}` : "Studio, Bulevar Arsenija Čarnojevića 58";
+  return `<dt>Međuzbir</dt><dd>${fmt(r.medjuzbir)}</dd>` +
+    `<dt>Dostava</dt><dd>${d === "kurir" ? "Kurirom, " + (r.dostava ? fmt(r.dostava) : "besplatna") : "Lično preuzimanje, bez troška"}</dd>` +
+    `<dt>Adresa</dt><dd>${adr}</dd><dt>Plaćanje</dt><dd>${NAZIV_PL[pl]}</dd>` +
+    `<dt>Ukupno</dt><dd><strong>${fmt(r.ukupno)}</strong></dd>`;
+}
+function crtajPregled(){
+  const d = vrednost("dostava");
+  $("#pregled-stavke").innerHTML = stavkeHTML();
+  $("#pregled-info").innerHTML = infoHTML(racun(d), d, vrednost("placanje"));
+}
+$("#uslovi-ok").addEventListener("change", () => { $("#uslovi-g").hidden = true; $("#saglasnost").classList.remove("greska"); });
+kasa.querySelectorAll("[data-pravni]").forEach(a => a.addEventListener("click", sakrijKasu));
+
+let broj = "";
+function noviBroj(){
+  const d = new Date(); let n = 147;
+  try { n = +(localStorage.getItem("grncar-brojac") || 146) + 1; localStorage.setItem("grncar-brojac", n); } catch(e) {}
+  return `SG-${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}${String(d.getDate()).padStart(2, "0")}-${String(n).padStart(4, "0")}`;
+}
+$("#poruci").addEventListener("click", () => {
+  if (!$("#uslovi-ok").checked){ $("#uslovi-g").hidden = false; $("#saglasnost").classList.add("greska"); $("#uslovi-ok").focus(); return; }
+  broj = noviBroj();
+  const pl = vrednost("placanje"), r = racun(vrednost("dostava"));
+  if (pl === "kartica" || pl === "ips"){
+    $("#banka-naslov").textContent = pl === "kartica" ? "Preusmeravanje na sigurnu stranu banke (primer)" : "Na telefonu se otvara aplikacija Vaše banke (primer)";
+    $("#banka-tekst").innerHTML = pl === "kartica"
+      ? `<p>Na pravom sajtu sada prelazite na stranu banke. Tamo unosite podatke kartice i potvrđujete plaćanje kodom ili u aplikaciji banke (3D Secure).</p><p>Studio Grnčar ne vidi i ne čuva podatke Vaše kartice.</p><p class="kartice">Visa · Mastercard · DinaCard</p><p style="margin:0">Iznos: <strong>${fmt(r.ukupno)}</strong></p>`
+      : `<p>Na pravom sajtu se na telefonu otvara mobilna aplikacija Vaše banke sa već popunjenim nalogom. Na računaru se umesto toga prikazuje IPS QR kod koji skenirate aplikacijom.</p><p>Plaćanje potvrđujete u aplikaciji, a novac stiže odmah.</p><p style="margin:0">Iznos: <strong>${fmt(r.ukupno)}</strong></p>`;
+    idiNa("banka"); return;
+  }
+  zavrsi();
+});
+$("#nastavi-placanje").addEventListener("click", () => zavrsi(true));
+$("#odustani-placanje").addEventListener("click", () => idiNa(4));
+
+function zavrsi(placeno){
+  const d = vrednost("dostava"), pl = vrednost("placanje"), r = racun(d);
+  $("#pt-broj").textContent = broj;
+  $("#pt-uspeh").hidden = !placeno;
+  $("#pt-stavke").innerHTML = stavkeHTML();
+  $("#pt-info").innerHTML = infoHTML(r, d, pl);
+  const lic = d === "licno" ? " Javljamo Vam se kad je porudžbina spremna za preuzimanje u studiju." : " Šaljemo je u roku od jednog radnog dana.";
+  let u = "";
+  if (pl === "kartica") u = `<h4>Plaćeno karticom</h4><p>Naplaćeno: <strong>${fmt(r.ukupno)}</strong>. Potvrdu o plaćanju banka šalje na Vaš mejl.${lic}</p>`;
+  if (pl === "ips") u = `<h4>Plaćeno IPS-om</h4><p>Naplaćeno: <strong>${fmt(r.ukupno)}</strong>, preko aplikacije Vaše banke.${lic}</p>`;
+  if (pl === "pouzece") u = `<h4>Plaćanje pouzećem</h4><p>Plaćate kuriru gotovinom pri preuzimanju: <strong>${fmt(r.ukupno)}</strong>. Paket stiže za 1–3 radna dana.</p>`;
+  if (pl === "uplatnica") u = `<h4>Podaci za uplatu</h4>
+    <div class="uplata">
+      <dl>
+        <dt>Primalac</dt><dd>${FIRMA}, Bulevar Arsenija Čarnojevića 58, Beograd</dd>
+        <dt>Račun</dt><dd>000-0000000000000-00 (primer)</dd>
+        <dt>Svrha</dt><dd>Porudžbina br. ${broj}</dd>
+        <dt>Poziv na broj</dt><dd>${broj}</dd>
+        <dt>Iznos</dt><dd><strong>${fmt(r.ukupno)}</strong></dd>
+      </dl>
+      <div class="qr-mesto">Ovde stoji IPS QR kod (primer)</div>
+    </div>
+    <p>Porudžbinu šaljemo kad uplata stigne.${d === "licno" ? " Javljamo Vam se kad je spremna za preuzimanje." : ""}</p>`;
+  $("#pt-uputstvo").innerHTML = u;
+  $("#pt-racun").textContent = d === "licno" ? "Fiskalni račun dobijate u studiju." : "Fiskalni račun stiže uz paket.";
+  /* demo: smanji stanje kao da je tabela ažurirana */
+  korpa.forEach(x => STANJE[x.id][x.g] = Math.max(0, STANJE[x.id][x.g] - x.kol));
+  idiNa(5);
+  $("#potvrda").focus({preventScroll:true});
+}
+$("#nazad-prodavnica").addEventListener("click", () => {
+  korpa = []; sacuvaj();
+  Object.keys(izabrano).forEach(k => delete izabrano[k]);
+  document.querySelectorAll(".komad").forEach(k => {
+    k.querySelectorAll(".glazura").forEach(b => { b.setAttribute("aria-pressed", "false"); const n = STANJE[k.dataset.id][b.dataset.g]; b.disabled = n === 0; b.setAttribute("aria-label", `${GLAZURE[b.dataset.g].naziv}, ${stanjeTekst(n)}`); });
+    k.querySelector("[data-crtez] .profil").setAttribute("stroke", linija());
+  });
+  crtajKorpu();
+  $("#porudzbina").reset(); korak = 1; sakrijKasu();
+  location.hash = "police";
+});
+
+/* forme primera */
+document.querySelectorAll("form[data-form]").forEach(f => f.addEventListener("submit", e => {
+  e.preventDefault(); f.querySelector(".poruka-primera").hidden = false; f.reset();
+}));
+
+document.addEventListener("keydown", e => {
+  if (e.key !== "Escape") return;
+  if (meniDugme.getAttribute("aria-expanded") === "true"){ meniStanje(false); meniDugme.focus(); }
+  if (fioka.classList.contains("otvorena")) zatvoriKorpu();
+  else if (!kasa.hidden && korak !== 5 && korak !== "banka"){ sakrijKasu(); $("#korpa-dugme").focus(); }
+});
+
+const danas = document.querySelector(`.vreme li[data-dan="${new Date().getDay()}"]`);
+if (danas) danas.classList.add("danas");
+crtajKorpu();
+</script>
+</body>
+</html>
