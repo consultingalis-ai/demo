@@ -129,6 +129,11 @@ p{margin:0 0 1em}
 .tri h3{font-size:1.25rem;margin-bottom:8px}
 .tri p{margin:0;color:var(--tiha)}
 .tri .iznos{display:block;font:600 1.8rem/1.1 var(--naslov);color:var(--kafa);margin-bottom:6px}
+.cenovnik{width:100%;max-width:420px;border-collapse:collapse;margin:4px 0 18px;font-size:.95rem}
+.cenovnik th,.cenovnik td{padding:8px 0;border-bottom:1px solid #e3dbd0;text-align:left;font-weight:400}
+.cenovnik th{font-size:.82rem;color:var(--tiha)}
+.cenovnik th:last-child,.cenovnik td:last-child{text-align:right;white-space:nowrap}
+.kurir-sitno{font-size:.82rem;color:var(--tiha);margin:10px 0 0}
 
 /* ---------- radnja ---------- */
 .radnja{display:grid;gap:48px}
@@ -298,7 +303,7 @@ dialog.detalj::backdrop{background:rgba(42,29,23,.38)}
     </div>
     <ul class="cinjenice">
       <li><b>Pržimo utorkom i petkom</b>Kafa stiže najviše nedelju dana posle prženja.</li>
-      <li><b>Kurir 450 RSD</b>Besplatna dostava za porudžbine od 3.000 RSD.</li>
+      <li><b>D Express, od 450 RSD</b>Poštarina po težini pošiljke. Besplatna dostava za porudžbine od 3.000 RSD.</li>
       <li><b>Preuzimanje u radnji</b>Karađorđeva 65, radnim danima od 8 h.</li>
     </ul>
   </div>
@@ -344,9 +349,9 @@ dialog.detalj::backdrop{background:rgba(42,29,23,.38)}
       <p>Šaljemo širom Srbije. Porudžbine do 12 h pakujemo isti dan.</p>
     </div>
     <div class="tri">
-      <div><span class="iznos">450 RSD</span><h3>Kurirom na adresu</h3><p>Rok 1–3 radna dana. Besplatno za porudžbine od 3.000 RSD.</p></div>
+      <div><span class="iznos">od 450 RSD</span><h3>Kurirom na adresu</h3><p>D Express. Poštarina po težini pošiljke, po <a href="#uslovi-dostava">cenovniku kurira</a>. Rok 1–3 radna dana. Besplatno za porudžbine od 3.000 RSD.</p></div>
       <div><span class="iznos">0 RSD</span><h3>Lično preuzimanje</h3><p>U radnji u Karađorđevoj 65, u radno vreme. Javimo Vam kad je spremno.</p></div>
-      <div><span class="iznos">Pouzeće ili uplata</span><h3>Plaćanje</h3><p>Pouzećem, uplatnicom ili IPS QR kodom iz aplikacije banke, i gotovinom pri preuzimanju u radnji.</p></div>
+      <div><span class="iznos">Pouzeće ili uplata</span><h3>Plaćanje</h3><p>Pouzećem (kurir naplaćuje naknadu za pouzeće, najmanje 180 RSD), uplatnicom ili IPS QR kodom iz aplikacije banke, i gotovinom pri preuzimanju u radnji.</p></div>
     </div>
   </div>
 </section>
@@ -445,7 +450,24 @@ dialog.detalj::backdrop{background:rgba(42,29,23,.38)}
     <div class="clan" id="uslovi-dostava">
       <h3>Dostava</h3>
       <div>
-        <p>Šaljemo kurirskom službom na adrese u Srbiji. Cena dostave je 450 RSD, a za porudžbine od 3.000 RSD dostava je besplatna. Rok je 1–3 radna dana od potvrde porudžbine, odnosno od prijema uplate. Lično preuzimanje u radnji je besplatno.</p>
+        <p>Šaljemo kurirskom službom D Express na adrese u Srbiji. Poštarinu računamo po težini pošiljke, po cenovniku kurira: težina pošiljke je zbir težina kesa (sa pakovanjem) i 0,2 kg kutije za slanje. Za porudžbine od 3.000 RSD dostava je besplatna. Rok je 1–3 radna dana od potvrde porudžbine, odnosno od prijema uplate. Lično preuzimanje u radnji je besplatno.</p>
+        <table class="cenovnik">
+          <caption class="sr">Poštarina D Express po težini pošiljke</caption>
+          <thead><tr><th scope="col">Težina pošiljke</th><th scope="col">Poštarina</th></tr></thead>
+          <tbody>
+            <tr><td>do 0,5 kg</td><td>450 RSD</td></tr>
+            <tr><td>do 1 kg</td><td>500 RSD</td></tr>
+            <tr><td>do 2 kg</td><td>600 RSD</td></tr>
+            <tr><td>do 5 kg</td><td>924 RSD</td></tr>
+            <tr><td>do 10 kg</td><td>1.020 RSD</td></tr>
+            <tr><td>do 20 kg</td><td>1.386 RSD</td></tr>
+            <tr><td>do 30 kg</td><td>1.600 RSD</td></tr>
+            <tr><td>do 50 kg</td><td>2.399 RSD</td></tr>
+          </tbody>
+        </table>
+        <p>Za pošiljke teže od 50 kg cenu dostave javljamo telefonom.</p>
+        <p>Pouzeće: kurir naplaćuje naknadu za pouzeće, 1,5 % od iznosa, najmanje 180 RSD. Računa se na ukupan iznos koji plaćate kuriru (roba i poštarina) i važi i kad je dostava besplatna. Uz uplatnicu i lično preuzimanje ove naknade nema.</p>
+        <p class="tiho">Izvor: cenovnik kurira D Express, dokument od 13. 3. 2026 (<a href="https://www.dexpress.rs/rs/cenovnik" rel="noopener">dexpress.rs/rs/cenovnik</a>). Standardne cene sa PDV-om, bez ugovornih popusta.</p>
       </div>
     </div>
 
@@ -453,7 +475,7 @@ dialog.detalj::backdrop{background:rgba(42,29,23,.38)}
       <h3>Načini plaćanja</h3>
       <div>
         <ul>
-          <li>Pouzećem: plaćate kuriru gotovinom pri preuzimanju.</li>
+          <li>Pouzećem: plaćate kuriru gotovinom pri preuzimanju, uz naknadu za pouzeće po cenovniku kurira (vidi <a href="#uslovi-dostava">Dostava</a>).</li>
           <li>Uplatnicom ili IPS QR kodom: podatke za uplatu dobijate posle porudžbine. Porudžbinu šaljemo kad uplata stigne.</li>
           <li>Gotovinom pri preuzimanju u radnji.</li>
         </ul>
@@ -568,7 +590,7 @@ dialog.detalj::backdrop{background:rgba(42,29,23,.38)}
 
       <fieldset class="korak izbor" data-korak="2" hidden>
         <h3>Dostava</h3>
-        <label class="opcija"><input type="radio" name="dostava" value="kurir" checked><span><b>Kurirom na adresu</b><small id="kurirCena">450 RSD, rok 1–3 radna dana</small></span></label>
+        <label class="opcija"><input type="radio" name="dostava" value="kurir" checked><span><b>Kurirom na adresu</b><small id="kurirCena">D Express, poštarina po težini, rok 1–3 radna dana</small></span></label>
         <label class="opcija"><input type="radio" name="dostava" value="licno"><span><b>Lično preuzimanje u radnji</b><small>Karađorđeva 65. Pon–pet 8–19 h, subota 9–15 h. Besplatno.</small></span></label>
         <div id="adresa">
           <div class="polje"><label for="c-ulica">Ulica i broj</label><input id="c-ulica" name="ulica" autocomplete="street-address"><span class="greska" id="g-ulica"></span></div>
@@ -620,7 +642,26 @@ dialog.detalj::backdrop{background:rgba(42,29,23,.38)}
   var FIRMA = 'Pržionica kafe Svitanje';
   var PRIMALAC = 'Pržionica kafe Svitanje, Marija Petrović PR, Karađorđeva 65, Beograd';
   var PREFIKS = 'SV';
-  var KURIR = 450, PRAG = 3000;
+  var PRAG = 3000;   /* besplatna dostava od 3.000 RSD robe */
+
+  /* ---------- poštarina po pravom cenovniku kurira ----------
+     Težina pošiljke = zbir (tezina × količina) + 0,2 kg ambalaže; poštarina = prvi težinski razred
+     u koji pošiljka staje (gornja granica uključena). Proverio glavni agent 21. 10. 2026. */
+  // Izvor i datum su u svakom zapisu. Cene u RSD, sa PDV-om.
+  var KURIRI = {
+    dexpress: {
+      naziv: 'D Express', izvor: 'https://www.dexpress.rs/rs/cenovnik', vazi: 'dokument od 13. 3. 2026',
+      razredi: [[0.5,450],[1,500],[2,600],[5,924],[10,1020],[20,1386],[30,1600],[50,2399]],
+      pouzece: function (iznos) { return Math.max(180, Math.ceil(iznos * 0.015)); },
+      pouzeceOpis: '1,5 % od iznosa, najmanje 180 RSD'
+    }
+  };
+  function postarina(kurir, kg, razredi) {
+    var r = razredi || kurir.razredi;
+    for (var i = 0; i < r.length; i++) if (kg <= r[i][0] + 1e-9) return r[i][1];
+    return null; // preteško → „cenu dostave javljamo telefonom“
+  }
+  var KURIR = KURIRI.dexpress, AMBALAZA = 0.2;
 
   var BOJE_PRZENJA = ['#C9A57A','#A87A4F','#7F5232','#55341F','#2A1D17'];
   var NIVO = ['svetlo','svetlo do srednje','srednje','srednje do tamno','tamno'];
@@ -630,29 +671,29 @@ dialog.detalj::backdrop{background:rgba(42,29,23,.38)}
 
   /* Ponuda (na pravom sajtu može da se čita iz Google tabele) */
   var KAFE = [
-    {id:'etiopija', naziv:'Etiopija Jirgacheffe', kat:'jednorodne', note:'jasmin, bergamot, limun', p:1, cena:{'250':1290,'1000':4590}, mlev:'filter',
+    {id:'etiopija', naziv:'Etiopija Jirgacheffe', kat:'jednorodne', note:'jasmin, bergamot, limun', p:1, cena:{'250':1290,'1000':4590}, tezina:{'250':0.27,'1000':1.05}, mlev:'filter',
      opis:'Lagana i cvetna kafa, sa izraženom kiselošću. Najbolja kao filter ili hladno ceđena.', poreklo:'Etiopija, region Jirgacheffe', sastav:'100 % arabika, etiopske lokalne sorte', obrada:'prana', visina:'1.900–2.200 m'},
-    {id:'kenija', naziv:'Kenija Nyeri', kat:'jednorodne', note:'crna ribizla, grejpfrut, med', p:2, cena:{'250':1390,'1000':4890}, mlev:'filter',
+    {id:'kenija', naziv:'Kenija Nyeri', kat:'jednorodne', note:'crna ribizla, grejpfrut, med', p:2, cena:{'250':1390,'1000':4890}, tezina:{'250':0.27,'1000':1.05}, mlev:'filter',
      opis:'Sočna, voćna i jasna. Za filter i aeropress; kao espreso je oštra.', poreklo:'Kenija, okrug Nyeri', sastav:'100 % arabika, SL28 i SL34', obrada:'prana', visina:'1.700–1.900 m'},
-    {id:'kolumbija', naziv:'Kolumbija Huila', kat:'jednorodne', note:'karamel, crvena jabuka, kakao', p:3, cena:{'250':1150,'1000':4090}, mlev:'zrno',
+    {id:'kolumbija', naziv:'Kolumbija Huila', kat:'jednorodne', note:'karamel, crvena jabuka, kakao', p:3, cena:{'250':1150,'1000':4090}, tezina:{'250':0.27,'1000':1.05}, mlev:'zrno',
      opis:'Uravnotežena, slatka kafa za svaki dan. Dobra i kao espreso i kao filter.', poreklo:'Kolumbija, departman Huila', sastav:'100 % arabika, Caturra i Castillo', obrada:'prana', visina:'1.600–1.800 m'},
-    {id:'gvatemala', naziv:'Gvatemala Antigua', kat:'jednorodne', note:'kakao, šljiva, braon šećer', p:3, cena:{'250':1190,'1000':4190}, mlev:'zrno',
+    {id:'gvatemala', naziv:'Gvatemala Antigua', kat:'jednorodne', note:'kakao, šljiva, braon šećer', p:3, cena:{'250':1190,'1000':4190}, tezina:{'250':0.27,'1000':1.05}, mlev:'zrno',
      opis:'Puno telo i čokoladna slatkoća. Lepo podnosi mleko.', poreklo:'Gvatemala, dolina Antigua', sastav:'100 % arabika, Bourbon i Caturra', obrada:'prana', visina:'1.500–1.700 m'},
-    {id:'brazil', naziv:'Brazil Cerrado', kat:'jednorodne', note:'lešnik, mlečna čokolada', p:4, cena:{'250':990,'1000':3490}, mlev:'espreso',
+    {id:'brazil', naziv:'Brazil Cerrado', kat:'jednorodne', note:'lešnik, mlečna čokolada', p:4, cena:{'250':990,'1000':3490}, tezina:{'250':0.27,'1000':1.05}, mlev:'espreso',
      opis:'Blaga, orašasta, sa malo kiselosti. Za moka lonče i espreso sa mlekom.', poreklo:'Brazil, Cerrado Mineiro', sastav:'100 % arabika, Mundo Novo i Catuaí', obrada:'prirodna (suva)', visina:'1.000–1.200 m'},
-    {id:'ruanda', naziv:'Ruanda Huye', kat:'jednorodne', note:'hibiskus, crvena pomorandža, šećerna trska', p:2, cena:{'250':1350,'1000':4790}, mlev:'filter',
+    {id:'ruanda', naziv:'Ruanda Huye', kat:'jednorodne', note:'hibiskus, crvena pomorandža, šećerna trska', p:2, cena:{'250':1350,'1000':4790}, tezina:{'250':0.27,'1000':1.05}, mlev:'filter',
      opis:'Živa i čista, sa slatkim krajem. Za filter i aeropress.', poreklo:'Ruanda, okrug Huye', sastav:'100 % arabika, Red Bourbon', obrada:'prana', visina:'1.700–2.000 m'},
-    {id:'indija', naziv:'Indija Monsooned Malabar', kat:'jednorodne', note:'začini, kakao, malo kiselosti', p:5, cena:{'250':1090,'1000':3890}, mlev:'espreso',
+    {id:'indija', naziv:'Indija Monsooned Malabar', kat:'jednorodne', note:'začini, kakao, malo kiselosti', p:5, cena:{'250':1090,'1000':3890}, tezina:{'250':0.27,'1000':1.05}, mlev:'espreso',
      opis:'Zrno odležalo na monsunskom vetru: teško telo, zemljani ukus i skoro bez kiselosti. Za espreso i džezvu.', poreklo:'Indija, obala Malabar', sastav:'100 % arabika', obrada:'suva, monsunsko odležavanje', visina:'1.000–1.500 m'},
-    {id:'zora', naziv:'Mešavina Zora', kat:'espreso', note:'tamna čokolada, pomorandža', p:4, cena:{'250':1050,'1000':3790}, mlev:'espreso',
+    {id:'zora', naziv:'Mešavina Zora', kat:'espreso', note:'tamna čokolada, pomorandža', p:4, cena:{'250':1050,'1000':3790}, tezina:{'250':0.27,'1000':1.05}, mlev:'espreso',
      opis:'Naša kućna mešavina za espreso. Slatka, sa gustom kremom; ista koju točimo za šankom.', poreklo:'Brazil 60 %, Etiopija 25 %, Kolumbija 15 %', sastav:'100 % arabika', obrada:'prirodna i prana', visina:'1.000–2.000 m'},
-    {id:'podne', naziv:'Mešavina Podne', kat:'espreso', note:'kakao, pečeni orah, gusta krema', p:5, cena:{'250':890,'1000':3190}, mlev:'espreso',
+    {id:'podne', naziv:'Mešavina Podne', kat:'espreso', note:'kakao, pečeni orah, gusta krema', p:5, cena:{'250':890,'1000':3190}, tezina:{'250':0.27,'1000':1.05}, mlev:'espreso',
      opis:'Jača mešavina sa robustom, za one koji vole italijanski espreso i kafu sa mnogo mleka.', poreklo:'Brazil 50 %, Indija 30 %, Gvatemala 20 %', sastav:'80 % arabika, 20 % robusta', obrada:'prirodna i prana', visina:'600–1.700 m'},
-    {id:'domaca', naziv:'Domaća Svitanje', kat:'dzezva', note:'puna, sa blagom gorčinom', p:4, cena:{'250':690,'1000':2490}, mlev:'dzezva',
+    {id:'domaca', naziv:'Domaća Svitanje', kat:'dzezva', note:'puna, sa blagom gorčinom', p:4, cena:{'250':690,'1000':2490}, tezina:{'250':0.27,'1000':1.05}, mlev:'dzezva',
      opis:'Za kuvanu kafu u džezvi. Lepo se peni i nije kisela.', poreklo:'Brazil 70 %, Vijetnam 30 %', sastav:'70 % arabika, 30 % robusta', obrada:'prirodna', visina:'600–1.200 m'},
-    {id:'domaca-tamna', naziv:'Domaća tamna', kat:'dzezva', note:'jaka, gorka čokolada', p:5, cena:{'250':650,'1000':2350}, mlev:'dzezva',
+    {id:'domaca-tamna', naziv:'Domaća tamna', kat:'dzezva', note:'jaka, gorka čokolada', p:5, cena:{'250':650,'1000':2350}, tezina:{'250':0.27,'1000':1.05}, mlev:'dzezva',
      opis:'Tamnije pržena domaća kafa, za one koji je piju jaku i bez šećera.', poreklo:'Brazil 60 %, Indija 40 %', sastav:'60 % arabika, 40 % robusta', obrada:'prirodna', visina:'600–1.100 m'},
-    {id:'bez-kofeina', naziv:'Kolumbija bez kofeina', kat:'bezkofeina', note:'karamel, mleko, blaga kiselost', p:3, cena:{'250':1250,'1000':4450}, mlev:'zrno',
+    {id:'bez-kofeina', naziv:'Kolumbija bez kofeina', kat:'bezkofeina', note:'karamel, mleko, blaga kiselost', p:3, cena:{'250':1250,'1000':4450}, tezina:{'250':0.27,'1000':1.05}, mlev:'zrno',
      opis:'Za veče i za one koji ne smeju kofein. Kofein je uklonjen prirodnim postupkom iz šećerne trske.', poreklo:'Kolumbija, departman Huila', sastav:'100 % arabika, bez kofeina (do 0,1 %)', obrada:'prana, dekofeinizacija etil-acetatom', visina:'1.600–1.800 m'}
   ];
   var poId = {}; KAFE.forEach(function(k){ poId[k.id] = k; });
@@ -741,7 +782,39 @@ dialog.detalj::backdrop{background:rgba(42,29,23,.38)}
   function cenaStavke(s){ return poId[s.id].cena[s.pak]; }
   function medjuzbir(){ return korpa.reduce(function(a, s){ return a + cenaStavke(s) * s.kol; }, 0); }
   function brojStavki(){ return korpa.reduce(function(a, s){ return a + s.kol; }, 0); }
-  function dostavaCena(nacin){ if (nacin === 'licno') return 0; return medjuzbir() >= PRAG ? 0 : KURIR; }
+  function tezinaPosiljke(){   /* kg, računato u gramima da nema grešaka zaokruživanja */
+    var g = korpa.reduce(function(a, s){ return a + Math.round(poId[s.id].tezina[s.pak] * 1000) * s.kol; }, 0);
+    return (g + Math.round(AMBALAZA * 1000)) / 1000;
+  }
+  function kgTekst(t){
+    /* prikaz zaokružen na 0,1 kg; ako bi zaokruživanje naniže palo u niži razred (npr. 1,01 kg → „1,0“),
+       prikazuje se naviše, da prikazana težina i poštarina budu usklađene */
+    var st = Math.round(t * 1000) / 100, d = Math.round(st) / 10;
+    if (postarina(KURIR, d) !== postarina(KURIR, t)) d = Math.ceil(st) / 10;
+    return d.toFixed(1).replace('.', ',') + ' kg';
+  }
+  /* nacin: 'kurir' | 'licno'; placanje: 'pouzece' | ... (može i null, npr. u korpi) */
+  function obracun(nacin, placanje){
+    var mz = medjuzbir(), r = {medju:mz, tezina:tezinaPosiljke(), post:0, besplatno:false, preteska:false, nakn:0, licno:nacin === 'licno'};
+    if (!r.licno) {
+      if (mz >= PRAG) r.besplatno = true;
+      else { var c = postarina(KURIR, r.tezina); if (c === null) r.preteska = true; else r.post = c; }
+      if (placanje === 'pouzece') r.nakn = KURIR.pouzece(mz + r.post);   /* na iznos koji kupac plaća kuriru */
+    }
+    r.ukupno = mz + r.post + r.nakn;
+    return r;
+  }
+  function redoviDostave(r, pre){   /* redovi za <dl class="zbir">; pre = prefiks id-a (z, p, pot) */
+    if (r.licno) return '<dt>Lično preuzimanje</dt><dd id="' + pre + 'Dost">besplatno</dd>';
+    return '<dt>Težina pošiljke</dt><dd id="' + pre + 'Tezina">' + kgTekst(r.tezina) + ' · ' + KURIR.naziv + '</dd>' +
+      '<dt>Poštarina</dt><dd id="' + pre + 'Dost">' + (r.besplatno ? 'besplatno' : r.preteska ? 'javljamo telefonom' : rsd(r.post)) + '</dd>' +
+      (r.nakn ? '<dt>Naknada za pouzeće (kurir)</dt><dd id="' + pre + 'Nakn">' + rsd(r.nakn) + '</dd>' : '');
+  }
+  function izvorKurira(r){
+    if (r.licno) return '';
+    return (r.preteska ? '<p class="kurir-sitno" style="color:var(--kafa)">Za ovu težinu cenu dostave javljamo telefonom.</p>' : '') +
+      '<p class="kurir-sitno">Po cenovniku kurira ' + KURIR.naziv + ' (' + KURIR.vazi + '), sa PDV-om.</p>';
+  }
 
   var obavTimer;
   function dodaj(id, pak, mlev){
@@ -767,14 +840,13 @@ dialog.detalj::backdrop{background:rgba(42,29,23,.38)}
         '<button type="button" class="ukloni">Ukloni</button></div></li>';
     }).join('');
     el('prazno').hidden = korpa.length > 0;
-    var mz = medjuzbir(), d = dostavaCena('kurir');
+    var r = obracun('kurir'), mz = r.medju;
     el('zbirKorpe').innerHTML = korpa.length ? (
-      '<dl class="zbir"><dt>Međuzbir</dt><dd id="zMedju">' + rsd(mz) + '</dd>' +
-      '<dt>Dostava kurirom</dt><dd id="zDost">' + (d ? rsd(d) : 'besplatno') + '</dd>' +
-      '<dt class="ukupno">Ukupno</dt><dd class="ukupno" id="zUkupno">' + rsd(mz + d) + '</dd></dl>' +
+      '<dl class="zbir"><dt>Međuzbir</dt><dd id="zMedju">' + rsd(mz) + '</dd>' + redoviDostave(r, 'z') +
+      '<dt class="ukupno">Ukupno</dt><dd class="ukupno" id="zUkupno">' + rsd(r.ukupno) + '</dd></dl>' + izvorKurira(r) +
       '<p class="prag" id="zPrag">' + (mz >= PRAG ? 'Dostava je besplatna.' : 'Još ' + rsd(PRAG - mz) + ' do besplatne dostave.') +
       '<span class="prag-linija" aria-hidden="true"><i style="width:' + Math.min(100, Math.round(mz / PRAG * 100)) + '%"></i></span></p>' +
-      '<p class="tiho" style="font-size:.86rem;margin-top:12px">Lično preuzimanje u radnji je besplatno. Cene su konačne, u dinarima.</p>') : '';
+      '<p class="tiho" style="font-size:.86rem;margin-top:12px">Uz plaćanje pouzećem kurir naplaćuje naknadu za pouzeće: ' + KURIR.pouzeceOpis + '. Lično preuzimanje u radnji je besplatno. Cene su konačne, u dinarima.</p>') : '';
     if (pogled === 'korpa') dnoKorpe();
   }
   el('stavke').addEventListener('click', function(e){
@@ -850,7 +922,12 @@ dialog.detalj::backdrop{background:rgba(42,29,23,.38)}
     korak = n;
     [].forEach.call(forma.querySelectorAll('.korak'), function(f){ f.hidden = +f.dataset.korak !== n; });
     [].forEach.call(forma.querySelectorAll('.koraci li'), function(li){ li.classList.toggle('akt', +li.dataset.k <= n); });
-    if (n === 2) { el('adresa').hidden = vrednost('dostava') !== 'kurir'; el('kurirCena').textContent = (dostavaCena('kurir') ? rsd(KURIR) : 'Besplatno (porudžbina od 3.000 RSD)') + ', rok 1–3 radna dana'; }
+    if (n === 2) {
+      el('adresa').hidden = vrednost('dostava') !== 'kurir';
+      var rk = obracun('kurir');
+      el('kurirCena').textContent = (rk.besplatno ? 'Besplatno (porudžbina od 3.000 RSD)' : rk.preteska ? 'Cenu dostave za ' + kgTekst(rk.tezina) + ' javljamo telefonom'
+        : 'Poštarina ' + rsd(rk.post) + ' (' + kgTekst(rk.tezina) + ', ' + KURIR.naziv + ')') + ', rok 1–3 radna dana';
+    }
     if (n === 3) crtajPlacanja();
     if (n === 4) crtajPregled();
     el('fiokaDno').innerHTML = n < 4
@@ -873,16 +950,17 @@ dialog.detalj::backdrop{background:rgba(42,29,23,.38)}
     var d = vrednost('dostava'), staro = vrednost('placanje'), h = '';
     Object.keys(PLACANJA).forEach(function(k){
       var p = PLACANJA[k]; if (p.za.indexOf(d) < 0) return;
-      h += '<label class="opcija"><input type="radio" name="placanje" value="' + k + '"' + (k === staro ? ' checked' : '') + '><span><b>' + p.naziv + '</b><small>' + p.opis + '</small></span></label>';
+      var dod = k === 'pouzece' ? ' <span id="naknPouzece">Naknada za pouzeće (kurir): ' + rsd(obracun(d, 'pouzece').nakn) + '.</span>' : '';
+      h += '<label class="opcija"><input type="radio" name="placanje" value="' + k + '"' + (k === staro ? ' checked' : '') + '><span><b>' + p.naziv + '</b><small>' + p.opis + dod + '</small></span></label>';
     });
     el('placanja').innerHTML = h + '<p class="greska" id="g-placanje"></p><p class="tiho" style="font-size:.86rem">Plaćanje karticom za sada nije moguće.</p>';
     if (!vrednost('placanje')) forma.querySelector('[name="placanje"]').checked = true;
   }
   function podaci(){
-    var d = vrednost('dostava'), mz = medjuzbir(), dc = dostavaCena(d);
+    var d = vrednost('dostava'), pl = vrednost('placanje'), r = obracun(d, pl);
     return {ime:el('c-ime').value.trim(), tel:el('c-tel').value.trim(), mejl:el('c-mejl').value.trim(), dostava:d,
       adresa: d === 'kurir' ? el('c-ulica').value.trim() + ', ' + el('c-pb').value.trim() + ' ' + el('c-mesto').value.trim() : 'Karađorđeva 65 (lično preuzimanje)',
-      placanje:vrednost('placanje'), medju:mz, dost:dc, ukupno:mz + dc};
+      placanje:pl, r:r, medju:r.medju, dost:r.post, nakn:r.nakn, ukupno:r.ukupno};
   }
   function listaStavki(){
     return '<ul class="stavke" style="margin-bottom:12px">' + korpa.map(function(s){
@@ -895,8 +973,8 @@ dialog.detalj::backdrop{background:rgba(42,29,23,.38)}
       '<dl class="pregled"><dt>Kupac</dt><dd>' + esc(p.ime) + ', ' + esc(p.tel) + '</dd>' +
       '<dt>Dostava</dt><dd>' + (p.dostava === 'kurir' ? 'Kurirom na adresu: ' + esc(p.adresa) : 'Lično preuzimanje, Karađorđeva 65') + '</dd>' +
       '<dt>Plaćanje</dt><dd>' + PLACANJA[p.placanje].naziv + '</dd></dl>' +
-      '<dl class="zbir"><dt>Međuzbir</dt><dd>' + rsd(p.medju) + '</dd><dt>Dostava</dt><dd>' + (p.dost ? rsd(p.dost) : 'besplatno') + '</dd>' +
-      '<dt class="ukupno">Ukupno</dt><dd class="ukupno" id="pUkupno">' + rsd(p.ukupno) + '</dd></dl>';
+      '<dl class="zbir"><dt>Međuzbir</dt><dd>' + rsd(p.medju) + '</dd>' + redoviDostave(p.r, 'p') +
+      '<dt class="ukupno">Ukupno</dt><dd class="ukupno" id="pUkupno">' + rsd(p.ukupno) + '</dd></dl>' + izvorKurira(p.r);
     el('saglasan').checked = false; el('g-saglasan').textContent = '';
   }
 
@@ -941,7 +1019,7 @@ dialog.detalj::backdrop{background:rgba(42,29,23,.38)}
     var p = podaci(), br = brojPorudzbine(), uputstvo = '';
     /* PRODUKCIJA: ovde ide fetch('https://api.web3forms.com/submit', {method:'POST', body: ...}) sa porudžbinom. */
     if (p.placanje === 'pouzece') {
-      uputstvo = '<h3 style="font-size:1.2rem;margin:16px 0 6px">Plaćanje pouzećem</h3><p>Plaćate kuriru gotovinom pri preuzimanju. Iznos za plaćanje: <b>' + rsd(p.ukupno) + '</b>.</p>';
+      uputstvo = '<h3 style="font-size:1.2rem;margin:16px 0 6px">Plaćanje pouzećem</h3><p>Plaćate kuriru gotovinom pri preuzimanju. Iznos za plaćanje: <b>' + rsd(p.ukupno) + '</b> (roba, poštarina i naknada za pouzeće).</p>';
     } else if (p.placanje === 'uplatnica') {
       uputstvo = '<h3 style="font-size:1.2rem;margin:16px 0 6px">Podaci za uplatu</h3><div class="uplata"><dl>' +
         '<dt>Primalac</dt><dd>' + PRIMALAC + '</dd>' +
@@ -959,8 +1037,8 @@ dialog.detalj::backdrop{background:rgba(42,29,23,.38)}
       '<p class="tiho" style="margin:0">Broj porudžbine</p><p class="br-por" id="brPor">' + br + '</p>' +
       '<p>Hvala, ' + esc(p.ime.split(' ')[0]) + '. Potvrdu šaljemo na ' + esc(p.mejl) + '.</p>' +
       listaStavki() +
-      '<dl class="zbir"><dt>Međuzbir</dt><dd>' + rsd(p.medju) + '</dd><dt>' + (p.dostava === 'kurir' ? 'Dostava kurirom' : 'Lično preuzimanje') + '</dt><dd>' + (p.dost ? rsd(p.dost) : 'besplatno') + '</dd>' +
-      '<dt class="ukupno">Ukupno</dt><dd class="ukupno" id="potUkupno">' + rsd(p.ukupno) + '</dd></dl>' +
+      '<dl class="zbir"><dt>Međuzbir</dt><dd>' + rsd(p.medju) + '</dd>' + redoviDostave(p.r, 'pot') +
+      '<dt class="ukupno">Ukupno</dt><dd class="ukupno" id="potUkupno">' + rsd(p.ukupno) + '</dd></dl>' + izvorKurira(p.r) +
       '<p style="margin-top:14px">' + (p.dostava === 'kurir' ? 'Adresa: ' + esc(p.adresa) + '. Rok dostave 1–3 radna dana.' : 'Preuzimanje: Karađorđeva 65, pon–pet 8–19 h, subota 9–15 h.') + '</p>' +
       uputstvo +
       '<p>' + (p.dostava === 'kurir' ? 'Fiskalni račun stiže uz paket.' : 'Fiskalni račun dobijate u radnji.') + '</p>';

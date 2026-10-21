@@ -216,6 +216,13 @@ dialog::backdrop{background:rgba(29,42,36,.5)}
 .sums div{display:flex;justify-content:space-between;gap:10px;padding:3px 0;font-size:15px}
 .sums .tot{font:500 19px/1.3 var(--head);border-top:1px solid var(--ink);margin-top:6px;padding-top:9px}
 .freebar{margin:12px 0 0;font-size:14px}
+.kinfo{font-size:12px;line-height:1.5;color:var(--mute);margin:8px 0 0}
+.kwarn{font-size:13px;color:#8A3B12;margin:8px 0 0}
+.razredi{width:100%;max-width:420px;border-collapse:collapse;margin:4px 0 14px;font-size:14px;font-variant-numeric:tabular-nums}
+.razredi caption{text-align:left;font:500 15px/1.3 var(--head);padding-bottom:6px}
+.razredi th,.razredi td{padding:6px 0;border-bottom:1px solid var(--line);text-align:left;font-weight:400}
+.razredi thead th{color:var(--mute);font-size:13px}
+.razredi td:last-child,.razredi th:last-child{text-align:right}
 .meter{height:4px;background:var(--line);border-radius:2px;margin-top:6px;overflow:hidden}
 .meter i{display:block;height:100%;background:var(--green)}
 .empty{padding:28px 0}
@@ -301,7 +308,7 @@ dialog::backdrop{background:rgba(29,42,36,.5)}
         <a class="btn" href="viber://chat?number=%2B381600000706">Viber</a>
       </div>
       <dl class="facts">
-        <div><dt>Dostava</dt><dd>450 RSD, besplatno od 5.000 RSD. Stiže za 1–3 radna dana.</dd></div>
+        <div><dt>Dostava</dt><dd>D Express, po težini pošiljke, od 450 RSD. Besplatno od 5.000 RSD. Stiže za 1–3 radna dana.</dd></div>
         <div><dt>Radnja</dt><dd>Vidikovački venac 80, Rakovica. Možete i lično da preuzmete.</dd></div>
         <div><dt>Plaćanje</dt><dd>Pouzećem, uplatnicom, karticom ili IPS aplikacijom.</dd></div>
       </dl>
@@ -393,11 +400,27 @@ dialog::backdrop{background:rgba(29,42,36,.5)}
         <section id="dostava">
           <h3>Dostava</h3>
           <ul>
-            <li>Kurirom na adresu u Srbiji: 450 RSD, rok 1–3 radna dana.</li>
+            <li>Kurirom D Express na adresu u Srbiji, rok 1–3 radna dana. Poštarinu računamo po težini pošiljke: zbir težina pakovanja, plus 0,2 kg kutije. Džak od 12 kg (12,05 kg sa pakovanjem) ulazi u razred do 20 kg.</li>
             <li>Besplatna dostava za porudžbine od 5.000 RSD.</li>
-            <li>Lično preuzimanje u radnji, Vidikovački venac 80, u radno vreme. Javljamo Vam kad je porudžbina spremna.</li>
+            <li>Pouzeće: kurir naplaćuje naknadu 1,5 % od iznosa, najmanje 180 RSD, na ceo iznos koji plaćate kuriru (roba + poštarina). Naknada važi i kad je dostava besplatna.</li>
+            <li>Pošiljke teže od 50 kg: cenu dostave javljamo telefonom.</li>
+            <li>Lično preuzimanje u radnji, Vidikovački venac 80, u radno vreme, bez poštarine i naknade. Javljamo Vam kad je porudžbina spremna.</li>
           </ul>
-          <p>Šaljemo kurirskom službom, a broj pošiljke dobijate porukom.</p>
+          <table class="razredi">
+            <caption>Cenovnik D Express po masi pošiljke, sa PDV-om</caption>
+            <thead><tr><th scope="col">Masa pošiljke</th><th scope="col">Poštarina</th></tr></thead>
+            <tbody id="razredi-tabela">
+              <tr><td>do 0,5 kg</td><td>450 RSD</td></tr>
+              <tr><td>do 1 kg</td><td>500 RSD</td></tr>
+              <tr><td>do 2 kg</td><td>600 RSD</td></tr>
+              <tr><td>do 5 kg</td><td>924 RSD</td></tr>
+              <tr><td>do 10 kg</td><td>1.020 RSD</td></tr>
+              <tr><td>do 20 kg</td><td>1.386 RSD</td></tr>
+              <tr><td>do 30 kg</td><td>1.600 RSD</td></tr>
+              <tr><td>do 50 kg</td><td>2.399 RSD</td></tr>
+            </tbody>
+          </table>
+          <p>Izvor: <a href="https://www.dexpress.rs/rs/cenovnik" rel="noopener">cenovnik D Express</a>, dokument od 13. 3. 2026. Standardne cene sa PDV-om, bez ugovornih popusta. Broj pošiljke dobijate porukom.</p>
         </section>
         <section id="placanje">
           <h3>Načini plaćanja</h3>
@@ -509,51 +532,72 @@ dialog::backdrop{background:rgba(29,42,36,.5)}
    - U ovom primeru ništa se ne šalje: sve radi u pregledaču.
    ===================================================================== */
 
-const SHOP = {name:"Pet shop Zdela, preduzetnik Milan Jovanović", prefix:"ZD", ship:450, freeFrom:5000};
+const SHOP = {name:"Pet shop Zdela, preduzetnik Milan Jovanović", prefix:"ZD", freeFrom:5000, boxG:200};
+
+/* POŠTARINA PO CENOVNIKU KURIRA
+   Izvor i datum su u zapisu. Cene u RSD, sa PDV-om, standardne, bez ugovornih popusta. */
+var KURIRI = {
+  dexpress: {
+    naziv: 'D Express', izvor: 'https://www.dexpress.rs/rs/cenovnik', vazi: 'dokument od 13. 3. 2026',
+    razredi: [[0.5,450],[1,500],[2,600],[5,924],[10,1020],[20,1386],[30,1600],[50,2399]],
+    pouzece: function (iznos) { return Math.max(180, Math.ceil(iznos * 0.015)); },
+    pouzeceOpis: '1,5 % od iznosa, najmanje 180 RSD'
+  }
+};
+function postarina(kurir, kg, razredi) {
+  var r = razredi || kurir.razredi;
+  for (var i = 0; i < r.length; i++) if (kg <= r[i][0] + 1e-9) return r[i][1];
+  return null; // preteško → „cenu dostave javljamo telefonom“
+}
+const KURIR = KURIRI.dexpress;
+const IZVOR_TXT = "Po cenovniku kurira " + KURIR.naziv + " (" + KURIR.vazi + "), sa PDV-om.";
+const PRETESKO = "Za ovu težinu cenu dostave javljamo telefonom.";
 
 const PETS = [{id:"sve",n:"Svi"},{id:"pas",n:"Pas"},{id:"macka",n:"Mačka"}];
 const CATS = [{id:"sve",n:"Sve"},{id:"suva",n:"Suva hrana"},{id:"vlazna",n:"Vlažna hrana"},{id:"poslastice",n:"Poslastice"},{id:"oprema",n:"Oprema i posip"}];
 const PACKF = [{id:"sve",n:"Sva"},{id:"2 kg",n:"2 kg"},{id:"7 kg",n:"7 kg"},{id:"12 kg",n:"12 kg"}];
 
-/* katalog: cene po pakovanju; šifra (sku) je ključ za stanje u tabeli */
+/* katalog: cene po pakovanju; šifra (sku) je ključ za stanje u tabeli.
+   tezina: kg po pakovanju (varijanti), bruto. Hrana: težina pakovanja + 0,05 kg (džak 12 kg → 12,05).
+   Oprema i posip: sa kutijom ili kesom. */
 const PRODUCTS = [
   {id:"pas-odrasli", pet:["pas"], cat:"suva", shape:"bag", color:"#D9B77A", name:"Granule za odrasle pse", d:"Piletina i pirinač, za srednje i velike rase",
    sastav:"Piletina 28 %, pirinač 24 %, kukuruz, pileća mast, pulpa repe, riblje ulje, minerali i vitamini", an:"Proteini 25 %, masti 14 %, vlakna 2,5 %",
-   packs:[{p:"2 kg",c:1690,sku:"PO-2"},{p:"7 kg",c:4990,sku:"PO-7"},{p:"12 kg",c:7690,sku:"PO-12"}]},
+   packs:[{p:"2 kg",c:1690,sku:"PO-2",tezina:2.05},{p:"7 kg",c:4990,sku:"PO-7",tezina:7.05},{p:"12 kg",c:7690,sku:"PO-12",tezina:12.05}]},
   {id:"pas-stene", pet:["pas"], cat:"suva", shape:"bag", color:"#A9C4B0", name:"Granule za štence", d:"Jagnjetina i pirinač, do 12 meseci",
    sastav:"Jagnjetina 26 %, pirinač 25 %, ovas, pileća mast, sušeno jaje, riblje ulje, minerali i vitamini", an:"Proteini 28 %, masti 16 %, vlakna 2,5 %",
-   packs:[{p:"2 kg",c:1890,sku:"PS-2"},{p:"7 kg",c:5590,sku:"PS-7"},{p:"12 kg",c:8490,sku:"PS-12"}]},
+   packs:[{p:"2 kg",c:1890,sku:"PS-2",tezina:2.05},{p:"7 kg",c:5590,sku:"PS-7",tezina:7.05},{p:"12 kg",c:8490,sku:"PS-12",tezina:12.05}]},
   {id:"pas-losos", pet:["pas"], cat:"suva", shape:"bag", color:"#E2A07F", name:"Granule bez žitarica", d:"Losos i krompir, za osetljiv stomak",
    sastav:"Losos 30 %, krompir 26 %, grašak, riblje ulje, sušena šargarepa, minerali i vitamini", an:"Proteini 26 %, masti 15 %, vlakna 3 %",
-   packs:[{p:"2 kg",c:2290,sku:"PL-2"},{p:"7 kg",c:6890,sku:"PL-7"},{p:"12 kg",c:10490,sku:"PL-12"}]},
+   packs:[{p:"2 kg",c:2290,sku:"PL-2",tezina:2.05},{p:"7 kg",c:6890,sku:"PL-7",tezina:7.05},{p:"12 kg",c:10490,sku:"PL-12",tezina:12.05}]},
   {id:"pas-stariji", pet:["pas"], cat:"suva", shape:"bag", color:"#B9B4D2", name:"Granule za starije pse", d:"Ćuretina, za pse od 7 godina, manje kalorija",
    sastav:"Ćuretina 24 %, pirinač 26 %, ječam, pulpa repe, glukozamin, minerali i vitamini", an:"Proteini 23 %, masti 10 %, vlakna 3,5 %",
-   packs:[{p:"2 kg",c:1790,sku:"PT-2"},{p:"7 kg",c:5290,sku:"PT-7"},{p:"12 kg",c:7990,sku:"PT-12"}]},
+   packs:[{p:"2 kg",c:1790,sku:"PT-2",tezina:2.05},{p:"7 kg",c:5290,sku:"PT-7",tezina:7.05},{p:"12 kg",c:7990,sku:"PT-12",tezina:12.05}]},
   {id:"macka-odrasla", pet:["macka"], cat:"suva", shape:"bag", color:"#EBC3AE", name:"Granule za mačke", d:"Piletina, za odrasle mačke",
    sastav:"Piletina 32 %, pirinač, kukuruzni gluten, pileća mast, taurin, minerali i vitamini", an:"Proteini 32 %, masti 14 %, vlakna 2 %",
-   packs:[{p:"2 kg",c:1990,sku:"MO-2"},{p:"7 kg",c:5990,sku:"MO-7"}]},
+   packs:[{p:"2 kg",c:1990,sku:"MO-2",tezina:2.05},{p:"7 kg",c:5990,sku:"MO-7",tezina:7.05}]},
   {id:"macka-steril", pet:["macka"], cat:"suva", shape:"bag", color:"#9FBFD3", name:"Granule za sterilisane mačke", d:"Ćuretina, manje masti",
    sastav:"Ćuretina 30 %, pirinač, grašak, celuloza, taurin, minerali i vitamini", an:"Proteini 34 %, masti 10 %, vlakna 5 %",
-   packs:[{p:"2 kg",c:2190,sku:"MS-2"},{p:"7 kg",c:6490,sku:"MS-7"}]},
+   packs:[{p:"2 kg",c:2190,sku:"MS-2",tezina:2.05},{p:"7 kg",c:6490,sku:"MS-7",tezina:7.05}]},
   {id:"pas-konzerva", pet:["pas"], cat:"vlazna", shape:"can", color:"#BF6E58", name:"Konzerva za pse, govedina", d:"Komadi u sosu, 400 g",
    sastav:"Govedina 40 %, pileća jetra, pirinač, šargarepa, minerali", an:"Proteini 9 %, masti 6 %, vlaga 78 %",
-   packs:[{p:"1 × 400 g",c:290,sku:"PK-1"},{p:"6 × 400 g",c:1590,sku:"PK-6"}]},
+   packs:[{p:"1 × 400 g",c:290,sku:"PK-1",tezina:0.45},{p:"6 × 400 g",c:1590,sku:"PK-6",tezina:2.45}]},
   {id:"macka-kesice", pet:["macka"], cat:"vlazna", shape:"pouch", color:"#8EA2C4", name:"Kesice za mačke, miks", d:"Losos, piletina i ćuretina u želeu, 85 g",
    sastav:"Meso i nusproizvodi 45 % (piletina, ćuretina), losos 4 %, taurin, minerali", an:"Proteini 8 %, masti 5 %, vlaga 81 %",
-   packs:[{p:"12 × 85 g",c:1490,sku:"MK-12"}]},
+   packs:[{p:"12 × 85 g",c:1490,sku:"MK-12",tezina:1.07}]},
   {id:"pas-poslastice", pet:["pas"], cat:"poslastice", shape:"treat", color:"#D8BA6A", name:"Sušena pileća prsa", d:"Poslastica za trening, bez dodataka, 100 g",
    sastav:"100 % pileća prsa, sušena na niskoj temperaturi", an:"Proteini 70 %, masti 4 %",
-   packs:[{p:"100 g",c:490,sku:"PP-100"}]},
+   packs:[{p:"100 g",c:490,sku:"PP-100",tezina:0.15}]},
   {id:"macka-posip", pet:["macka"], cat:"oprema", shape:"bucket", color:"#C5BFB2", name:"Posip za mačke, bentonit", d:"Grudvasti, bez mirisa, 10 kg",
    sastav:"Prirodni bentonit, bez dodatih mirisa", an:"Pakovanje: kesa 10 kg",
-   packs:[{p:"10 kg",c:1190,sku:"MP-10"}]},
+   packs:[{p:"10 kg",c:1190,sku:"MP-10",tezina:10.1}]},
   {id:"cinija", pet:["pas","macka"], cat:"oprema", shape:"dish", color:"#AEB6B9", name:"Činija od nerđajućeg čelika", d:"Sa gumom na dnu da ne klizi",
    sastav:"Nerđajući čelik, gumeni prsten", an:"Može u mašinu za sudove",
-   packs:[{p:"0,7 l",c:890,sku:"CI-07"},{p:"1,6 l",c:1290,sku:"CI-16"}]},
+   packs:[{p:"0,7 l",c:890,sku:"CI-07",tezina:0.25},{p:"1,6 l",c:1290,sku:"CI-16",tezina:0.4}]},
   {id:"fontana", pet:["macka","pas"], cat:"oprema", shape:"fountain", color:"#A3CFCA", name:"Fontana za vodu, 2 l", d:"Tiha pumpa, filter sa aktivnim ugljem", tech:true,
    sastav:"Plastika bez BPA, pumpa 5 V, USB kabl 1,5 m, jedan filter", an:"Zamenski filteri: na upit",
    garancija:"2 godine. Garantni list stiže uz proizvod.",
-   packs:[{p:"2 l",c:4990,sku:"FO-2"}]}
+   packs:[{p:"2 l",c:4990,sku:"FO-2",tezina:1.1}]}
 ];
 
 /* STANJE IZ GOOGLE TABELE
@@ -595,6 +639,7 @@ const shape = (p, cls) => '<svg class="'+(cls||"shape")+'" viewBox="0 0 64 80" a
 
 const fmtN = n => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const fmt = n => fmtN(n) + " RSD";
+const fmtKg = g => (Math.ceil(Math.round(g) / 100) / 10).toFixed(1).replace(".", ",") + " kg";
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const $ = s => document.querySelector(s);
 const store = {
@@ -671,7 +716,7 @@ function openDetail(id, opener){
   $("#pdPet").textContent = p.pet.map((x,i) => { const n = PETS.find(y => y.id === x).n; return i ? n.toLowerCase() : n; }).join(" i ") + ", " + CATS.find(c => c.id === p.cat).n.toLowerCase();
   $("#pdBody").innerHTML = '<div class="pd"><div class="top">'+shape(p,"big")+'<div><h3 id="pdName">'+esc(p.name)+'</h3><p style="margin:4px 0 0;color:var(--mute)">'+esc(p.d)+'</p></div></div>'
     + '<dl><dt>Sastav</dt><dd>'+esc(p.sastav)+'</dd><dt>'+(p.cat==="oprema"?"Napomena":"Analitički sastav")+'</dt><dd>'+esc(p.an)+'</dd>'
-    + '<dt>Pakovanja</dt><dd>'+p.packs.map(k => esc(k.p)+": "+fmt(k.c)+" ("+(stock(k.sku) ? "na stanju "+stock(k.sku)+" kom." : "nema na stanju")+")").join("<br>")+'</dd>'
+    + '<dt>Pakovanja</dt><dd>'+p.packs.map(k => esc(k.p)+": "+fmt(k.c)+", "+String(k.tezina).replace(".", ",")+" kg bruto ("+(stock(k.sku) ? "na stanju "+stock(k.sku)+" kom." : "nema na stanju")+")").join("<br>")+'</dd>'
     + (p.garancija ? '<dt>Garancija</dt><dd>'+esc(p.garancija)+'</dd>' : '') + '</dl>'
     + '<a class="ll" href="#reklamacije" data-jump>Reklamacije, odustanak i vraćanje robe</a>'
     + '<button class="btn main wide" type="button" id="pdBuy" data-for="'+p.id+'" style="margin-top:10px">Izaberite pakovanje i dodajte u korpu</button></div>';
@@ -691,11 +736,19 @@ function qtyIn(sku){ return cart.filter(l => l.sku === sku).reduce((a,l) => a + 
 function addLine(id, sku, q){ const l = cart.find(x => x.sku === sku); if (l) l.qty = Math.min(l.qty + q, stock(sku)); else cart.push({id, sku, qty:Math.min(q, stock(sku))}); saveCart(); }
 function saveCart(){ store.set("zd-cart", cart); renderCart(); }
 function lineName(l){ const p = P(l.id); return p.name + ", " + packOf(p, l.sku).p; }
-function totals(del){
+/* obračun: težina pošiljke → razred kurira → poštarina; pouzeće → naknada kurira na (roba + poštarina) */
+function totals(del, pay){
   const sub = cart.reduce((a,l) => a + packOf(P(l.id), l.sku).c * l.qty, 0);
-  const ship = (del === "licno" || sub === 0 || sub >= SHOP.freeFrom) ? 0 : SHOP.ship;
-  return {sub, ship, total: sub + ship, count: cart.reduce((a,l) => a + l.qty, 0)};
+  const grams = cart.reduce((a,l) => a + Math.round(packOf(P(l.id), l.sku).tezina * 1000) * l.qty, 0) + SHOP.boxG;
+  const courier = del !== "licno", free = sub >= SHOP.freeFrom;
+  const rate = postarina(KURIR, grams / 1000);
+  const heavy = courier && !free && rate === null;
+  const ship = (!courier || sub === 0 || free || heavy) ? 0 : rate;
+  const cod = courier && pay === "pouzece" && sub ? KURIR.pouzece(sub + ship) : 0;
+  return {sub, grams, rate, courier, free, heavy, ship, cod, total: sub + ship + cod, count: cart.reduce((a,l) => a + l.qty, 0)};
 }
+const kgTxt = T => fmtKg(T.grams) + " · " + KURIR.naziv;
+const postTxt = T => T.free ? "besplatno" : T.heavy ? "javljamo telefonom" : fmt(T.ship);
 let cartOpener = null;
 function renderCart(){
   const T = totals("kurir");
@@ -719,8 +772,11 @@ function renderCart(){
   const pct = Math.min(100, Math.round(T.sub / SHOP.freeFrom * 100));
   $("#korpaFoot").innerHTML = '<div class="sums">'
     + '<div><span>Međuzbir</span><span id="sumSub">'+fmt(T.sub)+'</span></div>'
-    + '<div><span>Dostava kurirom</span><span id="sumShip">'+(T.ship ? fmt(T.ship) : "besplatno")+'</span></div>'
+    + '<div><span>Težina pošiljke</span><span id="sumKg">'+kgTxt(T)+'</span></div>'
+    + '<div><span>Poštarina</span><span id="sumShip">'+postTxt(T)+'</span></div>'
     + '<div class="tot"><span>Ukupno</span><span id="sumTot">'+fmt(T.total)+'</span></div></div>'
+    + (T.heavy ? '<p class="kwarn">'+PRETESKO+'</p>' : '')
+    + '<p class="kinfo" id="cartSrc">'+IZVOR_TXT+' Uz plaćanje pouzećem kurir naplaćuje i naknadu: '+KURIR.pouzeceOpis+'. Lično preuzimanje u radnji je bez poštarine.</p>'
     + '<p class="freebar" id="freeBar">'+(T.sub < SHOP.freeFrom ? "Još "+fmt(SHOP.freeFrom - T.sub)+" do besplatne dostave." : "Dostava je besplatna.")+'</p>'
     + '<div class="meter" aria-hidden="true"><i style="width:'+pct+'%"></i></div>'
     + '<button class="btn main wide" type="button" id="toCheckout" style="margin-top:12px">Nastavite na poručivanje</button>';
@@ -778,12 +834,21 @@ function fld(id, label, type, val, ac, ek){
   const e = co.errs[ek];
   return '<div class="field"><label for="'+id+'">'+label+'</label><input id="'+id+'" type="'+type+'" value="'+esc(val)+'" autocomplete="'+ac+'"'+(type==="tel"?' inputmode="tel"':'')+(e?' aria-invalid="true" aria-describedby="'+id+'E"':'')+'>'+(e?'<span class="err" id="'+id+'E">'+ERR[ek]+'</span>':'')+'</div>';
 }
-function shipTxt(T, d){ return d === "licno" ? "lično preuzimanje, 0 RSD" : T.ship ? fmt(T.ship) : "besplatno"; }
+function shipTxt(T, d){ return d === "licno" ? "lično preuzimanje, 0 RSD" : postTxt(T); }
+/* zbir na pregledu i potvrdi: id-jevi revKg/revShip/revCod/revTot i confKg/confShip/confCod/confTot */
 function sumsHtml(T, d, idTot){
-  return '<div class="sums"><div><span>Međuzbir</span><span>'+fmt(T.sub)+'</span></div><div><span>Dostava</span><span>'+shipTxt(T, d)+'</span></div><div class="tot"><span>Ukupno</span><span id="'+idTot+'">'+fmt(T.total)+'</span></div></div>';
+  const id = idTot.replace("Tot", "");
+  return '<div class="sums"><div><span>Međuzbir</span><span>'+fmt(T.sub)+'</span></div>'
+    + (d === "licno"
+      ? '<div><span>Dostava</span><span id="'+id+'Ship">'+shipTxt(T, d)+'</span></div>'
+      : '<div><span>Težina pošiljke</span><span id="'+id+'Kg">'+kgTxt(T)+'</span></div><div><span>Poštarina</span><span id="'+id+'Ship">'+postTxt(T)+'</span></div>')
+    + (T.cod ? '<div><span>Naknada za pouzeće (kurir)</span><span id="'+id+'Cod">'+fmt(T.cod)+'</span></div>' : '')
+    + '<div class="tot"><span>Ukupno</span><span id="'+idTot+'">'+fmt(T.total)+'</span></div></div>'
+    + (T.heavy ? '<p class="kwarn">'+PRETESKO+'</p>' : '')
+    + (d === "licno" ? '' : '<p class="kinfo" id="'+id+'Src">'+IZVOR_TXT+(T.cod ? ' Naknada za pouzeće: '+KURIR.pouzeceOpis+', na iznos robe i poštarine.' : '')+'</p>');
 }
 function renderStep(){
-  const body = $("#porBody"), foot = $("#porFoot"), T = totals(co.del);
+  const body = $("#porBody"), foot = $("#porFoot"), T = totals(co.del, co.pay);
   if (co.phase === "bank" || co.phase === "ipsapp"){
     const b = co.phase === "bank";
     body.innerHTML = '<div class="inter" id="interstitial"><span class="ex">Primer: porudžbina se ne šalje</span><h3>'+(b ? "Preusmeravanje na sigurnu stranu banke (primer)" : "Na telefonu se otvara aplikacija Vaše banke (primer)")+'</h3>'
@@ -799,12 +864,13 @@ function renderStep(){
   if (co.step === 1){
     h = '<div class="step"><h3>Vaši podaci</h3><div class="form">'+fld("cName","Ime i prezime","text",co.name,"name","name")+fld("cTel","Telefon","tel",co.tel,"tel","tel")+fld("cMail","Mejl","email",co.mail,"email","mail")+'<p style="font-size:14px;color:var(--mute);margin:0">Kurir Vas zove pre dostave. Potvrdu šaljemo na mejl.</p></div></div>';
   } else if (co.step === 2){
+    const TK = totals("kurir");
     h = '<div class="step"><h3>Dostava</h3><div class="choice">'
-      + '<label><input type="radio" name="del" value="kurir"'+(co.del==="kurir"?" checked":"")+'><span><b>Kurirom na adresu</b><span>450 RSD, besplatno od 5.000 RSD. Rok 1–3 radna dana.</span></span></label>'
+      + '<label><input type="radio" name="del" value="kurir"'+(co.del==="kurir"?" checked":"")+'><span><b>Kurirom D Express na adresu</b><span id="delCourierInfo">Poštarina po težini pošiljke ('+kgTxt(TK)+'): '+(TK.free ? "besplatno" : TK.heavy ? "na upit" : fmt(TK.ship))+'. Besplatno od 5.000 RSD. Rok 1–3 radna dana.</span></span></label>'
       + '<label><input type="radio" name="del" value="licno"'+(co.del==="licno"?" checked":"")+'><span><b>Lično preuzimanje u radnji</b><span>Vidikovački venac 80. Pon–pet 8–20 h, sub 8–15 h, ned 9–13 h.</span></span></label></div>'
       + (co.del === "kurir" ? '<div class="form" style="margin-top:18px">'+fld("cStreet","Ulica i broj","text",co.street,"street-address","street")+'<div class="two">'+fld("cCity","Mesto","text",co.city,"address-level2","city")+fld("cZip","Poštanski broj","text",co.zip,"postal-code","zip")+'</div></div>' : '') + '</div>';
   } else if (co.step === 3){
-    const o = [["pouzece","Plaćate kuriru gotovinom pri preuzimanju."],["uplatnica","Podatke za uplatu dobijate posle porudžbine."],["kartica","Visa · Mastercard · DinaCard. Podatke kartice unosite na strani banke."],["ips","Plaćanje potvrđujete u aplikaciji Vaše banke."]];
+    const o = [["pouzece","Plaćate kuriru gotovinom pri preuzimanju. Naknada kurira D Express za pouzeće: "+fmt(totals(co.del, "pouzece").cod)+"."],["uplatnica","Podatke za uplatu dobijate posle porudžbine."],["kartica","Visa · Mastercard · DinaCard. Podatke kartice unosite na strani banke."],["ips","Plaćanje potvrđujete u aplikaciji Vaše banke."]];
     h = '<div class="step"><h3>Plaćanje</h3><div class="choice">'+o.map(([v,s]) => { const dis = v === "pouzece" && co.del === "licno"; return '<label><input type="radio" name="pay" value="'+v+'"'+(co.pay===v?" checked":"")+(dis?" disabled":"")+'><span><b>'+PAYN[v]+'</b><span>'+(dis?"Samo uz dostavu kurirom.":s)+'</span></span></label>'; }).join("")+'</div></div>';
   } else {
     h = '<div class="step rev"><h3>Pregled</h3><h4>Stavke</h4><ul>'+cart.map(l => '<li><span>'+esc(lineName(l))+' × '+l.qty+'</span><span>'+fmt(packOf(P(l.id),l.sku).c*l.qty)+'</span></li>').join("")+'</ul>'
@@ -848,7 +914,7 @@ porDlg.addEventListener("click", e => {
     if (co.step === 3 && !co.pay){ co.err = "Izaberite način plaćanja."; renderStep(); return; }
     if (co.step === 4){
       if (!co.agree){ co.err = "Potvrdite da ste pročitali uslove kupovine i obaveštenje o pravu na odustanak."; renderStep(); $("#agree").focus(); return; }
-      co.order = orderNo(); co.T = totals(co.del); co.lines = cart.map(l => ({...l}));
+      co.order = orderNo(); co.T = totals(co.del, co.pay); co.lines = cart.map(l => ({...l}));
       co.phase = co.pay === "kartica" ? "bank" : co.pay === "ips" ? "ipsapp" : "done";
       if (co.phase === "done") finish();
       renderStep(); focusFirst(); return;
@@ -867,7 +933,7 @@ function finish(){
 function renderConfirm(){
   const T = co.T, x = fmt(T.total), pick = co.del === "licno", card = co.pay === "kartica" || co.pay === "ips";
   let pay = "";
-  if (co.pay === "pouzece") pay = '<p>Plaćate kuriru gotovinom pri preuzimanju. Za plaćanje: <strong>'+x+'</strong>.</p>';
+  if (co.pay === "pouzece") pay = '<p>Plaćate kuriru gotovinom pri preuzimanju. Za plaćanje: <strong>'+x+'</strong>, uz naknadu za pouzeće '+fmt(T.cod)+'.</p>';
   if (co.pay === "kartica") pay = '<p>Plaćeno karticom: <strong>'+x+'</strong>.</p>';
   if (co.pay === "ips") pay = '<p>Plaćeno IPS aplikacijom banke: <strong>'+x+'</strong>.</p>';
   if (co.pay === "uplatnica") pay = '<h4 style="font-size:16px;margin:16px 0 0">Podaci za uplatu</h4><div class="paybox" id="payData"><dl>'

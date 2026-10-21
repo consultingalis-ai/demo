@@ -306,6 +306,7 @@
   .pk-list h3 { font-family: var(--sans); font-weight: 600; font-size: 1.0625rem; line-height: 1.5; }
   .pk-list p { color: var(--gray); margin-top: 4px; max-width: 46ch; }
   .pk-more { margin-top: 24px; }
+  .pk-price { display: block; font-weight: 400; color: var(--gray); font-size: .95rem; }
   @media (min-width: 900px) { .pk-list { grid-template-columns: repeat(4, 1fr); column-gap: 28px; } .pk-list li { grid-template-columns: 1fr; } .pk-list .step-num { margin-bottom: 18px; grid-row: auto; } }
 </style>
 </head>
@@ -407,10 +408,10 @@
         <p class="sec-lead" style="margin-top:0;align-self:end;max-width:46ch">Svaki radi sa onim što već koristite: telefonom, Viberom, Gmailom i Google Kalendarom.</p>
       </div>
       <ol class="pk-list" style="margin-top:48px">
-        <li><span class="step-num" aria-hidden="true">1</span><h3>Osnovni</h3><p>Sajt sa cenama, radnim vremenom, mapom, pozivom i Viberom. Poruke iz forme stižu Vam na mejl.</p></li>
-        <li><span class="step-num" aria-hidden="true">2</span><h3>Zakazivanje ili porudžbine</h3><p>Mušterije same biraju slobodan termin ili naruče unapred. Vi ujutru pogledate kalendar na telefonu.</p></li>
-        <li><span class="step-num" aria-hidden="true">3</span><h3>Plus</h3><p>Više radnika ili mesta, podsetnik dan ranije, cenovnik koji sami menjate, sajt i na engleskom.</p></li>
-        <li><span class="step-num" aria-hidden="true">4–5</span><h3>Online prodavnica</h3><p>Katalog, korpa i poručivanje. Plaćanje pouzećem, uplatnicom ili bankovnim transferom, a u paketu Plus i karticom.</p></li>
+        <li><span class="step-num" aria-hidden="true">1</span><h3>Osnovni <span class="pk-price">od 19.900 RSD</span></h3><p>Sajt sa cenama, radnim vremenom, mapom, pozivom i Viberom. Poruke iz forme stižu Vam na mejl.</p></li>
+        <li><span class="step-num" aria-hidden="true">2</span><h3>Zakazivanje ili porudžbine <span class="pk-price">od 34.900 RSD</span></h3><p>Mušterije same biraju slobodan termin ili naruče unapred. Vi ujutru pogledate kalendar na telefonu.</p></li>
+        <li><span class="step-num" aria-hidden="true">3</span><h3>Plus <span class="pk-price">od 49.900 RSD</span></h3><p>Više radnika ili mesta, podsetnik dan ranije, cenovnik koji sami menjate, sajt i na engleskom.</p></li>
+        <li><span class="step-num" aria-hidden="true">4–5</span><h3>Online prodavnica <span class="pk-price">od 59.900 RSD</span></h3><p>Katalog, korpa i poručivanje. Plaćanje pouzećem, uplatnicom ili bankovnim transferom, a u paketu Plus i karticom.</p></li>
       </ol>
       <p class="pk-more"><a class="btn btn-quiet" href="./paketi/">Detaljno o paketima</a></p>
     </div>
@@ -446,10 +447,11 @@
             <button class="filter" type="button" data-kind="grupa" data-filter="poslovne" aria-pressed="false">Poslovne usluge</button>
             <button class="filter" type="button" data-kind="grupa" data-filter="ucenje" aria-pressed="false">Učenje i zabava</button>
             <button class="filter" type="button" data-kind="grupa" data-filter="prodavnice" aria-pressed="false">Online prodavnice</button>
+            <button class="filter" type="button" data-kind="grupa" data-filter="moda" aria-pressed="false">Butici i moda</button>
           </div>
         </div>
       </div>
-      <p class="filter-status" id="filter-status" aria-live="polite">Prikazano: 76 primera</p>
+      <p class="filter-status" id="filter-status" aria-live="polite">Prikazano: 80 primera</p>
       <ul class="cards" id="cards">
         <li class="card" data-paket="1" data-group="lepota" style="--bg:#141414;--ac:#C9A227;--fg:#F6F5F1">
           <p class="card-pkg">Paket 1 · osnovni</p>
@@ -895,7 +897,7 @@
           <h3 class="card-name">Studio Grnčar</h3>
           <a class="card-link" href="./prodavnica/studio-grncar/">Otvori primer<span class="sr"> za Studio Grnčar</span></a>
         </li>
-        <li class="card" data-paket="4" data-group="prodavnice" style="--bg:#E9E1D6;--ac:#6B1F2A;--fg:#141414">
+        <li class="card" data-paket="4" data-group="moda" style="--bg:#E9E1D6;--ac:#6B1F2A;--fg:#141414">
           <p class="card-pkg">Paket 5 · Prodavnica Plus</p>
           <p class="card-craft">Odeća, online prodavnica</p>
           <h3 class="card-name">Butik Tkanica</h3>
@@ -906,6 +908,30 @@
           <p class="card-craft">Hrana za ljubimce, online prodavnica</p>
           <h3 class="card-name">Pet shop Zdela</h3>
           <a class="card-link" href="./prodavnica/pet-shop-zdela/">Otvori primer<span class="sr"> za Pet shop Zdela</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="moda" style="--bg:#EEEAE4;--ac:#6E6A3C;--fg:#1E1E1E">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Ženska odeća</p>
+          <h3 class="card-name">Butik Nit</h3>
+          <a class="card-link" href="./butik-nit/">Otvori primer<span class="sr"> za Butik Nit</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="moda" style="--bg:#F4ECE8;--ac:#9C7A3C;--fg:#3B2433">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Proba u radnji, zakazivanje</p>
+          <h3 class="card-name">Butik Kroj</h3>
+          <a class="card-link" href="./plus/butik-kroj/">Otvori primer<span class="sr"> za Butik Kroj</span></a>
+        </li>
+        <li class="card" data-paket="4" data-group="moda" style="--bg:#EFE7DA;--ac:#7A7F4A;--fg:#4A3B2C">
+          <p class="card-pkg">Paket 4 · Prodavnica</p>
+          <p class="card-craft">Lanena odeća, online prodavnica</p>
+          <h3 class="card-name">Lanena</h3>
+          <a class="card-link" href="./prodavnica/butik-lanena/">Otvori primer<span class="sr"> za Lanena</span></a>
+        </li>
+        <li class="card" data-paket="4" data-group="moda" style="--bg:#1C2533;--ac:#3D6FB6;--fg:#F7F6F2">
+          <p class="card-pkg">Paket 5 · Prodavnica Plus</p>
+          <p class="card-craft">Muška odela i košulje, online prodavnica</p>
+          <h3 class="card-name">Kragna</h3>
+          <a class="card-link" href="./prodavnica/musko-kragna/">Otvori primer<span class="sr"> za Kragna</span></a>
         </li>
       </ul>
     </div>

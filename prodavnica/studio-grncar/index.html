@@ -233,6 +233,13 @@ dialog.detalj::backdrop{background:rgba(31,29,27,.5)}
 .zbir dt{color:var(--siva)}
 .zbir dd{margin:0;padding-left:12px;text-align:right}
 .zbir .ukupno{font-weight:500;font-size:1.0625rem;color:var(--tamna);padding-top:8px;border-top:1px solid var(--linija);margin-top:4px}
+.izvor-mali{font-size:.75rem;line-height:1.5;color:var(--siva);margin:0 0 14px}
+.preteska{font-size:.8125rem;color:#8C3A1B;margin:0 0 8px}
+.razredi{width:100%;max-width:420px;border-collapse:collapse;margin:8px 0 14px;font-size:.875rem;font-variant-numeric:tabular-nums}
+.razredi caption{text-align:left;font-weight:500;padding-bottom:6px}
+.razredi th,.razredi td{padding:6px 0;border-bottom:1px solid var(--linija);text-align:left;font-weight:400}
+.razredi thead th{color:var(--siva);font-size:.8125rem}
+.razredi td:last-child,.razredi th:last-child{text-align:right}
 .prag{font-size:.8125rem;margin:0 0 12px;color:var(--siva)}
 .prag-traka{display:block;height:1px;background:var(--linija);margin-top:6px}
 .prag-traka i{display:block;height:1px;background:var(--plava)}
@@ -444,11 +451,30 @@ dialog.detalj::backdrop{background:rgba(31,29,27,.5)}
         <section id="dostava" aria-labelledby="h-dostava">
           <h2 id="h-dostava">Dostava</h2>
           <ul>
-            <li>Kurirom na adresu u Srbiji: 590 RSD (pakovanje za lomljivu robu), rok 1–3 radna dana od slanja.</li>
+            <li>Kurirom BEX na adresu u Srbiji, rok 1–3 radna dana od slanja. Poštarinu računamo po težini pošiljke: zbir težina komada sa pakovanjem, plus 0,2 kg kutije i punjenja.</li>
+            <li>Lomljivo bez doplate: BEX ne naplaćuje dodatak za lomljivu robu, pa je poštarina ista kao za svaki drugi paket iste težine.</li>
             <li>Besplatna dostava za porudžbine od 6.000 RSD.</li>
-            <li>Lično preuzimanje u studiju, Bulevar Arsenija Čarnojevića 58, u radno vreme.</li>
+            <li>Pouzeće: kurir naplaćuje naknadu 1,5 % od iznosa + PDV, najmanje 216 RSD, na ceo iznos koji plaćate kuriru (roba + poštarina). Naknada važi i kad je dostava besplatna.</li>
+            <li>Pošiljke teže od 50 kg: cenu dostave javljamo telefonom.</li>
+            <li>Lično preuzimanje u studiju, Bulevar Arsenija Čarnojevića 58, u radno vreme, bez poštarine i naknade.</li>
           </ul>
-          <p>Svaki komad pakujemo pojedinačno u valovit karton. Šaljemo kurirskom službom uz oznaku „lomljivo“.</p>
+          <table class="razredi">
+            <caption>Cenovnik BEX po masi pošiljke, sa PDV-om</caption>
+            <thead><tr><th scope="col">Masa pošiljke</th><th scope="col">Poštarina</th></tr></thead>
+            <tbody id="razredi-tabela">
+              <tr><td>do 0,5 kg</td><td>495 RSD</td></tr>
+              <tr><td>do 1 kg</td><td>550 RSD</td></tr>
+              <tr><td>do 2 kg</td><td>660 RSD</td></tr>
+              <tr><td>do 5 kg</td><td>808 RSD</td></tr>
+              <tr><td>do 10 kg</td><td>1.067 RSD</td></tr>
+              <tr><td>do 15 kg</td><td>1.372 RSD</td></tr>
+              <tr><td>do 20 kg</td><td>1.525 RSD</td></tr>
+              <tr><td>do 30 kg</td><td>1.755 RSD</td></tr>
+              <tr><td>do 50 kg</td><td>2.580 RSD</td></tr>
+            </tbody>
+          </table>
+          <p>Izvor: <a href="https://bexexpress.rs/cenovnik/" rel="noopener">cenovnik BEX</a>, važi od 1. 9. 2026. Standardne cene sa PDV-om, bez ugovornih popusta.</p>
+          <p>Svaki komad pakujemo pojedinačno u valovit karton. Šaljemo uz oznaku „lomljivo“.</p>
         </section>
         <section id="placanje" aria-labelledby="h-placanje">
           <h2 id="h-placanje">Načini plaćanja</h2>
@@ -549,9 +575,12 @@ dialog.detalj::backdrop{background:rgba(31,29,27,.5)}
     <p class="prag" id="k-prag"></p>
     <dl class="zbir">
       <dt>Međuzbir</dt><dd id="k-medjuzbir">0 RSD</dd>
-      <dt>Dostava kurirom</dt><dd id="k-dostava">590 RSD</dd>
+      <dt>Težina pošiljke</dt><dd id="k-tezina">–</dd>
+      <dt>Poštarina</dt><dd id="k-dostava">–</dd>
       <dt class="ukupno">Ukupno</dt><dd class="ukupno" id="k-ukupno">0 RSD</dd>
     </dl>
+    <p class="preteska" id="k-preteska" hidden></p>
+    <p class="izvor-mali" id="k-izvor"></p>
     <button class="dugme glavno" type="button" id="na-kasu">Nastavite na poručivanje</button>
   </div>
 </aside>
@@ -583,7 +612,7 @@ dialog.detalj::backdrop{background:rgba(31,29,27,.5)}
           <h3>Dostava</h3>
           <fieldset class="izbor">
             <legend class="legenda">Kako da stigne do Vas?</legend>
-            <label class="opcija"><input type="radio" name="dostava" value="kurir" checked><strong>Kurirom na adresu</strong><span class="cena-op" id="cena-kurir">590 RSD</span><small>Pakovanje za lomljivu robu. Rok 1–3 radna dana. Besplatno od 6.000 RSD.</small></label>
+            <label class="opcija"><input type="radio" name="dostava" value="kurir" checked><strong>Kurirom BEX na adresu</strong><span class="cena-op" id="cena-kurir"></span><small>Poštarina po težini pošiljke (<span id="kg-kurir"></span>), lomljivo bez doplate. Rok 1–3 radna dana. Besplatno od 6.000 RSD.</small></label>
             <label class="opcija"><input type="radio" name="dostava" value="licno"><strong>Lično preuzimanje u studiju</strong><span class="cena-op">0 RSD</span><small>Bulevar Arsenija Čarnojevića 58, uto–pet 12–20 h, subotom 10–16 h.</small></label>
           </fieldset>
           <div class="adresa-polja forma" id="adresa-polja" style="max-width:none">
@@ -600,7 +629,7 @@ dialog.detalj::backdrop{background:rgba(31,29,27,.5)}
             <label class="opcija" data-za="kurir licno"><input type="radio" name="placanje" value="kartica"><strong>Karticom</strong><span class="cena-op">Visa · Mastercard · DinaCard</span><small>Posle potvrde prelazite na sigurnu stranu banke i tamo unosite podatke kartice.</small></label>
             <label class="opcija" data-za="kurir licno"><input type="radio" name="placanje" value="ips"><strong>IPS, aplikacijom banke</strong><span></span><small>Plaćanje potvrđujete u mobilnoj aplikaciji Vaše banke.</small></label>
             <label class="opcija" data-za="kurir licno"><input type="radio" name="placanje" value="uplatnica"><strong>Uplatnicom ili IPS QR kodom</strong><span></span><small>Podatke za uplatu dobijate na potvrdi. Porudžbinu šaljemo kad uplata stigne.</small></label>
-            <label class="opcija" data-za="kurir"><input type="radio" name="placanje" value="pouzece"><strong>Pouzećem</strong><span></span><small>Plaćate kuriru gotovinom pri preuzimanju.</small></label>
+            <label class="opcija" data-za="kurir"><input type="radio" name="placanje" value="pouzece"><strong>Pouzećem</strong><span class="cena-op" id="cena-pouzece"></span><small>Plaćate kuriru gotovinom pri preuzimanju. Kurir BEX naplaćuje naknadu za pouzeće: 1,5 % od iznosa + PDV, najmanje 216 RSD.</small></label>
           </fieldset>
           <p class="greska-tekst" id="placanje-g" hidden>Izaberite način plaćanja.</p>
         </section>
@@ -609,6 +638,7 @@ dialog.detalj::backdrop{background:rgba(31,29,27,.5)}
           <h3>Pregled porudžbine</h3>
           <ul class="pregled-lista" id="pregled-stavke"></ul>
           <dl class="pregled-info" id="pregled-info"></dl>
+          <p class="izvor-mali" id="pregled-izvor"></p>
           <label class="saglasnost" id="saglasnost"><input type="checkbox" id="uslovi-ok"><span>Pročitao/la sam <a href="#uslovi" data-pravni>uslove kupovine</a> i <a href="#odustanak" data-pravni>obaveštenje o pravu na odustanak</a>.</span></label>
           <p class="greska-tekst" id="uslovi-g" hidden>Da biste poručili, potvrdite da ste pročitali uslove kupovine.</p>
         </section>
@@ -632,6 +662,7 @@ dialog.detalj::backdrop{background:rgba(31,29,27,.5)}
           <p class="broj" id="pt-broj"></p>
           <ul class="pregled-lista" id="pt-stavke"></ul>
           <dl class="pregled-info" id="pt-info"></dl>
+          <p class="izvor-mali" id="pt-izvor"></p>
           <div class="uputstvo" id="pt-uputstvo"></div>
           <p id="pt-racun"></p>
           <button class="dugme tamno" type="button" id="nazad-prodavnica">Nazad na prodavnicu</button>
@@ -699,20 +730,44 @@ const OBLICI = {
   salata:{vb:"2 104 196 88", d:"M60 190 H140 L142 186 Q190 160 194 110 H6 Q10 160 58 186 Z"}
 };
 const PROIZVODI = [
-  {id:"espreso", kat:"solje", naziv:"Šolja za espreso", cena:1400, mera:"90 ml", opis:"Debelih zidova, da kafa duže ostane topla. Mala drška za dva prsta.", materijal:"kamenina, glazura iznutra i spolja, dno neglazirano"},
-  {id:"solja", kat:"solje", naziv:"Šolja", cena:1900, mera:"300 ml", opis:"Prava, široka šolja za čaj i kafu sa mlekom.", materijal:"kamenina, glazura iznutra i spolja"},
-  {id:"cinija", kat:"cinije", naziv:"Činija za doručak", cena:2200, mera:"Ø 15 cm, 500 ml", opis:"Za ovsenu kašu, supu ili voće. Široki obod lako se drži.", materijal:"kamenina, sjajna glazura"},
-  {id:"duboki", kat:"cinije", naziv:"Duboki tanjir", cena:2600, mera:"Ø 22 cm", opis:"Za testenine i čorbe. Ide u komplet sa plitkim tanjirom.", materijal:"kamenina, glazura sa neglaziranim obodom"},
-  {id:"plitki", kat:"cinije", naziv:"Plitki tanjir", cena:2800, mera:"Ø 26 cm", opis:"Ravno dno, nizak obod. Dovoljno težak da ne klizi po stolu.", materijal:"kamenina, glazura sa neglaziranim obodom"},
-  {id:"vaza", kat:"vaze", naziv:"Visoka vaza", cena:7400, mera:"visina 32 cm", opis:"Za granje i dugačke stabljike. Grlo je usko, pa cveće stoji uspravno.", materijal:"kamenina, glazura spolja, iznutra zalivena da ne propušta vodu"},
-  {id:"vazica", kat:"vaze", naziv:"Mala vaza", cena:2900, mera:"visina 14 cm", opis:"Za jedan ili dva cveta. Lepo stoji na prozoru ili noćnom stočiću.", materijal:"kamenina, glazura spolja i iznutra"},
-  {id:"bokal", kat:"bokali", naziv:"Bokal", cena:5200, mera:"1 l", opis:"Za vodu, limunadu ili mleko. Kljun ne curi kad sipate.", materijal:"kamenina, glazura iznutra i spolja"},
-  {id:"saksija", kat:"vaze", naziv:"Saksija sa podmetačem", cena:3600, mera:"Ø 16 cm, sa rupom za vodu", opis:"Za sobne biljke srednje veličine. Podmetač je u istoj glazuri.", materijal:"kamenina, glazura spolja, iznutra neglazirano"},
-  {id:"salata", kat:"cinije", naziv:"Činija za salatu", cena:4900, mera:"Ø 26 cm, 2,5 l", opis:"Široka i plitka, za salatu za četvoro ili voće na stolu.", materijal:"kamenina, sjajna glazura"}
+  {id:"espreso", kat:"solje", naziv:"Šolja za espreso", cena:1400, tezina:0.2, mera:"90 ml", opis:"Debelih zidova, da kafa duže ostane topla. Mala drška za dva prsta.", materijal:"kamenina, glazura iznutra i spolja, dno neglazirano"},
+  {id:"solja", kat:"solje", naziv:"Šolja", cena:1900, tezina:0.35, mera:"300 ml", opis:"Prava, široka šolja za čaj i kafu sa mlekom.", materijal:"kamenina, glazura iznutra i spolja"},
+  {id:"cinija", kat:"cinije", naziv:"Činija za doručak", cena:2200, tezina:0.6, mera:"Ø 15 cm, 500 ml", opis:"Za ovsenu kašu, supu ili voće. Široki obod lako se drži.", materijal:"kamenina, sjajna glazura"},
+  {id:"duboki", kat:"cinije", naziv:"Duboki tanjir", cena:2600, tezina:0.8, mera:"Ø 22 cm", opis:"Za testenine i čorbe. Ide u komplet sa plitkim tanjirom.", materijal:"kamenina, glazura sa neglaziranim obodom"},
+  {id:"plitki", kat:"cinije", naziv:"Plitki tanjir", cena:2800, tezina:0.9, mera:"Ø 26 cm", opis:"Ravno dno, nizak obod. Dovoljno težak da ne klizi po stolu.", materijal:"kamenina, glazura sa neglaziranim obodom"},
+  {id:"vaza", kat:"vaze", naziv:"Visoka vaza", cena:7400, tezina:1.1, mera:"visina 32 cm", opis:"Za granje i dugačke stabljike. Grlo je usko, pa cveće stoji uspravno.", materijal:"kamenina, glazura spolja, iznutra zalivena da ne propušta vodu"},
+  {id:"vazica", kat:"vaze", naziv:"Mala vaza", cena:2900, tezina:0.5, mera:"visina 14 cm", opis:"Za jedan ili dva cveta. Lepo stoji na prozoru ili noćnom stočiću.", materijal:"kamenina, glazura spolja i iznutra"},
+  {id:"bokal", kat:"bokali", naziv:"Bokal", cena:5200, tezina:1.0, mera:"1 l", opis:"Za vodu, limunadu ili mleko. Kljun ne curi kad sipate.", materijal:"kamenina, glazura iznutra i spolja"},
+  {id:"saksija", kat:"vaze", naziv:"Saksija sa podmetačem", cena:3600, tezina:1.2, mera:"Ø 16 cm, sa rupom za vodu", opis:"Za sobne biljke srednje veličine. Podmetač je u istoj glazuri.", materijal:"kamenina, glazura spolja, iznutra neglazirano"},
+  {id:"salata", kat:"cinije", naziv:"Činija za salatu", cena:4900, tezina:1.4, mera:"Ø 26 cm, 2,5 l", opis:"Široka i plitka, za salatu za četvoro ili voće na stolu.", materijal:"kamenina, sjajna glazura"}
 ];
-const DOSTAVA = 590, PRAG = 6000, FIRMA = "Studio Grnčar";
+/* tezina: kg po komadu, bruto, sa pojedinačnim pakovanjem u valovit karton. Glazura (varijanta) ne menja težinu. */
+
+/* POŠTARINA PO CENOVNIKU KURIRA
+   Izvor i datum su u zapisu. Cene u RSD, sa PDV-om, standardne, bez ugovornih popusta.
+   BEX ne naplaćuje doplatu za lomljive pošiljke. */
+var KURIRI = {
+  bex: {
+    naziv: 'BEX', izvor: 'https://bexexpress.rs/cenovnik/', vazi: 'od 1. 9. 2026',
+    razredi: [[0.5,495],[1,550],[2,660],[5,808],[10,1067],[15,1372],[20,1525],[30,1755],[50,2580]],
+    // cenovnik: 1,5 % od iznosa otkupnine, najmanje 180 RSD bez PDV-a → sa PDV-om 216
+    pouzece: function (iznos) { return Math.max(216, Math.ceil(iznos * 0.015 * 1.2)); },
+    pouzeceOpis: '1,5 % od iznosa + PDV, najmanje 216 RSD'
+  }
+};
+function postarina(kurir, kg, razredi) {
+  var r = razredi || kurir.razredi;
+  for (var i = 0; i < r.length; i++) if (kg <= r[i][0] + 1e-9) return r[i][1];
+  return null; // preteško → „cenu dostave javljamo telefonom“
+}
+const KURIR = KURIRI.bex;
+const AMBALAZA_G = 200;   /* + 0,2 kg kutije i punjenja po pošiljci */
+const PRAG = 6000, FIRMA = "Studio Grnčar";
+const PRETESKO = "Za ovu težinu cenu dostave javljamo telefonom.";
+const IZVOR_TXT = `Po cenovniku kurira ${KURIR.naziv} (${KURIR.vazi}), sa PDV-om.`;
 
 const fmt = n => Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " RSD";
+const fmtKg = g => (Math.ceil(Math.round(g) / 100) / 10).toFixed(1).replace(".", ",") + " kg";
 const $ = s => document.querySelector(s);
 const nadji = id => PROIZVODI.find(p => p.id === id);
 const linija = g => g ? (GLAZURE[g].linija || GLAZURE[g].boja) : "#1F1D1B";
@@ -823,11 +878,20 @@ function dodaj(id, g){
   najavi(`${nadji(id).naziv}, glazura ${GLAZURE[g].naziv}, je u korpi.`);
   return true;
 }
-function racun(nacin){
+/* obračun: težina pošiljke → razred kurira → poštarina; pouzeće → naknada kurira na (roba + poštarina) */
+function racun(nacin, pl){
   const medjuzbir = korpa.reduce((s, x) => s + nadji(x.id).cena * x.kol, 0);
-  const dostava = nacin === "licno" || medjuzbir >= PRAG || !medjuzbir ? 0 : DOSTAVA;
-  return {medjuzbir, dostava, ukupno: medjuzbir + dostava, komada: korpa.reduce((s, x) => s + x.kol, 0)};
+  const grami = korpa.reduce((s, x) => s + Math.round(nadji(x.id).tezina * 1000) * x.kol, 0) + AMBALAZA_G;   /* u gramima, bez grešaka zaokruživanja */
+  const kurir = nacin !== "licno";
+  const besplatno = medjuzbir >= PRAG;
+  const cenaRazreda = postarina(KURIR, grami / 1000);
+  const preteska = kurir && !besplatno && cenaRazreda === null;
+  const dostava = !kurir || !medjuzbir || besplatno || preteska ? 0 : cenaRazreda;
+  const pouzece = kurir && pl === "pouzece" && medjuzbir ? KURIR.pouzece(medjuzbir + dostava) : 0;
+  return {medjuzbir, grami, kurir, besplatno, preteska, dostava, pouzece, ukupno: medjuzbir + dostava + pouzece, komada: korpa.reduce((s, x) => s + x.kol, 0)};
 }
+const tezinaTxt = r => `${fmtKg(r.grami)} · ${KURIR.naziv}`;
+const postarinaTxt = r => r.besplatno ? "besplatna" : r.preteska ? "javljamo telefonom" : fmt(r.dostava);
 function crtajKorpu(){
   const r = racun("kurir");
   $("#broj-stavki").textContent = r.komada;
@@ -845,8 +909,11 @@ function crtajKorpu(){
       ${x.kol >= max ? `<p class="maks">Na stanju: ${max} kom. u ovoj glazuri.</p>` : ""}
     </div>`; }).join("") : `<p class="prazna">Korpa je prazna. Izaberite komad i glazuru sa polica.</p>`;
   $("#k-medjuzbir").textContent = fmt(r.medjuzbir);
-  $("#k-dostava").textContent = r.dostava ? fmt(r.dostava) : (r.medjuzbir ? "besplatna" : "–");
+  $("#k-tezina").textContent = r.medjuzbir ? tezinaTxt(r) : "–";
+  $("#k-dostava").textContent = r.medjuzbir ? postarinaTxt(r) : "–";
   $("#k-ukupno").textContent = fmt(r.ukupno);
+  $("#k-preteska").hidden = !r.preteska; $("#k-preteska").textContent = PRETESKO;
+  $("#k-izvor").textContent = `${IZVOR_TXT} Uz plaćanje pouzećem kurir naplaćuje i naknadu: ${KURIR.pouzeceOpis}. Lično preuzimanje u studiju je bez poštarine.`;
   const prag = $("#k-prag");
   if (!r.medjuzbir) prag.innerHTML = "";
   else if (r.medjuzbir >= PRAG) prag.innerHTML = `Dostava je besplatna.<span class="prag-traka"><i style="width:100%"></i></span>`;
@@ -899,7 +966,7 @@ function otvoriDetalj(id, src){
   $("#d-cena").textContent = fmt(p.cena);
   $("#d-opis").textContent = p.opis;
   $("#d-materijal").textContent = p.materijal + ". Ručno rađeno, svaki komad se malo razlikuje.";
-  $("#d-mere").textContent = p.mera + ", pakovano pojedinačno u valovit karton";
+  $("#d-mere").textContent = p.mera + ", pakovano pojedinačno u valovit karton, " + String(p.tezina).replace(".", ",") + " kg sa pakovanjem";
   $("#d-stanje").innerHTML = Object.entries(STANJE[id]).map(([g, n]) => `<li><span>${GLAZURE[g].naziv}</span><span>${stanjeTekst(n)}</span></li>`).join("");
   dlg.showModal();
 }
@@ -936,11 +1003,14 @@ function osveziPlacanje(){
     o.hidden = !ok; if (!ok) o.querySelector("input").checked = false;
   });
   $("#adresa-polja").hidden = d !== "kurir";
-  $("#cena-kurir").textContent = racun("kurir").dostava ? fmt(DOSTAVA) : "besplatno";
-  $("#kasa-ukupno").textContent = fmt(racun(d).ukupno);
+  const rk = racun("kurir");
+  $("#cena-kurir").textContent = rk.besplatno ? "besplatno" : rk.preteska ? "na upit" : fmt(rk.dostava);
+  $("#kg-kurir").textContent = tezinaTxt(rk);
+  $("#cena-pouzece").textContent = "+ " + fmt(racun("kurir", "pouzece").pouzece);
+  $("#kasa-ukupno").textContent = fmt(racun(d, vrednost("placanje")).ukupno);
 }
 document.querySelectorAll('input[name="dostava"]').forEach(i => i.addEventListener("change", osveziPlacanje));
-document.querySelectorAll('input[name="placanje"]').forEach(i => i.addEventListener("change", () => $("#placanje-g").hidden = true));
+document.querySelectorAll('input[name="placanje"]').forEach(i => i.addEventListener("change", () => { $("#placanje-g").hidden = true; osveziPlacanje(); }));
 
 function idiNa(n){
   korak = n;
@@ -987,14 +1057,19 @@ const stavkeHTML = () => korpa.map(x => { const p = nadji(x.id); return `<li><sp
 function infoHTML(r, d, pl){
   const adr = d === "kurir" ? `${$("#p-ulica").value.trim()}, ${$("#p-pb").value.trim()} ${$("#p-mesto").value.trim()}` : "Studio, Bulevar Arsenija Čarnojevića 58";
   return `<dt>Međuzbir</dt><dd>${fmt(r.medjuzbir)}</dd>` +
-    `<dt>Dostava</dt><dd>${d === "kurir" ? "Kurirom, " + (r.dostava ? fmt(r.dostava) : "besplatna") : "Lično preuzimanje, bez troška"}</dd>` +
+    (d === "kurir"
+      ? `<dt>Težina pošiljke</dt><dd data-red="tezina">${tezinaTxt(r)}</dd><dt>Poštarina</dt><dd data-red="postarina">${postarinaTxt(r)}${r.preteska ? `<br><small>${PRETESKO}</small>` : ""}</dd>`
+      : `<dt>Dostava</dt><dd data-red="postarina">Lično preuzimanje, bez troška</dd>`) +
+    (r.pouzece ? `<dt>Naknada za pouzeće (kurir)</dt><dd data-red="pouzece">${fmt(r.pouzece)}</dd>` : "") +
     `<dt>Adresa</dt><dd>${adr}</dd><dt>Plaćanje</dt><dd>${NAZIV_PL[pl]}</dd>` +
-    `<dt>Ukupno</dt><dd><strong>${fmt(r.ukupno)}</strong></dd>`;
+    `<dt>Ukupno</dt><dd><strong data-red="ukupno">${fmt(r.ukupno)}</strong></dd>`;
 }
+const izvorHTML = (r, d) => d === "kurir" ? IZVOR_TXT + (r.pouzece ? ` Naknada za pouzeće: ${KURIR.pouzeceOpis}, na iznos robe i poštarine.` : "") : "";
 function crtajPregled(){
-  const d = vrednost("dostava");
+  const d = vrednost("dostava"), pl = vrednost("placanje"), r = racun(d, pl);
   $("#pregled-stavke").innerHTML = stavkeHTML();
-  $("#pregled-info").innerHTML = infoHTML(racun(d), d, vrednost("placanje"));
+  $("#pregled-info").innerHTML = infoHTML(r, d, pl);
+  $("#pregled-izvor").textContent = izvorHTML(r, d);
 }
 $("#uslovi-ok").addEventListener("change", () => { $("#uslovi-g").hidden = true; $("#saglasnost").classList.remove("greska"); });
 kasa.querySelectorAll("[data-pravni]").forEach(a => a.addEventListener("click", sakrijKasu));
@@ -1008,7 +1083,7 @@ function noviBroj(){
 $("#poruci").addEventListener("click", () => {
   if (!$("#uslovi-ok").checked){ $("#uslovi-g").hidden = false; $("#saglasnost").classList.add("greska"); $("#uslovi-ok").focus(); return; }
   broj = noviBroj();
-  const pl = vrednost("placanje"), r = racun(vrednost("dostava"));
+  const pl = vrednost("placanje"), r = racun(vrednost("dostava"), pl);
   if (pl === "kartica" || pl === "ips"){
     $("#banka-naslov").textContent = pl === "kartica" ? "Preusmeravanje na sigurnu stranu banke (primer)" : "Na telefonu se otvara aplikacija Vaše banke (primer)";
     $("#banka-tekst").innerHTML = pl === "kartica"
@@ -1022,16 +1097,17 @@ $("#nastavi-placanje").addEventListener("click", () => zavrsi(true));
 $("#odustani-placanje").addEventListener("click", () => idiNa(4));
 
 function zavrsi(placeno){
-  const d = vrednost("dostava"), pl = vrednost("placanje"), r = racun(d);
+  const d = vrednost("dostava"), pl = vrednost("placanje"), r = racun(d, pl);
   $("#pt-broj").textContent = broj;
   $("#pt-uspeh").hidden = !placeno;
   $("#pt-stavke").innerHTML = stavkeHTML();
   $("#pt-info").innerHTML = infoHTML(r, d, pl);
+  $("#pt-izvor").textContent = izvorHTML(r, d);
   const lic = d === "licno" ? " Javljamo Vam se kad je porudžbina spremna za preuzimanje u studiju." : " Šaljemo je u roku od jednog radnog dana.";
   let u = "";
   if (pl === "kartica") u = `<h4>Plaćeno karticom</h4><p>Naplaćeno: <strong>${fmt(r.ukupno)}</strong>. Potvrdu o plaćanju banka šalje na Vaš mejl.${lic}</p>`;
   if (pl === "ips") u = `<h4>Plaćeno IPS-om</h4><p>Naplaćeno: <strong>${fmt(r.ukupno)}</strong>, preko aplikacije Vaše banke.${lic}</p>`;
-  if (pl === "pouzece") u = `<h4>Plaćanje pouzećem</h4><p>Plaćate kuriru gotovinom pri preuzimanju: <strong>${fmt(r.ukupno)}</strong>. Paket stiže za 1–3 radna dana.</p>`;
+  if (pl === "pouzece") u = `<h4>Plaćanje pouzećem</h4><p>Plaćate kuriru gotovinom pri preuzimanju: <strong>${fmt(r.ukupno)}</strong> (roba, poštarina i naknada za pouzeće ${fmt(r.pouzece)}). Paket stiže za 1–3 radna dana.</p>`;
   if (pl === "uplatnica") u = `<h4>Podaci za uplatu</h4>
     <div class="uplata">
       <dl>

@@ -222,6 +222,14 @@ dialog::backdrop{background:rgba(20,20,20,.45)}
 .sums div{display:flex;justify-content:space-between;gap:10px;padding:4px 0}
 .sums .tot{font-size:19px;font-weight:600;border-top:1px solid var(--ink);margin-top:6px;padding-top:10px}
 .freebar{font-size:14px;margin:14px 0 0;padding:10px 12px;background:var(--bez)}
+.kinfo{font-size:12px;line-height:1.5;color:var(--mute);margin:10px 0 0}
+.kwarn{font-size:13px;color:var(--bordo);margin:8px 0 0}
+.razredi{width:100%;max-width:420px;border-collapse:collapse;margin:4px 0 14px;font-size:14px;font-variant-numeric:tabular-nums}
+.razredi caption{text-align:left;font-weight:600;padding-bottom:6px}
+.razredi th,.razredi td{padding:6px 0;border-bottom:1px solid var(--line);text-align:left;font-weight:400}
+.razredi thead th{color:var(--mute);font-size:13px}
+.razredi td:last-child,.razredi th:last-child{text-align:right}
+.legal .src{font-size:14px}
 .coupon{display:flex;gap:8px;margin-top:18px;align-items:flex-end}
 .coupon .field{flex:1}
 .coupon .btn{min-height:48px;font-weight:400}
@@ -426,8 +434,24 @@ dialog::backdrop{background:rgba(20,20,20,.45)}
         </section>
         <section id="dostava">
           <h3><span data-l="sr">Dostava</span><span data-l="en">Delivery</span></h3>
-          <div data-l="sr"><ul><li>Kurirom na adresu u Srbiji: 450 RSD, rok 1–3 radna dana.</li><li>Besplatna dostava za porudžbine od 7.000 RSD.</li><li>Lično preuzimanje u radnji, Kralja Petra 36, u radno vreme, kad Vam javimo da je porudžbina spremna.</li></ul><p>Šaljemo kurirskom službom. Broj pošiljke dobijate porukom.</p></div>
-          <div data-l="en"><ul><li>Courier to any address in Serbia: 450 RSD, 1–3 working days.</li><li>Free delivery on orders from 7,000 RSD.</li><li>Pick up at the shop, Kralja Petra 36, during opening hours, once we let you know the order is ready.</li></ul><p>We ship with a courier service. You get the tracking number by text message.</p></div>
+          <div data-l="sr"><ul><li>Kurirom AKS na adresu u Srbiji, rok 1–3 radna dana. Poštarinu računamo po težini pošiljke: zbir težina komada sa pakovanjem, plus 0,2 kg kutije.</li><li>Besplatna dostava za porudžbine od 7.000 RSD (iznos robe posle kupona).</li><li>Pouzeće: kurir naplaćuje naknadu 1,5 % od iznosa, najmanje 202 RSD, na ceo iznos koji plaćate kuriru (roba + poštarina). Naknada važi i kad je dostava besplatna.</li><li>Pošiljke teže od 50 kg: cenu dostave javljamo telefonom.</li><li>Lično preuzimanje u radnji, Kralja Petra 36, u radno vreme, kad Vam javimo da je porudžbina spremna. Bez poštarine i naknade.</li></ul></div>
+          <div data-l="en"><ul><li>AKS courier to any address in Serbia, 1–3 working days. Postage is based on parcel weight: the weight of the pieces with their packaging, plus 0.2 kg for the box.</li><li>Free delivery on orders from 7,000 RSD (goods total after the discount code).</li><li>Cash on delivery: the courier charges a fee of 1.5% of the amount, at least 202 RSD, on the full amount you pay the courier (goods + postage). The fee applies even when delivery is free.</li><li>Parcels over 50 kg: we will phone you with the delivery price.</li><li>Pick up at the shop, Kralja Petra 36, during opening hours, once we let you know the order is ready. No postage or fee.</li></ul></div>
+          <table class="razredi">
+            <caption><span data-l="sr">Cenovnik AKS po masi pošiljke, sa PDV-om</span><span data-l="en">AKS price list by parcel weight, VAT included</span></caption>
+            <thead><tr><th scope="col"><span data-l="sr">Masa pošiljke</span><span data-l="en">Parcel weight</span></th><th scope="col"><span data-l="sr">Poštarina</span><span data-l="en">Postage</span></th></tr></thead>
+            <tbody id="razredi-tabela">
+                <tr><td><span data-l="sr">do 0,5 kg</span><span data-l="en">up to 0.5 kg</span></td><td><span data-l="sr">450 RSD</span><span data-l="en">450 RSD</span></td></tr>
+                <tr><td><span data-l="sr">do 1 kg</span><span data-l="en">up to 1 kg</span></td><td><span data-l="sr">520 RSD</span><span data-l="en">520 RSD</span></td></tr>
+                <tr><td><span data-l="sr">do 2 kg</span><span data-l="en">up to 2 kg</span></td><td><span data-l="sr">600 RSD</span><span data-l="en">600 RSD</span></td></tr>
+                <tr><td><span data-l="sr">do 5 kg</span><span data-l="en">up to 5 kg</span></td><td><span data-l="sr">820 RSD</span><span data-l="en">820 RSD</span></td></tr>
+                <tr><td><span data-l="sr">do 10 kg</span><span data-l="en">up to 10 kg</span></td><td><span data-l="sr">1.050 RSD</span><span data-l="en">1,050 RSD</span></td></tr>
+                <tr><td><span data-l="sr">do 15 kg</span><span data-l="en">up to 15 kg</span></td><td><span data-l="sr">1.350 RSD</span><span data-l="en">1,350 RSD</span></td></tr>
+                <tr><td><span data-l="sr">do 20 kg</span><span data-l="en">up to 20 kg</span></td><td><span data-l="sr">1.450 RSD</span><span data-l="en">1,450 RSD</span></td></tr>
+                <tr><td><span data-l="sr">do 30 kg</span><span data-l="en">up to 30 kg</span></td><td><span data-l="sr">1.650 RSD</span><span data-l="en">1,650 RSD</span></td></tr>
+                <tr><td><span data-l="sr">do 50 kg</span><span data-l="en">up to 50 kg</span></td><td><span data-l="sr">2.500 RSD</span><span data-l="en">2,500 RSD</span></td></tr>
+            </tbody>
+          </table>
+          <p class="src"><span data-l="sr">Izvor: <a href="https://www.aks.rs/cenovnik/" rel="noopener">cenovnik AKS</a>, važi od 1. 7. 2026. Standardne cene sa PDV-om, bez ugovornih popusta. Broj pošiljke dobijate porukom.</span><span data-l="en">Source: <a href="https://www.aks.rs/cenovnik/" rel="noopener">AKS price list</a>, valid from 1 July 2026. Standard prices including VAT, without contract discounts. You get the tracking number by text message.</span></p>
         </section>
         <section id="placanje">
           <h3><span data-l="sr">Načini plaćanja</span><span data-l="en">Payment methods</span></h3>
@@ -539,7 +563,24 @@ dialog::backdrop{background:rgba(20,20,20,.45)}
    - U ovom primeru ništa se ne šalje: sve radi u pregledaču.
    ===================================================================== */
 
-const SHOP = {name:"Tkanica doo Beograd", prefix:"TK", ship:450, freeFrom:7000, coupon:"DOBRODOSLI10", couponPct:10};
+const SHOP = {name:"Tkanica doo Beograd", prefix:"TK", freeFrom:7000, coupon:"DOBRODOSLI10", couponPct:10, boxG:200};
+
+/* POŠTARINA PO CENOVNIKU KURIRA
+   Izvor i datum su u zapisu. Cene u RSD, sa PDV-om, standardne, bez ugovornih popusta. */
+var KURIRI = {
+  aks: {
+    naziv: 'AKS', izvor: 'https://www.aks.rs/cenovnik/', vazi: 'od 1. 7. 2026',
+    razredi: [[0.5,450],[1,520],[2,600],[5,820],[10,1050],[15,1350],[20,1450],[30,1650],[50,2500]],
+    pouzece: function (iznos) { return Math.max(202, Math.ceil(iznos * 0.015)); },
+    pouzeceOpis: '1,5 % od iznosa, najmanje 202 RSD'
+  }
+};
+function postarina(kurir, kg, razredi) {
+  var r = razredi || kurir.razredi;
+  for (var i = 0; i < r.length; i++) if (kg <= r[i][0] + 1e-9) return r[i][1];
+  return null; // preteško → „cenu dostave javljamo telefonom“
+}
+const KURIR = KURIRI.aks;
 
 const COLORS = {
   bela:{sr:"bela",en:"white",hex:"#F3F0EA"}, pescana:{sr:"peščana",en:"sand",hex:"#D6C4A4"},
@@ -558,52 +599,53 @@ const CATS = [
   {id:"dodaci", sr:"Dodaci", en:"Accessories"}
 ];
 
+/* tezina: kg po komadu, bruto (sa papirnom kesom), po veličini (varijanti); šal i torba imaju jednu veličinu */
 const PRODUCTS = [
-  {id:"kosulja", cat:"gornji", shape:"shirt", price:6900, colors:["bela","pescana"],
+  {id:"kosulja", cat:"gornji", shape:"shirt", price:6900, tezina:{S:0.25,M:0.3,L:0.3,XL:0.35}, colors:["bela","pescana"],
    name:{sr:"Lanena košulja",en:"Linen shirt"},
    desc:{sr:"Široka košulja sa spuštenim ramenima i sedefnim dugmićima. Nosi se raskopčana preko majice ili uvučena.",en:"A loose shirt with dropped shoulders and mother-of-pearl buttons. Wear it open over a tee or tucked in."},
    mat:{sr:"100 % lan, 180 g/m²",en:"100% linen, 180 g/m²"}, care:{sr:"Pranje na 30 °C, peglanje dok je vlažna",en:"Wash at 30 °C, iron while damp"}},
-  {id:"haljina", cat:"haljine", shape:"dress", price:9400, colors:["crna","bordo"],
+  {id:"haljina", cat:"haljine", shape:"dress", price:9400, tezina:{S:0.35,M:0.4,L:0.4,XL:0.45}, colors:["crna","bordo"],
    name:{sr:"Haljina od lana",en:"Linen dress"},
    desc:{sr:"Haljina do sredine lista, bez rukava, sa šavom u struku i džepovima u bočnim šavovima.",en:"Sleeveless mid-calf dress with a waist seam and pockets in the side seams."},
    mat:{sr:"100 % lan, 200 g/m²",en:"100% linen, 200 g/m²"}, care:{sr:"Pranje na 30 °C, ne sušiti u mašini",en:"Wash at 30 °C, do not tumble dry"}},
-  {id:"kaput", cat:"kaputi", shape:"coat", price:24900, colors:["kamel","teget"],
+  {id:"kaput", cat:"kaputi", shape:"coat", price:24900, tezina:{S:1.7,M:1.8,L:1.9,XL:2}, colors:["kamel","teget"],
    name:{sr:"Vuneni kaput",en:"Wool coat"},
    desc:{sr:"Dug kaput ravnog kroja, sa reverima i skrivenim kopčanjem. Postava od viskoze.",en:"Long straight-cut coat with lapels and a concealed fastening. Viscose lining."},
    mat:{sr:"70 % vuna, 30 % poliamid; postava 100 % viskoza",en:"70% wool, 30% polyamide; lining 100% viscose"}, care:{sr:"Samo hemijsko čišćenje",en:"Dry clean only"}},
-  {id:"pantalone", cat:"pantalone", shape:"trousers", price:7900, colors:["crna","maslinasta"],
+  {id:"pantalone", cat:"pantalone", shape:"trousers", price:7900, tezina:{S:0.55,M:0.6,L:0.6,XL:0.65}, colors:["crna","maslinasta"],
    name:{sr:"Široke pantalone",en:"Wide-leg trousers"},
    desc:{sr:"Visok struk, nabori napred i široke nogavice. Dužina do članka, skraćujemo besplatno u radnji.",en:"High waist, front pleats and wide legs. Ankle length; we shorten them free of charge in the shop."},
    mat:{sr:"55 % lan, 45 % pamuk",en:"55% linen, 45% cotton"}, care:{sr:"Pranje na 30 °C",en:"Wash at 30 °C"}},
-  {id:"suknja", cat:"haljine", shape:"skirt", price:6400, colors:["teget","kamel"],
+  {id:"suknja", cat:"haljine", shape:"skirt", price:6400, tezina:{S:0.25,M:0.3,L:0.3,XL:0.35}, colors:["teget","kamel"],
    name:{sr:"Midi suknja",en:"Midi skirt"},
    desc:{sr:"A-kroj do ispod kolena, sa širokim pojasom i rajsferšlusom sa strane.",en:"A-line skirt to below the knee, with a wide waistband and a side zip."},
    mat:{sr:"60 % vuna, 40 % poliester",en:"60% wool, 40% polyester"}, care:{sr:"Ručno pranje ili hemijsko čišćenje",en:"Hand wash or dry clean"}},
-  {id:"dzemper", cat:"gornji", shape:"jumper", price:8900, colors:["siva","krem","bordo"],
+  {id:"dzemper", cat:"gornji", shape:"jumper", price:8900, tezina:{S:0.55,M:0.6,L:0.6,XL:0.65}, colors:["siva","krem","bordo"],
    name:{sr:"Džemper od merino vune",en:"Merino jumper"},
    desc:{sr:"Tanak džemper okruglog izreza, dovoljno lagan da se nosi ispod kaputa.",en:"A fine crew-neck jumper, light enough to wear under a coat."},
    mat:{sr:"100 % merino vuna",en:"100% merino wool"}, care:{sr:"Ručno pranje u hladnoj vodi, sušiti položeno",en:"Hand wash cold, dry flat"}},
-  {id:"majica", cat:"gornji", shape:"tee", price:2900, colors:["bela","crna"],
+  {id:"majica", cat:"gornji", shape:"tee", price:2900, tezina:{S:0.2,M:0.2,L:0.2,XL:0.25}, colors:["bela","crna"],
    name:{sr:"Pamučna majica",en:"Cotton T-shirt"},
    desc:{sr:"Majica od gustog pamuka, ravan rub i malo duži rukav.",en:"A T-shirt in dense cotton, with a straight hem and slightly longer sleeves."},
    mat:{sr:"100 % organski pamuk, 220 g/m²",en:"100% organic cotton, 220 g/m²"}, care:{sr:"Pranje na 40 °C",en:"Wash at 40 °C"}},
-  {id:"jakna", cat:"kaputi", shape:"jacket", price:12900, colors:["pescana"],
+  {id:"jakna", cat:"kaputi", shape:"jacket", price:12900, tezina:{S:1.1,M:1.2,L:1.2,XL:1.3}, colors:["pescana"],
    name:{sr:"Lanena jakna",en:"Linen jacket"},
    desc:{sr:"Nepostavljena jakna sa dva džepa, za prelazne dane.",en:"An unlined jacket with two pockets, for in-between weather."},
    mat:{sr:"100 % lan, 260 g/m²",en:"100% linen, 260 g/m²"}, care:{sr:"Pranje na 30 °C",en:"Wash at 30 °C"}},
-  {id:"prsluk", cat:"gornji", shape:"vest", price:5400, colors:["siva","crna"],
+  {id:"prsluk", cat:"gornji", shape:"vest", price:5400, tezina:{S:0.35,M:0.4,L:0.4,XL:0.45}, colors:["siva","crna"],
    name:{sr:"Pleteni prsluk",en:"Knitted vest"},
    desc:{sr:"Prsluk sa V izrezom, nosi se preko košulje ili sam uz široke pantalone.",en:"A V-neck vest to wear over a shirt or on its own with wide trousers."},
    mat:{sr:"80 % vuna, 20 % alpaka",en:"80% wool, 20% alpaca"}, care:{sr:"Ručno pranje u hladnoj vodi, sušiti položeno",en:"Hand wash cold, dry flat"}},
-  {id:"bluza", cat:"gornji", shape:"blouse", price:5900, colors:["krem","crna"],
+  {id:"bluza", cat:"gornji", shape:"blouse", price:5900, tezina:{S:0.2,M:0.25,L:0.25,XL:0.3}, colors:["krem","crna"],
    name:{sr:"Bluza od viskoze",en:"Viscose blouse"},
    desc:{sr:"Mekana bluza sa V izrezom i manžetnama na jedno dugme.",en:"A soft V-neck blouse with single-button cuffs."},
    mat:{sr:"100 % viskoza",en:"100% viscose"}, care:{sr:"Ručno pranje",en:"Hand wash"}},
-  {id:"sal", cat:"dodaci", shape:"scarf", price:3900, colors:["kamel","siva"], oneSize:true,
+  {id:"sal", cat:"dodaci", shape:"scarf", price:3900, tezina:0.3, colors:["kamel","siva"], oneSize:true,
    name:{sr:"Vuneni šal",en:"Wool scarf"},
    desc:{sr:"Dug šal sa resama, 190 × 40 cm.",en:"A long fringed scarf, 190 × 40 cm."},
    mat:{sr:"100 % vuna",en:"100% wool"}, care:{sr:"Ručno pranje u hladnoj vodi",en:"Hand wash cold"}},
-  {id:"torba", cat:"dodaci", shape:"tote", price:2400, colors:["pescana","crna"], oneSize:true,
+  {id:"torba", cat:"dodaci", shape:"tote", price:2400, tezina:0.35, colors:["pescana","crna"], oneSize:true,
    name:{sr:"Platnena torba",en:"Canvas tote"},
    desc:{sr:"Torba od debelog platna, sa unutrašnjim džepom. Stane laptop od 14 inča.",en:"A heavy canvas tote with an inside pocket. Fits a 14-inch laptop."},
    mat:{sr:"100 % pamučno platno",en:"100% cotton canvas"}, care:{sr:"Pranje na 30 °C",en:"Wash at 30 °C"}}
@@ -652,16 +694,19 @@ const L = {
     added:"Dodato u korpu.", maxStock:"Više komada nemamo na stanju.", colorsN:"{n} boje", color1:"1 boja",
     material:"Materijal", care:"Održavanje", pack:"Pakovanje", packV:"1 komad, u papirnoj kesi", sizeGuide:"Tabela veličina", legalLink:"Reklamacije, odustanak i vraćanje robe",
     emptyCart:"Korpa je prazna.", seeColl:"Pogledajte kolekciju", remove:"Ukloni", minus:"Smanji količinu", plus:"Povećaj količinu",
-    subtotal:"Međuzbir", pickShort:"lično preuzimanje, 0 RSD", discount:"Kupon {c} (−10 %)", shipCourier:"Dostava kurirom", shipping:"Dostava", free:"besplatno", total:"Ukupno",
+    subtotal:"Međuzbir", pickShort:"lično preuzimanje, 0 RSD", discount:"Kupon {c} (−10 %)", shipping:"Dostava", free:"besplatno", total:"Ukupno",
+    weightLbl:"Težina pošiljke", postage:"Poštarina", codFee:"Naknada za pouzeće (kurir)", srcNote:"Po cenovniku kurira AKS (od 1. 7. 2026), sa PDV-om.",
+    codNote:" Uz plaćanje pouzećem kurir naplaćuje i naknadu: 1,5 % od iznosa, najmanje 202 RSD. Lično preuzimanje u radnji je bez poštarine.", codNoteRev:" Naknada za pouzeće: 1,5 % od iznosa, najmanje 202 RSD, na iznos robe i poštarine.",
+    tooHeavy:"Za ovu težinu cenu dostave javljamo telefonom.", byPhone:"javljamo telefonom", onReq:"na upit",
     toFree:"Još {x} do besplatne dostave.", freeOk:"Dostava je besplatna.", couponLbl:"Kupon", apply:"Primeni", couponOk:"Kupon {c} je primenjen: −10 % na robu.", couponBad:"Kupon ne važi. Proverite kako je napisan.", couponRm:"Ukloni kupon",
     checkout:"Nastavite na poručivanje", cartCount:"Korpa, {n} stavki",
     steps:["Kontakt","Dostava","Plaćanje","Pregled"], stepOf:"Korak {i} od 4",
     next:"Dalje", back:"Nazad",
     hContact:"Vaši podaci", fName:"Ime i prezime", fTel:"Telefon", fMail:"Mejl", telHint:"Kurir Vas zove pre dostave.",
     eName:"Upišite ime i prezime.", eTel:"Upišite broj telefona, najmanje 8 cifara.", eMail:"Upišite ispravnu mejl adresu.",
-    hShip:"Kako da stigne do Vas?", dCourier:"Kurirom na adresu", dCourierS:"450 RSD, besplatno od 7.000 RSD. Rok 1–3 radna dana.", dPickup:"Lično preuzimanje u radnji", dPickupS:"Kralja Petra 36. Pon–pet 10–20 h, sub 10–16 h. Javljamo Vam kad je spremno.",
+    hShip:"Kako da stigne do Vas?", dCourier:"Kurirom AKS na adresu", dCourierS:"Poštarina po težini pošiljke ({kg}): {x}. Besplatno od 7.000 RSD. Rok 1–3 radna dana.", dPickup:"Lično preuzimanje u radnji", dPickupS:"Kralja Petra 36. Pon–pet 10–20 h, sub 10–16 h. Javljamo Vam kad je spremno.",
     fStreet:"Ulica i broj", fCity:"Mesto", fZip:"Poštanski broj", eStreet:"Upišite ulicu i broj.", eCity:"Upišite mesto.", eZip:"Poštanski broj ima 5 cifara.",
-    hPay:"Kako plaćate?", pCod:"Pouzećem", pCodS:"Plaćate kuriru gotovinom pri preuzimanju.", pCodNo:"Samo uz dostavu kurirom.",
+    hPay:"Kako plaćate?", pCod:"Pouzećem", pCodS:"Plaćate kuriru gotovinom pri preuzimanju. Naknada kurira AKS za pouzeće: {x}.", pCodNo:"Samo uz dostavu kurirom.",
     pSlip:"Uplatnicom ili IPS QR kodom", pSlipS:"Podatke za uplatu dobijate posle porudžbine.",
     pCard:"Platnom karticom", pCardS:"Visa · Mastercard · DinaCard. Podatke kartice unosite na strani banke.",
     pIps:"IPS aplikacijom banke", pIpsS:"Plaćanje se potvrđuje u aplikaciji Vaše banke.", ePay:"Izaberite način plaćanja.",
@@ -673,7 +718,7 @@ const L = {
     ipsH:"Na telefonu se otvara aplikacija Vaše banke (primer)", ipsP:"Na pravom sajtu se na telefonu otvara aplikacija Vaše banke sa već upisanim iznosom i primaocem. Plaćanje potvrđujete u aplikaciji, a na računaru skenirate IPS QR kod telefonom.",
     cont:"Nastavi (primer plaćanja)", cancelPay:"Nazad na pregled",
     example:"Primer: porudžbina se ne šalje", thanks:"Hvala, porudžbina je primljena.", paidOk:"Plaćanje je uspešno (primer)", ordNo:"Broj porudžbine",
-    iCod:"Plaćate kuriru gotovinom pri preuzimanju. Za plaćanje: {x}.",
+    iCod:"Plaćate kuriru gotovinom pri preuzimanju. Za plaćanje: {x}, uz naknadu za pouzeće {f}.",
     iSlipH:"Podaci za uplatu", rec:"Primalac", acc:"Račun primaoca", accEx:"primer", purpose:"Svrha", purposeV:"Porudžbina br. {o}", ref:"Poziv na broj", amount:"Iznos",
     qr:"Ovde stoji IPS QR kod (primer)", iSlipNote:"Porudžbinu šaljemo kad uplata stigne.", iSlipNoteP:"Porudžbinu pripremamo za preuzimanje kad uplata stigne.",
     iCard:"Plaćeno karticom: {x}.", iIps:"Plaćeno IPS aplikacijom banke: {x}.",
@@ -692,16 +737,19 @@ const L = {
     added:"Added to bag.", maxStock:"No more pieces in stock.", colorsN:"{n} colours", color1:"1 colour",
     material:"Material", care:"Care", pack:"Packaging", packV:"1 piece, in a paper bag", sizeGuide:"Size guide", legalLink:"Complaints, withdrawal and returns",
     emptyCart:"Your bag is empty.", seeColl:"See the collection", remove:"Remove", minus:"Decrease quantity", plus:"Increase quantity",
-    subtotal:"Subtotal", pickShort:"store pick-up, 0 RSD", discount:"Code {c} (−10%)", shipCourier:"Courier delivery", shipping:"Delivery", free:"free", total:"Total",
+    subtotal:"Subtotal", pickShort:"store pick-up, 0 RSD", discount:"Code {c} (−10%)", shipping:"Delivery", free:"free", total:"Total",
+    weightLbl:"Parcel weight", postage:"Postage", codFee:"Cash on delivery fee (courier)", srcNote:"Per the AKS courier price list (from 1 July 2026), VAT included.",
+    codNote:" With cash on delivery the courier also charges a fee: 1.5% of the amount, at least 202 RSD. Pick-up at the shop has no postage.", codNoteRev:" Cash on delivery fee: 1.5% of the amount, at least 202 RSD, on goods plus postage.",
+    tooHeavy:"For this weight we will phone you with the delivery price.", byPhone:"by phone", onReq:"on request",
     toFree:"{x} more for free delivery.", freeOk:"Delivery is free.", couponLbl:"Discount code", apply:"Apply", couponOk:"Code {c} applied: −10% on goods.", couponBad:"This code is not valid. Check the spelling.", couponRm:"Remove code",
     checkout:"Continue to checkout", cartCount:"Bag, {n} items",
     steps:["Contact","Delivery","Payment","Review"], stepOf:"Step {i} of 4",
     next:"Next", back:"Back",
     hContact:"Your details", fName:"Full name", fTel:"Phone", fMail:"Email", telHint:"The courier calls you before delivery.",
     eName:"Enter your full name.", eTel:"Enter a phone number, at least 8 digits.", eMail:"Enter a valid email address.",
-    hShip:"How should it reach you?", dCourier:"Courier to your address", dCourierS:"450 RSD, free from 7,000 RSD. 1–3 working days.", dPickup:"Pick up at the shop", dPickupS:"Kralja Petra 36. Mon–Fri 10–20 h, Sat 10–16 h. We let you know when it is ready.",
+    hShip:"How should it reach you?", dCourier:"AKS courier to your address", dCourierS:"Postage by parcel weight ({kg}): {x}. Free from 7,000 RSD. 1–3 working days.", dPickup:"Pick up at the shop", dPickupS:"Kralja Petra 36. Mon–Fri 10–20 h, Sat 10–16 h. We let you know when it is ready.",
     fStreet:"Street and number", fCity:"Town or city", fZip:"Postcode", eStreet:"Enter street and number.", eCity:"Enter the town or city.", eZip:"The postcode has 5 digits.",
-    hPay:"How will you pay?", pCod:"Cash on delivery", pCodS:"You pay the courier in cash on delivery.", pCodNo:"Only with courier delivery.",
+    hPay:"How will you pay?", pCod:"Cash on delivery", pCodS:"You pay the courier in cash on delivery. AKS cash on delivery fee: {x}.", pCodNo:"Only with courier delivery.",
     pSlip:"Payment slip or IPS QR code", pSlipS:"Payment details follow your order.",
     pCard:"Card", pCardS:"Visa · Mastercard · DinaCard. Card details are entered on the bank's page.",
     pIps:"IPS in your bank's app", pIpsS:"You confirm the payment in your bank's app.", ePay:"Choose a payment method.",
@@ -713,7 +761,7 @@ const L = {
     ipsH:"Your bank's app opens on your phone (sample)", ipsP:"On the real site your bank's app opens on your phone with the amount and recipient filled in. You confirm the payment in the app; on a computer you scan the IPS QR code with your phone.",
     cont:"Continue (sample payment)", cancelPay:"Back to review",
     example:"Sample: the order is not sent", thanks:"Thank you, the order is received.", paidOk:"Payment successful (sample)", ordNo:"Order number",
-    iCod:"You pay the courier in cash on delivery. Amount due: {x}.",
+    iCod:"You pay the courier in cash on delivery. Amount due: {x}, including the cash on delivery fee of {f}.",
     iSlipH:"Payment details", rec:"Recipient", acc:"Account", accEx:"sample", purpose:"Purpose", purposeV:"Order no. {o}", ref:"Reference", amount:"Amount",
     qr:"The IPS QR code goes here (sample)", iSlipNote:"We ship the order once the payment arrives.", iSlipNoteP:"We prepare the order for pick-up once the payment arrives.",
     iCard:"Paid by card: {x}.", iIps:"Paid with the IPS bank app: {x}.",
@@ -732,6 +780,7 @@ const t = (k, v) => { let s = (L[lang][k] ?? L.sr[k] ?? k); if (v) s = s.replace
 const tx = o => o[lang] || o.sr;
 const fmtN = n => lang === "en" ? n.toLocaleString("en-US") : String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const fmt = n => fmtN(n) + " RSD";
+const fmtKg = g => { const v = (Math.ceil(Math.round(g) / 100) / 10).toFixed(1); return (lang === "en" ? v : v.replace(".", ",")) + " kg"; };
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const $ = s => document.querySelector(s);
 const store = {
@@ -848,13 +897,23 @@ let couponOn = !!store.get("tk-coupon");
 let couponMsg = "";
 cart = cart.filter(l => PRODUCTS.some(p => p.id === l.id) && stockOf(l.id,l.color,l.size) > 0).map(l => ({...l, qty:Math.min(l.qty, stockOf(l.id,l.color,l.size))}));
 function saveCart(){ store.set("tk-cart", cart); store.set("tk-coupon", couponOn); renderCart(); }
-function totals(delivery){
-  const sub = cart.reduce((a,l) => a + PRODUCTS.find(p => p.id===l.id).price * l.qty, 0);
+function weightOf(p, size){ return typeof p.tezina === "number" ? p.tezina : p.tezina[size]; }
+/* obračun: težina pošiljke → razred kurira → poštarina; pouzeće → naknada kurira na (roba + poštarina) */
+function totals(delivery, pay, lines){
+  lines = lines || cart;
+  const sub = lines.reduce((a,l) => a + PRODUCTS.find(p => p.id===l.id).price * l.qty, 0);
   const disc = couponOn ? Math.round(sub * SHOP.couponPct / 100) : 0;
   const goods = sub - disc;
-  const ship = (delivery === "licno" || goods === 0 || goods >= SHOP.freeFrom) ? 0 : SHOP.ship;
-  return {sub, disc, goods, ship, total: goods + ship, count: cart.reduce((a,l) => a + l.qty, 0)};
+  const grams = lines.reduce((a,l) => a + Math.round(weightOf(PRODUCTS.find(p => p.id===l.id), l.size) * 1000) * l.qty, 0) + SHOP.boxG;
+  const courier = delivery !== "licno", free = goods >= SHOP.freeFrom;
+  const rate = postarina(KURIR, grams / 1000);
+  const heavy = courier && !free && rate === null;
+  const ship = (!courier || goods === 0 || free || heavy) ? 0 : rate;
+  const cod = courier && pay === "pouzece" && goods ? KURIR.pouzece(goods + ship) : 0;
+  return {sub, disc, goods, grams, courier, free, heavy, ship, cod, total: goods + ship + cod, count: lines.reduce((a,l) => a + l.qty, 0)};
 }
+const kgTxt = T => fmtKg(T.grams) + " · " + KURIR.naziv;
+const postTxt = T => T.free ? t("free") : T.heavy ? t("byPhone") : fmt(T.ship);
 function lineLabel(l){ const p = PRODUCTS.find(x => x.id===l.id); return tx(p.name) + ", " + tx(COLORS[l.color]) + ", " + (l.size === "UNI" ? t("oneSize").toLowerCase() : l.size); }
 function renderCart(){
   const T = totals("kurir");
@@ -880,8 +939,11 @@ function renderCart(){
   $("#korpaFoot").innerHTML = '<div class="sums" style="margin-top:0">'
     + '<div><span>'+t("subtotal")+'</span><span id="sumSub">'+fmt(T.sub)+'</span></div>'
     + (T.disc ? '<div><span>'+t("discount",{c:SHOP.coupon})+'</span><span id="sumDisc">−'+fmt(T.disc)+'</span></div>' : '')
-    + '<div><span>'+t("shipCourier")+'</span><span id="sumShip">'+(T.ship ? fmt(T.ship) : t("free"))+'</span></div>'
+    + '<div><span>'+t("weightLbl")+'</span><span id="sumKg">'+kgTxt(T)+'</span></div>'
+    + '<div><span>'+t("postage")+'</span><span id="sumShip">'+postTxt(T)+'</span></div>'
     + '<div class="tot"><span>'+t("total")+'</span><span id="sumTot">'+fmt(T.total)+'</span></div></div>'
+    + (T.heavy ? '<p class="kwarn">'+t("tooHeavy")+'</p>' : '')
+    + '<p class="kinfo" id="cartSrc">'+t("srcNote")+t("codNote")+'</p>'
     + '<p class="freebar" id="freeBar">'+(T.goods < SHOP.freeFrom ? t("toFree",{x:fmt(SHOP.freeFrom - T.goods)}) : t("freeOk"))+'</p>'
     + '<button class="btn main wide" type="button" id="toCheckout" style="margin-top:12px">'+t("checkout")+'</button>';
 }
@@ -920,7 +982,7 @@ function fld(id, key, type, val, ac, err){
 }
 function renderStep(){
   const body = $("#porBody"), foot = $("#porFoot");
-  const T = totals(co.del);
+  const T = totals(co.del, co.pay);
   if (co.phase === "bank" || co.phase === "ipsapp"){
     const isBank = co.phase === "bank";
     body.innerHTML = '<div class="bank" id="interstitial"><span class="ex">'+t("example")+'</span><h3>'+t(isBank?"bankH":"ipsH")+'</h3><p>'+t(isBank?"bankP":"ipsP")+'</p><p><strong>'+t("bankAmt")+': '+fmt(T.total)+'</strong><br>'+t("ordNo")+': '+co.order+'</p></div>';
@@ -938,23 +1000,22 @@ function renderStep(){
       + fld("cMail","fMail","email",co.mail,"email",e.mail)
       + '<p style="font-size:14px;color:var(--mute);margin:0">'+t("telHint")+'</p></div></div>';
   } else if (co.step === 2){
+    const TK = totals("kurir");
     html = '<div class="step"><h3>'+t("hShip")+'</h3><div class="choice" role="radiogroup">'
-      + '<label><input type="radio" name="del" value="kurir"'+(co.del==="kurir"?" checked":"")+'><span><b>'+t("dCourier")+'</b><span>'+t("dCourierS")+'</span></span></label>'
+      + '<label><input type="radio" name="del" value="kurir"'+(co.del==="kurir"?" checked":"")+'><span><b>'+t("dCourier")+'</b><span id="delCourierInfo">'+t("dCourierS",{kg:kgTxt(TK), x:TK.free ? t("free") : TK.heavy ? t("onReq") : fmt(TK.ship)})+'</span></span></label>'
       + '<label><input type="radio" name="del" value="licno"'+(co.del==="licno"?" checked":"")+'><span><b>'+t("dPickup")+'</b><span>'+t("dPickupS")+'</span></span></label></div>'
       + (co.del === "kurir" ? '<div class="form" style="margin-top:20px">'+fld("cStreet","fStreet","text",co.street,"street-address",e.street)+'<div class="two">'+fld("cCity","fCity","text",co.city,"address-level2",e.city)+fld("cZip","fZip","text",co.zip,"postal-code",e.zip)+'</div></div>' : '')
       + '</div>';
   } else if (co.step === 3){
     const opts = [["pouzece","pCod","pCodS"],["uplatnica","pSlip","pSlipS"],["kartica","pCard","pCardS"],["ips","pIps","pIpsS"]];
+    const codX = fmt(totals(co.del, "pouzece").cod);
     html = '<div class="step"><h3>'+t("hPay")+'</h3><div class="choice" role="radiogroup">'
-      + opts.map(([v,n,s]) => { const dis = v==="pouzece" && co.del==="licno"; return '<label><input type="radio" name="pay" value="'+v+'"'+(co.pay===v?" checked":"")+(dis?" disabled":"")+'><span><b>'+t(n)+'</b><span>'+(dis?t("pCodNo"):t(s))+'</span></span></label>'; }).join("")
+      + opts.map(([v,n,s]) => { const dis = v==="pouzece" && co.del==="licno"; return '<label><input type="radio" name="pay" value="'+v+'"'+(co.pay===v?" checked":"")+(dis?" disabled":"")+'><span><b>'+t(n)+'</b><span>'+(dis?t("pCodNo"):t(s,{x:codX}))+'</span></span></label>'; }).join("")
       + '</div></div>';
   } else {
     html = '<div class="step rev"><h3>'+t("hRev")+'</h3>'
       + '<h4>'+t("items")+'</h4><ul>'+cart.map(l => { const p = PRODUCTS.find(x => x.id===l.id); return '<li><span>'+esc(lineLabel(l))+' × '+l.qty+'</span><span>'+fmt(p.price*l.qty)+'</span></li>'; }).join("")+'</ul>'
-      + '<div class="sums"><div><span>'+t("subtotal")+'</span><span>'+fmt(T.sub)+'</span></div>'
-      + (T.disc ? '<div><span>'+t("discount",{c:SHOP.coupon})+'</span><span>−'+fmt(T.disc)+'</span></div>' : '')
-      + '<div><span>'+t("shipping")+'</span><span id="revShip">'+shipTxt(T, co.del)+'</span></div>'
-      + '<div class="tot"><span>'+t("total")+'</span><span id="revTot">'+fmt(T.total)+'</span></div></div>'
+      + sumsHtml(T, co.del, "rev")
       + '<h4>'+t("delivery")+'</h4><p>'+(co.del==="kurir" ? esc(t("dCourier")+": "+co.street+", "+co.zip+" "+co.city) : t("dPickup")+", Kralja Petra 36")+'</p>'
       + '<h4>'+t("payment")+'</h4><p>'+payName(co.pay)+'</p>'
       + '<h4>'+t("contact")+'</h4><p>'+esc(co.name)+', '+esc(co.tel)+', '+esc(co.mail)+'</p>'
@@ -1007,7 +1068,7 @@ porDlg.addEventListener("click", e => {
     if (co.step === 3 && !co.pay){ co.err = "ePay"; renderStep(); return; }
     if (co.step === 4){
       if (!co.agree){ co.err = "eAgree"; renderStep(); $("#agree").focus(); return; }
-      co.order = orderNo(); co.totals = totals(co.del); co.lines = cart.map(l => ({...l}));
+      co.order = orderNo(); co.totals = totals(co.del, co.pay); co.lines = cart.map(l => ({...l}));
       co.phase = co.pay === "kartica" ? "bank" : co.pay === "ips" ? "ipsapp" : "done";
       if (co.phase === "done") finish();
       renderStep(); focusFirst(); return;
@@ -1018,12 +1079,24 @@ porDlg.addEventListener("click", e => {
   if (e.target.closest("#payGo")){ co.phase = "done"; finish(); renderStep(); focusFirst(); return; }
   if (e.target.closest("#backShop")){ porDlg.close(); location.hash = "#kolekcija"; return; }
 });
-function shipTxt(T, d){ return d === "licno" ? t("pickShort") : T.ship ? fmt(T.ship) : t("free"); }
+function shipTxt(T, d){ return d === "licno" ? t("pickShort") : postTxt(T); }
+/* zbir na pregledu i potvrdi: id-jevi revKg/revShip/revCod/revTot i confKg/confShip/confCod/confTot */
+function sumsHtml(T, d, id){
+  return '<div class="sums"><div><span>'+t("subtotal")+'</span><span id="'+id+'Sub">'+fmt(T.sub)+'</span></div>'
+    + (T.disc ? '<div><span>'+t("discount",{c:SHOP.coupon})+'</span><span>−'+fmt(T.disc)+'</span></div>' : '')
+    + (d === "licno"
+      ? '<div><span>'+t("shipping")+'</span><span id="'+id+'Ship">'+t("pickShort")+'</span></div>'
+      : '<div><span>'+t("weightLbl")+'</span><span id="'+id+'Kg">'+kgTxt(T)+'</span></div><div><span>'+t("postage")+'</span><span id="'+id+'Ship">'+postTxt(T)+'</span></div>')
+    + (T.cod ? '<div><span>'+t("codFee")+'</span><span id="'+id+'Cod">'+fmt(T.cod)+'</span></div>' : '')
+    + '<div class="tot"><span>'+t("total")+'</span><span id="'+id+'Tot">'+fmt(T.total)+'</span></div></div>'
+    + (T.heavy ? '<p class="kwarn">'+t("tooHeavy")+'</p>' : '')
+    + (d === "licno" ? '' : '<p class="kinfo" id="'+id+'Src">'+t("srcNote")+(T.cod ? t("codNoteRev") : "")+'</p>');
+}
 function finish(){ cart = []; couponOn = false; saveCart(); }
 function renderConfirm(){
   const T = co.totals, x = fmt(T.total), pick = co.del === "licno";
   let pay = "";
-  if (co.pay === "pouzece") pay = '<p>'+t("iCod",{x})+'</p>';
+  if (co.pay === "pouzece") pay = '<p>'+t("iCod",{x, f:fmt(T.cod)})+'</p>';
   if (co.pay === "kartica") pay = '<p>'+t("iCard",{x})+'</p>';
   if (co.pay === "ips") pay = '<p>'+t("iIps",{x})+'</p>';
   if (co.pay === "uplatnica") pay = '<h4 style="font-size:16px;margin:18px 0 0">'+t("iSlipH")+'</h4><div class="pay" id="payData"><dl>'
@@ -1037,10 +1110,7 @@ function renderConfirm(){
     + '<h3>'+((co.pay==="kartica"||co.pay==="ips") ? t("paidOk") : t("thanks"))+'</h3>'
     + '<p class="ordno">'+t("ordNo")+': <span id="ordNo">'+co.order+'</span></p>'
     + '<div class="rev"><ul>'+co.lines.map(l => { const p = PRODUCTS.find(z => z.id===l.id); return '<li><span>'+esc(lineLabel(l))+' × '+l.qty+'</span><span>'+fmt(p.price*l.qty)+'</span></li>'; }).join("")+'</ul>'
-    + '<div class="sums"><div><span>'+t("subtotal")+'</span><span>'+fmt(T.sub)+'</span></div>'
-    + (T.disc ? '<div><span>'+t("discount",{c:SHOP.coupon})+'</span><span>−'+fmt(T.disc)+'</span></div>' : '')
-    + '<div><span>'+t("shipping")+'</span><span>'+shipTxt(T, co.del)+'</span></div>'
-    + '<div class="tot"><span>'+t("total")+'</span><span id="confTot">'+x+'</span></div></div></div>'
+    + sumsHtml(T, co.del, "conf")+'</div>'
     + '<div style="margin-top:18px">'+pay+'</div>'
     + '<p>'+(pick ? t("pickupInfo") : esc(t("courierInfo",{a:co.street+", "+co.zip+" "+co.city})))+'</p>'
     + '<p><strong>'+t(pick?"fiscalP":"fiscal")+'</strong></p></div>';
