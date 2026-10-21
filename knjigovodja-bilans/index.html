@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bilans – knjigovodstvena agencija, Kneza Miloša 12, Savski venac</title>
+<meta name="description" content="Knjigovodstvena agencija Bilans u Kneza Miloša 12. Knjigovodstvo za paušalce, preduzetnike i mala preduzeća, obračun zarada, PDV i završni račun. Cene mesečno u dinarima.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600&family=Geist+Mono:wght@400;500&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bela:#FFFFFF; --grafit:#1A1A1A; --siva:#8A8A8A; --zelena:#2F7D4F;
+  --tekst2:#5C5C5C; /* tamnija nijansa sive za sitan tekst (AA) */
+  --sans:"Geist","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --mono:"Geist Mono","SF Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;
+  --pad:clamp(20px,5vw,64px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--bela);color:var(--grafit);font-family:var(--sans);font-weight:400;font-size:1rem;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--zelena);outline-offset:3px}
+h1,h2,h3,p{margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--pad)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+
+/* traka primera */
+.primer{border-bottom:1px solid var(--grafit);font-size:.8125rem}
+.primer .wrap{display:flex;justify-content:space-between;gap:16px;min-height:36px;align-items:center}
+.primer a{font-weight:600}
+
+/* zaglavlje */
+header.top{padding:22px 0}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{text-decoration:none;display:flex;flex-direction:column;line-height:1.1;min-height:44px;justify-content:center}
+.logo b{font-weight:600;font-size:1.25rem;letter-spacing:-.02em}
+.logo span{font-size:.8125rem;color:var(--tekst2)}
+nav.glavni ul{list-style:none;margin:0;padding:0;display:flex;gap:28px}
+nav.glavni a{text-decoration:none;font-size:.9375rem;display:inline-flex;min-height:44px;align-items:center}
+nav.glavni a:hover{text-decoration:underline;text-underline-offset:4px}
+.meni-dugme{display:none;background:none;border:1px solid var(--grafit);color:var(--grafit);font:inherit;font-size:.9375rem;min-height:44px;min-width:44px;padding:0 16px;cursor:pointer}
+
+/* hero */
+.hero{padding:clamp(56px,10vw,128px) 0 clamp(48px,7vw,88px)}
+.hero h1{grid-column:1 / span 10;font-weight:600;font-size:clamp(2.4rem,6.4vw,5.25rem);line-height:1.02;letter-spacing:-.035em}
+.hero .uvod{grid-column:1 / span 6;margin-top:32px;font-size:clamp(1.0625rem,1.6vw,1.25rem);color:var(--grafit);max-width:36em}
+.hero .akcije{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.dugme{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;font:inherit;font-weight:600;font-size:.9375rem;text-decoration:none;border:1px solid var(--grafit);background:transparent;color:var(--grafit);cursor:pointer}
+.dugme.glavno{background:var(--zelena);border-color:var(--zelena);color:#fff}
+.dugme:hover{background:var(--grafit);border-color:var(--grafit);color:#fff}
+.cinjenice{grid-column:1 / -1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:24px;margin-top:clamp(56px,8vw,96px)}
+.cinjenice div{border-top:1px solid var(--grafit);padding-top:14px}
+.cinjenice dt{font-size:.8125rem;color:var(--tekst2)}
+.cinjenice dd{margin:4px 0 0;font-size:1.0625rem}
+.cinjenice .br{font-family:var(--mono);font-weight:500}
+
+/* sekcije */
+section.blok{border-top:1px solid var(--grafit);padding:28px 0 clamp(64px,9vw,112px)}
+.blok h2{grid-column:1 / span 3;font-weight:600;font-size:1.0625rem;letter-spacing:-.01em;padding-top:2px}
+.blok .sadrzaj{grid-column:4 / -1}
+.blok .lead{font-size:clamp(1.375rem,2.6vw,2rem);line-height:1.2;letter-spacing:-.02em;max-width:22em;margin-bottom:40px}
+
+.klijenti{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:24px;row-gap:32px}
+.klijenti h3{font-weight:600;font-size:1rem;border-top:1px solid var(--siva);padding-top:12px;margin-bottom:8px}
+.klijenti p{color:var(--tekst2);font-size:.9375rem}
+
+/* knjigovodstvena tabela */
+.knjiga{width:100%;border-collapse:collapse;font-size:.9375rem}
+.knjiga caption{text-align:left;font-size:.8125rem;color:var(--tekst2);padding-bottom:10px}
+.knjiga th{font-weight:400;font-size:.8125rem;color:var(--tekst2);text-align:left;padding:0 0 8px;border-bottom:1px solid var(--grafit)}
+.knjiga th.iznos,.knjiga td.iznos{text-align:right}
+.knjiga td{padding:13px 0;border-bottom:1px solid #DADADA;vertical-align:baseline}
+.knjiga td.konto{font-family:var(--mono);color:var(--tekst2);width:5.5em;font-size:.875rem}
+.knjiga td small{display:block;color:var(--tekst2);font-size:.8125rem;margin-top:2px}
+.knjiga td.iznos{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;padding-left:16px}
+.knjiga tr.zbir td{border-bottom:3px double var(--grafit);border-top:1px solid var(--grafit);font-weight:600;padding:16px 0}
+.knjiga tr.zbir td.iznos{color:var(--zelena);font-weight:500;font-size:1.125rem}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.napomena{font-size:.875rem;color:var(--tekst2);margin-top:16px;max-width:44em}
+.primer-racuna{margin-top:72px}
+.primer-racuna h3{font-weight:600;font-size:1.0625rem;margin-bottom:4px}
+.primer-racuna > p{color:var(--tekst2);font-size:.9375rem;margin-bottom:20px}
+
+.koraci{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:24px;row-gap:32px;counter-reset:k}
+.koraci li{counter-increment:k;border-top:1px solid var(--siva);padding-top:12px}
+.koraci li::before{content:counter(k);display:block;font-family:var(--mono);font-size:.875rem;color:var(--tekst2);margin-bottom:20px}
+.koraci h3{font-weight:600;font-size:1rem;margin-bottom:6px}
+.koraci p{color:var(--tekst2);font-size:.9375rem}
+
+.sati{width:100%;max-width:560px;border-collapse:collapse;font-size:.9375rem}
+.sati th,.sati td{padding:11px 0;border-bottom:1px solid #DADADA;text-align:left;font-weight:400}
+.sati td{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+.sati tr.danas th,.sati tr.danas td{font-weight:600}
+.sati tr.danas th::after{content:" (danas)";font-weight:400;color:var(--tekst2)}
+
+.kontakt-grid{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));column-gap:24px;row-gap:48px}
+.adresa{grid-column:1 / span 4}
+.adresa p{margin-bottom:6px}
+.adresa .tel{font-family:var(--mono);font-size:1.25rem;font-weight:500;text-decoration:none;display:inline-flex;min-height:44px;align-items:center}
+.adresa .dugmad{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 28px}
+.mapa{border:1px solid var(--grafit);aspect-ratio:4/3;width:100%}
+.mapa iframe{width:100%;height:100%;border:0;display:block;filter:grayscale(1)}
+form{grid-column:5 / -1;display:grid;gap:20px;align-content:start}
+label{display:block;font-size:.8125rem;color:var(--tekst2);margin-bottom:6px}
+input,textarea,select{width:100%;font:inherit;font-size:1rem;color:var(--grafit);background:var(--bela);border:0;border-bottom:1px solid var(--grafit);padding:10px 0;min-height:44px;border-radius:0}
+select{appearance:none;background:transparent}
+textarea{min-height:120px;resize:vertical;border:1px solid var(--grafit);padding:10px}
+input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--zelena);outline-offset:2px}
+.poruka{font-size:.9375rem;border-left:2px solid var(--zelena);padding:6px 0 6px 14px}
+.poruka[hidden]{display:none}
+
+footer{border-top:1px solid var(--grafit);padding:28px 0 40px;font-size:.8125rem;color:var(--tekst2)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px}
+footer a{color:var(--grafit);font-weight:600}
+
+@media (max-width:900px){
+  .hero h1{grid-column:1 / -1}
+  .hero .uvod{grid-column:1 / -1}
+  .blok h2{grid-column:1 / -1;margin-bottom:28px}
+  .blok .sadrzaj{grid-column:1 / -1}
+  .adresa,form{grid-column:1 / -1}
+}
+@media (max-width:720px){
+  .meni-dugme{display:inline-flex;align-items:center}
+  nav.glavni{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bela);border-bottom:1px solid var(--grafit);z-index:5}
+  nav.glavni.otvoren{display:block}
+  nav.glavni ul{flex-direction:column;gap:0;padding:8px var(--pad) 16px}
+  nav.glavni a{width:100%;border-top:1px solid #DADADA}
+  header.top{position:relative}
+  .cinjenice{grid-template-columns:1fr;row-gap:20px}
+  .klijenti,.koraci{grid-template-columns:1fr}
+  .knjiga td.konto{display:none}
+  .knjiga th.konto{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<div class="primer"><div class="wrap"><span>Primer sajta · izradio opsforma</span><a href="../">Svi primeri</a></div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#pocetak"><b>Bilans</b><span>knjigovodstvena agencija</span></a>
+    <button class="meni-dugme" type="button" aria-expanded="false" aria-controls="glavni-meni">Meni</button>
+    <nav class="glavni" id="glavni-meni" aria-label="Glavni meni">
+      <ul>
+        <li><a href="#usluge">Usluge</a></li>
+        <li><a href="#cene">Cene</a></li>
+        <li><a href="#kako">Kako radimo</a></li>
+        <li><a href="#radno-vreme">Radno vreme</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="pocetak">
+  <div class="hero">
+    <div class="wrap grid">
+      <h1>Knjigovodstvo za preduzetnike i mala preduzeća.</h1>
+      <p class="uvod">Vodimo knjige, obračunavamo plate i PDV i predajemo završni račun. Svakog meseca znate koliko plaćate i šta treba da nam pošaljete. Kancelarija je u Kneza Miloša 12.</p>
+      <div class="akcije">
+        <a class="dugme glavno" href="tel:+381600000601">Pozovite 060 000 06 01</a>
+        <a class="dugme" href="#kontakt">Pošaljite upit</a>
+      </div>
+      <dl class="cinjenice">
+        <div><dt>Paušalci</dt><dd><span class="br">6.000</span> RSD mesečno</dd></div>
+        <div><dt>Dokumenta za prethodni mesec</dt><dd>do <span class="br">10.</span> u mesecu</dd></div>
+        <div><dt>Prvi razgovor</dt><dd>besplatan, <span class="br">30</span> minuta</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <section class="blok" id="usluge" aria-labelledby="h-usluge">
+    <div class="wrap grid">
+      <h2 id="h-usluge">Usluge</h2>
+      <div class="sadrzaj">
+        <p class="lead">Preuzimamo knjigovodstvo od prvog dana firme ili od prethodnog knjigovođe, bez prekida u evidenciji.</p>
+        <div class="klijenti">
+          <div><h3>Paušalci</h3><p>Knjiga prometa, praćenje limita od šest i osam miliona, rešenja Poreske uprave i podsetnik za uplatu poreza i doprinosa.</p></div>
+          <div><h3>Preduzetnici na knjigama</h3><p>Poslovne knjige, PDV evidencija, obračun zarada i lične zarade preduzetnika, poreski bilans i godišnja prijava.</p></div>
+          <div><h3>Mala preduzeća (DOO)</h3><p>Glavna knjiga, fakturisanje kroz SEF, izvodi, osnovna sredstva, plate, PDV i završni račun za APR.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blok" id="cene" aria-labelledby="h-cene">
+    <div class="wrap grid">
+      <h2 id="h-cene">Cene</h2>
+      <div class="sadrzaj">
+        <table class="knjiga">
+          <caption>Cene su mesečne, bez PDV-a, osim gde je drugačije navedeno.</caption>
+          <thead><tr><th class="konto" scope="col">Šifra</th><th scope="col">Usluga</th><th class="iznos" scope="col">RSD</th></tr></thead>
+          <tbody>
+            <tr><td class="konto">01</td><td>Paušalno oporezivi preduzetnik<small>mesečno</small></td><td class="iznos">6.000</td></tr>
+            <tr><td class="konto">02</td><td>Preduzetnik na knjigama, do 30 faktura<small>mesečno</small></td><td class="iznos">12.000</td></tr>
+            <tr><td class="konto">03</td><td>DOO, do 50 faktura i izvoda<small>mesečno</small></td><td class="iznos">18.000</td></tr>
+            <tr><td class="konto">04</td><td>Obračun zarade<small>po zaposlenom, mesečno</small></td><td class="iznos">1.500</td></tr>
+            <tr><td class="konto">05</td><td>PDV evidencija i prijava<small>mesečno ili tromesečno</small></td><td class="iznos">4.000</td></tr>
+            <tr><td class="konto">06</td><td>Završni račun i poreski bilans<small>jednom godišnje</small></td><td class="iznos">25.000</td></tr>
+            <tr><td class="konto">07</td><td>Registracija preduzetnika ili DOO u APR-u<small>jednokratno, takse posebno</small></td><td class="iznos">8.000</td></tr>
+          </tbody>
+        </table>
+
+        <div class="primer-racuna">
+          <h3>Primer mesečnog računa</h3>
+          <p>Malo preduzeće u sistemu PDV-a, sa dva zaposlena.</p>
+          <table class="knjiga">
+            <caption class="sr">Obračun primera</caption>
+            <thead><tr><th class="konto" scope="col">Šifra</th><th scope="col">Stavka</th><th class="iznos" scope="col">RSD</th></tr></thead>
+            <tbody>
+              <tr><td class="konto">03</td><td>Vođenje knjiga, DOO</td><td class="iznos">18.000</td></tr>
+              <tr><td class="konto">04</td><td>Obračun zarade, 2 × 1.500</td><td class="iznos">3.000</td></tr>
+              <tr><td class="konto">05</td><td>PDV evidencija i prijava</td><td class="iznos">4.000</td></tr>
+              <tr class="zbir"><td class="konto"></td><td>Ukupno mesečno</td><td class="iznos">25.000</td></tr>
+            </tbody>
+          </table>
+          <p class="napomena">Ako se broj faktura ili zaposlenih promeni, cenu menjamo od narednog meseca i to Vam javljamo unapred.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blok" id="kako" aria-labelledby="h-kako">
+    <div class="wrap grid">
+      <h2 id="h-kako">Kako radimo</h2>
+      <div class="sadrzaj">
+        <ol class="koraci">
+          <li><h3>Razgovor</h3><p>Dođete ili se čujemo telefonom. Pogledamo šta firma radi i dogovorimo cenu za mesec.</p></li>
+          <li><h3>Preuzimanje</h3><p>Potpišemo ugovor i preuzmemo dokumentaciju od prethodnog knjigovođe. Za to se ne plaća posebno.</p></li>
+          <li><h3>Svaki mesec</h3><p>Do 10. u mesecu nam pošaljete izvode i fakture mejlom. Mi Vam pošaljemo naloge za uplatu poreza.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="blok" id="radno-vreme" aria-labelledby="h-rv">
+    <div class="wrap grid">
+      <h2 id="h-rv">Radno vreme</h2>
+      <div class="sadrzaj">
+        <table class="sati">
+          <tbody>
+            <tr data-dan="1"><th scope="row">Ponedeljak</th><td>08:00–16:00</td></tr>
+            <tr data-dan="2"><th scope="row">Utorak</th><td>08:00–16:00</td></tr>
+            <tr data-dan="3"><th scope="row">Sreda</th><td>08:00–16:00</td></tr>
+            <tr data-dan="4"><th scope="row">Četvrtak</th><td>08:00–16:00</td></tr>
+            <tr data-dan="5"><th scope="row">Petak</th><td>08:00–15:00</td></tr>
+            <tr data-dan="6"><th scope="row">Subota</th><td>zatvoreno</td></tr>
+            <tr data-dan="0"><th scope="row">Nedelja</th><td>zatvoreno</td></tr>
+          </tbody>
+        </table>
+        <p class="napomena">U nedelji pred rok za završni račun radimo i subotom od 9 do 13 h.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="blok" id="kontakt" aria-labelledby="h-kontakt">
+    <div class="wrap grid">
+      <h2 id="h-kontakt">Kontakt</h2>
+      <div class="sadrzaj">
+        <div class="kontakt-grid">
+          <div class="adresa">
+            <p>Kneza Miloša 12, drugi sprat<br>Savski venac, Beograd</p>
+            <a class="tel" href="tel:+381600000601">060 000 06 01</a>
+            <div class="dugmad">
+              <a class="dugme glavno" href="tel:+381600000601">Pozovite</a>
+              <a class="dugme" href="viber://chat?number=%2B381600000601">Pišite na Viber</a>
+            </div>
+            <div class="mapa">
+              <iframe title="Mapa: Kneza Miloša 12, Beograd" loading="lazy" src="https://maps.google.com/maps?q=Kneza%20Milo%C5%A1a%2012%2C%20Beograd&z=15&output=embed"></iframe>
+            </div>
+          </div>
+          <!--
+            PRODUKCIJA (Web3Forms): forma dobija
+            action="https://api.web3forms.com/submit" method="POST"
+            i skriveno polje <input type="hidden" name="access_key" value="KLJUČ-SA-WEB3FORMS">.
+            Poruka tada stiže direktno na vlasnikov mejl. U ovom primeru JS samo prikazuje napomenu.
+          -->
+          <form data-form="kontakt" novalidate>
+            <div><label for="f-ime">Ime i prezime</label><input id="f-ime" name="ime" type="text" autocomplete="name"></div>
+            <div><label for="f-tel">Telefon ili mejl</label><input id="f-tel" name="kontakt" type="text" autocomplete="tel"></div>
+            <div><label for="f-tip">Oblik firme</label>
+              <select id="f-tip" name="oblik">
+                <option value="">Izaberite</option>
+                <option>Paušalac</option>
+                <option>Preduzetnik na knjigama</option>
+                <option>DOO</option>
+                <option>Tek otvaram firmu</option>
+              </select></div>
+            <div><label for="f-poruka">Poruka</label><textarea id="f-poruka" name="poruka"></textarea></div>
+            <div><button class="dugme glavno" type="submit">Pošaljite upit</button></div>
+            <p class="poruka" role="status" aria-live="polite" hidden></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Knjigovodstvena agencija Bilans, Kneza Miloša 12, Beograd</span>
+    <span>Primer sajta · izradio opsforma · <a href="../">Svi primeri</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var dugme = document.querySelector('.meni-dugme');
+  var meni = document.getElementById('glavni-meni');
+  function postavi(otvoren){ dugme.setAttribute('aria-expanded', String(otvoren)); meni.classList.toggle('otvoren', otvoren); }
+  dugme.addEventListener('click', function(){ postavi(dugme.getAttribute('aria-expanded') !== 'true'); });
+  meni.addEventListener('click', function(e){ if (e.target.closest('a')) postavi(false); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && dugme.getAttribute('aria-expanded') === 'true'){ postavi(false); dugme.focus(); } });
+
+  var red = document.querySelector('.sati tr[data-dan="' + new Date().getDay() + '"]');
+  if (red) red.classList.add('danas');
+
+  var forma = document.querySelector('form[data-form="kontakt"]');
+  forma.addEventListener('submit', function(e){
+    e.preventDefault();
+    var p = forma.querySelector('.poruka');
+    p.textContent = 'Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.';
+    p.hidden = false;
+  });
+})();
+</script>
+</body>
+</html>

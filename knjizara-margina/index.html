@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Margina – knjižara i antikvarijat, Zmaj Jovina 14</title>
+<meta name="description" content="Knjižara i antikvarijat Margina u Zmaj Jovinoj 14: polovne i stare knjige, otkup biblioteka, procena, traženje naslova i ručno koričenje.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Epilogue:wght@400;600&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papir:#F6F1E7;
+  --crna:#1B1B1B;
+  --olovka:#B22222;        /* crvena olovka: samo brojevi beleški */
+  --siva:#5E5A52;          /* sporedni tekst, 6.2:1 na papiru */
+  --linija:rgba(27,27,27,.18);
+  --serif:"Crimson Pro","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --sans:"Epilogue","Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papir);color:var(--crna);font-family:var(--serif);font-size:1.25rem;line-height:1.6}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--olovka);outline-offset:3px}
+h1,h2{font-weight:400;margin:0}
+p{margin:0}
+
+.primer{font-family:var(--sans);font-size:.75rem;padding:.55rem 16px;text-align:center;border-bottom:1px solid var(--linija);color:var(--siva)}
+.primer a{color:var(--crna);margin-left:.6em}
+
+/* osnovna mreža: stubac teksta + margina za beleške */
+.strana{max-width:60rem;margin:0 auto;padding:0 16px}
+.red{display:grid;grid-template-columns:minmax(0,36rem) minmax(0,15rem);column-gap:3.5rem;align-items:start}
+.red > *{grid-column:1}
+.red > .beleska{grid-column:2}
+
+/* zaglavlje */
+.zag{display:flex;align-items:center;justify-content:space-between;padding:1.75rem 0 1.5rem}
+.znak{text-decoration:none;line-height:1.1}
+.znak b{display:block;font-weight:600;font-size:1.5rem;letter-spacing:.01em}
+.znak span{font-family:var(--sans);font-size:.75rem;color:var(--siva)}
+.nav{display:flex;gap:1.75rem;font-family:var(--sans);font-size:.875rem}
+.nav a{text-decoration:none;padding:.5rem 0}
+.nav a:hover{text-decoration:underline}
+.meni-dugme{display:none}
+
+/* beleške na margini */
+sup.br{font-family:var(--sans);font-size:.65em;font-weight:600;color:var(--olovka);line-height:0;margin-left:.1em}
+.beleska{font-size:1rem;line-height:1.45;color:var(--siva);padding-top:.35rem}
+.beleska.niza{margin-top:3.6rem}
+.beleska b{font-family:var(--sans);font-size:.75rem;font-weight:600;color:var(--olovka);margin-right:.4em}
+
+/* uvod */
+.uvod{padding:4.5rem 0 5rem}
+.uvod h1{grid-column:1 / -1;max-width:15em;font-size:clamp(2.6rem,7vw,4.5rem);line-height:1.02;letter-spacing:-.01em;margin-bottom:2rem}
+.uvod .vodeci{font-size:1.375rem;margin-bottom:2rem}
+.dugmad{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:center}
+.dug{font-family:var(--sans);font-size:.9375rem;display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 1.35rem;text-decoration:none;border:1px solid var(--crna);background:var(--crna);color:var(--papir);cursor:pointer}
+.dug:hover{background:transparent;color:var(--crna)}
+.dug.tiho{background:transparent;color:var(--crna)}
+.dug.tiho:hover{background:var(--crna);color:var(--papir)}
+.vezica{font-family:var(--sans);font-size:.9375rem;min-height:48px;display:inline-flex;align-items:center}
+
+/* sekcije */
+.sekcija{padding:3.5rem 0;border-top:1px solid var(--linija)}
+.sekcija h2{font-size:2.25rem;line-height:1.1;margin-bottom:1.5rem}
+.tekst p{margin-bottom:1em}
+
+/* cenovnik kao sadržaj knjige */
+.cene{list-style:none;margin:0;padding:0}
+.cene li{display:grid;grid-template-columns:1fr auto;gap:.25rem 1.5rem;padding:.9rem 0;border-bottom:1px solid var(--linija)}
+.cene li:first-child{border-top:1px solid var(--linija)}
+.cene .naziv{font-weight:400}
+.cene .opis{grid-column:1;font-size:1rem;color:var(--siva);line-height:1.4}
+.cene .iznos{grid-column:2;grid-row:1;text-align:right;font-variant-numeric:oldstyle-nums tabular-nums;white-space:nowrap}
+
+/* radno vreme */
+.dani{list-style:none;margin:0;padding:0}
+.dani li{display:flex;justify-content:space-between;gap:1rem;padding:.45rem 0;border-bottom:1px solid var(--linija)}
+.dani li span:last-child{font-variant-numeric:tabular-nums}
+.dani li.danas{font-weight:600}
+
+.mapa{display:block;width:100%;height:320px;border:1px solid var(--linija);margin-top:1.5rem}
+
+.foto{aspect-ratio:16/9;background:#E6DECF;display:flex;align-items:flex-end;padding:.75rem;margin-top:2rem}
+.foto span{font-family:var(--sans);font-size:.75rem;color:var(--siva)}
+
+/* forma */
+.polje{margin-bottom:1.1rem}
+.polje label{display:block;font-family:var(--sans);font-size:.875rem;margin-bottom:.35rem}
+.polje input,.polje textarea{width:100%;font-family:var(--serif);font-size:1.125rem;color:var(--crna);background:#FBF8F2;border:1px solid rgba(27,27,27,.45);border-radius:0;padding:.6rem .75rem;min-height:48px}
+.polje textarea{min-height:140px;resize:vertical}
+.forma-poruka{margin-top:1rem;font-style:italic}
+
+.pod{border-top:1px solid var(--linija);padding:2.5rem 0 3.5rem;font-family:var(--sans);font-size:.875rem;color:var(--siva);line-height:1.7}
+.pod p{margin:0}
+.pod a{color:var(--crna)}
+
+@media (max-width:820px){
+  body{font-size:1.1875rem}
+  .red{display:block}
+  /* na mobilnom beleška ide odmah ispod pasusa, uvučena */
+  .beleska,.beleska.niza{margin:.75rem 0 1.25rem;padding:0 0 0 1rem;border-left:1px solid var(--olovka)}
+  .zag{position:relative;padding:1.25rem 0}
+  .meni-dugme{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:48px;padding:0 .9rem;font-family:var(--sans);font-size:.875rem;background:transparent;border:1px solid var(--crna);color:var(--crna);cursor:pointer}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;z-index:5;background:var(--papir);flex-direction:column;gap:0;padding:.25rem 0 1rem;border-bottom:1px solid var(--linija)}
+  .nav.otvoren{display:flex}
+  .nav a{padding:.75rem 0;font-size:1rem}
+  .uvod{padding:2.5rem 0 3.5rem}
+  .uvod .vodeci{font-size:1.25rem}
+  .sekcija{padding:2.75rem 0}
+  .sekcija h2{font-size:2rem}
+  .mapa{height:260px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="primer">Primer sajta · izradio opsforma <a href="../">Svi primeri</a></div>
+
+<div class="strana">
+
+<header class="zag">
+  <a class="znak" href="#pocetak"><b>Margina</b><span>knjižara i antikvarijat</span></a>
+  <button class="meni-dugme" type="button" aria-expanded="false" aria-controls="nav">Meni</button>
+  <nav class="nav" id="nav" aria-label="Glavna navigacija">
+    <a href="#usluge">Usluge i cene</a>
+    <a href="#otkup">Otkup</a>
+    <a href="#vreme">Radno vreme</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="uvod" id="pocetak" aria-labelledby="naslov">
+    <div class="red">
+      <h1 id="naslov">Polovne i stare knjige u Zmaj&nbsp;Jovinoj&nbsp;14</h1>
+      <p class="vodeci">Kupujemo, procenjujemo i prodajemo knjige: od džepnih izdanja do prvih izdanja domaćih pisaca. Police se menjaju svake nedelje<sup class="br">1</sup>, pa svratite češće.</p>
+      <aside class="beleska"><b>1</b>Nove knjige stižu uglavnom utorkom i petkom, kada razvrstamo otkupljene biblioteke.</aside>
+      <div class="dugmad">
+        <a class="dug" href="tel:+381600000609">Pozovite 060 000 06 09</a>
+        <a class="dug tiho" href="#kontakt">Pošaljite spisak knjiga</a>
+        <a class="vezica" href="viber://chat?number=%2B381600000609">Pišite na Viber</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sekcija" id="usluge" aria-labelledby="h-usluge">
+    <div class="red">
+      <h2 id="h-usluge">Usluge i cene</h2>
+      <ul class="cene">
+        <li><span class="naziv">Polovne knjige</span><span class="iznos">od 300 RSD</span><span class="opis">romani, lektira, stručne knjige, strani jezici</span></li>
+        <li><span class="naziv">Antikvarna i retka izdanja<sup class="br">2</sup></span><span class="iznos">od 1.500 RSD</span><span class="opis">prva izdanja, potpisani primerci, stare edicije</span></li>
+        <li><span class="naziv">Procena knjiga</span><span class="iznos">besplatno</span><span class="opis">u radnji ili sa fotografija poslatih na Viber</span></li>
+        <li><span class="naziv">Traženje naslova kog nemamo</span><span class="iznos">500 RSD</span><span class="opis">iznos se odbija od cene kada knjigu nađemo</span></li>
+        <li><span class="naziv">Popravka poveza</span><span class="iznos">od 900 RSD</span><span class="opis">rasparane hrbatove, ispale tabake, korice</span></li>
+        <li><span class="naziv">Ručno koričenje</span><span class="iznos">od 1.800 RSD</span><span class="opis">platno ili polukožni povez, rok oko 10 dana</span></li>
+      </ul>
+      <aside class="beleska niza"><b>2</b>Za skuplje primerke pre prodaje proveravamo izdanje i stanje, pa cenu kažemo tek posle pregleda.</aside>
+    </div>
+  </section>
+
+  <section class="sekcija" id="otkup" aria-labelledby="h-otkup">
+    <div class="red tekst">
+      <h2 id="h-otkup">Otkup knjiga i biblioteka</h2>
+      <p>Donesite knjige u radnju ili nam pošaljite fotografije polica. Pregledamo ih, kažemo cenu i, ako se dogovorimo, isplaćujemo odmah.</p>
+      <p>Za veće biblioteke dolazimo kod Vas<sup class="br">3</sup> i sami pakujemo i nosimo knjige.</p>
+      <aside class="beleska"><b>3</b>Dolazak je besplatan za Stari grad, Dorćol i Vračar kada je reč o više od 100 knjiga. U ostalim slučajevima 1.000 RSD.</aside>
+      <p>Ne otkupljujemo udžbenike starije od pet godina i oštećene knjige, ali ćemo Vam reći kome ih možete pokloniti.</p>
+      <div class="foto"><span>Vaša fotografija</span></div>
+    </div>
+  </section>
+
+  <section class="sekcija" id="vreme" aria-labelledby="h-vreme">
+    <div class="red">
+      <h2 id="h-vreme">Radno vreme i adresa</h2>
+      <ul class="dani">
+        <li data-dan="1"><span>Ponedeljak</span><span>10 – 20 h</span></li>
+        <li data-dan="2"><span>Utorak</span><span>10 – 20 h</span></li>
+        <li data-dan="3"><span>Sreda</span><span>10 – 20 h</span></li>
+        <li data-dan="4"><span>Četvrtak</span><span>10 – 20 h</span></li>
+        <li data-dan="5"><span>Petak</span><span>10 – 20 h</span></li>
+        <li data-dan="6"><span>Subota</span><span>10 – 16 h</span></li>
+        <li data-dan="0"><span>Nedelja</span><span>zatvoreno</span></li>
+      </ul>
+      <p style="margin-top:1.5rem">Zmaj Jovina 14, Stari grad<sup class="br">4</sup></p>
+      <aside class="beleska"><b>4</b>Dva minuta peške od Knez Mihailove. Ulaz je direktno sa ulice.</aside>
+      <iframe class="mapa" title="Mapa: Zmaj Jovina 14, Beograd" loading="lazy" src="https://maps.google.com/maps?q=Zmaj%20Jovina%2014%2C%20Beograd&amp;z=15&amp;output=embed"></iframe>
+    </div>
+  </section>
+
+  <section class="sekcija" id="kontakt" aria-labelledby="h-kontakt">
+    <div class="red">
+      <h2 id="h-kontakt">Pišite nam</h2>
+      <p style="margin-bottom:1.5rem">Tražite određenu knjigu ili želite da prodate svoje? Napišite autora i naslov, ili okvirno koliko knjiga imate<sup class="br">5</sup>.</p>
+      <aside class="beleska"><b>5</b>Za otkup je najbrže da fotografije hrbata pošaljete na Viber: 060 000 06 09.</aside>
+      <!--
+        Na pravom sajtu forma ide preko Web3Forms na mejl vlasnika:
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="KLJUČ-SA-WEB3FORMS.COM">
+          <input type="hidden" name="subject" value="Nova poruka sa sajta Margina">
+          ... ista polja kao ispod ...
+        </form>
+        Ovde je slanje isključeno jer je ovo primer.
+      -->
+      <form data-form="kontakt" novalidate>
+        <div class="polje"><label for="k-ime">Ime</label><input id="k-ime" name="ime" autocomplete="name"></div>
+        <div class="polje"><label for="k-kontakt">Telefon ili mejl</label><input id="k-kontakt" name="kontakt" autocomplete="tel"></div>
+        <div class="polje"><label for="k-poruka">Poruka</label><textarea id="k-poruka" name="poruka"></textarea></div>
+        <button class="dug" type="submit">Pošaljite poruku</button>
+        <p class="forma-poruka" role="status" aria-live="polite" id="forma-poruka"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pod">
+  <p>Knjižara i antikvarijat Margina, Zmaj Jovina 14, Stari grad. Telefon <a href="tel:+381600000609">060 000 06 09</a></p>
+  <p>Primer sajta · izradio opsforma. Knjižara je izmišljena. <a href="../">Svi primeri</a></p>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var dug = document.querySelector('.meni-dugme'), nav = document.getElementById('nav');
+  function postavi(o){ dug.setAttribute('aria-expanded', o ? 'true' : 'false'); nav.classList.toggle('otvoren', o); }
+  dug.addEventListener('click', function(){ postavi(dug.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ postavi(false); }); });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && dug.getAttribute('aria-expanded') === 'true'){ postavi(false); dug.focus(); }
+  });
+
+  var danas = document.querySelector('.dani li[data-dan="' + new Date().getDay() + '"]');
+  if (danas) danas.classList.add('danas');
+
+  document.querySelector('form[data-form="kontakt"]').addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('forma-poruka').textContent = 'Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.';
+  });
+})();
+</script>
+</body>
+</html>

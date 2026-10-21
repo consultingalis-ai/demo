@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Studio za tetoviranje Linija, Strahinjića bana 33, Dorćol</title>
+<meta name="description" content="Fine line i blackwork tetovaže na Dorćolu. Zakažite besplatnu konsultaciju od 30 minuta: izaberite mesto na telu, veličinu i opišite ideju. Cena po dogovoru na konsultaciji.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reddit+Sans:wght@400;700&family=Reddit+Mono:wght@400;500&subset=latin-ext&display=swap">
+<style>
+:root{
+  --crna:#0B0B0B;
+  --bela:#F4F4F2;
+  --crvena:#E10600;
+  --siva:#545454;
+  --siva-t:#A3A3A0;
+  --linija:#CFCFCB;
+  --sans:"Reddit Sans","Helvetica Neue","Segoe UI",Arial,sans-serif;
+  --mono:"Reddit Mono","SFMono-Regular","Consolas","Liberation Mono",monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bela);color:var(--crna);font-family:var(--sans);font-size:1.0625rem;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-underline-offset:3px}
+h1,h2,h3{font-weight:700;line-height:1.05;margin:0;letter-spacing:-.02em}
+p{margin:0}
+[hidden]{display:none!important}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono)}
+
+.strana{position:relative;overflow-x:clip}
+#nit{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:5;overflow:visible}
+#nit path{fill:none;stroke:var(--crvena);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+.traka{background:var(--crna);color:var(--bela);font-size:.8125rem}
+.traka .wrap{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:center;justify-content:space-between;min-height:36px;padding-top:4px;padding-bottom:4px}
+.traka a{color:var(--bela);font-weight:700}
+.znacka{font-family:var(--mono);font-size:.75rem;border:1px solid currentColor;padding:1px 8px}
+
+header.glava{position:relative;border-bottom:1px solid var(--crna)}
+header.glava .wrap{display:flex;align-items:center;justify-content:space-between;min-height:68px}
+.logo{font-weight:700;font-size:1.25rem;text-decoration:none;letter-spacing:-.01em}
+nav.meni ul{list-style:none;margin:0;padding:0;display:flex;gap:28px}
+nav.meni a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+nav.meni a:hover{text-decoration:underline}
+.meniBtn{display:none;min-height:44px;min-width:44px;padding:0 14px;border:1px solid var(--crna);background:transparent;color:var(--crna);font:700 .9375rem var(--sans);cursor:pointer}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border:1px solid var(--crna);background:transparent;color:var(--crna);font:700 1rem var(--sans);text-decoration:none;cursor:pointer}
+.btn.pun{background:var(--crna);color:var(--bela)}
+.btn:hover{background:var(--crna);color:var(--bela)}
+.btn.pun:hover{background:#2A2A2A}
+
+/* hero */
+.hero{padding:88px 0 0}
+.hero h1{font-size:clamp(3.25rem,10.5vw,9.5rem);letter-spacing:-.045em;line-height:.95;max-width:11ch}
+.tacka{display:inline-block;width:.15em;height:.15em;border-radius:50%;background:var(--crvena);margin-left:.04em;vertical-align:baseline}
+.hero .uvod{margin-top:36px;max-width:46ch;font-size:1.1875rem}
+.hero .dugmad{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.podaci{display:grid;grid-template-columns:repeat(3,1fr);margin-top:88px;border-top:1px solid var(--crna)}
+.podaci p{padding:18px 0 22px;font-size:.9375rem}
+.podaci p+p{padding-left:24px;border-left:1px solid var(--crna)}
+.podaci span{display:block;font-family:var(--mono);font-size:.8125rem;color:var(--siva)}
+
+section{padding:104px 0}
+.naslov{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 24px;margin-bottom:48px}
+.naslov h2{font-size:clamp(2.25rem,5vw,3.75rem);letter-spacing:-.035em}
+.naslov p{max-width:44ch;color:var(--siva)}
+
+/* radovi */
+.radovi{background:var(--crna);color:var(--bela)}
+.radovi .naslov p{color:var(--siva-t)}
+.mreza{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #3A3A3A;border-left:1px solid #3A3A3A}
+.rad{border-right:1px solid #3A3A3A;border-bottom:1px solid #3A3A3A;padding:28px 28px 22px;margin:0}
+.rad svg{display:block;width:100%;height:auto;aspect-ratio:1;max-width:260px;margin:0 auto}
+.rad svg *{fill:none;stroke:var(--bela);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.rad figcaption{margin-top:18px;display:flex;justify-content:space-between;gap:12px;font-size:.9375rem}
+.rad figcaption span{font-family:var(--mono);font-size:.8125rem;color:var(--siva-t)}
+
+/* cene */
+.cene{list-style:none;margin:0;padding:0;border-top:1px solid var(--crna)}
+.cene li{display:grid;grid-template-columns:1fr auto;gap:4px 24px;padding:20px 0;border-bottom:1px solid var(--linija);align-items:baseline}
+.cene b{font-size:1.25rem}
+.cene .iznos{font-family:var(--mono);font-size:1.125rem;font-weight:500;text-align:right}
+.cene small{grid-column:1/-1;color:var(--siva);font-size:.9375rem}
+.dve{display:grid;grid-template-columns:1fr 1fr;gap:72px}
+.pravila{list-style:none;margin:0;padding:0}
+.pravila li{padding:12px 0;border-top:1px solid var(--linija)}
+.foto{margin-top:40px;aspect-ratio:4/3;background:#E2E2DF;border:1px solid var(--linija);display:flex;align-items:flex-end;padding:10px 12px;font-family:var(--mono);font-size:.8125rem;color:var(--siva)}
+
+/* konsultacija */
+.kons{border-top:1px solid var(--crna)}
+.oznake{display:flex;flex-wrap:wrap;gap:8px}
+.primer{font-family:var(--mono);font-size:.8125rem;border:1px dashed var(--crna);padding:1px 8px}
+.korak{display:grid;grid-template-columns:220px minmax(0,1fr);gap:16px 40px;padding:32px 0;border-bottom:1px solid var(--linija)}
+.korak>*{min-width:0}
+.korak>h3{font-size:1.375rem;letter-spacing:-.02em}
+.korak>h3 span{display:block;font:400 .8125rem var(--mono);color:var(--siva);letter-spacing:0;margin-bottom:6px}
+.cipovi{display:flex;flex-wrap:wrap;gap:8px}
+.cip{min-height:44px;padding:0 16px;border:1px solid var(--crna);background:transparent;color:var(--crna);font:400 .9375rem var(--sans);cursor:pointer}
+.cip[aria-pressed="true"]{background:var(--crna);color:var(--bela)}
+.vel{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.vel .cip{min-height:64px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;text-align:left;padding:8px 14px}
+.vel .cip span{font:400 .75rem var(--mono);opacity:.8}
+textarea,input{font:400 1rem var(--sans);color:var(--crna);background:#fff;border:1px solid var(--crna);border-radius:0;width:100%;min-height:48px;padding:10px 12px}
+textarea{min-height:110px;resize:vertical}
+.polje label{display:block;font-weight:700;font-size:.9375rem;margin-bottom:6px}
+.polja{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.polje.siroko{grid-column:1/-1}
+.dani{display:flex;gap:6px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.dan{flex:1 0 54px;min-height:68px;border:1px solid var(--crna);background:transparent;color:var(--crna);font:400 .8125rem/1.2 var(--sans);cursor:pointer;scroll-snap-align:start}
+.dan b{display:block;font:500 1.25rem var(--mono)}
+.dan:disabled{border-color:var(--linija);color:var(--siva-t);cursor:not-allowed}
+.dan:disabled b{text-decoration:line-through}
+.dan[aria-pressed="true"]{background:var(--crna);color:var(--bela)}
+.kartice{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}
+.kartica{min-height:84px;border:1px solid var(--crna);background:#fff;color:var(--crna);text-align:left;padding:12px 14px;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between}
+.kartica b{font:500 1.5rem var(--mono);letter-spacing:-.03em}
+.kartica span{font-size:.8125rem;color:var(--siva)}
+.kartica:disabled{background:transparent;border:1px dashed var(--linija);color:var(--siva-t);cursor:not-allowed}
+.kartica:disabled b{text-decoration:line-through;font-weight:400}
+.kartica:disabled span{color:var(--siva-t)}
+.kartica[aria-pressed="true"]{background:var(--crna);color:var(--bela)}
+.kartica[aria-pressed="true"] span{color:var(--siva-t)}
+.uput{color:var(--siva);font-size:.9375rem}
+.dno{padding:32px 0 0;display:grid;grid-template-columns:220px 1fr;gap:16px 40px}
+.dno .cena-nap{font-family:var(--mono);font-size:.875rem}
+.greska{min-height:1.5em;font-weight:700;margin:12px 0}
+
+.potvrda{display:none;max-width:720px;border:1px solid var(--crna);padding:40px;background:#fff}
+.potvrda.on{display:block}
+.potvrda h3{font-size:2rem;letter-spacing:-.03em;margin-bottom:10px}
+.potvrda dl{display:grid;grid-template-columns:max-content 1fr;gap:8px 28px;margin:28px 0;padding-top:20px;border-top:1px solid var(--crna)}
+.potvrda dt{font-family:var(--mono);font-size:.875rem;color:var(--siva);padding-top:2px}
+.potvrda dd{margin:0}
+.potvrda .dugmad{display:flex;flex-wrap:wrap;gap:12px}
+
+.sati{width:100%;border-collapse:collapse}
+.sati th,.sati td{text-align:left;font-weight:400;padding:12px 0;border-bottom:1px solid var(--linija)}
+.sati td{text-align:right;font-family:var(--mono)}
+.sati tr.danas th,.sati tr.danas td{font-weight:700}
+.mapa{width:100%;aspect-ratio:4/3;border:1px solid var(--crna);display:block;filter:grayscale(1)}
+.kontakt{max-width:680px}
+.kontakt-ok{margin-top:14px;font-weight:700}
+footer{background:var(--crna);color:var(--bela);padding:40px 0 48px;font-size:.9375rem;position:relative}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
+footer a{color:var(--bela);font-weight:700}
+
+@media (max-width:960px){
+  .mreza{grid-template-columns:1fr 1fr}
+  .korak,.dno{grid-template-columns:minmax(0,1fr)}
+  .kartice{grid-template-columns:repeat(3,1fr)}
+  .dve{grid-template-columns:1fr;gap:56px}
+}
+@media (max-width:720px){
+  .wrap{padding:0 20px}
+  .meniBtn{display:inline-flex;align-items:center}
+  nav.meni{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bela);border-bottom:1px solid var(--crna);z-index:20}
+  nav.meni.otvoren{display:block}
+  nav.meni ul{flex-direction:column;gap:0;padding:8px 20px 16px}
+  nav.meni a{width:100%;border-bottom:1px solid var(--linija)}
+  .hero{padding-top:56px}
+  .hero .uvod{font-size:1.0625rem;margin-top:28px}
+  .hero .dugmad .btn{flex:1 1 auto}
+  .podaci{grid-template-columns:1fr;margin-top:56px}
+  .podaci p,.podaci p+p{padding:14px 0;border-left:0}
+  .podaci p+p{border-top:1px solid var(--linija)}
+  section{padding:72px 0}
+  .rad{padding:18px 14px 16px}
+  .rad figcaption{flex-direction:column;gap:2px;margin-top:10px;font-size:.875rem}
+  .vel{grid-template-columns:1fr 1fr}
+  .dan{flex:0 0 64px}
+  .kartice{grid-template-columns:1fr 1fr}
+  .polja{grid-template-columns:1fr}
+  .potvrda{padding:28px 20px}
+  .potvrda dl{grid-template-columns:1fr;gap:0}
+  .potvrda dd{margin-bottom:12px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="strana" id="strana">
+<svg id="nit" aria-hidden="true" focusable="false"><path d=""/></svg>
+
+<div class="traka">
+  <div class="wrap">
+    <span>Primer sajta · izradio opsforma</span>
+    <span class="znacka">Paket 2: zakazivanje</span>
+    <a href="../../">Svi primeri</a>
+  </div>
+</div>
+
+<header class="glava">
+  <div class="wrap">
+    <a class="logo" href="#pocetak">Linija</a>
+    <button class="meniBtn" type="button" aria-expanded="false" aria-controls="glavniMeni">Meni</button>
+    <nav class="meni" id="glavniMeni" aria-label="Glavni meni">
+      <ul>
+        <li><a href="#radovi">Radovi</a></li>
+        <li><a href="#cene">Cene</a></li>
+        <li><a href="#konsultacija">Konsultacija</a></li>
+        <li><a href="#radno-vreme">Radno vreme</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero" id="pocetak" data-nit>
+    <div class="wrap">
+      <h1>Tetovaže tankom <span style="white-space:nowrap">linijom<span class="tacka" id="nitPocetak" aria-hidden="true"></span></span></h1>
+      <p class="uvod">Fine line, blackwork i mali crteži po Vašoj ideji. Svaka tetovaža počinje besplatnom konsultacijom od 30 minuta, na kojoj crtamo skicu i dogovaramo cenu.</p>
+      <div class="dugmad">
+        <a class="btn pun" href="#konsultacija">Zakažite konsultaciju</a>
+        <a class="btn" href="tel:+381600000622">Pozovite</a>
+        <a class="btn" href="viber://chat?number=%2B381600000622">Viber</a>
+      </div>
+      <div class="podaci">
+        <p><span>adresa</span>Strahinjića bana 33, Dorćol</p>
+        <p><span>radno vreme</span>utorak–petak 12–20, subota 11–17</p>
+        <p><span>telefon</span>060 000 06 22, samo uz zakazan termin</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="radovi" id="radovi" data-nit>
+    <div class="wrap">
+      <div class="naslov">
+        <h2>Radovi</h2>
+        <p>Crteži iz naše sveske. Na pravom sajtu ovde su fotografije zaceljenih tetovaža.</p>
+      </div>
+      <div class="mreza">
+        <figure class="rad">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Crtež: planine u krugu">
+            <circle cx="100" cy="100" r="70"/>
+            <path d="M34 128 L72 82 L92 104 L118 66 L166 128"/>
+            <path d="M58 128 L72 112 M118 66 L106 90 L114 96"/>
+            <circle cx="140" cy="62" r="9"/>
+          </svg>
+          <figcaption>Planine u krugu <span>podlaktica, 6 cm</span></figcaption>
+        </figure>
+        <figure class="rad">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Crtež: mesec i zvezde">
+            <path d="M112 40 A62 62 0 1 0 160 128 A50 50 0 0 1 112 40 Z"/>
+            <path d="M150 52 L150 68 M142 60 L158 60"/>
+            <path d="M162 92 L162 100 M158 96 L166 96"/>
+            <circle cx="132" cy="84" r="1.5"/>
+          </svg>
+          <figcaption>Mesec <span>zglob, 3 cm</span></figcaption>
+        </figure>
+        <figure class="rad">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Crtež: ruža u spirali">
+            <path d="M100 78 c7 0 11 7 6 12 c-7 6 -20 0 -18 -11 c2 -13 21 -18 31 -8 c11 11 5 31 -11 35 c-19 4 -35 -11 -31 -30 c4 -21 28 -32 47 -22"/>
+            <path d="M84 70 c-10 14 -10 34 2 44 M124 68 c10 14 8 34 -6 44"/>
+            <path d="M100 116 C98 138 102 160 100 184"/>
+            <path d="M100 150 c-18 -2 -30 -14 -32 -28 c15 2 28 12 32 28 Z"/>
+            <path d="M101 166 c16 -2 27 -12 30 -25 c-14 2 -26 11 -30 25 Z"/>
+          </svg>
+          <figcaption>Ruža <span>nadlaktica, 9 cm</span></figcaption>
+        </figure>
+        <figure class="rad">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Crtež: talasi">
+            <path d="M24 84 q19 -22 38 0 t38 0 t38 0 t38 0"/>
+            <path d="M24 108 q19 -22 38 0 t38 0 t38 0 t38 0"/>
+            <path d="M24 132 q19 -22 38 0 t38 0 t38 0 t38 0"/>
+          </svg>
+          <figcaption>Talasi <span>članak, 5 cm</span></figcaption>
+        </figure>
+        <figure class="rad">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Crtež: zmija">
+            <path d="M48 172 C120 172 156 150 150 124 C144 98 64 112 56 84 C48 56 104 36 140 44"/>
+            <path d="M140 44 c8 -6 18 -4 22 2 c-4 6 -14 8 -22 -2 Z"/>
+            <path d="M162 46 l10 -3 M162 46 l10 3"/>
+          </svg>
+          <figcaption>Zmija <span>rebra, 14 cm</span></figcaption>
+        </figure>
+        <figure class="rad">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Crtež: krug, trougao i tačka">
+            <circle cx="100" cy="104" r="54"/>
+            <path d="M100 34 L162 142 L38 142 Z"/>
+            <circle cx="100" cy="112" r="3"/>
+            <path d="M100 16 L100 26 M100 182 L100 192"/>
+          </svg>
+          <figcaption>Geometrija <span>leđa, 12 cm</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="cene" data-nit>
+    <div class="wrap dve">
+      <div>
+        <div class="naslov" style="margin-bottom:32px"><h2>Cene</h2></div>
+        <ul class="cene">
+          <li><b>Konsultacija, 30 min</b><span class="iznos">besplatno</span><small>Skica, mesto, veličina i tačna cena.</small></li>
+          <li><b>Mala tetovaža, do 5 cm</b><span class="iznos">od 6.000 RSD</span><small>Jedan crtež, jedna sesija.</small></li>
+          <li><b>Srednja, 5–15 cm</b><span class="iznos">od 12.000 RSD</span><small>Zavisi od detalja i senčenja.</small></li>
+          <li><b>Veći radovi, po satu</b><span class="iznos">8.000 RSD</span><small>Rukav i leđa radimo u više sesija.</small></li>
+          <li><b>Prekrivanje stare tetovaže</b><span class="iznos">od 15.000 RSD</span><small>Samo posle konsultacije uživo.</small></li>
+          <li><b>Dorada u roku od dva meseca</b><span class="iznos">0 RSD</span><small>Ako se linija negde slabije primila.</small></li>
+        </ul>
+        <p class="uput" style="margin-top:20px">Cena tetovaže je po dogovoru na konsultaciji. Plaćate posle tetoviranja, gotovinom ili karticom.</p>
+      </div>
+      <div>
+        <div class="naslov" style="margin-bottom:32px"><h2>Pre dolaska</h2></div>
+        <ul class="pravila">
+          <li>Tetoviramo samo punoletne. Ponesite ličnu kartu.</li>
+          <li>Dan ranije bez alkohola, i dobro jedite pre termina.</li>
+          <li>Koža na mestu tetovaže treba da bude bez opekotina od sunca.</li>
+          <li>Posle tetoviranja dobijate foliju i uputstvo za negu za prve dve nedelje.</li>
+        </ul>
+        <div class="foto" role="img" aria-label="Mesto za fotografiju">Vaša fotografija</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kons" id="konsultacija" data-nit>
+    <div class="wrap">
+      <div class="naslov">
+        <h2>Konsultacija</h2>
+        <p class="oznake"><span class="znacka">Paket 2: zakazivanje</span><span class="primer">Primer: termini su izmišljeni</span></p>
+      </div>
+<!--
+  PRODUKCIJA
+  U demou zakazivanje radi samo u pregledaču; zauzeti termini su izmišljeni (računaju se iz datuma).
+  Na pravom sajtu postoje dve varijante:
+  a) Zahtev za termin: dugme „Zakažite konsultaciju“ šalje rezime (mesto na telu, veličina, opis ideje, dan,
+     vreme, ime, telefon) na mejl studija preko Web3Forms (POST na https://api.web3forms.com/submit sa skrivenim
+     poljem access_key), ili otvara Viber poruku sa istim tekstom (viber://forward?text=...). Tatuerka
+     potvrđuje termin porukom; uz Web3Forms može da se doda i polje za skicu ili referentnu sliku.
+  b) Povezan kalendar: izbor dana i kartice termina menjaju se Google Kalendar „Appointment schedule“,
+     Cal.com ili Calendly embedom (događaj od 30 min sa pitanjima za mesto, veličinu i ideju); termini se
+     sami upisuju u Google Kalendar na vlasničinom telefonu.
+-->
+      <div id="konsModul">
+        <form id="konsForma" novalidate>
+          <div class="korak">
+            <h3><span>1 od 4</span>Mesto na telu</h3>
+            <div class="cipovi" id="mesta" role="group" aria-label="Mesto na telu"></div>
+          </div>
+          <div class="korak">
+            <h3><span>2 od 4</span>Veličina</h3>
+            <div class="vel cipovi" id="velicine" role="group" aria-label="Veličina"></div>
+          </div>
+          <div class="korak">
+            <h3><span>3 od 4</span><label for="ideja">Opis ideje</label></h3>
+            <div>
+              <textarea id="ideja" name="ideja" placeholder="Na primer: lasta i ime ćerke, tanka linija, bez senčenja"></textarea>
+              <p class="uput" style="margin-top:8px">Referentne slike pošaljite na Viber posle zakazivanja.</p>
+            </div>
+          </div>
+          <div class="korak">
+            <h3><span>4 od 4</span>Termin, 30 min</h3>
+            <div>
+              <p class="uput" style="margin-bottom:12px">Ponedeljkom i nedeljom ne radimo. Precrtani termini su zauzeti.</p>
+              <div class="dani" id="dani" role="group" aria-label="Dan konsultacije"></div>
+              <div id="kartice"><p class="uput" style="margin-top:16px">Izaberite dan da vidite slobodne termine.</p></div>
+              <p class="sr" id="terminLive" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="korak" style="border-bottom:0">
+            <h3><span>kontakt</span>Vaši podaci</h3>
+            <div class="polja">
+              <div class="polje"><label for="k-ime">Ime i prezime</label><input id="k-ime" name="ime" autocomplete="name"></div>
+              <div class="polje"><label for="k-tel">Telefon</label><input id="k-tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel"></div>
+            </div>
+          </div>
+          <div class="dno">
+            <p class="cena-nap">Konsultacija je besplatna. Cena tetovaže po dogovoru na konsultaciji.</p>
+            <div>
+              <p class="greska" id="greska" role="alert"></p>
+              <button class="btn pun" type="submit" style="width:100%;min-height:56px">Zakažite konsultaciju</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="potvrda" id="potvrda" tabindex="-1">
+        <h3>Vidimo se na konsultaciji.</h3>
+        <p>Poslaćemo Vam poruku dan ranije. Ovo je primer sajta, pa termin nije stvarno zakazan.</p>
+        <dl id="rezime"></dl>
+        <div class="dugmad">
+          <button class="btn pun" type="button" id="icsBtn">Dodaj u kalendar</button>
+          <button class="btn" type="button" id="noviBtn">Novi termin</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="radno-vreme" style="border-top:1px solid var(--crna)" data-nit>
+    <div class="wrap dve">
+      <div>
+        <div class="naslov" style="margin-bottom:32px"><h2>Radno vreme</h2></div>
+        <table class="sati">
+          <caption class="sr">Radno vreme studija po danima</caption>
+          <tbody id="sati">
+            <tr data-d="1"><th scope="row">Ponedeljak</th><td>zatvoreno</td></tr>
+            <tr data-d="2"><th scope="row">Utorak</th><td>12–20</td></tr>
+            <tr data-d="3"><th scope="row">Sreda</th><td>12–20</td></tr>
+            <tr data-d="4"><th scope="row">Četvrtak</th><td>12–20</td></tr>
+            <tr data-d="5"><th scope="row">Petak</th><td>12–20</td></tr>
+            <tr data-d="6"><th scope="row">Subota</th><td>11–17</td></tr>
+            <tr data-d="0"><th scope="row">Nedelja</th><td>zatvoreno</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="naslov" style="margin-bottom:32px"><h2>Adresa</h2></div>
+        <iframe class="mapa" title="Mapa: Strahinjića bana 33, Beograd" loading="lazy" src="https://maps.google.com/maps?q=Strahinji%C4%87a%20bana%2033%2C%20Beograd&z=15&output=embed"></iframe>
+        <p style="margin-top:14px">Strahinjića bana 33, Dorćol. Zvonite na interfon „Linija“, prvi sprat.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" style="border-top:1px solid var(--crna)" data-nit>
+    <div class="wrap">
+      <div class="kontakt">
+        <div class="naslov" style="margin-bottom:16px"><h2>Pitanje</h2></div>
+        <p style="margin-bottom:28px;color:var(--siva)">Niste sigurni da li Vaša ideja može tankom linijom? Pišite nam, ili pozovite <a href="tel:+381600000622">060 000 06 22</a> i <a href="viber://chat?number=%2B381600000622">Viber</a>.</p>
+        <!-- Na pravom sajtu: <form action="https://api.web3forms.com/submit" method="POST"> sa
+             <input type="hidden" name="access_key" value="KLJUČ-IZ-WEB3FORMS">, poruka stiže na mejl vlasnice. -->
+        <form data-form="kontakt" id="kontaktForma" novalidate>
+          <div class="polja">
+            <div class="polje"><label for="p-ime">Ime</label><input id="p-ime" name="ime" autocomplete="name"></div>
+            <div class="polje"><label for="p-kon">Telefon ili mejl</label><input id="p-kon" name="kontakt"></div>
+            <div class="polje siroko"><label for="p-por">Poruka</label><textarea id="p-por" name="poruka"></textarea></div>
+          </div>
+          <button class="btn pun" type="submit" style="margin-top:18px">Pošaljite poruku</button>
+          <p class="kontakt-ok" id="kontaktOk" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer data-nit>
+  <div class="wrap">
+    <p>Studio za tetoviranje Linija, Strahinjića bana 33, Beograd. 060 000 06 22</p>
+    <p>Primer sajta · izradio opsforma. Firma je izmišljena. <a href="../../">Svi primeri</a></p>
+  </div>
+</footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var FIRMA="Studio Linija",SLUG="tetovaza-linija",ADRESA="Strahinjića bana 33, Beograd";
+  var MESTA=["Podlaktica","Nadlaktica","Zglob","Šaka i prsti","Rame","Ključna kost","Leđa","Rebra","Butina","List","Članak","Vrat"];
+  var VELICINE=[["Do 5 cm","kao novčić"],["5–10 cm","kao dlan"],["10–20 cm","pola podlaktice"],["Preko 20 cm","više sesija"]];
+  var SATI={2:[720,1200],3:[720,1200],4:[720,1200],5:[720,1200],6:[660,1020]};
+  var TRAJANJE=30;
+  var DN=["ned","pon","uto","sre","čet","pet","sub"],DNP=["nedelja","ponedeljak","utorak","sreda","četvrtak","petak","subota"];
+  var st={mesto:null,vel:null,dan:null,vreme:null};
+
+  function pad(n){return (n<10?"0":"")+n}
+  function hm(m){return Math.floor(m/60)+":"+pad(m%60)}
+  function iso(d){return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())}
+  function hash(s){var h=2166136261;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return (h>>>0)/4294967296}
+  function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+
+  function grupa(box,lista,kljuc,tekst){
+    lista.forEach(function(v){
+      var b=el("button","cip");b.type="button";b.setAttribute("aria-pressed","false");b.setAttribute("data-v",tekst(v));
+      if(Array.isArray(v)){b.appendChild(document.createTextNode(v[0]));b.appendChild(el("span","",v[1]))}else b.textContent=v;
+      b.addEventListener("click",function(){
+        st[kljuc]=tekst(v);
+        box.querySelectorAll(".cip").forEach(function(x){x.setAttribute("aria-pressed",String(x===b))});
+      });
+      box.appendChild(b);
+    });
+  }
+  grupa(document.getElementById("mesta"),MESTA,"mesto",function(v){return v});
+  grupa(document.getElementById("velicine"),VELICINE,"vel",function(v){return v[0]});
+
+  var danas=new Date();danas.setHours(0,0,0,0);
+  var daniEl=document.getElementById("dani");
+  for(var i=0;i<14;i++){
+    var d=new Date(danas);d.setDate(danas.getDate()+i);
+    var b=el("button","dan");b.type="button";b.setAttribute("data-date",iso(d));
+    b.appendChild(el("span","",i===0?"danas":DN[d.getDay()]));b.appendChild(el("b","",d.getDate()));
+    var radi=!!SATI[d.getDay()];b.disabled=!radi;
+    b.setAttribute("aria-label",DNP[d.getDay()]+" "+d.getDate()+"."+(d.getMonth()+1)+"."+(radi?"":", zatvoreno"));
+    if(radi)b.setAttribute("aria-pressed","false");
+    (function(dd,bb){bb.addEventListener("click",function(){
+      st.dan=dd;st.vreme=null;
+      daniEl.querySelectorAll(".dan:not(:disabled)").forEach(function(x){x.setAttribute("aria-pressed",String(x===bb))});
+      crtajKartice();
+    })})(d,b);
+    daniEl.appendChild(b);
+  }
+  function termini(d){
+    var s=SATI[d.getDay()];if(!s)return [];
+    var out=[],sad=new Date(),jeDanas=iso(d)===iso(sad),sadMin=sad.getHours()*60+sad.getMinutes();
+    for(var m=s[0];m+TRAJANJE<=s[1];m+=30){
+      if(jeDanas&&m<=sadMin)continue;
+      out.push({od:m,zauzet:hash(iso(d)+"#"+m)<0.42});
+    }
+    return out;
+  }
+  function crtajKartice(){
+    var box=document.getElementById("kartice");box.innerHTML="";
+    var t=termini(st.dan);
+    if(!t.length){box.appendChild(el("p","uput","Za danas više nema termina. Izaberite drugi dan."));return}
+    var g=el("div","kartice");g.setAttribute("role","group");g.setAttribute("aria-label","Slobodni termini");
+    t.forEach(function(x){
+      var b=el("button","kartica");b.type="button";b.setAttribute("data-min",x.od);
+      b.appendChild(el("b","",hm(x.od)));b.appendChild(el("span","",x.zauzet?"zauzeto":"do "+hm(x.od+TRAJANJE)));
+      if(x.zauzet){b.disabled=true;b.setAttribute("aria-label",hm(x.od)+", zauzeto")}
+      else b.setAttribute("aria-pressed","false");
+      b.addEventListener("click",function(){
+        if(b.disabled)return;st.vreme=x.od;
+        g.querySelectorAll(".kartica:not(:disabled)").forEach(function(y){y.setAttribute("aria-pressed",String(y===b))});
+        document.getElementById("terminLive").textContent="Izabrano: "+DNP[st.dan.getDay()]+" u "+hm(x.od);
+      });
+      g.appendChild(b);
+    });
+    box.appendChild(g);
+    document.getElementById("terminLive").textContent=t.filter(function(x){return !x.zauzet}).length+" slobodnih termina.";
+    gradi();
+  }
+
+  var forma=document.getElementById("konsForma"),gr=document.getElementById("greska");
+  forma.addEventListener("submit",function(e){
+    e.preventDefault();
+    var ideja=document.getElementById("ideja").value.trim(),ime=document.getElementById("k-ime").value.trim(),tel=document.getElementById("k-tel").value.trim();
+    var msg="";
+    if(!st.mesto)msg="Izaberite mesto na telu.";
+    else if(!st.vel)msg="Izaberite veličinu.";
+    else if(ideja.length<5)msg="Opišite ideju u nekoliko reči.";
+    else if(!st.dan)msg="Izaberite dan.";
+    else if(st.vreme===null)msg="Izaberite termin.";
+    else if(ime.length<2)msg="Upišite Vaše ime.";
+    else if(tel.replace(/\D/g,"").length<8)msg="Upišite telefon za potvrdu.";
+    gr.textContent=msg;if(msg)return;
+    var r=document.getElementById("rezime");r.innerHTML="";
+    function red(k,v){r.appendChild(el("dt","",k));r.appendChild(el("dd","",v))}
+    red("Usluga","Konsultacija za tetovažu");red("Mesto",st.mesto);red("Veličina",st.vel);red("Ideja",ideja);
+    red("Dan",DNP[st.dan.getDay()]+", "+st.dan.getDate()+"."+(st.dan.getMonth()+1)+".");
+    red("Vreme",hm(st.vreme)+"–"+hm(st.vreme+TRAJANJE));red("Trajanje",TRAJANJE+" min");
+    red("Cena","konsultacija besplatna, tetovaža po dogovoru na konsultaciji");
+    red("Ime",ime);red("Telefon",tel);
+    st.ideja=ideja;
+    document.getElementById("konsModul").hidden=true;
+    var p=document.getElementById("potvrda");p.classList.add("on");p.focus();p.scrollIntoView({block:"start"});
+    gradi();
+  });
+  function icsD(d){return d.getUTCFullYear()+pad(d.getUTCMonth()+1)+pad(d.getUTCDate())+"T"+pad(d.getUTCHours())+pad(d.getUTCMinutes())+"00Z"}
+  function esc(s){return String(s).replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\n/g,"\\n")}
+  document.getElementById("icsBtn").addEventListener("click",function(){
+    var p=new Date(st.dan);p.setMinutes(st.vreme);var k=new Date(st.dan);k.setMinutes(st.vreme+TRAJANJE);
+    var t=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//opsforma//"+SLUG+"//SR","CALSCALE:GREGORIAN","METHOD:PUBLISH","BEGIN:VEVENT",
+      "UID:"+Date.now()+"-"+Math.random().toString(36).slice(2,10)+"@"+SLUG+".primer","DTSTAMP:"+icsD(new Date()),
+      "DTSTART:"+icsD(p),"DTEND:"+icsD(k),"SUMMARY:"+esc(FIRMA+": konsultacija za tetovažu"),"LOCATION:"+esc(ADRESA),
+      "DESCRIPTION:"+esc(st.mesto+", "+st.vel+". "+st.ideja+". Ponesite ličnu kartu."),"END:VEVENT","END:VCALENDAR"].join("\r\n")+"\r\n";
+    var url=URL.createObjectURL(new Blob([t],{type:"text/calendar;charset=utf-8"}));
+    var a=document.createElement("a");a.href=url;a.download="termin-"+SLUG+".ics";document.body.appendChild(a);a.click();a.remove();
+    setTimeout(function(){URL.revokeObjectURL(url)},1500);
+  });
+  document.getElementById("noviBtn").addEventListener("click",function(){
+    st={mesto:null,vel:null,dan:null,vreme:null};forma.reset();gr.textContent="";
+    document.querySelectorAll("#konsForma [aria-pressed]").forEach(function(x){x.setAttribute("aria-pressed","false")});
+    document.getElementById("kartice").innerHTML='<p class="uput" style="margin-top:16px">Izaberite dan da vidite slobodne termine.</p>';
+    document.getElementById("potvrda").classList.remove("on");document.getElementById("konsModul").hidden=false;
+    document.getElementById("konsultacija").scrollIntoView({block:"start"});gradi();
+  });
+
+  var tr=document.querySelector('#sati tr[data-d="'+new Date().getDay()+'"]');if(tr)tr.className="danas";
+
+  var mb=document.querySelector(".meniBtn"),mn=document.getElementById("glavniMeni");
+  function zatvori(){mn.classList.remove("otvoren");mb.setAttribute("aria-expanded","false")}
+  mb.addEventListener("click",function(){var o=mb.getAttribute("aria-expanded")==="true";mn.classList.toggle("otvoren",!o);mb.setAttribute("aria-expanded",String(!o))});
+  mn.addEventListener("click",function(e){if(e.target.closest("a"))zatvori()});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&mb.getAttribute("aria-expanded")==="true"){zatvori();mb.focus()}});
+
+  document.getElementById("kontaktForma").addEventListener("submit",function(e){
+    e.preventDefault();document.getElementById("kontaktOk").textContent="Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.";
+  });
+
+  /* Potpisni element: jedna crvena linija kreće od tačke u naslovu, ide marginom i prelazi
+     na drugu stranu na granici svake sekcije. Iscrtava se dok se skroluje; uz reduced-motion je odmah cela. */
+  var strana=document.getElementById("strana"),svg=document.getElementById("nit"),put=svg.querySelector("path");
+  var rm=window.matchMedia("(prefers-reduced-motion: reduce)");
+  var uzorci=[],duz=0,rafId=0;
+  function gradi(){
+    var W=strana.clientWidth,H=strana.offsetHeight;
+    svg.setAttribute("viewBox","0 0 "+W+" "+H);
+    var o=strana.getBoundingClientRect();
+    var t=document.getElementById("nitPocetak").getBoundingClientRect();
+    var sx=t.left-o.left+t.width/2,sy=t.top-o.top+t.height/2;
+    var g=W<720?9:Math.max(26,(W-1160)/2-10);
+    var xL=g,xR=W-g,r=W<720?14:28;
+    var granice=[].slice.call(document.querySelectorAll("[data-nit]")).map(function(e){return e.getBoundingClientRect().top-o.top}).filter(function(y){return y>sy+2*r});
+    var x=xR,dP=["M",sx,sy,"L",xR-r,sy,"Q",xR,sy,xR,sy+r];
+    granice.forEach(function(y){
+      var dir=x===xR?-1:1,cilj=x===xR?xL:xR;
+      dP.push("L",x,y-r,"Q",x,y,x+dir*r,y,"L",cilj-dir*r,y,"Q",cilj,y,cilj,y+r);
+      x=cilj;
+    });
+    dP.push("L",x,H-28);
+    put.setAttribute("d",dP.join(" "));
+    duz=put.getTotalLength();
+    uzorci=[];
+    for(var i=0;i<=300;i++){var p=put.getPointAtLength(duz*i/300);uzorci.push(p.y)}
+    put.style.strokeDasharray=duz+" "+duz;
+    crtaj();
+  }
+  function crtaj(){
+    rafId=0;
+    if(rm.matches){put.style.strokeDashoffset="0";return}
+    var o=strana.getBoundingClientRect();
+    var cilj=window.innerHeight*0.72-o.top;
+    var i=0;while(i<300&&uzorci[i+1]<=cilj)i++;
+    put.style.strokeDashoffset=String(duz-duz*i/300);
+  }
+  window.addEventListener("scroll",function(){if(!rafId)rafId=requestAnimationFrame(crtaj)},{passive:true});
+  var tajmer;window.addEventListener("resize",function(){clearTimeout(tajmer);tajmer=setTimeout(gradi,120)});
+  if(window.ResizeObserver)new ResizeObserver(function(){clearTimeout(tajmer);tajmer=setTimeout(gradi,60)}).observe(strana);
+  if(rm.addEventListener)rm.addEventListener("change",crtaj);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(gradi);
+  gradi();
+})();
+</script>
+</body>
+</html>

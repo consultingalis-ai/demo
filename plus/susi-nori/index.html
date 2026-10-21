@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Suši bar Nori · Gospodska 15, Zemun</title>
+<meta name="description" content="Suši bar Nori u Gospodskoj 15 u Zemunu. Setovi, rolnice i nigiri, porudžbine za dostavu u Zemun, Novi Beograd i ostale delove Beograda. Primer sajta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;500&family=Trirong:wght@400;600&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bela:#FFFFFF; --crna:#121212; --nori:#2F3B2C; --losos:#F08A5D;
+  --siva:#5E615C;      /* sporedni tekst, AA na beloj */
+  --linija:#E4E5E1;    /* tanke linije 1px */
+  --magla:#F5F5F3;     /* polje fotografije, zauzeto */
+  --naslov:"M PLUS 1p","Hiragino Sans","Segoe UI","Helvetica Neue",Arial,sans-serif;
+  --tekst:"Trirong",Georgia,"Times New Roman",serif;
+  --sirina:1180px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bela);color:var(--crna);font:400 17px/1.7 var(--tekst);overflow-wrap:break-word}
+img,svg{max-width:100%}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+h1,h2,h3{font-family:var(--naslov);font-weight:500;margin:0;line-height:1.2}
+p{margin:0 0 1em}
+button,input,textarea,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--crna);outline-offset:3px}
+[hidden]{display:none!important}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:var(--sirina);margin:0 auto;padding:0 20px}
+
+/* traka „Primer sajta“ */
+.traka{font:400 13px/1.4 var(--naslov);color:var(--siva);border-bottom:1px solid var(--linija)}
+.traka .wrap{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;justify-content:space-between;padding-top:8px;padding-bottom:8px}
+.traka a{color:var(--crna)}
+.znacka{display:inline-block;font:500 12px/1 var(--naslov);border:1px solid var(--crna);padding:5px 8px;color:var(--crna);white-space:nowrap}
+
+/* zaglavlje */
+header.glava .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:76px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:500 18px/1 var(--naslov);letter-spacing:.04em}
+.logo i{width:12px;height:12px;background:var(--losos);display:block}
+nav#nav ul{list-style:none;margin:0;padding:0;display:flex;gap:30px}
+nav#nav a{font:300 15px/1 var(--naslov);text-decoration:none;padding:14px 0;display:block}
+nav#nav a:hover{text-decoration:underline}
+.desno{display:flex;align-items:center;gap:8px}
+.jezik{display:flex;border:1px solid var(--linija)}
+.jezik button{min-width:44px;min-height:44px;border:0;background:none;font:500 13px/1 var(--naslov);cursor:pointer;color:var(--siva)}
+.jezik button[aria-pressed="true"]{color:var(--crna);box-shadow:inset 0 -2px 0 var(--crna)}
+#menuBtn{display:none;min-width:44px;min-height:44px;border:1px solid var(--linija);background:none;font:400 14px/1 var(--naslov);cursor:pointer;padding:0 12px}
+
+/* heroj: vertikalan naslov */
+.heroj{padding:56px 0 96px}
+.heroj .wrap{display:grid;grid-template-columns:repeat(12,1fr);column-gap:20px}
+.vnaslov{grid-column:9 / 11;grid-row:1 / 3;justify-self:center;display:flex;flex-direction:row-reverse;align-items:flex-start;gap:22px}
+.vnaslov h1{writing-mode:vertical-rl;text-orientation:upright;font:500 clamp(84px,9vw,128px)/1 var(--naslov);letter-spacing:.06em;margin:0}
+.vnaslov .pod{writing-mode:vertical-rl;font:300 16px/1.6 var(--naslov);color:var(--nori);margin:6px 0 0;letter-spacing:.08em;white-space:nowrap}
+.pecat{width:22px;height:22px;background:var(--losos);margin:22px auto 0;display:block}
+.heroj .uvod{grid-column:2 / 7;grid-row:2;align-self:end;max-width:30em}
+.heroj .uvod p{font-size:18px}
+.dugmad{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border:1px solid var(--crna);background:var(--bela);color:var(--crna);font:500 15px/1 var(--naslov);text-decoration:none;cursor:pointer;letter-spacing:.02em}
+.btn:hover{background:var(--crna);color:var(--bela)}
+.btn.glavno{background:var(--losos);border-color:var(--losos);color:var(--crna)}
+.btn.glavno:hover{background:var(--crna);border-color:var(--crna);color:var(--bela)}
+.cinjenice{grid-column:2 / 7;grid-row:3;margin-top:56px;display:flex;flex-wrap:wrap;gap:8px 32px;font:300 14px/1.5 var(--naslov);color:var(--siva)}
+.cinjenice b{font-weight:500;color:var(--crna)}
+
+/* sekcije: na desktopu naslov sekcije stoji uspravno u margini */
+.sek{padding:88px 0;border-top:1px solid var(--linija)}
+.sek .wrap{display:grid;grid-template-columns:64px 1fr;gap:0 40px}
+.sek h2.vert{writing-mode:vertical-rl;font:500 28px/1 var(--naslov);letter-spacing:.12em;grid-row:1 / span 3;white-space:nowrap}
+.sek .telo{min-width:0}
+.vodic{font:300 15px/1.6 var(--naslov);color:var(--siva);max-width:36em;margin-bottom:40px}
+
+/* meni */
+.kat{margin:0 0 56px}
+.kat h3{font:300 15px/1 var(--naslov);color:var(--nori);letter-spacing:.08em;margin:0 0 18px}
+.stavke{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:28px 56px}
+.stavka{display:grid;grid-template-columns:1fr auto;gap:2px 16px;align-items:start}
+.stavka .ime{font:500 18px/1.35 var(--naslov)}
+.stavka .opis{grid-column:1;font-size:15px;line-height:1.55;color:var(--siva);margin:0}
+.stavka .cena{font:500 16px/1.35 var(--naslov);white-space:nowrap;text-align:right}
+.stavka .kom{font:300 13px/1.3 var(--naslov);color:var(--siva);display:block;text-align:right}
+.stavka .kontrola{grid-column:1 / -1;margin-top:10px}
+.dodaj{min-height:44px;padding:0 16px;border:1px solid var(--linija);background:none;font:400 14px/1 var(--naslov);cursor:pointer}
+.dodaj:hover{border-color:var(--crna)}
+.kol{display:inline-flex;align-items:center;border:1px solid var(--crna)}
+.kol button{width:44px;height:44px;border:0;background:none;font:400 20px/1 var(--naslov);cursor:pointer}
+.kol span{min-width:30px;text-align:center;font:500 15px/1 var(--naslov)}
+.izvor{font:300 13px/1.5 var(--naslov);color:var(--siva);border-left:1px solid var(--losos);padding-left:12px;max-width:40em}
+
+/* porudžbina */
+.modul-zaglavlje{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-bottom:12px}
+.primer{font:300 13px/1.4 var(--naslov);color:var(--siva)}
+.modul{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:0 72px;align-items:start}
+.koraci{min-width:0}
+.korak{border:0;margin:0 0 48px;padding:0;min-width:0}
+.korak legend,.korak .leg{font:500 18px/1.3 var(--naslov);padding:0;margin-bottom:6px}
+.korak .pomoc{font:300 14px/1.5 var(--naslov);color:var(--siva);margin:0 0 16px}
+.zone{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.izbor{min-height:56px;border:1px solid var(--linija);background:var(--bela);text-align:left;padding:10px 14px;cursor:pointer;font:400 15px/1.3 var(--naslov);display:flex;flex-direction:column;justify-content:center;gap:2px}
+.izbor small{font-weight:300;font-size:13px;color:var(--siva)}
+.izbor:hover{border-color:var(--crna)}
+.izbor[aria-pressed="true"]{background:var(--nori);border-color:var(--nori);color:var(--bela)}
+.izbor[aria-pressed="true"] small{color:#DCE3D9}
+.dani{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.dan{min-height:60px;border:1px solid var(--linija);background:var(--bela);cursor:pointer;padding:6px 2px;font:400 13px/1.25 var(--naslov);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.dan b{font-weight:500;font-size:18px}
+.dan:hover:not([disabled]){border-color:var(--crna)}
+.dan[disabled]{cursor:not-allowed;color:#9A9C97;background:var(--magla);border-color:var(--magla)}
+.dan[disabled] b{text-decoration:line-through;text-decoration-thickness:1px}
+.dan[aria-pressed="true"]{background:var(--nori);border-color:var(--nori);color:var(--bela)}
+.vremena{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.vreme{min-height:48px;border:1px solid var(--linija);background:var(--bela);cursor:pointer;font:400 14px/1.2 var(--naslov);padding:4px}
+.vreme:hover:not([disabled]){border-color:var(--crna)}
+.vreme[disabled]{cursor:not-allowed;color:#8E908B;background:var(--magla);border-color:var(--magla);text-decoration:line-through}
+.vreme[aria-pressed="true"]{background:var(--nori);border-color:var(--nori);color:var(--bela)}
+.prazno{font:300 14px/1.5 var(--naslov);color:var(--siva);margin:0}
+.legenda{display:flex;gap:18px;margin-top:12px;font:300 13px/1.4 var(--naslov);color:var(--siva)}
+.legenda span::before{content:"";display:inline-block;width:12px;height:12px;border:1px solid var(--linija);margin-right:6px;vertical-align:-1px}
+.legenda .z::before{background:var(--magla);border-color:var(--magla)}
+.polje{margin-bottom:16px}
+.polje label{display:block;font:400 14px/1.4 var(--naslov);margin-bottom:6px}
+.polje input,.polje textarea{width:100%;min-height:48px;border:1px solid #C9CBC6;background:var(--bela);padding:10px 12px;font:400 16px/1.4 var(--tekst);border-radius:0}
+.polje textarea{min-height:88px;resize:vertical}
+.polje input:focus,.polje textarea:focus{border-color:var(--crna);outline:none;box-shadow:inset 0 0 0 1px var(--crna)}
+.dva{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+.greska{font:400 13px/1.4 var(--naslov);color:#A3361A;margin-top:6px;min-height:0}
+
+.racun{position:sticky;top:20px;border-top:1px solid var(--crna);padding-top:18px}
+.racun h3{font:500 18px/1.3 var(--naslov);margin-bottom:14px}
+.racun ul{list-style:none;margin:0 0 16px;padding:0}
+.racun li{display:flex;justify-content:space-between;gap:12px;font:300 15px/1.5 var(--naslov);padding:4px 0}
+.racun li span:last-child{white-space:nowrap}
+.racun .zbir{display:flex;justify-content:space-between;gap:12px;font:300 15px/1.5 var(--naslov);padding:3px 0}
+.racun .ukupno{border-top:1px solid var(--linija);margin-top:8px;padding-top:12px;font:500 20px/1.3 var(--naslov)}
+.racun .prazno{margin-bottom:12px}
+.racun .btn{width:100%;margin-top:18px}
+.racun .placanje{font:300 13px/1.5 var(--naslov);color:var(--siva);margin-top:12px}
+#status{font:400 14px/1.4 var(--naslov);color:#A3361A;margin-top:10px}
+
+#potvrda{max-width:640px}
+#potvrda h3{font:500 clamp(26px,4vw,34px)/1.25 var(--naslov);margin-bottom:10px}
+#potvrda .pecat{margin:0 0 22px}
+.rezime{margin:24px 0;display:grid;grid-template-columns:auto 1fr;gap:8px 24px;font:300 15px/1.5 var(--naslov)}
+.rezime dt{color:var(--siva)}
+.rezime dd{margin:0;font-weight:500}
+
+/* radno vreme i mapa */
+.rv-mreza{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:48px}
+.sati{width:100%;border-collapse:collapse;font:300 16px/1.5 var(--naslov)}
+.sati th{text-align:left;font-weight:300;padding:8px 0;color:var(--siva)}
+.sati td{text-align:right;padding:8px 0;font-weight:500}
+.sati tr.danas th,.sati tr.danas td{color:var(--crna);font-weight:500}
+.sati tr.danas th{box-shadow:inset 2px 0 0 var(--losos);padding-left:12px}
+.adresa{margin-top:28px;font:300 16px/1.6 var(--naslov)}
+.mapa{width:100%;height:360px;border:0;display:block;background:var(--magla);filter:grayscale(1)}
+.foto{background:var(--magla);display:flex;align-items:flex-end;padding:12px;font:300 12px/1 var(--naslov);color:var(--siva);aspect-ratio:4/5}
+
+/* kontakt */
+.kontakt-mreza{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}
+.kontakt-mreza .info p{font:300 16px/1.7 var(--naslov)}
+#formaPoruka{font:400 15px/1.5 var(--naslov);margin-top:12px}
+
+footer{background:var(--nori);color:var(--bela);padding:56px 0 40px;font:300 14px/1.7 var(--naslov)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+footer a{color:var(--bela)}
+
+@media (max-width:960px){
+  .modul{grid-template-columns:1fr}
+  .racun{position:static;margin-top:8px}
+  .stavke{grid-template-columns:1fr}
+  .rv-mreza,.kontakt-mreza{grid-template-columns:1fr}
+}
+@media (max-width:820px){
+  #menuBtn{display:inline-flex;align-items:center}
+  nav#nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bela);border-bottom:1px solid var(--linija);z-index:20}
+  nav#nav.otvoren{display:block}
+  nav#nav ul{flex-direction:column;gap:0;padding:8px 20px 16px}
+  nav#nav a{padding:14px 0;font-size:17px}
+  header.glava{position:relative}
+  .heroj{padding:36px 0 72px}
+  .heroj .wrap{display:block}
+  .vnaslov{justify-content:flex-start;margin:0 0 40px auto;width:max-content;max-width:100%}
+  .vnaslov h1{font-size:84px}
+  .heroj .uvod p{font-size:17px}
+  .cinjenice{margin-top:40px;flex-direction:column}
+  .sek{padding:64px 0}
+  .sek .wrap{display:block}
+  .sek h2.vert{writing-mode:horizontal-tb;font-size:30px;letter-spacing:.04em;margin-bottom:14px}
+}
+@media (max-width:520px){
+  .zone{grid-template-columns:1fr}
+  .vremena{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .dva{grid-template-columns:1fr}
+  .dani{gap:4px}
+  .dan{font-size:12px}
+  .traka .wrap{font-size:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="traka">
+  <div class="wrap">
+    <span data-i="traka">Primer sajta · izradio opsforma</span>
+    <span class="znacka">Paket 3: Plus</span>
+    <a href="../../" data-i="svi">Svi primeri</a>
+  </div>
+</div>
+
+<header class="glava">
+  <div class="wrap">
+    <a class="logo" href="#vrh" aria-label="Suši bar Nori"><i aria-hidden="true"></i>Nori</a>
+    <nav id="nav" aria-label="Glavni meni" data-i-aria="navAria">
+      <ul>
+        <li><a href="#meni" data-i="nMeni">Meni</a></li>
+        <li><a href="#porudzbina" data-i="nPor">Porudžbina</a></li>
+        <li><a href="#radno-vreme" data-i="nRv">Radno vreme</a></li>
+        <li><a href="#kontakt" data-i="nKont">Kontakt</a></li>
+      </ul>
+    </nav>
+    <div class="desno">
+      <div class="jezik" role="group" aria-label="Jezik / Language">
+        <button type="button" data-lang="sr" aria-pressed="true" lang="sr" title="Srpski">SR</button>
+        <button type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
+      </div>
+      <button id="menuBtn" type="button" aria-expanded="false" aria-controls="nav" data-i="menuBtn">Meni</button>
+    </div>
+  </div>
+</header>
+
+<main id="vrh">
+<section class="heroj" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="vnaslov">
+      <div>
+        <h1 id="h1" aria-label="Suši bar Nori">NORI</h1>
+        <span class="pecat" aria-hidden="true"></span>
+      </div>
+      <p class="pod" data-i="pod">Suši bar u Gospodskoj 15</p>
+    </div>
+    <div class="uvod">
+      <p data-i="uvod">Setovi, rolnice i nigiri, sečeni kad stigne porudžbina. Dostavljamo u Zemun, Novi Beograd i ostale delove grada, a dan i vreme dostave birate sami.</p>
+      <div class="dugmad">
+        <a class="btn glavno" href="#porudzbina" data-i="naruci">Naručite</a>
+        <a class="btn" href="tel:+381600000629" data-i="pozovite">Pozovite</a>
+        <a class="btn" href="viber://chat?number=%2B381600000629">Viber</a>
+      </div>
+    </div>
+    <p class="cinjenice">
+      <span data-i="c1"><b>Dostava</b> od 200 RSD</span>
+      <span data-i="c2"><b>Pon–sub</b> od 12 h</span>
+      <span data-i="c3"><b>Plaćanje</b> kuriru, gotovinom ili karticom</span>
+    </p>
+  </div>
+</section>
+
+<section class="sek" id="meni" aria-labelledby="meni-h">
+  <div class="wrap">
+    <h2 class="vert" id="meni-h" data-i="nMeni">Meni</h2>
+    <div class="telo">
+      <p class="vodic" data-i="meniVodic">Riba stiže utorkom i petkom, pa ponuda nigirija zavisi od dana. Izaberite šta želite, korpa se puni ispod u porudžbini.</p>
+      <div id="meniLista" aria-live="off"></div>
+      <p class="izvor" data-i="izvor">Cene se učitavaju iz Google tabele koju vodimo sami. Kad promenimo cenu u tabeli, menja se i ovde.</p>
+    </div>
+  </div>
+</section>
+
+<!--
+  PRODUKCIJA
+  Ovaj modul radi samo u pregledaču (demo, termini dostave su izmišljeni). Na pravom sajtu:
+  a) Zahtev za porudžbinu: dugme „Pošaljite porudžbinu“ šalje rezime (korpa, zona i adresa, dan i
+     prozor dostave, ime, telefon, napomena) na mejl restorana preko Web3Forms
+     (POST https://api.web3forms.com/submit, hidden access_key) ili otvara Viber poruku sa rezimeom
+     (viber://forward?text=...). Restoran potvrđuje porudžbinu pozivom ili porukom.
+  b) Povezan kalendar: izbor dana i prozora dostave zamenjuje se Google Kalendar „Appointment schedule“,
+     Cal.com ili Calendly embedom (jedan termin = jedan prozor dostave, kapacitet kuhinje po prozoru);
+     porudžbine se same upisuju u vlasnikov Google Kalendar, a korpa ide u napomenu termina.
+  Plaćanje je pri isporuci (gotovina ili kartica kuriru), bez online plaćanja.
+-->
+<section class="sek" id="porudzbina" aria-labelledby="por-h">
+  <div class="wrap">
+    <h2 class="vert" id="por-h" data-i="nPor">Porudžbina</h2>
+    <div class="telo">
+      <div class="modul-zaglavlje">
+        <span class="znacka">Paket 3: Plus</span>
+        <span class="primer" data-i="primer">Primer: termini su izmišljeni</span>
+      </div>
+      <p class="vodic" data-i="porVodic">Četiri koraka: zona, dan, vreme i Vaši podaci. Porudžbinu potvrđujemo porukom ili pozivom.</p>
+
+      <div id="forma-porudzbine" class="modul">
+        <div class="koraci">
+          <fieldset class="korak">
+            <legend data-i="k1">1. Gde dostavljamo</legend>
+            <p class="pomoc" data-i="k1p">Cena dostave zavisi od zone i dodaje se na račun.</p>
+            <div class="zone" id="zone"></div>
+          </fieldset>
+          <fieldset class="korak">
+            <legend data-i="k2">2. Dan dostave</legend>
+            <p class="pomoc" data-i="k2p">Narednih 14 dana. Nedeljom ne radimo.</p>
+            <div class="dani" id="dani"></div>
+          </fieldset>
+          <fieldset class="korak">
+            <legend data-i="k3">3. Vreme dostave</legend>
+            <p class="pomoc" id="vremePomoc" data-i="k3p">Kurir stiže u izabranih pola sata.</p>
+            <div class="vremena" id="vremena" aria-live="polite"></div>
+            <div class="legenda" aria-hidden="true"><span data-i="slob">slobodno</span><span class="z" data-i="zauz">popunjeno</span></div>
+          </fieldset>
+          <fieldset class="korak">
+            <legend data-i="k4">4. Vaši podaci</legend>
+            <div class="polje"><label for="pAdresa" data-i="lAdresa">Adresa (ulica, broj, sprat, stan)</label>
+              <input id="pAdresa" name="adresa" autocomplete="street-address" data-i-ph="phAdresa" placeholder="Npr. Glavna 30, 2. sprat, stan 7"></div>
+            <div class="dva">
+              <div class="polje"><label for="pIme" data-i="lIme">Ime</label>
+                <input id="pIme" name="ime" autocomplete="name"></div>
+              <div class="polje"><label for="pTel" data-i="lTel">Telefon</label>
+                <input id="pTel" name="telefon" type="tel" autocomplete="tel" inputmode="tel" placeholder="06x xxx xxxx"></div>
+            </div>
+            <div class="polje"><label for="pNap" data-i="lNap">Napomena (interfon, štapići, bez susama...)</label>
+              <textarea id="pNap" name="napomena"></textarea></div>
+          </fieldset>
+        </div>
+
+        <aside class="racun" aria-labelledby="racun-h">
+          <h3 id="racun-h" data-i="racun">Račun</h3>
+          <div id="racunTelo" aria-live="polite"></div>
+          <button class="btn glavno" type="button" id="posalji" data-i="posalji">Pošaljite porudžbinu</button>
+          <p id="status" role="alert"></p>
+          <p class="placanje" data-i="placanje">Plaćate kuriru pri isporuci, gotovinom ili karticom.</p>
+        </aside>
+      </div>
+
+      <div id="potvrda" hidden tabindex="-1">
+        <span class="pecat" aria-hidden="true"></span>
+        <h3 data-i="hvala">Porudžbina je primljena.</h3>
+        <p data-i="hvalaP">Javićemo Vam se porukom da potvrdimo vreme. Ovo je primer, porudžbina nije nigde poslata.</p>
+        <dl class="rezime" id="rezime"></dl>
+        <div class="dugmad">
+          <button class="btn glavno" type="button" id="icsBtn" data-i="ics">Dodaj u kalendar</button>
+          <button class="btn" type="button" id="novaBtn" data-i="nova">Nova porudžbina</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sek" id="radno-vreme" aria-labelledby="rv-h">
+  <div class="wrap">
+    <h2 class="vert" id="rv-h" data-i="nRv">Radno vreme</h2>
+    <div class="telo rv-mreza">
+      <div>
+        <table class="sati" id="sati">
+          <caption class="sr" data-i="satiCap">Radno vreme po danima</caption>
+          <tbody>
+            <tr data-d="1"><th scope="row" data-i="d1">Ponedeljak</th><td>12–22 h</td></tr>
+            <tr data-d="2"><th scope="row" data-i="d2">Utorak</th><td>12–22 h</td></tr>
+            <tr data-d="3"><th scope="row" data-i="d3">Sreda</th><td>12–22 h</td></tr>
+            <tr data-d="4"><th scope="row" data-i="d4">Četvrtak</th><td>12–22 h</td></tr>
+            <tr data-d="5"><th scope="row" data-i="d5">Petak</th><td>12–23 h</td></tr>
+            <tr data-d="6"><th scope="row" data-i="d6">Subota</th><td>12–23 h</td></tr>
+            <tr data-d="0"><th scope="row" data-i="d0">Nedelja</th><td data-i="zatv">zatvoreno</td></tr>
+          </tbody>
+        </table>
+        <p class="adresa"><span data-i="adr">Gospodska 15, Zemun. Šank sa šest mesta, a poslednju porudžbinu za dostavu primamo pola sata pre zatvaranja.</span></p>
+      </div>
+      <iframe class="mapa" title="Mapa: Gospodska 15, Zemun" data-i-title="mapaT" loading="lazy" src="https://maps.google.com/maps?q=Gospodska%2015%2C%20Zemun%2C%20Beograd&amp;z=15&amp;output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="sek" id="kontakt" aria-labelledby="k-h">
+  <div class="wrap">
+    <h2 class="vert" id="k-h" data-i="nKont">Kontakt</h2>
+    <div class="telo kontakt-mreza">
+      <div class="info">
+        <p data-i="kInfo">Za porudžbinu za veće društvo, slavlje ili kancelariju pišite nam dan ranije, pa da složimo set po meri.</p>
+        <div class="dugmad">
+          <a class="btn" href="tel:+381600000629">060 000 06 29</a>
+          <a class="btn" href="viber://chat?number=%2B381600000629">Viber</a>
+        </div>
+        <div class="foto" style="margin-top:40px;max-width:280px" data-i="foto">Vaša fotografija</div>
+      </div>
+      <!--
+        Kontakt forma u produkciji: <form action="https://api.web3forms.com/submit" method="POST">
+        sa <input type="hidden" name="access_key" value="KLJUČ-IZ-WEB3FORMS"> i poljem
+        <input type="hidden" name="subject" value="Poruka sa sajta Nori">. Poruka stiže na mejl vlasnika.
+      -->
+      <form data-form="kontakt" id="kontaktForma" novalidate>
+        <div class="polje"><label for="kIme" data-i="lIme">Ime</label><input id="kIme" name="ime" autocomplete="name"></div>
+        <div class="polje"><label for="kTel" data-i="lTelMejl">Telefon ili mejl</label><input id="kTel" name="kontakt" autocomplete="email"></div>
+        <div class="polje"><label for="kPor" data-i="lPor">Poruka</label><textarea id="kPor" name="poruka"></textarea></div>
+        <button class="btn" type="submit" data-i="kPosalji">Pošaljite poruku</button>
+        <p id="formaPoruka" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <p style="margin:0"><b style="font-weight:500">Suši bar Nori</b><br>Gospodska 15, Zemun<br><a href="tel:+381600000629">060 000 06 29</a></p>
+    </div>
+    <div>
+      <p style="margin:0"><span data-i="traka">Primer sajta · izradio opsforma</span><br><a href="../../" data-i="svi">Svi primeri</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+const $ = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => [...(r || document).querySelectorAll(s)];
+const FIRMA = { naziv: "Suši bar Nori", adresa: "Gospodska 15, Zemun", slug: "susi-nori" };
+
+/* ------------------------------------------------------------------
+   CENOVNIK (Paket 3: cene iz Google Sheets tabele)
+   U demou su redovi tabele upisani ovde kao JSON. Na pravom sajtu vlasnik vodi tabelu
+   sa kolonama: id | kategorija | naziv_sr | naziv_en | opis_sr | opis_en | komada | cena
+   i objavi je: Datoteka → Deli → Objavi na vebu → CSV. Sajt je onda čita ovako:
+
+     const URL = "https://docs.google.com/spreadsheets/d/e/<ID-TABELE>/pub?gid=0&single=true&output=csv";
+     fetch(URL, { cache: "no-store" })
+       .then(r => r.text())
+       .then(csv => { CENOVNIK = parseCSV(csv); prikaziMeni(); })
+       .catch(() => prikaziMeni());          // ako tabela nije dostupna, ostaje poslednji JSON
+
+     function parseCSV(t){ const [zag, ...redovi] = t.trim().split(/\r?\n/).map(r => r.split(","));
+       return redovi.map(r => Object.fromEntries(zag.map((k, i) => [k, k === "cena" || k === "komada" ? +r[i] : r[i]]))); }
+   (Za opise sa zarezima koristi se parser koji poštuje navodnike.)
+------------------------------------------------------------------- */
+let CENOVNIK = [
+  { id:"set-gospodska", kategorija:"setovi", naziv_sr:"Set Gospodska", naziv_en:"Gospodska set", opis_sr:"Losos maki, kalifornija i 4 nigiri sa lososom.", opis_en:"Salmon maki, California roll and 4 salmon nigiri.", komada:20, cena:2190 },
+  { id:"set-dunav", kategorija:"setovi", naziv_sr:"Set Dunav", naziv_en:"Danube set", opis_sr:"Za dvoje: tri vrste rolnica, nigiri losos i tuna, edamame.", opis_en:"For two: three kinds of rolls, salmon and tuna nigiri, edamame.", komada:32, cena:3490 },
+  { id:"set-zeleni", kategorija:"setovi", naziv_sr:"Zeleni set", naziv_en:"Green set", opis_sr:"Bez ribe: avokado, krastavac, šitake i tamago.", opis_en:"No fish: avocado, cucumber, shiitake and tamago.", komada:24, cena:1890 },
+  { id:"maki-losos", kategorija:"rolnice", naziv_sr:"Maki losos", naziv_en:"Salmon maki", opis_sr:"Nori, pirinač, losos.", opis_en:"Nori, rice, salmon.", komada:8, cena:690 },
+  { id:"maki-krastavac", kategorija:"rolnice", naziv_sr:"Maki krastavac", naziv_en:"Cucumber maki", opis_sr:"Nori, pirinač, krastavac, susam.", opis_en:"Nori, rice, cucumber, sesame.", komada:8, cena:450 },
+  { id:"kalifornija", kategorija:"rolnice", naziv_sr:"Kalifornija", naziv_en:"California roll", opis_sr:"Rak, avokado, krastavac, tobiko spolja.", opis_en:"Crab, avocado, cucumber, tobiko outside.", komada:8, cena:990 },
+  { id:"ebi-tempura", kategorija:"rolnice", naziv_sr:"Ebi tempura", naziv_en:"Ebi tempura roll", opis_sr:"Škamp u tempuri, avokado, ljuti majonez.", opis_en:"Tempura shrimp, avocado, spicy mayo.", komada:8, cena:1190 },
+  { id:"nigiri-losos", kategorija:"nigiri", naziv_sr:"Nigiri losos", naziv_en:"Salmon nigiri", opis_sr:"Dva komada.", opis_en:"Two pieces.", komada:2, cena:490 },
+  { id:"nigiri-tuna", kategorija:"nigiri", naziv_sr:"Nigiri tuna", naziv_en:"Tuna nigiri", opis_sr:"Dva komada.", opis_en:"Two pieces.", komada:2, cena:590 },
+  { id:"sasimi-losos", kategorija:"nigiri", naziv_sr:"Sašimi losos", naziv_en:"Salmon sashimi", opis_sr:"Šest listova, bez pirinča.", opis_en:"Six slices, no rice.", komada:6, cena:1090 },
+  { id:"miso", kategorija:"uz", naziv_sr:"Miso supa", naziv_en:"Miso soup", opis_sr:"Tofu, vakame, mladi luk.", opis_en:"Tofu, wakame, spring onion.", komada:0, cena:390 },
+  { id:"edamame", kategorija:"uz", naziv_sr:"Edamame", naziv_en:"Edamame", opis_sr:"Sa krupnom solju.", opis_en:"With coarse salt.", komada:0, cena:450 }
+];
+const KATEGORIJE = [
+  { id:"setovi", sr:"Setovi", en:"Sets" },
+  { id:"rolnice", sr:"Rolnice", en:"Rolls" },
+  { id:"nigiri", sr:"Nigiri i sašimi", en:"Nigiri and sashimi" },
+  { id:"uz", sr:"Uz to", en:"On the side" }
+];
+const ZONE = [
+  { id:"zemun", sr:"Zemun", en:"Zemun", cena:200, sr_o:"oko 30 min", en_o:"about 30 min" },
+  { id:"nbg", sr:"Novi Beograd", en:"New Belgrade", cena:350, sr_o:"oko 45 min", en_o:"about 45 min" },
+  { id:"ostalo", sr:"Ostali delovi Beograda", en:"Rest of Belgrade", cena:600, sr_o:"oko 60 min", en_o:"about 60 min" }
+];
+/* Radno vreme: 0 = nedelja (zatvoreno). Dostava u prozorima od 30 min, prvi u 12:30, poslednji se završava u času zatvaranja. */
+const RV = { 0:null, 1:[12,22], 2:[12,22], 3:[12,22], 4:[12,22], 5:[12,23], 6:[12,23] };
+const PROZOR = 30;
+
+/* ---------------- jezik ---------------- */
+let jezik = "sr";
+const EN = {
+  traka:"Sample site · made by opsforma", svi:"All examples", navAria:"Main menu",
+  nMeni:"Menu", nPor:"Order", nRv:"Opening hours", nKont:"Contact", menuBtn:"Menu",
+  pod:"Sushi bar at Gospodska 15",
+  uvod:"Sets, rolls and nigiri, cut when your order comes in. We deliver to Zemun, New Belgrade and the rest of the city, and you choose the day and time of delivery.",
+  naruci:"Order", pozovite:"Call us",
+  c1:"<b>Delivery</b> from 200 RSD", c2:"<b>Mon–Sat</b> from 12:00", c3:"<b>Payment</b> to the courier, cash or card",
+  meniVodic:"Fish arrives on Tuesdays and Fridays, so the nigiri selection depends on the day. Pick what you like, the basket fills below in the order.",
+  izvor:"Prices are loaded from a Google spreadsheet we keep ourselves. When we change a price there, it changes here too.",
+  primer:"Example: delivery times are made up",
+  porVodic:"Four steps: zone, day, time and your details. We confirm the order by message or call.",
+  k1:"1. Where we deliver", k1p:"The delivery fee depends on the zone and is added to the bill.",
+  k2:"2. Delivery day", k2p:"The next 14 days. Closed on Sundays.",
+  k3:"3. Delivery time", k3p:"The courier arrives within the chosen half hour.",
+  slob:"available", zauz:"fully booked",
+  k4:"4. Your details", lAdresa:"Address (street, number, floor, flat)", phAdresa:"E.g. Glavna 30, 2nd floor, flat 7",
+  lIme:"Name", lTel:"Phone", lNap:"Note (intercom, chopsticks, no sesame...)",
+  racun:"Bill", posalji:"Send order", placanje:"You pay the courier on delivery, cash or card.",
+  hvala:"Your order is in.", hvalaP:"We will message you to confirm the time. This is an example, the order was not sent anywhere.",
+  ics:"Add to calendar", nova:"New order",
+  satiCap:"Opening hours by day", d1:"Monday", d2:"Tuesday", d3:"Wednesday", d4:"Thursday", d5:"Friday", d6:"Saturday", d0:"Sunday", zatv:"closed",
+  adr:"Gospodska 15, Zemun. A counter with six seats, and the last delivery order is taken half an hour before closing.",
+  mapaT:"Map: Gospodska 15, Zemun",
+  kInfo:"For a larger group, a celebration or an office order, write to us a day ahead and we will put together a set to fit.",
+  foto:"Your photo", lTelMejl:"Phone or email", lPor:"Message", kPosalji:"Send message"
+};
+const SR = {};
+const T = {
+  sr:{ dodaj:"Dodaj", manje:"Jedan manje", vise:"Jedan više", kom:"kom", praznaKorpa:"Korpa je prazna. Dodajte nešto iz menija.",
+       medjuzbir:"Međuzbir", dostava:"Dostava", ukupno:"Ukupno", izaberiZonu:"izaberite zonu",
+       izaberiDan:"Prvo izaberite dan.", nemaVise:"Za ovaj dan više nema slobodnih termina. Izaberite drugi dan.",
+       zauzeto:"popunjeno", zatvoreno:"zatvoreno", danas:"danas",
+       eKorpa:"Dodajte bar jednu stavku iz menija.", eZona:"Izaberite zonu dostave.", eDan:"Izaberite dan dostave.", eVreme:"Izaberite vreme dostave.",
+       eAdresa:"Upišite adresu dostave.", eIme:"Upišite ime.", eTel:"Upišite telefon (bar 8 cifara).",
+       rStavke:"Porudžbina", rZona:"Zona", rAdresa:"Adresa", rDan:"Dan", rVreme:"Vreme", rIme:"Ime", rTel:"Telefon", rNap:"Napomena",
+       rMedju:"Međuzbir", rDost:"Dostava", rUk:"Ukupno", rPlac:"Plaćanje", rPlacV:"kuriru, gotovinom ili karticom",
+       icsNaslov:"dostava porudžbine", forma:"Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.",
+       dani:["nedelja","ponedeljak","utorak","sreda","četvrtak","petak","subota"], daniK:["ned","pon","uto","sre","čet","pet","sub"],
+       meseci:["januar","februar","mart","april","maj","jun","jul","avgust","septembar","oktobar","novembar","decembar"] },
+  en:{ dodaj:"Add", manje:"One less", vise:"One more", kom:"pcs", praznaKorpa:"The basket is empty. Add something from the menu.",
+       medjuzbir:"Subtotal", dostava:"Delivery", ukupno:"Total", izaberiZonu:"choose a zone",
+       izaberiDan:"Choose a day first.", nemaVise:"No free times left for this day. Please choose another day.",
+       zauzeto:"fully booked", zatvoreno:"closed", danas:"today",
+       eKorpa:"Add at least one item from the menu.", eZona:"Choose a delivery zone.", eDan:"Choose a delivery day.", eVreme:"Choose a delivery time.",
+       eAdresa:"Enter the delivery address.", eIme:"Enter your name.", eTel:"Enter a phone number (at least 8 digits).",
+       rStavke:"Order", rZona:"Zone", rAdresa:"Address", rDan:"Day", rVreme:"Time", rIme:"Name", rTel:"Phone", rNap:"Note",
+       rMedju:"Subtotal", rDost:"Delivery", rUk:"Total", rPlac:"Payment", rPlacV:"to the courier, cash or card",
+       icsNaslov:"order delivery", forma:"This is a sample site. On the real site the message goes straight to the owner.",
+       dani:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], daniK:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+       meseci:["January","February","March","April","May","June","July","August","September","October","November","December"] }
+};
+const t = k => T[jezik][k];
+const L = (o, k) => o[k + "_" + jezik] !== undefined ? o[k + "_" + jezik] : o[jezik];
+
+function primeniJezik(l){
+  jezik = l;
+  document.documentElement.lang = l;
+  $$("[data-i]").forEach(el => { const k = el.dataset.i; if (!(k in SR)) SR[k] = el.innerHTML; el.innerHTML = l === "en" ? (EN[k] ?? SR[k]) : SR[k]; });
+  $$("[data-i-ph]").forEach(el => { const k = el.dataset.iPh; if (!(k in SR)) SR[k] = el.placeholder; el.placeholder = l === "en" ? EN[k] : SR[k]; });
+  $$("[data-i-aria]").forEach(el => { const k = el.dataset.iAria; if (!(k in SR)) SR[k] = el.getAttribute("aria-label"); el.setAttribute("aria-label", l === "en" ? EN[k] : SR[k]); });
+  $$("[data-i-title]").forEach(el => { const k = el.dataset.iTitle; if (!(k in SR)) SR[k] = el.title; el.title = l === "en" ? EN[k] : SR[k]; });
+  $$(".jezik button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === l)));
+  document.title = l === "en" ? "Nori sushi bar · Gospodska 15, Zemun" : "Suši bar Nori · Gospodska 15, Zemun";
+  try { localStorage.setItem("nori-jezik", l); } catch (e) {}
+  prikaziMeni(); prikaziZone(); prikaziDane(); prikaziVremena(); prikaziRacun();
+  if (!$("#potvrda").hidden) prikaziRezime();
+  const fp = $("#formaPoruka"); if (fp.textContent) fp.textContent = t("forma");
+  $("#status").textContent = "";
+}
+
+/* ---------------- pomoćno ---------------- */
+const rsd = n => n.toLocaleString("de-DE") + " RSD";
+const dvo = n => String(n).padStart(2, "0");
+const hhmm = m => dvo(Math.floor(m / 60)) + ":" + dvo(m % 60);
+const iso = d => d.getFullYear() + "-" + dvo(d.getMonth() + 1) + "-" + dvo(d.getDate());
+function hes(s){ let h = 2166136261; for (let i = 0; i < s.length; i++){ h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; }
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
+function danTekst(d){ return jezik === "en" ? `${t("dani")[d.getDay()]}, ${t("meseci")[d.getMonth()]} ${d.getDate()}` : `${t("dani")[d.getDay()]}, ${d.getDate()}. ${t("meseci")[d.getMonth()]}`; }
+
+const DANAS = new Date(); DANAS.setHours(0, 0, 0, 0);
+const DANI = Array.from({ length: 14 }, (_, i) => { const d = new Date(DANAS); d.setDate(d.getDate() + i); return d; });
+
+/* Prozori dostave za dan. Zauzetost: determinističan pseudo-slučaj iz datuma i vremena (~35 %). */
+function prozori(d){
+  const rv = RV[d.getDay()]; if (!rv) return [];
+  const sad = new Date(); const jeDanas = iso(d) === iso(sad);
+  const granica = sad.getHours() * 60 + sad.getMinutes() + 45;
+  const out = [];
+  for (let m = rv[0] * 60 + 30; m + PROZOR <= rv[1] * 60; m += PROZOR){
+    if (jeDanas && m < granica) continue;
+    out.push({ m, zauzet: hes(iso(d) + "|" + m) % 100 < 35 });
+  }
+  return out;
+}
+
+/* ---------------- stanje ---------------- */
+const korpa = {};
+const st = { zona: null, dan: null, vreme: null };
+const stavka = id => CENOVNIK.find(x => x.id === id);
+function medjuzbir(){ return Object.entries(korpa).reduce((s, [id, q]) => s + stavka(id).cena * q, 0); }
+function dostava(){ const z = ZONE.find(z => z.id === st.zona); return z ? z.cena : 0; }
+
+/* ---------------- meni ---------------- */
+function kontrola(it){
+  const q = korpa[it.id] || 0; const ime = esc(L(it, "naziv"));
+  if (!q) return `<button type="button" class="dodaj" data-add="${it.id}" aria-label="${t("dodaj")}: ${ime}">${t("dodaj")}</button>`;
+  return `<span class="kol"><button type="button" data-dec="${it.id}" aria-label="${t("manje")}: ${ime}">−</button><span>${q}</span><button type="button" data-inc="${it.id}" aria-label="${t("vise")}: ${ime}">+</button></span>`;
+}
+function prikaziMeni(){
+  $("#meniLista").innerHTML = KATEGORIJE.map(k => {
+    const st = CENOVNIK.filter(x => x.kategorija === k.id); if (!st.length) return "";
+    return `<div class="kat"><h3>${k[jezik]}</h3><ul class="stavke">${st.map(it => `
+      <li class="stavka" data-id="${it.id}">
+        <span class="ime">${esc(L(it, "naziv"))}</span>
+        <span class="cena">${rsd(it.cena)}${it.komada ? `<span class="kom">${it.komada} ${t("kom")}</span>` : ""}</span>
+        <p class="opis">${esc(L(it, "opis"))}</p>
+        <div class="kontrola" data-q="${it.id}">${kontrola(it)}</div>
+      </li>`).join("")}</ul></div>`;
+  }).join("");
+}
+function postavi(id, delta){
+  const q = Math.max(0, (korpa[id] || 0) + delta);
+  if (q) korpa[id] = q; else delete korpa[id];
+  const box = $(`[data-q="${id}"]`); if (box) box.innerHTML = kontrola(stavka(id));
+  prikaziRacun();
+}
+
+/* ---------------- zone, dani, vremena ---------------- */
+function prikaziZone(){
+  $("#zone").innerHTML = ZONE.map(z => `<button type="button" class="izbor" data-zona="${z.id}" aria-pressed="${st.zona === z.id}">
+    <span>${z[jezik]}</span><small>${rsd(z.cena)}, ${z[jezik + "_o"]}</small></button>`).join("");
+}
+function prikaziDane(){
+  $("#dani").innerHTML = DANI.map((d, i) => {
+    const pr = prozori(d); const zatv = !RV[d.getDay()]; const nema = !zatv && !pr.some(p => !p.zauzet);
+    const dis = zatv || nema; const k = iso(d);
+    const lab = `${danTekst(d)}${zatv ? ", " + t("zatvoreno") : nema ? ", " + t("zauzeto") : ""}`;
+    return `<button type="button" class="dan" data-dan="${k}" ${dis ? "disabled" : ""} aria-pressed="${st.dan === k}" aria-label="${lab}">
+      <span>${i === 0 ? t("danas") : t("daniK")[d.getDay()]}</span><b>${d.getDate()}</b></button>`;
+  }).join("");
+}
+function prikaziVremena(){
+  const box = $("#vremena");
+  if (!st.dan){ box.innerHTML = `<p class="prazno">${t("izaberiDan")}</p>`; return; }
+  const d = DANI.find(x => iso(x) === st.dan); const pr = prozori(d);
+  if (!pr.some(p => !p.zauzet)){ box.innerHTML = `<p class="prazno">${t("nemaVise")}</p>`; return; }
+  box.innerHTML = pr.map(p => `<button type="button" class="vreme" data-m="${p.m}" ${p.zauzet ? "disabled" : ""} aria-pressed="${st.vreme === p.m}"
+    aria-label="${hhmm(p.m)}–${hhmm(p.m + PROZOR)}${p.zauzet ? ", " + t("zauzeto") : ""}">${hhmm(p.m)}–${hhmm(p.m + PROZOR)}</button>`).join("");
+}
+function prikaziRacun(){
+  const ids = Object.keys(korpa);
+  const z = ZONE.find(z => z.id === st.zona);
+  const mz = medjuzbir();
+  let h = ids.length ? `<ul>${ids.map(id => { const it = stavka(id); return `<li><span>${korpa[id]} × ${esc(L(it, "naziv"))}</span><span>${rsd(it.cena * korpa[id])}</span></li>`; }).join("")}</ul>`
+                     : `<p class="prazno">${t("praznaKorpa")}</p>`;
+  h += `<div class="zbir"><span>${t("medjuzbir")}</span><span id="rMedju">${rsd(mz)}</span></div>`;
+  h += `<div class="zbir"><span>${t("dostava")}${z ? ": " + z[jezik] : ""}</span><span id="rDost">${z ? rsd(z.cena) : t("izaberiZonu")}</span></div>`;
+  h += `<div class="zbir ukupno"><span>${t("ukupno")}</span><span id="rUkupno">${rsd(mz + dostava())}</span></div>`;
+  $("#racunTelo").innerHTML = h;
+}
+
+/* ---------------- slanje i potvrda ---------------- */
+function proveri(){
+  const ad = $("#pAdresa").value.trim(), ime = $("#pIme").value.trim(), tel = $("#pTel").value.replace(/\D/g, "");
+  if (!Object.keys(korpa).length) return ["eKorpa", "#meni"];
+  if (!st.zona) return ["eZona", "#zone"];
+  if (!st.dan) return ["eDan", "#dani"];
+  if (st.vreme === null) return ["eVreme", "#vremena"];
+  if (ad.length < 5) return ["eAdresa", "#pAdresa"];
+  if (ime.length < 2) return ["eIme", "#pIme"];
+  if (tel.length < 8) return ["eTel", "#pTel"];
+  return null;
+}
+let poslednja = null;
+function prikaziRezime(){
+  const p = poslednja; if (!p) return;
+  const d = DANI.find(x => iso(x) === p.dan); const z = ZONE.find(z => z.id === p.zona);
+  const red = (k, v) => `<dt>${t(k)}</dt><dd>${v}</dd>`;
+  $("#rezime").innerHTML =
+    red("rStavke", p.stavke.map(([id, q]) => `${q} × ${esc(L(stavka(id), "naziv"))}`).join("<br>")) +
+    red("rZona", z[jezik]) + red("rAdresa", esc(p.adresa)) +
+    red("rDan", danTekst(d)) + red("rVreme", `${hhmm(p.vreme)}–${hhmm(p.vreme + PROZOR)}`) +
+    red("rIme", esc(p.ime)) + red("rTel", esc(p.tel)) + (p.nap ? red("rNap", esc(p.nap)) : "") +
+    red("rMedju", rsd(p.medju)) + red("rDost", rsd(z.cena)) + red("rUk", rsd(p.medju + z.cena)) + red("rPlac", t("rPlacV"));
+}
+function posalji(){
+  const e = proveri(); const s = $("#status");
+  if (e){ s.textContent = t(e[0]); const el = $(e[1]); if (el && el.matches("input")) el.focus(); return; }
+  s.textContent = "";
+  poslednja = { stavke: Object.entries(korpa), zona: st.zona, dan: st.dan, vreme: st.vreme, adresa: $("#pAdresa").value.trim(),
+    ime: $("#pIme").value.trim(), tel: $("#pTel").value.trim(), nap: $("#pNap").value.trim(), medju: medjuzbir() };
+  prikaziRezime();
+  $("#forma-porudzbine").hidden = true; $(".vodic", $("#porudzbina")).hidden = true;
+  const pt = $("#potvrda"); pt.hidden = false; pt.focus();
+}
+function icsTekst(s){ return String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n"); }
+function utc(d){ return d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, ""); }
+function preuzmiIcs(){
+  const p = poslednja; if (!p) return;
+  const [g, mes, dan] = p.dan.split("-").map(Number);
+  const start = new Date(g, mes - 1, dan, Math.floor(p.vreme / 60), p.vreme % 60);
+  const kraj = new Date(start.getTime() + PROZOR * 60000);
+  const z = ZONE.find(z => z.id === p.zona);
+  const opis = p.stavke.map(([id, q]) => `${q} x ${L(stavka(id), "naziv")}`).join("\n") + `\n${t("rUk")}: ${rsd(p.medju + z.cena)}\n${t("rTel")}: ${FIRMA.naziv} 060 000 06 29`;
+  const linije = [
+    "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//opsforma//susi-nori//SR", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+    "BEGIN:VEVENT",
+    "UID:" + Date.now() + "-" + Math.floor(Math.random() * 1e6) + "@susi-nori.opsforma",
+    "DTSTAMP:" + utc(new Date()),
+    "DTSTART:" + utc(start), "DTEND:" + utc(kraj),
+    "SUMMARY:" + icsTekst(`${FIRMA.naziv}: ${t("icsNaslov")}`),
+    "LOCATION:" + icsTekst(p.adresa + ", Beograd"),
+    "DESCRIPTION:" + icsTekst(opis),
+    "END:VEVENT", "END:VCALENDAR"
+  ];
+  const blob = new Blob([linije.join("\r\n") + "\r\n"], { type: "text/calendar;charset=utf-8" });
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "termin-" + FIRMA.slug + ".ics";
+  document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+}
+function nova(){
+  Object.keys(korpa).forEach(k => delete korpa[k]); st.zona = null; st.dan = null; st.vreme = null; poslednja = null;
+  ["#pAdresa", "#pIme", "#pTel", "#pNap"].forEach(s => $(s).value = "");
+  $("#potvrda").hidden = true; $("#forma-porudzbine").hidden = false; $(".vodic", $("#porudzbina")).hidden = false;
+  prikaziMeni(); prikaziZone(); prikaziDane(); prikaziVremena(); prikaziRacun();
+  $("#meni").scrollIntoView();
+}
+
+/* ---------------- događaji ---------------- */
+document.addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  if (b.dataset.add){ postavi(b.dataset.add, 1); const f = $(`[data-q="${b.dataset.add}"] [data-inc]`); if (f) f.focus(); }
+  else if (b.dataset.inc){ postavi(b.dataset.inc, 1); const f = $(`[data-q="${b.dataset.inc}"] [data-inc]`); if (f) f.focus(); }
+  else if (b.dataset.dec){ const id = b.dataset.dec; postavi(id, -1); const f = $(`[data-q="${id}"] button`); if (f) f.focus(); }
+  else if (b.dataset.zona){ st.zona = b.dataset.zona; prikaziZone(); prikaziRacun(); $(`[data-zona="${st.zona}"]`).focus(); }
+  else if (b.dataset.dan){ st.dan = b.dataset.dan; st.vreme = null; prikaziDane(); prikaziVremena(); $(`[data-dan="${st.dan}"]`).focus(); }
+  else if (b.dataset.m && !b.disabled){ st.vreme = +b.dataset.m; prikaziVremena(); $(`[data-m="${st.vreme}"]`).focus(); }
+  else if (b.dataset.lang){ primeniJezik(b.dataset.lang); }
+});
+$("#posalji").addEventListener("click", posalji);
+$("#icsBtn").addEventListener("click", preuzmiIcs);
+$("#novaBtn").addEventListener("click", nova);
+
+/* meni na mobilnom */
+const mb = $("#menuBtn"), nav = $("#nav");
+function zatvoriMeni(){ nav.classList.remove("otvoren"); mb.setAttribute("aria-expanded", "false"); }
+mb.addEventListener("click", () => { const o = !nav.classList.contains("otvoren"); nav.classList.toggle("otvoren", o); mb.setAttribute("aria-expanded", String(o)); });
+nav.addEventListener("click", e => { if (e.target.closest("a")) zatvoriMeni(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && nav.classList.contains("otvoren")){ zatvoriMeni(); mb.focus(); } });
+
+/* kontakt forma (demo) */
+$("#kontaktForma").addEventListener("submit", e => { e.preventDefault(); $("#formaPoruka").textContent = t("forma"); });
+
+/* današnji dan u tabeli radnog vremena */
+const tr = $(`#sati tr[data-d="${new Date().getDay()}"]`); if (tr) tr.classList.add("danas");
+
+let pocetni = "sr"; try { if (localStorage.getItem("nori-jezik") === "en") pocetni = "en"; } catch (e) {}
+primeniJezik(pocetni);
+
+window.__nori = { DANI, prozori, iso, korpa, st, ZONE, CENOVNIK, RV };
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Plesni studio Korak · Ruzveltova 39, Zvezdara</title>
+<meta name="description" content="Plesni studio Korak u Ruzveltovoj 39 na Zvezdari. Salsa, tango i hip hop: grupni časovi i privatni časovi sa instruktorom, dve sale. Primer sajta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Pridi:wght@300;500&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --crna:#111111; --bela:#FFFFFF; --kobalt:#2541B2;
+  --siva:#5C5C5C;      /* sporedni tekst na beloj (AA) */
+  --svetla:#B8B8B8;    /* sporedni tekst na crnoj (AA) */
+  --linija:#DCDCDC;
+  --magla:#F2F2F2;
+  --naslov:"Bai Jamjuree","Arial Nova","Helvetica Neue",Arial,sans-serif;
+  --tekst:"Pridi",Georgia,"Times New Roman",serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bela);color:var(--crna);font:300 17px/1.65 var(--tekst);overflow-wrap:break-word}
+svg{max-width:100%}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+h1,h2,h3{font-family:var(--naslov);font-weight:600;margin:0}
+p{margin:0 0 1em}
+b,strong{font-weight:500}
+button,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--kobalt);outline-offset:3px}
+.tamno :focus-visible{outline-color:var(--bela)}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{padding:0 clamp(16px,4vw,56px)}
+
+/* traka */
+.traka{background:var(--crna);color:var(--bela);font:400 13px/1.4 var(--naslov)}
+.traka .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;padding-top:9px;padding-bottom:9px}
+.traka a{margin-left:auto}
+.znacka{font:600 12px/1 var(--naslov);background:var(--kobalt);color:var(--bela);padding:5px 8px;white-space:nowrap}
+
+/* zaglavlje */
+.glava{position:relative;border-bottom:1px solid var(--crna)}
+.glava .wrap{display:flex;align-items:center;justify-content:space-between;min-height:72px;gap:16px}
+.logo{font:600 20px/1 var(--naslov);text-decoration:none;letter-spacing:-.01em}
+#nav ul{list-style:none;margin:0;padding:0;display:flex;gap:28px}
+#nav a{font:400 15px/1 var(--naslov);text-decoration:none;display:block;padding:14px 0}
+#nav a:hover{text-decoration:underline}
+#nav a.cta{color:var(--kobalt);font-weight:600}
+#menuBtn{display:none;min-height:44px;min-width:44px;padding:0 14px;background:var(--crna);color:var(--bela);border:0;font:600 14px/1 var(--naslov);cursor:pointer}
+
+/* heroj: poster */
+.heroj{padding:clamp(24px,3vw,40px) 0 clamp(48px,7vw,96px);position:relative;border-bottom:1px solid var(--crna)}
+.heroj .gore{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 24px;font:400 15px/1.4 var(--naslov);margin-bottom:clamp(16px,3vw,36px)}
+.poster{position:relative;--fs:clamp(64px,min(25vw,calc((100vh - 300px) / 2.6)),300px)}
+.heroj h1{font-size:var(--fs);line-height:.84;letter-spacing:-.035em}
+.heroj h1 span{display:block}
+.heroj h1 .ime{font:400 clamp(15px,1.4vw,18px)/1.4 var(--naslov);letter-spacing:0;margin-bottom:clamp(10px,2vw,22px)}
+.dijagram{margin:0;position:absolute;right:0;top:calc(var(--fs) * .55);width:min(36vw,600px);pointer-events:none}
+.dijagram svg{display:block;width:100%;height:auto;overflow:visible}
+.dijagram .br{font:600 15px/1 var(--naslov);fill:var(--kobalt);paint-order:stroke;stroke:var(--bela);stroke-width:5px}
+.dijagram figcaption{font:400 13px/1.4 var(--naslov);color:var(--kobalt);margin-top:10px;text-align:right;background:var(--bela);display:inline-block;float:right;padding:2px 0 2px 8px}
+.heroj .dole{display:grid;grid-template-columns:minmax(0,34em) auto;justify-content:space-between;align-items:end;gap:24px 48px;margin-top:clamp(28px,4vw,56px)}
+.heroj .dole p{margin:0;font-size:18px}
+.dugmad{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border:1px solid var(--crna);background:var(--bela);color:var(--crna);font:600 16px/1 var(--naslov);text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--crna);color:var(--bela)}
+.btn.glavno{background:var(--kobalt);border-color:var(--kobalt);color:var(--bela)}
+.btn.glavno:hover{background:var(--crna);border-color:var(--crna)}
+.tamno .btn{background:transparent;border-color:var(--bela);color:var(--bela)}
+
+/* sekcije */
+.sek{padding:clamp(64px,9vw,128px) 0;border-bottom:1px solid var(--crna)}
+.sek h2{font-size:clamp(48px,9vw,128px);line-height:.9;letter-spacing:-.03em;margin-bottom:clamp(28px,4vw,56px)}
+.uvodni{max-width:36em;font-size:18px;margin-bottom:48px}
+.tamno{background:var(--crna);color:var(--bela)}
+.tamno .uvodni,.tamno .siv{color:var(--svetla)}
+
+.stilovi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--crna)}
+.stil{padding:28px 28px 8px 0;border-right:1px solid var(--crna);margin-right:28px}
+.stil:last-child{border-right:0;margin-right:0}
+.stil h3{font-size:clamp(32px,4vw,52px);line-height:1;letter-spacing:-.02em;margin-bottom:16px}
+.stil dl{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;font:400 15px/1.5 var(--naslov);margin:20px 0 0}
+.stil dt{color:var(--siva)}
+.stil dd{margin:0}
+
+/* raspored */
+.raspored{width:100%;border-collapse:collapse;font:400 16px/1.4 var(--naslov)}
+.raspored th,.raspored td{text-align:left;padding:14px 16px 14px 0;border-bottom:1px solid #333;vertical-align:top}
+.raspored thead th{font-weight:400;color:var(--svetla);font-size:14px;border-bottom:1px solid var(--bela)}
+.raspored tbody th{font-weight:600;white-space:nowrap}
+.raspored .vr{font-weight:600}
+.napomena{font:400 14px/1.5 var(--naslov);color:var(--svetla);margin-top:20px}
+
+.dve{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(32px,5vw,72px)}
+.tri{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(28px,4vw,56px)}
+.osoba h3,.sala h3{font-size:28px;line-height:1.1;margin-bottom:6px}
+.osoba .uloga,.sala .meta{font:400 15px/1.4 var(--naslov);color:var(--kobalt);margin-bottom:12px}
+.foto{background:var(--magla);display:flex;align-items:flex-end;padding:12px;font:400 12px/1 var(--naslov);color:var(--siva);aspect-ratio:5/2;margin-top:20px}
+
+.cenovnik{list-style:none;margin:0;padding:0;border-top:1px solid var(--crna)}
+.cenovnik li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 24px;padding:20px 0;border-bottom:1px solid var(--linija);align-items:baseline}
+.cenovnik .n{font:600 clamp(20px,2.2vw,26px)/1.2 var(--naslov)}
+.cenovnik .c{font:600 clamp(20px,2.2vw,26px)/1.2 var(--naslov);white-space:nowrap}
+.cenovnik .o{grid-column:1 / -1;font-size:15px;color:var(--siva);margin:0}
+
+/* zakazivanje */
+.modul-glava{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-bottom:28px}
+.primer{font:400 14px/1.4 var(--naslov);color:var(--siva)}
+.napredak{display:block;width:100%;max-width:520px;height:auto;margin:0 0 40px}
+.napredak circle{fill:var(--bela);stroke:var(--crna);stroke-width:1.5}
+.napredak circle.on{fill:var(--kobalt);stroke:var(--kobalt)}
+.napredak text{font:600 13px/1 var(--naslov);fill:var(--crna)}
+.korak{border:0;margin:0 0 56px;padding:0;min-width:0}
+.korak legend{font:600 clamp(28px,3.4vw,44px)/1.05 var(--naslov);letter-spacing:-.02em;padding:0;margin-bottom:8px}
+.korak .pomoc{font:400 15px/1.5 var(--naslov);color:var(--siva);margin:0 0 18px;max-width:40em}
+.izbori{display:flex;flex-wrap:wrap;gap:8px}
+.izbor{min-height:52px;min-width:44px;padding:8px 20px;border:1px solid var(--crna);background:var(--bela);cursor:pointer;font:600 17px/1.2 var(--naslov);text-align:left}
+.izbor small{display:block;font-weight:400;font-size:13px;color:var(--siva);margin-top:2px}
+.izbor:hover:not([aria-pressed="true"]){background:var(--magla)}
+.izbor[aria-pressed="true"]{background:var(--kobalt);border-color:var(--kobalt);color:var(--bela)}
+.izbor[aria-pressed="true"] small{color:#DCE2F7}
+.izbor.veliko{flex:1 1 240px;padding:18px 22px}
+.izbor.veliko b{display:block;font-size:24px;font-weight:600}
+.podgrupa{margin-bottom:24px}
+.podgrupa .lbl{font:400 14px/1.4 var(--naslov);color:var(--siva);margin:0 0 8px}
+.casovi{list-style:none;margin:0;padding:0;border-top:1px solid var(--crna)}
+.cas{width:100%;display:grid;grid-template-columns:96px minmax(0,1fr) auto;gap:4px 18px;align-items:center;min-height:64px;padding:12px 4px;border:0;border-bottom:1px solid var(--linija);background:var(--bela);text-align:left;cursor:pointer;font:400 15px/1.35 var(--naslov)}
+.cas .kad{font-weight:600}
+.cas .kad span{display:block;font-weight:400;color:var(--siva);font-size:13px}
+.cas .sta b{font-weight:600;display:block;font-size:17px}
+.cas .mesta{white-space:nowrap;font-size:14px}
+.cas:hover:not([disabled]):not([aria-pressed="true"]){background:var(--magla)}
+.cas[aria-pressed="true"]{background:var(--kobalt);color:var(--bela)}
+.cas[aria-pressed="true"] .kad span{color:#DCE2F7}
+.cas[disabled]{cursor:not-allowed;color:#8A8A8A;background:var(--bela)}
+.cas[disabled] .mesta{text-decoration:line-through}
+.dani{display:flex;gap:6px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.dan{flex:0 0 64px;min-height:68px;border:1px solid var(--crna);background:var(--bela);cursor:pointer;font:400 13px/1.2 var(--naslov);scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+.dan b{font-size:22px;font-weight:600}
+.dan:hover:not([disabled]):not([aria-pressed="true"]){background:var(--magla)}
+.dan[disabled]{border-color:var(--linija);color:#9A9A9A;cursor:not-allowed;background:var(--magla)}
+.dan[aria-pressed="true"]{background:var(--kobalt);border-color:var(--kobalt);color:var(--bela)}
+.termini{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:6px;margin-top:18px}
+.termin{min-height:50px;border:1px solid var(--crna);background:var(--bela);cursor:pointer;font:600 16px/1 var(--naslov)}
+.termin:hover:not([disabled]):not([aria-pressed="true"]){background:var(--magla)}
+.termin[disabled]{border-color:var(--linija);color:#9A9A9A;background:var(--magla);cursor:not-allowed;text-decoration:line-through;font-weight:400}
+.termin[aria-pressed="true"]{background:var(--kobalt);border-color:var(--kobalt);color:var(--bela)}
+.prazno{font:400 15px/1.5 var(--naslov);color:var(--siva);margin:12px 0 0}
+.polja{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px;max-width:760px}
+.polje{margin-bottom:16px}
+.polje.puno{grid-column:1 / -1}
+.polje label{display:block;font:400 15px/1.4 var(--naslov);margin-bottom:6px}
+.polje input,.polje textarea{width:100%;min-height:50px;border:1px solid var(--crna);border-radius:0;background:var(--bela);padding:10px 12px;font:300 17px/1.4 var(--tekst)}
+.polje textarea{min-height:96px;resize:vertical}
+.tamno .polje input,.tamno .polje textarea{background:var(--crna);border-color:#777;color:var(--bela)}
+.cekiraj{display:flex;gap:12px;align-items:flex-start;max-width:760px;margin:8px 0 24px;font:400 16px/1.45 var(--naslov);cursor:pointer}
+.cekiraj input{width:24px;height:24px;margin:0;accent-color:var(--kobalt);flex:0 0 auto}
+.cekiraj small{display:block;color:var(--siva);font-size:14px}
+.zbir{display:flex;flex-wrap:wrap;gap:8px 32px;align-items:baseline;border-top:1px solid var(--crna);padding-top:20px;max-width:760px;font:400 16px/1.4 var(--naslov)}
+.zbir b{font:600 28px/1 var(--naslov)}
+#greska{font:400 15px/1.4 var(--naslov);color:#B00020;margin:14px 0 0;min-height:1.4em}
+#posalji{margin-top:16px}
+
+#potvrda{max-width:760px}
+#potvrda h3{font-size:clamp(36px,6vw,72px);line-height:.95;letter-spacing:-.03em;margin-bottom:16px}
+.rezime{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px 28px;margin:28px 0;font:400 16px/1.45 var(--naslov);border-top:1px solid var(--crna);padding-top:20px}
+.rezime dt{color:var(--siva)}
+.rezime dd{margin:0;font-weight:600}
+
+/* radno vreme */
+.sati{width:100%;max-width:520px;border-collapse:collapse;font:400 18px/1.4 var(--naslov)}
+.sati th,.sati td{padding:12px 0;border-bottom:1px solid var(--linija);text-align:left}
+.sati td{text-align:right;font-weight:600}
+.sati tr.danas th::after{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--kobalt);margin-left:10px;vertical-align:2px}
+.mapa{width:100%;height:100%;min-height:360px;border:0;display:block;background:var(--magla);filter:grayscale(1) contrast(1.05)}
+
+footer{background:var(--crna);color:var(--bela);padding:56px 0 40px;font:400 14px/1.7 var(--naslov)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+footer .vel{font:600 clamp(40px,8vw,96px)/.9 var(--naslov);letter-spacing:-.03em;width:100%;margin-bottom:24px}
+#formaPoruka{font:400 16px/1.5 var(--naslov);margin-top:14px}
+
+@media (max-width:1180px){
+  .dijagram{position:static;width:100%;max-width:620px;margin:24px 0 0}
+  .dijagram figcaption{float:none;text-align:left;padding:0}
+  .dijagram .br{font-size:24px;stroke-width:7px}
+}
+@media (max-width:980px){
+  .stilovi{grid-template-columns:1fr}
+  .stil{border-right:0;margin-right:0;border-bottom:1px solid var(--crna);padding:24px 0}
+  .stil:last-child{border-bottom:0}
+  .tri,.dve{grid-template-columns:1fr}
+  .heroj .dole{grid-template-columns:1fr}
+  .raspored thead{display:none}
+  .raspored,.raspored tbody,.raspored tr,.raspored th,.raspored td{display:block}
+  .raspored tr{display:grid;grid-template-columns:64px minmax(0,1fr);column-gap:12px;padding:12px 0;border-bottom:1px solid #333}
+  .raspored th,.raspored td{border:0;padding:1px 0}
+  .raspored tbody th{grid-column:1 / -1;font-size:22px;margin:18px 0 8px}
+  .raspored td.vr{grid-column:1;grid-row:span 3}
+  .raspored td.cn,.raspored td.sl{grid-column:2}
+  .raspored td.sl{font-size:14px;color:var(--svetla)}
+}
+@media (max-width:820px){
+  #menuBtn{display:inline-flex;align-items:center}
+  #nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bela);border-bottom:1px solid var(--crna);z-index:30}
+  #nav.otvoren{display:block}
+  #nav ul{flex-direction:column;gap:0;padding:8px clamp(16px,4vw,56px) 18px}
+  #nav a{font-size:20px;padding:13px 0;font-weight:600}
+  .polja{grid-template-columns:1fr}
+  .cas{grid-template-columns:78px minmax(0,1fr);}
+  .cas .mesta{grid-column:2}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="traka">
+  <div class="wrap">
+    <span>Primer sajta · izradio opsforma</span>
+    <span class="znacka">Paket 3: Plus</span>
+    <a href="../../">Svi primeri</a>
+  </div>
+</div>
+
+<header class="glava">
+  <div class="wrap">
+    <a class="logo" href="#vrh">Korak</a>
+    <nav id="nav" aria-label="Glavni meni">
+      <ul>
+        <li><a href="#stilovi">Stilovi</a></li>
+        <li><a href="#raspored">Raspored</a></li>
+        <li><a href="#cene">Cene</a></li>
+        <li><a href="#instruktori">Instruktori</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a class="cta" href="#zakazivanje">Zakažite čas</a></li>
+      </ul>
+    </nav>
+    <button id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">Meni</button>
+  </div>
+</header>
+
+<main id="vrh">
+<section class="heroj" aria-labelledby="h1">
+  <div class="wrap">
+    <p class="gore"><span>Ruzveltova 39, Zvezdara</span><span>Pon–pet 10–22 h, subotom 10–16 h</span></p>
+    <div class="poster">
+    <h1 id="h1"><span class="ime">Plesni studio Korak</span><span>Salsa.</span><span>Tango.</span><span>Hip hop.</span></h1>
+    <figure class="dijagram" aria-label="Dijagram osnovnog koraka salse, brojanje od 1 do 8">
+      <svg viewBox="0 0 700 220" role="img" aria-hidden="true">
+        <polyline points="20,150 120,40 230,90 320,120 410,200 520,150 610,110 680,110" fill="none" stroke="#2541B2" stroke-width="1.5"/>
+        <g fill="#2541B2" stroke="#FFFFFF" stroke-width="3">
+          <circle cx="20" cy="150" r="9"/><circle cx="120" cy="40" r="9"/><circle cx="230" cy="90" r="9"/>
+          <circle cx="410" cy="200" r="9"/><circle cx="520" cy="150" r="9"/><circle cx="610" cy="110" r="9"/>
+        </g>
+        <g fill="#FFFFFF" stroke="#2541B2" stroke-width="1.5">
+          <circle cx="320" cy="120" r="8"/><circle cx="680" cy="110" r="8"/>
+        </g>
+        <text class="br" x="14" y="182">1</text><text class="br" x="114" y="22">2</text><text class="br" x="224" y="72">3</text>
+        <text class="br" x="314" y="102">4</text><text class="br" x="430" y="206">5</text><text class="br" x="514" y="132">6</text>
+        <text class="br" x="604" y="92">7</text><text class="br" x="674" y="92">8</text>
+      </svg>
+      <figcaption>Osnovni korak salse: 1, 2, 3, pauza, 5, 6, 7, pauza.</figcaption>
+    </figure>
+    </div>
+    <div class="dole">
+      <p>Grupni časovi za početnike i one koji su već plesali, i privatni časovi za par ili jednu osobu. Dve sale, tri instruktora, a probni čas zakazujete ovde.</p>
+      <div class="dugmad">
+        <a class="btn glavno" href="#zakazivanje">Zakažite čas</a>
+        <a class="btn" href="tel:+381600000630">Pozovite</a>
+        <a class="btn" href="viber://chat?number=%2B381600000630">Viber</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sek" id="stilovi" aria-labelledby="stilovi-h">
+  <div class="wrap">
+    <h2 id="stilovi-h">Tri stila</h2>
+    <p class="uvodni">Na prvom času ne treba Vam partner ni posebna obuća. Dovoljna je udobna odeća i patike sa čistim đonom.</p>
+    <div class="stilovi">
+      <article class="stil">
+        <h3>Salsa</h3>
+        <p>Kubanska salsa u paru i u krugu (rueda). Partnere menjamo tokom časa, pa možete doći i sami.</p>
+        <dl><dt>Nivoi</dt><dd>početni, srednji, vežbanka petkom</dd><dt>Vodi</dt><dd>Marija i Stefan</dd></dl>
+      </article>
+      <article class="stil">
+        <h3>Tango</h3>
+        <p>Argentinski tango: hod, zagrljaj i slušanje muzike. Sporiji početak, više rada na držanju.</p>
+        <dl><dt>Nivoi</dt><dd>početni, srednji, otvoreni subotom</dd><dt>Vodi</dt><dd>Stefan i Marija</dd></dl>
+      </article>
+      <article class="stil">
+        <h3>Hip hop</h3>
+        <p>Grove, osnovni koraci i kratke koreografije. Grupe za tinejdžere od 13 godina i za odrasle.</p>
+        <dl><dt>Nivoi</dt><dd>početni, srednji</dd><dt>Vodi</dt><dd>Nina</dd></dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sek tamno" id="raspored" aria-labelledby="raspored-h">
+  <div class="wrap">
+    <h2 id="raspored-h">Raspored</h2>
+    <p class="uvodni">Grupni časovi traju 75 minuta. Velika sala prima 16 ljudi, mala 10.</p>
+    <table class="raspored" id="rasporedTabela">
+      <caption class="sr">Nedeljni raspored grupnih časova</caption>
+      <thead><tr><th scope="col">Dan</th><th scope="col">Vreme</th><th scope="col">Čas</th><th scope="col">Sala</th><th scope="col">Instruktor</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <p class="napomena">Nedeljom je studio zatvoren. Za praznike raspored objavljujemo nedelju dana ranije.</p>
+  </div>
+</section>
+
+<section class="sek" id="cene" aria-labelledby="cene-h">
+  <div class="wrap dve">
+    <div>
+      <h2 id="cene-h">Cene</h2>
+      <p class="uvodni">Plaća se u studiju, gotovinom ili karticom. Članarina važi 30 dana od prvog časa.</p>
+    </div>
+    <ul class="cenovnik">
+      <li><span class="n">Probni grupni čas</span><span class="c">900 RSD</span><p class="o">75 min, jedan čas po izboru, zakazuje se ovde na sajtu.</p></li>
+      <li><span class="n">Članarina, 2 puta nedeljno</span><span class="c">4.800 RSD</span><p class="o">8 grupnih časova u istom stilu.</p></li>
+      <li><span class="n">Članarina, 3 puta nedeljno</span><span class="c">6.200 RSD</span><p class="o">12 grupnih časova, može i kombinacija stilova.</p></li>
+      <li><span class="n">Privatni čas</span><span class="c">3.200 RSD</span><p class="o">60 min sa instruktorom, za jednu osobu ili par.</p></li>
+      <li><span class="n">Prvi ples za venčanje</span><span class="c">14.000 RSD</span><p class="o">5 privatnih časova i koreografija na Vašu pesmu.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sek" id="instruktori" aria-labelledby="instr-h">
+  <div class="wrap">
+    <h2 id="instr-h">Instruktori i sale</h2>
+    <div class="tri">
+      <article class="osoba"><h3>Marija Lazić</h3><p class="uloga">salsa, tango</p><p>Vodi početne grupe salse i vežbanku petkom. Na privatnim časovima najčešće radi sa parovima pred venčanje.</p></article>
+      <article class="osoba"><h3>Stefan Đorđević</h3><p class="uloga">tango, salsa</p><p>Vodi tango grupe i otvoreni čas subotom. Na početnom nivou kreće od hoda i držanja, bez žurbe sa figurama.</p></article>
+      <article class="osoba"><h3>Nina Vasić</h3><p class="uloga">hip hop</p><p>Vodi obe hip hop grupe. Na privatnim časovima sprema koreografije za nastupe i maturske večeri.</p></article>
+    </div>
+    <div class="dve" style="margin-top:clamp(48px,6vw,88px)">
+      <article class="sala"><h3>Velika sala</h3><p class="meta">110 m², ogledala na dva zida, parket</p><p>Salsa i tango grupe, do 16 ljudi. Između grupa slobodna za privatne časove.</p><div class="foto">Vaša fotografija</div></article>
+      <article class="sala"><h3>Mala sala</h3><p class="meta">45 m², ogledalo, ozvučenje</p><p>Hip hop grupe do 10 ljudi i većina privatnih časova.</p><div class="foto">Vaša fotografija</div></article>
+    </div>
+  </div>
+</section>
+
+<!--
+  PRODUKCIJA
+  Ovaj modul radi samo u pregledaču (demo, termini i popunjenost su izmišljeni). Na pravom sajtu:
+  a) Zahtev za termin: „Zakažite“ šalje rezime (stil, grupni ili privatni čas, instruktor, sala, dan,
+     vreme, ime, telefon, podsetnik) na mejl studija preko Web3Forms (POST https://api.web3forms.com/submit,
+     hidden access_key) ili otvara Viber poruku sa rezimeom (viber://forward?text=...). Studio potvrđuje
+     termin pozivom ili porukom.
+  b) Povezan kalendar: umesto ovog modula ugrađuje se Google Kalendar „Appointment schedule“, Cal.com ili
+     Calendly embed, jedan tip termina po instruktoru i sali (Cal.com „team“ sa 3 člana i 2 lokacije).
+     Termini se sami upisuju u Google Kalendar studija i instruktora na telefonu.
+  Podsetnik dan ranije (Paket 3): Cal.com/Calendly šalju podsetnik mejlom ili SMS-om 24 h ranije
+  (Workflows), a za varijantu a jedan Make.com/Zapier scenario svakog dana u 10 h čita sutrašnje termine
+  iz kalendara i šalje SMS ili Viber poruku. Plaćanje je u studiju, bez online plaćanja.
+-->
+<section class="sek" id="zakazivanje" aria-labelledby="zak-h">
+  <div class="wrap">
+    <h2 id="zak-h">Zakažite čas</h2>
+    <div class="modul-glava">
+      <span class="znacka">Paket 3: Plus</span>
+      <span class="primer">Primer: termini su izmišljeni</span>
+    </div>
+
+    <div id="modul">
+      <svg class="napredak" viewBox="0 0 520 44" aria-hidden="true">
+        <line x1="14" y1="16" x2="506" y2="16" stroke="#111111" stroke-width="1"/>
+        <circle data-k="1" cx="14" cy="16" r="8"/><circle data-k="2" cx="178" cy="16" r="8"/><circle data-k="3" cx="342" cy="16" r="8"/><circle data-k="4" cx="506" cy="16" r="8"/>
+        <text x="4" y="42">Stil</text><text x="160" y="42">Vrsta</text><text x="326" y="42">Kada</text><text x="470" y="42">Podaci</text>
+      </svg>
+
+      <fieldset class="korak">
+        <legend>1. Stil</legend>
+        <div class="izbori" id="izborStil"></div>
+      </fieldset>
+
+      <fieldset class="korak">
+        <legend>2. Grupni ili privatni čas</legend>
+        <div class="izbori" id="izborVrsta">
+          <button type="button" class="izbor veliko" data-vrsta="grupni" aria-pressed="false"><b>Grupni čas</b><small>75 min u grupi, 900 RSD</small></button>
+          <button type="button" class="izbor veliko" data-vrsta="privatni" aria-pressed="false"><b>Privatni čas</b><small>60 min sa instruktorom, 3.200 RSD</small></button>
+        </div>
+      </fieldset>
+
+      <fieldset class="korak" id="korak3">
+        <legend>3. Kada</legend>
+        <p class="pomoc" id="pomoc3">Prvo izaberite stil i vrstu časa.</p>
+
+        <div id="grupniBlok" hidden>
+          <div class="podgrupa"><p class="lbl" id="lblSalaG">Sala</p><div class="izbori" id="salaG" role="group" aria-labelledby="lblSalaG"></div></div>
+          <ul class="casovi" id="casovi" aria-live="polite"></ul>
+        </div>
+
+        <div id="privatniBlok" hidden>
+          <div class="podgrupa"><p class="lbl" id="lblInstr">Instruktor</p><div class="izbori" id="instr" role="group" aria-labelledby="lblInstr"></div></div>
+          <div class="podgrupa"><p class="lbl" id="lblSalaP">Sala</p><div class="izbori" id="salaP" role="group" aria-labelledby="lblSalaP"></div></div>
+          <p class="lbl" id="lblDan" style="font:400 14px/1.4 var(--naslov);color:var(--siva);margin:0 0 8px">Dan (narednih 14 dana)</p>
+          <div class="dani" id="dani" role="group" aria-labelledby="lblDan"></div>
+          <div class="termini" id="termini" aria-live="polite"></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="korak">
+        <legend>4. Vaši podaci</legend>
+        <div class="polja">
+          <div class="polje"><label for="zIme">Ime i prezime</label><input id="zIme" name="ime" autocomplete="name"></div>
+          <div class="polje"><label for="zTel">Telefon</label><input id="zTel" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="06x xxx xxxx"></div>
+          <div class="polje puno"><label for="zNap">Napomena (da li ste već plesali, dolazite li u paru)</label><textarea id="zNap" name="napomena"></textarea></div>
+        </div>
+        <label class="cekiraj" for="zPods"><input type="checkbox" id="zPods" checked><span>Pošaljite mi podsetnik dan ranije<small>SMS u 10 h dan pred čas, sa vremenom i salom.</small></span></label>
+        <div class="zbir" aria-live="polite"><span id="zbirOpis">Izaberite čas</span><b id="zbirCena">0 RSD</b></div>
+        <p id="greska" role="alert"></p>
+        <button class="btn glavno" type="button" id="posalji">Zakažite</button>
+      </fieldset>
+    </div>
+
+    <div id="potvrda" hidden tabindex="-1">
+      <h3>Vidimo se na času.</h3>
+      <p>Javićemo Vam se porukom da potvrdimo termin. Ovo je primer, zahtev nije nigde poslat.</p>
+      <dl class="rezime" id="rezime"></dl>
+      <div class="dugmad">
+        <button class="btn glavno" type="button" id="icsBtn">Dodaj u kalendar</button>
+        <button class="btn" type="button" id="novaBtn">Novi termin</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sek" id="radno-vreme" aria-labelledby="rv-h">
+  <div class="wrap dve">
+    <div>
+      <h2 id="rv-h">Radno vreme</h2>
+      <table class="sati" id="sati">
+        <caption class="sr">Radno vreme studija po danima</caption>
+        <tbody>
+          <tr data-d="1"><th scope="row">Ponedeljak</th><td>10–22 h</td></tr>
+          <tr data-d="2"><th scope="row">Utorak</th><td>10–22 h</td></tr>
+          <tr data-d="3"><th scope="row">Sreda</th><td>10–22 h</td></tr>
+          <tr data-d="4"><th scope="row">Četvrtak</th><td>10–22 h</td></tr>
+          <tr data-d="5"><th scope="row">Petak</th><td>10–22 h</td></tr>
+          <tr data-d="6"><th scope="row">Subota</th><td>10–16 h</td></tr>
+          <tr data-d="0"><th scope="row">Nedelja</th><td>zatvoreno</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:28px;font:400 17px/1.6 var(--naslov)">Ruzveltova 39, Zvezdara, prvi sprat, ulaz iz dvorišta. Najbliže stanice: Đeram pijaca i Zvezdarska.</p>
+    </div>
+    <iframe class="mapa" title="Mapa: Ruzveltova 39, Zvezdara" loading="lazy" src="https://maps.google.com/maps?q=Ruzveltova%2039%2C%20Zvezdara%2C%20Beograd&amp;z=15&amp;output=embed"></iframe>
+  </div>
+</section>
+
+<section class="sek tamno" id="kontakt" aria-labelledby="k-h">
+  <div class="wrap dve">
+    <div>
+      <h2 id="k-h">Kontakt</h2>
+      <p class="uvodni">Pitanja o nivou, grupama za tinejdžere ili prvom plesu za venčanje? Pišite ili pozovite.</p>
+      <div class="dugmad">
+        <a class="btn" href="tel:+381600000630">060 000 06 30</a>
+        <a class="btn" href="viber://chat?number=%2B381600000630">Viber</a>
+      </div>
+    </div>
+    <!--
+      Kontakt forma u produkciji: <form action="https://api.web3forms.com/submit" method="POST"> sa
+      <input type="hidden" name="access_key" value="KLJUČ-IZ-WEB3FORMS"> i
+      <input type="hidden" name="subject" value="Poruka sa sajta Korak">. Poruka stiže na mejl studija.
+    -->
+    <form data-form="kontakt" id="kontaktForma" novalidate>
+      <div class="polje"><label for="kIme">Ime</label><input id="kIme" name="ime" autocomplete="name"></div>
+      <div class="polje"><label for="kKontakt">Telefon ili mejl</label><input id="kKontakt" name="kontakt" autocomplete="email"></div>
+      <div class="polje"><label for="kPoruka">Poruka</label><textarea id="kPoruka" name="poruka"></textarea></div>
+      <button class="btn" type="submit">Pošaljite poruku</button>
+      <p id="formaPoruka" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="vel" aria-hidden="true">Korak</p>
+    <p style="margin:0">Plesni studio Korak<br>Ruzveltova 39, Zvezdara<br><a href="tel:+381600000630">060 000 06 30</a></p>
+    <p style="margin:0">Primer sajta · izradio opsforma<br><a href="../../">Svi primeri</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+const $ = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => [...(r || document).querySelectorAll(s)];
+const FIRMA = { naziv: "Plesni studio Korak", adresa: "Ruzveltova 39, Zvezdara, Beograd", slug: "ples-korak" };
+
+const STILOVI = [ { id:"salsa", n:"Salsa" }, { id:"tango", n:"Tango" }, { id:"hiphop", n:"Hip hop" } ];
+const INSTR = [
+  { id:"marija", n:"Marija Lazić", stilovi:["salsa","tango"] },
+  { id:"stefan", n:"Stefan Đorđević", stilovi:["tango","salsa"] },
+  { id:"nina",   n:"Nina Vasić", stilovi:["hiphop"] }
+];
+const SALE = [ { id:"velika", n:"Velika sala", mesta:16 }, { id:"mala", n:"Mala sala", mesta:10 } ];
+/* Radno vreme studija (0 = nedelja, zatvoreno). Privatni časovi su u tom okviru. */
+const RV = { 0:null, 1:[10,22], 2:[10,22], 3:[10,22], 4:[10,22], 5:[10,22], 6:[10,16] };
+const CENA = { grupni: 900, privatni: 3200 };
+const TRAJ = { grupni: 75, privatni: 60 };
+/* Nedeljni raspored grupnih časova: dan, početak (min), stil, nivo, sala, instruktor */
+const H = (h, m) => h * 60 + (m || 0);
+const GRUPE = [
+  [1, H(18), "salsa", "početni", "velika", "marija"], [1, H(19,30), "salsa", "srednji", "velika", "stefan"], [1, H(19), "hiphop", "početni", "mala", "nina"],
+  [2, H(18), "tango", "početni", "velika", "stefan"], [2, H(19,30), "tango", "srednji", "velika", "marija"], [2, H(18,30), "hiphop", "tinejdžeri", "mala", "nina"],
+  [3, H(18), "salsa", "početni", "velika", "marija"], [3, H(19,30), "salsa", "srednji", "velika", "stefan"], [3, H(19), "hiphop", "početni", "mala", "nina"],
+  [4, H(18), "tango", "početni", "velika", "stefan"], [4, H(19,30), "tango", "srednji", "velika", "marija"], [4, H(18,30), "hiphop", "tinejdžeri", "mala", "nina"],
+  [5, H(19), "salsa", "vežbanka", "velika", "marija"], [5, H(18), "hiphop", "srednji", "mala", "nina"],
+  [6, H(11), "tango", "otvoreni", "velika", "stefan"], [6, H(12,30), "salsa", "početni", "velika", "marija"], [6, H(12), "hiphop", "početni", "mala", "nina"]
+].map(([d, m, stil, nivo, sala, instr]) => ({ d, m, stil, nivo, sala, instr }));
+
+const DANI_K = ["ned","pon","uto","sre","čet","pet","sub"];
+const DANI_P = ["nedelja","ponedeljak","utorak","sreda","četvrtak","petak","subota"];
+const DANI_T = ["Nedelja","Ponedeljak","Utorak","Sreda","Četvrtak","Petak","Subota"];
+const MESECI = ["januar","februar","mart","april","maj","jun","jul","avgust","septembar","oktobar","novembar","decembar"];
+const dvo = n => String(n).padStart(2, "0");
+const hhmm = m => dvo(Math.floor(m / 60)) + ":" + dvo(m % 60);
+const iso = d => d.getFullYear() + "-" + dvo(d.getMonth() + 1) + "-" + dvo(d.getDate());
+const rsd = n => n.toLocaleString("de-DE") + " RSD";
+const danTekst = d => `${DANI_P[d.getDay()]}, ${d.getDate()}. ${MESECI[d.getMonth()]}`;
+function hes(s){ let h = 2166136261; for (let i = 0; i < s.length; i++){ h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; }
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
+const nadji = (arr, id) => arr.find(x => x.id === id);
+
+const DANAS = new Date(); DANAS.setHours(0, 0, 0, 0);
+const DANI = Array.from({ length: 14 }, (_, i) => { const d = new Date(DANAS); d.setDate(d.getDate() + i); return d; });
+const proslo = (d, m) => { const s = new Date(); return iso(d) === iso(s) && m <= s.getHours() * 60 + s.getMinutes() + 30; };
+
+/* tabela rasporeda iz istih podataka */
+(function(){
+  const tb = $("#rasporedTabela tbody");
+  tb.innerHTML = [1,2,3,4,5,6].map(d => GRUPE.filter(g => g.d === d).sort((a, b) => a.m - b.m).map((g, i, arr) =>
+    `<tr>${i === 0 ? `<th scope="row" rowspan="${arr.length}">${DANI_T[d]}</th>` : ""}<td class="vr">${hhmm(g.m)}</td><td class="cn">${nadji(STILOVI, g.stil).n}, ${g.nivo}</td><td class="sl">${nadji(SALE, g.sala).n}</td><td class="sl">${nadji(INSTR, g.instr).n}</td></tr>`).join("")).join("");
+})();
+
+/* Grupni časovi narednih 14 dana; popunjenost je determinističan pseudo-slučaj iz datuma i časa. */
+function grupniCasovi(stil, sala){
+  const out = [];
+  for (const d of DANI){
+    for (const g of GRUPE){
+      if (g.d !== d.getDay() || g.stil !== stil || (sala !== "sve" && g.sala !== sala)) continue;
+      if (proslo(d, g.m)) continue;
+      const h = hes(iso(d) + "|" + g.m + "|" + g.sala);
+      const kap = nadji(SALE, g.sala).mesta;
+      const slobodno = h % 100 < 35 ? 0 : 1 + (h >>> 8) % Math.min(7, kap - 2);
+      out.push({ ...g, dan: iso(d), datum: d, slobodno, kap });
+    }
+  }
+  return out.sort((a, b) => a.datum - b.datum || a.m - b.m);
+}
+/* Privatni termini: 60 min, korak 60 min, poslednji se završava do zatvaranja.
+   Zauzeto ako se sala ili instruktor preklapaju sa grupnim časom, ili pseudo-slučajno (~30 %). */
+function zauzetoInstr(d, m, instrId, salaId){
+  const preklop = GRUPE.some(g => g.d === d.getDay() && (g.sala === salaId || g.instr === instrId) && m < g.m + TRAJ.grupni && g.m < m + TRAJ.privatni);
+  return preklop || hes(iso(d) + "|" + m + "|" + instrId + "|" + salaId) % 100 < 30;
+}
+function privatniTermini(d, stil, instrId, salaId){
+  const rv = RV[d.getDay()]; if (!rv) return [];
+  const kandidati = instrId === "svejedno" ? INSTR.filter(i => i.stilovi.includes(stil)).map(i => i.id) : [instrId];
+  const out = [];
+  for (let m = rv[0] * 60; m + TRAJ.privatni <= rv[1] * 60; m += 60){
+    if (proslo(d, m)) continue;
+    const slobodan = kandidati.find(id => !zauzetoInstr(d, m, id, salaId));
+    out.push({ m, zauzet: !slobodan, instr: slobodan || null });
+  }
+  return out;
+}
+
+/* ---------------- stanje i prikaz ---------------- */
+const st = { stil: null, vrsta: null, salaG: "sve", instr: "svejedno", salaP: "mala", dan: null, izbor: null };
+
+function dugmad(el, lista, aktivno, atr){
+  el.innerHTML = lista.map(x => `<button type="button" class="izbor" data-${atr}="${x.id}" aria-pressed="${x.id === aktivno}">${esc(x.n)}${x.s ? `<small>${esc(x.s)}</small>` : ""}</button>`).join("");
+}
+function napredak(){
+  const k = [!!st.stil, !!st.vrsta, !!st.izbor, !!($("#zIme").value.trim() && $("#zTel").value.trim())];
+  $$(".napredak circle").forEach((c, i) => c.classList.toggle("on", k[i]));
+}
+function prikazi(){
+  dugmad($("#izborStil"), STILOVI, st.stil, "stil");
+  $$("#izborVrsta .izbor").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.vrsta === st.vrsta)));
+  const spreman = st.stil && st.vrsta;
+  $("#pomoc3").textContent = !spreman ? "Prvo izaberite stil i vrstu časa."
+    : st.vrsta === "grupni" ? "Izaberite čas iz rasporeda za narednih 14 dana. Popunjeni časovi su precrtani."
+    : "Izaberite instruktora, salu, dan i vreme. Zauzeti termini su precrtani.";
+  $("#grupniBlok").hidden = !(spreman && st.vrsta === "grupni");
+  $("#privatniBlok").hidden = !(spreman && st.vrsta === "privatni");
+  if (spreman && st.vrsta === "grupni") prikaziGrupne();
+  if (spreman && st.vrsta === "privatni") prikaziPrivatne();
+  prikaziZbir(); napredak();
+}
+function prikaziGrupne(){
+  dugmad($("#salaG"), [{ id:"sve", n:"Obe sale" }, ...SALE], st.salaG, "salag");
+  const lista = grupniCasovi(st.stil, st.salaG);
+  const box = $("#casovi");
+  if (!lista.length){ box.innerHTML = `<li class="prazno">U ovoj sali nema časova ovog stila. Izaberite drugu salu.</li>`; return; }
+  box.innerHTML = lista.map(c => { const kljuc = `g|${c.dan}|${c.m}|${c.sala}`; const sel = st.izbor && st.izbor.kljuc === kljuc;
+    return `<li><button type="button" class="cas" data-kljuc="${kljuc}" ${c.slobodno ? "" : "disabled"} aria-pressed="${!!sel}">
+      <span class="kad">${DANI_K[c.datum.getDay()]} ${c.datum.getDate()}.${c.datum.getMonth() + 1}.<span>${hhmm(c.m)}–${hhmm(c.m + TRAJ.grupni)}</span></span>
+      <span class="sta"><b>${nadji(STILOVI, c.stil).n}, ${c.nivo}</b>${nadji(SALE, c.sala).n}, ${nadji(INSTR, c.instr).n}</span>
+      <span class="mesta">${c.slobodno ? `${c.slobodno} slobodn${c.slobodno === 1 ? "o mesto" : "a mesta"} od ${c.kap}` : "popunjeno"}</span></button></li>`; }).join("");
+}
+function prikaziPrivatne(){
+  const instr = INSTR.filter(i => i.stilovi.includes(st.stil));
+  if (st.instr !== "svejedno" && !instr.some(i => i.id === st.instr)) st.instr = "svejedno";
+  dugmad($("#instr"), [{ id:"svejedno", n:"Svejedno", s:"prvi slobodan" }, ...instr.map(i => ({ id:i.id, n:i.n }))], st.instr, "instr");
+  dugmad($("#salaP"), SALE.map(s => ({ id:s.id, n:s.n })), st.salaP, "salap");
+  $("#dani").innerHTML = DANI.map((d, i) => {
+    const t = privatniTermini(d, st.stil, st.instr, st.salaP); const zatv = !RV[d.getDay()]; const nema = !zatv && !t.some(x => !x.zauzet);
+    return `<button type="button" class="dan" data-dan="${iso(d)}" ${zatv || nema ? "disabled" : ""} aria-pressed="${st.dan === iso(d)}"
+      aria-label="${danTekst(d)}${zatv ? ", zatvoreno" : nema ? ", sve zauzeto" : ""}"><span>${i === 0 ? "danas" : DANI_K[d.getDay()]}</span><b>${d.getDate()}</b></button>`;
+  }).join("");
+  const box = $("#termini");
+  if (!st.dan){ box.innerHTML = `<p class="prazno">Izaberite dan.</p>`; return; }
+  const d = DANI.find(x => iso(x) === st.dan);
+  const t = privatniTermini(d, st.stil, st.instr, st.salaP);
+  if (!t.some(x => !x.zauzet)){ box.innerHTML = `<p class="prazno">Za ovaj dan nema slobodnih termina. Izaberite drugi dan, salu ili instruktora.</p>`; return; }
+  box.innerHTML = t.map(x => { const kljuc = `p|${st.dan}|${x.m}|${st.salaP}|${x.instr || ""}`; const sel = st.izbor && st.izbor.kljuc === kljuc;
+    return `<button type="button" class="termin" data-kljuc="${kljuc}" ${x.zauzet ? "disabled" : ""} aria-pressed="${!!sel}" aria-label="${hhmm(x.m)}${x.zauzet ? ", zauzeto" : ""}">${hhmm(x.m)}</button>`; }).join("");
+}
+function prikaziZbir(){
+  const i = st.izbor;
+  $("#zbirOpis").textContent = i ? `${nadji(STILOVI, st.stil).n}, ${i.vrsta === "grupni" ? "grupni čas" : "privatni čas"}, ${DANI_K[i.datum.getDay()]} ${i.datum.getDate()}. ${MESECI[i.datum.getMonth()]} u ${hhmm(i.m)}` : "Izaberite čas";
+  $("#zbirCena").textContent = rsd(i ? CENA[i.vrsta] : 0);
+}
+function izaberi(kljuc){
+  const [tip, dan, m, sala, instr] = kljuc.split("|");
+  const datum = DANI.find(x => iso(x) === dan);
+  if (tip === "g"){
+    const g = GRUPE.find(g => g.d === datum.getDay() && g.m === +m && g.sala === sala && g.stil === st.stil);
+    st.izbor = { kljuc, vrsta:"grupni", dan, datum, m:+m, sala, instr:g.instr, nivo:g.nivo };
+  } else {
+    st.izbor = { kljuc, vrsta:"privatni", dan, datum, m:+m, sala, instr };
+  }
+}
+
+/* ---------------- slanje, potvrda, .ics ---------------- */
+let zadnji = null;
+function posalji(){
+  const g = $("#greska"); const ime = $("#zIme").value.trim(); const tel = $("#zTel").value.replace(/\D/g, "");
+  let e = null, f = null;
+  if (!st.stil) e = "Izaberite stil.";
+  else if (!st.vrsta) e = "Izaberite grupni ili privatni čas.";
+  else if (!st.izbor) e = "Izaberite termin.";
+  else if (ime.length < 2){ e = "Upišite ime i prezime."; f = "#zIme"; }
+  else if (tel.length < 8){ e = "Upišite telefon (bar 8 cifara)."; f = "#zTel"; }
+  if (e){ g.textContent = e; if (f) $(f).focus(); return; }
+  g.textContent = "";
+  zadnji = { ...st.izbor, stil: st.stil, ime, tel: $("#zTel").value.trim(), nap: $("#zNap").value.trim(), pods: $("#zPods").checked };
+  const z = zadnji; const red = (k, v) => `<dt>${k}</dt><dd>${v}</dd>`;
+  $("#rezime").innerHTML =
+    red("Čas", `${nadji(STILOVI, z.stil).n}, ${z.vrsta === "grupni" ? "grupni čas, " + z.nivo : "privatni čas"}`) +
+    red("Instruktor", nadji(INSTR, z.instr).n) + red("Sala", nadji(SALE, z.sala).n) +
+    red("Dan", danTekst(z.datum)) + red("Vreme", `${hhmm(z.m)}–${hhmm(z.m + TRAJ[z.vrsta])}`) +
+    red("Trajanje", TRAJ[z.vrsta] + " min") + red("Cena", rsd(CENA[z.vrsta]) + ", plaća se u studiju") +
+    red("Ime", esc(z.ime)) + red("Telefon", esc(z.tel)) + (z.nap ? red("Napomena", esc(z.nap)) : "") +
+    red("Podsetnik", z.pods ? "SMS dan ranije u 10 h" : "bez podsetnika");
+  $("#modul").hidden = true;
+  const p = $("#potvrda"); p.hidden = false; p.focus();
+}
+const icsT = s => String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n");
+const utc = d => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+function ics(){
+  const z = zadnji; if (!z) return;
+  const start = new Date(z.datum); start.setHours(Math.floor(z.m / 60), z.m % 60, 0, 0);
+  const kraj = new Date(start.getTime() + TRAJ[z.vrsta] * 60000);
+  const naslov = `${FIRMA.naziv}: ${nadji(STILOVI, z.stil).n}, ${z.vrsta === "grupni" ? "grupni čas" : "privatni čas"}`;
+  const L = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//opsforma//ples-korak//SR", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+    "BEGIN:VEVENT", "UID:" + Date.now() + "-" + Math.floor(Math.random() * 1e6) + "@ples-korak.opsforma",
+    "DTSTAMP:" + utc(new Date()), "DTSTART:" + utc(start), "DTEND:" + utc(kraj),
+    "SUMMARY:" + icsT(naslov), "LOCATION:" + icsT(FIRMA.adresa),
+    "DESCRIPTION:" + icsT(`${nadji(SALE, z.sala).n}, instruktor: ${nadji(INSTR, z.instr).n}\nCena: ${rsd(CENA[z.vrsta])}, plaća se u studiju\nTelefon studija: 060 000 06 30`)];
+  if (z.pods) L.push("BEGIN:VALARM", "ACTION:DISPLAY", "DESCRIPTION:" + icsT("Sutra: " + naslov), "TRIGGER:-P1D", "END:VALARM");
+  L.push("END:VEVENT", "END:VCALENDAR");
+  const blob = new Blob([L.join("\r\n") + "\r\n"], { type: "text/calendar;charset=utf-8" });
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "termin-" + FIRMA.slug + ".ics";
+  document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+}
+function nova(){
+  Object.assign(st, { stil:null, vrsta:null, salaG:"sve", instr:"svejedno", salaP:"mala", dan:null, izbor:null });
+  ["#zIme", "#zTel", "#zNap"].forEach(s => $(s).value = ""); $("#zPods").checked = true;
+  $("#potvrda").hidden = true; $("#modul").hidden = false; prikazi();
+  $("#zakazivanje").scrollIntoView();
+}
+
+/* ---------------- događaji ---------------- */
+function fokus(sel){ const el = $(sel); if (el) el.focus(); }
+$("#modul").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b || b.disabled) return;
+  const ds = b.dataset;
+  if (ds.stil){ if (st.stil !== ds.stil){ st.izbor = null; st.dan = null; } st.stil = ds.stil; prikazi(); fokus(`[data-stil="${ds.stil}"]`); }
+  else if (ds.vrsta){ if (st.vrsta !== ds.vrsta){ st.izbor = null; } st.vrsta = ds.vrsta; prikazi(); fokus(`[data-vrsta="${ds.vrsta}"]`); }
+  else if (ds.salag){ st.salaG = ds.salag; st.izbor = null; prikazi(); fokus(`[data-salag="${ds.salag}"]`); }
+  else if (ds.instr){ st.instr = ds.instr; st.izbor = null; prikazi(); fokus(`[data-instr="${ds.instr}"]`); }
+  else if (ds.salap){ st.salaP = ds.salap; st.izbor = null; prikazi(); fokus(`[data-salap="${ds.salap}"]`); }
+  else if (ds.dan){ st.dan = ds.dan; st.izbor = null; prikazi(); fokus(`[data-dan="${ds.dan}"]`); }
+  else if (ds.kljuc){ izaberi(ds.kljuc); prikazi(); fokus(`[data-kljuc="${ds.kljuc}"]`); }
+});
+["#zIme", "#zTel"].forEach(s => $(s).addEventListener("input", napredak));
+$("#posalji").addEventListener("click", posalji);
+$("#icsBtn").addEventListener("click", ics);
+$("#novaBtn").addEventListener("click", nova);
+
+const mb = $("#menuBtn"), nav = $("#nav");
+function zatvori(){ nav.classList.remove("otvoren"); mb.setAttribute("aria-expanded", "false"); }
+mb.addEventListener("click", () => { const o = !nav.classList.contains("otvoren"); nav.classList.toggle("otvoren", o); mb.setAttribute("aria-expanded", String(o)); });
+nav.addEventListener("click", e => { if (e.target.closest("a")) zatvori(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && nav.classList.contains("otvoren")){ zatvori(); mb.focus(); } });
+
+$("#kontaktForma").addEventListener("submit", e => { e.preventDefault(); $("#formaPoruka").textContent = "Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku."; });
+const tr = $(`#sati tr[data-d="${new Date().getDay()}"]`); if (tr) tr.classList.add("danas");
+
+prikazi();
+window.__korak = { DANI, iso, GRUPE, RV, TRAJ, grupniCasovi, privatniTermini, st };
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title data-en="Escape room Šifra, Skadarska 30, Belgrade">Escape room Šifra, Skadarska 30, Beograd</title>
+<meta name="description" content="Escape room Šifra u Skadarskoj 30. Dve sobe za 2 do 6 igrača, 60 minuta igre, cena po timu. Zakažite termin online." data-en-content="Escape room Šifra at Skadarska 30, Belgrade. Two rooms for 2 to 6 players, 60 minutes of play, price per team. Book online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;600&family=Kanit:wght@300;400&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0A0A0A; --panel:#1C1C1C; --ac:#FFB000;
+  --fg:#E9E6DF; --mut:#9D998F; --line:#2B2B2B;
+  --head:"Jura","Eurostile","Segoe UI",sans-serif;
+  --text:"Kanit","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:300 15px/1.65 var(--text);overflow-wrap:break-word}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+h1,h2,h3{font-family:var(--head);font-weight:600;margin:0;letter-spacing:.01em}
+p{margin:0 0 1em}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* traka primera */
+.demobar{font-size:12.5px;color:var(--mut);border-bottom:1px solid var(--line)}
+.demobar .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;min-height:40px;padding-top:6px;padding-bottom:6px}
+.badge{font-family:var(--head);font-weight:600;font-size:12px;color:var(--bg);background:var(--ac);padding:2px 8px;border-radius:2px}
+.demobar a{color:var(--fg);margin-left:auto;padding:8px 0}
+
+/* zaglavlje */
+.hdr .wrap{display:flex;align-items:center;gap:16px;min-height:64px}
+.mark{font-family:var(--head);font-weight:600;font-size:20px;text-decoration:none;letter-spacing:.06em;display:flex;align-items:center;gap:10px;padding:8px 0}
+.mark svg{display:block}
+.nav{margin-left:auto}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:4px}
+.nav a{display:block;text-decoration:none;font-size:13.5px;color:var(--mut);padding:12px 10px}
+.nav a:hover{color:var(--fg)}
+.lang{display:flex;border:1px solid var(--line);border-radius:2px}
+.lang button{font:600 12px var(--head);background:none;border:0;color:var(--mut);min-width:44px;min-height:40px;cursor:pointer}
+.lang button[aria-pressed="true"]{color:var(--fg);background:var(--panel)}
+.menubtn{display:none;background:none;border:1px solid var(--line);color:var(--fg);font:600 13px var(--head);min-height:44px;min-width:64px;cursor:pointer;border-radius:2px}
+@media (max-width:860px){
+  .menubtn{display:block}
+  .nav{position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);display:none;margin:0}
+  .nav.open{display:block}
+  .nav ul{flex-direction:column;padding:8px 20px 16px}
+  .nav a{font-size:16px;padding:12px 0;color:var(--fg)}
+  .hdr{position:relative}
+  .lang{margin-left:auto}
+}
+
+/* hero */
+.hero{min-height:calc(100svh - 104px);display:grid;grid-template-rows:auto 1fr auto;padding:24px 0 28px;border-bottom:1px solid var(--line)}
+.corner{display:flex;justify-content:space-between;gap:16px;font-size:12.5px;color:var(--mut)}
+.corner span:last-child{text-align:right}
+.hero-mid{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 0}
+.lock{background:none;border:0;padding:12px;cursor:pointer;color:var(--fg);display:block;border-radius:4px}
+.lock svg{display:block;width:150px;height:auto;overflow:visible}
+.shackle{transition:transform .6s cubic-bezier(.3,.7,.2,1);transform-origin:96px 70px}
+.lock.open .shackle{transform:translateY(-16px) rotate(-14deg)}
+.lockbody{display:block;position:relative;width:150px;margin-top:-2px}
+.lockbody svg{width:150px}
+.wheels{position:absolute;left:23px;right:23px;top:34px;display:flex;justify-content:space-between}
+.wheel{width:30px;height:44px;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.wheel span{display:block;font:600 30px/44px var(--head);color:var(--fg);transition:transform .9s cubic-bezier(.3,.7,.2,1)}
+.wheel:nth-child(2) span{transition-delay:.12s}
+.wheel:nth-child(3) span{transition-delay:.24s}
+.lock.open .wheel span{color:var(--ac)}
+.lock-cap{font-size:12.5px;color:var(--mut);min-height:1.6em;margin:10px 0 36px}
+.hero h1{font-size:clamp(30px,7.4vw,54px);line-height:1.08;font-weight:400;max-width:15ch}
+.hero .lead{color:var(--mut);max-width:34ch;margin:18px auto 28px;font-size:15px}
+.ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;font:400 15px var(--text);text-decoration:none;border:1px solid #3A3A3A;color:var(--fg);background:none;border-radius:2px;cursor:pointer}
+.btn:hover{border-color:var(--mut)}
+.btn.pri{background:var(--ac);border-color:var(--ac);color:#0A0A0A}
+.btn.pri:hover{background:#ffc23d}
+
+/* sekcije */
+section.s{padding:96px 0;border-bottom:1px solid var(--line)}
+.col{max-width:620px;margin:0 auto}
+.s h2{font-size:24px;font-weight:600;margin-bottom:10px}
+.s .sub{color:var(--mut);font-size:14px;margin-bottom:40px;max-width:44ch}
+.room{padding:28px 0;border-top:1px solid var(--line)}
+.room:last-child{border-bottom:1px solid var(--line)}
+.room h3{font-size:22px;font-weight:400;margin-bottom:6px}
+.room dl{display:flex;flex-wrap:wrap;gap:4px 22px;margin:0 0 12px;font-size:13px;color:var(--mut)}
+.room dt{display:inline}.room dd{display:inline;margin:0 0 0 4px;color:var(--fg)}
+.room p{max-width:52ch;margin:0}
+table{border-collapse:collapse;width:100%}
+.price td,.price th{padding:14px 0;border-bottom:1px solid var(--line);text-align:left;font-weight:300}
+.price thead th{font-size:12.5px;color:var(--mut);padding-top:0}
+.price td:last-child,.price th:last-child{text-align:right;font-family:var(--head);font-weight:600}
+.price tbody td:last-child{font-size:18px}
+.note{font-size:13px;color:var(--mut);margin-top:22px}
+
+/* zakazivanje */
+.book .head{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-bottom:10px}
+.book .head h2{margin:0}
+.fake{display:inline-block;font-size:12.5px;color:var(--ac);border:1px solid #4A3A10;padding:3px 9px;border-radius:2px}
+.step{margin-top:40px}
+.step h3{font:400 13px var(--text);color:var(--mut);margin-bottom:12px}
+.step h3 b{font-family:var(--head);font-weight:600;color:var(--fg);margin-right:8px}
+.rooms{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.opt{background:none;border:1px solid var(--line);color:var(--fg);font:300 14px/1.4 var(--text);text-align:left;padding:14px;min-height:56px;cursor:pointer;border-radius:2px}
+.opt strong{display:block;font:600 17px var(--head)}
+.opt small{color:var(--mut);font-size:12.5px}
+.opt[aria-pressed="true"]{border-color:var(--ac);background:var(--panel)}
+.opt:disabled{opacity:.35;cursor:not-allowed}
+.players{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.players .opt{text-align:center;padding:10px 4px}
+.players .opt strong{font-size:20px}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.day{background:none;border:1px solid var(--line);color:var(--fg);min-height:58px;padding:6px 0;cursor:pointer;border-radius:2px;font:300 12px/1.3 var(--text)}
+.day b{display:block;font:600 18px var(--head)}
+.day[aria-pressed="true"]{border-color:var(--ac);background:var(--panel)}
+.day:disabled{color:#5A5852;border-style:dashed;cursor:not-allowed;text-decoration:line-through}
+.times{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px}
+.slot{background:none;border:1px solid var(--line);color:var(--fg);min-height:48px;cursor:pointer;border-radius:2px;font:600 15px var(--head);display:flex;align-items:center;justify-content:space-between;gap:6px;padding:0 12px;white-space:nowrap}
+.slot small{font:300 11.5px var(--text);color:var(--mut)}
+.slot[aria-pressed="true"]{border-color:var(--ac);background:var(--panel)}
+.slot:disabled{cursor:not-allowed;color:#5A5852}
+.slot:disabled span{text-decoration:line-through}
+.empty{grid-column:1/-1;font-size:13.5px;color:var(--mut);margin:0}
+.fields{display:grid;gap:14px}
+.fld label{display:block;font-size:13px;color:var(--mut);margin-bottom:6px}
+.fld input,.fld textarea{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--fg);font:300 16px var(--text);padding:12px;min-height:48px;border-radius:2px}
+.fld textarea{min-height:90px;resize:vertical}
+.fld input:focus,.fld textarea:focus{border-color:var(--mut)}
+.sum{margin-top:32px;padding:18px 0;border-top:1px solid var(--line);font-size:14px;color:var(--mut)}
+.sum strong{color:var(--fg);font-weight:400}
+.err{color:#FF8A7A;font-size:13.5px;min-height:1.4em;margin:10px 0}
+.confirm{display:none}
+.confirm.show{display:block}
+.confirm h3{font-size:26px;font-weight:400;margin-bottom:8px}
+.confirm dl{display:grid;grid-template-columns:auto 1fr;gap:10px 22px;margin:28px 0;font-size:14px}
+.confirm dt{color:var(--mut)}
+.confirm dd{margin:0}
+.confirm .ctas{justify-content:flex-start}
+
+/* vreme i kontakt */
+.hours td{padding:12px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;font-family:var(--head);font-weight:600}
+.hours tr.today td{color:var(--ac)}
+.addr{margin:40px 0 18px}
+.map{width:100%;height:300px;border:1px solid var(--line);filter:grayscale(1) invert(.9) contrast(.9);display:block}
+.rev{margin-top:22px;font-size:14px}
+.rev a{color:var(--fg);text-underline-offset:4px;padding:10px 0;display:inline-block}
+.rev p{font-size:12.5px;color:var(--mut);margin:0}
+.kform{display:grid;gap:14px;margin-top:8px}
+.kform .btn{justify-self:start}
+.kmsg{font-size:14px;color:var(--ac);min-height:1.5em}
+footer{padding:48px 0 64px;font-size:12.5px;color:var(--mut)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between}
+footer a{padding:8px 0}
+
+@media (min-width:860px){
+  body{font-size:14.5px}
+  section.s{padding:128px 0}
+  .hero{padding:32px 0 36px}
+  .rooms{gap:12px}
+  .opt{padding:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demobar">
+  <div class="wrap">
+    <span data-en="Sample website · made by opsforma">Primer sajta · izradio opsforma</span>
+    <span class="badge">Paket 3: Plus</span>
+    <a href="../../" data-en="All samples">Svi primeri</a>
+  </div>
+</div>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="mark" href="#pocetak" aria-label="Šifra, početak">
+      <svg width="16" height="20" viewBox="0 0 16 20" aria-hidden="true"><path d="M3.5 9V6a4.5 4.5 0 0 1 9 0v3" fill="none" stroke="#FFB000" stroke-width="1.4"/><rect x="1" y="9" width="14" height="10" rx="1" fill="none" stroke="#E9E6DF" stroke-width="1.4"/></svg>
+      Šifra
+    </a>
+    <nav class="nav" id="glavni-meni" aria-label="Glavni meni" data-en-aria-label="Main menu">
+      <ul>
+        <li><a href="#sobe" data-en="Rooms">Sobe</a></li>
+        <li><a href="#cene" data-en="Prices">Cene</a></li>
+        <li><a href="#zakazivanje" data-en="Booking">Zakazivanje</a></li>
+        <li><a href="#radno-vreme" data-en="Hours and map">Radno vreme</a></li>
+        <li><a href="#kontakt" data-en="Contact">Kontakt</a></li>
+      </ul>
+    </nav>
+    <div class="lang" role="group" aria-label="Jezik / Language">
+      <button type="button" data-lang="sr" aria-pressed="true">SR</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="menubtn" type="button" aria-expanded="false" aria-controls="glavni-meni" data-en="Menu">Meni</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="pocetak">
+    <div class="wrap corner">
+      <span data-en="Skadarska 30, Stari grad">Skadarska 30, Stari grad</span>
+      <span id="openNow"></span>
+    </div>
+
+    <div class="wrap hero-mid">
+      <button class="lock" id="lock" type="button" aria-pressed="false" aria-describedby="lockCap" aria-label="Otključajte bravu" data-en-aria-label="Unlock the padlock">
+        <svg viewBox="0 0 150 76" aria-hidden="true">
+          <path class="shackle" d="M38 76V42a37 37 0 0 1 74 0v34" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        <span class="lockbody">
+          <svg viewBox="0 0 150 112" aria-hidden="true"><rect x=".75" y=".75" width="148.5" height="110.5" rx="6" fill="#0A0A0A" stroke="currentColor" stroke-width="1.5"/><line x1="75" y1="92" x2="75" y2="100" stroke="#FFB000" stroke-width="1.5"/></svg>
+          <span class="wheels">
+            <span class="wheel"><span data-d="0">0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</span></span>
+            <span class="wheel"><span data-d="1">0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</span></span>
+            <span class="wheel"><span data-d="2">0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</span></span>
+          </span>
+        </span>
+      </button>
+      <p class="lock-cap" id="lockCap" aria-live="polite"></p>
+
+      <h1 data-en="You have one hour to get out.">Imate sat vremena da izađete.</h1>
+      <p class="lead" data-en="An escape room at Skadarska 30. Two rooms for 2 to 6 players, the price is per team. We lock the door, the rest is up to you.">Escape room u Skadarskoj 30. Dve sobe za 2 do 6 igrača, cena je po timu. Mi zaključamo vrata, ostalo je na Vama.</p>
+      <div class="ctas">
+        <a class="btn pri" href="#zakazivanje" data-en="Book a slot">Zakažite termin</a>
+        <a class="btn" href="tel:+381600000626" data-en="Call 060 000 06 26">Pozovite 060 000 06 26</a>
+        <a class="btn" href="viber://chat?number=%2B381600000626">Viber</a>
+      </div>
+    </div>
+
+    <div class="wrap corner">
+      <span data-en="2 rooms · 2 to 6 players">2 sobe · 2 do 6 igrača</span>
+      <span data-en="from 4,400 RSD per team">od 4.400 RSD po timu</span>
+    </div>
+  </section>
+
+  <section class="s" id="sobe">
+    <div class="wrap"><div class="col">
+      <h2 data-en="Two rooms">Dve sobe</h2>
+      <p class="sub" data-en="Both are played in Serbian or English. No physical strength needed, just attention and teamwork.">Obe se igraju na srpskom ili engleskom. Ne treba snaga, treba pažnja i dogovor.</p>
+
+      <article class="room">
+        <h3 data-en="The Archive">Arhiva</h3>
+        <dl>
+          <div><dt data-en="Difficulty">Težina</dt><dd data-en="medium">srednja</dd></div>
+          <div><dt data-en="Players">Igrači</dt><dd>2–5</dd></div>
+          <div><dt data-en="Good for">Za</dt><dd data-en="first-timers">prvi put</dd></div>
+        </dl>
+        <p data-en="The archive of a Belgrade newspaper that closed long ago. The folders lead to a safe nobody has opened since 1989.">Arhiva jednog beogradskog lista koji se davno ugasio. Fascikle vode do sefa koji niko nije otvorio od 1989.</p>
+      </article>
+
+      <article class="room">
+        <h3 data-en="Cellar 1937">Podrum 1937</h3>
+        <dl>
+          <div><dt data-en="Difficulty">Težina</dt><dd data-en="hard">teška</dd></div>
+          <div><dt data-en="Players">Igrači</dt><dd>3–6</dd></div>
+          <div><dt data-en="Good for">Za</dt><dd data-en="teams who have played before">timove koji su već igrali</dd></div>
+        </dl>
+        <p data-en="A wine cellar under Skadarlija. Locks on the barrels, clues in the labels and a door that does not like to be rushed.">Vinski podrum ispod Skadarlije. Brave na buradima, tragovi u etiketama i vrata koja ne vole žurbu.</p>
+      </article>
+    </div></div>
+  </section>
+
+  <section class="s" id="cene">
+    <div class="wrap"><div class="col">
+      <h2 data-en="Price per team">Cena po timu</h2>
+      <p class="sub" data-en="Same for both rooms. A slot lasts 75 minutes: 10 minutes of briefing, 60 minutes of play and a few minutes for a photo at the end.">Ista za obe sobe. Termin traje 75 minuta: 10 minuta uputstva, 60 minuta igre i par minuta za fotografiju na kraju.</p>
+      <table class="price" id="priceTable">
+        <thead><tr><th scope="col" data-en="Team">Tim</th><th scope="col" data-en="Price">Cena</th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <p class="note" data-en="You pay on site, in cash or by card. Children from 10 years old play with an adult. Please arrive 10 minutes early.">Plaća se na licu mesta, gotovinom ili karticom. Deca od 10 godina igraju uz odraslu osobu. Dođite 10 minuta ranije.</p>
+    </div></div>
+  </section>
+
+  <section class="s book" id="zakazivanje">
+    <div class="wrap"><div class="col">
+<!--
+  PRODUKCIJA
+  Ovaj modul u demou radi samo u pregledaču: termini i zauzetost su izmišljeni
+  (determinističan pseudo-slučaj iz datuma i sobe), ništa se ne šalje.
+  Varijanta a, zahtev za termin: forma šalje rezime (soba, broj igrača, dan, vreme, ime,
+    telefon, napomena) na vlasnikov mejl preko Web3Forms
+    (POST https://api.web3forms.com/submit, skriveno polje access_key) ili otvara
+    Viber poruku sa istim rezimeom; vlasnik potvrđuje termin pozivom ili porukom.
+  Varijanta b, povezan kalendar: umesto ovog modula ugrađuje se Google Kalendar
+    „Appointment schedule“ (posebna stranica za svaku sobu), Cal.com ili Calendly embed.
+    Termini se sami upisuju u vlasnikov Google Kalendar na telefonu, a zauzeti termini
+    nestaju sa sajta.
+  Paket 3: dve sobe = dva kalendara, podsetnik dan ranije šalje kalendar ili Cal.com.
+-->
+      <div class="head">
+        <h2 data-en="Book a slot">Zakažite termin</h2>
+        <span class="badge">Paket 3: Plus</span>
+      </div>
+      <p class="fake" data-en="Sample: the slots are made up">Primer: termini su izmišljeni</p>
+
+      <div id="flow">
+        <div class="step">
+          <h3><b>1</b><span data-en="Room">Soba</span></h3>
+          <div class="rooms" id="roomOpts"></div>
+        </div>
+        <div class="step">
+          <h3><b>2</b><span data-en="Number of players, price per team">Broj igrača, cena po timu</span></h3>
+          <div class="players" id="playerOpts"></div>
+        </div>
+        <div class="step">
+          <h3><b>3</b><span data-en="Day (closed on Sundays)">Dan (nedeljom ne radimo)</span></h3>
+          <div class="days" id="dayOpts"></div>
+        </div>
+        <div class="step">
+          <h3><b>4</b><span data-en="Start time, 75 minutes">Početak, 75 minuta</span></h3>
+          <div class="times" id="timeOpts" aria-live="polite"></div>
+        </div>
+        <form class="step" id="bookForm" novalidate>
+          <h3><b>5</b><span data-en="Who is coming">Ko dolazi</span></h3>
+          <div class="fields">
+            <div class="fld"><label for="bIme" data-en="Name">Ime i prezime</label><input id="bIme" name="ime" autocomplete="name"></div>
+            <div class="fld"><label for="bTel" data-en="Phone">Telefon</label><input id="bTel" name="telefon" type="tel" autocomplete="tel" inputmode="tel"></div>
+            <div class="fld"><label for="bNap" data-en="Note (optional)">Napomena (nije obavezno)</label><textarea id="bNap" name="napomena"></textarea></div>
+          </div>
+          <p class="sum" id="sum" aria-live="polite"></p>
+          <p class="err" id="bErr" role="alert"></p>
+          <button class="btn pri" type="submit" data-en="Send booking">Pošaljite zakazivanje</button>
+        </form>
+      </div>
+
+      <div class="confirm" id="confirm" tabindex="-1">
+        <h3 data-en="Your slot is booked.">Termin je zakazan.</h3>
+        <p class="note" data-en="On the real site the confirmation also arrives by email. You pay on site.">Na pravom sajtu potvrda stiže i mejlom. Plaća se na licu mesta.</p>
+        <dl id="confirmList"></dl>
+        <div class="ctas">
+          <button class="btn pri" type="button" id="icsBtn" data-en="Add to calendar">Dodaj u kalendar</button>
+          <button class="btn" type="button" id="newBtn" data-en="New booking">Novi termin</button>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="s" id="radno-vreme">
+    <div class="wrap"><div class="col">
+      <h2 data-en="Opening hours">Radno vreme</h2>
+      <p class="sub" data-en="Last start is 75 minutes before closing.">Poslednji početak je 75 minuta pre zatvaranja.</p>
+      <table class="hours" id="hoursTable"><tbody></tbody></table>
+      <p class="addr" data-en="Skadarska 30, Stari grad. The entrance is in the courtyard, the second door on the left.">Skadarska 30, Stari grad. Ulaz je iz dvorišta, druga vrata levo.</p>
+      <iframe class="map" title="Mapa: Skadarska 30, Beograd" data-en-title="Map: Skadarska 30, Belgrade" loading="lazy" src="https://maps.google.com/maps?q=Skadarska%2030%2C%20Beograd&amp;z=15&amp;output=embed"></iframe>
+      <div class="rev">
+        <a href="https://maps.google.com/maps?q=Skadarska%2030%2C%20Beograd" target="_blank" rel="noopener" data-en="Read what players say on Google">Pročitajte šta igrači kažu na Google-u</a>
+        <p data-en="In this sample the link opens the map of the address; on the real site it opens the business’s Google reviews.">U primeru link vodi na mapu adrese, a na pravom sajtu vodi na Google recenzije firme.</p>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="s" id="kontakt">
+    <div class="wrap"><div class="col">
+      <h2 data-en="Birthdays, team building, questions">Rođendani, timbilding, pitanja</h2>
+      <p class="sub" data-en="Write to us and we will reply the same day. For a quick answer, call or send a Viber message.">Pišite nam i odgovaramo istog dana. Za brz odgovor pozovite ili pošaljite Viber poruku.</p>
+      <!--
+        PRODUKCIJA: forma ide preko Web3Forms na vlasnikov mejl:
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="VLASNIKOV-KLJUČ">
+          ... ista polja ...
+        </form>
+      -->
+      <form class="kform" data-form="kontakt" novalidate>
+        <div class="fld"><label for="kIme" data-en="Name">Ime</label><input id="kIme" name="ime" autocomplete="name"></div>
+        <div class="fld"><label for="kKontakt" data-en="Email or phone">Mejl ili telefon</label><input id="kKontakt" name="kontakt"></div>
+        <div class="fld"><label for="kPoruka" data-en="Message">Poruka</label><textarea id="kPoruka" name="poruka"></textarea></div>
+        <button class="btn pri" type="submit" data-en="Send message">Pošaljite poruku</button>
+        <p class="kmsg" id="kMsg" aria-live="polite"></p>
+      </form>
+    </div></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><span data-en="Sample website · made by opsforma.">Primer sajta · izradio opsforma.</span> <span data-en="The business, prices, slots and phone number are made up.">Firma, cene, termini i broj telefona su izmišljeni.</span></span>
+    <a href="../../" data-en="All samples">Svi primeri</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+const SLUG = "escape-sifra", FIRMA = "Escape room Šifra", ADRESA = "Skadarska 30, Beograd";
+let LANG = "sr";
+const t = (sr, en) => LANG === "en" ? en : sr;
+
+/* radno vreme: [otvaranje, zatvaranje] u minutima, null = zatvoreno; 0 = nedelja */
+const HOURS = {0:null, 1:[840,1380], 2:[840,1380], 3:[840,1380], 4:[840,1380], 5:[720,1440], 6:[600,1440]};
+const DUR = 75;
+const ROOMS = [
+  {id:"arhiva", sr:"Arhiva", en:"The Archive", min:2, max:5, offset:0, srd:"srednja", end:"medium"},
+  {id:"podrum", sr:"Podrum 1937", en:"Cellar 1937", min:3, max:6, offset:30, srd:"teška", end:"hard"}
+];
+const PRICES = {2:4400, 3:5100, 4:5800, 5:6400, 6:6900};
+
+const DN = {sr:["nedelja","ponedeljak","utorak","sreda","četvrtak","petak","subota"], en:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]};
+const DS = {sr:["ned","pon","uto","sre","čet","pet","sub"], en:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]};
+const MN = {sr:["januara","februara","marta","aprila","maja","juna","jula","avgusta","septembra","oktobra","novembra","decembra"], en:["January","February","March","April","May","June","July","August","September","October","November","December"]};
+
+const $ = s => document.querySelector(s);
+const pad = n => String(n).padStart(2, "0");
+const hm = m => (m >= 1440 ? "00" : pad(Math.floor(m/60))) + ":" + pad(m%60);
+const rsd = n => (LANG === "en" ? String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ",") : String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ".")) + " RSD";
+const ymd = d => d.getFullYear() + "-" + pad(d.getMonth()+1) + "-" + pad(d.getDate());
+const dateLong = d => LANG === "en" ? DN.en[d.getDay()] + ", " + d.getDate() + " " + MN.en[d.getMonth()] : DN.sr[d.getDay()] + ", " + d.getDate() + ". " + MN.sr[d.getMonth()];
+const roomName = r => LANG === "en" ? r.en : r.sr;
+
+function hash(s){ let h = 2166136261; for (let i = 0; i < s.length; i++){ h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } h ^= h >>> 13; h = Math.imul(h, 0x5bd1e995); h ^= h >>> 15; return (h >>> 0) / 4294967296; }
+
+/* 14 dana od danas */
+const today = new Date(); today.setHours(0,0,0,0);
+const DAYS = [];
+for (let i = 0; i < 14; i++){ const d = new Date(today); d.setDate(today.getDate() + i); DAYS.push(d); }
+
+function slotsFor(day, room){
+  const h = HOURS[day.getDay()];
+  if (!h) return [];
+  const now = new Date(), isToday = ymd(day) === ymd(now);
+  const nowMin = now.getHours()*60 + now.getMinutes();
+  const out = [];
+  for (let m = h[0] + room.offset; m + DUR <= h[1]; m += DUR){
+    if (isToday && m <= nowMin) continue;
+    out.push({m, busy: hash(ymd(day) + "|" + room.id + "|" + m) < 0.38});
+  }
+  return out;
+}
+
+const S = {room: ROOMS[0], players: 4, day: null, time: null, done: null};
+
+function render(){
+  /* sobe */
+  $("#roomOpts").innerHTML = ROOMS.map(r => `<button type="button" class="opt" data-room="${r.id}" aria-pressed="${S.room === r}"><strong>${roomName(r)}</strong><small>${r.min}–${r.max} ${t("igrača","players")}, ${t(r.srd, r.end)}</small></button>`).join("");
+  /* igrači */
+  $("#playerOpts").innerHTML = [2,3,4,5,6].map(n => { const ok = n >= S.room.min && n <= S.room.max;
+    return `<button type="button" class="opt" data-pl="${n}" aria-pressed="${S.players === n}" ${ok ? "" : "disabled"} aria-label="${n} ${t("igrača","players")}, ${rsd(PRICES[n])}"><strong>${n}</strong><small>${rsd(PRICES[n]).replace(" RSD", "")}</small></button>`; }).join("");
+  /* dani */
+  $("#dayOpts").innerHTML = DAYS.map(d => { const id = ymd(d); const sl = slotsFor(d, S.room); const closed = !HOURS[d.getDay()] || !sl.length;
+    return `<button type="button" class="day" data-day="${id}" aria-pressed="${S.day === id}" ${closed ? "disabled" : ""} aria-label="${dateLong(d)}${closed ? ", " + t("zatvoreno","closed") : ""}">${DS[LANG][d.getDay()]}<b>${d.getDate()}</b></button>`; }).join("");
+  /* termini */
+  const box = $("#timeOpts");
+  if (!S.day){ box.innerHTML = `<p class="empty">${t("Izaberite dan da vidite slobodne termine.","Choose a day to see free slots.")}</p>`; }
+  else {
+    const d = DAYS.find(x => ymd(x) === S.day);
+    const sl = slotsFor(d, S.room);
+    box.innerHTML = sl.map(s => `<button type="button" class="slot" data-time="${s.m}" aria-pressed="${S.time === s.m}" ${s.busy ? "disabled" : ""}><span>${hm(s.m)}–${hm(s.m + DUR)}</span><small>${s.busy ? t("zauzeto","taken") : (S.time === s.m ? t("izabrano","chosen") : "")}</small></button>`).join("") || `<p class="empty">${t("Za ovaj dan nema više termina.","No more slots on this day.")}</p>`;
+  }
+  /* rezime */
+  const d = S.day && DAYS.find(x => ymd(x) === S.day);
+  $("#sum").innerHTML = `${t("Soba","Room")}: <strong>${roomName(S.room)}</strong>, ${S.players} ${t("igrača","players")}, <strong>${rsd(PRICES[S.players])}</strong>` +
+    (d ? `<br>${dateLong(d)}${S.time !== null ? ", <strong>" + hm(S.time) + "–" + hm(S.time + DUR) + "</strong>" : ""}` : "");
+  if (S.done) renderConfirm();
+}
+
+function renderConfirm(){
+  const c = S.done, d = DAYS.find(x => ymd(x) === c.day);
+  const rows = [[t("Soba","Room"), roomName(c.room)], [t("Igrači","Players"), String(c.players)], [t("Dan","Day"), dateLong(d)], [t("Vreme","Time"), hm(c.time) + "–" + hm(c.time + DUR)], [t("Trajanje","Duration"), DUR + " min"], [t("Cena po timu","Price per team"), rsd(PRICES[c.players])], [t("Ime","Name"), c.ime], [t("Telefon","Phone"), c.tel]];
+  if (c.nap) rows.push([t("Napomena","Note"), c.nap]);
+  const esc = s => s.replace(/[&<>"]/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));
+  $("#confirmList").innerHTML = rows.map(r => `<dt>${r[0]}</dt><dd>${esc(r[1])}</dd>`).join("");
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b || b.disabled) return;
+  if (b.dataset.room){ S.room = ROOMS.find(r => r.id === b.dataset.room); S.players = Math.min(Math.max(S.players, S.room.min), S.room.max); S.time = null;
+    if (S.day && !slotsFor(DAYS.find(x => ymd(x) === S.day), S.room).length) S.day = null; render(); }
+  else if (b.dataset.pl){ S.players = +b.dataset.pl; render(); }
+  else if (b.dataset.day){ S.day = b.dataset.day; S.time = null; render(); }
+  else if (b.dataset.time){ S.time = +b.dataset.time; render(); $("#bIme").focus({preventScroll:true}); }
+});
+
+$("#bookForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const ime = $("#bIme").value.trim(), tel = $("#bTel").value.trim(), err = [];
+  if (!S.day || S.time === null) err.push(t("izaberite dan i vreme","choose a day and time"));
+  if (ime.length < 2) err.push(t("upišite ime","enter your name"));
+  if (tel.replace(/\D/g, "").length < 8) err.push(t("upišite telefon","enter your phone number"));
+  if (err.length){ $("#bErr").textContent = t("Nedostaje: ","Missing: ") + err.join(", ") + "."; return; }
+  $("#bErr").textContent = "";
+  S.done = {room:S.room, players:S.players, day:S.day, time:S.time, ime, tel, nap:$("#bNap").value.trim()};
+  renderConfirm();
+  $("#flow").hidden = true; $("#confirm").classList.add("show"); $("#confirm").focus();
+});
+
+$("#newBtn").addEventListener("click", () => {
+  S.done = null; S.time = null; S.day = null; $("#bookForm").reset();
+  $("#confirm").classList.remove("show"); $("#flow").hidden = false; render();
+  $("#roomOpts button").focus();
+});
+
+$("#icsBtn").addEventListener("click", () => {
+  const c = S.done; if (!c) return;
+  const [y, mo, da] = c.day.split("-").map(Number);
+  const start = new Date(y, mo-1, da, 0, c.time), end = new Date(start.getTime() + DUR*60000);
+  const z = d => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+  const esc = s => s.replace(/\\/g, "\\\\").replace(/[,;]/g, m => "\\" + m).replace(/\n/g, "\\n");
+  const ics = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//opsforma//escape-sifra//SR","CALSCALE:GREGORIAN","METHOD:PUBLISH","BEGIN:VEVENT",
+    "UID:" + Date.now() + "-" + Math.floor(Math.random()*1e6) + "@escape-sifra.primer",
+    "DTSTAMP:" + z(new Date()), "DTSTART:" + z(start), "DTEND:" + z(end),
+    "SUMMARY:" + esc(FIRMA + ": " + c.room.sr + " (" + c.players + " igrača)"),
+    "LOCATION:" + esc(ADRESA),
+    "DESCRIPTION:" + esc("Cena po timu " + rsd(PRICES[c.players]) + ". Dođite 10 minuta ranije. Tel. 060 000 06 26"),
+    "END:VEVENT","END:VCALENDAR"].join("\r\n") + "\r\n";
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([ics], {type:"text/calendar;charset=utf-8"}));
+  a.download = "termin-" + SLUG + ".ics";
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+});
+
+/* cene i radno vreme */
+function renderStatic(){
+  $("#priceTable tbody").innerHTML = [2,3,4,5,6].map(n => `<tr><td>${n} ${t("igrača","players")}</td><td>${rsd(PRICES[n])}</td></tr>`).join("");
+  const order = [1,2,3,4,5,6,0], td = new Date().getDay();
+  $("#hoursTable tbody").innerHTML = order.map(i => `<tr class="${i === td ? "today" : ""}"><td>${DN[LANG][i].charAt(0).toUpperCase() + DN[LANG][i].slice(1)}</td><td>${HOURS[i] ? hm(HOURS[i][0]) + "–" + (HOURS[i][1] >= 1440 ? "24:00" : hm(HOURS[i][1])) : t("zatvoreno","closed")}</td></tr>`).join("");
+  const now = new Date(), h = HOURS[now.getDay()], m = now.getHours()*60 + now.getMinutes();
+  $("#openNow").textContent = h && m >= h[0] && m < h[1] ? t("Sada otvoreno, do ","Open now, until ") + (h[1] >= 1440 ? "24:00" : hm(h[1])) : t("Sada zatvoreno","Closed now");
+  lockCaption();
+}
+
+/* brava: klik okreće točkiće na šifru i otvara */
+const lock = $("#lock"), CODE = [0,3,0], START = [4,7,1];
+const wheels = [...document.querySelectorAll(".wheel > span")];
+function setWheels(arr){ wheels.forEach((w, i) => w.style.transform = `translateY(${-arr[i]*44}px)`); }
+setWheels(START);
+function lockCaption(){
+  const open = lock.classList.contains("open");
+  $("#lockCap").textContent = open ? t("Otključano. Šifra je 0-3-0, kao kućni broj.","Unlocked. The code is 0-3-0, like the house number.") : t("Kliknite na bravu.","Click the padlock.");
+}
+lock.addEventListener("click", () => {
+  const open = !lock.classList.contains("open");
+  lock.classList.toggle("open", open); lock.setAttribute("aria-pressed", String(open));
+  setWheels(open ? CODE : START); lockCaption();
+});
+
+/* kontakt forma */
+document.querySelector('form[data-form="kontakt"]').addEventListener("submit", e => {
+  e.preventDefault();
+  $("#kMsg").textContent = t("Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.","This is a sample website. On the real site the message goes straight to the owner.");
+});
+
+/* meni */
+const mb = document.querySelector(".menubtn"), nav = document.getElementById("glavni-meni");
+function setMenu(open){ mb.setAttribute("aria-expanded", String(open)); nav.classList.toggle("open", open); }
+mb.addEventListener("click", () => setMenu(mb.getAttribute("aria-expanded") !== "true"));
+nav.addEventListener("click", e => { if (e.target.closest("a")) setMenu(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && mb.getAttribute("aria-expanded") === "true"){ setMenu(false); mb.focus(); } });
+
+/* jezik: data-en sadrži engleski tekst, srpski se pamti pri prvoj promeni */
+function setLang(l){
+  LANG = l; document.documentElement.lang = l;
+  document.querySelectorAll("[data-en]").forEach(el => { if (el.dataset.sr === undefined) el.dataset.sr = el.innerHTML; el.innerHTML = l === "en" ? el.dataset.en : el.dataset.sr; });
+  ["aria-label","title","content"].forEach(a => document.querySelectorAll(`[data-en-${a}]`).forEach(el => {
+    const k = "sr" + a.replace(/-./g, x => x[1].toUpperCase());
+    if (el.dataset[k] === undefined) el.dataset[k] = el.getAttribute(a);
+    el.setAttribute(a, l === "en" ? el.getAttribute(`data-en-${a}`) : el.dataset[k]);
+  }));
+  document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === l)));
+  renderStatic(); render();
+}
+document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+
+renderStatic(); render();
+})();
+</script>
+</body>
+</html>

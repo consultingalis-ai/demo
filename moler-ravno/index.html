@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Moler Ravno · krečenje i gletovanje, Voždovac</title>
+<meta name="description" content="Krečenje, gletovanje i sanacija pukotina na Voždovcu. Cena po kvadratu poznata pre početka, podove i nameštaj pokrivamo, posle rada čistimo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;600&family=Noticia+Text:wght@400;700&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --zid:#F4F1EA;
+  --antracit:#2A2A2A;
+  --terakota:#B85C38;
+  --siva:#5E5A52;
+  --linija:#D8D2C6;
+  --platno:#F4F1EA;
+  --platno-tekst:#2A2A2A;
+  --naslov:"Host Grotesk","Helvetica Neue",Arial,sans-serif;
+  --tekst:"Noticia Text",Georgia,"Times New Roman",serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--zid);color:var(--antracit);font-family:var(--tekst);font-size:1.0625rem;line-height:1.7}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--terakota);outline-offset:3px}
+h2,h3,.znak,.dugme,.nav,.demo-bar,.demo-foot,.cena-red,.uzorci,label,.menu-btn{font-family:var(--naslov)}
+
+.demo-bar{background:var(--antracit);color:var(--zid);font-size:.8125rem;padding:.55rem 20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.25rem 1rem;line-height:1.5}
+.demo-bar a{color:var(--zid)}
+.demo-bar a:focus-visible{outline-color:var(--zid)}
+
+/* platno: levo, naslov dole */
+.platno{background:var(--platno);color:var(--platno-tekst);min-height:calc(100svh - 36px);display:flex;flex-direction:column;padding:20px 20px 28px;transition:background-color .5s ease,color .5s ease;position:relative}
+.platno-vrh{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.znak{text-decoration:none;display:flex;flex-direction:column;line-height:1.15}
+.znak b{font-weight:600;font-size:1.25rem;letter-spacing:-.01em}
+.znak span{font-size:.875rem;opacity:.85}
+.menu-btn{font-size:.9375rem;background:transparent;color:inherit;border:1px solid currentColor;min-height:44px;min-width:44px;padding:0 1rem;cursor:pointer}
+.menu-btn .z{display:none}
+.menu-btn[aria-expanded="true"] .o{display:none}
+.menu-btn[aria-expanded="true"] .z{display:inline}
+
+.uzorci{margin-top:auto;padding-top:2.5rem}
+.uzorci p{margin:0 0 .75rem;font-size:.875rem}
+.uzorci ul{list-style:none;margin:0;padding:0;display:flex;gap:.75rem}
+.uzorak{font:inherit;font-size:.8125rem;color:inherit;background:transparent;border:0;padding:0;cursor:pointer;display:flex;flex-direction:column;gap:.4rem;text-align:left;min-width:64px}
+.uzorak i{display:block;width:64px;height:76px;background:var(--b);border:1px solid rgba(127,120,110,.55)}
+.uzorak[aria-pressed="true"] i{outline:2px solid currentColor;outline-offset:3px}
+.uzorak span{line-height:1.2}
+
+.platno h1{font-family:var(--naslov);font-weight:600;font-size:clamp(3.4rem,20vw,6rem);line-height:.92;letter-spacing:-.045em;margin:2.25rem 0 0;padding-bottom:.12em}
+
+/* meni */
+.nav{display:none}
+.nav.otvoren{display:block;position:fixed;inset:0 0 auto 0;top:0;background:var(--zid);color:var(--antracit);z-index:20;padding:120px 20px 24px;border-bottom:1px solid var(--linija)}
+.nav ul{list-style:none;margin:0;padding:0}
+.nav a{display:flex;align-items:center;min-height:52px;text-decoration:none;font-size:1.25rem;border-bottom:1px solid var(--linija)}
+.platno .menu-btn[aria-expanded="true"]{position:relative;z-index:21;color:var(--antracit);background:var(--zid)}
+
+/* desna kolona */
+.kolona{padding:0 20px}
+.blok{padding:56px 0;border-top:1px solid var(--linija)}
+.blok:first-child{border-top:0}
+.kolona h2{font-weight:600;font-size:1.625rem;line-height:1.2;letter-spacing:-.015em;margin:0 0 1.25rem}
+.kolona p{margin:0 0 1rem;max-width:36em}
+.uvod{font-size:1.1875rem;line-height:1.65}
+.akcije{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
+.dugme{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 1.25rem;font-size:1rem;font-weight:600;text-decoration:none;border:1px solid var(--antracit);color:var(--antracit);background:transparent;cursor:pointer}
+.dugme.glavno{background:var(--terakota);border-color:var(--terakota);color:#FFFFFF}
+.dugme:hover{background:var(--antracit);color:var(--zid);border-color:var(--antracit)}
+
+.foto{margin:2.5rem 0 0;aspect-ratio:4/3;background:#E7E1D5;display:flex;align-items:flex-end;padding:.75rem;font-family:var(--naslov);font-size:.8125rem;color:var(--siva)}
+
+.cena-red{list-style:none;margin:0;padding:0}
+.cena-red li{display:flex;justify-content:space-between;align-items:baseline;gap:1.25rem;padding:.8rem 0;border-bottom:1px solid var(--linija);font-size:1rem}
+.cena-red li:first-child{border-top:1px solid var(--linija)}
+.cena-red span:last-child{white-space:nowrap;font-weight:600}
+.cena-red small{display:block;color:var(--siva);font-size:.875rem;font-weight:400}
+.napomena{font-size:.9375rem;color:var(--siva);margin-top:1.25rem}
+
+.koraci{list-style:none;margin:0;padding:0;counter-reset:k}
+.koraci li{counter-increment:k;display:grid;grid-template-columns:2.25rem 1fr;gap:.25rem;padding:.6rem 0}
+.koraci li::before{content:counter(k);font-family:var(--naslov);font-weight:600;color:var(--antracit)}
+.koraci b{font-family:var(--naslov);font-weight:600;display:block}
+
+.dani{margin:0;display:grid;grid-template-columns:1fr auto;max-width:28rem;font-family:var(--naslov);font-size:1rem}
+.dani dt,.dani dd{margin:0;padding:.55rem 0;border-bottom:1px solid var(--linija)}
+.dani dd{text-align:right}
+.dani .zatv{color:var(--siva)}
+
+.mapa{margin-top:1.25rem;border:1px solid var(--linija)}
+.mapa iframe{display:block;width:100%;height:300px;border:0}
+
+form{display:grid;gap:1.1rem;max-width:34rem}
+label{display:block;font-size:.9375rem;margin-bottom:.3rem}
+input,select,textarea{width:100%;font:inherit;font-size:1rem;color:var(--antracit);background:#FBFAF6;border:1px solid #A39C8E;border-radius:0;padding:.7rem .8rem;min-height:48px}
+textarea{min-height:120px;resize:vertical}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--terakota);outline-offset:0}
+.poruka{font-family:var(--naslov);font-weight:600;min-height:1.6em;margin:0}
+
+footer{border-top:1px solid var(--linija);padding:32px 0 48px;font-size:.9375rem}
+footer p{margin:0 0 .4rem}
+.demo-foot{color:var(--siva)}
+
+@media (min-width:960px){
+  .raspored{display:grid;grid-template-columns:minmax(0,1fr) minmax(420px,36rem)}
+  .platno{position:sticky;top:0;height:100vh;min-height:0;padding:32px 40px 24px;border-right:1px solid var(--linija)}
+  .platno .menu-btn{display:none}
+  .platno h1{font-size:clamp(5rem,11vw,12rem);margin-top:auto}
+  .uzorci{position:absolute;top:32px;right:40px;margin:0;padding:0}
+  .uzorci p{text-align:right}
+  .nav,.nav.otvoren{display:block;position:static;padding:0;background:none;border:0}
+  .nav ul{display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;padding:24px 0 8px}
+  .nav a{min-height:44px;font-size:.9375rem;border:0}
+  .nav a:hover{text-decoration:underline;text-underline-offset:4px}
+  .kolona{padding:0 48px}
+  .blok:first-of-type{padding-top:40px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-bar"><span>Primer sajta · izradio opsforma</span><a href="../">Svi primeri</a></div>
+
+<div class="raspored">
+  <section class="platno" id="pocetak" aria-labelledby="naslov">
+    <div class="platno-vrh">
+      <a class="znak" href="#pocetak"><b>Moler Ravno</b><span>Voždovac</span></a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meni"><span class="o">Meni</span><span class="z">Zatvori</span></button>
+    </div>
+    <div class="uzorci" role="group" aria-label="Probajte boju zida">
+      <p>Probajte boju zida</p>
+      <ul>
+        <li><button class="uzorak" type="button" aria-pressed="true" data-boja="#F4F1EA" data-tekst="#2A2A2A" style="--b:#F4F1EA"><i></i><span>Kreč bela</span></button></li>
+        <li><button class="uzorak" type="button" aria-pressed="false" data-boja="#B85C38" data-tekst="#FFFFFF" style="--b:#B85C38"><i></i><span>Terakota</span></button></li>
+        <li><button class="uzorak" type="button" aria-pressed="false" data-boja="#2A2A2A" data-tekst="#F4F1EA" style="--b:#2A2A2A"><i></i><span>Antracit</span></button></li>
+      </ul>
+    </div>
+    <h1 id="naslov">Ravan zid,<br>čist pod.</h1>
+  </section>
+
+  <div class="kolona">
+    <nav class="nav" id="meni" aria-label="Glavna navigacija">
+      <ul>
+        <li><a href="#cene">Cene</a></li>
+        <li><a href="#kako">Kako radimo</a></li>
+        <li><a href="#radno-vreme">Radno vreme</a></li>
+        <li><a href="#adresa">Adresa</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="blok" aria-label="Uvod">
+        <p class="uvod">Krečimo i gletujemo stanove i poslovne prostore na Voždovcu i u okolnim delovima grada. Pre početka pokrijemo podove i nameštaj, a posle rada sve očistimo, da možete da se vratite u sobu isti dan.</p>
+        <p>Cenu po kvadratu dogovaramo kod Vas, pre početka radova, i ona se ne menja.</p>
+        <div class="akcije">
+          <a class="dugme glavno" href="tel:+381600000606">Pozovite 060 000 06 06</a>
+          <a class="dugme" href="#kontakt">Pošaljite zahtev</a>
+          <a class="dugme" href="viber://chat?number=%2B381600000606">Viber</a>
+        </div>
+        <div class="foto" role="img" aria-label="Mesto za fotografiju završenog rada">Vaša fotografija</div>
+      </section>
+
+      <section class="blok" id="cene" aria-labelledby="cene-n">
+        <h2 id="cene-n">Usluge i cene</h2>
+        <ul class="cena-red">
+          <li><span>Krečenje poludisperzijom<small>dve ruke, bela</small></span><span>280 RSD/m²</span></li>
+          <li><span>Krečenje disperzijom u boji<small>dve ruke, ton po izboru</small></span><span>360 RSD/m²</span></li>
+          <li><span>Gletovanje<small>dve ruke, sa šmirglanjem</small></span><span>600 RSD/m²</span></li>
+          <li><span>Gletovanje i krečenje zajedno</span><span>820 RSD/m²</span></li>
+          <li><span>Sanacija pukotina<small>bandaž traka i glet</small></span><span>900 RSD/m</span></li>
+          <li><span>Skidanje tapeta</span><span>250 RSD/m²</span></li>
+          <li><span>Farbanje sobnih vrata<small>sa štokom, obe strane</small></span><span>4.500 RSD</span></li>
+          <li><span>Farbanje radijatora</span><span>2.500 RSD</span></li>
+          <li><span>Pokrivanje podova i nameštaja</span><span>uračunato</span></li>
+        </ul>
+        <p class="napomena">Kvadratura se računa po površini zidova i plafona, ne po površini stana. Materijal kupujemo mi uz račun, ili ga nabavljate Vi. Najmanji posao je 15.000 RSD.</p>
+      </section>
+
+      <section class="blok" id="kako" aria-labelledby="kako-n">
+        <h2 id="kako-n">Kako radimo</h2>
+        <ol class="koraci">
+          <li><span><b>Dolazimo da izmerimo</b>Merenje je besplatno na Voždovcu, Zvezdari i Vračaru.</span></li>
+          <li><span><b>Dobijate ponudu</b>Cena po stavkama i broj radnih dana, na papiru ili porukom.</span></li>
+          <li><span><b>Pokrivamo i radimo</b>Folija na podu, nameštaj na sredini sobe, utičnice zalepljene.</span></li>
+          <li><span><b>Čistimo i predajemo</b>Skidamo foliju, usisamo i zajedno pregledamo svaki zid.</span></li>
+        </ol>
+      </section>
+
+      <section class="blok" id="radno-vreme" aria-labelledby="vreme-n">
+        <h2 id="vreme-n">Radno vreme</h2>
+        <dl class="dani">
+          <dt>Ponedeljak</dt><dd>07–17 h</dd>
+          <dt>Utorak</dt><dd>07–17 h</dd>
+          <dt>Sreda</dt><dd>07–17 h</dd>
+          <dt>Četvrtak</dt><dd>07–17 h</dd>
+          <dt>Petak</dt><dd>07–17 h</dd>
+          <dt>Subota</dt><dd>08–14 h</dd>
+          <dt class="zatv">Nedelja</dt><dd class="zatv">ne radimo</dd>
+        </dl>
+        <p class="napomena">Telefon se javlja svakog dana od 8 do 20 h.</p>
+      </section>
+
+      <section class="blok" id="adresa" aria-labelledby="adresa-n">
+        <h2 id="adresa-n">Adresa</h2>
+        <p>Vojvode Stepe 210, Voždovac. Ovde je magacin sa alatom i materijalom; radimo kod Vas, pa je najbolje da se prvo čujemo.</p>
+        <div class="mapa">
+          <iframe title="Mapa: Vojvode Stepe 210, Voždovac" loading="lazy" src="https://maps.google.com/maps?q=Vojvode%20Stepe%20210%2C%20Vo%C5%BEdovac%2C%20Beograd&z=15&output=embed"></iframe>
+        </div>
+      </section>
+
+      <section class="blok" id="kontakt" aria-labelledby="kontakt-n">
+        <h2 id="kontakt-n">Pošaljite zahtev</h2>
+        <p>Napišite šta treba da se uradi i otprilike koliko je prostorija. Javljamo se isti dan da dogovorimo merenje.</p>
+        <!--
+          Web3Forms (na pravom sajtu):
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="VLASNIKOV-ACCESS-KEY">
+            <input type="hidden" name="subject" value="Zahtev sa sajta Moler Ravno">
+            ... ista polja kao ispod ...
+          </form>
+          Poruka stiže na vlasnikov mejl. U ovom primeru forma ne šalje ništa.
+        -->
+        <form data-form="kontakt" novalidate>
+          <div><label for="ime">Ime</label><input id="ime" name="ime" autocomplete="name" required></div>
+          <div><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" inputmode="tel" autocomplete="tel" required></div>
+          <div>
+            <label for="posao">Šta treba</label>
+            <select id="posao" name="posao">
+              <option>Krečenje</option>
+              <option>Gletovanje i krečenje</option>
+              <option>Sanacija pukotina</option>
+              <option>Vrata ili radijatori</option>
+              <option>Nisam siguran, treba mi savet</option>
+            </select>
+          </div>
+          <div><label for="prostor">Prostor (npr. dvosoban stan, 55 m²)</label><input id="prostor" name="prostor"></div>
+          <div><label for="poruka">Poruka</label><textarea id="poruka" name="poruka"></textarea></div>
+          <div><button class="dugme glavno" type="submit">Pošaljite zahtev</button></div>
+          <p class="poruka" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Moler Ravno, Vojvode Stepe 210, Voždovac</p>
+      <p><a href="tel:+381600000606">060 000 06 06</a></p>
+      <p class="demo-foot">Primer sajta · izradio opsforma. Firma je izmišljena. <a href="../">Svi primeri</a></p>
+    </footer>
+  </div>
+</div>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'),nav=document.getElementById('meni');
+  function zatvori(){btn.setAttribute('aria-expanded','false');nav.classList.remove('otvoren')}
+  btn.addEventListener('click',function(){
+    var o=btn.getAttribute('aria-expanded')==='true';
+    btn.setAttribute('aria-expanded',String(!o));nav.classList.toggle('otvoren',!o);
+  });
+  nav.addEventListener('click',function(e){if(e.target.closest('a'))zatvori()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&btn.getAttribute('aria-expanded')==='true'){zatvori();btn.focus()}});
+
+  // uzorci boje menjaju pozadinu platna
+  var platno=document.querySelector('.platno'),uzorci=document.querySelectorAll('.uzorak');
+  uzorci.forEach(function(u){
+    u.addEventListener('click',function(){
+      uzorci.forEach(function(x){x.setAttribute('aria-pressed','false')});
+      u.setAttribute('aria-pressed','true');
+      platno.style.setProperty('--platno',u.dataset.boja);
+      platno.style.setProperty('--platno-tekst',u.dataset.tekst);
+    });
+  });
+
+  var f=document.querySelector('form[data-form="kontakt"]');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    f.querySelector('.poruka').textContent='Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.';
+  });
+})();
+</script>
+</body>
+</html>

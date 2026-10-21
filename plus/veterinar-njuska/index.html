@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Veterinarska ambulanta Njuška · Voždovac</title>
+<meta name="description" content="Veterinarska ambulanta na Voždovcu, Bulevar oslobođenja 150. Pregledi, vakcinacija, čipovanje i ultrazvuk za pse, mačke i male životinje. Zakažite termin online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&family=Tinos:wght@400;700&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF;
+  --ink:#0F2440;
+  --muted:#3D5068;
+  --blue:#1D4E89;
+  --pale:#DCE8F5;
+  --red:#D64545;
+  --line:#C9D7E8;
+  --ui:"Atkinson Hyperlegible Next","Atkinson Hyperlegible",Verdana,Arial,sans-serif;
+  --text:"Tinos","Times New Roman",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 20px/1.55 var(--text)}
+a{color:var(--blue)}
+h1,h2,h3{font-family:var(--ui);font-weight:700;margin:0;line-height:1.15;letter-spacing:-.01em}
+p{margin:0}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+section[id],div[id]{scroll-margin-top:64px}
+
+/* traka primera */
+.demo{font:400 15px/1.4 var(--ui);color:var(--muted);background:var(--bg);border-bottom:1px solid var(--line)}
+.demo .wrap{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;justify-content:space-between;padding-top:8px;padding-bottom:8px}
+.demo a{font-weight:700;display:inline-block;padding:8px 0}
+.badge{display:inline-block;background:var(--pale);color:var(--ink);font:700 14px/1 var(--ui);padding:7px 10px;border-radius:6px;white-space:nowrap}
+
+/* potpisni element: stalna traka za hitne slučajeve */
+.hitno{position:sticky;top:0;z-index:30;background:var(--red)}
+.hitno a{display:flex;align-items:center;justify-content:center;gap:10px;min-height:46px;color:#fff;text-decoration:none;font:700 19px/1.2 var(--ui);padding:6px 16px;text-align:center}
+.hitno a span{text-decoration:underline;text-underline-offset:3px}
+.hitno a:focus-visible{outline:3px solid #fff;outline-offset:-5px}
+
+/* zaglavlje */
+header.top{border-bottom:1px solid var(--line);position:relative}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:84px;gap:16px}
+.logo{text-decoration:none;color:var(--ink);font-family:var(--ui);line-height:1.1}
+.logo b{display:block;font-size:26px}
+.logo small{font-size:15px;color:var(--muted)}
+.menu-btn{display:none;min-height:52px;min-width:52px;padding:0 18px;border:2px solid var(--ink);background:var(--bg);color:var(--ink);border-radius:10px;font:700 18px var(--ui);cursor:pointer}
+#meni ul{list-style:none;margin:0;padding:0;display:flex;gap:4px}
+#meni a{display:flex;align-items:center;min-height:48px;padding:0 14px;color:var(--ink);font:400 18px var(--ui);text-decoration:none;border-radius:8px}
+#meni a:hover{background:var(--pale)}
+
+/* hero */
+.hero{padding:64px 0 24px}
+.hero .kicker{font:400 19px var(--ui);color:var(--muted);margin-bottom:18px}
+.hero h1{font-size:clamp(2.3rem,6.4vw,4.4rem);max-width:17ch}
+.hero .lead{font-size:clamp(20px,2.4vw,23px);max-width:44ch;margin-top:24px}
+.actions{display:grid;grid-template-columns:1fr;gap:12px;margin-top:40px}
+.act{display:flex;flex-direction:column;justify-content:center;gap:4px;min-height:96px;padding:18px 24px;border-radius:14px;background:var(--pale);color:var(--ink);text-decoration:none;font:700 23px/1.2 var(--ui)}
+.act small{font:400 17px/1.3 var(--ui);color:var(--muted)}
+.act.main{background:var(--blue);color:#fff}
+.act.main small{color:#DCE8F5}
+.act:hover{outline:2px solid var(--ink);outline-offset:-2px}
+.facts{display:grid;grid-template-columns:1fr;gap:4px 24px;margin:32px 0 0;padding:0;list-style:none;font:400 18px/1.5 var(--ui)}
+.facts b{font-weight:700}
+
+/* sekcije */
+.sec{padding-top:80px}
+.sec > .wrap > h2{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:12px}
+.sec .intro{color:var(--muted);max-width:52ch;margin-bottom:28px}
+.cards{display:grid;grid-template-columns:1fr;gap:12px}
+.card{background:var(--pale);border-radius:14px;padding:22px 24px}
+.svc{display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:baseline}
+.svc h3{font-size:22px}
+.svc .price{font:700 22px var(--ui);white-space:nowrap}
+.svc p{grid-column:1 / -1;color:var(--muted);font-size:18px}
+.svc .who{grid-column:1 / -1;font:400 16px var(--ui);color:var(--ink)}
+
+/* zakazivanje */
+.book-top{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-bottom:28px}
+.book-top .note{font:700 17px var(--ui);color:var(--ink);border:2px solid var(--ink);border-radius:6px;padding:5px 10px}
+.step{margin-top:40px}
+#flow > .step:first-child{margin-top:0}
+.step h3{font-size:24px;margin-bottom:14px}
+.step h3 span{font-weight:400;color:var(--muted);font-size:18px}
+.opts{display:grid;grid-template-columns:1fr;gap:10px}
+.opt{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;min-height:72px;padding:14px 20px;border:2px solid var(--pale);border-radius:12px;background:var(--pale);color:var(--ink);font:700 21px/1.25 var(--ui);text-align:left;cursor:pointer}
+.opt small{display:block;font:400 17px/1.3 var(--ui);color:var(--muted);margin-top:2px}
+.opt .pr{font:700 19px var(--ui);white-space:nowrap}
+.opt:hover{border-color:var(--blue)}
+.opt[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.opt[aria-pressed="true"] small{color:#DCE8F5}
+.pets .opt{min-height:88px;font-size:24px}
+.hint{font:400 18px var(--ui);color:var(--muted);padding:6px 0}
+
+/* red vožnje */
+.tt{border-top:2px solid var(--ink)}
+.tt-head{display:none}
+.row{display:grid;grid-template-columns:1fr;gap:8px;padding:14px 0;border-bottom:1px solid var(--line)}
+.row .day{font:700 19px/1.2 var(--ui)}
+.row .day span{font-weight:400;color:var(--muted);margin-left:8px}
+.row.closed .day{color:var(--muted)}
+.row .times{display:flex;flex-direction:column;gap:8px}
+.grp{display:flex;flex-wrap:wrap;gap:8px}
+.grp:empty{display:none}
+.t{min-width:72px;min-height:48px;padding:0 10px;border:2px solid var(--blue);border-radius:8px;background:var(--bg);color:var(--blue);font:700 19px var(--ui);cursor:pointer;font-variant-numeric:tabular-nums}
+.t:hover{background:var(--pale)}
+.t[aria-pressed="true"]{background:var(--blue);color:#fff}
+.row .none{font:400 18px var(--ui);color:var(--muted);padding:4px 0}
+@media (min-width:820px){.row .none{padding-top:12px}}
+.more{margin-top:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 26px;border-radius:10px;border:2px solid var(--blue);background:var(--bg);color:var(--blue);font:700 20px var(--ui);cursor:pointer;text-decoration:none}
+.btn.primary{background:var(--blue);color:#fff}
+.btn:hover{border-color:var(--ink)}
+.fields{display:grid;grid-template-columns:1fr;gap:18px}
+.field label{display:block;font:700 18px var(--ui);margin-bottom:6px}
+.field label span{font-weight:400;color:var(--muted)}
+.field input,.field textarea{width:100%;min-height:56px;border:2px solid var(--muted);border-radius:10px;padding:12px 14px;font:400 20px var(--text);color:var(--ink);background:var(--bg)}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus-visible,.field textarea:focus-visible{outline:3px solid var(--blue);outline-offset:1px}
+.chosen{margin:28px 0 16px;padding:18px 20px;background:var(--pale);border-radius:12px;font:400 19px/1.45 var(--ui)}
+.err{font:700 18px var(--ui);color:#9E1F1F;min-height:26px;margin-bottom:12px}
+.done{background:var(--pale);border-radius:14px;padding:28px 24px}
+.done h3{font-size:clamp(1.7rem,4vw,2.3rem)}
+.done > p{margin-top:8px}
+.sum{display:grid;grid-template-columns:1fr;gap:2px 24px;margin:24px 0;font:400 19px/1.4 var(--ui)}
+.sum dt{color:var(--muted);margin-top:10px}
+.sum dd{margin:0;font-weight:700}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+
+/* radno vreme, kontakt */
+.hours{width:100%;max-width:620px;border-collapse:collapse;font:400 21px var(--ui)}
+.hours th,.hours td{padding:14px 0;border-bottom:1px solid var(--line);text-align:left;font-weight:400;vertical-align:top}
+.hours td{text-align:right}
+.hours tr.is-today th,.hours tr.is-today td{font-weight:700}
+.hours caption{text-align:left;font:400 18px var(--ui);color:var(--muted);caption-side:bottom;padding-top:14px}
+.contact{display:grid;grid-template-columns:1fr;gap:24px}
+.addr{font:700 24px/1.3 var(--ui)}
+.map iframe{display:block;width:100%;height:300px;border:0;border-radius:14px;background:var(--pale);margin-top:16px}
+.photo{min-height:180px;border-radius:14px;background:var(--pale);display:flex;align-items:flex-end;padding:16px 20px;font:400 15px var(--ui);color:var(--muted);margin-top:12px}
+.ok{font:700 18px var(--ui);color:var(--blue);margin-top:14px;min-height:27px}
+
+footer{margin-top:96px;border-top:1px solid var(--line);padding:32px 0 48px;font:400 17px/1.5 var(--ui);color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px}
+footer a{font-weight:700}
+
+@media (max-width:819px){
+  .menu-btn{display:inline-flex;align-items:center}
+  #meni{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:2px solid var(--ink);padding:8px 16px 16px;z-index:20}
+  #meni.open{display:block}
+  #meni ul{flex-direction:column}
+  #meni a{font-size:21px;min-height:56px;border-bottom:1px solid var(--line);border-radius:0}
+}
+@media (min-width:640px){
+  .actions{grid-template-columns:repeat(3,1fr)}
+  .opts.pets{grid-template-columns:repeat(3,1fr)}
+  .cards{grid-template-columns:1fr 1fr}
+  .fields{grid-template-columns:1fr 1fr}
+  .fields .wide{grid-column:1 / -1}
+  .sum{grid-template-columns:max-content 1fr}
+  .sum dt{margin-top:0}
+  .facts{grid-template-columns:repeat(3,auto);justify-content:start}
+}
+@media (min-width:820px){
+  .row{grid-template-columns:150px 1fr;gap:16px;align-items:start;padding:12px 0}
+  .row .day{padding-top:12px}
+  .row .day span{display:block;margin:4px 0 0}
+  .row .times{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .row.closed .times,.row .times:has(> .none){display:block}
+  .grp,.grp:empty{display:flex;align-content:flex-start;padding-right:20px}
+  .grp + .grp{padding-left:20px;border-left:1px solid var(--line)}
+  .tt-head{display:grid;grid-template-columns:150px 1fr 1fr;gap:16px;font:400 16px var(--ui);color:var(--muted);padding:10px 0}
+  .contact{grid-template-columns:1fr 1fr;gap:48px}
+  .opts.reasons{grid-template-columns:1fr 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demo">
+  <div class="wrap">
+    <span>Primer sajta · izradio opsforma</span>
+    <span class="badge">Paket 2: zakazivanje</span>
+    <a href="../../">Svi primeri</a>
+  </div>
+</div>
+
+<div class="hitno">
+  <a href="tel:+381600000615">Hitno? Pozovite <span>060 000 06 15</span></a>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#pocetak"><b>Njuška</b><small>veterinarska ambulanta</small></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meni">Meni</button>
+    <nav id="meni" aria-label="Glavni meni">
+      <ul>
+        <li><a href="#usluge">Usluge i cene</a></li>
+        <li><a href="#zakazivanje">Zakazivanje</a></li>
+        <li><a href="#radno-vreme">Radno vreme</a></li>
+        <li><a href="#kontakt">Adresa i kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="pocetak">
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap">
+      <p class="kicker">Veterinarska ambulanta na Voždovcu</p>
+      <h1 id="h1">Pregled za psa, mačku ili zeca, u terminu koji ste izabrali.</h1>
+      <p class="lead">Dr Marko Ilić i tehničarka Sanja primaju po zakazanom terminu, da ne čekate u hodniku sa uplašenom životinjom. Cene su ispod, pre nego što dođete.</p>
+      <div class="actions">
+        <a class="act main" href="#zakazivanje">Zakažite pregled<small>izaberite dan i sat</small></a>
+        <a class="act" href="tel:+381600000615">Pozovite<small>060 000 06 15</small></a>
+        <a class="act" href="viber://chat?number=%2B381600000615">Viber<small>pošaljite poruku ili sliku</small></a>
+      </div>
+      <ul class="facts">
+        <li><b>Pon–pet</b> 9–13 i 16–20 h</li>
+        <li><b>Subota</b> 9–14 h</li>
+        <li><b>Bulevar oslobođenja 150</b></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="usluge" aria-labelledby="h-usluge">
+    <div class="wrap">
+      <h2 id="h-usluge">Usluge i cene</h2>
+      <p class="intro">Cena pregleda je ista za sve životinje. Lekovi i analize iz laboratorije se plaćaju posebno, a cenu kažemo pre nego što ih damo.</p>
+      <div class="cards">
+        <div class="card svc"><h3>Opšti pregled</h3><span class="price">2.200 RSD</span><p>Pregled, merenje temperature i težine, savet za ishranu i negu.</p><span class="who">Pas, mačka · 30 min</span></div>
+        <div class="card svc"><h3>Vakcinacija</h3><span class="price">2.600–2.800 RSD</span><p>Kombinovana vakcina ili besnilo, sa pregledom i upisom u knjižicu.</p><span class="who">Mačka 2.600, pas 2.800 · 30 min</span></div>
+        <div class="card svc"><h3>Čip i pasoš</h3><span class="price">4.200 RSD</span><p>Ugradnja mikročipa, upis u bazu i pasoš za putovanje.</p><span class="who">Pas, mačka · 30 min</span></div>
+        <div class="card svc"><h3>Ultrazvuk stomaka</h3><span class="price">4.000 RSD</span><p>Kada životinja povraća, ne jede ili sumnjamo na kamen. Dođite bez obroka.</p><span class="who">Pas, mačka · 45 min</span></div>
+        <div class="card svc"><h3>Pregled malih životinja</h3><span class="price">2.500 RSD</span><p>Zečevi, zamorci, hrčci, ptice i kornjače.</p><span class="who">Ostale životinje · 30 min</span></div>
+        <div class="card svc"><h3>Kandže i zubi</h3><span class="price">1.200 RSD</span><p>Skraćivanje kandži, a kod zečeva i glodara i zuba.</p><span class="who">Ostale životinje · 15 min</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    PRODUKCIJA
+    U demou zakazivanje radi samo u pregledaču, a termini su izmišljeni.
+    Varijanta a) Zahtev za termin: forma šalje ljubimca, razlog, dan, vreme, ime i telefon
+      na mejl ambulante preko Web3Forms (POST https://api.web3forms.com/submit, skriveno
+      polje access_key) ili otvara Viber poruku sa istim rezimeom. Ambulanta potvrđuje
+      termin pozivom ili porukom.
+    Varijanta b) Povezan kalendar: umesto ovog modula ugrađuje se Google Kalendar
+      "Appointment schedule", Cal.com ili Calendly. Slobodni termini dolaze iz kalendara
+      ambulante, a zakazani se sami upisuju u Google Kalendar na telefonu vlasnika.
+  -->
+  <section class="sec" id="zakazivanje" aria-labelledby="h-zak">
+    <div class="wrap">
+      <h2 id="h-zak">Zakažite pregled</h2>
+      <div class="book-top">
+        <span class="badge">Paket 2: zakazivanje</span>
+        <span class="note">Primer: termini su izmišljeni</span>
+      </div>
+
+      <div id="flow">
+        <div class="step">
+          <h3>1. Ko dolazi?</h3>
+          <div class="opts pets" id="pets" role="group" aria-label="Ljubimac">
+            <button type="button" class="opt" data-pet="pas" aria-pressed="false"><span>Pas</span></button>
+            <button type="button" class="opt" data-pet="macka" aria-pressed="false"><span>Mačka</span></button>
+            <button type="button" class="opt" data-pet="ostalo" aria-pressed="false"><span>Drugo<small>zec, ptica, glodar, kornjača</small></span></button>
+          </div>
+        </div>
+
+        <div class="step">
+          <h3>2. Zašto dolazite?</h3>
+          <div class="opts reasons" id="reasons" role="group" aria-label="Razlog dolaska">
+            <p class="hint">Prvo izaberite životinju.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <h3>3. Dan i vreme <span>· red vožnje za narednih 14 dana</span></h3>
+          <div id="tt-wrap" aria-live="polite">
+            <p class="hint" id="tt-hint">Prikazujemo samo slobodne termine. Prvo izaberite razlog dolaska.</p>
+            <div class="tt" id="tt" hidden>
+              <div class="tt-head" aria-hidden="true"><span>Dan</span><span>Pre podne</span><span>Posle podne</span></div>
+              <div id="rows"></div>
+            </div>
+            <div class="more" id="more-wrap" hidden><button type="button" class="btn" id="more" aria-expanded="false" aria-controls="rows">Prikaži još 7 dana</button></div>
+          </div>
+        </div>
+
+        <form class="step" id="bform" novalidate>
+          <h3>4. Vaši podaci</h3>
+          <div class="fields">
+            <div class="field"><label for="b-ime">Vaše ime i prezime</label><input id="b-ime" name="ime" autocomplete="name"></div>
+            <div class="field"><label for="b-tel">Telefon</label><input id="b-tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel"></div>
+            <div class="field"><label for="b-ljub">Ime ljubimca <span>(nije obavezno)</span></label><input id="b-ljub" name="ljubimac"></div>
+            <div class="field wide"><label for="b-nap">Šta se dešava? <span>(nije obavezno)</span></label><textarea id="b-nap" name="napomena"></textarea></div>
+          </div>
+          <p class="chosen" id="chosen">Još niste izabrali termin.</p>
+          <p class="err" id="b-err" role="alert"></p>
+          <button class="btn primary" type="submit">Zakažite pregled</button>
+        </form>
+      </div>
+
+      <div class="done" id="done" hidden tabindex="-1">
+        <h3>Termin je zakazan.</h3>
+        <p>Ponesite knjižicu ili pasoš ljubimca. Na pravom sajtu potvrda stiže i mejlom.</p>
+        <dl class="sum" id="sum"></dl>
+        <div class="btns">
+          <button class="btn primary" type="button" id="ics-btn">Dodaj u kalendar</button>
+          <button class="btn" type="button" id="new-btn">Novi termin</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="radno-vreme" aria-labelledby="h-rv">
+    <div class="wrap">
+      <h2 id="h-rv">Radno vreme</h2>
+      <p class="intro">Između 13 i 16 h radimo operacije, pa tada ne primamo preglede.</p>
+      <table class="hours" id="hours">
+        <caption>Van radnog vremena, za hitne slučajeve, pozovite 060 000 06 15.</caption>
+        <tr data-d="1"><th>Ponedeljak</th><td>9–13 i 16–20 h</td></tr>
+        <tr data-d="2"><th>Utorak</th><td>9–13 i 16–20 h</td></tr>
+        <tr data-d="3"><th>Sreda</th><td>9–13 i 16–20 h</td></tr>
+        <tr data-d="4"><th>Četvrtak</th><td>9–13 i 16–20 h</td></tr>
+        <tr data-d="5"><th>Petak</th><td>9–13 i 16–20 h</td></tr>
+        <tr data-d="6"><th>Subota</th><td>9–14 h</td></tr>
+        <tr data-d="0"><th>Nedelja</th><td>zatvoreno</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="sec" id="kontakt" aria-labelledby="h-k">
+    <div class="wrap">
+      <h2 id="h-k">Adresa i kontakt</h2>
+      <div class="contact">
+        <div class="map">
+          <p class="addr">Bulevar oslobođenja 150, Voždovac</p>
+          <p style="color:var(--muted);margin-top:6px">Prizemlje, ulaz sa bulevara. Parking u dvorištu.</p>
+          <iframe title="Mapa: Bulevar oslobođenja 150, Beograd" loading="lazy" src="https://maps.google.com/maps?q=Bulevar%20oslobo%C4%91enja%20150%2C%20Beograd&z=15&output=embed"></iframe>
+          <div class="photo" role="img" aria-label="Mesto za fotografiju ulaza u ambulantu">Vaša fotografija</div>
+        </div>
+        <div>
+          <p style="margin-bottom:20px">Pitanje koje nije hitno? Pišite nam, odgovaramo do kraja radnog dana.</p>
+          <!--
+            Na pravom sajtu: <form action="https://api.web3forms.com/submit" method="POST">
+            uz <input type="hidden" name="access_key" value="KLJUČ-IZ-WEB3FORMS">;
+            poruka stiže direktno na mejl ambulante.
+          -->
+          <form data-form="kontakt" class="fields" novalidate>
+            <div class="field wide"><label for="k-ime">Ime</label><input id="k-ime" name="ime" autocomplete="name"></div>
+            <div class="field wide"><label for="k-tel">Telefon ili mejl</label><input id="k-tel" name="kontakt"></div>
+            <div class="field wide"><label for="k-por">Poruka</label><textarea id="k-por" name="poruka"></textarea></div>
+            <div class="wide"><button class="btn primary" type="submit">Pošaljite poruku</button><p class="ok" id="k-ok" aria-live="polite"></p></div>
+          </form>
+          <div class="btns" style="margin-top:12px">
+            <a class="btn" href="tel:+381600000615">Pozovite 060 000 06 15</a>
+            <a class="btn" href="viber://chat?number=%2B381600000615">Viber</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Veterinarska ambulanta Njuška, Bulevar oslobođenja 150, Beograd</span>
+    <span>Primer sajta · izradio opsforma · <a href="../../">Svi primeri</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  /* meni */
+  var btn=document.querySelector('.menu-btn'), nav=$('meni');
+  function setMenu(o){btn.setAttribute('aria-expanded',String(o));nav.classList.toggle('open',o)}
+  btn.addEventListener('click',function(){setMenu(btn.getAttribute('aria-expanded')!=='true')});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&btn.getAttribute('aria-expanded')==='true'){setMenu(false);btn.focus()}});
+
+  document.querySelector('[data-form="kontakt"]').addEventListener('submit',function(e){
+    e.preventDefault();$('k-ok').textContent='Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.';
+  });
+  var tr=document.querySelector('#hours tr[data-d="'+new Date().getDay()+'"]'); if(tr) tr.classList.add('is-today');
+
+  /* podaci */
+  var FIRM='Veterinarska ambulanta Njuška', ADDR='Bulevar oslobođenja 150, Beograd', SLUG='veterinar-njuska';
+  var HOURS={0:[],1:[[540,780],[960,1200]],2:[[540,780],[960,1200]],3:[[540,780],[960,1200]],4:[[540,780],[960,1200]],5:[[540,780],[960,1200]],6:[[540,840]]};
+  var PETS={pas:'Pas',macka:'Mačka',ostalo:'Druga životinja'};
+  var REASONS={
+    pas:[{n:'Opšti pregled',m:30,p:2200},{n:'Vakcinacija',m:30,p:2800},{n:'Čip i pasoš',m:30,p:4200},{n:'Ultrazvuk stomaka',m:45,p:4000}],
+    macka:[{n:'Opšti pregled',m:30,p:2200},{n:'Vakcinacija',m:30,p:2600},{n:'Čip i pasoš',m:30,p:4200},{n:'Ultrazvuk stomaka',m:45,p:4000}],
+    ostalo:[{n:'Pregled malih životinja',m:30,p:2500},{n:'Kandže i zubi',m:15,p:1200}]
+  };
+  var DAYS=['nedelja','ponedeljak','utorak','sreda','četvrtak','petak','subota'];
+  var SHORT=['ned','pon','uto','sre','čet','pet','sub'];
+  var MONTHS=['januar','februar','mart','april','maj','jun','jul','avgust','septembar','oktobar','novembar','decembar'];
+  var pad=function(n){return String(n).padStart(2,'0')};
+  var key=function(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())};
+  var hm=function(m){return Math.floor(m/60)+':'+pad(m%60)};
+  var fmt=function(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+' RSD'};
+  function hash(s){var h=2166136261;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
+  function taken(dk,m){return hash(dk+'|'+m+'|njuska')%100<36}
+
+  var today=new Date();today.setHours(0,0,0,0);
+  var DATES=[];for(var i=0;i<14;i++){var d=new Date(today);d.setDate(today.getDate()+i);DATES.push(d)}
+  var st={pet:null,r:null,day:null,m:null,all:false};
+
+  /* 1. ljubimac */
+  document.querySelectorAll('#pets .opt').forEach(function(b){
+    b.addEventListener('click',function(){
+      st.pet=b.dataset.pet;st.r=null;st.day=null;st.m=null;
+      document.querySelectorAll('#pets .opt').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      renderReasons();renderTT();updateChosen();
+    });
+  });
+
+  /* 2. razlog */
+  function renderReasons(){
+    var box=$('reasons');box.innerHTML='';
+    REASONS[st.pet].forEach(function(r){
+      var b=document.createElement('button');b.type='button';b.className='opt';b.setAttribute('aria-pressed','false');
+      b.innerHTML='<span>'+r.n+'<small>'+r.m+' min</small></span><span class="pr">'+fmt(r.p)+'</span>';
+      b.addEventListener('click',function(){
+        st.r=r;st.day=null;st.m=null;
+        box.querySelectorAll('.opt').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+        renderTT();updateChosen();
+      });
+      box.appendChild(b);
+    });
+  }
+
+  /* 3. red vožnje */
+  function free(d,r){
+    var out=[[],[]], dk=key(d), now=new Date(), isT=key(now)===dk, nm=now.getHours()*60+now.getMinutes();
+    (HOURS[d.getDay()]||[]).forEach(function(iv,gi){
+      for(var m=iv[0];m+r.m<=iv[1];m+=30){
+        if(isT&&m<=nm+30) continue;
+        if(taken(dk,m)) continue;   /* zauzeti termini se ne prikazuju */
+        out[gi].push(m);
+      }
+    });
+    return out;
+  }
+  function renderTT(){
+    var tt=$('tt'), rows=$('rows');
+    if(!st.r){tt.hidden=true;$('more-wrap').hidden=true;$('tt-hint').hidden=false;return}
+    $('tt-hint').hidden=true;tt.hidden=false;$('more-wrap').hidden=false;rows.innerHTML='';
+    DATES.slice(0,st.all?14:7).forEach(function(d){
+      var row=document.createElement('div');row.className='row';row.dataset.date=key(d);
+      var label=DAYS[d.getDay()]+', '+d.getDate()+'. '+MONTHS[d.getMonth()];
+      row.setAttribute('role','group');row.setAttribute('aria-label',label);
+      var dl=document.createElement('div');dl.className='day';
+      dl.innerHTML=SHORT[d.getDay()]+'<span>'+d.getDate()+'. '+(d.getMonth()+1)+'.</span>';
+      row.appendChild(dl);
+      var times=document.createElement('div');times.className='times';
+      var open=(HOURS[d.getDay()]||[]).length>0;
+      if(!open){
+        row.classList.add('closed');
+        var p=document.createElement('p');p.className='none';p.textContent='Zatvoreno. Za hitne slučajeve pozovite.';times.appendChild(p);
+      } else {
+        var g=free(d,st.r), any=g[0].length+g[1].length;
+        if(!any){var p2=document.createElement('p');p2.className='none';p2.textContent='Nema slobodnih termina.';times.appendChild(p2)}
+        if(any) g.forEach(function(list){
+          var grp=document.createElement('div');grp.className='grp';
+          list.forEach(function(m){
+            var b=document.createElement('button');b.type='button';b.className='t';b.textContent=hm(m);b.dataset.m=m;
+            b.setAttribute('aria-label',label+', '+hm(m)+' h');
+            b.setAttribute('aria-pressed',String(st.day&&key(st.day)===key(d)&&st.m===m));
+            b.addEventListener('click',function(){
+              st.day=d;st.m=m;
+              rows.querySelectorAll('.t').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+              updateChosen();
+            });
+            grp.appendChild(b);
+          });
+          times.appendChild(grp);
+        });
+      }
+      row.appendChild(times);rows.appendChild(row);
+    });
+    $('more').textContent=st.all?'Prikaži samo 7 dana':'Prikaži još 7 dana';
+    $('more').setAttribute('aria-expanded',String(st.all));
+  }
+  $('more').addEventListener('click',function(){st.all=!st.all;renderTT()});
+
+  function dayLabel(d){return DAYS[d.getDay()]+', '+d.getDate()+'. '+MONTHS[d.getMonth()]}
+  function updateChosen(){
+    $('chosen').textContent=(st.r&&st.day)
+      ? PETS[st.pet]+', '+st.r.n.toLowerCase()+': '+dayLabel(st.day)+' u '+hm(st.m)+' h. Traje oko '+st.r.m+' min, cena '+fmt(st.r.p)+'.'
+      : 'Još niste izabrali termin.';
+  }
+
+  $('bform').addEventListener('submit',function(e){
+    e.preventDefault();
+    var err=$('b-err'), ime=$('b-ime').value.trim(), tel=$('b-tel').value.replace(/[^\d+]/g,'');
+    if(!st.pet){err.textContent='Izaberite koja životinja dolazi.';return}
+    if(!st.r){err.textContent='Izaberite razlog dolaska.';return}
+    if(!st.day){err.textContent='Izaberite dan i vreme u redu vožnje.';return}
+    if(ime.length<2){err.textContent='Upišite Vaše ime i prezime.';$('b-ime').focus();return}
+    if(tel.length<6){err.textContent='Upišite broj telefona, da bismo mogli da Vas pozovemo.';$('b-tel').focus();return}
+    err.textContent='';
+    var lj=$('b-ljub').value.trim();
+    var rows=[['Ljubimac',PETS[st.pet]+(lj?' ('+lj+')':'')],['Razlog',st.r.n],['Veterinar','dr Marko Ilić'],['Dan',dayLabel(st.day)],['Vreme',hm(st.m)+' h'],['Trajanje','oko '+st.r.m+' min'],['Cena',fmt(st.r.p)],['Ime',ime],['Telefon',$('b-tel').value.trim()]];
+    var sum=$('sum');sum.innerHTML='';
+    rows.forEach(function(r){var dt=document.createElement('dt');dt.textContent=r[0];var dd=document.createElement('dd');dd.textContent=r[1];sum.appendChild(dt);sum.appendChild(dd)});
+    st.booked={pet:st.pet,r:st.r,day:st.day,m:st.m};
+    $('flow').hidden=true;$('done').hidden=false;$('done').focus();
+    $('zakazivanje').scrollIntoView({block:'start'});
+  });
+
+  $('ics-btn').addEventListener('click',function(){
+    var b=st.booked, s=new Date(b.day);s.setHours(0,b.m,0,0);
+    var e=new Date(s.getTime()+b.r.m*60000);
+    var z=function(d){return d.toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'')};
+    var esc=function(t){return String(t).replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/\n/g,'\\n')};
+    var L=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//opsforma//Ambulanta Njuska//SR','CALSCALE:GREGORIAN','METHOD:PUBLISH','BEGIN:VEVENT',
+      'UID:'+Date.now()+'-'+Math.random().toString(36).slice(2,9)+'@'+SLUG+'.primer',
+      'DTSTAMP:'+z(new Date()),'DTSTART:'+z(s),'DTEND:'+z(e),
+      'SUMMARY:'+esc(FIRM+': '+b.r.n+' ('+PETS[b.pet].toLowerCase()+')'),
+      'LOCATION:'+esc(ADDR),
+      'DESCRIPTION:'+esc('Ponesite knjižicu ili pasoš. Cena '+fmt(b.r.p)+'. Telefon 060 000 06 15.'),
+      'END:VEVENT','END:VCALENDAR'];
+    var blob=new Blob([L.join('\r\n')+'\r\n'],{type:'text/calendar;charset=utf-8'});
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='termin-'+SLUG+'.ics';
+    document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},1000);
+  });
+  $('new-btn').addEventListener('click',function(){
+    st={pet:null,r:null,day:null,m:null,all:false};
+    document.querySelectorAll('#pets .opt').forEach(function(x){x.setAttribute('aria-pressed','false')});
+    $('reasons').innerHTML='<p class="hint">Prvo izaberite životinju.</p>';
+    $('bform').reset();renderTT();updateChosen();
+    $('done').hidden=true;$('flow').hidden=false;document.querySelector('#pets .opt').focus();
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Servis bele tehnike Bela · Novi Beograd</title>
+<meta name="description" content="Popravka frižidera, veš i sudo mašina, šporeta i bojlera kod Vas u stanu. Novi Beograd i Zemun, izlazak 1.500 RSD, garancija šest meseci.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:wght@400;600&family=Ubuntu+Sans+Mono:wght@400&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bela:#FFFFFF;
+  --led:#E8F0F6;
+  --teget:#0F2A44;
+  --naranza:#F26B1D;
+  --siva:#4A5D70;
+  --linija:#C9D6E2;
+  --sans:"Ubuntu Sans","Ubuntu","Segoe UI",system-ui,sans-serif;
+  --mono:"Ubuntu Sans Mono","Ubuntu Mono",ui-monospace,"Consolas",monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bela);color:var(--teget);font-family:var(--sans);font-size:1.0625rem;line-height:1.6;font-weight:400}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--teget);outline-offset:3px}
+.demo-bar,.demo-foot{font-family:var(--mono);font-size:.8125rem}
+.demo-bar{background:var(--teget);color:var(--bela);padding:.55rem 20px;display:flex;flex-wrap:wrap;gap:.25rem 1rem;justify-content:space-between}
+.demo-bar a{color:var(--bela)}
+.demo-bar a:focus-visible{outline-color:var(--bela)}
+
+/* zaglavlje */
+.top{border-bottom:1px solid var(--linija);background:var(--bela)}
+.top .in{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:1rem}
+.znak{display:flex;align-items:baseline;gap:.6rem;text-decoration:none}
+.znak b{font-weight:600;font-size:1.5rem;letter-spacing:-.01em}
+.znak span{font-family:var(--mono);font-size:.8125rem;color:var(--siva)}
+.menu-btn{font:inherit;font-family:var(--mono);font-size:.9375rem;background:none;border:1px solid var(--teget);color:var(--teget);min-height:44px;min-width:44px;padding:0 1rem;cursor:pointer}
+.menu-btn .z{display:none}
+.menu-btn[aria-expanded="true"] .o{display:none}
+.menu-btn[aria-expanded="true"] .z{display:inline}
+.nav{display:none}
+.nav.otvoren{display:block;position:absolute;left:0;right:0;top:100%;background:var(--bela);border-bottom:1px solid var(--linija);z-index:5}
+.nav ul{list-style:none;margin:0;padding:.5rem 20px 1rem}
+.nav a{display:flex;align-items:center;min-height:48px;text-decoration:none;border-bottom:1px solid var(--linija)}
+.nav li:last-child a{border-bottom:0}
+.top{position:relative}
+@media (min-width:860px){
+  .menu-btn{display:none}
+  .nav,.nav.otvoren{display:block;position:static;border:0;background:none}
+  .nav ul{display:flex;gap:2rem;padding:0}
+  .nav a{border:0;min-height:44px;font-size:.9375rem}
+  .nav a:hover{text-decoration:underline;text-underline-offset:4px}
+  .top .in{padding:0 32px}
+}
+
+/* trake */
+.band{background:var(--bela);border-bottom:1px solid var(--linija)}
+.band.led{background:var(--led)}
+.band .in{max-width:1200px;margin:0 auto;padding:56px 20px;display:grid;gap:1rem}
+.k{font-family:var(--mono);font-size:.875rem;font-weight:400;color:var(--siva);margin:0;padding-top:.35rem}
+.v{font-size:clamp(1.375rem,1.1rem + 1.3vw,2.125rem);line-height:1.3;margin:0;max-width:30ch;font-weight:400;letter-spacing:-.005em}
+.v strong{font-weight:600}
+.malo{color:var(--siva);max-width:60ch;margin:.75rem 0 0;font-size:1rem}
+@media (min-width:860px){
+  .band .in{grid-template-columns:220px 1fr;gap:2rem;padding:72px 32px}
+}
+
+/* hero */
+.hero .in{padding-top:64px;padding-bottom:64px}
+.hero h1{font-weight:600;font-size:clamp(2.125rem,1.4rem + 3.6vw,4.25rem);line-height:1.08;letter-spacing:-.025em;margin:0;max-width:17ch}
+.hero .uvod{font-size:1.125rem;max-width:52ch;margin:1.5rem 0 0}
+.akcije{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.dugme{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 1.25rem;font:inherit;font-weight:600;font-size:1rem;text-decoration:none;border:1px solid var(--teget);background:var(--bela);color:var(--teget);cursor:pointer}
+.dugme.glavno{background:var(--naranza);border-color:var(--naranza);color:var(--teget)}
+.dugme:hover{background:var(--teget);color:var(--bela);border-color:var(--teget)}
+.dugme.glavno:hover{background:var(--teget);color:var(--bela)}
+@media (min-width:860px){.hero .in{padding-top:104px;padding-bottom:96px}}
+
+/* uređaji - potpisni element */
+.uredjaji{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--linija);border-left:1px solid var(--linija)}
+.uredjaji li{border-right:1px solid var(--linija);border-bottom:1px solid var(--linija);padding:1.25rem 1rem 1.25rem;display:flex;flex-direction:column;gap:.25rem;min-width:0}
+.uredjaji svg{width:88px;height:88px;margin-bottom:.75rem;color:var(--teget)}
+.uredjaji svg *{fill:none;stroke:currentColor;stroke-width:1;vector-effect:non-scaling-stroke}
+.uredjaji b{font-weight:600;font-size:1.0625rem}
+.uredjaji span{font-family:var(--mono);font-size:.875rem;color:var(--siva)}
+@media (min-width:860px){
+  .uredjaji{grid-template-columns:repeat(4,1fr)}
+  .uredjaji li{padding:2.25rem 1.75rem 2rem}
+  .uredjaji svg{width:128px;height:128px;margin-bottom:1.5rem}
+}
+
+/* cene */
+.cene{width:100%;max-width:760px;border-collapse:collapse;font-size:1rem}
+.cene th,.cene td{padding:.85rem 0;border-bottom:1px solid var(--linija);text-align:left;vertical-align:top;font-weight:400}
+.cene tr:first-child th,.cene tr:first-child td{border-top:1px solid var(--teget)}
+.cene td{text-align:right;font-family:var(--mono);white-space:nowrap;padding-left:1rem}
+.cene th small{display:block;color:var(--siva);font-size:.875rem}
+
+/* radno vreme */
+.dani{list-style:none;margin:0;padding:0;max-width:520px;font-size:1.0625rem}
+.dani li{display:flex;justify-content:space-between;gap:1rem;padding:.6rem 0;border-bottom:1px solid var(--linija)}
+.dani li:first-child{border-top:1px solid var(--linija)}
+.dani span:last-child{font-family:var(--mono)}
+.dani .zatv span:last-child{color:var(--siva)}
+
+/* adresa */
+.mapa{margin-top:1.75rem;border:1px solid var(--linija);background:var(--bela)}
+.mapa iframe{display:block;width:100%;height:340px;border:0}
+
+/* forma */
+form{max-width:640px;display:grid;gap:1.1rem;margin-top:.5rem}
+.par{display:grid;gap:1.1rem}
+@media (min-width:640px){.par{grid-template-columns:1fr 1fr}}
+label{display:block;font-family:var(--mono);font-size:.875rem;color:var(--siva);margin-bottom:.35rem}
+input,select,textarea{width:100%;font:inherit;font-size:1rem;color:var(--teget);background:var(--bela);border:1px solid #8FA3B6;border-radius:0;padding:.7rem .8rem;min-height:48px}
+textarea{min-height:120px;resize:vertical}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--teget);outline-offset:0;border-color:var(--teget)}
+.poruka{margin:0;font-weight:600;min-height:1.6em}
+
+/* podnožje */
+footer{background:var(--teget);color:var(--bela)}
+footer .in{max-width:1200px;margin:0 auto;padding:40px 20px 48px;display:grid;gap:1rem}
+footer p{margin:0}
+footer a{color:var(--bela)}
+footer a:focus-visible{outline-color:var(--bela)}
+.demo-foot{opacity:.85}
+@media (min-width:860px){footer .in{padding:48px 32px;grid-template-columns:220px 1fr}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-bar"><span>Primer sajta · izradio opsforma</span><a href="../">Svi primeri</a></div>
+
+<header class="top">
+  <div class="in">
+    <a class="znak" href="#pocetak"><b>Bela</b><span>servis bele tehnike</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meni"><span class="o">Meni</span><span class="z">Zatvori</span></button>
+    <nav class="nav" id="meni" aria-label="Glavna navigacija">
+      <ul>
+        <li><a href="#uredjaji">Uređaji</a></li>
+        <li><a href="#cene">Cene</a></li>
+        <li><a href="#radno-vreme">Radno vreme</a></li>
+        <li><a href="#adresa">Adresa</a></li>
+        <li><a href="#kontakt">Prijava kvara</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="band hero" id="pocetak">
+    <div class="in">
+      <p class="k">Novi Beograd i Zemun</p>
+      <div>
+        <h1>Popravljamo frižidere, veš mašine, šporete i bojlere. Kod Vas u stanu.</h1>
+        <p class="uvod">Javite nam šta se pokvarilo i koji je model. Majstor dolazi sa delovima koji se najčešće menjaju i kaže Vam cenu pre nego što počne.</p>
+        <div class="akcije">
+          <a class="dugme glavno" href="tel:+381600000605">Pozovite 060 000 06 05</a>
+          <a class="dugme" href="#kontakt">Pošaljite zahtev</a>
+          <a class="dugme" href="viber://chat?number=%2B381600000605">Viber</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band led" id="uredjaji" aria-labelledby="uredjaji-n">
+    <div class="in">
+      <h2 class="k" id="uredjaji-n">Šta popravljamo</h2>
+      <ul class="uredjaji">
+        <li>
+          <svg viewBox="0 0 80 80" aria-hidden="true">
+            <rect x="23" y="5" width="34" height="70" rx="3"/>
+            <line x1="23" y1="30" x2="57" y2="30"/>
+            <line x1="28" y1="14" x2="28" y2="24"/>
+            <line x1="28" y1="36" x2="28" y2="52"/>
+            <line x1="27" y1="75" x2="27" y2="78"/>
+            <line x1="53" y1="75" x2="53" y2="78"/>
+          </svg>
+          <b>Frižider i zamrzivač</b>
+          <span>od 3.500 RSD</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 80 80" aria-hidden="true">
+            <rect x="12" y="8" width="56" height="66" rx="3"/>
+            <line x1="12" y1="21" x2="68" y2="21"/>
+            <rect x="17" y="12" width="12" height="5"/>
+            <circle cx="60" cy="14.5" r="3"/>
+            <circle cx="40" cy="47" r="17"/>
+            <circle cx="40" cy="47" r="11.5"/>
+            <path d="M33 50c3 2 9 2 14-1"/>
+          </svg>
+          <b>Veš i sudo mašina</b>
+          <span>od 3.800 RSD</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 80 80" aria-hidden="true">
+            <rect x="12" y="6" width="56" height="70" rx="2"/>
+            <line x1="12" y1="20" x2="68" y2="20"/>
+            <circle cx="21" cy="13" r="2.5"/>
+            <circle cx="31" cy="13" r="2.5"/>
+            <circle cx="49" cy="13" r="2.5"/>
+            <circle cx="59" cy="13" r="2.5"/>
+            <line x1="24" y1="27" x2="56" y2="27"/>
+            <rect x="18" y="32" width="44" height="38"/>
+            <rect x="24" y="38" width="32" height="20"/>
+          </svg>
+          <b>Šporet i rerna</b>
+          <span>od 3.200 RSD</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 80 80" aria-hidden="true">
+            <rect x="24" y="5" width="32" height="58" rx="16"/>
+            <circle cx="40" cy="47" r="5"/>
+            <line x1="40" y1="44" x2="40" y2="47"/>
+            <line x1="33" y1="63" x2="33" y2="76"/>
+            <line x1="47" y1="63" x2="47" y2="76"/>
+            <line x1="29" y1="76" x2="37" y2="76"/>
+            <line x1="43" y1="76" x2="51" y2="76"/>
+          </svg>
+          <b>Bojler</b>
+          <span>od 3.000 RSD</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="dolazak-n">
+    <div class="in">
+      <h2 class="k" id="dolazak-n">Dolazak</h2>
+      <p class="v">Ako se javite do 12 h, majstor dolazi <strong>isti dan</strong>. Kasnije prijave obilazimo sutra pre podne.</p>
+    </div>
+  </section>
+
+  <section class="band led" aria-labelledby="izlazak-n">
+    <div class="in">
+      <h2 class="k" id="izlazak-n">Izlazak</h2>
+      <div>
+        <p class="v"><strong>1.500 RSD</strong> za dolazak i dijagnostiku. Ako popravku uradimo odmah, izlazak ne plaćate.</p>
+        <p class="malo">Važi za Novi Beograd, Zemun, Bežanijsku kosu i Ledine. Za druge delove grada pitajte telefonom.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="cene" aria-labelledby="cene-n">
+    <div class="in">
+      <h2 class="k" id="cene-n">Cene rada</h2>
+      <div>
+        <table class="cene">
+          <tbody>
+            <tr><th scope="row">Izlazak i dijagnostika na adresi</th><td>1.500 RSD</td></tr>
+            <tr><th scope="row">Frižider, zamena termostata</th><td>3.500 RSD</td></tr>
+            <tr><th scope="row">Frižider, dopuna freona<small>sa proverom curenja</small></th><td>6.500 RSD</td></tr>
+            <tr><th scope="row">Veš mašina, zamena grejača</th><td>3.800 RSD</td></tr>
+            <tr><th scope="row">Veš mašina, zamena pumpe</th><td>4.500 RSD</td></tr>
+            <tr><th scope="row">Veš mašina, zamena ležajeva bubnja</th><td>9.500 RSD</td></tr>
+            <tr><th scope="row">Sudo mašina, čišćenje i zamena pumpe</th><td>5.200 RSD</td></tr>
+            <tr><th scope="row">Šporet, zamena grejne ploče</th><td>3.200 RSD</td></tr>
+            <tr><th scope="row">Rerna, zamena termostata ili grejača</th><td>3.600 RSD</td></tr>
+            <tr><th scope="row">Bojler, čišćenje od kamenca</th><td>3.000 RSD</td></tr>
+            <tr><th scope="row">Bojler, zamena grejača</th><td>3.900 RSD</td></tr>
+          </tbody>
+        </table>
+        <p class="malo">Navedene su cene rada. Deo plaćate po nabavnoj ceni, uz račun. Ako se popravka ne isplati, reći ćemo Vam to odmah.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band led" aria-labelledby="garancija-n">
+    <div class="in">
+      <h2 class="k" id="garancija-n">Garancija</h2>
+      <p class="v"><strong>Šest meseci</strong> na rad i na svaki deo koji ugradimo. Račun i garantni list dobijate na licu mesta.</p>
+    </div>
+  </section>
+
+  <section class="band" id="radno-vreme" aria-labelledby="vreme-n">
+    <div class="in">
+      <h2 class="k" id="vreme-n">Radno vreme</h2>
+      <ul class="dani">
+        <li><span>Ponedeljak</span><span>08–20 h</span></li>
+        <li><span>Utorak</span><span>08–20 h</span></li>
+        <li><span>Sreda</span><span>08–20 h</span></li>
+        <li><span>Četvrtak</span><span>08–20 h</span></li>
+        <li><span>Petak</span><span>08–20 h</span></li>
+        <li><span>Subota</span><span>09–15 h</span></li>
+        <li class="zatv"><span>Nedelja</span><span>ne radimo</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band led" id="adresa" aria-labelledby="adresa-n">
+    <div class="in">
+      <h2 class="k" id="adresa-n">Adresa</h2>
+      <div>
+        <p class="v">Bulevar Mihajla Pupina 10, Novi Beograd</p>
+        <p class="malo">Radionica je u prizemlju, ulaz iz dvorišta. Male uređaje (mikrotalasne, aparate za kafu) možete doneti sami.</p>
+        <div class="mapa">
+          <iframe title="Mapa: Bulevar Mihajla Pupina 10, Novi Beograd" loading="lazy" src="https://maps.google.com/maps?q=Bulevar%20Mihajla%20Pupina%2010%2C%20Novi%20Beograd%2C%20Beograd&z=15&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="kontakt" aria-labelledby="kontakt-n">
+    <div class="in">
+      <h2 class="k" id="kontakt-n">Prijava kvara</h2>
+      <div>
+        <p class="v">Opišite kvar, javićemo Vam se u roku od sat vremena radnim danima.</p>
+        <!--
+          Web3Forms (na pravom sajtu):
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="VLASNIKOV-ACCESS-KEY">
+            <input type="hidden" name="subject" value="Prijava kvara sa sajta Bela">
+            ... ista polja kao ispod ...
+          </form>
+          Poruka stiže na vlasnikov mejl. U ovom primeru forma ne šalje ništa.
+        -->
+        <form data-form="kontakt" novalidate>
+          <div class="par">
+            <div><label for="ime">Ime</label><input id="ime" name="ime" autocomplete="name" required></div>
+            <div><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" inputmode="tel" autocomplete="tel" required></div>
+          </div>
+          <div>
+            <label for="uredjaj">Uređaj</label>
+            <select id="uredjaj" name="uredjaj">
+              <option>Frižider ili zamrzivač</option>
+              <option>Veš mašina</option>
+              <option>Sudo mašina</option>
+              <option>Šporet ili rerna</option>
+              <option>Bojler</option>
+              <option>Nešto drugo</option>
+            </select>
+          </div>
+          <div><label for="opis">Šta se dešava i koji je model</label><textarea id="opis" name="opis"></textarea></div>
+          <div><button class="dugme glavno" type="submit">Pošaljite zahtev</button></div>
+          <p class="poruka" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="in">
+    <p><b>Bela</b></p>
+    <div>
+      <p>Bulevar Mihajla Pupina 10, Novi Beograd</p>
+      <p><a href="tel:+381600000605">060 000 06 05</a></p>
+      <p class="demo-foot">Primer sajta · izradio opsforma. Firma je izmišljena. <a href="../">Svi primeri</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'),nav=document.getElementById('meni');
+  function zatvori(){btn.setAttribute('aria-expanded','false');nav.classList.remove('otvoren')}
+  btn.addEventListener('click',function(){
+    var o=btn.getAttribute('aria-expanded')==='true';
+    btn.setAttribute('aria-expanded',String(!o));nav.classList.toggle('otvoren',!o);
+  });
+  nav.addEventListener('click',function(e){if(e.target.closest('a'))zatvori()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&btn.getAttribute('aria-expanded')==='true'){zatvori();btn.focus()}});
+
+  var f=document.querySelector('form[data-form="kontakt"]');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    f.querySelector('.poruka').textContent='Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.';
+  });
+})();
+</script>
+</body>
+</html>

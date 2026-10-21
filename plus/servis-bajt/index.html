@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Servis računara Bajt · Đure Đakovića 27, Palilula</title>
+<meta name="description" content="Servis laptopova i računara na Paliluli. Dijagnostika isti dan, cena pre popravke. Pošaljite zahtev za prijem uređaja online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;600&family=Golos+Text:wght@400;500&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0E0E0E;
+  --grey:#EDEDED;
+  --green:#57D9A3;
+  --ink:#0E0E0E;
+  --muted:#555555;
+  --line:#CBCBCB;
+  --t-text:#EDEDED;
+  --t-muted:#9C9C9C;
+  --t-line:#333333;
+  --mono:"Azeret Mono","SFMono-Regular",Menlo,Consolas,"Liberation Mono",monospace;
+  --sans:"Golos Text","Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--grey);color:var(--ink);font:400 18px/1.6 var(--sans)}
+a{color:inherit}
+h1,h2,h3{font-family:var(--mono);font-weight:600;margin:0;line-height:1.2;letter-spacing:-.02em}
+p{margin:0}
+[hidden]{display:none!important}
+:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.light :focus-visible{outline-color:var(--ink)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.col{max-width:780px;margin:0 auto;padding:0 16px}
+.h{color:var(--muted);font-weight:400}
+
+/* traka primera */
+.demo{background:var(--black);color:var(--t-muted);font:400 13px/1.4 var(--mono);border-bottom:1px solid var(--t-line)}
+.demo .col{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;justify-content:space-between;padding-top:8px;padding-bottom:8px}
+.demo a{color:var(--t-text);padding:6px 0}
+.badge{display:inline-block;border:1px solid var(--green);color:var(--green);font:400 12px/1 var(--mono);padding:5px 8px;border-radius:2px;white-space:nowrap}
+
+/* terminal (crno) */
+.term{background:var(--black);color:var(--t-text)}
+header.top .col{display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:16px;position:relative}
+.logo{font:600 17px var(--mono);text-decoration:none;color:var(--t-text)}
+.logo span{color:var(--green)}
+.menu-btn{display:none;min-width:48px;min-height:48px;padding:0 14px;background:transparent;color:var(--t-text);border:1px solid var(--t-line);font:400 14px var(--mono);cursor:pointer;border-radius:2px}
+#meni ul{list-style:none;margin:0;padding:0;display:flex;gap:2px}
+#meni a{display:flex;align-items:center;min-height:44px;padding:0 10px;color:var(--t-muted);font:400 14px var(--mono);text-decoration:none}
+#meni a:hover{color:var(--t-text)}
+
+.hero{padding:56px 0 64px}
+.prompt{font:400 14px var(--mono);color:var(--t-muted);margin-bottom:22px}
+.hero h1{font-size:clamp(2.1rem,7vw,3.6rem);line-height:1.08;color:var(--t-text)}
+.hero h1 .h{color:#6E6E6E}
+/* potpisni element: trepćući kursor */
+.cur{display:inline-block;width:.55em;height:.9em;background:var(--green);margin-left:.12em;vertical-align:-.06em;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lead{font-size:clamp(19px,2.4vw,21px);color:#CFCFCF;margin-top:22px;max-width:52ch}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 18px;border:1px solid var(--t-line);background:transparent;color:var(--t-text);font:400 15px var(--mono);text-decoration:none;cursor:pointer;border-radius:2px}
+.btn:hover{border-color:var(--t-muted)}
+.btn.go{background:var(--green);border-color:var(--green);color:var(--black);font-weight:600}
+.btn.go:hover{background:#7BE3B8}
+.kv{margin:36px 0 0;padding:20px 0 0;border-top:1px solid var(--t-line);font:400 14px/1.9 var(--mono);color:var(--t-muted)}
+.kv b{color:var(--t-text);font-weight:400}
+
+/* README (svetlo) */
+.light .btn{border-color:var(--ink);color:var(--ink)}
+.light .btn:hover{background:var(--ink);color:var(--grey)}
+.light .btn.go{background:var(--ink);color:var(--grey)}
+section.md{padding-top:72px;scroll-margin-top:8px}
+.md h2{font-size:clamp(1.35rem,3.6vw,1.75rem);padding-bottom:12px;margin-bottom:20px;border-bottom:1px solid var(--line)}
+.md > p,.md .p{max-width:62ch;margin-bottom:16px}
+.prices{width:100%;border-collapse:collapse;font-size:17px}
+.prices th,.prices td{padding:12px 0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;font-weight:400}
+.prices td{text-align:right;font:400 15px/1.6 var(--mono);white-space:nowrap;padding-left:16px}
+.prices th small{display:block;color:var(--muted);font-size:15px}
+.note{font-size:16px;color:var(--muted);margin-top:14px}
+ol.steps{margin:0;padding:0;list-style:none;counter-reset:s}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;padding:10px 0}
+ol.steps li::before{content:counter(s) ".";font:400 16px/1.7 var(--mono);color:var(--muted)}
+code{font:400 .9em var(--mono);background:#E0E0E0;padding:1px 5px;border-radius:2px}
+
+/* prijem: komandna linija */
+.cli-meta{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin-bottom:16px;font:400 14px var(--mono)}
+.cli-meta .badge{border-color:var(--ink);color:var(--ink)}
+.cli-meta b{font-weight:600}
+.cli{background:var(--black);color:var(--t-text);border-radius:4px;padding:22px 18px 26px;font:400 15px/1.5 var(--mono)}
+.cli .ps{color:var(--t-muted);margin-bottom:18px}
+.cli .ps span{color:var(--green)}
+.ln{display:grid;grid-template-columns:1fr;gap:8px;padding:12px 0;border-top:1px solid var(--t-line)}
+.ln > .k{color:var(--green);padding-top:2px}
+.ln .k small{color:var(--t-muted);font-size:13px;margin-left:6px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.o{min-height:46px;padding:6px 12px;background:transparent;color:var(--t-text);border:1px solid #444;border-radius:2px;font:400 14px/1.3 var(--mono);cursor:pointer;text-align:left}
+.o small{display:block;color:var(--t-muted);font-size:12px}
+.o:hover:not(:disabled){border-color:var(--t-text)}
+.o[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:var(--black)}
+.o[aria-pressed="true"] small{color:var(--black)}
+.o:disabled{color:#7A7A7A;border-color:#262626;text-decoration:line-through;cursor:not-allowed}
+.parts .o:disabled{text-decoration:none}
+.parts .o:disabled .nm{text-decoration:line-through}
+.days{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.days .o{text-align:center;padding:6px 4px}
+.parts .o{min-width:132px}
+.wait{color:var(--t-muted)}
+.cli input,.cli textarea{width:100%;min-height:46px;background:transparent;color:var(--t-text);border:0;border-bottom:1px solid #555;padding:8px 2px;font:400 16px var(--sans);border-radius:0}
+.cli textarea{min-height:70px;resize:vertical}
+.cli input:focus-visible,.cli textarea:focus-visible{outline:2px solid var(--green);outline-offset:2px;border-bottom-color:var(--green)}
+.cli label{color:var(--green)}
+.echo{color:var(--green);margin-top:18px;padding-top:14px;border-top:1px solid var(--t-line);min-height:24px}
+.err{color:#FF9B8F;min-height:22px;margin:10px 0}
+.send{min-height:50px;padding:0 18px;background:var(--green);border:1px solid var(--green);color:var(--black);font:600 15px var(--mono);cursor:pointer;border-radius:2px}
+.send:hover{background:#7BE3B8}
+.out .okline{color:var(--green);font-weight:600;margin-bottom:16px}
+.out dl{display:grid;grid-template-columns:1fr;gap:0 18px;margin:0 0 18px}
+.out dt{color:var(--t-muted);margin-top:8px}
+.out dd{margin:0}
+.out p.msg{color:#CFCFCF;font-family:var(--sans);font-size:16px;margin-bottom:18px;max-width:56ch}
+
+.hours{width:100%;max-width:520px;border-collapse:collapse;font:400 15px var(--mono)}
+.hours th,.hours td{text-align:left;font-weight:400;padding:9px 0;border-bottom:1px solid var(--line)}
+.hours td{text-align:right}
+.hours tr.is-today th,.hours tr.is-today td{font-weight:600}
+.map iframe{display:block;width:100%;height:300px;border:1px solid var(--line);background:#E2E2E2;margin-top:16px}
+.addr{font:600 17px var(--mono)}
+.f{display:grid;grid-template-columns:1fr;gap:16px;max-width:560px}
+.f label{display:block;font:400 14px var(--mono);margin-bottom:6px}
+.f input,.f textarea{width:100%;min-height:48px;border:1px solid #9A9A9A;background:#F7F7F7;padding:10px 12px;font:400 17px var(--sans);color:var(--ink);border-radius:2px}
+.f textarea{min-height:110px;resize:vertical}
+.f input:focus-visible,.f textarea:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
+.ok{font:400 15px var(--mono);margin-top:12px;min-height:24px}
+
+footer{margin-top:88px;border-top:1px solid var(--line);padding:28px 0 44px;font:400 13px/1.7 var(--mono);color:var(--muted)}
+footer .col{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px}
+footer a{color:var(--ink)}
+
+@media (max-width:759px){
+  .menu-btn{display:inline-flex;align-items:center}
+  #meni{display:none;position:absolute;left:0;right:0;top:100%;background:var(--black);border-top:1px solid var(--t-line);border-bottom:1px solid var(--t-line);padding:6px 16px 12px;z-index:20}
+  #meni.open{display:block}
+  #meni ul{flex-direction:column}
+  #meni a{font-size:16px;min-height:48px;color:var(--t-text)}
+}
+@media (min-width:640px){
+  .ln{grid-template-columns:150px 1fr;gap:16px;align-items:start}
+  .ln > .k{padding-top:12px}
+  .ln .k small{display:block;margin:2px 0 0}
+  .cli{padding:28px 30px 32px}
+  .days{grid-template-columns:repeat(7,minmax(0,1fr))}
+  .out dl{grid-template-columns:150px 1fr}
+  .out dt{margin-top:0}
+  .out dd{margin-bottom:6px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .cur{animation:none}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demo">
+  <div class="col">
+    <span>Primer sajta · izradio opsforma</span>
+    <span class="badge">Paket 2: zakazivanje</span>
+    <a href="../../">Svi primeri</a>
+  </div>
+</div>
+
+<div class="term">
+  <header class="top">
+    <div class="col">
+      <a class="logo" href="#pocetak">bajt<span>_</span></a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meni">meni</button>
+      <nav id="meni" aria-label="Glavni meni">
+        <ul>
+          <li><a href="#usluge">usluge</a></li>
+          <li><a href="#kako">kako-ide</a></li>
+          <li><a href="#prijem">prijem</a></li>
+          <li><a href="#radno-vreme">radno-vreme</a></li>
+          <li><a href="#kontakt">kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="pocetak" aria-labelledby="h1">
+    <div class="col">
+      <p class="prompt" aria-hidden="true">~/bajt $ cat README.md</p>
+      <h1 id="h1"><span class="h" aria-hidden="true"># </span>Servis računara Bajt<span class="cur" aria-hidden="true"></span></h1>
+      <p class="lead">Laptopovi i stoni računari, Đure Đakovića 27. Uređaj pregledamo isti dan i javimo cenu pre nego što bilo šta menjamo.</p>
+      <div class="btns">
+        <a class="btn go" href="#prijem">Pošaljite zahtev</a>
+        <a class="btn" href="tel:+381600000616">Pozovite 060 000 06 16</a>
+        <a class="btn" href="viber://chat?number=%2B381600000616">Viber</a>
+      </div>
+      <p class="kv">dijagnostika: <b>1.500 RSD, odbija se od popravke</b><br>garancija: <b>3 meseca na urađen posao</b><br>plaćanje: <b>gotovina ili kartica, pri preuzimanju</b></p>
+    </div>
+  </section>
+</div>
+
+<main class="light">
+  <section class="md col" id="usluge" aria-labelledby="h-usl">
+    <h2 id="h-usl"><span class="h" aria-hidden="true">## </span>Usluge i cene</h2>
+    <table class="prices">
+      <tr><th>Dijagnostika<small>Odbija se od cene ako radimo popravku.</small></th><td>1.500 RSD</td></tr>
+      <tr><th>Čišćenje od prašine i nova termalna pasta<small>Kad se laptop greje i ventilator zuji.</small></th><td>3.000 RSD</td></tr>
+      <tr><th>Provera i čišćenje sistema<small>Spor računar, iskačući prozori, virusi.</small></th><td>2.500 RSD</td></tr>
+      <tr><th>Instalacija Windowsa sa drajverima<small>Uz Vašu licencu, podaci se čuvaju.</small></th><td>2.500 RSD</td></tr>
+      <tr><th>Prenos podataka na novi disk</th><td>2.000 RSD</td></tr>
+      <tr><th>Ugradnja SSD diska ili memorije<small>Rad, deo se plaća posebno.</small></th><td>1.500 RSD</td></tr>
+      <tr><th>Zamena ekrana ili tastature laptopa<small>Rad, deo se plaća posebno.</small></th><td>od 2.500 RSD</td></tr>
+      <tr><th>Popravka posle prosute tečnosti</th><td>od 4.000 RSD</td></tr>
+    </table>
+    <p class="note">Cenu dela javljamo pre narudžbine. Ništa ne menjamo dok to ne potvrdite.</p>
+  </section>
+
+  <section class="md col" id="kako" aria-labelledby="h-kako">
+    <h2 id="h-kako"><span class="h" aria-hidden="true">## </span>Kako ide prijem</h2>
+    <ol class="steps">
+      <li>Pošaljete zahtev ispod ili pozovete. Upišete šta je uređaj i šta mu je.</li>
+      <li>Javimo se istog dana i potvrdimo kada možete da ga donesete.</li>
+      <li>Donesete uređaj sa punjačem. Dobijete prijemnicu sa brojem naloga.</li>
+      <li>Posle dijagnostike javimo šta je kvar i koliko košta. Radimo tek kad kažete „može“.</li>
+    </ol>
+  </section>
+
+  <!--
+    PRODUKCIJA
+    Ovo je varijanta a) Zahtev za prijem: u demou se ništa ne šalje, termini su izmišljeni.
+    Na pravom sajtu forma šalje uređaj, problem, dan predaje, deo dana, ime i telefon
+    na mejl servisa preko Web3Forms (POST https://api.web3forms.com/submit, skriveno polje
+    access_key) ili otvara Viber poruku sa istim rezimeom (viber://forward?text=...).
+    Vlasnik potvrđuje prijem pozivom ili porukom.
+    Varijanta b) Povezan kalendar: umesto ovog modula ugrađuje se Google Kalendar
+    "Appointment schedule", Cal.com ili Calendly; prijemi se sami upisuju u Google Kalendar
+    na vlasnikovom telefonu.
+  -->
+  <section class="md col" id="prijem" aria-labelledby="h-prijem">
+    <h2 id="h-prijem"><span class="h" aria-hidden="true">## </span>Zahtev za prijem uređaja</h2>
+    <div class="cli-meta"><span class="badge">Paket 2: zakazivanje</span><b>Primer: termini su izmišljeni</b></div>
+    <p class="p">Izaberite šta donosite i kada Vam odgovara. Ovo je zahtev: termin potvrđujemo pozivom ili porukom.</p>
+
+    <div class="cli" id="cli">
+      <form id="flow" novalidate>
+        <p class="ps" aria-hidden="true">bajt:~$ <span>prijem --novi</span></p>
+        <div class="ln" role="group" aria-labelledby="k-ur">
+          <span class="k" id="k-ur">uređaj:</span>
+          <div class="opts" id="dev"></div>
+        </div>
+        <div class="ln" role="group" aria-labelledby="k-pr">
+          <span class="k" id="k-pr">problem:</span>
+          <div class="opts" id="prob"></div>
+        </div>
+        <div class="ln" role="group" aria-labelledby="k-dan">
+          <span class="k" id="k-dan">dan predaje:<small>14 dana</small></span>
+          <div class="days" id="days"></div>
+        </div>
+        <div class="ln" role="group" aria-labelledby="k-deo">
+          <span class="k" id="k-deo">deo dana:</span>
+          <div class="opts parts" id="parts" aria-live="polite"><span class="wait">_ prvo izaberite dan</span></div>
+        </div>
+        <div class="ln"><label class="k" for="b-ime">ime:</label><input id="b-ime" name="ime" autocomplete="name"></div>
+        <div class="ln"><label class="k" for="b-tel">telefon:</label><input id="b-tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel"></div>
+        <div class="ln"><label class="k" for="b-nap">napomena:</label><textarea id="b-nap" name="napomena" placeholder="model, šifra, šta treba sačuvati"></textarea></div>
+        <p class="echo" id="echo" aria-live="polite">&gt; izaberite uređaj i problem</p>
+        <p class="err" id="b-err" role="alert"></p>
+        <button class="send" type="submit">$ pošalji zahtev</button>
+      </form>
+
+      <div class="out" id="done" hidden tabindex="-1">
+        <p class="ps" aria-hidden="true">bajt:~$ <span>prijem --novi</span></p>
+        <p class="okline">[ok] Zahtev za prijem je poslat.</p>
+        <dl id="sum"></dl>
+        <p class="msg">Ovo je zahtev, ne potvrđen termin. Javljamo se pozivom ili porukom na Viber da potvrdimo dan. Na pravom sajtu potvrda stiže i mejlom.</p>
+        <div class="btns" style="margin-top:0">
+          <button class="btn go" type="button" id="ics-btn">Dodaj u kalendar</button>
+          <button class="btn" type="button" id="new-btn">Novi termin</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="md col" id="radno-vreme" aria-labelledby="h-rv">
+    <h2 id="h-rv"><span class="h" aria-hidden="true">## </span>Radno vreme</h2>
+    <table class="hours" id="hours">
+      <tr data-d="1"><th>ponedeljak</th><td>10–19 h</td></tr>
+      <tr data-d="2"><th>utorak</th><td>10–19 h</td></tr>
+      <tr data-d="3"><th>sreda</th><td>10–19 h</td></tr>
+      <tr data-d="4"><th>četvrtak</th><td>10–19 h</td></tr>
+      <tr data-d="5"><th>petak</th><td>10–19 h</td></tr>
+      <tr data-d="6"><th>subota</th><td>10–15 h</td></tr>
+      <tr data-d="0"><th>nedelja</th><td>zatvoreno</td></tr>
+    </table>
+  </section>
+
+  <section class="md col" id="kontakt" aria-labelledby="h-k">
+    <h2 id="h-k"><span class="h" aria-hidden="true">## </span>Adresa i kontakt</h2>
+    <div class="map">
+      <p class="addr">Đure Đakovića 27, Palilula</p>
+      <p class="note" style="margin-top:4px">Lokal u prizemlju, pored pekare. Telefon 060 000 06 16.</p>
+      <iframe title="Mapa: Đure Đakovića 27, Beograd" loading="lazy" src="https://maps.google.com/maps?q=%C4%90ure%20%C4%90akovi%C4%87a%2027%2C%20Beograd&z=15&output=embed"></iframe>
+    </div>
+    <div class="btns">
+      <a class="btn go" href="tel:+381600000616">Pozovite</a>
+      <a class="btn" href="viber://chat?number=%2B381600000616">Viber</a>
+    </div>
+    <h3 style="font-size:17px;margin:44px 0 14px">Pitanje bez donošenja uređaja</h3>
+    <!--
+      Na pravom sajtu: <form action="https://api.web3forms.com/submit" method="POST">
+      sa <input type="hidden" name="access_key" value="KLJUČ-IZ-WEB3FORMS">;
+      poruka stiže direktno na mejl vlasnika.
+    -->
+    <form data-form="kontakt" class="f" novalidate>
+      <div><label for="k-ime">ime</label><input id="k-ime" name="ime" autocomplete="name"></div>
+      <div><label for="k-kon">telefon ili mejl</label><input id="k-kon" name="kontakt"></div>
+      <div><label for="k-por">poruka</label><textarea id="k-por" name="poruka" placeholder="Npr. model laptopa i šta se dešava"></textarea></div>
+      <div><button class="btn go" type="submit">Pošaljite poruku</button><p class="ok" id="k-ok" aria-live="polite"></p></div>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <div class="col">
+    <span>Servis računara Bajt, Đure Đakovića 27, Beograd</span>
+    <span>Primer sajta · izradio opsforma · <a href="../../">Svi primeri</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var btn=document.querySelector('.menu-btn'), nav=$('meni');
+  function setMenu(o){btn.setAttribute('aria-expanded',String(o));nav.classList.toggle('open',o)}
+  btn.addEventListener('click',function(){setMenu(btn.getAttribute('aria-expanded')!=='true')});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&btn.getAttribute('aria-expanded')==='true'){setMenu(false);btn.focus()}});
+
+  document.querySelector('[data-form="kontakt"]').addEventListener('submit',function(e){
+    e.preventDefault();$('k-ok').textContent='Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.';
+  });
+  var tr=document.querySelector('#hours tr[data-d="'+new Date().getDay()+'"]'); if(tr) tr.classList.add('is-today');
+
+  var FIRM='Servis računara Bajt', ADDR='Đure Đakovića 27, Beograd', SLUG='servis-bajt', INTAKE=15;
+  var HOURS={0:null,1:[600,1140],2:[600,1140],3:[600,1140],4:[600,1140],5:[600,1140],6:[600,900]};
+  var PARTS=[[600,780,'pre podne'],[780,960,'popodne'],[960,1140,'predveče']];
+  var DEV=['laptop','stoni računar','Mac','konzola','drugo'];
+  var PROB=[
+    {k:'ne pali se',s:'Dijagnostika',p:'1.500 RSD'},
+    {k:'spor je, zamrzava se',s:'Provera i čišćenje sistema',p:'2.500 RSD'},
+    {k:'greje se, bučan je',s:'Čišćenje i termalna pasta',p:'3.000 RSD'},
+    {k:'ekran ili tastatura',s:'Zamena ekrana ili tastature',p:'od 2.500 RSD + deo'},
+    {k:'prosuta tečnost',s:'Popravka posle tečnosti',p:'od 4.000 RSD'},
+    {k:'nov sistem',s:'Instalacija Windowsa',p:'2.500 RSD'},
+    {k:'nešto drugo',s:'Dijagnostika',p:'1.500 RSD'}
+  ];
+  var DAYS=['nedelja','ponedeljak','utorak','sreda','četvrtak','petak','subota'];
+  var SHORT=['ned','pon','uto','sre','čet','pet','sub'];
+  var MONTHS=['januar','februar','mart','april','maj','jun','jul','avgust','septembar','oktobar','novembar','decembar'];
+  var pad=function(n){return String(n).padStart(2,'0')};
+  var key=function(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())};
+  function hash(s){var h=2166136261;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
+  function full(dk,m){return hash(dk+'|'+m+'|bajt')%100<35}
+
+  var today=new Date();today.setHours(0,0,0,0);
+  var st={dev:null,prob:null,day:null,part:null};
+
+  function group(box,items,label,onPick){
+    items.forEach(function(it){
+      var b=document.createElement('button');b.type='button';b.className='o';b.setAttribute('aria-pressed','false');
+      b.textContent=label(it);
+      b.addEventListener('click',function(){
+        box.querySelectorAll('.o').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});onPick(it);echo();
+      });
+      box.appendChild(b);
+    });
+  }
+  group($('dev'),DEV,function(x){return x},function(x){st.dev=x});
+  group($('prob'),PROB,function(x){return x.k},function(x){st.prob=x});
+
+  /* delovi dana iz radnog vremena; predaja traje oko 15 min */
+  function partsFor(d){
+    var h=HOURS[d.getDay()]; if(!h) return [];
+    var now=new Date(), isT=key(now)===key(d), nm=now.getHours()*60+now.getMinutes();
+    return PARTS.map(function(p){return {a:Math.max(p[0],h[0]),b:Math.min(p[1],h[1]),n:p[2]}})
+      .filter(function(p){return p.b-p.a>=60 && !(isT && nm+30>p.b-INTAKE)})
+      .map(function(p){p.full=full(key(d),p.a);return p});
+  }
+
+  for(var i=0;i<14;i++){(function(d){
+    var b=document.createElement('button');b.type='button';b.className='o';b.dataset.date=key(d);
+    var open=!!HOURS[d.getDay()], left=partsFor(d).length>0;
+    b.innerHTML=SHORT[d.getDay()]+'<small>'+d.getDate()+'.'+(d.getMonth()+1)+'.</small>';
+    b.disabled=!open||!left;
+    b.setAttribute('aria-pressed','false');
+    b.setAttribute('aria-label',DAYS[d.getDay()]+' '+d.getDate()+'. '+MONTHS[d.getMonth()]+(!open?', zatvoreno':(!left?', danas više nema prijema':'')));
+    b.addEventListener('click',function(){
+      st.day=d;st.part=null;
+      $('days').querySelectorAll('.o').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      renderParts();echo();
+    });
+    $('days').appendChild(b);
+  })(new Date(today.getFullYear(),today.getMonth(),today.getDate()+i))}
+
+  function hh(m){return Math.floor(m/60)+(m%60?':'+pad(m%60):'')}
+  function renderParts(){
+    var box=$('parts');box.innerHTML='';
+    partsFor(st.day).forEach(function(p){
+      var b=document.createElement('button');b.type='button';b.className='o';b.dataset.start=p.a;b.dataset.end=p.b;
+      b.innerHTML='<span class="nm">'+p.n+'</span><small>'+hh(p.a)+'–'+hh(p.b)+' h'+(p.full?', popunjeno':'')+'</small>';
+      b.disabled=p.full;b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',function(){if(p.full)return;st.part=p;
+        box.querySelectorAll('.o').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});echo()});
+      box.appendChild(b);
+    });
+  }
+  function dayLabel(d){return DAYS[d.getDay()]+', '+d.getDate()+'. '+MONTHS[d.getMonth()]}
+  function echo(){
+    var t=[];
+    if(st.dev) t.push(st.dev);
+    if(st.prob) t.push(st.prob.k+': '+st.prob.s.toLowerCase()+', '+st.prob.p);
+    if(st.day) t.push(dayLabel(st.day));
+    if(st.part) t.push(st.part.n+' '+hh(st.part.a)+'–'+hh(st.part.b)+' h');
+    $('echo').textContent='> '+(t.length?t.join(' | '):'izaberite uređaj i problem');
+  }
+
+  $('flow').addEventListener('submit',function(e){
+    e.preventDefault();
+    var err=$('b-err'),ime=$('b-ime').value.trim(),tel=$('b-tel').value.replace(/[^\d+]/g,'');
+    if(!st.dev){err.textContent='! izaberite uređaj';return}
+    if(!st.prob){err.textContent='! izaberite problem';return}
+    if(!st.day){err.textContent='! izaberite dan predaje';return}
+    if(!st.part){err.textContent='! izaberite deo dana';return}
+    if(ime.length<2){err.textContent='! upišite ime';$('b-ime').focus();return}
+    if(tel.length<6){err.textContent='! upišite telefon, da bismo Vas pozvali';$('b-tel').focus();return}
+    err.textContent='';
+    var rows=[['uređaj',st.dev],['problem',st.prob.k],['usluga',st.prob.s],['procena',st.prob.p],['prima','Nenad, serviser'],
+      ['dan predaje',dayLabel(st.day)],['deo dana',st.part.n+', '+hh(st.part.a)+'–'+hh(st.part.b)+' h'],['trajanje','predaja oko '+INTAKE+' min'],
+      ['ime',ime],['telefon',$('b-tel').value.trim()]];
+    var dl=$('sum');dl.innerHTML='';
+    rows.forEach(function(r){var dt=document.createElement('dt');dt.textContent=r[0];var dd=document.createElement('dd');dd.textContent=r[1];dl.appendChild(dt);dl.appendChild(dd)});
+    st.sent={dev:st.dev,prob:st.prob,day:st.day,part:st.part};
+    $('flow').hidden=true;$('done').hidden=false;$('done').focus();
+    $('prijem').scrollIntoView({block:'start'});
+  });
+
+  /* .ics: početak izabranog dela dana, predaja oko 15 min */
+  $('ics-btn').addEventListener('click',function(){
+    var x=st.sent, s=new Date(x.day);s.setHours(0,x.part.a,0,0);
+    var e=new Date(s.getTime()+INTAKE*60000);
+    var z=function(d){return d.toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'')};
+    var esc=function(t){return String(t).replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/\n/g,'\\n')};
+    var L=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//opsforma//Servis Bajt//SR','CALSCALE:GREGORIAN','METHOD:PUBLISH','BEGIN:VEVENT',
+      'UID:'+Date.now()+'-'+Math.random().toString(36).slice(2,9)+'@'+SLUG+'.primer',
+      'DTSTAMP:'+z(new Date()),'DTSTART:'+z(s),'DTEND:'+z(e),
+      'SUMMARY:'+esc(FIRM+': predaja uređaja ('+x.dev+', '+x.prob.k+')'),
+      'LOCATION:'+esc(ADDR),
+      'DESCRIPTION:'+esc('Predaja '+x.part.n+', između '+hh(x.part.a)+' i '+hh(x.part.b)+' h. Usluga: '+x.prob.s+', '+x.prob.p+'. Termin potvrđujemo pozivom. Telefon 060 000 06 16.'),
+      'END:VEVENT','END:VCALENDAR'];
+    var blob=new Blob([L.join('\r\n')+'\r\n'],{type:'text/calendar;charset=utf-8'});
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='termin-'+SLUG+'.ics';
+    document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},1000);
+  });
+  $('new-btn').addEventListener('click',function(){
+    st={dev:null,prob:null,day:null,part:null};
+    document.querySelectorAll('#cli .o[aria-pressed]').forEach(function(x){x.setAttribute('aria-pressed','false')});
+    $('parts').innerHTML='<span class="wait">_ prvo izaberite dan</span>';
+    $('flow').reset();echo();
+    $('done').hidden=true;$('flow').hidden=false;$('dev').querySelector('.o').focus();
+  });
+})();
+</script>
+</body>
+</html>

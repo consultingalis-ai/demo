@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Stolarska radionica Hrast · Banovo brdo</title>
+<meta name="description" content="Kuhinje, stolovi, plakari i stolice od masivnog drveta, po meri. Radionica u Požeškoj 82 na Banovom brdu, merenje kod Vas i cena pre izrade.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Brygada+1918:wght@400;600&family=Kumbh+Sans:wght@400;600&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lan:#EFE9DF;
+  --orah:#5B3A29;
+  --crna:#161412;
+  --siva:#635A51;
+  --tanko:rgba(22,20,18,.28);
+  --serif:"Brygada 1918","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --sans:"Kumbh Sans","Avenir Next","Segoe UI",system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--lan);color:var(--crna);font-family:var(--sans);font-size:1rem;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--orah);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
+
+.demo-bar{background:var(--crna);color:var(--lan);font-size:.8125rem;padding:.55rem 16px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.25rem 1rem}
+.demo-bar a{color:var(--lan)}
+.demo-bar a:focus-visible{outline-color:var(--lan)}
+
+.list{max-width:1240px;margin:0 auto;padding:0 16px}
+
+/* zaglavlje */
+.top{position:relative;display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:72px;border-bottom:1px solid var(--crna)}
+.znak{text-decoration:none;display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap}
+.znak b{font-family:var(--serif);font-weight:600;font-size:1.5rem}
+.znak span{font-size:.8125rem;color:var(--siva)}
+.menu-btn{font:inherit;font-size:.9375rem;background:transparent;border:1px solid var(--crna);color:var(--crna);min-height:44px;min-width:44px;padding:0 1rem;cursor:pointer}
+.menu-btn .z{display:none}
+.menu-btn[aria-expanded="true"] .o{display:none}
+.menu-btn[aria-expanded="true"] .z{display:inline}
+.nav{display:none}
+.nav.otvoren{display:block;position:absolute;top:100%;left:-16px;right:-16px;background:var(--lan);border-bottom:1px solid var(--crna);z-index:10;padding:0 16px .5rem}
+.nav ul{list-style:none;margin:0;padding:0}
+.nav a{display:flex;align-items:center;min-height:50px;text-decoration:none;border-bottom:1px solid var(--tanko)}
+.nav li:last-child a{border-bottom:0}
+@media (min-width:880px){
+  .menu-btn{display:none}
+  .nav,.nav.otvoren{display:block;position:static;padding:0;border:0;background:none}
+  .nav ul{display:flex;gap:1.75rem}
+  .nav a{border:0;min-height:44px;font-size:.9375rem}
+  .nav a:hover{text-decoration:underline;text-underline-offset:4px}
+}
+
+/* naslovna strana kataloga */
+.korica{border-bottom:1px solid var(--crna)}
+.korica-tekst{padding:48px 0 40px}
+.korica h1{font-size:clamp(2.375rem,1.5rem + 4.2vw,5rem);line-height:1.04;letter-spacing:-.015em;max-width:15ch}
+.korica .uvod{max-width:46ch;margin:1.5rem 0 0;font-size:1.0625rem}
+.akcije{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.dugme{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 1.25rem;font:inherit;font-weight:600;font-size:.9375rem;text-decoration:none;border:1px solid var(--crna);background:transparent;color:var(--crna);cursor:pointer}
+.dugme.glavno{background:var(--orah);border-color:var(--orah);color:var(--lan)}
+.dugme:hover{background:var(--crna);border-color:var(--crna);color:var(--lan)}
+
+.crtez{border-top:1px solid var(--crna);display:grid;place-items:center;padding:32px 0 20px;position:relative}
+.crtez svg{width:min(220px,58vw);height:auto;overflow:visible}
+.crtez path{fill:none;stroke:var(--orah);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.crtez figcaption{justify-self:start;font-size:.8125rem;color:var(--siva);margin-top:1rem}
+
+.cinjenice{display:grid;grid-template-columns:1fr;border-top:1px solid var(--crna);margin:0}
+.cinjenice div{padding:1rem 0;border-bottom:1px solid var(--tanko)}
+.cinjenice div:last-child{border-bottom:0}
+.cinjenice dt{font-size:.8125rem;color:var(--siva)}
+.cinjenice dd{margin:.15rem 0 0;font-family:var(--serif);font-size:1.25rem;line-height:1.3}
+@media (min-width:720px){
+  .cinjenice{grid-template-columns:repeat(3,1fr)}
+  .cinjenice div{border-bottom:0;border-left:1px solid var(--crna);padding:1.25rem 1.25rem 1.5rem}
+  .cinjenice div:first-child{border-left:0;padding-left:0}
+}
+@media (min-width:880px){
+  .korica-tekst{padding:64px 0 52px}
+  .korica h1{max-width:21ch}
+  .crtez{padding:48px 0 24px}
+  .crtez svg{width:260px}
+}
+
+/* sekcije */
+.deo{padding:64px 0;border-bottom:1px solid var(--crna)}
+.deo-glava{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.5rem 2rem;margin-bottom:2rem}
+.deo h2{font-size:clamp(1.75rem,1.3rem + 1.6vw,2.625rem);line-height:1.1}
+.deo-glava p{margin:0;color:var(--siva);max-width:44ch;font-size:.9375rem}
+
+/* katalog radova */
+.radovi{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;border-top:1px solid var(--crna);border-left:1px solid var(--crna)}
+.rad{border-right:1px solid var(--crna);border-bottom:1px solid var(--crna);padding:20px 20px 22px;display:flex;flex-direction:column;gap:.5rem;min-width:0}
+.rad .br{font-family:var(--serif);font-size:2.25rem;line-height:1;color:var(--crna)}
+.rad h3{font-size:1.375rem;line-height:1.2;margin-top:1.5rem}
+.rad p{margin:0;color:var(--siva);font-size:.9375rem}
+.rad .cena{margin-top:auto;padding-top:1rem;font-weight:600;color:var(--crna)}
+.rad .cena small{font-weight:400;color:var(--siva);font-size:.875rem}
+.foto{aspect-ratio:4/3;background:#E2D9CB;display:flex;align-items:flex-end;padding:.6rem .7rem;font-size:.8125rem;color:var(--siva);margin-top:2rem;max-width:26rem}
+@media (min-width:640px){.radovi{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.radovi{grid-template-columns:repeat(3,1fr)}.rad{padding:28px 28px 30px}}
+
+/* cenovnik popravki */
+.tabela{width:100%;border-collapse:collapse;max-width:820px}
+.tabela th,.tabela td{text-align:left;font-weight:400;padding:.85rem 0;border-bottom:1px solid var(--tanko);vertical-align:top}
+.tabela tr:first-child th,.tabela tr:first-child td{border-top:1px solid var(--crna)}
+.tabela td{text-align:right;white-space:nowrap;padding-left:1rem;font-weight:600}
+
+/* postupak */
+.koraci{list-style:none;margin:0;padding:0;display:grid;border-top:1px solid var(--crna)}
+.koraci li{padding:1.25rem 0;border-bottom:1px solid var(--tanko);display:grid;grid-template-columns:3rem 1fr;gap:.5rem}
+.koraci .br{font-family:var(--serif);font-size:1.25rem}
+.koraci b{display:block;font-weight:600}
+.koraci p{margin:.2rem 0 0;color:var(--siva);font-size:.9375rem}
+@media (min-width:880px){
+  .koraci{grid-template-columns:repeat(4,1fr);border-left:1px solid var(--crna)}
+  .koraci li{grid-template-columns:1fr;border-right:1px solid var(--crna);border-bottom:1px solid var(--crna);padding:1.25rem 1.25rem 1.75rem}
+}
+
+/* radionica: vreme i adresa */
+.radionica{display:grid;gap:2.5rem}
+.dani{margin:0;display:grid;grid-template-columns:1fr auto;max-width:26rem}
+.dani dt,.dani dd{margin:0;padding:.55rem 0;border-bottom:1px solid var(--tanko)}
+.dani dt:first-of-type,.dani dt:first-of-type + dd{border-top:1px solid var(--crna)}
+.dani dd{text-align:right}
+.dani .zatv{color:var(--siva)}
+.adresa p{margin:0 0 .75rem;max-width:40ch}
+.adresa .ulica{font-family:var(--serif);font-size:1.5rem;line-height:1.25}
+.mapa{border:1px solid var(--crna);margin-top:1.25rem}
+.mapa iframe{display:block;width:100%;height:300px;border:0}
+.radionica h3{font-size:1.25rem;margin-bottom:1rem}
+@media (min-width:880px){.radionica{grid-template-columns:1fr 1.4fr;gap:0}.radionica > div + div{border-left:1px solid var(--crna);padding-left:2.5rem}.radionica > div:first-child{padding-right:2.5rem}}
+
+/* forma */
+form{display:grid;gap:1.1rem;max-width:640px}
+.par{display:grid;gap:1.1rem}
+@media (min-width:640px){.par{grid-template-columns:1fr 1fr}}
+label{display:block;font-size:.875rem;color:var(--siva);margin-bottom:.3rem}
+input,select,textarea{width:100%;font:inherit;color:var(--crna);background:#F7F3EC;border:1px solid #9A8F82;border-radius:0;padding:.7rem .8rem;min-height:48px}
+textarea{min-height:120px;resize:vertical}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--orah);outline-offset:0}
+.poruka{margin:0;font-weight:600;min-height:1.6em}
+
+footer{padding:32px 0 48px;font-size:.9375rem;display:grid;gap:.4rem}
+footer p{margin:0}
+.demo-foot{color:var(--siva)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-bar"><span>Primer sajta · izradio opsforma</span><a href="../">Svi primeri</a></div>
+
+<div class="list">
+  <header class="top">
+    <a class="znak" href="#pocetak"><b>Hrast</b><span>stolarska radionica, Banovo brdo</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meni"><span class="o">Meni</span><span class="z">Zatvori</span></button>
+    <nav class="nav" id="meni" aria-label="Glavna navigacija">
+      <ul>
+        <li><a href="#radovi">Radovi</a></li>
+        <li><a href="#popravke">Popravke</a></li>
+        <li><a href="#postupak">Kako radimo</a></li>
+        <li><a href="#radionica">Radionica</a></li>
+        <li><a href="#kontakt">Upit</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="korica" id="pocetak" aria-labelledby="naslov">
+      <div class="korica-tekst">
+        <h1 id="naslov">Nameštaj po meri od masivnog drveta.</h1>
+        <p class="uvod">Kuhinje, stolovi, plakari i stolice iz naše radionice u Požeškoj. Dođemo da izmerimo, nacrtamo predlog i kažemo Vam cenu pre nego što isečemo prvu dasku.</p>
+        <div class="akcije">
+          <a class="dugme glavno" href="tel:+381600000607">Pozovite 060 000 06 07</a>
+          <a class="dugme" href="#kontakt">Pošaljite upit</a>
+          <a class="dugme" href="viber://chat?number=%2B381600000607">Viber</a>
+        </div>
+      </div>
+      <figure class="crtez" style="margin:0">
+        <svg viewBox="36 12 140 248" aria-hidden="true">
+          <path d="M45 151 L45 236 L50 236 L50 150 L130 165 L130 250 L135 250 L135 166 L160 141 L160 222 L164 222 L164 140 L162 40 C161 34 158 33 154 33 L86 22 C82 21 80 23 80 27 L81 72 L161 85 L161 92 L81 79 L82 128 L82 206 L86 206 L86 133 L50 150"/>
+        </svg>
+        <figcaption>Stolica od hrastovine, rad 04 u katalogu ispod</figcaption>
+      </figure>
+      <dl class="cinjenice">
+        <div><dt>Merenje</dt><dd>Kod Vas, besplatno na Čukarici</dd></div>
+        <div><dt>Rok izrade</dt><dd>Od tri do šest nedelja</dd></div>
+        <div><dt>Drvo</dt><dd>Hrast, orah i jasen, sušeni u komori</dd></div>
+      </dl>
+    </section>
+
+    <section class="deo" id="radovi" aria-labelledby="radovi-n">
+      <div class="deo-glava">
+        <h2 id="radovi-n">Radovi</h2>
+        <p>Šest stvari koje najčešće pravimo. Mere i završnu obradu prilagođavamo Vašem prostoru, a cena zavisi od drveta i veličine.</p>
+      </div>
+      <ol class="radovi">
+        <li class="rad">
+          <span class="br" aria-hidden="true">01</span>
+          <h3>Kuhinja</h3>
+          <p>Fronte od masivnog hrasta, korpus od vodootporne ploče, uljeni vosak.</p>
+          <p class="cena">od 42.000 RSD <small>po dužnom metru</small></p>
+        </li>
+        <li class="rad">
+          <span class="br" aria-hidden="true">02</span>
+          <h3>Trpezarijski sto</h3>
+          <p>Hrast ili orah, ploča 4 cm. Za šest osoba 180 × 90 cm, noge od masiva ili čelika.</p>
+          <p class="cena">od 115.000 RSD</p>
+        </li>
+        <li class="rad">
+          <span class="br" aria-hidden="true">03</span>
+          <h3>Ugradni plakar</h3>
+          <p>Do plafona i od zida do zida, krilna ili klizna vrata, unutrašnji raspored po dogovoru.</p>
+          <p class="cena">od 38.000 RSD <small>po m² fronta</small></p>
+        </li>
+        <li class="rad">
+          <span class="br" aria-hidden="true">04</span>
+          <h3>Stolica</h3>
+          <p>Hrast ili jasen, sedište od drveta ili tapacirano. Pravimo u kompletu od četiri ili šest.</p>
+          <p class="cena">od 18.000 RSD <small>po komadu</small></p>
+        </li>
+        <li class="rad">
+          <span class="br" aria-hidden="true">05</span>
+          <h3>Police i biblioteka</h3>
+          <p>Orah ili hrast, na zid ili u nišu, sa skrivenim nosačima.</p>
+          <p class="cena">od 24.000 RSD <small>po metru</small></p>
+        </li>
+        <li class="rad">
+          <span class="br" aria-hidden="true">06</span>
+          <h3>Sobna vrata</h3>
+          <p>Masivno drvo, sa štokom, okovom i ugradnjom.</p>
+          <p class="cena">od 65.000 RSD <small>po vratima</small></p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="deo" id="popravke" aria-labelledby="popravke-n">
+      <div class="deo-glava">
+        <h2 id="popravke-n">Popravke i obrada</h2>
+        <p>Manje poslove radimo u radionici. Stolice i stočiće donesite sami, za veće komade dolazimo po njih.</p>
+      </div>
+      <table class="tabela">
+        <tbody>
+          <tr><th scope="row">Lepljenje rasklimane stolice</th><td>3.500 RSD</td></tr>
+          <tr><th scope="row">Restauracija stolice, skidanje laka i novo ulje</th><td>9.000 RSD</td></tr>
+          <tr><th scope="row">Brušenje i uljenje trpezarijskog stola</th><td>14.000 RSD</td></tr>
+          <tr><th scope="row">Skraćivanje sobnih vrata</th><td>2.500 RSD</td></tr>
+          <tr><th scope="row">Zamena šarki i okova na kuhinji, po elementu</th><td>1.200 RSD</td></tr>
+          <tr><th scope="row">Merenje van Čukarice</th><td>1.500 RSD</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="deo" id="postupak" aria-labelledby="postupak-n">
+      <div class="deo-glava">
+        <h2 id="postupak-n">Kako radimo</h2>
+      </div>
+      <ol class="koraci">
+        <li><span class="br" aria-hidden="true">1</span><div><b>Merenje</b><p>Dolazimo kod Vas, merimo prostor i pričamo o tome šta Vam treba.</p></div></li>
+        <li><span class="br" aria-hidden="true">2</span><div><b>Crtež i ponuda</b><p>Za nekoliko dana dobijate crtež sa merama, izbor drveta i tačnu cenu.</p></div></li>
+        <li><span class="br" aria-hidden="true">3</span><div><b>Izrada</b><p>Avans je 40 %. Dok radimo, možete doći u radionicu i pogledati komad.</p></div></li>
+        <li><span class="br" aria-hidden="true">4</span><div><b>Dostava i montaža</b><p>Donosimo, montiramo i odnosimo ambalažu. Ostatak plaćate po završetku.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="deo" id="radionica" aria-labelledby="radionica-n">
+      <div class="deo-glava">
+        <h2 id="radionica-n">Radionica</h2>
+      </div>
+      <div class="radionica">
+        <div>
+          <h3>Radno vreme</h3>
+          <dl class="dani">
+            <dt>Ponedeljak</dt><dd>08–17 h</dd>
+            <dt>Utorak</dt><dd>08–17 h</dd>
+            <dt>Sreda</dt><dd>08–17 h</dd>
+            <dt>Četvrtak</dt><dd>08–17 h</dd>
+            <dt>Petak</dt><dd>08–17 h</dd>
+            <dt>Subota</dt><dd>09–13 h</dd>
+            <dt class="zatv">Nedelja</dt><dd class="zatv">zatvoreno</dd>
+          </dl>
+          <div class="foto" role="img" aria-label="Mesto za fotografiju radionice">Vaša fotografija</div>
+        </div>
+        <div class="adresa">
+          <h3>Adresa</h3>
+          <p class="ulica">Požeška 82, Banovo brdo</p>
+          <p>Ulaz je kroz kapiju u dvorištu. Ako dolazite da pogledate drvo i uzorke, javite se dan ranije.</p>
+          <div class="mapa">
+            <iframe title="Mapa: Požeška 82, Banovo brdo" loading="lazy" src="https://maps.google.com/maps?q=Po%C5%BEe%C5%A1ka%2082%2C%20Banovo%20brdo%2C%20Beograd&z=15&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="deo" id="kontakt" aria-labelledby="kontakt-n">
+      <div class="deo-glava">
+        <h2 id="kontakt-n">Pošaljite upit</h2>
+        <p>Napišite šta biste želeli i približne mere. Ako imate skicu ili fotografiju prostora, pošaljite je na Viber.</p>
+      </div>
+      <!--
+        Web3Forms (na pravom sajtu):
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="VLASNIKOV-ACCESS-KEY">
+          <input type="hidden" name="subject" value="Upit sa sajta Hrast">
+          ... ista polja kao ispod ...
+        </form>
+        Poruka stiže na vlasnikov mejl. U ovom primeru forma ne šalje ništa.
+      -->
+      <form data-form="kontakt" novalidate>
+        <div class="par">
+          <div><label for="ime">Ime</label><input id="ime" name="ime" autocomplete="name" required></div>
+          <div><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" inputmode="tel" autocomplete="tel" required></div>
+        </div>
+        <div>
+          <label for="komad">Šta Vam treba</label>
+          <select id="komad" name="komad">
+            <option>Kuhinja</option>
+            <option>Sto ili stolice</option>
+            <option>Plakar</option>
+            <option>Police</option>
+            <option>Vrata</option>
+            <option>Popravka</option>
+            <option>Nešto drugo</option>
+          </select>
+        </div>
+        <div><label for="opis">Opis i približne mere</label><textarea id="opis" name="opis"></textarea></div>
+        <div><button class="dugme glavno" type="submit">Pošaljite upit</button></div>
+        <p class="poruka" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Stolarska radionica Hrast, Požeška 82, Banovo brdo</p>
+    <p><a href="tel:+381600000607">060 000 06 07</a></p>
+    <p class="demo-foot">Primer sajta · izradio opsforma. Radionica je izmišljena. <a href="../">Svi primeri</a></p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'),nav=document.getElementById('meni');
+  function zatvori(){btn.setAttribute('aria-expanded','false');nav.classList.remove('otvoren')}
+  btn.addEventListener('click',function(){
+    var o=btn.getAttribute('aria-expanded')==='true';
+    btn.setAttribute('aria-expanded',String(!o));nav.classList.toggle('otvoren',!o);
+  });
+  nav.addEventListener('click',function(e){if(e.target.closest('a'))zatvori()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&btn.getAttribute('aria-expanded')==='true'){zatvori();btn.focus()}});
+
+  var f=document.querySelector('form[data-form="kontakt"]');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    f.querySelector('.poruka').textContent='Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.';
+  });
+})();
+</script>
+</body>
+</html>

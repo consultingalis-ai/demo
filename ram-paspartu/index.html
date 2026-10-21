@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Paspartu – ram radionica, Cara Dušana 48, Dorćol</title>
+<meta name="description" content="Ram radionica Paspartu u Cara Dušana 48 na Dorćolu. Ramovi po meri od hrasta i gotovih lajsni, paspartu, muzejsko staklo, uramljivanje goblena, diploma i dresova.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Mona+Sans:wght@400;600&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --zid:#EDEBE6; --crna:#111111; --hrast:#A57A4C;
+  --paspartu:#FFFFFF; --rez:#D6D2CA; --tiho:#4F4D49;
+  --naslov:"Gloock","Bodoni 72",Didot,"Playfair Display",Georgia,"DejaVu Serif",serif;
+  --tekst:"Mona Sans","Helvetica Neue",Arial,"DejaVu Sans",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--zid);color:var(--crna);font-family:var(--tekst);font-weight:400;font-size:1rem;line-height:1.6}
+a{color:inherit;text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--crna);outline-offset:4px}
+h1,h2,h3,p{margin:0}
+
+.primer{font-size:.8125rem;color:var(--tiho)}
+.primer .in{max-width:1180px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.primer a{color:var(--crna)}
+
+header.top .in{max-width:1180px;margin:0 auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:20px;position:relative}
+.ime{font-family:var(--naslov);font-size:1.375rem;text-decoration:none;display:inline-flex;min-height:44px;align-items:center}
+nav.meni ul{list-style:none;margin:0;padding:0;display:flex;gap:28px}
+nav.meni a{text-decoration:none;font-size:.9375rem;display:inline-flex;min-height:44px;align-items:center}
+nav.meni a:hover{text-decoration:underline}
+.meni-dugme{display:none;font:inherit;font-size:.9375rem;background:none;color:var(--crna);border:1px solid var(--crna);min-height:44px;min-width:44px;padding:0 16px;cursor:pointer}
+
+/* hero: naslov u ramu sa paspartuom */
+.hero{padding:clamp(40px,5vw,64px) 20px clamp(80px,12vw,180px);display:flex;flex-direction:column;align-items:center}
+.ram{border:6px solid var(--hrast);background:var(--paspartu);padding:clamp(28px,5.5vw,76px) clamp(28px,8vw,112px) clamp(36px,7vw,96px);max-width:100%}
+.otvor{border:1px solid var(--rez);padding:clamp(28px,5vw,56px) clamp(20px,5vw,64px);text-align:center}
+.otvor h1{font-family:var(--naslov);font-weight:400;font-size:clamp(2.5rem,11vw,6.5rem);line-height:1;letter-spacing:-.01em}
+.otvor p{font-size:.8125rem;color:var(--tiho);margin-top:14px}
+.legenda{width:min(100%,22rem);margin-top:clamp(36px,4vw,48px);font-size:.9375rem}
+.legenda b{font-weight:600;display:block}
+.legenda .mat{color:var(--tiho);font-size:.875rem;margin:2px 0 12px}
+.akcije{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.dugme{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;font:inherit;font-weight:600;font-size:.9375rem;text-decoration:none;border:1px solid var(--crna);color:var(--crna);background:transparent;cursor:pointer}
+.dugme.puno{background:var(--crna);color:var(--zid)}
+.dugme:hover{background:var(--hrast);border-color:var(--hrast);color:var(--crna)}
+
+/* sekcije: uzak centar, mnogo zida okolo */
+section.zid{padding:clamp(72px,11vw,160px) 20px}
+.uzak{max-width:36rem;margin:0 auto}
+.sire{max-width:52rem;margin:0 auto}
+h2{font-family:var(--naslov);font-weight:400;font-size:clamp(1.875rem,4vw,2.75rem);line-height:1.1;text-align:center;margin-bottom:20px}
+.uvod{text-align:center;color:var(--tiho);max-width:30rem;margin:0 auto clamp(48px,6vw,80px)}
+
+.etikete{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(40px,5vw,64px) clamp(32px,6vw,96px)}
+.etikete li{font-size:.9375rem}
+.etikete b{font-weight:600;display:block}
+.etikete .mat{display:block;color:var(--tiho);font-size:.875rem;margin:2px 0 8px}
+.etikete .cena{font-family:var(--naslov);font-size:1.25rem}
+
+.foto{margin:clamp(72px,10vw,128px) auto 0;max-width:36rem;aspect-ratio:4/3;background:#DAD6CE;display:flex;align-items:flex-end;justify-content:flex-start;padding:12px}
+.foto span{font-size:.75rem;color:var(--tiho)}
+
+.tok{list-style:none;margin:0;padding:0;counter-reset:t}
+.tok li{counter-increment:t;display:grid;grid-template-columns:3rem 1fr;gap:0 12px;padding:22px 0;border-top:1px solid var(--rez)}
+.tok li:last-child{border-bottom:1px solid var(--rez)}
+.tok li::before{content:counter(t);font-family:var(--naslov);font-size:1.25rem;line-height:1.3}
+.tok b{font-weight:600;display:block}
+.tok span{color:var(--tiho);font-size:.9375rem}
+
+.sati{width:100%;border-collapse:collapse}
+.sati th,.sati td{font-weight:400;padding:10px 0;border-bottom:1px solid var(--rez);text-align:left}
+.sati td{text-align:right;font-variant-numeric:tabular-nums}
+
+.dve{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,88px);align-items:start}
+.adresa p{margin-bottom:6px}
+.adresa .tel{display:inline-flex;min-height:44px;align-items:center;font-family:var(--naslov);font-size:1.5rem;text-decoration:none}
+.mapa{margin-top:24px;aspect-ratio:1/1;border:1px solid var(--rez)}
+.mapa iframe{width:100%;height:100%;border:0;display:block}
+form{display:grid;gap:18px}
+label{display:block;font-size:.875rem;color:var(--tiho);margin-bottom:4px}
+input,textarea,select{width:100%;font:inherit;color:var(--crna);background:var(--paspartu);border:1px solid var(--rez);border-radius:0;padding:10px 12px;min-height:46px}
+textarea{min-height:120px;resize:vertical}
+input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--crna);outline-offset:1px}
+.poruka{font-size:.9375rem;background:var(--paspartu);border:1px solid var(--rez);padding:12px 14px}
+.poruka[hidden]{display:none}
+
+footer{padding:40px 20px 56px;font-size:.8125rem;color:var(--tiho);text-align:center}
+footer p + p{margin-top:6px}
+footer a{color:var(--crna)}
+
+@media (max-width:760px){
+  .meni-dugme{display:inline-flex;align-items:center}
+  nav.meni{display:none;position:absolute;left:20px;right:20px;top:100%;background:var(--paspartu);border:1px solid var(--rez);z-index:5}
+  nav.meni.otvoren{display:block}
+  nav.meni ul{flex-direction:column;gap:0;padding:6px 16px}
+  nav.meni li + li{border-top:1px solid var(--rez)}
+  nav.meni a{width:100%}
+  .etikete{grid-template-columns:1fr}
+  .dve{grid-template-columns:1fr}
+  .ram{border-width:5px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="primer"><div class="in"><span>Primer sajta · izradio opsforma</span><a href="../">Svi primeri</a></div></div>
+
+<header class="top">
+  <div class="in">
+    <a class="ime" href="#pocetak">Paspartu</a>
+    <button class="meni-dugme" type="button" aria-expanded="false" aria-controls="meni">Meni</button>
+    <nav class="meni" id="meni" aria-label="Glavni meni">
+      <ul>
+        <li><a href="#cene">Cene</a></li>
+        <li><a href="#kako">Kako radimo</a></li>
+        <li><a href="#radno-vreme">Radno vreme</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="pocetak">
+  <div class="hero">
+    <div class="ram">
+      <div class="otvor">
+        <h1>Paspartu</h1>
+        <p>ram radionica na Dorćolu</p>
+      </div>
+    </div>
+    <div class="legenda">
+      <b>Ramovi po meri</b>
+      <p class="mat">hrast, gotove lajsne, paspartu, staklo</p>
+      <p>Uramljujemo slike, grafike, fotografije, goblene i diplome. Lajsnu i boju paspartua birate na uzorcima, uz sliku koju ste doneli.</p>
+      <div class="akcije">
+        <a class="dugme puno" href="tel:+381600000603">Pozovite</a>
+        <a class="dugme" href="#kontakt">Pošaljite upit</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="zid" id="cene" aria-labelledby="h-cene">
+    <div class="sire">
+      <h2 id="h-cene">Cene</h2>
+      <p class="uvod">Tačnu cenu kažemo kada vidimo rad i izaberete lajsnu. Ovo su polazne cene.</p>
+      <ul class="etikete">
+        <li><b>Ram od gotove lajsne</b><span class="mat">do 30 × 40 cm, sa staklom i leđima</span><span class="cena">od 2.200 RSD</span></li>
+        <li><b>Ram od masivnog hrasta</b><span class="mat">do 50 × 70 cm, ručno spojen</span><span class="cena">od 5.800 RSD</span></li>
+        <li><b>Paspartu po meri</b><span class="mat">jedan sloj, 12 boja na uzorku</span><span class="cena">od 900 RSD</span></li>
+        <li><b>Dupli paspartu</b><span class="mat">dva sloja, unutrašnji rub u boji</span><span class="cena">od 1.500 RSD</span></li>
+        <li><b>Muzejsko staklo</b><span class="mat">antirefleksno, sa UV zaštitom, 30 × 40 cm</span><span class="cena">2.600 RSD</span></li>
+        <li><b>Goblen</b><span class="mat">pranje, zatezanje i ram</span><span class="cena">od 3.900 RSD</span></li>
+        <li><b>Diploma ili sertifikat</b><span class="mat">A4, ram sa staklom</span><span class="cena">1.900 RSD</span></li>
+        <li><b>Dres ili predmet u dubokom ramu</b><span class="mat">kutija od lajsne, staklo napred</span><span class="cena">od 6.500 RSD</span></li>
+      </ul>
+      <div class="foto" role="img" aria-label="Mesto za fotografiju radionice"><span>Vaša fotografija</span></div>
+    </div>
+  </section>
+
+  <section class="zid" id="kako" aria-labelledby="h-kako">
+    <div class="uzak">
+      <h2 id="h-kako">Kako radimo</h2>
+      <p class="uvod">Rad je gotov za pet do sedam radnih dana.</p>
+      <ol class="tok">
+        <li><div><b>Donesete rad</b><span>Bez zakazivanja, u radno vreme. Velike slike umotajte u ćebe ili karton.</span></div></li>
+        <li><div><b>Biramo zajedno</b><span>Prislonimo uzorke lajsni i paspartua uz rad i odmah kažemo cenu.</span></div></li>
+        <li><div><b>Preuzimate</b><span>Pozovemo Vas kada je ram gotov. Plaćate pri preuzimanju, gotovinom ili karticom.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="zid" id="radno-vreme" aria-labelledby="h-rv">
+    <div class="uzak">
+      <h2 id="h-rv">Radno vreme</h2>
+      <table class="sati">
+        <tbody>
+          <tr><th scope="row">Ponedeljak</th><td>10–19 h</td></tr>
+          <tr><th scope="row">Utorak</th><td>10–19 h</td></tr>
+          <tr><th scope="row">Sreda</th><td>10–19 h</td></tr>
+          <tr><th scope="row">Četvrtak</th><td>10–19 h</td></tr>
+          <tr><th scope="row">Petak</th><td>10–19 h</td></tr>
+          <tr><th scope="row">Subota</th><td>10–15 h</td></tr>
+          <tr><th scope="row">Nedelja</th><td>zatvoreno</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="zid" id="kontakt" aria-labelledby="h-kontakt">
+    <div class="sire">
+      <h2 id="h-kontakt">Kontakt</h2>
+      <p class="uvod">Pošaljite meru i fotografiju rada na Viber, pa Vam javimo okvirnu cenu.</p>
+      <div class="dve">
+        <div class="adresa">
+          <p>Cara Dušana 48, Dorćol, Beograd</p>
+          <a class="tel" href="tel:+381600000603">060 000 06 03</a>
+          <div class="akcije">
+            <a class="dugme puno" href="tel:+381600000603">Pozovite</a>
+            <a class="dugme" href="viber://chat?number=%2B381600000603">Pišite na Viber</a>
+          </div>
+          <div class="mapa">
+            <iframe title="Mapa: Cara Dušana 48, Beograd" loading="lazy" src="https://maps.google.com/maps?q=Cara%20Du%C5%A1ana%2048%2C%20Beograd&z=15&output=embed"></iframe>
+          </div>
+        </div>
+        <!--
+          PRODUKCIJA (Web3Forms): <form action="https://api.web3forms.com/submit" method="POST">
+          i skriveno polje <input type="hidden" name="access_key" value="KLJUČ-SA-WEB3FORMS">.
+          Poruka tada stiže direktno na mejl radionice. Ovde JS samo prikazuje napomenu.
+        -->
+        <form data-form="kontakt" novalidate>
+          <div><label for="f-ime">Ime</label><input id="f-ime" name="ime" type="text" autocomplete="name"></div>
+          <div><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel"></div>
+          <div><label for="f-mera">Mera rada (širina × visina, cm)</label><input id="f-mera" name="mera" type="text" inputmode="text"></div>
+          <div><label for="f-poruka">Šta uramljujete</label><textarea id="f-poruka" name="poruka"></textarea></div>
+          <div><button class="dugme puno" type="submit">Pošaljite upit</button></div>
+          <p class="poruka" role="status" aria-live="polite" hidden></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Ram radionica Paspartu, Cara Dušana 48, Beograd</p>
+  <p>Primer sajta · izradio opsforma · <a href="../">Svi primeri</a></p>
+</footer>
+
+<script>
+(function(){
+  var dugme = document.querySelector('.meni-dugme');
+  var meni = document.getElementById('meni');
+  function postavi(o){ dugme.setAttribute('aria-expanded', String(o)); meni.classList.toggle('otvoren', o); }
+  dugme.addEventListener('click', function(){ postavi(dugme.getAttribute('aria-expanded') !== 'true'); });
+  meni.addEventListener('click', function(e){ if (e.target.closest('a')) postavi(false); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && dugme.getAttribute('aria-expanded') === 'true'){ postavi(false); dugme.focus(); } });
+
+  var forma = document.querySelector('form[data-form="kontakt"]');
+  forma.addEventListener('submit', function(e){
+    e.preventDefault();
+    var p = forma.querySelector('.poruka');
+    p.textContent = 'Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.';
+    p.hidden = false;
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Picerija Kamen, Novi Beograd | pica iz kamene peći i dostava</title>
+<meta name="description" content="Picerija Kamen, Partizanske avijacije 18, Novi Beograd. Pica iz kamene peći, porudžbina online i dostava u tri zone.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Cardo:ital,wght@0,400;1,400&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bela:#FFFFFF;
+  --paradajz:#D7372F;
+  --bosiljak:#2E6B3F;
+  --brasno:#F3EFE6;
+  --linija:#D9D3C4;
+  --tiho:#4C6F55;
+  --grot:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  --ser:"Cardo","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --g:clamp(20px,4vw,48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bela);color:var(--bosiljak);font-family:var(--ser);font-size:1.125rem;line-height:1.55}
+body.ima-korpu{padding-bottom:84px}
+a{color:inherit}
+svg{max-width:100%}
+:focus-visible{outline:2px solid var(--paradajz);outline-offset:3px}
+h1,h2,h3{font-family:var(--grot);font-weight:700;margin:0;letter-spacing:-.035em;line-height:.98}
+p{margin:0}
+.mreza{width:min(1240px,100% - 2*var(--g));margin-inline:auto}
+.g12{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.mono{font-family:var(--grot);font-size:.8125rem;line-height:1.45;letter-spacing:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* traka */
+.traka{background:var(--brasno);font-family:var(--grot);font-size:.8125rem}
+.traka .mreza{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center;justify-content:space-between;padding:6px 0}
+.traka a{display:inline-flex;align-items:center;min-height:36px;font-weight:700}
+.znacka{font-weight:700;color:var(--paradajz);margin-left:10px;white-space:nowrap}
+.znacka::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--paradajz);margin-right:6px;vertical-align:1px}
+
+/* glava */
+header.glava{border-bottom:1px solid var(--bosiljak)}
+header.glava .mreza{display:flex;align-items:center;justify-content:space-between;min-height:72px;position:relative}
+.logo{display:inline-flex;align-items:center;gap:10px;font:700 1.375rem/1 var(--grot);letter-spacing:-.03em;text-decoration:none;min-height:44px}
+.logo svg{width:28px;height:28px}
+nav.meni ul{list-style:none;margin:0;padding:0;display:flex;gap:28px}
+nav.meni a{font:700 .9375rem var(--grot);text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
+nav.meni a:hover{color:var(--paradajz)}
+.ham{display:none;align-items:center;gap:10px;background:none;border:0;color:var(--bosiljak);font:700 .9375rem var(--grot);min-height:44px;min-width:44px;padding:0 4px;cursor:pointer}
+.ham span{display:block;width:22px;height:2px;background:currentColor;box-shadow:0 7px 0 currentColor;transform:translateY(-3px)}
+@media (max-width:800px){
+  .ham{display:inline-flex}
+  nav.meni{display:none;position:absolute;top:100%;left:calc(-1*var(--g));right:calc(-1*var(--g));background:var(--bela);border-bottom:1px solid var(--bosiljak);z-index:30;padding:4px var(--g) 16px}
+  nav.meni.otv{display:block}
+  nav.meni ul{flex-direction:column;gap:0}
+  nav.meni a{font-size:1.25rem;min-height:54px;border-top:1px solid var(--linija);width:100%}
+}
+
+/* dugmad */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;font:700 1rem var(--grot);text-decoration:none;border:2px solid var(--bosiljak);background:var(--bela);color:var(--bosiljak);cursor:pointer;border-radius:0}
+.btn.crv{background:var(--paradajz);border-color:var(--paradajz);color:#fff}
+.btn.crv:hover{background:#B92C25;border-color:#B92C25}
+.btn:not(.crv):hover{background:var(--brasno)}
+
+/* hero poster */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--bosiljak)}
+.hero .info{padding:18px 0 0}
+.hero .info p{grid-column:span 4}
+.hero h1{grid-column:1 / span 11;font-size:clamp(3rem,9.6vw,8.4rem);margin:clamp(56px,9vw,120px) 0 0;position:relative;z-index:1}
+.hero .lead{grid-column:1 / span 5;margin-top:40px;position:relative;z-index:1;max-width:30rem}
+.hero .akc{grid-column:1 / span 7;display:flex;flex-wrap:wrap;gap:12px;margin:36px 0 clamp(72px,10vw,140px);position:relative;z-index:1}
+.pica{position:absolute;width:min(760px,90vw);aspect-ratio:1;right:-14%;bottom:-38%;pointer-events:none}
+.pica circle,.pica line{fill:none;stroke:var(--paradajz);stroke-width:1;vector-effect:non-scaling-stroke}
+@media (max-width:800px){
+  .hero .info p{grid-column:span 12}
+  .hero .info{row-gap:2px}
+  .hero h1,.hero .lead,.hero .akc{grid-column:1 / -1}
+  .pica{width:440px;right:-160px;bottom:-250px}
+  .hero .akc{margin-bottom:150px}
+  .hero .akc .btn{flex:1 1 100%}
+}
+
+section{padding:clamp(72px,9vw,128px) 0;border-bottom:1px solid var(--bosiljak)}
+.sek-nasl{align-items:end;margin-bottom:56px}
+.sek-nasl h2{grid-column:1 / span 7;font-size:clamp(2.6rem,6vw,5rem)}
+.sek-nasl p{grid-column:9 / span 4}
+@media (max-width:800px){.sek-nasl h2,.sek-nasl p{grid-column:1 / -1}.sek-nasl p{margin-top:18px}}
+
+/* meni */
+.pice{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--bosiljak)}
+.pz{padding:24px 24px 28px 0;border-bottom:1px solid var(--linija);display:flex;flex-direction:column;min-height:300px}
+.pz+.pz{padding-left:24px;border-left:1px solid var(--linija)}
+.pz:nth-child(4n+1){padding-left:0;border-left:0}
+.pz .rb{font:400 .8125rem var(--grot)}
+.pz .cena{font:700 clamp(2.6rem,4.4vw,3.6rem)/1 var(--grot);letter-spacing:-.05em;margin:28px 0 4px;font-variant-numeric:lining-nums tabular-nums}
+.pz .cena small{font-size:.8125rem;letter-spacing:0;font-weight:400;margin-left:4px}
+.pz h3{font-size:1.25rem;letter-spacing:-.02em;line-height:1.15;margin-top:18px}
+.pz p{font-style:italic;font-size:1.0625rem;margin-top:6px;flex:1}
+.kol{display:flex;align-items:center;gap:0;margin-top:18px}
+.kol .dodaj{min-height:48px}
+.koraci-kol{display:inline-flex;align-items:center;border:2px solid var(--bosiljak)}
+.koraci-kol button{width:46px;height:46px;border:0;background:transparent;font:700 1.375rem var(--grot);color:var(--bosiljak);cursor:pointer}
+.koraci-kol button:hover{background:var(--brasno)}
+.koraci-kol output{min-width:36px;text-align:center;font:700 1.0625rem var(--grot)}
+.dodaci{margin-top:56px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.dodaci h3{grid-column:1 / span 3;font-size:1.5rem;padding-top:16px}
+.dodaci ul{grid-column:4 / span 9;list-style:none;margin:0;padding:0}
+.dodaci li{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:16px;border-top:1px solid var(--linija);padding:10px 0}
+.dodaci li b{font:700 1.0625rem var(--grot);letter-spacing:-.01em}
+.dodaci li span{font:700 1.25rem var(--grot);font-variant-numeric:tabular-nums}
+@media (max-width:1000px){.pice{grid-template-columns:repeat(2,minmax(0,1fr))}.pz:nth-child(4n+1){padding-left:24px;border-left:1px solid var(--linija)}.pz:nth-child(2n+1){padding-left:0;border-left:0}}
+@media (max-width:560px){
+  .pice{grid-template-columns:1fr}
+  .pz,.pz+.pz,.pz:nth-child(2n+1){padding:22px 0 24px;border-left:0;min-height:0}
+  .pz .cena{margin-top:14px}
+  .dodaci h3,.dodaci ul{grid-column:1 / -1}
+  .dodaci h3{padding:0;margin-bottom:16px}
+  .dodaci li{grid-template-columns:1fr auto;row-gap:8px}
+  .dodaci li .koraci-kol,.dodaci li .dodaj{grid-column:1 / -1;justify-self:start}
+}
+
+/* lepljiva korpa */
+.korpa-traka{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--bosiljak);color:#fff;transform:translateY(110%);visibility:hidden;transition:transform .25s ease,visibility 0s linear .25s}
+.korpa-traka.vid{transform:none;visibility:visible;transition:transform .25s ease}
+.korpa-traka .mreza{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;padding:10px 0}
+.korpa-traka .sta{font:400 .9375rem/1.3 var(--grot)}
+.korpa-traka .sta b{display:block;font-size:1.375rem;letter-spacing:-.03em}
+.korpa-traka .btn{border-color:#fff;background:#fff;color:var(--bosiljak)}
+.korpa-traka .btn:hover{background:var(--brasno)}
+
+/* porudžbina */
+#porudzbina{background:var(--brasno)}
+.primer{font:400 .8125rem var(--grot);border:1px solid var(--bosiljak);padding:4px 10px;display:inline-block;margin-top:14px}
+.por{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.por .levo{grid-column:1 / span 7}
+.por .desno{grid-column:9 / span 4}
+.por .desno .lep{position:sticky;top:24px}
+.korak{border-top:2px solid var(--bosiljak);padding:18px 0 44px}
+.korak h3{font-size:1.5rem;letter-spacing:-.025em;display:grid;grid-template-columns:48px 1fr;align-items:baseline;margin-bottom:20px}
+.korak h3 i{font-style:normal;font-weight:400;font-size:.9375rem;letter-spacing:0}
+.stavke{list-style:none;margin:0;padding:0}
+.stavke li{display:grid;grid-template-columns:1fr auto auto;gap:16px;align-items:center;padding:10px 0;border-bottom:1px solid var(--linija)}
+.stavke li b{font:700 1.0625rem var(--grot);letter-spacing:-.01em}
+.stavke li .uk{font:700 1.0625rem var(--grot);min-width:84px;text-align:right;font-variant-numeric:tabular-nums}
+.prazna{font-style:italic;padding:8px 0}
+.zone{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:2px solid var(--bosiljak)}
+.zona{background:var(--bela);border:0;border-left:1px solid var(--linija);text-align:left;padding:16px 16px 18px;cursor:pointer;color:var(--bosiljak);min-height:132px;display:flex;flex-direction:column;gap:6px;font:400 1rem var(--ser)}
+.zona:first-child{border-left:0}
+.zona b{font:700 1.0625rem var(--grot)}
+.zona .zc{font:700 1.75rem/1 var(--grot);letter-spacing:-.04em;margin-top:auto;font-variant-numeric:tabular-nums}
+.zona .zc small{font-size:.8125rem;font-weight:400;letter-spacing:0}
+.zona[aria-pressed="true"]{box-shadow:inset 0 -6px 0 var(--paradajz)}
+.dani{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.dan{min-height:64px;min-width:0;border:1px solid var(--bosiljak);background:var(--bela);color:var(--bosiljak);font:400 .8125rem/1.2 var(--grot);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4px 0}
+.dan b{font-size:1.25rem;font-weight:700;line-height:1.1}
+.dan[aria-pressed="true"]{background:var(--bosiljak);color:#fff}
+.dan:disabled{border-style:dashed;border-color:#9DB3A3;background:transparent;color:#6E8C76;cursor:not-allowed}
+.dan:disabled b{text-decoration:line-through;font-weight:400}
+.prozori{display:grid;grid-template-columns:repeat(auto-fill,minmax(124px,1fr));gap:6px;margin-top:18px}
+.pr{min-height:48px;border:1px solid var(--bosiljak);background:var(--bela);color:var(--bosiljak);font:700 .9375rem var(--grot);cursor:pointer;font-variant-numeric:tabular-nums}
+.pr[aria-pressed="true"]{background:var(--bosiljak);color:#fff}
+.pr:disabled{display:none}
+.legenda{font-size:1rem;font-style:italic;margin-top:12px}
+.polje{margin-bottom:16px}
+.polje label{display:block;font:700 .875rem var(--grot);margin-bottom:6px}
+.polje input,.polje textarea{width:100%;min-height:50px;border:1px solid var(--bosiljak);background:var(--bela);color:var(--bosiljak);padding:10px 14px;font:400 1.0625rem var(--ser);border-radius:0}
+.polje textarea{min-height:92px;resize:vertical}
+.polje input:focus-visible,.polje textarea:focus-visible{outline:2px solid var(--paradajz);outline-offset:0}
+.dva{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.racun{background:var(--bela);border-top:6px solid var(--bosiljak);padding:22px 22px 24px}
+.racun h3{font-size:1.5rem;letter-spacing:-.025em;margin-bottom:14px}
+.racun dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:6px 12px;font-family:var(--grot);font-size:.9375rem}
+.racun dd{margin:0;text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.racun .ukupno{border-top:1px solid var(--bosiljak);margin-top:14px;padding-top:12px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.racun .ukupno span{font:400 .9375rem var(--grot)}
+.racun .ukupno b{font:700 2.4rem/1 var(--grot);letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.racun .btn{width:100%;margin-top:20px}
+.racun .plac{font-size:.9375rem;font-style:italic;margin-top:12px}
+.greska{color:var(--paradajz);font:700 .9375rem var(--grot);min-height:1.4em;margin-top:12px}
+.potvrda{display:none}
+.potvrda.on{display:block}
+.por.gotovo{display:none}
+.potvrda h3{font-size:clamp(2.2rem,5vw,3.6rem);grid-column:1 / span 8}
+.potvrda .tekst{grid-column:1 / span 6;margin-top:18px}
+.potvrda .rez{grid-column:1 / span 7;margin-top:36px}
+.potvrda dl{display:grid;grid-template-columns:150px 1fr;gap:8px 18px;margin:0;border-top:2px solid var(--bosiljak);padding-top:16px}
+.potvrda dt{font:400 .875rem var(--grot);padding-top:3px}
+.potvrda dd{margin:0;font-family:var(--grot);font-weight:700}
+.potvrda .akc{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+@media (max-width:900px){
+  .por .levo,.por .desno{grid-column:1 / -1}
+  .por .desno .lep{position:static}
+  .potvrda h3,.potvrda .tekst,.potvrda .rez{grid-column:1 / -1}
+}
+@media (max-width:560px){
+  .zone{grid-template-columns:1fr}
+  .zona{border-left:0;border-top:1px solid var(--linija);min-height:0;display:grid;grid-template-columns:1fr auto;align-items:center}
+  .zona:first-child{border-top:0}
+  .zona span{grid-column:1}
+  .zona .zc{grid-column:2;grid-row:1 / span 2;margin:0}
+  .dva{grid-template-columns:1fr}
+  .stavke li{grid-template-columns:1fr auto;row-gap:6px}
+  .stavke li .koraci-kol{grid-row:2;grid-column:1;justify-self:start}
+  .stavke li .uk{grid-row:2;grid-column:2}
+  .potvrda dl{grid-template-columns:110px 1fr}
+  .potvrda .akc .btn{flex:1 1 100%}
+}
+
+/* vreme i mesto */
+.info .sati{grid-column:1 / span 5}
+.info .mesto{grid-column:7 / span 6}
+.sati table{width:100%;border-collapse:collapse;font-family:var(--grot);font-size:1rem}
+.sati th,.sati td{text-align:left;padding:12px 0;border-bottom:1px solid var(--linija);font-weight:400}
+.sati td{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.sati tr.danas th{font-weight:700}
+.sati tr.danas th::after{content:"danas";margin-left:10px;font-size:.75rem;font-weight:400;color:var(--paradajz)}
+.mapa{width:100%;height:340px;border:0;display:block}
+.mesto p{margin-top:16px}
+@media (max-width:800px){.info .sati,.info .mesto{grid-column:1 / -1}.info .mesto{margin-top:56px}}
+
+/* kontakt */
+.kont .tx{grid-column:1 / span 5}
+.kont form{grid-column:7 / span 6}
+.kont .tx p{margin-top:16px}
+.kont .tx a{font-family:var(--grot);font-weight:700}
+.ok{font:700 .9375rem var(--grot);margin-top:14px;color:var(--bosiljak)}
+@media (max-width:800px){.kont .tx,.kont form{grid-column:1 / -1}.kont form{margin-top:40px}}
+
+footer{padding:40px 0 56px;font-family:var(--grot);font-size:.875rem}
+footer .mreza{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 30px}
+footer a{font-weight:700;display:inline-flex;min-height:44px;align-items:center}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="traka">
+  <div class="mreza">
+    <span>Primer sajta · izradio opsforma <span class="znacka">Paket 2: porudžbine</span></span>
+    <a href="../../">Svi primeri</a>
+  </div>
+</div>
+
+<header class="glava">
+  <div class="mreza">
+    <a class="logo" href="#pocetak">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#D7372F" stroke-width="1.5"><circle cx="20" cy="20" r="18"/><line x1="20" y1="2" x2="20" y2="38"/><line x1="2" y1="20" x2="38" y2="20"/><line x1="7.3" y1="7.3" x2="32.7" y2="32.7"/><line x1="32.7" y1="7.3" x2="7.3" y2="32.7"/></g></svg>
+      Kamen
+    </a>
+    <button class="ham" type="button" aria-expanded="false" aria-controls="meni"><span aria-hidden="true"></span>Meni</button>
+    <nav class="meni" id="meni" aria-label="Glavni meni">
+      <ul>
+        <li><a href="#pice">Pice</a></li>
+        <li><a href="#porudzbina">Porudžbina</a></li>
+        <li><a href="#vreme">Radno vreme</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="pocetak">
+<div class="hero">
+  <div class="mreza g12 info mono">
+    <p>Partizanske avijacije 18, Novi Beograd</p>
+    <p>Ponedeljak–subota, 12–23 h</p>
+    <p>Dostava u tri zone, od 150 RSD</p>
+  </div>
+  <div class="mreza g12">
+    <h1>Pica iz kamene peći, do Vaših vrata.</h1>
+    <p class="lead">Testo odmara 48 sati, peć gori na 450 stepeni, a pica se peče devedeset sekundi. Naručite ovde, izaberite zonu i vreme, a plaćate kuriru.</p>
+    <div class="akc">
+      <a class="btn crv" href="#porudzbina">Naručite</a>
+      <a class="btn" href="tel:+381600000618">Pozovite 060 000 06 18</a>
+      <a class="btn" href="viber://chat?number=%2B381600000618">Viber</a>
+    </div>
+  </div>
+  <svg class="pica" viewBox="0 0 200 200" aria-hidden="true">
+    <circle cx="100" cy="100" r="99"/>
+    <circle cx="100" cy="100" r="88"/>
+    <line x1="100" y1="1" x2="100" y2="199"/>
+    <line x1="1" y1="100" x2="199" y2="100"/>
+    <line x1="30" y1="30" x2="170" y2="170"/>
+    <line x1="170" y1="30" x2="30" y2="170"/>
+  </svg>
+</div>
+
+<section id="pice">
+  <div class="mreza">
+    <div class="g12 sek-nasl">
+      <h2>Osam pica</h2>
+      <p>Sve pice su prečnika 32 cm. Testo pravimo od italijanskog brašna tip 00, a mocarelu od kravljeg mleka iz Vojvodine.</p>
+    </div>
+    <div class="pice" id="listaPica"></div>
+    <div class="dodaci">
+      <h3>Uz picu</h3>
+      <ul id="listaDodataka"></ul>
+    </div>
+  </div>
+</section>
+
+<section id="porudzbina">
+  <div class="mreza">
+    <div class="g12 sek-nasl">
+      <h2>Porudžbina za dostavu</h2>
+      <p>Korpa, zona, vreme i adresa. Kurir nosi POS terminal, plaćate gotovinom ili karticom.<br><span class="primer">Primer: termini su izmišljeni</span></p>
+    </div>
+<!--
+  PRODUKCIJA
+  U demou porudžbina radi samo u pregledaču; popunjeni prozori dostave su izmišljeni.
+  Na pravom sajtu postoje dve varijante:
+  a) Zahtev za porudžbinu: dugme „Pošaljite porudžbinu“ šalje rezime (pice i količine, međuzbir, zona i cena
+     dostave, ukupno, dan i prozor dostave, adresa, ime, telefon, napomena) na mejl picerije preko Web3Forms
+     (POST na https://api.web3forms.com/submit sa skrivenim poljem access_key), ili otvara Viber poruku sa
+     istim tekstom (viber://forward?text=...). Picerija potvrđuje porudžbinu pozivom ili porukom.
+  b) Povezan kalendar: prozor dostave bira se iz Google Kalendar „Appointment schedule“, Cal.com ili Calendly
+     embeda; svaka dostava se sama upisuje u Google Kalendar na telefonu vlasnika, a korpa se šalje uz nju.
+-->
+    <div class="por" id="por">
+      <div class="levo">
+        <div class="korak">
+          <h3><i>1</i>Korpa</h3>
+          <ul class="stavke" id="stavke" aria-live="polite"></ul>
+        </div>
+        <div class="korak">
+          <h3><i>2</i>Zona dostave</h3>
+          <div class="zone" role="group" aria-label="Zona dostave">
+            <button type="button" class="zona" data-z="1" aria-pressed="false"><b>Zona 1</b><span>Bežanija, Bežanijska kosa, blokovi 61–64</span><span class="zc">150 <small>RSD</small></span></button>
+            <button type="button" class="zona" data-z="2" aria-pressed="false"><b>Zona 2</b><span>Ostali blokovi Novog Beograda, Ledine</span><span class="zc">250 <small>RSD</small></span></button>
+            <button type="button" class="zona" data-z="3" aria-pressed="false"><b>Zona 3</b><span>Zemun, Stari grad, Savski venac</span><span class="zc">400 <small>RSD</small></span></button>
+          </div>
+        </div>
+        <div class="korak">
+          <h3><i>3</i>Kada da donesemo?</h3>
+          <div class="dani" id="dani" role="group" aria-label="Dan dostave, narednih 14 dana"></div>
+          <div class="prozori" id="prozori" role="group" aria-label="Prozor dostave" aria-live="polite"></div>
+          <p class="legenda" id="prozLeg">Izaberite dan. Nedeljom ne radimo; prikazani su samo slobodni prozori od pola sata.</p>
+        </div>
+        <div class="korak">
+          <h3><i>4</i>Adresa i kontakt</h3>
+          <form id="porForma" novalidate>
+            <div class="polje"><label for="p-adr">Ulica i broj, sprat, stan</label><input id="p-adr" name="adresa" autocomplete="street-address" placeholder="Npr. Jurija Gagarina 20, 3. sprat, stan 11"></div>
+            <div class="dva">
+              <div class="polje"><label for="p-ime">Ime</label><input id="p-ime" name="ime" autocomplete="name"></div>
+              <div class="polje"><label for="p-tel">Telefon</label><input id="p-tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="06x xxx xxxx"></div>
+            </div>
+            <div class="polje"><label for="p-nap">Napomena za kurira</label><textarea id="p-nap" name="napomena" placeholder="Interfon, ulaz, kusur"></textarea></div>
+          </form>
+        </div>
+      </div>
+      <aside class="desno" aria-label="Račun">
+        <div class="lep">
+          <div class="racun">
+            <h3>Račun</h3>
+            <dl>
+              <dt>Međuzbir</dt><dd id="rMedju">0 RSD</dd>
+              <dt id="rZonaN">Dostava</dt><dd id="rZona">izaberite zonu</dd>
+            </dl>
+            <div class="ukupno"><span>Ukupno</span><b id="rUk">0 RSD</b></div>
+            <button class="btn crv" type="submit" form="porForma">Pošaljite porudžbinu</button>
+            <p class="greska" id="porGreska" role="alert"></p>
+            <p class="plac">Plaćanje gotovinom ili karticom kuriru.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="potvrda g12" id="potvrda" tabindex="-1" aria-live="polite">
+      <h3>Porudžbina je primljena.</h3>
+      <p class="tekst">Hvala. Na pravom sajtu potvrdu dobijate i mejlom, a mi Vas zovemo ako nešto nije jasno.</p>
+      <div class="rez"><dl id="rezime"></dl></div>
+      <div class="akc">
+        <button class="btn crv" type="button" id="ics">Dodaj u kalendar</button>
+        <button class="btn" type="button" id="nova">Nova porudžbina</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="vreme">
+  <div class="mreza g12 info">
+    <div class="sati">
+      <h2 style="font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:32px">Radno vreme</h2>
+      <table>
+        <caption class="sr">Radno vreme po danima</caption>
+        <tbody>
+          <tr data-d="1"><th scope="row">Ponedeljak</th><td>12–23</td></tr>
+          <tr data-d="2"><th scope="row">Utorak</th><td>12–23</td></tr>
+          <tr data-d="3"><th scope="row">Sreda</th><td>12–23</td></tr>
+          <tr data-d="4"><th scope="row">Četvrtak</th><td>12–23</td></tr>
+          <tr data-d="5"><th scope="row">Petak</th><td>12–23</td></tr>
+          <tr data-d="6"><th scope="row">Subota</th><td>12–23</td></tr>
+          <tr data-d="0"><th scope="row">Nedelja</th><td>zatvoreno</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:16px;font-style:italic">Poslednja dostava kreće u 22:30.</p>
+    </div>
+    <div class="mesto">
+      <h2 style="font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:32px">Lokal</h2>
+      <iframe class="mapa" title="Mapa: Partizanske avijacije 18, Beograd" loading="lazy" src="https://maps.google.com/maps?q=Partizanske%20avijacije%2018%2C%20Beograd&z=15&output=embed"></iframe>
+      <p>Partizanske avijacije 18, Novi Beograd. U lokalu ima šest stolova, a picu možete i da preuzmete sami.</p>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="mreza g12 kont">
+    <div class="tx">
+      <h2 style="font-size:clamp(2.2rem,5vw,3.6rem)">Kontakt</h2>
+      <p>Za rođendane i veće porudžbine pozovite nas dan ranije.</p>
+      <p><a href="tel:+381600000618">060 000 06 18</a><br><a href="viber://chat?number=%2B381600000618">Viber</a></p>
+    </div>
+<!--
+  Kontakt forma na pravom sajtu: <form action="https://api.web3forms.com/submit" method="POST">
+  sa skrivenim poljem <input type="hidden" name="access_key" value="KLJUČ-IZ-WEB3FORMS">;
+  poruka stiže direktno na mejl picerije. U demou slanje samo prikazuje napomenu.
+-->
+    <form data-form="kontakt" id="kontaktForma">
+      <div class="polje"><label for="k-ime">Ime</label><input id="k-ime" name="ime" required autocomplete="name"></div>
+      <div class="polje"><label for="k-kon">Telefon ili mejl</label><input id="k-kon" name="kontakt" required></div>
+      <div class="polje"><label for="k-por">Poruka</label><textarea id="k-por" name="poruka" required></textarea></div>
+      <button class="btn crv" type="submit">Pošaljite poruku</button>
+      <p class="ok" id="kontaktOk" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="mreza">
+    <span>Picerija Kamen, Partizanske avijacije 18, Beograd</span>
+    <span>Primer sajta · izradio opsforma. Firma je izmišljena. <a href="../../">Svi primeri</a></span>
+  </div>
+</footer>
+
+<div class="korpa-traka" id="korpaTraka" aria-live="polite">
+  <div class="mreza">
+    <div class="sta"><span id="ktBroj">0 artikala</span><b id="ktIznos">0 RSD</b></div>
+    <a class="btn" href="#porudzbina" id="ktDugme">Pregled porudžbine</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  /* meni */
+  var ham=document.querySelector('.ham'), meni=document.getElementById('meni');
+  function zatvori(){meni.classList.remove('otv');ham.setAttribute('aria-expanded','false')}
+  ham.addEventListener('click',function(){if(ham.getAttribute('aria-expanded')==='true')zatvori();else{meni.classList.add('otv');ham.setAttribute('aria-expanded','true')}});
+  meni.addEventListener('click',function(e){if(e.target.closest('a'))zatvori()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&ham.getAttribute('aria-expanded')==='true'){zatvori();ham.focus()}});
+  var tr=document.querySelector('.sati tr[data-d="'+new Date().getDay()+'"]');if(tr)tr.classList.add('danas');
+  document.getElementById('kontaktForma').addEventListener('submit',function(e){e.preventDefault();document.getElementById('kontaktOk').textContent='Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.'});
+
+  /* ---------- podaci ---------- */
+  var FIRMA='Picerija Kamen', SLUG='picerija-kamen';
+  var PICE=[
+    {id:'marinara',n:'Marinara',o:'paradajz, beli luk, origano, maslinovo ulje',c:890},
+    {id:'margarita',n:'Margarita',o:'paradajz, fior di latte, bosiljak',c:990},
+    {id:'pecurke',n:'Pečurke',o:'šampinjoni, mocarela, peršun, beli luk',c:1190},
+    {id:'kapricoza',n:'Kapričoza',o:'šunka, pečurke, artičoke, masline',c:1290},
+    {id:'ljuta',n:'Ljuta',o:'ljuta kobasica, čili, mocarela, med',c:1290},
+    {id:'sirevi',n:'Četiri sira',o:'mocarela, gorgonzola, parmezan, kozji sir',c:1390},
+    {id:'prsut',n:'Pršut i rukola',o:'pršut, rukola, parmezan, paradajz',c:1490},
+    {id:'tartufi',n:'Tartufi',o:'krem od tartufa, pečurke, fior di latte',c:1690}
+  ];
+  var DOD=[
+    {id:'fokaca',n:'Fokača sa ruzmarinom',c:450},
+    {id:'tiramisu',n:'Tiramisu',c:520},
+    {id:'salata',n:'Salata od rukole i paradajza',c:590}
+  ];
+  var ZONE={1:{n:'Zona 1',c:150},2:{n:'Zona 2',c:250},3:{n:'Zona 3',c:400}};
+  var RV={0:null,1:[720,1380],2:[720,1380],3:[720,1380],4:[720,1380],5:[720,1380],6:[720,1380]};
+  var PROZOR=30;
+  var DANI=['nedelja','ponedeljak','utorak','sreda','četvrtak','petak','subota'];
+  var DK=['ned','pon','uto','sre','čet','pet','sub'];
+  var MESG=['januara','februara','marta','aprila','maja','juna','jula','avgusta','septembra','oktobra','novembra','decembra'];
+  var SVE={};PICE.concat(DOD).forEach(function(p){SVE[p.id]=p});
+
+  function rsd(n){return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+' RSD'}
+  function broj(n){return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'.')}
+  function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+  function hm(m){return String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0')}
+  function hash(s){var h=2166136261;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}h^=h>>>13;h=Math.imul(h,0x5bd1e995);h^=h>>>15;return (h>>>0)/4294967296}
+  function artikala(n){var m10=n%10,m100=n%100;if(m10===1&&m100!==11)return n+' artikal';if(m10>=2&&m10<=4&&(m100<12||m100>14))return n+' artikla';return n+' artikala'}
+
+  var korpa={}; // id -> kol
+  var st={zona:null,dan:null,prozor:null};
+
+  function kolKontrola(id,mala){
+    var k=korpa[id]||0, p=SVE[id];
+    if(!k)return '<button type="button" class="btn dodaj" data-plus="'+id+'" aria-label="Dodajte '+p.n+' u korpu">Dodaj</button>';
+    return '<span class="koraci-kol"><button type="button" data-minus="'+id+'" aria-label="Jedna '+(mala?'stavka':'pica')+' manje: '+p.n+'">&minus;</button><output aria-label="Količina">'+k+'</output><button type="button" data-plus="'+id+'" aria-label="Još jedna: '+p.n+'">+</button></span>';
+  }
+  function crtajMeni(){
+    document.getElementById('listaPica').innerHTML=PICE.map(function(p,i){
+      return '<article class="pz"><span class="rb">'+String(i+1).padStart(2,'0')+'</span><div class="cena">'+broj(p.c)+'<small>RSD</small></div><h3>'+p.n+'</h3><p>'+p.o+'</p><div class="kol" data-kol="'+p.id+'">'+kolKontrola(p.id)+'</div></article>';
+    }).join('');
+    document.getElementById('listaDodataka').innerHTML=DOD.map(function(p){
+      return '<li><b>'+p.n+'</b><span>'+broj(p.c)+'</span><div class="kol" data-kol="'+p.id+'" style="margin:0">'+kolKontrola(p.id,true)+'</div></li>';
+    }).join('');
+  }
+  function osveziKol(id){
+    [].forEach.call(document.querySelectorAll('[data-kol="'+id+'"]'),function(el){el.innerHTML=kolKontrola(id,!!DOD.filter(function(d){return d.id===id}).length)});
+  }
+  function medjuzbir(){var s=0;for(var id in korpa)s+=korpa[id]*SVE[id].c;return s}
+  function komada(){var s=0;for(var id in korpa)s+=korpa[id];return s}
+  function promeni(id,d,fokus){
+    var k=(korpa[id]||0)+d; if(k<=0)delete korpa[id]; else korpa[id]=Math.min(k,20);
+    osveziKol(id);crtajKorpu();racun();
+    if(fokus){var el=document.querySelector(fokus.replace('ID',id));if(el)el.focus()}
+  }
+  document.addEventListener('click',function(e){
+    var p=e.target.closest('[data-plus]'), m=e.target.closest('[data-minus]');
+    if(p){var u=!!p.closest('#stavke');promeni(p.dataset.plus,1,(u?'#stavke ':'#pice ')+'[data-plus="ID"]')}
+    else if(m){var u2=!!m.closest('#stavke');promeni(m.dataset.minus,-1,(u2?'#stavke ':'#pice ')+'[data-minus="ID"]')}
+  });
+  function crtajKorpu(){
+    var ul=document.getElementById('stavke'), ids=Object.keys(korpa);
+    if(!ids.length){ul.innerHTML='<li class="prazna" style="display:block">Korpa je prazna. Dodajte picu iz menija iznad.</li>';return}
+    ul.innerHTML=ids.map(function(id){var p=SVE[id];return '<li><b>'+p.n+'</b><span class="koraci-kol"><button type="button" data-minus="'+id+'" aria-label="Jedna manje: '+p.n+'">&minus;</button><output>'+korpa[id]+'</output><button type="button" data-plus="'+id+'" aria-label="Još jedna: '+p.n+'">+</button></span><span class="uk">'+rsd(korpa[id]*p.c)+'</span></li>'}).join('');
+  }
+  var traka=document.getElementById('korpaTraka'), uVidu=false, gotovo=false;
+  function racun(){
+    var m=medjuzbir(), z=st.zona?ZONE[st.zona]:null;
+    document.getElementById('rMedju').textContent=rsd(m);
+    document.getElementById('rZonaN').textContent=z?'Dostava, '+z.n.toLowerCase():'Dostava';
+    document.getElementById('rZona').textContent=z?rsd(z.c):'izaberite zonu';
+    document.getElementById('rUk').textContent=rsd(m+(z&&m?z.c:0));
+    var n=komada();
+    document.getElementById('ktBroj').textContent=artikala(n);
+    document.getElementById('ktIznos').textContent=rsd(m);
+    var vid=n>0&&!uVidu&&!gotovo;
+    traka.classList.toggle('vid',vid);document.body.classList.toggle('ima-korpu',n>0&&!gotovo);
+    traka.setAttribute('aria-hidden',vid?'false':'true');
+    document.getElementById('ktDugme').tabIndex=vid?0:-1;
+  }
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(en){uVidu=en[0].isIntersecting;racun()},{threshold:0,rootMargin:'0px 0px -45% 0px'}).observe(document.getElementById('porudzbina'));
+  }
+
+  /* zone */
+  var zone=[].slice.call(document.querySelectorAll('.zona'));
+  zone.forEach(function(b){b.addEventListener('click',function(){st.zona=+b.dataset.z;zone.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});racun()})});
+
+  /* dani i prozori */
+  var danas=new Date();danas.setHours(0,0,0,0);
+  var daniEl=document.getElementById('dani'), prozEl=document.getElementById('prozori'), leg=document.getElementById('prozLeg');
+  for(var i=0;i<14;i++){(function(i){
+    var d=new Date(danas);d.setDate(danas.getDate()+i);
+    var b=document.createElement('button');b.type='button';b.className='dan';b.dataset.date=iso(d);
+    b.innerHTML='<span>'+(i===0?'danas':DK[d.getDay()])+'</span><b>'+d.getDate()+'.</b><span>'+(d.getMonth()+1)+'.</span>';
+    var zat=!RV[d.getDay()];
+    b.setAttribute('aria-label',DANI[d.getDay()]+', '+d.getDate()+'. '+MESG[d.getMonth()]+(zat?', zatvoreno':''));
+    if(zat)b.disabled=true;else b.setAttribute('aria-pressed','false');
+    b.addEventListener('click',function(){
+      st.dan=d;st.prozor=null;
+      [].forEach.call(daniEl.children,function(x){if(!x.disabled)x.setAttribute('aria-pressed',x===b?'true':'false')});
+      crtajProzore();
+    });
+    daniEl.appendChild(b);
+  })(i)}
+  function prozori(d){
+    var rv=RV[d.getDay()];if(!rv)return [];
+    var sada=new Date(), min=iso(d)===iso(sada)?sada.getHours()*60+sada.getMinutes()+45:0, out=[];
+    for(var m=rv[0];m+PROZOR<=rv[1];m+=PROZOR){if(m<min)continue;out.push({m:m,zauzet:hash(iso(d)+'|'+m+'|kamen')<0.36})}
+    return out;
+  }
+  function crtajProzore(){
+    var p=prozori(st.dan);prozEl.innerHTML='';
+    var slob=p.filter(function(x){return !x.zauzet});
+    if(!slob.length){leg.textContent='Za ovaj dan više nema slobodnih prozora. Izaberite drugi dan.';}
+    else leg.textContent=slob.length+' slobodnih prozora od pola sata. Popunjene prozore ne prikazujemo.';
+    p.forEach(function(x){
+      var b=document.createElement('button');b.type='button';b.className='pr';b.dataset.min=x.m;
+      b.textContent=hm(x.m)+'–'+hm(x.m+PROZOR);
+      if(x.zauzet){b.disabled=true;b.setAttribute('aria-hidden','true')}else b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',function(){if(b.disabled)return;st.prozor=x.m;[].forEach.call(prozEl.querySelectorAll('.pr:not(:disabled)'),function(y){y.setAttribute('aria-pressed',y===b?'true':'false')})});
+      prozEl.appendChild(b);
+    });
+  }
+
+  /* slanje */
+  var forma=document.getElementById('porForma'), gr=document.getElementById('porGreska');
+  var por=document.getElementById('por'), potvrda=document.getElementById('potvrda');
+  forma.addEventListener('submit',function(e){
+    e.preventDefault();
+    var adr=forma.adresa.value.trim(), ime=forma.ime.value.trim(), tel=forma.telefon.value.trim(), cif=tel.replace(/\D/g,'');
+    if(!komada()){gr.textContent='Korpa je prazna. Dodajte bar jednu picu.';return}
+    if(!st.zona){gr.textContent='Izaberite zonu dostave.';return}
+    if(!st.dan){gr.textContent='Izaberite dan dostave.';return}
+    if(st.prozor===null){gr.textContent='Izaberite vreme dostave.';return}
+    if(adr.length<5){gr.textContent='Upišite adresu za dostavu.';forma.adresa.focus();return}
+    if(ime.length<2){gr.textContent='Upišite ime.';forma.ime.focus();return}
+    if(cif.length<8||cif.length>13){gr.textContent='Upišite ispravan broj telefona, na primer 060 123 4567.';forma.telefon.focus();return}
+    gr.textContent='';
+    var m=medjuzbir(), z=ZONE[st.zona];
+    var spisak=Object.keys(korpa).map(function(id){return korpa[id]+' × '+SVE[id].n}).join(', ');
+    var red=[['Porudžbina',spisak],['Međuzbir',rsd(m)],['Dostava',z.n+', '+rsd(z.c)],['Ukupno',rsd(m+z.c)],
+      ['Dan',DANI[st.dan.getDay()]+', '+st.dan.getDate()+'. '+MESG[st.dan.getMonth()]],['Vreme',hm(st.prozor)+'–'+hm(st.prozor+PROZOR)+' (30 min)'],
+      ['Adresa',adr],['Ime',ime],['Telefon',tel],['Plaćanje','gotovinom ili karticom kuriru']];
+    if(forma.napomena.value.trim())red.push(['Napomena',forma.napomena.value.trim()]);
+    var dl=document.getElementById('rezime');dl.innerHTML='';
+    red.forEach(function(r){var a=document.createElement('dt');a.textContent=r[0];var b=document.createElement('dd');b.textContent=r[1];dl.appendChild(a);dl.appendChild(b)});
+    potvrda._p={dan:new Date(st.dan),m:st.prozor,adr:adr,spisak:spisak,uk:m+z.c,ime:ime};
+    gotovo=true;racun();
+    por.classList.add('gotovo');potvrda.classList.add('on');
+    document.getElementById('porudzbina').scrollIntoView({block:'start'});
+    potvrda.focus({preventScroll:true});
+  });
+  function icsD(d){return d.toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'')}
+  function esc(s){return String(s).replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/\n/g,'\\n')}
+  function fold(l){var o=[];while(l.length>72){o.push(l.slice(0,72));l=' '+l.slice(72)}o.push(l);return o.join('\r\n')}
+  document.getElementById('ics').addEventListener('click',function(){
+    var p=potvrda._p;if(!p)return;
+    var a=new Date(p.dan);a.setHours(0,p.m,0,0);var b=new Date(a.getTime()+PROZOR*60000);
+    var L=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//opsforma//'+SLUG+'//SR','CALSCALE:GREGORIAN','METHOD:PUBLISH','BEGIN:VEVENT',
+      'UID:'+Date.now()+'-'+Math.random().toString(36).slice(2)+'@'+SLUG+'.primer','DTSTAMP:'+icsD(new Date()),
+      'DTSTART:'+icsD(a),'DTEND:'+icsD(b),
+      'SUMMARY:'+esc(FIRMA+': dostava pice'),
+      'LOCATION:'+esc(p.adr+', Beograd'),
+      'DESCRIPTION:'+esc(p.spisak+'. Ukupno '+rsd(p.uk)+', plaćanje kuriru. Picerija Kamen, Partizanske avijacije 18, tel. 060 000 06 18.'),
+      'END:VEVENT','END:VCALENDAR'];
+    var txt=L.map(fold).join('\r\n')+'\r\n';
+    var bl=new Blob([txt],{type:'text/calendar;charset=utf-8'});
+    var el=document.createElement('a');el.href=URL.createObjectURL(bl);el.download='termin-'+SLUG+'.ics';
+    document.body.appendChild(el);el.click();setTimeout(function(){URL.revokeObjectURL(el.href);el.remove()},1000);
+  });
+  document.getElementById('nova').addEventListener('click',function(){
+    korpa={};st={zona:null,dan:null,prozor:null};forma.reset();gotovo=false;
+    zone.forEach(function(x){x.setAttribute('aria-pressed','false')});
+    [].forEach.call(daniEl.children,function(x){if(!x.disabled)x.setAttribute('aria-pressed','false')});
+    prozEl.innerHTML='';leg.textContent='Izaberite dan. Nedeljom ne radimo; prikazani su samo slobodni prozori od pola sata.';
+    crtajMeni();crtajKorpu();racun();
+    potvrda.classList.remove('on');por.classList.remove('gotovo');
+    document.getElementById('pice').scrollIntoView({block:'start'});
+  });
+
+  crtajMeni();crtajKorpu();racun();
+})();
+</script>
+</body>
+</html>

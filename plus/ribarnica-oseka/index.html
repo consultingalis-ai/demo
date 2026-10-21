@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ribarnica Oseka, Džordža Vašingtona 22 | ulov dana i porudžbina</title>
+<meta name="description" content="Ribarnica Oseka na Paliluli: sveža riba po kilogramu, čišćenje na licu mesta i porudžbina za preuzimanje u prozoru od pola sata.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;1,400&family=Noto+Sans:wght@400;600&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --led:#F2F6F7;
+  --more:#0C3B4A;
+  --srebro:#A7B4BA;
+  --narandza:#E8743B;
+  --tiho:#3F6270;
+  --bela:#FFFFFF;
+  --disp:"Noto Serif Display","Noto Serif",Didot,"Bodoni 72",Georgia,serif;
+  --sans:"Noto Sans","Segoe UI",Roboto,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--led);color:var(--more);font-family:var(--sans);font-size:1rem;line-height:1.6}
+a{color:inherit}
+svg{max-width:100%}
+:focus-visible{outline:2px solid var(--more);outline-offset:3px}
+h1,h2,h3{font-family:var(--disp);font-weight:400;margin:0;line-height:1.05}
+p{margin:0}
+.kol{width:min(980px,100% - 40px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.traka{font-size:.8125rem;border-bottom:1px solid var(--srebro)}
+.traka .kol{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:4px 16px;padding:6px 0}
+.traka a{display:inline-flex;align-items:center;min-height:36px;font-weight:600}
+.znacka{display:inline-block;margin-left:10px;padding:1px 8px;background:var(--more);color:var(--led);font-weight:600;white-space:nowrap}
+
+header.glava .kol{display:flex;justify-content:space-between;align-items:center;min-height:76px;position:relative}
+.logo{font-family:var(--disp);font-size:1.6rem;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+nav.meni ul{list-style:none;margin:0;padding:0;display:flex;gap:32px}
+nav.meni a{text-decoration:none;font-size:.9375rem;display:inline-flex;align-items:center;min-height:44px;border-bottom:1px solid transparent}
+nav.meni a:hover{border-bottom-color:var(--more)}
+.ham{display:none;background:none;border:0;border-bottom:1px solid var(--more);color:var(--more);font:600 .9375rem var(--sans);min-height:44px;min-width:64px;padding:0 4px;cursor:pointer}
+@media (max-width:720px){
+  .ham{display:inline-block}
+  nav.meni{display:none;position:absolute;top:100%;left:-20px;right:-20px;background:var(--led);border-top:1px solid var(--srebro);border-bottom:1px solid var(--srebro);z-index:20;padding:6px 20px 14px}
+  nav.meni.otv{display:block}
+  nav.meni ul{flex-direction:column;gap:0}
+  nav.meni a{font-family:var(--disp);font-size:1.5rem;min-height:56px}
+}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;font:600 .9375rem var(--sans);text-decoration:none;border:1px solid var(--more);background:transparent;color:var(--more);cursor:pointer;border-radius:2px}
+.btn.puno{background:var(--more);color:var(--led)}
+.btn.puno:hover{background:#082C38}
+.btn:not(.puno):hover{background:var(--bela)}
+
+/* hero */
+.hero{padding:clamp(40px,8vw,96px) 0 clamp(48px,7vw,80px)}
+.hero .datum{font-family:var(--disp);font-style:italic;font-size:1.25rem;color:var(--tiho)}
+.hero h1{font-size:clamp(3.2rem,11vw,7.5rem);letter-spacing:-.02em;margin-top:18px}
+.talas{display:block;width:min(560px,100%);height:24px;margin:18px 0 0}
+.talas path{fill:none;stroke:var(--narandza);stroke-width:1.5;vector-effect:non-scaling-stroke}
+.hero .lead{max-width:36rem;font-size:1.125rem;margin-top:30px}
+.akcije{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+@media (max-width:520px){.akcije .btn{flex:1 1 100%}}
+
+/* tabla */
+#ulov{padding:0 0 clamp(64px,9vw,112px)}
+.tabla-gl{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;border-top:2px solid var(--more);padding:18px 0 14px}
+.tabla-gl h2{font-size:clamp(2.2rem,5vw,3.4rem)}
+.tabla-gl .d{font-family:var(--disp);font-style:italic;font-size:1.25rem}
+.oznake{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;font-size:.875rem;color:var(--tiho);padding-bottom:16px}
+.primer{border:1px solid var(--srebro);padding:2px 10px;color:var(--more)}
+.tabla{list-style:none;margin:0;padding:0;border-top:1px solid var(--more)}
+.red{display:grid;grid-template-columns:minmax(0,1fr) 150px 168px 150px;align-items:center;gap:12px 20px;padding:16px 0;border-bottom:1px solid var(--srebro)}
+.red .ime{font-family:var(--disp);font-size:1.6rem;line-height:1.15}
+.red .ime small{display:block;font-family:var(--sans);font-size:.875rem;color:var(--tiho);line-height:1.4;margin-top:2px}
+.red .cena{text-align:right;font-family:var(--disp);font-size:1.6rem;font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
+.red .cena small{font-family:var(--sans);font-size:.75rem;color:var(--tiho);margin-left:4px}
+.kg{display:flex;align-items:center;justify-content:space-between;border:1px solid var(--more);border-radius:2px;background:var(--bela)}
+.kg button{width:46px;height:46px;border:0;background:transparent;color:var(--more);font:400 1.5rem/1 var(--sans);cursor:pointer}
+.kg button:disabled{color:#9AAAB0;cursor:not-allowed}
+.kg output{font-weight:600;font-variant-numeric:tabular-nums;min-width:58px;text-align:center}
+.ocisti{min-height:46px;display:inline-flex;align-items:center;gap:10px;background:none;border:0;color:var(--more);font:400 .9375rem var(--sans);cursor:pointer;padding:0 4px;justify-self:start}
+.ocisti .kv{width:20px;height:20px;border:1px solid var(--more);border-radius:2px;display:inline-grid;place-items:center;background:var(--bela)}
+.ocisti[aria-pressed="true"] .kv::after{content:"";width:10px;height:10px;background:var(--narandza)}
+.ocisti:disabled{color:#7F949C;cursor:not-allowed}
+.ocisti:disabled .kv{border-color:#A7B4BA}
+.ocisti.nema{visibility:hidden}
+.red.ima{border-left:3px solid var(--narandza);padding-left:14px}
+@media (max-width:760px){
+  .red{grid-template-columns:minmax(0,1fr) auto;gap:12px}
+  .red .kg{grid-column:1;justify-self:start;width:170px}
+  .red .ocisti{grid-column:2;justify-self:end}
+  .red .ocisti.nema{display:none}
+}
+
+/* preuzimanje */
+.deo{margin-top:64px}
+.deo>h3{font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:6px}
+.deo>p.pod{color:var(--tiho);margin-bottom:20px}
+.dani{display:flex;overflow-x:auto;border-top:1px solid var(--more);border-bottom:1px solid var(--more);scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.dan{flex:1 0 64px;min-height:74px;border:0;border-right:1px solid var(--srebro);background:transparent;color:var(--more);font:400 .8125rem/1.3 var(--sans);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;scroll-snap-align:start}
+.dan:last-child{border-right:0}
+.dan b{font-family:var(--disp);font-weight:400;font-size:1.6rem;line-height:1.1}
+.dan[aria-pressed="true"]{background:var(--more);color:var(--led)}
+.dan:disabled{color:#7F949C;cursor:not-allowed}
+.dan:disabled b{text-decoration:line-through;text-decoration-thickness:1px}
+.prozori{margin-top:22px}
+.prozori .grupa{display:grid;grid-template-columns:110px minmax(0,1fr);gap:8px 16px;padding:10px 0;border-bottom:1px solid var(--srebro)}
+.prozori .grupa>span{font-family:var(--disp);font-style:italic;font-size:1.125rem;padding-top:10px}
+.prozori .lista{display:flex;flex-wrap:wrap;gap:6px}
+.pr{min-height:44px;min-width:76px;padding:0 10px;border:1px solid var(--srebro);background:var(--bela);color:var(--more);font:600 .9375rem var(--sans);border-radius:2px;cursor:pointer;font-variant-numeric:tabular-nums}
+.pr[aria-pressed="true"]{background:var(--more);border-color:var(--more);color:var(--led)}
+.pr:disabled{background:transparent;border-style:dashed;color:#7F949C;font-weight:400;text-decoration:line-through;cursor:not-allowed}
+.legenda{font-size:.875rem;color:var(--tiho);margin-top:12px}
+@media (max-width:520px){.prozori .grupa{grid-template-columns:1fr}.prozori .grupa>span{padding-top:0}}
+
+.forma{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}
+.forma .cela{grid-column:1 / -1}
+.polje{margin-bottom:16px}
+.polje label{display:block;font-size:.875rem;font-weight:600;margin-bottom:6px}
+.polje input,.polje textarea{width:100%;min-height:50px;padding:10px 14px;border:1px solid var(--more);border-radius:2px;background:var(--bela);color:var(--more);font:400 1rem var(--sans)}
+.polje textarea{min-height:96px;resize:vertical}
+@media (max-width:620px){.forma{grid-template-columns:1fr}}
+
+.racun{margin-top:28px;border-top:2px solid var(--more)}
+.racun ul{list-style:none;margin:0;padding:0}
+.racun li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--srebro);font-variant-numeric:tabular-nums}
+.racun li span:last-child{white-space:nowrap;font-weight:600}
+.racun .prazno{color:var(--tiho);font-style:italic}
+.racun .uk{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 0 4px}
+.racun .uk b{font-family:var(--disp);font-weight:400;font-size:clamp(2.2rem,5vw,3rem);line-height:1;font-variant-numeric:lining-nums tabular-nums;border-bottom:1.5px solid var(--narandza);padding-bottom:4px}
+.racun .napom{font-size:.875rem;color:var(--tiho)}
+.slanje{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:24px}
+.greska{color:#A33A0D;font-weight:600;min-height:1.6em}
+.potvrda{display:none;padding-top:8px}
+.potvrda.on{display:block}
+.por.gotovo{display:none}
+.potvrda h3{font-size:clamp(2.2rem,5vw,3.4rem);margin-top:24px}
+.potvrda>p{max-width:36rem;margin-top:12px}
+.potvrda dl{margin:28px 0 0;border-top:1px solid var(--more)}
+.potvrda dl div{display:grid;grid-template-columns:160px minmax(0,1fr);gap:16px;padding:10px 0;border-bottom:1px solid var(--srebro)}
+.potvrda dt{color:var(--tiho)}
+.potvrda dd{margin:0;font-weight:600}
+@media (max-width:520px){.potvrda dl div{grid-template-columns:1fr;gap:0}}
+
+section{padding:clamp(64px,9vw,112px) 0;border-top:1px solid var(--srebro)}
+section h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:28px}
+.usluge{list-style:none;margin:0;padding:0;border-top:1px solid var(--more)}
+.usluge li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 20px;padding:14px 0;border-bottom:1px solid var(--srebro)}
+.usluge li b{font-weight:600}
+.usluge li span{font-family:var(--disp);font-size:1.25rem;white-space:nowrap}
+.usluge li small{grid-column:1 / -1;color:var(--tiho);font-size:.875rem}
+.dvoje{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.sati{width:100%;border-collapse:collapse;border-top:1px solid var(--more)}
+.sati th,.sati td{padding:12px 0;border-bottom:1px solid var(--srebro);text-align:left;font-weight:400}
+.sati td{text-align:right;font-variant-numeric:tabular-nums}
+.sati tr.danas th,.sati tr.danas td{font-weight:600}
+.mapa{width:100%;height:300px;border:0;display:block}
+.adr{margin-top:14px}
+.ok{margin-top:12px;font-weight:600}
+@media (max-width:760px){.dvoje{grid-template-columns:1fr;gap:48px}}
+
+footer{border-top:1px solid var(--srebro);padding:36px 0 52px;font-size:.875rem;color:var(--tiho)}
+footer .kol{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 28px}
+footer a{color:var(--more);font-weight:600;display:inline-flex;min-height:44px;align-items:center}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="traka">
+  <div class="kol">
+    <span>Primer sajta · izradio opsforma <span class="znacka">Paket 2: porudžbine</span></span>
+    <a href="../../">Svi primeri</a>
+  </div>
+</div>
+
+<header class="glava">
+  <div class="kol">
+    <a class="logo" href="#ulov">Oseka</a>
+    <button class="ham" type="button" aria-expanded="false" aria-controls="nav">Meni</button>
+    <nav class="meni" id="nav" aria-label="Glavni meni">
+      <ul>
+        <li><a href="#ulov">Ulov dana</a></li>
+        <li><a href="#usluge">Čišćenje</a></li>
+        <li><a href="#vreme">Radno vreme</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="kol">
+    <p class="datum">Džordža Vašingtona 22, Palilula</p>
+    <h1>Ribarnica Oseka</h1>
+    <svg class="talas" viewBox="0 0 560 24" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 12 C 23 2, 47 2, 70 12 S 117 22, 140 12 S 187 2, 210 12 S 257 22, 280 12 S 327 2, 350 12 S 397 22, 420 12 S 467 2, 490 12 S 537 22, 560 12"/>
+    </svg>
+    <p class="lead">Riba sa Jadrana i iz naših reka, svako jutro sveža na tabli u Džordža Vašingtona 22. Naručite unapred po kilogramu, mi je očistimo i spakujemo u led, a Vi preuzmete bez čekanja.</p>
+    <div class="akcije">
+      <a class="btn puno" href="#ulov">Naručite za preuzimanje</a>
+      <a class="btn" href="tel:+381600000619">Pozovite 060 000 06 19</a>
+      <a class="btn" href="viber://chat?number=%2B381600000619">Viber</a>
+    </div>
+  </div>
+</div>
+
+<div id="ulov">
+  <div class="kol">
+    <div class="tabla-gl">
+      <h2>Ulov dana</h2>
+      <span class="d" id="tablaDatum"></span>
+    </div>
+    <div class="oznake">
+      <span>Cene su po kilogramu. Količinu birate na pola kilograma.</span>
+      <span class="primer">Primer: termini su izmišljeni</span>
+    </div>
+<!--
+  PRODUKCIJA
+  U demou porudžbina radi samo u pregledaču; ponuda na tabli i popunjeni prozori za preuzimanje su izmišljeni.
+  Na pravom sajtu postoje dve varijante:
+  a) Zahtev za porudžbinu: dugme „Pošaljite porudžbinu“ šalje rezime (riba, kilaža, čišćenje da/ne, okvirni
+     iznos, dan i prozor preuzimanja, ime, telefon, napomena) na mejl ribarnice preko Web3Forms (POST na
+     https://api.web3forms.com/submit sa skrivenim poljem access_key), ili otvara Viber poruku sa istim
+     tekstom (viber://forward?text=...). Ribarnica potvrđuje pozivom ili porukom i javlja tačan iznos
+     posle merenja.
+  b) Povezan kalendar: prozor preuzimanja bira se iz Google Kalendar „Appointment schedule“, Cal.com ili
+     Calendly embeda; svako preuzimanje se samo upisuje u Google Kalendar na telefonu vlasnika.
+  Tabla „Ulov dana“ na pravom sajtu može da se puni iz Google Sheets tabele koju vlasnik menja ujutru.
+-->
+    <div class="por" id="por">
+      <ul class="tabla" id="tabla" aria-label="Ponuda i količine"></ul>
+
+      <div class="deo">
+        <h3>Preuzimanje</h3>
+        <p class="pod">Izaberite dan i pola sata kada dolazite. Nedeljom ne radimo.</p>
+        <div class="dani" id="dani" role="group" aria-label="Dan preuzimanja, narednih 14 dana"></div>
+        <div class="prozori" id="prozori" aria-live="polite"><p class="legenda">Prvo izaberite dan.</p></div>
+      </div>
+
+      <div class="deo">
+        <h3>Vaši podaci</h3>
+        <p class="pod">Zovemo Vas samo ako nečega nema ili ako treba nešto da proverimo.</p>
+        <form id="porForma" class="forma" novalidate>
+          <div class="polje"><label for="o-ime">Ime i prezime</label><input id="o-ime" name="ime" autocomplete="name"></div>
+          <div class="polje"><label for="o-tel">Telefon</label><input id="o-tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="06x xxx xxxx"></div>
+          <div class="polje cela"><label for="o-nap">Napomena (filetiranje, veličina komada)</label><textarea id="o-nap" name="napomena"></textarea></div>
+          <div class="cela racun" aria-live="polite">
+            <ul id="racun"></ul>
+            <div class="uk"><span>Okvirno ukupno</span><b id="ukupno">0 RSD</b></div>
+            <p class="napom">Tačan iznos znamo posle merenja; razlika je obično manja od 10 %. Plaćate na kasi, gotovinom ili karticom.</p>
+          </div>
+          <div class="cela slanje">
+            <button class="btn puno" type="submit">Pošaljite porudžbinu</button>
+            <p class="greska" id="greska" role="alert"></p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="potvrda" id="potvrda" tabindex="-1" aria-live="polite">
+      <h3>Porudžbina je poslata.</h3>
+      <p>Hvala. Na pravom sajtu potvrdu dobijate i mejlom. Riba će biti izmerena, očišćena i spakovana u led kada dođete.</p>
+      <dl id="rezime"></dl>
+      <div class="akcije">
+        <button class="btn puno" type="button" id="ics">Dodaj u kalendar</button>
+        <button class="btn" type="button" id="nova">Nova porudžbina</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="usluge">
+  <div class="kol">
+    <h2>Čišćenje i pakovanje</h2>
+    <ul class="usluge">
+      <li><b>Čišćenje ribe</b><span>150 RSD/kg</span><small>Krljušt, utroba i škrge. Radimo dok čekate ili unapred, uz porudžbinu.</small></li>
+      <li><b>Filetiranje</b><span>300 RSD/kg</span><small>Za oradu, brancin, šarana i pastrmku. Kosti i glavu pakujemo posebno za čorbu, ako želite.</small></li>
+      <li><b>Čišćenje lignji</b><span>150 RSD/kg</span><small>Skidamo kožu i vadimo hrskavicu.</small></li>
+      <li><b>Pakovanje u led za put</b><span>besplatno</span><small>U kesi sa ledom riba izdrži oko dva sata do frižidera.</small></li>
+    </ul>
+  </div>
+</section>
+
+<section id="vreme">
+  <div class="kol dvoje">
+    <div>
+      <h2>Radno vreme</h2>
+      <table class="sati">
+        <caption class="sr">Radno vreme po danima</caption>
+        <tbody>
+          <tr data-d="1"><th scope="row">Ponedeljak</th><td>8–19 h</td></tr>
+          <tr data-d="2"><th scope="row">Utorak</th><td>8–19 h</td></tr>
+          <tr data-d="3"><th scope="row">Sreda</th><td>8–19 h</td></tr>
+          <tr data-d="4"><th scope="row">Četvrtak</th><td>8–19 h</td></tr>
+          <tr data-d="5"><th scope="row">Petak</th><td>7–19 h</td></tr>
+          <tr data-d="6"><th scope="row">Subota</th><td>7–15 h</td></tr>
+          <tr data-d="0"><th scope="row">Nedelja</th><td>zatvoreno</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h2>Adresa</h2>
+      <iframe class="mapa" title="Mapa: Džordža Vašingtona 22, Beograd" loading="lazy" src="https://maps.google.com/maps?q=D%C5%BEord%C5%BEa%20Va%C5%A1ingtona%2022%2C%20Beograd&z=15&output=embed"></iframe>
+      <p class="adr">Džordža Vašingtona 22, Palilula. Nekoliko minuta od Bajlonijeve pijace; ispred radnje se može kratko stati.</p>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="kol dvoje">
+    <div>
+      <h2>Kontakt</h2>
+      <p>Za veće količine, slave i posne praznike javite se dan ili dva ranije, da Vam odvojimo ribu.</p>
+      <p style="margin-top:14px"><a href="tel:+381600000619">060 000 06 19</a><br><a href="viber://chat?number=%2B381600000619">Viber</a></p>
+    </div>
+<!--
+  Kontakt forma na pravom sajtu: <form action="https://api.web3forms.com/submit" method="POST">
+  sa skrivenim poljem <input type="hidden" name="access_key" value="KLJUČ-IZ-WEB3FORMS">;
+  poruka stiže direktno na mejl ribarnice. U demou slanje samo prikazuje napomenu.
+-->
+    <form data-form="kontakt" id="kontaktForma">
+      <div class="polje"><label for="k-ime">Ime</label><input id="k-ime" name="ime" required autocomplete="name"></div>
+      <div class="polje"><label for="k-kon">Telefon ili mejl</label><input id="k-kon" name="kontakt" required></div>
+      <div class="polje"><label for="k-por">Poruka</label><textarea id="k-por" name="poruka" required></textarea></div>
+      <button class="btn puno" type="submit">Pošaljite poruku</button>
+      <p class="ok" id="kontaktOk" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="kol">
+    <span>Ribarnica Oseka, Džordža Vašingtona 22, Beograd</span>
+    <span>Primer sajta · izradio opsforma. Firma je izmišljena. <a href="../../">Svi primeri</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var ham=document.querySelector('.ham'), nav=document.getElementById('nav');
+  function zatvori(){nav.classList.remove('otv');ham.setAttribute('aria-expanded','false')}
+  ham.addEventListener('click',function(){if(ham.getAttribute('aria-expanded')==='true')zatvori();else{nav.classList.add('otv');ham.setAttribute('aria-expanded','true')}});
+  nav.addEventListener('click',function(e){if(e.target.closest('a'))zatvori()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&ham.getAttribute('aria-expanded')==='true'){zatvori();ham.focus()}});
+  document.getElementById('kontaktForma').addEventListener('submit',function(e){e.preventDefault();document.getElementById('kontaktOk').textContent='Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.'});
+
+  var FIRMA='Ribarnica Oseka', ADR='Džordža Vašingtona 22, Beograd', SLUG='ribarnica-oseka';
+  var DANI=['nedelja','ponedeljak','utorak','sreda','četvrtak','petak','subota'];
+  var DK=['ned','pon','uto','sre','čet','pet','sub'];
+  var MES=['januar','februar','mart','april','maj','jun','jul','avgust','septembar','oktobar','novembar','decembar'];
+  var MESG=['januara','februara','marta','aprila','maja','juna','jula','avgusta','septembra','oktobra','novembra','decembra'];
+  var RV={0:null,1:[480,1140],2:[480,1140],3:[480,1140],4:[480,1140],5:[420,1140],6:[420,900]};
+  var PROZOR=30, CISCENJE=150, KORAK=0.5, MAKS=10;
+  var RIBA=[
+    {id:'orada',n:'Orada',o:'Grčka, uzgoj',c:1890,ci:true},
+    {id:'brancin',n:'Brancin',o:'Grčka, uzgoj',c:1990,ci:true},
+    {id:'skusa',n:'Skuša',o:'severni Atlantik',c:890,ci:true},
+    {id:'pastrmka',n:'Pastrmka',o:'ribnjak kod Ivanjice',c:1150,ci:true},
+    {id:'saran',n:'Šaran',o:'ribnjak Ečka',c:690,ci:true},
+    {id:'som',n:'Som, file',o:'Dunav, bez kostiju',c:1790,ci:false},
+    {id:'lignje',n:'Lignje',o:'Jadran',c:2290,ci:true},
+    {id:'dagnje',n:'Dagnje',o:'Boka kotorska, žive',c:790,ci:false}
+  ];
+  var R={};RIBA.forEach(function(r){R[r.id]=r});
+
+  function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+  function hm(m){return String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0')}
+  function hash(s){var h=2166136261;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}h^=h>>>13;h=Math.imul(h,0x5bd1e995);h^=h>>>15;return (h>>>0)/4294967296}
+  function broj(n){return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'.')}
+  function rsd(n){return broj(n)+' RSD'}
+  function kg(q){return String(q).replace('.',',')+'\u00a0kg'}
+
+  var sad=new Date();
+  document.getElementById('tablaDatum').textContent=DANI[sad.getDay()]+', '+sad.getDate()+'. '+MES[sad.getMonth()];
+  var trd=document.querySelector('.sati tr[data-d="'+sad.getDay()+'"]');if(trd)trd.classList.add('danas');
+
+  var kol={}, cisti={}, st={dan:null,prozor:null};
+
+  var tabla=document.getElementById('tabla');
+  tabla.innerHTML=RIBA.map(function(r){
+    return '<li class="red" data-id="'+r.id+'">'+
+      '<div class="ime">'+r.n+'<small>'+r.o+'</small></div>'+
+      '<div class="cena">'+broj(r.c)+'<small>RSD/kg</small></div>'+
+      '<div class="kg"><button type="button" data-m="'+r.id+'" aria-label="Pola kilograma manje: '+r.n+'">&minus;</button><output id="q-'+r.id+'" aria-live="polite">0 kg</output><button type="button" data-p="'+r.id+'" aria-label="Pola kilograma više: '+r.n+'">+</button></div>'+
+      '<button type="button" class="ocisti'+(r.ci?'':' nema')+'" data-c="'+r.id+'" aria-pressed="false"'+(r.ci?'':' tabindex="-1" aria-hidden="true"')+'><span class="kv" aria-hidden="true"></span>Očistiti</button>'+
+      '</li>';
+  }).join('');
+  function osveziRed(id){
+    var q=kol[id]||0, li=tabla.querySelector('[data-id="'+id+'"]');
+    document.getElementById('q-'+id).textContent=kg(q);
+    li.querySelector('[data-m]').disabled=q<=0;
+    li.querySelector('[data-p]').disabled=q>=MAKS;
+    var c=li.querySelector('.ocisti');
+    if(R[id].ci){c.disabled=q<=0;if(q<=0)cisti[id]=false;c.setAttribute('aria-pressed',cisti[id]?'true':'false');c.setAttribute('aria-label','Očistiti: '+R[id].n+(q<=0?' (prvo izaberite količinu)':''))}
+    li.classList.toggle('ima',q>0);
+  }
+  tabla.addEventListener('click',function(e){
+    var p=e.target.closest('[data-p]'), m=e.target.closest('[data-m]'), c=e.target.closest('[data-c]');
+    if(p&&!p.disabled){kol[p.dataset.p]=Math.min(MAKS,(kol[p.dataset.p]||0)+KORAK);osveziRed(p.dataset.p);racun()}
+    if(m&&!m.disabled){var q=Math.max(0,(kol[m.dataset.m]||0)-KORAK);if(q)kol[m.dataset.m]=q;else delete kol[m.dataset.m];osveziRed(m.dataset.m);racun()}
+    if(c&&!c.disabled&&R[c.dataset.c].ci){cisti[c.dataset.c]=!cisti[c.dataset.c];osveziRed(c.dataset.c);racun()}
+  });
+
+  function stavke(){
+    return RIBA.filter(function(r){return kol[r.id]>0}).map(function(r){
+      var q=kol[r.id], c=!!(r.ci&&cisti[r.id]);
+      return {r:r,q:q,c:c,iznos:q*r.c+(c?q*CISCENJE:0)};
+    });
+  }
+  function racun(){
+    var s=stavke(), ul=document.getElementById('racun'), uk=0;
+    if(!s.length){ul.innerHTML='<li class="prazno">Na tabli izaberite ribu i količinu.</li>'}
+    else ul.innerHTML=s.map(function(x){uk+=x.iznos;return '<li><span>'+x.r.n+', '+kg(x.q)+(x.c?', očišćena':'')+'</span><span>'+rsd(x.iznos)+'</span></li>'}).join('');
+    document.getElementById('ukupno').textContent=rsd(uk);
+    return uk;
+  }
+
+  /* dani i prozori */
+  var danas=new Date();danas.setHours(0,0,0,0);
+  var daniEl=document.getElementById('dani'), prEl=document.getElementById('prozori');
+  for(var i=0;i<14;i++){(function(i){
+    var d=new Date(danas);d.setDate(danas.getDate()+i);
+    var b=document.createElement('button');b.type='button';b.className='dan';b.dataset.date=iso(d);
+    var zat=!RV[d.getDay()];
+    b.innerHTML='<span>'+(i===0?'danas':DK[d.getDay()])+'</span><b>'+d.getDate()+'</b><span>'+MES[d.getMonth()].slice(0,3)+'</span>';
+    b.setAttribute('aria-label',DANI[d.getDay()]+', '+d.getDate()+'. '+MESG[d.getMonth()]+(zat?', zatvoreno':''));
+    if(zat)b.disabled=true;else b.setAttribute('aria-pressed','false');
+    b.addEventListener('click',function(){
+      st.dan=d;st.prozor=null;
+      [].forEach.call(daniEl.children,function(x){if(!x.disabled)x.setAttribute('aria-pressed',x===b?'true':'false')});
+      crtajProzore();
+    });
+    daniEl.appendChild(b);
+  })(i)}
+  function prozori(d){
+    var rv=RV[d.getDay()];if(!rv)return [];
+    var n=new Date(), min=iso(d)===iso(n)?n.getHours()*60+n.getMinutes()+60:0, out=[];
+    for(var m=rv[0];m+PROZOR<=rv[1];m+=PROZOR){if(m<min)continue;out.push({m:m,z:hash(iso(d)+'|'+m+'|oseka')<0.34})}
+    return out;
+  }
+  function crtajProzore(){
+    var p=prozori(st.dan);prEl.innerHTML='';
+    if(!p.length){prEl.innerHTML='<p class="legenda">Za ovaj dan više nema prozora za preuzimanje. Izaberite drugi dan.</p>';return}
+    [['pre podne',function(m){return m<720}],['posle podne',function(m){return m>=720}]].forEach(function(g){
+      var l=p.filter(function(x){return g[1](x.m)});if(!l.length)return;
+      var w=document.createElement('div');w.className='grupa';
+      w.innerHTML='<span>'+g[0]+'</span>';
+      var lista=document.createElement('div');lista.className='lista';lista.setAttribute('role','group');lista.setAttribute('aria-label','Prozori '+g[0]);
+      l.forEach(function(x){
+        var b=document.createElement('button');b.type='button';b.className='pr';b.dataset.min=x.m;b.textContent=hm(x.m);
+        if(x.z){b.disabled=true;b.setAttribute('aria-label',hm(x.m)+' do '+hm(x.m+PROZOR)+', popunjeno')}
+        else{b.setAttribute('aria-pressed','false');b.setAttribute('aria-label',hm(x.m)+' do '+hm(x.m+PROZOR))}
+        b.addEventListener('click',function(){if(b.disabled)return;st.prozor=x.m;[].forEach.call(prEl.querySelectorAll('.pr:not(:disabled)'),function(y){y.setAttribute('aria-pressed',y===b?'true':'false')})});
+        lista.appendChild(b);
+      });
+      w.appendChild(lista);prEl.appendChild(w);
+    });
+    var leg=document.createElement('p');leg.className='legenda';leg.textContent='Vreme je početak prozora od pola sata. Precrtani prozori su popunjeni.';prEl.appendChild(leg);
+  }
+
+  var forma=document.getElementById('porForma'), gr=document.getElementById('greska');
+  var por=document.getElementById('por'), potvrda=document.getElementById('potvrda');
+  forma.addEventListener('submit',function(e){
+    e.preventDefault();
+    var s=stavke(), ime=forma.ime.value.trim(), tel=forma.telefon.value.trim(), cif=tel.replace(/\D/g,'');
+    if(!s.length){gr.textContent='Na tabli izaberite bar jednu ribu i količinu.';return}
+    if(!st.dan){gr.textContent='Izaberite dan preuzimanja.';return}
+    if(st.prozor===null){gr.textContent='Izaberite vreme preuzimanja.';return}
+    if(ime.length<2){gr.textContent='Upišite ime i prezime.';forma.ime.focus();return}
+    if(cif.length<8||cif.length>13){gr.textContent='Upišite ispravan broj telefona, na primer 060 123 4567.';forma.telefon.focus();return}
+    gr.textContent='';
+    var uk=racun();
+    var spisak=s.map(function(x){return x.r.n+' '+kg(x.q)+(x.c?' (očistiti)':'')}).join(', ');
+    var red=[['Riba',spisak],['Čišćenje',s.some(function(x){return x.c})?s.filter(function(x){return x.c}).map(function(x){return x.r.n}).join(', ')+', '+CISCENJE+' RSD/kg':'bez čišćenja'],
+      ['Okvirno ukupno',rsd(uk)],['Dan',DANI[st.dan.getDay()]+', '+st.dan.getDate()+'. '+MESG[st.dan.getMonth()]],
+      ['Preuzimanje',hm(st.prozor)+'–'+hm(st.prozor+PROZOR)+' (30 min)'],['Ime',ime],['Telefon',tel],['Plaćanje','na kasi, gotovinom ili karticom']];
+    if(forma.napomena.value.trim())red.push(['Napomena',forma.napomena.value.trim()]);
+    var dl=document.getElementById('rezime');dl.innerHTML='';
+    red.forEach(function(r){var w=document.createElement('div'),a=document.createElement('dt'),b=document.createElement('dd');a.textContent=r[0];b.textContent=r[1];w.appendChild(a);w.appendChild(b);dl.appendChild(w)});
+    potvrda._p={dan:new Date(st.dan),m:st.prozor,spisak:spisak,uk:uk,ime:ime,kratko:s.map(function(x){return x.r.n.toLowerCase().split(',')[0]}).join(', ')};
+    por.classList.add('gotovo');potvrda.classList.add('on');
+    document.getElementById('ulov').scrollIntoView({block:'start'});
+    potvrda.focus({preventScroll:true});
+  });
+  function icsD(d){return d.toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'')}
+  function esc(s){return String(s).replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/\n/g,'\\n')}
+  function fold(l){var o=[];while(l.length>72){o.push(l.slice(0,72));l=' '+l.slice(72)}o.push(l);return o.join('\r\n')}
+  document.getElementById('ics').addEventListener('click',function(){
+    var p=potvrda._p;if(!p)return;
+    var a=new Date(p.dan);a.setHours(0,p.m,0,0);var b=new Date(a.getTime()+PROZOR*60000);
+    var L=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//opsforma//'+SLUG+'//SR','CALSCALE:GREGORIAN','METHOD:PUBLISH','BEGIN:VEVENT',
+      'UID:'+Date.now()+'-'+Math.random().toString(36).slice(2)+'@'+SLUG+'.primer','DTSTAMP:'+icsD(new Date()),
+      'DTSTART:'+icsD(a),'DTEND:'+icsD(b),
+      'SUMMARY:'+esc(FIRMA+': preuzimanje ('+p.kratko+')'),
+      'LOCATION:'+esc(ADR),
+      'DESCRIPTION:'+esc(p.spisak+'. Okvirno '+rsd(p.uk)+', tačan iznos posle merenja. Telefon: 060 000 06 19.'),
+      'END:VEVENT','END:VCALENDAR'];
+    var txt=L.map(fold).join('\r\n')+'\r\n';
+    var bl=new Blob([txt],{type:'text/calendar;charset=utf-8'});
+    var el=document.createElement('a');el.href=URL.createObjectURL(bl);el.download='termin-'+SLUG+'.ics';
+    document.body.appendChild(el);el.click();setTimeout(function(){URL.revokeObjectURL(el.href);el.remove()},1000);
+  });
+  document.getElementById('nova').addEventListener('click',function(){
+    kol={};cisti={};st={dan:null,prozor:null};forma.reset();
+    RIBA.forEach(function(r){osveziRed(r.id)});
+    [].forEach.call(daniEl.children,function(x){if(!x.disabled)x.setAttribute('aria-pressed','false')});
+    prEl.innerHTML='<p class="legenda">Prvo izaberite dan.</p>';racun();
+    potvrda.classList.remove('on');por.classList.remove('gotovo');
+    document.getElementById('ulov').scrollIntoView({block:'start'});
+  });
+  RIBA.forEach(function(r){osveziRed(r.id)});racun();
+})();
+</script>
+</body>
+</html>

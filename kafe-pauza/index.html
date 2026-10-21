@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Kafe Pauza – kafić na Dorćolu, Gospodar Jevremova 19</title>
+<meta name="description" content="Kafe Pauza na Dorćolu: espresso, filter kafa, čaj, limunada i domaći kolači. Gospodar Jevremova 19, otvoreno svaki dan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Gelasio:ital,wght@0,400;0,600;1,400&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mleko:#FBF7F2;
+  --pena:#F2EBE2;          /* pozadina strane, tamnija nijansa mleka */
+  --espresso:#2B1B14;
+  --roze:#E8C4C4;
+  --tiho:#6A574D;          /* sporedni tekst, 5.9:1 na --pena */
+  --head:"Tenor Sans","Optima","Candara","Segoe UI",sans-serif;
+  --text:"Gelasio","Georgia","DejaVu Serif",serif;
+  --kartica:34rem;
+  --ritam:3rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--pena);color:var(--espresso);font-family:var(--text);font-size:1.0625rem;line-height:1.65}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--espresso);outline-offset:3px}
+h1,h2,h3{font-family:var(--head);font-weight:400;margin:0;line-height:1.15}
+p{margin:0 0 1em}
+
+/* traka primera */
+.primer{font-family:var(--head);font-size:.8125rem;text-align:center;padding:.5rem 16px;border-bottom:1px solid rgba(43,27,20,.15);color:var(--tiho)}
+.primer a{color:var(--espresso);margin-left:.6em}
+
+/* zaglavlje */
+.zag{position:sticky;top:0;z-index:5;background:var(--pena);border-bottom:1px solid rgba(43,27,20,.12)}
+.zag-in{max-width:68rem;margin:0 auto;padding:0 16px;height:60px;display:flex;align-items:center;justify-content:space-between}
+.znak{font-family:var(--head);font-size:1.375rem;letter-spacing:.06em;text-decoration:none}
+.nav{display:flex;gap:2rem}
+.nav a{font-family:var(--head);font-size:.9375rem;text-decoration:none;padding:.6rem 0}
+.nav a:hover{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
+.meni-dugme{display:none}
+
+/* kartice: isti format, isti ritam */
+main{padding:var(--ritam) 16px 0}
+.kartica{max-width:var(--kartica);margin:0 auto var(--ritam);background:var(--mleko);border:1px solid var(--espresso);padding:clamp(1.5rem,6vw,3rem)}
+.kartica > h2{font-size:1.5rem;text-align:center;margin-bottom:1.75rem;letter-spacing:.02em}
+
+/* glavna kartica: meni */
+.glava{text-align:center}
+.solja{width:136px;height:auto;display:block;margin:0 auto 1.25rem}
+.solja path{fill:none;stroke:var(--espresso);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.glava h1{font-size:clamp(2.75rem,11vw,3.75rem);letter-spacing:.08em;margin-bottom:.25rem}
+.podnaslov{font-style:italic;color:var(--tiho);margin-bottom:1.25rem}
+.status{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--head);font-size:.9375rem;margin-bottom:1.75rem}
+.tacka{width:12px;height:12px;border-radius:50%;border:1px solid var(--espresso);background:transparent;flex:none}
+.status.otvoreno .tacka{background:var(--roze)}
+.uvod{max-width:26rem;margin:0 auto 1.75rem}
+.dugmad{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-bottom:.5rem}
+.dug{font-family:var(--head);font-size:1rem;display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 1.4rem;border:1px solid var(--espresso);text-decoration:none;background:transparent;color:var(--espresso);cursor:pointer}
+.dug.glavno{background:var(--roze);border-color:var(--roze)}
+.dug:hover{background:var(--espresso);color:var(--mleko);border-color:var(--espresso)}
+
+.karta{margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(43,27,20,.25);text-align:left}
+.karta h3{font-size:1.125rem;letter-spacing:.04em;margin:2rem 0 .75rem;text-align:center}
+.karta h3:first-of-type{margin-top:0}
+.stavke{list-style:none;margin:0;padding:0}
+.stavke li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.4rem 0}
+.stavke .ime small{display:block;font-style:italic;color:var(--tiho);font-size:.875rem;line-height:1.4}
+.stavke .cena{font-variant-numeric:tabular-nums;white-space:nowrap}
+.napomena{font-size:.875rem;font-style:italic;color:var(--tiho);text-align:center;margin:1.75rem 0 0}
+
+/* radno vreme */
+.vreme{width:100%;border-collapse:collapse}
+.vreme th,.vreme td{padding:.55rem 0;font-weight:400;text-align:left}
+.vreme td{text-align:right;font-variant-numeric:tabular-nums}
+.vreme tr + tr th,.vreme tr + tr td{border-top:1px solid rgba(43,27,20,.12)}
+.vreme tr.danas th,.vreme tr.danas td{font-weight:600}
+
+/* mesto */
+.adresa{text-align:center;margin-bottom:1.5rem}
+.mapa{display:block;width:100%;height:280px;border:1px solid rgba(43,27,20,.25)}
+.centar{text-align:center}
+
+/* fotografija */
+.foto{aspect-ratio:4/3;background:#E9DFD3;display:flex;align-items:flex-end;padding:.75rem;margin-top:1.5rem}
+.foto span{font-size:.8125rem;color:var(--tiho);font-family:var(--head)}
+
+/* forma */
+.polje{margin-bottom:1.1rem}
+.polje label{display:block;font-family:var(--head);font-size:.9375rem;margin-bottom:.35rem}
+.polje input,.polje textarea{width:100%;font:inherit;font-size:1rem;color:var(--espresso);background:#fff;border:1px solid rgba(43,27,20,.4);border-radius:0;padding:.7rem .8rem;min-height:48px}
+.polje textarea{min-height:120px;resize:vertical}
+.polje input:focus-visible,.polje textarea:focus-visible{outline:2px solid var(--espresso);outline-offset:1px}
+.forma-poruka{margin:1rem 0 0;font-style:italic}
+
+/* podnožje */
+.pod{max-width:var(--kartica);margin:0 auto;padding:1rem 16px 3rem;text-align:center;font-size:.9375rem;color:var(--tiho)}
+.pod p{margin:.3rem 0}
+.pod a{color:var(--espresso)}
+
+@media (max-width:720px){
+  .meni-dugme{display:inline-flex;align-items:center;justify-content:center;min-width:48px;min-height:44px;padding:0 .9rem;font-family:var(--head);font-size:.9375rem;background:transparent;color:var(--espresso);border:1px solid var(--espresso);cursor:pointer}
+  .nav{display:none;position:absolute;left:0;right:0;top:60px;background:var(--pena);flex-direction:column;gap:0;padding:.5rem 16px 1rem;border-bottom:1px solid rgba(43,27,20,.2)}
+  .nav.otvoren{display:flex}
+  .nav a{padding:.8rem 0;font-size:1.0625rem}
+  :root{--ritam:2rem}
+  main{padding-top:1.25rem}
+  .mapa{height:240px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="primer">Primer sajta · izradio opsforma <a href="../">Svi primeri</a></div>
+
+<header class="zag">
+  <div class="zag-in">
+    <a class="znak" href="#karta">Pauza</a>
+    <button class="meni-dugme" type="button" aria-expanded="false" aria-controls="nav">Meni</button>
+    <nav class="nav" id="nav" aria-label="Glavna navigacija">
+      <a href="#karta">Meni</a>
+      <a href="#vreme">Radno vreme</a>
+      <a href="#mesto">Gde smo</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="kartica glava" id="karta" aria-labelledby="naslov">
+    <!-- šolja jednim potezom -->
+    <svg class="solja" viewBox="0 0 120 92" role="img" aria-label="Šolja kafe nacrtana jednom linijom">
+      <path d="M6 84 H40 C32 74 28 58 28 42 H52 C44 32 62 24 55 10 C67 22 54 32 64 42 H88 C88 47 88 51 87 55 C104 51 104 70 83 69 C81 76 79 80 76 84 H114"/>
+    </svg>
+    <h1 id="naslov">Pauza</h1>
+    <p class="podnaslov">kafa, čaj i nešto slatko na Dorćolu</p>
+    <p class="status" id="status" aria-live="polite"><span class="tacka" aria-hidden="true"></span><span id="status-tekst">Radimo svaki dan</span></p>
+    <p class="uvod">Mali kafić u Gospodar Jevremovoj 19. Kafu pijete za stolom pored prozora ili je nosite sa sobom. Kolače pravimo sami, svako jutro.</p>
+    <div class="dugmad">
+      <a class="dug glavno" href="tel:+381600000608">Pozovite</a>
+      <a class="dug" href="#kontakt">Pošaljite poruku</a>
+      <a class="dug" href="viber://chat?number=%2B381600000608">Viber</a>
+    </div>
+
+    <div class="karta">
+      <h3>Kafa</h3>
+      <ul class="stavke">
+        <li><span class="ime">Espresso</span><span class="cena">220</span></li>
+        <li><span class="ime">Produženi espresso</span><span class="cena">230</span></li>
+        <li><span class="ime">Makijato</span><span class="cena">250</span></li>
+        <li><span class="ime">Kapućino</span><span class="cena">290</span></li>
+        <li><span class="ime">Flat white<small>dupli espresso, malo mleka</small></span><span class="cena">340</span></li>
+        <li><span class="ime">Kafe late</span><span class="cena">330</span></li>
+        <li><span class="ime">Filter kafa<small>V60, zrno se menja svake nedelje</small></span><span class="cena">320</span></li>
+        <li><span class="ime">Ledena kafa</span><span class="cena">380</span></li>
+      </ul>
+      <h3>Čaj i ostalo</h3>
+      <ul class="stavke">
+        <li><span class="ime">Čaj u listu<small>zeleni, crni, kamilica, nana</small></span><span class="cena">260</span></li>
+        <li><span class="ime">Topla čokolada</span><span class="cena">330</span></li>
+        <li><span class="ime">Domaća limunada</span><span class="cena">350</span></li>
+        <li><span class="ime">Ceđena pomorandža</span><span class="cena">390</span></li>
+        <li><span class="ime">Kisela voda</span><span class="cena">180</span></li>
+      </ul>
+      <h3>Uz kafu</h3>
+      <ul class="stavke">
+        <li><span class="ime">Kroasan sa puterom</span><span class="cena">220</span></li>
+        <li><span class="ime">Kolač dana<small>pitajte šta je danas</small></span><span class="cena">390</span></li>
+        <li><span class="ime">Tost sa sirom i šunkom</span><span class="cena">450</span></li>
+        <li><span class="ime">Granola sa jogurtom i voćem</span><span class="cena">480</span></li>
+      </ul>
+      <p class="napomena">Cene su u dinarima (RSD). Biljno mleko uz bilo koju kafu: +60.</p>
+    </div>
+  </section>
+
+  <section class="kartica" id="vreme" aria-labelledby="h-vreme">
+    <h2 id="h-vreme">Radno vreme</h2>
+    <table class="vreme">
+      <tbody>
+        <tr data-dan="1"><th scope="row">Ponedeljak</th><td>07:30 – 22:00</td></tr>
+        <tr data-dan="2"><th scope="row">Utorak</th><td>07:30 – 22:00</td></tr>
+        <tr data-dan="3"><th scope="row">Sreda</th><td>07:30 – 22:00</td></tr>
+        <tr data-dan="4"><th scope="row">Četvrtak</th><td>07:30 – 22:00</td></tr>
+        <tr data-dan="5"><th scope="row">Petak</th><td>07:30 – 23:00</td></tr>
+        <tr data-dan="6"><th scope="row">Subota</th><td>09:00 – 23:00</td></tr>
+        <tr data-dan="0"><th scope="row">Nedelja</th><td>09:00 – 20:00</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="kartica" id="mesto" aria-labelledby="h-mesto">
+    <h2 id="h-mesto">Gde smo</h2>
+    <p class="adresa">Gospodar Jevremova 19, Dorćol<br>nekoliko minuta peške od Studentskog trga</p>
+    <iframe class="mapa" title="Mapa: Gospodar Jevremova 19, Beograd" loading="lazy" src="https://maps.google.com/maps?q=Gospodar%20Jevremova%2019%2C%20Beograd&amp;z=15&amp;output=embed"></iframe>
+  </section>
+
+  <section class="kartica" id="drustvo" aria-labelledby="h-drustvo">
+    <h2 id="h-drustvo">Za veće društvo</h2>
+    <p class="centar">Rođendan, sastanak ili mala proslava do 14 osoba? Javite nam se dan ranije i spojićemo stolove pored prozora. Kolače za Vaše goste možemo da spremimo po dogovoru.</p>
+    <div class="foto"><span>Vaša fotografija</span></div>
+  </section>
+
+  <section class="kartica" id="kontakt" aria-labelledby="h-kontakt">
+    <h2 id="h-kontakt">Pošaljite poruku</h2>
+    <p class="centar">Za sto, kolače za poneti ili bilo koje pitanje. Odgovaramo istog dana.</p>
+    <!--
+      Na pravom sajtu forma ide preko Web3Forms na mejl vlasnika:
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="KLJUČ-SA-WEB3FORMS.COM">
+        <input type="hidden" name="subject" value="Nova poruka sa sajta Kafe Pauza">
+        ... ista polja kao ispod ...
+      </form>
+      Ovde je slanje isključeno jer je ovo primer.
+    -->
+    <form data-form="kontakt" novalidate>
+      <div class="polje"><label for="k-ime">Ime</label><input id="k-ime" name="ime" autocomplete="name"></div>
+      <div class="polje"><label for="k-tel">Telefon</label><input id="k-tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel"></div>
+      <div class="polje"><label for="k-poruka">Poruka</label><textarea id="k-poruka" name="poruka"></textarea></div>
+      <button class="dug glavno" type="submit">Pošaljite poruku</button>
+      <p class="forma-poruka" id="forma-poruka" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+</main>
+
+<footer class="pod">
+  <p>Kafe Pauza, Gospodar Jevremova 19, Dorćol</p>
+  <p><a href="tel:+381600000608">060 000 06 08</a></p>
+  <p>Primer sajta · izradio opsforma. Kafić je izmišljen. <a href="../">Svi primeri</a></p>
+</footer>
+
+<script>
+(function(){
+  // meni na mobilnom
+  var dug = document.querySelector('.meni-dugme'), nav = document.getElementById('nav');
+  function postavi(o){ dug.setAttribute('aria-expanded', o ? 'true' : 'false'); nav.classList.toggle('otvoren', o); }
+  dug.addEventListener('click', function(){ postavi(dug.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ postavi(false); }); });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && dug.getAttribute('aria-expanded') === 'true'){ postavi(false); dug.focus(); }
+  });
+
+  // "sada otvoreno": radno vreme u minutima, po danu (0 = nedelja)
+  var RV = {0:[540,1200],1:[450,1320],2:[450,1320],3:[450,1320],4:[450,1320],5:[450,1380],6:[540,1380]};
+  function hh(m){ return String(Math.floor(m/60)).padStart(2,'0') + ':' + String(m%60).padStart(2,'0'); }
+  var d = new Date(), dan = d.getDay(), min = d.getHours()*60 + d.getMinutes(), r = RV[dan];
+  var st = document.getElementById('status'), tx = document.getElementById('status-tekst');
+  if (min >= r[0] && min < r[1]) { st.classList.add('otvoreno'); tx.textContent = 'Sada otvoreno, do ' + hh(r[1]); }
+  else if (min < r[0]) { tx.textContent = 'Sada zatvoreno, otvaramo u ' + hh(r[0]); }
+  else { tx.textContent = 'Sada zatvoreno, sutra od ' + hh(RV[(dan+1)%7][0]); }
+  var red = document.querySelector('.vreme tr[data-dan="' + dan + '"]');
+  if (red) red.classList.add('danas');
+
+  // kontakt forma (primer)
+  var f = document.querySelector('form[data-form="kontakt"]');
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('forma-poruka').textContent = 'Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.';
+  });
+})();
+</script>
+</body>
+</html>

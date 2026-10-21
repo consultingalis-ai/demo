@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Optika Fokus – pregled vida i naočare, Glavna 21, Zemun</title>
+<meta name="description" content="Optika Fokus u Zemunu: kompjuterski pregled vida, naočare za vid i sunce, kontaktna sočiva. Glavna 21, rok izrade naočara 3 do 5 radnih dana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;500&family=Funnel+Sans:wght@400;500&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bela:#FFFFFF;
+  --ugalj:#222326;
+  --staklo:#A9D6E5;        /* jedini akcenat: dugmad, jedna linija, današnji dan */
+  --siva:#62646A;          /* sporedni tekst, 5.9:1 na beloj */
+  --tanko:#E3E4E6;
+  --disp:"Funnel Display","Helvetica Neue",Arial,sans-serif;
+  --sans:"Funnel Sans","Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bela);color:var(--ugalj);font-family:var(--sans);font-size:1.0625rem;line-height:1.6}
+a{color:inherit;text-underline-offset:4px;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--ugalj);outline-offset:3px}
+h1,h2,h3{font-family:var(--disp);font-weight:300;margin:0;line-height:1}
+p{margin:0 0 1em}
+
+.primer{font-size:.75rem;color:var(--siva);text-align:center;padding:.55rem 16px;border-bottom:1px solid var(--tanko)}
+.primer a{color:var(--ugalj);margin-left:.6em}
+
+.okvir{max-width:80rem;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
+
+/* zaglavlje */
+.zag{position:relative}
+.zag .okvir{display:flex;align-items:center;justify-content:space-between;height:76px}
+.znak{font-weight:500;text-decoration:none;font-size:1rem}
+.nav{display:flex;gap:2.25rem;font-size:.9375rem}
+.nav a{text-decoration:none;padding:.5rem 0;color:var(--siva)}
+.nav a:hover{color:var(--ugalj)}
+.meni-dugme{display:none}
+
+/* hero: mnogo praznog prostora i jedna reč */
+.hero{min-height:calc(100svh - 110px);display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:3rem}
+.rec{font-family:var(--disp);font-weight:300;font-size:clamp(6.5rem,30.5vw,27rem);line-height:.78;letter-spacing:-.045em;margin:0 0 0 -.05em;animation:izostri 1.9s cubic-bezier(.2,.65,.15,1) both}
+@keyframes izostri{
+  0%{filter:blur(28px);opacity:.25}
+  60%{opacity:1}
+  100%{filter:blur(0);opacity:1}
+}
+.ispod{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.5rem 3rem;align-items:end;margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--staklo)}
+.ispod p{max-width:30rem;margin:0;font-size:1.125rem}
+.dugmad{display:flex;flex-wrap:wrap;gap:.75rem}
+.dug{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 1.5rem;border-radius:999px;font-family:var(--sans);font-weight:500;font-size:1rem;text-decoration:none;cursor:pointer;border:1px solid transparent}
+.dug.glavno{background:var(--staklo);color:var(--ugalj)}
+.dug.glavno:hover{background:var(--ugalj);color:var(--bela)}
+.dug.obris{border-color:var(--ugalj);background:transparent;color:var(--ugalj)}
+.dug.obris:hover{background:var(--ugalj);color:var(--bela)}
+
+/* sekcije: sadržaj desno, levo praznina */
+.sekcija{padding:clamp(5rem,12vw,10rem) 0 0}
+.stub{width:min(38rem,100%);margin-left:auto;margin-right:6%}
+.sekcija h2{font-size:clamp(2.5rem,6vw,4rem);letter-spacing:-.02em;margin-bottom:2.5rem}
+.uvodno{color:var(--siva);margin-bottom:2rem}
+
+.cene{list-style:none;margin:0;padding:0}
+.cene li{display:grid;grid-template-columns:1fr auto;gap:.15rem 1.5rem;padding:1.05rem 0;border-top:1px solid var(--tanko)}
+.cene li:last-child{border-bottom:1px solid var(--tanko)}
+.cene .iznos{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.cene small{grid-column:1 / -1;color:var(--siva);font-size:.875rem}
+
+.koraci{list-style:none;margin:0;padding:0;display:grid;gap:2.25rem}
+.koraci li{display:grid;grid-template-columns:3.5rem 1fr;gap:0 1rem}
+.koraci .n{font-family:var(--disp);font-weight:300;font-size:2.5rem;line-height:1}
+.koraci h3{font-family:var(--sans);font-weight:500;font-size:1.0625rem;line-height:1.4;margin:.35rem 0 .3rem}
+.koraci p{margin:0;color:var(--siva)}
+
+.foto{aspect-ratio:16/10;background:#EEF1F3;display:flex;align-items:flex-end;padding:.75rem;margin-top:3.5rem}
+.foto span{font-size:.75rem;color:var(--siva)}
+
+.dani{width:100%;border-collapse:collapse;margin-bottom:2.5rem}
+.dani th,.dani td{text-align:left;font-weight:400;padding:.6rem .5rem;border-top:1px solid var(--tanko)}
+.dani td{text-align:right;font-variant-numeric:tabular-nums}
+.dani tr:last-child th,.dani tr:last-child td{border-bottom:1px solid var(--tanko)}
+.dani tr.danas th,.dani tr.danas td{background:rgba(169,214,229,.35);font-weight:500}
+.adresa{font-family:var(--disp);font-weight:300;font-size:1.75rem;line-height:1.2;margin-bottom:1.5rem}
+.mapa{display:block;width:100%;height:340px;border:0;background:#EEF1F3}
+
+.polje{margin-bottom:1.25rem}
+.polje label{display:block;font-size:.875rem;font-weight:500;margin-bottom:.4rem}
+.polje input,.polje textarea{width:100%;font:inherit;color:var(--ugalj);background:var(--bela);border:0;border-bottom:1px solid var(--ugalj);border-radius:0;padding:.65rem 0;min-height:48px}
+.polje textarea{min-height:120px;resize:vertical}
+.polje input:focus-visible,.polje textarea:focus-visible{outline:2px solid var(--ugalj);outline-offset:4px}
+.forma-poruka{margin:1.25rem 0 0}
+
+.pod{margin-top:clamp(5rem,12vw,10rem);padding:2rem 0 3rem;border-top:1px solid var(--tanko);font-size:.875rem;color:var(--siva)}
+.pod .okvir{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 2rem}
+.pod p{margin:0}
+.pod a{color:var(--ugalj)}
+
+@media (max-width:760px){
+  .meni-dugme{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:48px;padding:0 1.1rem;border:1px solid var(--ugalj);border-radius:999px;background:transparent;color:var(--ugalj);font:inherit;font-size:.9375rem;cursor:pointer}
+  .zag .okvir{height:64px}
+  .nav{display:none;position:absolute;z-index:5;left:0;right:0;top:64px;background:var(--bela);flex-direction:column;gap:0;padding:.25rem 16px 1rem;border-bottom:1px solid var(--tanko)}
+  .nav.otvoren{display:flex}
+  .nav a{padding:.8rem 0;color:var(--ugalj);font-size:1.0625rem}
+  .hero{min-height:calc(100svh - 160px);padding-bottom:2rem}
+  .ispod{grid-template-columns:1fr}
+  .stub{margin-right:0}
+  .adresa{font-size:1.5rem}
+  .mapa{height:260px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rec{animation:none;filter:none;opacity:1}
+  *,*::before,*::after{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="primer">Primer sajta · izradio opsforma <a href="../">Svi primeri</a></div>
+
+<header class="zag">
+  <div class="okvir">
+    <a class="znak" href="#pocetak">Optika Fokus</a>
+    <button class="meni-dugme" type="button" aria-expanded="false" aria-controls="nav">Meni</button>
+    <nav class="nav" id="nav" aria-label="Glavna navigacija">
+      <a href="#usluge">Usluge i cene</a>
+      <a href="#pregled">Pregled</a>
+      <a href="#vreme">Radno vreme</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero okvir" id="pocetak" aria-label="Optika Fokus">
+    <h1 class="rec">Fokus</h1>
+    <div class="ispod">
+      <p>Optika u Glavnoj 21, u Zemunu. Pregled vida, naočare i kontaktna sočiva. Naočare su gotove za 3 do 5 radnih dana.</p>
+      <div class="dugmad">
+        <a class="dug glavno" href="tel:+381600000610">Pozovite</a>
+        <a class="dug obris" href="#kontakt">Pošaljite upit</a>
+        <a class="dug obris" href="viber://chat?number=%2B381600000610">Viber</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sekcija okvir" id="usluge" aria-labelledby="h-usluge">
+    <div class="stub">
+      <h2 id="h-usluge">Usluge i cene</h2>
+      <ul class="cene">
+        <li><span>Kompjuterski pregled vida</span><span class="iznos">2.500 RSD</span><small>besplatan ako naočare radite kod nas</small></li>
+        <li><span>Pregled za kontaktna sočiva</span><span class="iznos">3.500 RSD</span><small>sa probnim sočivima i obukom za stavljanje</small></li>
+        <li><span>Okviri za naočare</span><span class="iznos">od 6.000 RSD</span></li>
+        <li><span>Stakla za daljinu ili blizinu, par</span><span class="iznos">od 4.500 RSD</span><small>sa zaštitom od odsjaja</small></li>
+        <li><span>Progresivna stakla, par</span><span class="iznos">od 18.000 RSD</span></li>
+        <li><span>Sunčane naočare sa dioptrijom</span><span class="iznos">od 12.000 RSD</span></li>
+        <li><span>Mesečna kontaktna sočiva, 3 komada</span><span class="iznos">2.400 RSD</span></li>
+        <li><span>Podešavanje i sitne popravke</span><span class="iznos">besplatno</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sekcija okvir" id="pregled" aria-labelledby="h-pregled">
+    <div class="stub">
+      <h2 id="h-pregled">Kako ide</h2>
+      <p class="uvodno">Ne morate da zakazujete, ali ako nas pozovete dan ranije, nećete čekati.</p>
+      <ol class="koraci">
+        <li><span class="n" aria-hidden="true">1</span><div><h3>Pregled vida, oko 20 minuta</h3><p>Merimo dioptriju na aparatu i proveravamo je sa Vama, red po red.</p></div></li>
+        <li><span class="n" aria-hidden="true">2</span><div><h3>Izbor okvira</h3><p>Probate okvire na miru. Kažemo Vam koja stakla odgovaraju Vašoj dioptriji i koliko koštaju.</p></div></li>
+        <li><span class="n" aria-hidden="true">3</span><div><h3>Preuzimanje za 3 do 5 dana</h3><p>Javimo se kad su naočare gotove i podesimo ih na licu mesta.</p></div></li>
+      </ol>
+      <div class="foto"><span>Vaša fotografija</span></div>
+    </div>
+  </section>
+
+  <section class="sekcija okvir" id="vreme" aria-labelledby="h-vreme">
+    <div class="stub">
+      <h2 id="h-vreme">Radno vreme</h2>
+      <table class="dani">
+        <tbody>
+          <tr data-dan="1"><th scope="row">Ponedeljak</th><td>09:00 – 20:00</td></tr>
+          <tr data-dan="2"><th scope="row">Utorak</th><td>09:00 – 20:00</td></tr>
+          <tr data-dan="3"><th scope="row">Sreda</th><td>09:00 – 20:00</td></tr>
+          <tr data-dan="4"><th scope="row">Četvrtak</th><td>09:00 – 20:00</td></tr>
+          <tr data-dan="5"><th scope="row">Petak</th><td>09:00 – 20:00</td></tr>
+          <tr data-dan="6"><th scope="row">Subota</th><td>09:00 – 15:00</td></tr>
+          <tr data-dan="0"><th scope="row">Nedelja</th><td>zatvoreno</td></tr>
+        </tbody>
+      </table>
+      <p class="adresa">Glavna 21, Zemun</p>
+      <iframe class="mapa" title="Mapa: Glavna 21, Zemun, Beograd" loading="lazy" src="https://maps.google.com/maps?q=Glavna%2021%2C%20Zemun%2C%20Beograd&amp;z=15&amp;output=embed"></iframe>
+    </div>
+  </section>
+
+  <section class="sekcija okvir" id="kontakt" aria-labelledby="h-kontakt">
+    <div class="stub">
+      <h2 id="h-kontakt">Pišite nam</h2>
+      <p class="uvodno">Pitajte za cenu stakala, rok izrade ili da li imamo određena sočiva. Odgovaramo istog dana.</p>
+      <!--
+        Na pravom sajtu forma ide preko Web3Forms na mejl vlasnika:
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="KLJUČ-SA-WEB3FORMS.COM">
+          <input type="hidden" name="subject" value="Nova poruka sa sajta Optika Fokus">
+          ... ista polja kao ispod ...
+        </form>
+        Ovde je slanje isključeno jer je ovo primer.
+      -->
+      <form data-form="kontakt" novalidate>
+        <div class="polje"><label for="k-ime">Ime</label><input id="k-ime" name="ime" autocomplete="name"></div>
+        <div class="polje"><label for="k-tel">Telefon</label><input id="k-tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel"></div>
+        <div class="polje"><label for="k-poruka">Poruka</label><textarea id="k-poruka" name="poruka"></textarea></div>
+        <button class="dug glavno" type="submit">Pošaljite poruku</button>
+        <p class="forma-poruka" id="forma-poruka" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="pod">
+  <div class="okvir">
+    <p>Optika Fokus, Glavna 21, Zemun. <a href="tel:+381600000610">060 000 06 10</a></p>
+    <p>Primer sajta · izradio opsforma. Optika je izmišljena. <a href="../">Svi primeri</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var dug = document.querySelector('.meni-dugme'), nav = document.getElementById('nav');
+  function postavi(o){ dug.setAttribute('aria-expanded', o ? 'true' : 'false'); nav.classList.toggle('otvoren', o); }
+  dug.addEventListener('click', function(){ postavi(dug.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ postavi(false); }); });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && dug.getAttribute('aria-expanded') === 'true'){ postavi(false); dug.focus(); }
+  });
+
+  var danas = document.querySelector('.dani tr[data-dan="' + new Date().getDay() + '"]');
+  if (danas) danas.classList.add('danas');
+
+  document.querySelector('form[data-form="kontakt"]').addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('forma-poruka').textContent = 'Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.';
+  });
+})();
+</script>
+</body>
+</html>

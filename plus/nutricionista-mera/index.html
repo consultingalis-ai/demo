@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Nutricionista Mera · Bulevar Zorana Đinđića 64, Novi Beograd</title>
+<meta name="description" content="Nutricionistkinja na Novom Beogradu. Prvi pregled, kontrole i plan ishrane koji možete da pratite. Zakažite termin online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=Petrona:ital,wght@0,400;1,400&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF;
+  --ink:#1E2B25;
+  --muted:#56635D;
+  --line:#DCE3DF;
+  --soft:#F6F8F7;
+  --ac:#2E7D5B;
+  --lemon:#F2E394;
+  --r:20px;
+  --sans:"Be Vietnam Pro","Segoe UI","Helvetica Neue",Arial,sans-serif;
+  --serif:"Petrona",Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 18px/1.6 var(--serif)}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--sans);font-weight:600;letter-spacing:-.02em;margin:0;line-height:1.1}
+p{margin:0}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px;border-radius:6px}
+[hidden]{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+
+/* traka primera */
+.demo{font:400 13px/1.4 var(--sans);color:var(--muted);border-bottom:1px solid var(--line)}
+.demo .wrap{display:flex;gap:10px 16px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.demo a{color:var(--ink);font-weight:600;padding:6px 0}
+.badge{display:inline-block;font:600 12px/1 var(--sans);color:var(--ac);border:1px solid var(--ac);border-radius:999px;padding:6px 10px;white-space:nowrap}
+
+/* zaglavlje */
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:600 20px/1 var(--sans);letter-spacing:-.02em}
+.logo svg{width:26px;height:26px}
+.menu-btn{display:none;min-width:48px;min-height:48px;border:1px solid var(--line);background:var(--bg);border-radius:14px;font:600 15px var(--sans);color:var(--ink);padding:0 14px;cursor:pointer}
+#meni ul{list-style:none;margin:0;padding:0;display:flex;gap:4px}
+#meni a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;text-decoration:none;font:400 15px var(--sans);border-radius:12px}
+#meni a:hover{background:var(--soft)}
+#meni a.cta{background:var(--ac);color:#fff;font-weight:600}
+
+/* bento */
+.bento{display:grid;grid-template-columns:1fr;gap:12px}
+.card{border:1px solid var(--line);border-radius:var(--r);padding:24px;background:var(--bg);min-width:0}
+.sec{padding-top:56px}
+.sec-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;margin:0 0 20px}
+.sec-head h2{font-size:clamp(1.6rem,3.4vw,2.3rem)}
+.sec-head p{color:var(--muted);max-width:46ch}
+.label{font:400 14px/1.3 var(--sans);color:var(--muted)}
+
+/* hero */
+.hero{padding-top:8px}
+.hero-title{padding:36px 24px 40px}
+.hero-title .label{margin-bottom:28px}
+.hero-title h1{font-size:clamp(2.6rem,9vw,6.2rem);line-height:.98;letter-spacing:-.045em;max-width:12ch}
+.hero-intro p{font-size:19px;max-width:40ch}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 20px;border-radius:14px;border:1px solid var(--ink);background:var(--bg);color:var(--ink);font:600 15px/1 var(--sans);text-decoration:none;cursor:pointer}
+.btn.primary{background:var(--ac);border-color:var(--ac);color:#fff}
+.btn:hover{border-color:var(--ac)}
+.btn.primary:hover{background:#25694B}
+.plate{display:flex;flex-direction:column;justify-content:space-between;gap:16px}
+.plate svg{width:min(240px,100%);margin:0 auto}
+.plate .label{text-align:center}
+.fact strong{display:block;font:600 clamp(1.8rem,4vw,2.4rem)/1.05 var(--sans);letter-spacing:-.03em;margin:10px 0 6px}
+.fact p{color:var(--muted);font-size:16px}
+.stack{display:flex;flex-direction:column;justify-content:space-between;gap:22px}
+.open-now{font:400 15px/1.4 var(--sans)}
+
+/* usluge */
+.svc h3{font-size:19px;margin-bottom:10px}
+.svc p{color:var(--muted);font-size:16px}
+.svc .meta{display:flex;justify-content:space-between;align-items:baseline;margin-top:22px;padding-top:14px;border-top:1px solid var(--line);font-family:var(--sans)}
+.svc .meta span{font-size:14px;color:var(--muted)}
+.svc .meta b{font-weight:600;font-size:18px}
+.photo{background:var(--soft);display:flex;align-items:flex-end;min-height:200px}
+.photo span{font:400 13px var(--sans);color:var(--muted)}
+.steps .n{font:600 15px/1 var(--sans);color:var(--ac);display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border:1px solid var(--ac);border-radius:50%;margin-bottom:18px}
+.steps h3{font-size:19px;margin-bottom:8px}
+.steps p{color:var(--muted);font-size:16px}
+
+/* zakazivanje */
+.book-note{font:400 14px/1.3 var(--sans);color:var(--muted);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.book-note b{font-weight:600;color:var(--ink)}
+.chips{display:grid;grid-template-columns:1fr;gap:8px;margin-top:16px}
+.chip{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:56px;padding:10px 16px;border:1px solid var(--line);border-radius:14px;background:var(--bg);color:var(--ink);font:400 15px/1.3 var(--sans);text-align:left;cursor:pointer}
+.chip small{color:var(--muted);font-size:13px;white-space:nowrap}
+.chip[aria-pressed="true"]{border-color:var(--ac);background:#EEF5F1}
+.chip:hover{border-color:var(--ac)}
+.step-h{font:600 16px/1.3 var(--sans);display:flex;justify-content:space-between;align-items:center;gap:12px}
+.step-h span{color:var(--muted);font-weight:400;font-size:14px}
+.cal-head{display:flex;justify-content:space-between;align-items:center;margin:14px 0 8px}
+.cal-head b{font:600 16px var(--sans);text-transform:none}
+.cal-nav{display:flex;gap:6px}
+.cal-nav button{width:44px;height:44px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:400 18px var(--sans);cursor:pointer}
+.cal-nav button:disabled{opacity:.35;cursor:default}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:2px;text-align:center;font-family:var(--sans)}
+.cal .wd{font-size:12px;color:var(--muted);padding:6px 0}
+.cal .d{height:46px;display:flex;align-items:center;justify-content:center;font-size:15px;border-radius:12px;color:#A3ADA8}
+.cal button.d{border:1px solid transparent;background:var(--bg);color:var(--ink);cursor:pointer;width:100%;font:400 15px var(--sans)}
+.cal button.d:not(:disabled){border-color:var(--line)}
+.cal button.d:not(:disabled):hover{border-color:var(--ac)}
+.cal button.d:disabled{color:#97A19C;text-decoration:line-through;cursor:not-allowed}
+.cal button.d[aria-pressed="true"]{background:var(--lemon);border-color:var(--ink);font-weight:600}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;font:400 13px var(--sans);color:var(--muted)}
+.slots-day{font:600 16px var(--sans);margin:14px 0 4px}
+.slots-sub{font:400 14px var(--sans);color:var(--muted);margin-bottom:12px}
+.slots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.slot{min-height:48px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:400 15px var(--sans);cursor:pointer}
+.slot:hover:not(:disabled){border-color:var(--ac)}
+.slot:disabled{color:#97A19C;text-decoration:line-through;background:var(--soft);border-color:var(--soft);cursor:not-allowed}
+.slot[aria-pressed="true"]{background:var(--ac);border-color:var(--ac);color:#fff;font-weight:600}
+.empty{color:var(--muted);font-size:16px;padding:18px 0}
+.form-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:16px}
+.field label{display:block;font:400 14px/1.3 var(--sans);color:var(--muted);margin-bottom:6px}
+.field input,.field textarea{width:100%;min-height:50px;border:1px solid #B9C4BE;border-radius:12px;padding:12px 14px;font:400 17px var(--serif);color:var(--ink);background:var(--bg)}
+.field textarea{min-height:96px;resize:vertical}
+.field input:focus-visible,.field textarea:focus-visible{outline:2px solid var(--ac);outline-offset:1px}
+.pick{font:400 15px/1.4 var(--sans);margin-top:18px;padding-top:14px;border-top:1px solid var(--line)}
+.err{color:#A3271F;font:400 14px var(--sans);min-height:20px;margin-top:10px}
+.done h3{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:8px}
+.sum{display:grid;grid-template-columns:auto 1fr;gap:10px 24px;margin:24px 0 0;font-family:var(--sans);font-size:15px}
+.sum dt{color:var(--muted)}
+.sum dd{margin:0;font-weight:600}
+
+/* radno vreme i kontakt */
+.hours{width:100%;border-collapse:collapse;font:400 15px var(--sans);margin-top:16px}
+.hours th,.hours td{padding:10px 0;border-top:1px solid var(--line);text-align:left;font-weight:400}
+.hours td{text-align:right}
+.hours tr.is-today th,.hours tr.is-today td{font-weight:600}
+.map iframe{width:100%;height:280px;border:0;border-radius:14px;margin-top:16px;display:block;background:var(--soft)}
+.addr{font:600 18px/1.4 var(--sans)}
+.ok{font:400 15px/1.4 var(--sans);color:var(--ac);margin-top:12px;min-height:21px}
+
+footer{padding:56px 0 40px}
+footer .card{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center;font:400 14px/1.5 var(--sans);color:var(--muted)}
+footer a{color:var(--ink);font-weight:600}
+
+@media (max-width:859px){
+  .menu-btn{display:inline-flex;align-items:center}
+  #meni{display:none;position:absolute;left:16px;right:16px;top:calc(100% + 4px);background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:8px;z-index:20}
+  #meni.open{display:block}
+  #meni ul{flex-direction:column}
+  #meni a{width:100%;font-size:17px}
+  header.top{position:relative}
+  .cal-card{padding:16px 14px}
+}
+@media (min-width:600px){
+  .chips{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .form-grid{grid-template-columns:1fr 1fr}
+  .form-grid .wide{grid-column:1 / -1}
+}
+@media (min-width:860px){
+  .bento{grid-template-columns:repeat(6,minmax(0,1fr))}
+  .s6{grid-column:span 6}.s4{grid-column:span 4}.s3{grid-column:span 3}.s2{grid-column:span 2}
+  .hero-title{padding:48px 40px 56px}
+  .card{padding:32px}
+  .slots{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .chips{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .chip{flex-direction:column;align-items:flex-start;justify-content:space-between;min-height:88px}
+  .sec{padding-top:88px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demo">
+  <div class="wrap">
+    <span>Primer sajta · izradio opsforma <span class="badge">Paket 2: zakazivanje</span></span>
+    <a href="../../">Svi primeri</a>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#pocetak" aria-label="Mera, na početak">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="11.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M13 1.5v23M1.5 13h23" stroke="currentColor" stroke-width="1.4"/></svg>
+      Mera
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meni">Meni</button>
+    <nav id="meni" aria-label="Glavni meni">
+      <ul>
+        <li><a href="#usluge">Usluge i cene</a></li>
+        <li><a href="#kako">Kako radimo</a></li>
+        <li><a href="#radno-vreme">Radno vreme</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a class="cta" href="#zakazivanje">Zakažite</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="pocetak">
+  <section class="hero wrap" aria-labelledby="h-hero">
+    <div class="bento">
+      <div class="card s6 hero-title">
+        <p class="label">Nutricionistkinja Jelena Marković, Novi Beograd</p>
+        <h1 id="h-hero">Jelovnik po meri Vašeg dana.</h1>
+      </div>
+      <div class="card s2 hero-intro stack">
+        <p>Plan ishrane koji možete da pratite i kad radite do kasno, putujete ili kuvate za celu kuću. Bez zabranjenih namirnica i bez dijeta na mesec dana.</p>
+        <div class="btns">
+          <a class="btn primary" href="#zakazivanje">Zakažite pregled</a>
+          <a class="btn" href="tel:+381600000614">Pozovite</a>
+          <a class="btn" href="viber://chat?number=%2B381600000614">Viber</a>
+        </div>
+      </div>
+      <div class="card s2 plate">
+        <!-- potpisni element: tanjir podeljen na četvrtine -->
+        <svg viewBox="0 0 220 220" role="img" aria-labelledby="plate-t">
+          <title id="plate-t">Tanjir podeljen na četvrtine: povrće, voće, proteini i žitarice</title>
+          <path d="M110 18 A92 92 0 0 0 110 202 Z" fill="#F2E394"/>
+          <circle cx="110" cy="110" r="92" fill="none" stroke="#1E2B25" stroke-width="1.5"/>
+          <path d="M110 18v184M18 110h184" stroke="#1E2B25" stroke-width="1.5"/>
+          <g font-family="Be Vietnam Pro, Arial, sans-serif" font-size="12" fill="#1E2B25" text-anchor="middle">
+            <text x="66" y="76">povrće</text>
+            <text x="66" y="152">voće</text>
+            <text x="154" y="72">proteini</text>
+            <text x="154" y="156">žitarice</text>
+          </g>
+        </svg>
+        <p class="label">Tako izgleda većina obroka u planu.</p>
+      </div>
+      <div class="card s2 fact stack">
+        <div>
+          <p class="label">Prvi pregled, 60 min</p>
+          <strong>4.800 RSD</strong>
+          <p>Razgovor, analiza sastava tela i plan za prve četiri nedelje.</p>
+        </div>
+        <p class="open-now" id="open-now">Radno vreme je ispod, uz mapu.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec wrap" id="usluge" aria-labelledby="h-usluge">
+    <div class="sec-head">
+      <h2 id="h-usluge">Usluge i cene</h2>
+      <p>Cene su za 2026. Plaća se u ordinaciji, gotovinom ili karticom.</p>
+    </div>
+    <div class="bento">
+      <article class="card s2 svc">
+        <h3>Prvi pregled</h3>
+        <p>Razgovor o navikama i ritmu dana, analiza sastava tela i plan ishrane za četiri nedelje, poslat mejlom.</p>
+        <div class="meta"><span>60 min</span><b>4.800 RSD</b></div>
+      </article>
+      <article class="card s2 svc">
+        <h3>Kontrolni pregled</h3>
+        <p>Šta je išlo lako, šta nije. Doradimo plan i recepte prema onome što zaista jedete.</p>
+        <div class="meta"><span>30 min</span><b>2.400 RSD</b></div>
+      </article>
+      <article class="card s2 svc">
+        <h3>Ishrana uz trening</h3>
+        <p>Za rekreativce i sportiste: obroci pre i posle treninga, trke ili utakmice.</p>
+        <div class="meta"><span>45 min</span><b>3.900 RSD</b></div>
+      </article>
+      <article class="card s2 svc">
+        <h3>Porodični jelovnik</h3>
+        <p>Jedan jelovnik za celu kuću, užina za školu i ideje za dete koje je izbirljivo.</p>
+        <div class="meta"><span>45 min</span><b>3.900 RSD</b></div>
+      </article>
+      <div class="card s2 svc">
+        <h3>Tri kontrole unapred</h3>
+        <p>Ako znate da Vam treba više od jednog susreta, tri kontrolna pregleda plaćate odjednom.</p>
+        <div class="meta"><span>3 × 30 min</span><b>6.300 RSD</b></div>
+      </div>
+      <div class="card s2 photo" role="img" aria-label="Mesto za fotografiju ordinacije"><span>Vaša fotografija</span></div>
+    </div>
+  </section>
+
+  <section class="sec wrap" id="kako" aria-labelledby="h-kako">
+    <div class="sec-head">
+      <h2 id="h-kako">Kako radimo</h2>
+      <p>Tri koraka, bez vaganja svakog zalogaja.</p>
+    </div>
+    <ol class="bento steps" style="list-style:none;margin:0;padding:0">
+      <li class="card s2"><span class="n">1</span><h3>Razgovor</h3><p>Pričamo o tome kako izgleda Vaš običan dan: posao, san, kuvanje, šta volite, a šta ne podnosite.</p></li>
+      <li class="card s2"><span class="n">2</span><h3>Plan</h3><p>Dobijate jelovnik i spisak za kupovinu za četiri nedelje, sa zamenama za dane kad nema vremena.</p></li>
+      <li class="card s2"><span class="n">3</span><h3>Kontrola</h3><p>Posle dve do četiri nedelje vidimo šta radi i menjamo ono što ne radi.</p></li>
+    </ol>
+  </section>
+
+  <!--
+    PRODUKCIJA
+    Ovaj modul u demou radi samo u pregledaču i termini su izmišljeni.
+    Na pravom sajtu postoje dve varijante:
+    a) Zahtev za termin: forma šalje izabranu uslugu, dan, vreme, ime i telefon
+       na mejl vlasnika preko Web3Forms (POST https://api.web3forms.com/submit,
+       skriveno polje access_key) ili otvara Viber poruku sa istim rezimeom
+       (viber://forward?text=...). Nutricionistkinja potvrđuje termin pozivom ili porukom.
+    b) Povezan kalendar: umesto ovog modula ugrađuje se Google Kalendar
+       "Appointment schedule", Cal.com ili Calendly (iframe/embed). Slobodni termini
+       se čitaju iz njenog kalendara, a zakazani termini se sami upisuju u Google
+       Kalendar na njenom telefonu.
+  -->
+  <section class="sec wrap" id="zakazivanje" aria-labelledby="h-zak">
+    <div class="sec-head">
+      <h2 id="h-zak">Zakažite pregled</h2>
+      <p class="book-note"><span class="badge">Paket 2: zakazivanje</span> <b>Primer: termini su izmišljeni</b></p>
+    </div>
+
+    <div class="bento" id="flow">
+      <div class="card s6">
+        <p class="step-h">1. Usluga <span id="svc-sum">Izaberite jednu</span></p>
+        <div class="chips" id="svc-list" role="group" aria-label="Usluga"></div>
+      </div>
+      <div class="card s3 cal-card">
+        <p class="step-h">2. Dan <span>narednih 14 dana</span></p>
+        <div class="cal-head">
+          <b id="cal-month" aria-live="polite"></b>
+          <div class="cal-nav">
+            <button type="button" id="cal-prev" aria-label="Prethodni mesec">‹</button>
+            <button type="button" id="cal-next" aria-label="Sledeći mesec">›</button>
+          </div>
+        </div>
+        <div class="cal" id="cal" role="group" aria-label="Kalendar"></div>
+        <div class="legend"><span>Precrtano: ne radimo</span><span>Bledo: van 14 dana</span></div>
+      </div>
+      <div class="card s3" id="slots-card">
+        <p class="step-h">3. Vreme <span id="slot-hint">korak 30 min</span></p>
+        <p class="slots-day" id="slots-day" aria-live="polite">Izaberite dan u kalendaru.</p>
+        <p class="slots-sub" id="slots-sub"></p>
+        <div class="slots" id="slots" role="group" aria-label="Slobodni termini"></div>
+      </div>
+      <form class="card s6" id="bform" novalidate>
+        <p class="step-h">4. Vaši podaci</p>
+        <div class="form-grid">
+          <div class="field"><label for="b-ime">Ime i prezime</label><input id="b-ime" name="ime" autocomplete="name"></div>
+          <div class="field"><label for="b-tel">Telefon</label><input id="b-tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel"></div>
+          <div class="field wide"><label for="b-nap">Napomena (nije obavezno)</label><textarea id="b-nap" name="napomena" placeholder="Npr. imam nalaze krvi od prošlog meseca"></textarea></div>
+        </div>
+        <p class="pick" id="pick">Još niste izabrali termin.</p>
+        <p class="err" id="b-err" role="alert"></p>
+        <button class="btn primary" type="submit">Zakažite pregled</button>
+      </form>
+    </div>
+
+    <div class="bento" id="done" hidden>
+      <div class="card s6 done" tabindex="-1" id="done-card">
+        <h3>Termin je rezervisan.</h3>
+        <p>Vidimo se u ordinaciji, Bulevar Zorana Đinđića 64. Na pravom sajtu potvrda stiže i mejlom.</p>
+        <dl class="sum" id="sum"></dl>
+        <div class="btns">
+          <button class="btn primary" type="button" id="ics-btn">Dodaj u kalendar</button>
+          <button class="btn" type="button" id="new-btn">Novi termin</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec wrap" aria-labelledby="h-gde">
+    <h2 id="h-gde" class="sr">Radno vreme i adresa</h2>
+    <div class="bento">
+      <div class="card s2" id="radno-vreme">
+        <h3 style="font-size:19px">Radno vreme</h3>
+        <table class="hours" id="hours">
+          <tr data-d="1"><th>Ponedeljak</th><td>12–20 h</td></tr>
+          <tr data-d="2"><th>Utorak</th><td>8–16 h</td></tr>
+          <tr data-d="3"><th>Sreda</th><td>12–20 h</td></tr>
+          <tr data-d="4"><th>Četvrtak</th><td>8–16 h</td></tr>
+          <tr data-d="5"><th>Petak</th><td>8–14 h</td></tr>
+          <tr data-d="6"><th>Subota</th><td>9–13 h</td></tr>
+          <tr data-d="0"><th>Nedelja</th><td>ne radimo</td></tr>
+        </table>
+      </div>
+      <div class="card s4 map">
+        <p class="label">Adresa</p>
+        <p class="addr">Bulevar Zorana Đinđića 64, Novi Beograd</p>
+        <p style="color:var(--muted);font-size:16px">Ulaz iz dvorišta, prizemlje. Parking ispred zgrade.</p>
+        <iframe title="Mapa: Bulevar Zorana Đinđića 64, Beograd" loading="lazy" src="https://maps.google.com/maps?q=Bulevar%20Zorana%20%C4%90in%C4%91i%C4%87a%2064%2C%20Beograd&z=15&output=embed"></iframe>
+      </div>
+      <div class="card s4" id="kontakt">
+        <h3 style="font-size:19px;margin-bottom:6px">Pitanje pre pregleda?</h3>
+        <p style="color:var(--muted);font-size:16px">Pišite, odgovaram istog dana.</p>
+        <!--
+          Na pravom sajtu: <form action="https://api.web3forms.com/submit" method="POST">
+          sa <input type="hidden" name="access_key" value="KLJUČ-IZ-WEB3FORMS">
+          i poruka stiže direktno na mejl vlasnika.
+        -->
+        <form data-form="kontakt" class="form-grid" novalidate>
+          <div class="field"><label for="k-ime">Ime</label><input id="k-ime" name="ime" autocomplete="name"></div>
+          <div class="field"><label for="k-mejl">Mejl ili telefon</label><input id="k-mejl" name="kontakt"></div>
+          <div class="field wide"><label for="k-por">Poruka</label><textarea id="k-por" name="poruka"></textarea></div>
+          <div class="wide"><button class="btn primary" type="submit">Pošaljite poruku</button><p class="ok" id="k-ok" aria-live="polite"></p></div>
+        </form>
+      </div>
+      <div class="card s2 stack">
+        <div>
+          <p class="label">Telefon</p>
+          <p class="addr">060 000 06 14</p>
+        </div>
+        <div class="btns" style="margin-top:0">
+          <a class="btn primary" href="tel:+381600000614">Pozovite</a>
+          <a class="btn" href="viber://chat?number=%2B381600000614">Viber</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="card">
+      <span>Nutricionista Mera, Bulevar Zorana Đinđića 64, Beograd</span>
+      <span>Primer sajta · izradio opsforma · <a href="../../">Svi primeri</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* meni */
+  var btn=document.querySelector('.menu-btn'), nav=document.getElementById('meni');
+  function setMenu(o){btn.setAttribute('aria-expanded',String(o));nav.classList.toggle('open',o)}
+  btn.addEventListener('click',function(){setMenu(btn.getAttribute('aria-expanded')!=='true')});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&btn.getAttribute('aria-expanded')==='true'){setMenu(false);btn.focus()}});
+
+  /* kontakt forma (primer) */
+  document.querySelector('[data-form="kontakt"]').addEventListener('submit',function(e){
+    e.preventDefault();
+    document.getElementById('k-ok').textContent='Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.';
+  });
+
+  /* podaci */
+  var FIRM='Nutricionista Mera', ADDR='Bulevar Zorana Đinđića 64, Beograd', SLUG='nutricionista-mera';
+  var HOURS={0:null,1:[720,1200],2:[480,960],3:[720,1200],4:[480,960],5:[480,840],6:[540,780]};
+  var SVC=[
+    {id:'prvi',name:'Prvi pregled',min:60,price:4800},
+    {id:'kontrola',name:'Kontrolni pregled',min:30,price:2400},
+    {id:'trening',name:'Ishrana uz trening',min:45,price:3900},
+    {id:'porodica',name:'Porodični jelovnik',min:45,price:3900}
+  ];
+  var DAYS=['nedelja','ponedeljak','utorak','sreda','četvrtak','petak','subota'];
+  var MONTHS=['januar','februar','mart','april','maj','jun','jul','avgust','septembar','oktobar','novembar','decembar'];
+  var pad=function(n){return String(n).padStart(2,'0')};
+  var key=function(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())};
+  var hm=function(m){return pad(Math.floor(m/60))+':'+pad(m%60)};
+  function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+' RSD'}
+  function hash(s){var h=2166136261;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
+  function taken(dk,m){return hash(dk+'|'+m+'|mera')%100<38}
+
+  var today=new Date(); today.setHours(0,0,0,0);
+  var win=[]; for(var i=0;i<14;i++){var d=new Date(today);d.setDate(today.getDate()+i);win.push(d)}
+  var winKeys={}; win.forEach(function(d){winKeys[key(d)]=d});
+  var months=[]; win.forEach(function(d){var k=d.getFullYear()*12+d.getMonth(); if(months.indexOf(k)<0) months.push(k)});
+
+  /* sadašnji dan u tabeli radnog vremena */
+  var tr=document.querySelector('#hours tr[data-d="'+new Date().getDay()+'"]'); if(tr) tr.classList.add('is-today');
+  (function(){var n=new Date(),h=HOURS[n.getDay()],m=n.getHours()*60+n.getMinutes(),t;
+    if(h&&m>=h[0]&&m<h[1]) t='Danas radimo do '+Math.floor(h[1]/60)+' h.';
+    else if(h&&m<h[0]) t='Danas radimo od '+Math.floor(h[0]/60)+' h.';
+    else {for(var i=1;i<8;i++){var x=HOURS[(n.getDay()+i)%7];if(x){t=(i===1?'Sutra':'U '+DAYS[(n.getDay()+i)%7].replace('sreda','sredu').replace('subota','subotu').replace('nedelja','nedelju'))+' radimo od '+Math.floor(x[0]/60)+' h.';break}}}
+    document.getElementById('open-now').textContent=t;})();
+
+  var st={svc:null,day:null,slot:null,view:0};
+  var $=function(id){return document.getElementById(id)};
+
+  /* usluge */
+  SVC.forEach(function(s){
+    var b=document.createElement('button');b.type='button';b.className='chip';b.dataset.id=s.id;b.setAttribute('aria-pressed','false');
+    b.innerHTML='<span>'+s.name+'</span><small>'+s.min+' min · '+fmt(s.price)+'</small>';
+    b.addEventListener('click',function(){st.svc=s;st.slot=null;
+      $('svc-list').querySelectorAll('.chip').forEach(function(c){c.setAttribute('aria-pressed',String(c===b))});
+      $('svc-sum').textContent=s.min+' min, '+fmt(s.price);renderSlots();updatePick()});
+    $('svc-list').appendChild(b);
+  });
+
+  function slotsFor(d,s){
+    var h=HOURS[d.getDay()]; if(!h||!s) return [];
+    var out=[], dk=key(d), now=new Date(), isToday=key(now)===dk, nowM=now.getHours()*60+now.getMinutes();
+    for(var m=h[0]; m+s.min<=h[1]; m+=30){
+      if(isToday && m<=nowM+30) continue;
+      out.push({m:m,busy:taken(dk,m)});
+    }
+    return out;
+  }
+
+  function renderCal(){
+    var mk=months[st.view], y=Math.floor(mk/12), mo=mk%12;
+    $('cal-month').textContent=MONTHS[mo].charAt(0).toUpperCase()+MONTHS[mo].slice(1)+' '+y;
+    $('cal-prev').disabled=st.view===0; $('cal-next').disabled=st.view===months.length-1;
+    var c=$('cal'); c.innerHTML='';
+    ['pon','uto','sre','čet','pet','sub','ned'].forEach(function(w){var e=document.createElement('span');e.className='wd';e.textContent=w;e.setAttribute('aria-hidden','true');c.appendChild(e)});
+    var first=new Date(y,mo,1), lead=(first.getDay()+6)%7, dim=new Date(y,mo+1,0).getDate();
+    for(var i=0;i<lead;i++){var e=document.createElement('span');c.appendChild(e)}
+    for(var n=1;n<=dim;n++){
+      var d=new Date(y,mo,n), k=key(d);
+      if(winKeys[k]){
+        var b=document.createElement('button');b.type='button';b.className='d';b.textContent=n;b.dataset.date=k;
+        var closed=!HOURS[d.getDay()];
+        b.disabled=closed;
+        b.setAttribute('aria-label',DAYS[d.getDay()]+' '+n+'. '+MONTHS[mo]+(closed?', ne radimo':''));
+        b.setAttribute('aria-pressed',String(!!(st.day&&key(st.day)===k)));
+        (function(d){b.addEventListener('click',function(){pickDay(d)})})(d);
+        c.appendChild(b);
+      } else {
+        var e=document.createElement('span');e.className='d';e.textContent=n;e.setAttribute('aria-hidden','true');c.appendChild(e);
+      }
+    }
+  }
+  $('cal-prev').addEventListener('click',function(){if(st.view>0){st.view--;renderCal()}});
+  $('cal-next').addEventListener('click',function(){if(st.view<months.length-1){st.view++;renderCal()}});
+
+  function pickDay(d){
+    st.day=d;st.slot=null;renderCal();renderSlots();updatePick();
+    if(window.matchMedia('(max-width:859px)').matches){
+      var r=$('slots-card').getBoundingClientRect(); if(r.top>window.innerHeight-120) $('slots-card').scrollIntoView({block:'start'});
+    }
+  }
+
+  function renderSlots(){
+    var box=$('slots'); box.innerHTML='';
+    if(!st.day){$('slots-day').textContent='Izaberite dan u kalendaru.';$('slots-sub').textContent='';return}
+    var d=st.day;
+    $('slots-day').textContent=DAYS[d.getDay()].charAt(0).toUpperCase()+DAYS[d.getDay()].slice(1)+', '+d.getDate()+'. '+MONTHS[d.getMonth()];
+    if(!st.svc){$('slots-sub').textContent='Prvo izaberite uslugu, pa vidite slobodna vremena.';return}
+    var list=slotsFor(d,st.svc), free=list.filter(function(x){return !x.busy}).length;
+    $('slots-sub').textContent=st.svc.name+', '+st.svc.min+' min. Slobodno: '+free+' od '+list.length+'.';
+    if(!list.length){var p=document.createElement('p');p.className='empty';p.textContent='Za ovaj dan više nema termina. Izaberite drugi dan.';box.appendChild(p);return}
+    list.forEach(function(x){
+      var b=document.createElement('button');b.type='button';b.className='slot';b.dataset.m=x.m;b.textContent=hm(x.m);
+      b.disabled=x.busy;b.setAttribute('aria-pressed',String(st.slot===x.m));
+      b.setAttribute('aria-label',hm(x.m)+(x.busy?', zauzeto':', slobodno'));
+      b.addEventListener('click',function(){if(x.busy)return;st.slot=x.m;
+        box.querySelectorAll('.slot').forEach(function(s){s.setAttribute('aria-pressed',String(s===b))});updatePick()});
+      box.appendChild(b);
+    });
+  }
+
+  function dayLabel(d){return DAYS[d.getDay()]+', '+d.getDate()+'. '+MONTHS[d.getMonth()]}
+  function updatePick(){
+    $('pick').textContent=(st.svc&&st.day&&st.slot!=null)
+      ? 'Izabrali ste: '+st.svc.name+', '+dayLabel(st.day)+' u '+hm(st.slot)+' h.'
+      : 'Još niste izabrali termin.';
+  }
+
+  $('bform').addEventListener('submit',function(e){
+    e.preventDefault();
+    var err=$('b-err'), ime=$('b-ime').value.trim(), tel=$('b-tel').value.replace(/[^\d+]/g,'');
+    if(!st.svc){err.textContent='Izaberite uslugu.';return}
+    if(!st.day||st.slot==null){err.textContent='Izaberite dan i slobodno vreme.';return}
+    if(ime.length<2){err.textContent='Upišite ime i prezime.';$('b-ime').focus();return}
+    if(tel.length<6){err.textContent='Upišite broj telefona da bismo mogli da Vas pozovemo.';$('b-tel').focus();return}
+    err.textContent='';
+    var rows=[['Usluga',st.svc.name],['Nutricionistkinja','Jelena Marković'],['Dan',dayLabel(st.day)],['Vreme',hm(st.slot)+' h'],['Trajanje',st.svc.min+' min'],['Cena',fmt(st.svc.price)],['Ime',ime],['Telefon',$('b-tel').value.trim()]];
+    $('sum').innerHTML='';
+    rows.forEach(function(r){var dt=document.createElement('dt');dt.textContent=r[0];var dd=document.createElement('dd');dd.textContent=r[1];$('sum').appendChild(dt);$('sum').appendChild(dd)});
+    st.booked={svc:st.svc,day:st.day,slot:st.slot,ime:ime};
+    $('flow').hidden=true;$('done').hidden=false;$('done-card').focus();
+    $('zakazivanje').scrollIntoView({block:'start'});
+  });
+
+  function ics(){
+    var b=st.booked, s=new Date(b.day); s.setHours(0,b.slot,0,0);
+    var e=new Date(s.getTime()+b.svc.min*60000);
+    var z=function(d){return d.toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'')};
+    var esc=function(t){return String(t).replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/\n/g,'\\n')};
+    var L=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//opsforma//Nutricionista Mera//SR','CALSCALE:GREGORIAN','METHOD:PUBLISH','BEGIN:VEVENT',
+      'UID:'+Date.now()+'-'+Math.random().toString(36).slice(2,9)+'@'+SLUG+'.primer',
+      'DTSTAMP:'+z(new Date()),'DTSTART:'+z(s),'DTEND:'+z(e),
+      'SUMMARY:'+esc(FIRM+': '+b.svc.name),'LOCATION:'+esc(ADDR),
+      'DESCRIPTION:'+esc(b.svc.name+', '+b.svc.min+' min, '+fmt(b.svc.price)+'. Telefon 060 000 06 14.'),
+      'END:VEVENT','END:VCALENDAR'];
+    var blob=new Blob([L.join('\r\n')+'\r\n'],{type:'text/calendar;charset=utf-8'});
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='termin-'+SLUG+'.ics';
+    document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},1000);
+  }
+  $('ics-btn').addEventListener('click',ics);
+  $('new-btn').addEventListener('click',function(){
+    st={svc:null,day:null,slot:null,view:0};
+    $('svc-list').querySelectorAll('.chip').forEach(function(c){c.setAttribute('aria-pressed','false')});
+    $('svc-sum').textContent='Izaberite jednu';$('bform').reset();
+    renderCal();renderSlots();updatePick();
+    $('done').hidden=true;$('flow').hidden=false;$('svc-list').querySelector('.chip').focus();
+  });
+
+  renderCal();renderSlots();
+})();
+</script>
+</body>
+</html>

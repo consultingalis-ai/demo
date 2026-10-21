@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ketering Trpeza, Omladinskih brigada 90, Novi Beograd</title>
+<meta name="description" content="Ketering Trpeza iz Novog Beograda. Tri menija za slave, rođendane i firme, od 15 do 150 gostiju. Sastavite porudžbinu i pošaljite je online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manuale:wght@400;600&family=Anuphan:wght@400;500&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF; --perg:#F1ECE2; --ink:#1E1E1E; --mut:#5C5850; --line:#D8D1C3;
+  --ac:#5A6B3B; --ac-d:#4A5930;
+  --serif:"Manuale","Georgia","Times New Roman",serif;
+  --sans:"Anuphan","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--sans);overflow-wrap:break-word}
+a{color:var(--ink);text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
+h1{font-size:clamp(34px,7.6vw,60px);line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(28px,5vw,40px);line-height:1.15;margin-bottom:10px}
+h3{font-size:20px;font-weight:600}
+p{margin:0 0 1em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+.mut{color:var(--mut)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* potpis: tanak dvostruki okvir kao na jelovniku */
+.frame{border:4px double var(--ac);padding:4px}
+.frame > .in{border:1px solid var(--line);padding:28px 18px}
+
+.demobar{font-size:13.5px;color:var(--mut);border-bottom:1px solid var(--line)}
+.demobar .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px;min-height:42px;padding-top:6px;padding-bottom:6px}
+.badge{font-size:12.5px;font-weight:500;color:#fff;background:var(--ac);padding:1px 9px}
+.demobar a{margin-left:auto;padding:8px 0}
+
+.hdr .wrap{display:flex;align-items:center;gap:16px;min-height:76px;position:relative}
+.logo{text-decoration:none;font-family:var(--serif);font-size:27px;font-weight:600;letter-spacing:.02em;padding:6px 0}
+.logo span{font:400 14px var(--sans);color:var(--mut);margin-left:8px;letter-spacing:0}
+.nav{margin-left:auto}
+.nav ul{list-style:none;margin:0;padding:0;display:flex}
+.nav a{display:block;padding:12px 12px;text-decoration:none;font-size:15px}
+.nav a:hover{text-decoration:underline}
+.menubtn{display:none;margin-left:auto;min-height:46px;padding:0 16px;border:1px solid var(--ink);background:none;font:500 15px var(--sans);color:var(--ink);cursor:pointer}
+@media (max-width:900px){
+  .menubtn{display:block}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);z-index:5;margin:0}
+  .nav.open{display:block}
+  .nav ul{flex-direction:column;padding:8px 16px 14px}
+  .nav a{font-size:17px;padding:12px 0}
+}
+
+/* hero + jelovnik */
+.hero{padding:12px 0 56px}
+.hero .top{padding-bottom:28px;border-bottom:1px solid var(--line);margin-bottom:24px}
+.kicker{font-size:15px;color:var(--mut);margin-bottom:12px}
+.hero h1{max-width:16ch}
+.hero .lead{max-width:52ch;color:var(--mut);margin:18px 0 22px;font-size:17px}
+.ctas{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;font:500 16px var(--sans);text-decoration:none;border:1px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer}
+.btn:hover{background:var(--perg)}
+.btn.pri{background:var(--ac);border-color:var(--ac);color:#fff}
+.btn.pri:hover{background:var(--ac-d)}
+
+.menu{width:100%;border-collapse:collapse;font-size:15px}
+.menu caption{text-align:left;font-family:var(--serif);font-size:22px;padding-bottom:12px}
+.menu th,.menu td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.menu thead th{font-family:var(--serif);font-size:20px;font-weight:600;border-bottom:1px solid var(--ink)}
+.menu thead th small{display:block;font:400 13px var(--sans);color:var(--mut)}
+.menu tbody th{font-weight:500;color:var(--mut);font-size:14px}
+.menu td.no{color:#A39C8F}
+.menu tr.cena td{font-family:var(--serif);font-size:21px;border-bottom:0;padding-top:14px}
+.menu tr.cena td small{display:block;font:400 13px var(--sans);color:var(--mut)}
+.src{font-size:13.5px;color:var(--mut);margin:16px 0 0}
+@media (max-width:719px){
+  .menu thead tr,.menu tbody tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:10px}
+  .menu thead td{display:none}
+  .menu th,.menu td{padding:6px 0;border:0}
+  .menu tbody tr{border-bottom:1px solid var(--line);padding:6px 0 8px}
+  .menu tbody th{grid-column:1/-1;padding:4px 0 0;font-size:13.5px}
+  .menu thead tr{border-bottom:1px solid var(--ink);padding-bottom:6px}
+  .menu thead th{font-size:18px;border:0}
+  .menu td{font-size:14px;line-height:1.45}
+  .menu tr.cena{border-bottom:0}
+  .menu tr.cena td{font-size:19px}
+}
+
+section{padding:72px 0}
+.band{background:var(--perg)}
+.intro{max-width:58ch;color:var(--mut)}
+
+/* konfigurator */
+.cfg-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.cfg-head h2{margin:0}
+.fake{display:inline-block;font-size:14px;border:1px solid var(--ac);color:var(--ac-d);padding:2px 10px;margin:8px 0 0;background:#fff}
+.cfg{background:#fff;margin-top:28px}
+.cfg .in{padding:8px 18px 0}
+.q{padding:26px 0;border-bottom:1px solid var(--line)}
+.q > h3{display:flex;gap:12px;align-items:baseline;margin-bottom:14px}
+.q > h3 span{font:500 13px var(--sans);color:var(--ac-d)}
+.guests{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.gnum{font-family:var(--serif);font-size:44px;line-height:1;min-width:3ch}
+.gnum small{font:400 15px var(--sans);color:var(--mut);margin-left:6px}
+.pm{width:48px;height:48px;border:1px solid var(--ink);background:#fff;font:400 22px var(--sans);cursor:pointer;color:var(--ink)}
+input[type=range]{width:100%;margin:16px 0 4px;accent-color:var(--ac);height:32px}
+.rng{display:flex;justify-content:space-between;font-size:13px;color:var(--mut)}
+.opts{display:grid;gap:8px}
+.opt{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;min-height:56px;padding:12px 14px;border:1px solid var(--line);background:#fff;text-align:left;font:400 15px/1.4 var(--sans);color:var(--ink);cursor:pointer}
+.opt b{font-family:var(--serif);font-size:19px;font-weight:600;display:block}
+.opt small{color:var(--mut);font-size:13.5px}
+.opt .pr{white-space:nowrap;font-family:var(--serif);font-size:17px}
+.opt[aria-pressed="true"]{border-color:var(--ac);box-shadow:inset 0 0 0 1px var(--ac);background:#FAF8F3}
+.opt .tick{width:20px;height:20px;border:1px solid var(--ink);flex:none;display:grid;place-items:center}
+.opt[aria-pressed="true"] .tick{background:var(--ac);border-color:var(--ac)}
+.opt[aria-pressed="true"] .tick::after{content:"";width:6px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:translateY(-1px) rotate(45deg)}
+.opt .grow{flex:1}
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}
+.day{min-height:58px;border:1px solid var(--line);background:#fff;font:400 12.5px/1.25 var(--sans);color:var(--mut);cursor:pointer;padding:4px 0}
+.day b{display:block;font:600 19px var(--serif);color:var(--ink)}
+.day[aria-pressed="true"]{border-color:var(--ac);background:var(--ac);color:#E9EEDF}
+.day[aria-pressed="true"] b{color:#fff}
+.day:disabled{background:var(--perg);border-color:transparent;color:#8F887B;cursor:not-allowed}
+.day:disabled b{color:#9C9588;font-weight:400}
+.hint{font-size:13.5px;color:var(--mut);margin:10px 0 0}
+.times{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin-top:16px}
+.slot{min-height:46px;border:1px solid var(--line);background:#fff;font:500 15px var(--sans);color:var(--ink);cursor:pointer}
+.slot[aria-pressed="true"]{background:var(--ac);border-color:var(--ac);color:#fff}
+.slot:disabled{color:#A39C8F;text-decoration:line-through;cursor:not-allowed;background:#FAF8F3}
+.empty{grid-column:1/-1;color:var(--mut);font-size:14.5px;margin:0}
+.fields{display:grid;gap:14px}
+.fld label{display:block;font-size:14.5px;color:var(--mut);margin-bottom:5px}
+.fld input,.fld textarea{width:100%;min-height:50px;border:1px solid #BDB5A5;padding:12px;font:400 16px var(--sans);color:var(--ink);background:#fff;border-radius:0}
+.fld textarea{min-height:90px;resize:vertical}
+.bill{width:100%;border-collapse:collapse;font-size:15px;margin-top:22px}
+.bill td{padding:7px 0;border-bottom:1px solid var(--line)}
+.bill td:last-child{text-align:right;white-space:nowrap;padding-left:12px}
+.bill tr.tot td{border-bottom:0;border-top:1px solid var(--ink);font-family:var(--serif);font-size:22px;padding-top:12px}
+.err{color:#9B2C1C;min-height:1.5em;margin:12px 0}
+.submit{padding:20px 0 26px}
+.totbar{position:sticky;bottom:0;background:#fff;border-top:1px solid var(--ink);display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 18px;margin:0 -18px;z-index:2}
+.totbar span{font-size:14px;color:var(--mut)}
+.totbar b{font-family:var(--serif);font-size:22px;font-weight:600}
+.totbar a{font-size:14.5px;padding:10px 0}
+.confirm{display:none;padding:26px 0}
+.confirm.show{display:block}
+.confirm h3{font:400 30px/1.2 var(--serif);margin-bottom:8px}
+.confirm dl{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;margin:22px 0;font-size:15.5px}
+.confirm dt{color:var(--mut)}
+.confirm dd{margin:0}
+
+/* galerija */
+.gal{display:grid;gap:16px;margin-top:28px}
+.gal figure{margin:0}
+.ph{aspect-ratio:4/3;background:#E6E0D3;display:flex;align-items:flex-end;padding:10px 12px;font-size:13px;color:#5C5850}
+.gal figcaption{font-size:15px;padding-top:10px}
+.gal figcaption small{display:block;color:var(--mut);font-size:13.5px}
+.gal-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.gal-list li{padding:12px 0;border-bottom:1px solid var(--line);font-size:15px;display:flex;justify-content:space-between;gap:14px}
+.gal-list li small{color:var(--mut);font-size:13.5px;white-space:nowrap}
+
+.how{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:22px;counter-reset:k}
+.how li{counter-increment:k;border-top:1px solid var(--ink);padding-top:14px}
+.how li::before{content:counter(k) ".";font-family:var(--serif);font-size:20px;display:block;margin-bottom:4px}
+.how p{margin:6px 0 0;color:var(--mut)}
+
+.hours{width:100%;border-collapse:collapse}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right}
+.hours tr.today td{font-weight:500;color:var(--ac-d)}
+.zones{width:100%;border-collapse:collapse;margin-top:26px;font-size:15px}
+.zones caption{text-align:left;font-family:var(--serif);font-size:20px;font-weight:600;padding-bottom:6px}
+.zones td{padding:9px 0;border-bottom:1px solid var(--line)}
+.zones td:last-child{text-align:right;white-space:nowrap;padding-left:12px}
+.map{display:block;width:100%;height:300px;border:1px solid var(--line);margin-top:24px}
+.kform{display:grid;gap:14px;max-width:560px;margin-top:20px}
+.kform .btn{justify-self:start}
+.kmsg{color:var(--ac-d);min-height:1.5em;margin:0}
+footer{border-top:1px solid var(--line);padding:30px 0 52px;font-size:14px;color:var(--mut)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px}
+footer a{padding:8px 0}
+
+@media (min-width:720px){
+  .wrap{padding:0 32px}
+  .frame > .in{padding:48px 44px}
+  .hero h1{max-width:21ch}
+  .menu tbody th{width:18%}
+  .cfg .in{padding:8px 44px 0}
+  .totbar{margin:0 -44px;padding:12px 44px}
+  .opts.three{grid-template-columns:repeat(3,1fr)}
+  .opts.three .opt{flex-direction:column;align-items:flex-start}
+  .opts.two{grid-template-columns:1fr 1fr}
+  .gal{grid-template-columns:1fr 1fr 1fr}
+  .how{grid-template-columns:repeat(3,1fr);gap:32px}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .two-col .map{height:100%;min-height:360px;margin-top:0}
+  section{padding:96px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demobar">
+  <div class="wrap">
+    <span>Primer sajta · izradio opsforma</span>
+    <span class="badge">Paket 3: Plus</span>
+    <a href="../../">Svi primeri</a>
+  </div>
+</div>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="logo" href="#pocetak">Trpeza<span>ketering</span></a>
+    <nav class="nav" id="meni" aria-label="Glavni meni">
+      <ul>
+        <li><a href="#meniji">Meniji</a></li>
+        <li><a href="#porudzbina">Porudžbina</a></li>
+        <li><a href="#galerija">Sa proslava</a></li>
+        <li><a href="#dostava">Dostava i radno vreme</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <button class="menubtn" type="button" aria-expanded="false" aria-controls="meni">Meni</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="pocetak">
+    <div class="wrap">
+      <div class="frame"><div class="in">
+        <div class="top">
+          <div>
+            <p class="kicker">Ketering iz Novog Beograda, za slave, rođendane i firme</p>
+            <h1>Hrana za 15 do 150 gostiju, dovezena i postavljena.</h1>
+            <p class="lead">Kuvamo u svojoj kuhinji u Omladinskih brigada 90. Izaberete meni i broj gostiju, mi dovezemo, postavimo i posle odnesemo posuđe.</p>
+          </div>
+          <div class="ctas">
+            <a class="btn pri" href="#porudzbina">Sastavite porudžbinu</a>
+            <a class="btn" href="tel:+381600000628">Pozovite 060 000 06 28</a>
+            <a class="btn" href="viber://chat?number=%2B381600000628">Viber</a>
+          </div>
+        </div>
+        <table class="menu" id="meniji">
+          <caption>Tri menija, cena po osobi</caption>
+          <thead id="menuHead"></thead>
+          <tbody id="menuBody"></tbody>
+        </table>
+        <p class="src">Cene važe za najmanje 15 osoba. Posni meni pravimo po istoj ceni. U primeru su cene upisane u kod; na pravom sajtu stižu iz Google Sheets tabele koju vlasnik sam menja.</p>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="band" id="porudzbina">
+    <div class="wrap">
+<!--
+  PRODUKCIJA
+  U demou konfigurator radi samo u pregledaču: zauzeta vremena isporuke su izmišljena
+  (determinističan pseudo-slučaj iz datuma), ništa se ne šalje i ne plaća.
+  Varijanta a, zahtev za porudžbinu: forma šalje ceo rezime (broj osoba, meni, dodaci,
+    datum i vreme, zona i adresa, ukupno, ime, telefon) na mejl keteringa preko Web3Forms
+    (POST https://api.web3forms.com/submit, skriveno polje access_key) ili otvara Viber
+    poruku sa istim rezimeom; vlasnik potvrđuje porudžbinu pozivom.
+  Varijanta b, povezan kalendar: vreme isporuke se bira u Google Kalendar
+    „Appointment schedule“, Cal.com ili Calendly embedu, pa svaka isporuka sama
+    upadne u vlasnikov Google Kalendar na telefonu; ostatak porudžbine ide kao gore.
+  Plaćanje je pri isporuci ili preuzimanju, bez online plaćanja.
+-->
+      <div class="cfg-head">
+        <h2>Sastavite porudžbinu</h2>
+        <span class="badge">Paket 3: Plus</span>
+      </div>
+      <p class="intro">Šest koraka. Cena se računa dok birate, a plaća se pri isporuci.</p>
+      <p class="fake">Primer: termini su izmišljeni</p>
+
+      <div class="cfg frame"><div class="in">
+        <div id="flow">
+          <div class="q">
+            <h3><span>1</span>Broj osoba</h3>
+            <div class="guests">
+              <button class="pm" type="button" id="gMinus" aria-label="Manje osoba">−</button>
+              <output class="gnum" id="gOut" for="gRange" aria-live="polite">30</output>
+              <button class="pm" type="button" id="gPlus" aria-label="Više osoba">+</button>
+            </div>
+            <label class="sr-only" for="gRange">Broj osoba</label>
+            <input type="range" id="gRange" min="15" max="150" step="5" value="30">
+            <div class="rng"><span>15</span><span>150</span></div>
+          </div>
+          <div class="q">
+            <h3><span>2</span>Meni</h3>
+            <div class="opts three" id="pkOpts"></div>
+          </div>
+          <div class="q">
+            <h3><span>3</span>Dodaci</h3>
+            <div class="opts two" id="adOpts"></div>
+          </div>
+          <div class="q">
+            <h3><span>4</span>Datum i vreme isporuke</h3>
+            <div class="days" id="dayOpts"></div>
+            <p class="hint">Porudžbinu primamo najmanje 5 dana unapred. Nedeljom ne radimo.</p>
+            <div class="times" id="timeOpts" aria-live="polite"></div>
+          </div>
+          <div class="q">
+            <h3><span>5</span>Dostava</h3>
+            <div class="opts two" id="znOpts"></div>
+          </div>
+          <form class="q" id="orderForm" novalidate>
+            <h3><span>6</span>Vaši podaci</h3>
+            <div class="fields">
+              <div class="fld"><label for="oIme">Ime i prezime</label><input id="oIme" name="ime" autocomplete="name"></div>
+              <div class="fld"><label for="oTel">Telefon</label><input id="oTel" name="telefon" type="tel" inputmode="tel" autocomplete="tel"></div>
+              <div class="fld" id="adrFld"><label for="oAdr">Adresa isporuke (ulica, broj, sprat)</label><input id="oAdr" name="adresa" autocomplete="street-address"></div>
+              <div class="fld"><label for="oNap">Napomena (posno, alergije, prilaz, nije obavezno)</label><textarea id="oNap" name="napomena"></textarea></div>
+            </div>
+            <table class="bill" id="bill" aria-live="polite"></table>
+            <p class="err" id="oErr" role="alert"></p>
+            <button class="btn pri" type="submit">Pošaljite porudžbinu</button>
+          </form>
+          <div class="totbar"><span>Ukupno</span><b id="totNow">0 RSD</b></div>
+        </div>
+
+        <div class="confirm" id="confirm" tabindex="-1">
+          <h3>Porudžbina je primljena.</h3>
+          <p class="mut">Pozvaćemo Vas u toku dana da potvrdimo meni i vreme. Na pravom sajtu potvrda stiže i mejlom. Plaća se pri isporuci.</p>
+          <dl id="confirmList"></dl>
+          <div class="ctas">
+            <button class="btn pri" type="button" id="icsBtn">Dodaj u kalendar</button>
+            <button class="btn" type="button" id="newBtn">Nova porudžbina</button>
+          </div>
+        </div>
+      </div></div>
+    </div>
+  </section>
+
+  <section id="galerija">
+    <div class="wrap">
+      <h2>Sa naših proslava</h2>
+      <p class="intro">Posle svake veće proslave dodamo fotografiju ili bar kratak zapis.</p>
+      <!--
+        PRODUKCIJA: galeriju vlasnik dopunjava sam. Fotografije ubaci u deljeni Google Drive
+        folder (ili red u istoj Google Sheets tabeli: datum, opis, link slike), a sajt ih
+        učitava na isti način kao cenovnik. U demou su stavke u nizu GALERIJA ispod.
+      -->
+      <div class="gal" id="galGrid"></div>
+      <ul class="gal-list" id="galList" style="margin-top:28px"></ul>
+    </div>
+  </section>
+
+  <section class="band" id="kako">
+    <div class="wrap">
+      <h2>Kako radimo</h2>
+      <ol class="how">
+        <li><h3>Pošaljete porudžbinu</h3><p>Preko sajta, telefonom ili Viberom, najmanje 5 dana pre proslave.</p></li>
+        <li><h3>Potvrdimo pozivom</h3><p>Prođemo meni, broj gostiju i prilaz. Tada možete još da menjate.</p></li>
+        <li><h3>Dovezemo i postavimo</h3><p>Stižemo sat pre gostiju. Posuđe odnosimo sutradan, ako ga uzimate od nas.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="dostava">
+    <div class="wrap two-col">
+      <div>
+        <h2>Radno vreme i dostava</h2>
+        <table class="hours" id="hoursTable"><tbody></tbody></table>
+        <table class="zones" id="zoneTable"><caption>Zone dostave</caption><tbody></tbody></table>
+        <p class="src">Kuhinja: Omladinskih brigada 90, Novi Beograd. Preuzimanje lično je bez troška.</p>
+      </div>
+      <iframe class="map" title="Mapa: Omladinskih brigada 90, Beograd" loading="lazy" src="https://maps.google.com/maps?q=Omladinskih%20brigada%2090%2C%20Beograd&amp;z=15&amp;output=embed"></iframe>
+    </div>
+  </section>
+
+  <section class="band" id="kontakt">
+    <div class="wrap">
+      <h2>Pitanje pre porudžbine</h2>
+      <p class="intro">Za venčanja, više od 150 gostiju ili poseban meni, pišite nam. Odgovaramo istog dana.</p>
+      <!--
+        PRODUKCIJA: forma ide preko Web3Forms na vlasnikov mejl:
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="VLASNIKOV-KLJUČ">
+          ... ista polja ...
+        </form>
+      -->
+      <form class="kform" data-form="kontakt" novalidate>
+        <div class="fld"><label for="kIme">Ime</label><input id="kIme" name="ime" autocomplete="name"></div>
+        <div class="fld"><label for="kTel">Telefon ili mejl</label><input id="kTel" name="kontakt"></div>
+        <div class="fld"><label for="kPor">Poruka</label><textarea id="kPor" name="poruka"></textarea></div>
+        <button class="btn pri" type="submit">Pošaljite pitanje</button>
+        <p class="kmsg" id="kMsg" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Primer sajta · izradio opsforma. Firma, cene, termini i broj telefona su izmišljeni.</span>
+    <a href="../../">Svi primeri</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+const SLUG = "ketering-trpeza", FIRMA = "Ketering Trpeza", KUHINJA = "Omladinskih brigada 90, Beograd";
+
+/*
+  CENOVNIK IZ GOOGLE SHEETS
+  U demou su cene u JSON-u ispod. U produkciji vlasnik vodi tabelu u Google Sheets
+  (listovi: paketi, dodaci, zone), objavi je (Datoteka → Deli → Objavi na vebu → CSV),
+  a sajt je čita pri učitavanju:
+
+    const CSV = "https://docs.google.com/spreadsheets/d/e/<ID-TABELE>/pub?gid=0&single=true&output=csv";
+    fetch(CSV)
+      .then(r => r.text())
+      .then(txt => {
+        const [head, ...rows] = txt.trim().split("\n").map(l => l.split(","));
+        // npr. kolone: id, naziv, opis, cena, hladno, toplo, glavno, prilog, dezert
+        CENOVNIK.paketi = rows.map(r => Object.fromEntries(head.map((h, i) => [h, r[i]])));
+        renderAll();
+      })
+      .catch(() => renderAll());   // ako tabela nije dostupna, ostaju cene iz koda
+
+  Kada vlasnik promeni cenu u tabeli, sajt je prikaže pri sledećem otvaranju.
+*/
+const CENOVNIK = {
+  redovi: [
+    {k:"hladno", naziv:"Hladno predjelo"},
+    {k:"toplo", naziv:"Toplo predjelo"},
+    {k:"glavno", naziv:"Glavno jelo"},
+    {k:"prilog", naziv:"Prilog i salata"},
+    {k:"dezert", naziv:"Dezert"}
+  ],
+  paketi: [
+    {id:"koktel", naziv:"Koktel", opis:"stajaći prijem, 12 zalogaja po osobi", cena:1600,
+      hladno:"kanapei, pršuta, sirevi", toplo:"mini pite, pohovani kačkavalj", glavno:"", prilog:"", dezert:"mini kolači"},
+    {id:"domaci", naziv:"Domaći", opis:"za slavu i porodični ručak", cena:2400,
+      hladno:"proja, sir, kajmak, ajvar", toplo:"gibanica", glavno:"sarma ili svinjsko pečenje", prilog:"pekarski krompir, kupus salata", dezert:""},
+    {id:"svecani", naziv:"Svečani", opis:"za veće proslave", cena:3500,
+      hladno:"pršuta, kulen, sirevi, rolati", toplo:"gibanica, punjene paprike", glavno:"pečenje i piletina u sosu", prilog:"krompir, sezonske salate", dezert:"kolači, tri vrste"}
+  ],
+  dodaci: [
+    {id:"konobar", naziv:"Konobar, 4 sata", cena:7000, po:"komad"},
+    {id:"posudje", naziv:"Porcelan, escajg i stolnjaci", cena:150, po:"osoba"},
+    {id:"pice", naziv:"Sokovi i voda", cena:220, po:"osoba"},
+    {id:"torta", naziv:"Torta po izboru", cena:380, po:"osoba"}
+  ],
+  zone: [
+    {id:"licno", naziv:"Preuzimanje u kuhinji", opis:"Omladinskih brigada 90", cena:0},
+    {id:"nbg", naziv:"Novi Beograd i Zemun", opis:"isporuka i postavka", cena:1500},
+    {id:"centar", naziv:"Stari grad, Vračar, Savski venac, Zvezdara", opis:"isporuka i postavka", cena:2500},
+    {id:"ostalo", naziv:"Ostali delovi Beograda", opis:"do 25 km od kuhinje", cena:4000}
+  ]
+};
+const GALERIJA = [
+  {foto:true, naslov:"Krsna slava, 40 gostiju", opis:"Bežanijska kosa, meni Domaći", datum:"oktobar 2026"},
+  {foto:true, naslov:"Otvaranje kancelarije, 70 gostiju", opis:"Blok 23, meni Koktel", datum:"septembar 2026"},
+  {foto:false, naslov:"Krštenje, 55 gostiju", opis:"Zemun, meni Svečani", datum:"septembar 2026"},
+  {foto:false, naslov:"Rođendan u dvorištu, 25 gostiju", opis:"Banovo brdo, meni Domaći", datum:"avgust 2026"},
+  {foto:false, naslov:"Godišnja proslava firme, 120 gostiju", opis:"Novi Beograd, meni Svečani", datum:"jun 2026"}
+];
+
+const HOURS = {0:null, 1:[540,1200], 2:[540,1200], 3:[540,1200], 4:[540,1200], 5:[540,1200], 6:[540,1020]};
+const SETUP = 60, STEP = 30, MIN_DAYS = 5;
+
+const $ = s => document.querySelector(s);
+const pad = n => String(n).padStart(2, "0");
+const hm = m => pad(Math.floor(m/60)) + ":" + pad(m%60);
+const rsd = n => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " RSD";
+const ymd = d => d.getFullYear() + "-" + pad(d.getMonth()+1) + "-" + pad(d.getDate());
+const DN = ["nedelja","ponedeljak","utorak","sreda","četvrtak","petak","subota"];
+const DS = ["ned","pon","uto","sre","čet","pet","sub"];
+const MG = ["januara","februara","marta","aprila","maja","juna","jula","avgusta","septembra","oktobra","novembra","decembra"];
+const dateLong = d => DN[d.getDay()] + ", " + d.getDate() + ". " + MG[d.getMonth()];
+const esc = s => String(s).replace(/[&<>"]/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));
+function hash(s){ let h = 2166136261; for (let i = 0; i < s.length; i++){ h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } h ^= h >>> 13; h = Math.imul(h, 0x5bd1e995); h ^= h >>> 15; return (h >>> 0) / 4294967296; }
+
+const today = new Date(); today.setHours(0,0,0,0);
+const DAYS = [];
+for (let i = 0; i < 14; i++){ const d = new Date(today); d.setDate(today.getDate() + i); DAYS.push(d); }
+const byId = id => DAYS.find(d => ymd(d) === id);
+
+function slotsFor(d){
+  const h = HOURS[d.getDay()]; if (!h) return [];
+  const out = [];
+  for (let m = h[0]; m + SETUP <= h[1]; m += STEP) out.push({m, busy: hash(ymd(d) + "|isporuka|" + m) < 0.35});
+  return out;
+}
+const dayOpen = (d, i) => i >= MIN_DAYS && !!HOURS[d.getDay()];
+
+const S = {n:30, pk:"domaci", ad:new Set(), day:null, time:null, zn:"nbg", done:null};
+const pk = () => CENOVNIK.paketi.find(p => p.id === S.pk);
+const zn = () => CENOVNIK.zone.find(z => z.id === S.zn);
+function lines(st){
+  const p = CENOVNIK.paketi.find(x => x.id === st.pk), z = CENOVNIK.zone.find(x => x.id === st.zn);
+  const L = [[`Meni ${p.naziv}, ${st.n} × ${rsd(p.cena)}`, st.n * p.cena]];
+  CENOVNIK.dodaci.filter(a => st.ad.has(a.id)).forEach(a => L.push([a.po === "osoba" ? `${a.naziv}, ${st.n} × ${rsd(a.cena)}` : a.naziv, a.po === "osoba" ? st.n * a.cena : a.cena]));
+  L.push([z.cena ? `Dostava: ${z.naziv}` : z.naziv, z.cena]);
+  return L;
+}
+const total = st => lines(st).reduce((s, l) => s + l[1], 0);
+
+function renderMenu(){
+  const P = CENOVNIK.paketi;
+  $("#menuHead").innerHTML = `<tr><td></td>${P.map(p => `<th scope="col">${p.naziv}<small>${p.opis}</small></th>`).join("")}</tr>`;
+  $("#menuBody").innerHTML = CENOVNIK.redovi.map(r => `<tr><th scope="row">${r.naziv}</th>${P.map(p => p[r.k] ? `<td>${p[r.k]}</td>` : `<td class="no">nema</td>`).join("")}</tr>`).join("") +
+    `<tr class="cena"><th scope="row" class="sr-only">Cena po osobi</th>${P.map(p => `<td>${rsd(p.cena)}<small>po osobi</small></td>`).join("")}</tr>`;
+  $("#zoneTable tbody").innerHTML = CENOVNIK.zone.map(z => `<tr><td>${z.naziv}</td><td>${z.cena ? rsd(z.cena) : "bez troška"}</td></tr>`).join("");
+}
+
+function render(){
+  $("#gOut").textContent = S.n; $("#gRange").value = S.n;
+  $("#gOut").innerHTML = `${S.n}<small>osoba</small>`;
+  $("#pkOpts").innerHTML = CENOVNIK.paketi.map(p => `<button type="button" class="opt" data-pk="${p.id}" aria-pressed="${S.pk === p.id}"><span><b>${p.naziv}</b><small>${p.opis}</small></span><span class="pr">${rsd(p.cena)} / os.</span></button>`).join("");
+  $("#adOpts").innerHTML = CENOVNIK.dodaci.map(a => `<button type="button" class="opt" data-ad="${a.id}" aria-pressed="${S.ad.has(a.id)}"><span class="tick" aria-hidden="true"></span><span class="grow">${a.naziv}<br><small>${rsd(a.cena)}${a.po === "osoba" ? " po osobi" : ""}</small></span></button>`).join("");
+  $("#dayOpts").innerHTML = DAYS.map((d, i) => { const id = ymd(d), ok = dayOpen(d, i);
+    const why = !HOURS[d.getDay()] ? "ne radimo" : "prerano, najmanje 5 dana unapred";
+    return `<button type="button" class="day" data-day="${id}" aria-pressed="${S.day === id}" ${ok ? "" : "disabled"} aria-label="${dateLong(d)}${ok ? "" : ", " + why}">${DS[d.getDay()]}<b>${d.getDate()}</b></button>`; }).join("");
+  const tb = $("#timeOpts");
+  if (!S.day) tb.innerHTML = `<p class="empty">Izaberite datum, pa vreme isporuke.</p>`;
+  else tb.innerHTML = slotsFor(byId(S.day)).map(s => `<button type="button" class="slot" data-time="${s.m}" aria-pressed="${S.time === s.m}" ${s.busy ? "disabled" : ""} aria-label="${hm(s.m)}${s.busy ? ", zauzeto" : ""}">${hm(s.m)}</button>`).join("");
+  $("#znOpts").innerHTML = CENOVNIK.zone.map(z => `<button type="button" class="opt" data-zn="${z.id}" aria-pressed="${S.zn === z.id}"><span><b style="font-size:17px">${z.naziv}</b><small>${z.opis}</small></span><span class="pr">${z.cena ? rsd(z.cena) : "0 RSD"}</span></button>`).join("");
+  $("#adrFld").hidden = S.zn === "licno";
+  const d = S.day && byId(S.day);
+  $("#bill").innerHTML = `<tbody>${lines(S).map(l => `<tr><td>${l[0]}</td><td>${rsd(l[1])}</td></tr>`).join("")}` +
+    `<tr><td>${d ? dateLong(d) + (S.time !== null ? ", u " + hm(S.time) : ", vreme nije izabrano") : "Datum nije izabran"}</td><td></td></tr>` +
+    `<tr class="tot"><td>Ukupno</td><td>${rsd(total(S))}</td></tr></tbody>`;
+  $("#totNow").textContent = rsd(total(S));
+}
+
+function step(n){ S.n = Math.min(150, Math.max(15, n)); render(); }
+$("#gRange").addEventListener("input", e => step(+e.target.value));
+$("#gMinus").addEventListener("click", () => step(S.n - 5));
+$("#gPlus").addEventListener("click", () => step(S.n + 5));
+
+document.addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b || b.disabled) return;
+  if (b.dataset.pk){ S.pk = b.dataset.pk; render(); }
+  else if (b.dataset.ad){ S.ad.has(b.dataset.ad) ? S.ad.delete(b.dataset.ad) : S.ad.add(b.dataset.ad); render(); }
+  else if (b.dataset.day){ S.day = b.dataset.day; S.time = null; render(); }
+  else if (b.dataset.time){ S.time = +b.dataset.time; render(); }
+  else if (b.dataset.zn){ S.zn = b.dataset.zn; render(); }
+});
+
+$("#orderForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const ime = $("#oIme").value.trim(), tel = $("#oTel").value.trim(), adr = $("#oAdr").value.trim(), miss = [];
+  if (!S.day || S.time === null) miss.push("datum i vreme isporuke");
+  if (ime.length < 2) miss.push("ime");
+  if (tel.replace(/\D/g, "").length < 8) miss.push("telefon");
+  if (S.zn !== "licno" && adr.length < 5) miss.push("adresa isporuke");
+  if (miss.length){ $("#oErr").textContent = "Nedostaje: " + miss.join(", ") + "."; return; }
+  $("#oErr").textContent = "";
+  S.done = {n:S.n, pk:S.pk, ad:new Set(S.ad), day:S.day, time:S.time, zn:S.zn, ime, tel, adr, nap:$("#oNap").value.trim()};
+  const c = S.done, p = CENOVNIK.paketi.find(x => x.id === c.pk), z = CENOVNIK.zone.find(x => x.id === c.zn);
+  const dodaci = CENOVNIK.dodaci.filter(a => c.ad.has(a.id)).map(a => a.naziv).join(", ") || "bez dodataka";
+  const rows = [["Meni", `${p.naziv}, ${c.n} osoba`], ["Dodaci", dodaci], ["Dan", dateLong(byId(c.day))],
+    ["Vreme", `${hm(c.time)}–${hm(c.time + SETUP)} (${c.zn === "licno" ? "preuzimanje" : "isporuka i postavka"})`],
+    ["Dostava", z.cena ? `${z.naziv}, ${rsd(z.cena)}` : z.naziv]];
+  if (c.zn !== "licno") rows.push(["Adresa", c.adr]);
+  rows.push(["Ukupno", rsd(total(c))], ["Ime", c.ime], ["Telefon", c.tel]);
+  if (c.nap) rows.push(["Napomena", c.nap]);
+  $("#confirmList").innerHTML = rows.map(r => `<dt>${r[0]}</dt><dd>${esc(r[1])}</dd>`).join("");
+  $("#flow").hidden = true; $("#confirm").classList.add("show"); $("#confirm").focus();
+});
+
+$("#newBtn").addEventListener("click", () => {
+  S.done = null; S.day = null; S.time = null; $("#orderForm").reset();
+  $("#confirm").classList.remove("show"); $("#flow").hidden = false; render(); $("#gRange").focus();
+});
+
+$("#icsBtn").addEventListener("click", () => {
+  const c = S.done; if (!c) return;
+  const p = CENOVNIK.paketi.find(x => x.id === c.pk);
+  const [y, mo, da] = c.day.split("-").map(Number);
+  const start = new Date(y, mo-1, da, 0, c.time), end = new Date(start.getTime() + SETUP*60000);
+  const z = d => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+  const e2 = s => s.replace(/\\/g, "\\\\").replace(/[,;]/g, m => "\\" + m).replace(/\n/g, "\\n");
+  const kind = c.zn === "licno" ? "preuzimanje" : "isporuka";
+  const ics = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//opsforma//ketering-trpeza//SR","CALSCALE:GREGORIAN","METHOD:PUBLISH","BEGIN:VEVENT",
+    "UID:" + Date.now() + "-" + Math.floor(Math.random()*1e6) + "@ketering-trpeza.primer",
+    "DTSTAMP:" + z(new Date()), "DTSTART:" + z(start), "DTEND:" + z(end),
+    "SUMMARY:" + e2(`${FIRMA}: ${kind}, meni ${p.naziv} za ${c.n} osoba`),
+    "LOCATION:" + e2(c.zn === "licno" ? KUHINJA : c.adr + ", Beograd"),
+    "DESCRIPTION:" + e2("Ukupno " + rsd(total(c)) + ", plaća se pri isporuci. Tel. 060 000 06 28"),
+    "END:VEVENT","END:VCALENDAR"].join("\r\n") + "\r\n";
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([ics], {type:"text/calendar;charset=utf-8"}));
+  a.download = "termin-" + SLUG + ".ics";
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+});
+
+function renderGallery(){
+  $("#galGrid").innerHTML = GALERIJA.filter(g => g.foto).slice(0, 2).map(g => `<figure><div class="ph">Vaša fotografija</div><figcaption>${g.naslov}<small>${g.opis}, ${g.datum}</small></figcaption></figure>`).join("") +
+    `<figure><div class="ph" style="background:#fff;border:1px dashed #BDB5A5;align-items:center;justify-content:center;text-align:center;color:var(--mut)">Ovde se pojavljuje sledeća proslava čim je vlasnik doda.</div></figure>`;
+  $("#galList").innerHTML = GALERIJA.filter(g => !g.foto).map(g => `<li><span>${g.naslov}, ${g.opis}</span><small>${g.datum}</small></li>`).join("");
+}
+
+(function(){
+  const order = [1,2,3,4,5,6,0], td = new Date().getDay();
+  $("#hoursTable tbody").innerHTML = order.map(i => `<tr class="${i === td ? "today" : ""}"><td>${DN[i].charAt(0).toUpperCase() + DN[i].slice(1)}</td><td>${HOURS[i] ? hm(HOURS[i][0]) + "–" + hm(HOURS[i][1]) : "ne radimo"}</td></tr>`).join("");
+})();
+
+document.querySelector('form[data-form="kontakt"]').addEventListener("submit", e => {
+  e.preventDefault();
+  $("#kMsg").textContent = "Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku.";
+});
+
+const mb = document.querySelector(".menubtn"), nav = document.getElementById("meni");
+const setMenu = o => { mb.setAttribute("aria-expanded", String(o)); nav.classList.toggle("open", o); };
+mb.addEventListener("click", () => setMenu(mb.getAttribute("aria-expanded") !== "true"));
+nav.addEventListener("click", e => { if (e.target.closest("a")) setMenu(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && mb.getAttribute("aria-expanded") === "true"){ setMenu(false); mb.focus(); } });
+
+function renderAll(){ renderMenu(); renderGallery(); render(); }
+renderAll();
+})();
+</script>
+</body>
+</html>
