@@ -364,7 +364,7 @@ textarea.field{min-height:90px;resize:vertical}
           <div id="adr-wrap" hidden>
             <label class="lab" for="adr" data-en="Delivery address">Adresa dostave</label>
             <input class="field" id="adr" name="adresa" autocomplete="street-address" placeholder="Ulica i broj, sprat, interfon" data-en-placeholder="Street and number, floor, buzzer">
-            <label class="lab" for="primalac" data-en="Recipient’s name (if not you)">Ime primaoca (ako niste vi)</label>
+            <label class="lab" for="primalac" data-en="Recipient’s name (if not you)">Ime primaoca (ako niste Vi)</label>
             <input class="field" id="primalac" name="primalac" autocomplete="off">
           </div>
         </fieldset>
@@ -402,7 +402,7 @@ textarea.field{min-height:90px;resize:vertical}
           <svg class="string" viewBox="0 0 60 60" aria-hidden="true"><path d="M4 2 Q20 30 40 22" fill="none" stroke="#B8232A" stroke-width="1.5"/></svg>
           <div class="card-prev">
             <svg class="mark" viewBox="0 0 20 28" aria-hidden="true"><path d="M10 27V12" stroke="#3B5249" stroke-width="1.4"/><path d="M3 2 Q3 13 10 13 Q17 13 17 2 L13.5 5 L10 0.5 L6.5 5 Z" fill="#E5383B"/></svg>
-            <p class="msg ph" id="msg-prev" aria-live="polite">Ovde se vidi vaša poruka.</p>
+            <p class="msg ph" id="msg-prev" aria-live="polite">Ovde se vidi Vaša poruka.</p>
             <p class="sig" id="sig-prev"></p>
           </div>
         </div>
@@ -423,7 +423,7 @@ textarea.field{min-height:90px;resize:vertical}
         <button class="btn solid" type="button" id="ics" data-en="Add to calendar">Dodaj u kalendar</button>
         <button class="btn" type="button" id="nova" data-en="New order">Nova porudžbina</button>
       </div>
-      <p class="small" data-en="This is a sample. On the real site the order goes to the shop by email and Viber, and you get a confirmation email.">Ovo je primer. Na pravom sajtu porudžbina stiže cvećari na mejl i Viber, a vi dobijate potvrdu mejlom.</p>
+      <p class="small" data-en="This is a sample. On the real site the order goes to the shop by email and Viber, and you get a confirmation email.">Ovo je primer. Na pravom sajtu porudžbina stiže cvećari na mejl i Viber, a Vi dobijate potvrdu mejlom.</p>
     </div>
   </div>
   <div class="tulip-row" data-tulips="18" aria-hidden="true"></div>
@@ -705,7 +705,7 @@ function renderWins(){
 /* ===== čestitka ===== */
 function renderCard(){
   const m = $("#poruka").value.trim(), p = $("#potpis").value.trim(), el = $("#msg-prev");
-  el.textContent = m || t("Ovde se vidi vaša poruka.", "Your message appears here.");
+  el.textContent = m || t("Ovde se vidi Vaša poruka.", "Your message appears here.");
   el.classList.toggle("ph", !m);
   $("#sig-prev").textContent = m ? (p ? p : t("bez potpisa", "unsigned")) : "";
   $("#poruka-c").textContent = `${$("#poruka").value.length} / 160`;
@@ -762,7 +762,7 @@ function renderPotvrda(){
     [t("Ime", "Name"), L.ime], [t("Telefon", "Phone"), L.tel]
   ];
   $("#sum").innerHTML = rows.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("");
-  $("#potvrda-txt").textContent = t(`Hvala, ${L.ime.split(" ")[0]}. Zovemo vas na ${L.tel} da potvrdimo porudžbinu. Plaćate ${L.dost ? "kuriru" : "u radnji"}.`,
+  $("#potvrda-txt").textContent = t(`Hvala, ${L.ime.split(" ")[0]}. Zovemo Vas na ${L.tel} da potvrdimo porudžbinu. Plaćate ${L.dost ? "kuriru" : "u radnji"}.`,
     `Thank you, ${L.ime.split(" ")[0]}. We’ll call you on ${L.tel} to confirm. You pay ${L.dost ? "the courier" : "in the shop"}.`);
 }
 function icsEsc(s){ return String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n"); }

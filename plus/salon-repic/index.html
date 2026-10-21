@@ -280,7 +280,7 @@ p{margin:0 0 .9em}
   <div class="sir">
     <div class="mehur repic-mehur">
       <h2>Cene po veličini psa</h2>
-      <p class="uvod">Cena zavisi od veličine i dlake. Ako je dlaka jako zapetljana, kažemo vam doplatu pre nego što počnemo.</p>
+      <p class="uvod">Cena zavisi od veličine i dlake. Ako je dlaka jako zapetljana, kažemo Vam doplatu pre nego što počnemo.</p>
       <div class="velicine">
         <article class="vel">
           <div class="vel-zag"><svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#fff"/><g fill="#3E4452"><ellipse cx="22" cy="26" rx="5" ry="4.2"/><circle cx="16.5" cy="20" r="2.1"/><circle cx="20" cy="17" r="2.1"/><circle cx="24" cy="17" r="2.1"/><circle cx="27.5" cy="20" r="2.1"/></g></svg><div><h3>Mali</h3><span class="kg">do 10 kg</span></div></div>
@@ -308,7 +308,7 @@ p{margin:0 0 .9em}
   <div class="sir">
     <div class="mehur tirkiz">
       <h2>Kako radimo</h2>
-      <p class="uvod">Pas je kod nas bez kaveza i bez žurbe. Kad završimo, pošaljemo vam poruku da dođete po njega.</p>
+      <p class="uvod">Pas je kod nas bez kaveza i bez žurbe. Kad završimo, pošaljemo Vam poruku da dođete po njega.</p>
       <div class="pravila">
         <p><b>Jedan pas u isto vreme</b>Nema lajanja iz drugih kaveza, pa se i plašljivi psi brzo smire.</p>
         <p><b>Pauze kad zatreba</b>Ako se pas uznemiri, stanemo, damo mu vode i nastavimo polako.</p>
@@ -389,7 +389,7 @@ b) Povezan kalendar: umesto ovog razgovora ugrađuje se Google Kalendar
       <form data-form="kontakt" class="forma-mehur" style="background:var(--vanila);margin-top:18px" novalidate>
         <div class="polje"><label for="kIme">Vaše ime</label><input id="kIme" name="ime" autocomplete="name"></div>
         <div class="polje"><label for="kTel">Telefon</label><input id="kTel" name="telefon" type="tel" autocomplete="tel"></div>
-        <div class="polje ceo"><label for="kPoruka">Poruka (rasa, uzrast, šta vas brine)</label><textarea id="kPoruka" name="poruka"></textarea></div>
+        <div class="polje ceo"><label for="kPoruka">Poruka (rasa, uzrast, šta Vas brine)</label><textarea id="kPoruka" name="poruka"></textarea></div>
         <div class="ceo"><button class="btn btn-glavno" type="submit">Pošalji poruku</button></div>
         <p class="ok-poruka ceo" id="kontaktOk" role="status"></p>
       </form>
@@ -495,7 +495,7 @@ function crtaj(fokusKorak){
   var poslednje = null;
   function dodaj(n){ raz.appendChild(n); poslednje = n; return n; }
 
-  dodaj(pitanje("Zdravo! Koje je veličine vaš pas?", "Cena i trajanje zavise od veličine."));
+  dodaj(pitanje("Zdravo! Koje je veličine Vaš pas?", "Cena i trajanje zavise od veličine."));
   if (!st.vel){
     dodaj(ponude("", VELICINE.map(function(v){ return dugme(v.naziv + "<small>" + v.opis + "</small>", function(){ st.vel = v.id; crtaj(); }); })));
     return fokus();
@@ -510,7 +510,7 @@ function crtaj(fokusKorak){
   var u = usl(), trajanje = u.min[st.vel];
   dodaj(odgovor(u.naziv + ", " + cena(u.cena[st.vel]), "usl"));
 
-  dodaj(pitanje("Koji dan vam odgovara?", "Nedeljom ne radimo. Prikazujemo naredne dve nedelje."));
+  dodaj(pitanje("Koji dan Vam odgovara?", "Nedeljom ne radimo. Prikazujemo naredne dve nedelje."));
   if (!st.dan){
     dodaj(ponude("dani", DANI.map(function(d){
       var zatv = !RADNO[d.getDay()], slob = zatv ? 0 : termini(d, trajanje).filter(function(t){ return !t.zauzet; }).length;
@@ -526,7 +526,7 @@ function crtaj(fokusKorak){
   var dan = DANI.filter(function(d){ return iso(d) === st.dan; })[0];
   dodaj(odgovor(DP[dan.getDay()] + ", " + dan.getDate() + ". " + MG[dan.getMonth()], "dan"));
 
-  dodaj(pitanje("U koliko sati da vas čekamo?", "Precrtani termini su već zauzeti. " + u.naziv + " traje " + trajanje + " min."));
+  dodaj(pitanje("U koliko sati da Vas čekamo?", "Precrtani termini su već zauzeti. " + u.naziv + " traje " + trajanje + " min."));
   if (st.m == null){
     dodaj(ponude("vremena", termini(dan, trajanje).map(function(t){
       var b = dugme(hhmm(t.m), function(){ st.m = t.m; crtaj(); }, "vreme", hhmm(t.m) + (t.zauzet ? ", zauzeto" : ", slobodno"));
@@ -551,7 +551,7 @@ function crtaj(fokusKorak){
   f.addEventListener("submit", function(e){
     e.preventDefault();
     var ime = f.querySelector("#zIme").value.trim(), tel = f.querySelector("#zTel").value.trim();
-    var ok1 = gr("zIme", ime.length >= 2 ? "" : "Upišite vaše ime.");
+    var ok1 = gr("zIme", ime.length >= 2 ? "" : "Upišite Vaše ime.");
     var ok2 = gr("zTel", tel.replace(/\D/g, "").length >= 9 ? "" : "Upišite broj telefona (najmanje 9 cifara).");
     if (!ok1){ f.querySelector("#zIme").focus(); return; }
     if (!ok2){ f.querySelector("#zTel").focus(); return; }
@@ -572,8 +572,8 @@ function gr(id, txt){ document.getElementById(id + "G").textContent = txt; docum
 
 function prikaziPotvrdu(dodaj){
   var r = rez;
-  var ime = r.pas ? r.pas : "vaš pas";
-  dodaj(pitanje("Hvala! Čekamo " + (r.pas ? r.pas : "vas i vašeg psa") + ".", "Na pravom sajtu sada stiže poruka sa potvrdom."));
+  var ime = r.pas ? r.pas : "Vaš pas";
+  dodaj(pitanje("Hvala! Čekamo " + (r.pas ? r.pas : "Vas i Vašeg psa") + ".", "Na pravom sajtu sada stiže poruka sa potvrdom."));
   var p = el("div", "potvrda"); p.tabIndex = -1;
   p.innerHTML = "<h3>Termin je zabeležen</h3><p>Dan ranije šaljemo podsetnik. Ako ne možete da dođete, javite nam na Viber.</p>";
   var dl = el("dl", "rezime"); dl.id = "rezime";

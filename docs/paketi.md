@@ -1,4 +1,4 @@
-# Paketi opsforma — vodič za Dušana
+# Paketi opsforma — interni vodič za tim
 
 Interni vodič: šta vlasnik dobija u svakom paketu, šta radi on, kako se alati povezuju i šta košta. Cene usluga opsforma su namerno ostavljene kao **[cena]**.
 
