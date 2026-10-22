@@ -1,0 +1,1628 @@
+{
+ "ordinacija-stolica-1": {
+  "alt": {
+   "sr": "Svetla ordinacija sa stomatološkom stolicom i dnevnim svetlom",
+   "en": "Bright treatment room with a dental chair and daylight",
+   "de": "Helles Behandlungszimmer mit Zahnarztstuhl und Tageslicht"
+  },
+  "boja": "#a7a5a1",
+  "izvor": "Pavel Danilyuk · Pexels (https://www.pexels.com/photo/a-dental-equipment-in-the-clinic-6812453/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/ordinacija-stolica-1-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/ordinacija-stolica-1-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/ordinacija-stolica-1-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/ordinacija-stolica-1-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "uspravna": {
+    "razmera": "4:5",
+    "w": 1200,
+    "h": 1500,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 600,
+      "fajl": "assets/img/ordinacija-stolica-1-uspravna-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 1000,
+      "fajl": "assets/img/ordinacija-stolica-1-uspravna-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1500,
+      "fajl": "assets/img/ordinacija-stolica-1-uspravna-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1500"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 800,
+    "h": 800,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/ordinacija-stolica-1-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/ordinacija-stolica-1-kvadrat-800.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   },
+   "og": {
+    "razmera": "1200:630",
+    "w": 600,
+    "h": 315,
+    "velicine": [
+     {
+      "w": 600,
+      "h": 315,
+      "fajl": "assets/img/ordinacija-stolica-1-og-600.webp"
+     }
+    ],
+    "preporuka": "1200×630"
+   }
+  }
+ },
+ "ordinacija-stolica-2": {
+  "alt": {
+   "sr": "Stomatološka stolica uz prozor sa roletnama",
+   "en": "Dental chair by a window with blinds",
+   "de": "Zahnarztstuhl am Fenster mit Jalousien"
+  },
+  "boja": "#ceccc9",
+  "izvor": "MM Dental · Pexels (https://www.pexels.com/photo/dental-chair-inside-a-clinic-9062525/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/ordinacija-stolica-2-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/ordinacija-stolica-2-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/ordinacija-stolica-2-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/ordinacija-stolica-2-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 800,
+    "h": 800,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/ordinacija-stolica-2-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/ordinacija-stolica-2-kvadrat-800.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
+ "ruke-instrumenti-1": {
+  "alt": {
+   "sr": "Ruka u rukavici drži ogledalce i sondu za pregled zuba",
+   "en": "Gloved hand holding a dental mirror and probe",
+   "de": "Hand im Handschuh hält Mundspiegel und Sonde"
+  },
+  "boja": "#b5b1ae",
+  "izvor": "Katarzyna Zygnerska · Unsplash (https://unsplash.com/photos/gloved-hand-holding-dental-examination-tools-98eodnv1abo)",
+  "varijante": {
+   "uspravna": {
+    "razmera": "4:5",
+    "w": 1600,
+    "h": 2000,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 600,
+      "fajl": "assets/img/ruke-instrumenti-1-uspravna-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 1000,
+      "fajl": "assets/img/ruke-instrumenti-1-uspravna-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1500,
+      "fajl": "assets/img/ruke-instrumenti-1-uspravna-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 2000,
+      "fajl": "assets/img/ruke-instrumenti-1-uspravna-1600.webp"
+     }
+    ],
+    "preporuka": "1600×2000"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 800,
+    "h": 800,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/ruke-instrumenti-1-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/ruke-instrumenti-1-kvadrat-800.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   },
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/ruke-instrumenti-1-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/ruke-instrumenti-1-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/ruke-instrumenti-1-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/ruke-instrumenti-1-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   }
+  }
+ },
+ "model-implant-1": {
+  "alt": {
+   "sr": "Model implanta sa krunicom između dva prirodna zuba",
+   "en": "Model of an implant with a crown between two natural teeth",
+   "de": "Modell eines Implantats mit Krone zwischen zwei natürlichen Zähnen"
+  },
+  "boja": "#725747",
+  "izvor": "Jonathan Borba · Unsplash (https://unsplash.com/photos/dental-implant-model-with-teeth-W9YEY6G8LVM)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/model-implant-1-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/model-implant-1-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/model-implant-1-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/model-implant-1-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 800,
+    "h": 800,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/model-implant-1-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/model-implant-1-kvadrat-800.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   },
+   "og": {
+    "razmera": "1200:630",
+    "w": 600,
+    "h": 315,
+    "velicine": [
+     {
+      "w": 600,
+      "h": 315,
+      "fajl": "assets/img/model-implant-1-og-600.webp"
+     }
+    ],
+    "preporuka": "1200×630"
+   }
+  }
+ },
+ "osmeh-1": {
+  "alt": {
+   "sr": "Osmeh posle izbeljivanja, krupni plan",
+   "en": "Smile after whitening, close-up",
+   "de": "Lächeln nach dem Bleaching, Nahaufnahme"
+  },
+  "boja": "#c4b0a8",
+  "izvor": "Kamal Hoseinianzade · Unsplash (https://unsplash.com/photos/a-close-up-of-a-womans-mouth-with-white-teeth-RCQnbyQsnUg)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/osmeh-1-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/osmeh-1-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/osmeh-1-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/osmeh-1-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "og": {
+    "razmera": "1200:630",
+    "w": 600,
+    "h": 315,
+    "velicine": [
+     {
+      "w": 600,
+      "h": 315,
+      "fajl": "assets/img/osmeh-1-og-600.webp"
+     }
+    ],
+    "preporuka": "1200×630"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 800,
+    "h": 800,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/osmeh-1-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/osmeh-1-kvadrat-800.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   },
+   "pp": {
+    "razmera": "3:2",
+    "w": 1200,
+    "h": 800,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/osmeh-1-pp-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/osmeh-1-pp-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/osmeh-1-pp-1200.webp"
+     }
+    ],
+    "preporuka": "1200×800"
+   }
+  }
+ },
+ "osmeh-pre": {
+  "alt": {
+   "sr": "Isti osmeh pre izbeljivanja (simulacija za demo)",
+   "en": "The same smile before whitening (demo simulation)",
+   "de": "Dasselbe Lächeln vor dem Bleaching (Demo-Simulation)"
+  },
+  "boja": "#c4afa6",
+  "izvor": "Kamal Hoseinianzade · Unsplash (https://unsplash.com/photos/a-close-up-of-a-womans-mouth-with-white-teeth-RCQnbyQsnUg) · simulacija boje zuba: opsforma",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/osmeh-pre-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/osmeh-pre-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/osmeh-pre-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/osmeh-pre-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "pp": {
+    "razmera": "3:2",
+    "w": 1200,
+    "h": 800,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/osmeh-pre-pp-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/osmeh-pre-pp-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/osmeh-pre-pp-1200.webp"
+     }
+    ],
+    "preporuka": "1200×800"
+   }
+  }
+ },
+ "cekaonica-1": {
+  "alt": {
+   "sr": "Svetla čekaonica sa recepcijom i plavim stolicama",
+   "en": "Bright waiting room with reception desk and blue chairs",
+   "de": "Heller Wartebereich mit Empfang und blauen Stühlen"
+  },
+  "boja": "#d1cdca",
+  "izvor": "Cristian Rojas · Pexels (https://www.pexels.com/photo/waiting-room-in-a-hospital-8459996/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/cekaonica-1-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/cekaonica-1-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/cekaonica-1-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/cekaonica-1-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 800,
+    "h": 800,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/cekaonica-1-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/cekaonica-1-kvadrat-800.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
+ "cekaonica-2": {
+  "alt": {
+   "sr": "Drvene fotelje uz prozor u čekaonici",
+   "en": "Wooden armchairs by the window in the waiting room",
+   "de": "Holzsessel am Fenster im Wartebereich"
+  },
+  "boja": "#c8c2b9",
+  "izvor": "Greg Rosenke · Unsplash (https://unsplash.com/photos/brown-wooden-framed-white-padded-armchairs-1ebbokV07KE)",
+  "varijante": {
+   "uspravna": {
+    "razmera": "4:5",
+    "w": 1600,
+    "h": 2000,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 600,
+      "fajl": "assets/img/cekaonica-2-uspravna-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 1000,
+      "fajl": "assets/img/cekaonica-2-uspravna-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1500,
+      "fajl": "assets/img/cekaonica-2-uspravna-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 2000,
+      "fajl": "assets/img/cekaonica-2-uspravna-1600.webp"
+     }
+    ],
+    "preporuka": "1600×2000"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 800,
+    "h": 800,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/cekaonica-2-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/cekaonica-2-kvadrat-800.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
+ "instrumenti-1": {
+  "alt": {
+   "sr": "Ogledalce, sonda i pinceta na svetloj podlozi",
+   "en": "Mirror, probe and tweezers on a light surface",
+   "de": "Spiegel, Sonde und Pinzette auf hellem Untergrund"
+  },
+  "boja": "#b1b5a7",
+  "izvor": "Buselliyy · Pexels (https://www.pexels.com/photo/dental-instruments-on-textured-surface-31786500/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/instrumenti-1-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/instrumenti-1-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/instrumenti-1-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/instrumenti-1-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 800,
+    "h": 800,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/instrumenti-1-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/instrumenti-1-kvadrat-800.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   },
+   "og": {
+    "razmera": "1200:630",
+    "w": 600,
+    "h": 315,
+    "velicine": [
+     {
+      "w": 600,
+      "h": 315,
+      "fajl": "assets/img/instrumenti-1-og-600.webp"
+     }
+    ],
+    "preporuka": "1200×630"
+   }
+  }
+ },
+ "rendgen-monitor-1": {
+  "alt": {
+   "sr": "Panoramski snimak zuba na monitoru u ordinaciji",
+   "en": "Panoramic dental X-ray on a monitor in the clinic",
+   "de": "Panorama-Röntgenbild der Zähne auf einem Monitor in der Praxis"
+  },
+  "boja": "#ababac",
+  "izvor": "Nadezhda Moryak · Pexels (https://www.pexels.com/photo/flat-screen-monitor-with-x-ray-picture-7800665/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/rendgen-monitor-1-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/rendgen-monitor-1-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/rendgen-monitor-1-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/rendgen-monitor-1-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "uspravna": {
+    "razmera": "4:5",
+    "w": 1200,
+    "h": 1500,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 600,
+      "fajl": "assets/img/rendgen-monitor-1-uspravna-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 1000,
+      "fajl": "assets/img/rendgen-monitor-1-uspravna-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1500,
+      "fajl": "assets/img/rendgen-monitor-1-uspravna-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1500"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 800,
+    "h": 800,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/rendgen-monitor-1-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/rendgen-monitor-1-kvadrat-800.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   },
+   "og": {
+    "razmera": "1200:630",
+    "w": 600,
+    "h": 315,
+    "velicine": [
+     {
+      "w": 600,
+      "h": 315,
+      "fajl": "assets/img/rendgen-monitor-1-og-600.webp"
+     }
+    ],
+    "preporuka": "1200×630"
+   }
+  }
+ },
+ "alajner-1": {
+  "alt": {
+   "sr": "Providna folija za ispravljanje zuba na dlanovima",
+   "en": "Clear aligner held in open palms",
+   "de": "Durchsichtige Aligner-Schiene auf offenen Handflächen"
+  },
+  "boja": "#b2b5ac",
+  "izvor": "Victor Castardo · Pexels (https://www.pexels.com/photo/a-clear-retainer-on-a-person-s-hands-wearing-gloves-10896051/)",
+  "varijante": {
+   "uspravna": {
+    "razmera": "4:5",
+    "w": 1600,
+    "h": 2000,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 600,
+      "fajl": "assets/img/alajner-1-uspravna-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 1000,
+      "fajl": "assets/img/alajner-1-uspravna-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1500,
+      "fajl": "assets/img/alajner-1-uspravna-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 2000,
+      "fajl": "assets/img/alajner-1-uspravna-1600.webp"
+     }
+    ],
+    "preporuka": "1600×2000"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 800,
+    "h": 800,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/alajner-1-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/alajner-1-kvadrat-800.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   },
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/alajner-1-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/alajner-1-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/alajner-1-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/alajner-1-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   }
+  }
+ },
+ "model-vilice-1": {
+  "alt": {
+   "sr": "Providni model vilice sa krunicama i implantima",
+   "en": "Clear jaw model with crowns and implants",
+   "de": "Durchsichtiges Kiefermodell mit Kronen und Implantaten"
+  },
+  "boja": "#b9b6ae",
+  "izvor": "Tima Miroshnichenko · Pexels (https://www.pexels.com/photo/close-up-photo-of-a-dental-cast-5355838/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/model-vilice-1-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/model-vilice-1-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/model-vilice-1-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/model-vilice-1-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 800,
+    "h": 800,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/model-vilice-1-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/model-vilice-1-kvadrat-800.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   },
+   "og": {
+    "razmera": "1200:630",
+    "w": 600,
+    "h": 315,
+    "velicine": [
+     {
+      "w": 600,
+      "h": 315,
+      "fajl": "assets/img/model-vilice-1-og-600.webp"
+     }
+    ],
+    "preporuka": "1200×630"
+   }
+  }
+ },
+ "alajner-2": {
+  "alt": {
+   "sr": "Ruke u rukavicama drže providnu foliju",
+   "en": "Gloved hands holding a clear aligner",
+   "de": "Hände in Handschuhen halten eine durchsichtige Schiene"
+  },
+  "boja": "#93a6ad",
+  "izvor": "Cedric Fauntleroy · Pexels (https://www.pexels.com/photo/person-in-gray-scrub-suit-wearing-blue-latex-gloves-4270079/)",
+  "varijante": {
+   "uspravna": {
+    "razmera": "4:5",
+    "w": 1600,
+    "h": 2000,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 600,
+      "fajl": "assets/img/alajner-2-uspravna-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 1000,
+      "fajl": "assets/img/alajner-2-uspravna-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1500,
+      "fajl": "assets/img/alajner-2-uspravna-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 2000,
+      "fajl": "assets/img/alajner-2-uspravna-1600.webp"
+     }
+    ],
+    "preporuka": "1600×2000"
+   },
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/alajner-2-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/alajner-2-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/alajner-2-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/alajner-2-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "og": {
+    "razmera": "1200:630",
+    "w": 600,
+    "h": 315,
+    "velicine": [
+     {
+      "w": 600,
+      "h": 315,
+      "fajl": "assets/img/alajner-2-og-600.webp"
+     }
+    ],
+    "preporuka": "1200×630"
+   }
+  }
+ },
+ "konsultacija-1": {
+  "alt": {
+   "sr": "Doktor pokazuje pacijentkinji snimak zuba na tabletu",
+   "en": "Dentist showing a patient her X-ray on a tablet",
+   "de": "Zahnarzt zeigt einer Patientin ihr Röntgenbild auf dem Tablet"
+  },
+  "boja": "#aba9a6",
+  "izvor": "Cedric Fauntleroy · Pexels (https://www.pexels.com/photo/man-in-gray-scrub-suit-holding-white-tablet-computer-4270093/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/konsultacija-1-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/konsultacija-1-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/konsultacija-1-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/konsultacija-1-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "uspravna": {
+    "razmera": "4:5",
+    "w": 1200,
+    "h": 1500,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 600,
+      "fajl": "assets/img/konsultacija-1-uspravna-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 1000,
+      "fajl": "assets/img/konsultacija-1-uspravna-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1500,
+      "fajl": "assets/img/konsultacija-1-uspravna-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1500"
+   },
+   "og": {
+    "razmera": "1200:630",
+    "w": 600,
+    "h": 315,
+    "velicine": [
+     {
+      "w": 600,
+      "h": 315,
+      "fajl": "assets/img/konsultacija-1-og-600.webp"
+     }
+    ],
+    "preporuka": "1200×630"
+   }
+  }
+ },
+ "konsultacija-2": {
+  "alt": {
+   "sr": "Razgovor o planu lečenja uz snimke na monitoru",
+   "en": "Discussing the treatment plan with images on a monitor",
+   "de": "Gespräch über den Behandlungsplan mit Aufnahmen am Monitor"
+  },
+  "boja": "#a09d9a",
+  "izvor": "Pavel Danilyuk · Pexels (https://www.pexels.com/photo/two-men-looking-at-the-monitor-6812518/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/konsultacija-2-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/konsultacija-2-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/konsultacija-2-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/konsultacija-2-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "uspravna": {
+    "razmera": "4:5",
+    "w": 1200,
+    "h": 1500,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 600,
+      "fajl": "assets/img/konsultacija-2-uspravna-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 1000,
+      "fajl": "assets/img/konsultacija-2-uspravna-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1500,
+      "fajl": "assets/img/konsultacija-2-uspravna-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1500"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 800,
+    "h": 800,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/konsultacija-2-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/konsultacija-2-kvadrat-800.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   },
+   "og": {
+    "razmera": "1200:630",
+    "w": 600,
+    "h": 315,
+    "velicine": [
+     {
+      "w": 600,
+      "h": 315,
+      "fajl": "assets/img/konsultacija-2-og-600.webp"
+     }
+    ],
+    "preporuka": "1200×630"
+   }
+  }
+ },
+ "video-poziv-1": {
+  "alt": {
+   "sr": "Laptop sa video pozivom pored sobne biljke",
+   "en": "Laptop showing a video call next to a houseplant",
+   "de": "Laptop mit Videoanruf neben einer Zimmerpflanze"
+  },
+  "boja": "#8d8e81",
+  "izvor": "Compagnons · Unsplash (https://unsplash.com/photos/laptop-showing-video-call-near-houseplant-eTgMFFzroGc)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/video-poziv-1-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/video-poziv-1-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/video-poziv-1-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/video-poziv-1-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "uspravna": {
+    "razmera": "4:5",
+    "w": 1200,
+    "h": 1500,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 600,
+      "fajl": "assets/img/video-poziv-1-uspravna-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 1000,
+      "fajl": "assets/img/video-poziv-1-uspravna-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1500,
+      "fajl": "assets/img/video-poziv-1-uspravna-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1500"
+   },
+   "og": {
+    "razmera": "1200:630",
+    "w": 600,
+    "h": 315,
+    "velicine": [
+     {
+      "w": 600,
+      "h": 315,
+      "fajl": "assets/img/video-poziv-1-og-600.webp"
+     }
+    ],
+    "preporuka": "1200×630"
+   }
+  }
+ },
+ "beograd-hram-1": {
+  "alt": {
+   "sr": "Hram Svetog Save na Vračaru, desetak minuta hoda od klinike",
+   "en": "The Church of Saint Sava in Vračar, about ten minutes on foot from the clinic",
+   "de": "Der Dom des Heiligen Sava in Vračar, etwa zehn Gehminuten von der Praxis"
+  },
+  "boja": "#7e8f91",
+  "izvor": "Ben Asyö · Unsplash (https://unsplash.com/photos/people-walking-near-white-concrete-building-during-daytime-_kKf1W-IGo0)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/beograd-hram-1-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/beograd-hram-1-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/beograd-hram-1-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/beograd-hram-1-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 800,
+    "h": 800,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/beograd-hram-1-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/beograd-hram-1-kvadrat-800.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
+ "beograd-vracar-1": {
+  "alt": {
+   "sr": "Pogled na Vračar i Hram Svetog Save",
+   "en": "View over Vračar and the Church of Saint Sava",
+   "de": "Blick über Vračar und den Dom des Heiligen Sava"
+  },
+  "boja": "#95a1af",
+  "izvor": "Lazar Krstić · Unsplash (https://unsplash.com/photos/a-large-white-building-with-a-green-dome-X4ld3qM0PcM)",
+  "varijante": {
+   "traka": {
+    "razmera": "21:9",
+    "w": 1600,
+    "h": 686,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 206,
+      "fajl": "assets/img/beograd-vracar-1-traka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 343,
+      "fajl": "assets/img/beograd-vracar-1-traka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 514,
+      "fajl": "assets/img/beograd-vracar-1-traka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 686,
+      "fajl": "assets/img/beograd-vracar-1-traka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×686"
+   },
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/beograd-vracar-1-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/beograd-vracar-1-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/beograd-vracar-1-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/beograd-vracar-1-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "og": {
+    "razmera": "1200:630",
+    "w": 600,
+    "h": 315,
+    "velicine": [
+     {
+      "w": 600,
+      "h": 315,
+      "fajl": "assets/img/beograd-vracar-1-og-600.webp"
+     }
+    ],
+    "preporuka": "1200×630"
+   }
+  }
+ },
+ "smestaj-soba-1": {
+  "alt": {
+   "sr": "Svetla soba sa belom posteljinom",
+   "en": "Bright room with white bed linen",
+   "de": "Helles Zimmer mit weißer Bettwäsche"
+  },
+  "boja": "#c3c0bb",
+  "izvor": "Andrew Neel · Unsplash (https://unsplash.com/photos/vacant-white-bed-near-the-window-B4rEJ09-Puo)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/smestaj-soba-1-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/smestaj-soba-1-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/smestaj-soba-1-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/smestaj-soba-1-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 800,
+    "h": 800,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/smestaj-soba-1-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/smestaj-soba-1-kvadrat-800.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
+ "smestaj-soba-2": {
+  "alt": {
+   "sr": "Prostrana soba sa velikim prozorima",
+   "en": "Spacious room with large windows",
+   "de": "Geräumiges Zimmer mit großen Fenstern"
+  },
+  "boja": "#adaaa3",
+  "izvor": "Point3D Commercial Imaging Ltd. · Unsplash (https://unsplash.com/photos/white-bed-linen-on-bed-5BV56SdvLmo)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/smestaj-soba-2-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/smestaj-soba-2-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/smestaj-soba-2-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/smestaj-soba-2-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   }
+  }
+ },
+ "nega-cetkice-1": {
+  "alt": {
+   "sr": "Četkice za zube u keramičkoj čaši",
+   "en": "Toothbrushes in a ceramic cup",
+   "de": "Zahnbürsten in einem Keramikbecher"
+  },
+  "boja": "#c5b69f",
+  "izvor": "Sara Groblechner · Unsplash (https://unsplash.com/photos/brown-wooden-sticks-in-gray-ceramic-bowl-7TgbRVEYdYY)",
+  "varijante": {
+   "uspravna": {
+    "razmera": "4:5",
+    "w": 1600,
+    "h": 2000,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 600,
+      "fajl": "assets/img/nega-cetkice-1-uspravna-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 1000,
+      "fajl": "assets/img/nega-cetkice-1-uspravna-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1500,
+      "fajl": "assets/img/nega-cetkice-1-uspravna-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 2000,
+      "fajl": "assets/img/nega-cetkice-1-uspravna-1600.webp"
+     }
+    ],
+    "preporuka": "1600×2000"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 800,
+    "h": 800,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/nega-cetkice-1-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/nega-cetkice-1-kvadrat-800.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   },
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/nega-cetkice-1-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/nega-cetkice-1-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/nega-cetkice-1-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/nega-cetkice-1-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "og": {
+    "razmera": "1200:630",
+    "w": 600,
+    "h": 315,
+    "velicine": [
+     {
+      "w": 600,
+      "h": 315,
+      "fajl": "assets/img/nega-cetkice-1-og-600.webp"
+     }
+    ],
+    "preporuka": "1200×630"
+   }
+  }
+ },
+ "dolazak-kofer-1": {
+  "alt": {
+   "sr": "Kofer spreman za put",
+   "en": "A suitcase ready for the trip",
+   "de": "Ein Koffer, bereit für die Reise"
+  },
+  "boja": "#716559",
+  "izvor": "my random photo · Unsplash (https://unsplash.com/photos/a-piece-of-luggage-sitting-on-top-of-a-hard-wood-floor-6uWRmqYNxBE)",
+  "varijante": {
+   "uspravna": {
+    "razmera": "4:5",
+    "w": 1600,
+    "h": 2000,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 600,
+      "fajl": "assets/img/dolazak-kofer-1-uspravna-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 1000,
+      "fajl": "assets/img/dolazak-kofer-1-uspravna-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1500,
+      "fajl": "assets/img/dolazak-kofer-1-uspravna-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 2000,
+      "fajl": "assets/img/dolazak-kofer-1-uspravna-1600.webp"
+     }
+    ],
+    "preporuka": "1600×2000"
+   },
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/dolazak-kofer-1-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/dolazak-kofer-1-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/dolazak-kofer-1-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/dolazak-kofer-1-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "og": {
+    "razmera": "1200:630",
+    "w": 600,
+    "h": 315,
+    "velicine": [
+     {
+      "w": 600,
+      "h": 315,
+      "fajl": "assets/img/dolazak-kofer-1-og-600.webp"
+     }
+    ],
+    "preporuka": "1200×630"
+   }
+  }
+ }
+}
