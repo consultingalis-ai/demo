@@ -308,6 +308,11 @@
   .filter-label { font-size: .9rem; color: var(--gray); }
   .filter-rows .filters { margin-top: 0; }
   @media (min-width: 900px) { .filter-row { grid-template-columns: 120px 1fr; align-items: center; gap: 16px; } }
+  .ex-custom { margin-top: 48px; padding: clamp(24px, 4vw, 40px); background: var(--svetloplava, #E4EAFD); border-left: 6px solid var(--plava, #2F5BEA); display: grid; gap: 22px; align-items: center; }
+  .ex-custom p { max-width: 62ch; margin-top: 10px; }
+  .ex-custom-title { font-size: clamp(1.5rem, 3.4vw, 2.1rem); line-height: 1.1; letter-spacing: -.02em; }
+  .ex-custom .btn { justify-self: start; }
+  @media (min-width: 900px) { .ex-custom { grid-template-columns: 1fr auto; gap: 40px; } }
   .ex-note a { text-underline-offset: 4px; text-decoration-color: var(--signal); text-decoration-thickness: 2px; white-space: nowrap; }
   .card-pkg {
     align-self: flex-start; font-size: .78rem; font-weight: 600; letter-spacing: .01em;
@@ -519,7 +524,7 @@
     <div class="wrap">
       <div class="ex-head">
         <h2 class="sec-title" id="primeri-naslov">Primeri<span class="dot" aria-hidden="true"></span></h2>
-        <p class="ex-note">Ovo su primeri za izmišljene firme, da vidite kako bi sajt mogao da izgleda za Vaš zanat. Primeri sa zakazivanjem i porudžbinama rade kao pravi, samo su termini izmišljeni. <a href="./paketi/">Šta je u kom paketu</a></p>
+        <p class="ex-note">Ovo su primeri za izmišljene firme, da vidite kako bi sajt mogao da izgleda za Vaš zanat. Primeri sa zakazivanjem i porudžbinama rade kao pravi, samo su termini izmišljeni. Nijedan primer nije konačan dizajn: boje, raspored, tekst i funkcije prilagođavamo Vama. <a href="./paketi/">Šta je u kom paketu</a></p>
       </div>
       <div class="filter-rows">
         <div class="filter-row">
@@ -1062,6 +1067,13 @@
           <a class="card-link" href="./prodavnica/musko-kragna/">Otvori primer<span class="sr"> za Kragna</span></a>
         </li>
       </ul>
+      <div class="ex-custom">
+        <div>
+          <h3 class="ex-custom-title">Niste pronašli ono što tražite<span class="dot" aria-hidden="true"></span></h3>
+          <p>Primeri su tu da pokažu šta je moguće, a ne da Vas ograniče. Svaki dizajn menjamo po Vašoj želji: boje, fotografije, raspored, tekst i funkcije. Ako imate ideju koju primeri ne pokrivaju, opišite nam je i mi ćemo je realizovati.</p>
+        </div>
+        <a class="btn btn-primary" href="#kontakt">Opišite nam svoju ideju</a>
+      </div>
     </div>
   </section>
 
