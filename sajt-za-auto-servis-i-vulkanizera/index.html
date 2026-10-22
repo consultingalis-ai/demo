@@ -332,6 +332,9 @@
   .card[data-paket="1"] .card-pkg { opacity: .78; }
   .brand { min-height: 44px; align-items: center; }
   .menu-btn { min-height: 44px; }
+  /* Snimak ekrana u kartici primera */
+  .card-shot { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: top;
+    border-radius: 4px; margin: 4px 0 16px; box-shadow: 0 0 0 1px rgba(0,0,0,.12); }
 </style>
 </head>
 <body>
@@ -405,18 +408,21 @@
       <ul class="cards">
         <li class="card" data-paket="2" data-group="auto" style="--bg:#16324F;--ac:#7FB7BE;--fg:#F0F4F8">
           <p class="card-pkg">Paket 2 · Zakazivanje</p>
+          <img class="card-shot" src="/assets/primeri/plus-vulkanizer-ventil-280.webp" srcset="/assets/primeri/plus-vulkanizer-ventil-280.webp 280w, /assets/primeri/plus-vulkanizer-ventil.webp 560w" sizes="(max-width: 559px) calc(100vw - 84px), (max-width: 899px) calc(50vw - 60px), 260px" width="560" height="777" loading="lazy" decoding="async" alt="Kako izgleda sajt Vulkanizer Ventil na telefonu">
           <p class="card-craft">Vulkanizer, sezonska zamena</p>
           <h3 class="card-name">Vulkanizer Ventil</h3>
           <a class="card-link" href="/plus/vulkanizer-ventil/">Otvori primer<span class="sr"> za Vulkanizer Ventil</span></a>
         </li>
         <li class="card" data-paket="3" data-group="auto" style="--bg:#263238;--ac:#29B6F6;--fg:#ECEFF1">
           <p class="card-pkg">Paket 3 · Plus</p>
+          <img class="card-shot" src="/assets/primeri/plus-auto-zupcanik-280.webp" srcset="/assets/primeri/plus-auto-zupcanik-280.webp 280w, /assets/primeri/plus-auto-zupcanik.webp 560w" sizes="(max-width: 559px) calc(100vw - 84px), (max-width: 899px) calc(50vw - 60px), 260px" width="560" height="777" loading="lazy" decoding="async" alt="Kako izgleda sajt Auto centar Zupčanik na telefonu">
           <p class="card-craft">Auto servis, 2 dizalice</p>
           <h3 class="card-name">Auto centar Zupčanik</h3>
           <a class="card-link" href="/plus/auto-zupcanik/">Otvori primer<span class="sr"> za Auto centar Zupčanik</span></a>
         </li>
         <li class="card" data-paket="1" data-group="auto" style="--bg:#1F1F1F;--ac:#FF6B00;--fg:#F6F5F1">
           <p class="card-pkg">Paket 1 · Osnovni</p>
+          <img class="card-shot" src="/assets/primeri/auto-servis-micic-280.webp" srcset="/assets/primeri/auto-servis-micic-280.webp 280w, /assets/primeri/auto-servis-micic.webp 560w" sizes="(max-width: 559px) calc(100vw - 84px), (max-width: 899px) calc(50vw - 60px), 260px" width="560" height="777" loading="lazy" decoding="async" alt="Kako izgleda sajt Auto servis Mićić na telefonu">
           <p class="card-craft">Auto servis</p>
           <h3 class="card-name">Auto servis Mićić</h3>
           <a class="card-link" href="/auto-servis-micic/">Otvori primer<span class="sr"> za Auto servis Mićić</span></a>

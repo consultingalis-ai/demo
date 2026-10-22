@@ -332,6 +332,9 @@
   .card[data-paket="1"] .card-pkg { opacity: .78; }
   .brand { min-height: 44px; align-items: center; }
   .menu-btn { min-height: 44px; }
+  /* Snimak ekrana u kartici primera */
+  .card-shot { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: top;
+    border-radius: 4px; margin: 4px 0 16px; box-shadow: 0 0 0 1px rgba(0,0,0,.12); }
 </style>
 </head>
 <body>
@@ -405,18 +408,21 @@
       <ul class="cards">
         <li class="card" data-paket="2" data-group="hrana" style="--bg:#1B2F5B;--ac:#D9A441;--fg:#FBF6EC">
           <p class="card-pkg">Paket 2 · Porudžbine</p>
+          <img class="card-shot" src="/assets/primeri/plus-pekara-kvasac-280.webp" srcset="/assets/primeri/plus-pekara-kvasac-280.webp 280w, /assets/primeri/plus-pekara-kvasac.webp 560w" sizes="(max-width: 559px) calc(100vw - 84px), (max-width: 899px) calc(50vw - 60px), 260px" width="560" height="777" loading="lazy" decoding="async" alt="Kako izgleda sajt Pekara Kvasac na telefonu">
           <p class="card-craft">Pekara, porudžbine za slave</p>
           <h3 class="card-name">Pekara Kvasac</h3>
           <a class="card-link" href="/plus/pekara-kvasac/">Otvori primer<span class="sr"> za Pekara Kvasac</span></a>
         </li>
         <li class="card" data-paket="3" data-group="hrana" style="--bg:#FDF8F2;--ac:#B8232A;--fg:#2B3D36">
           <p class="card-pkg">Paket 3 · Plus</p>
+          <img class="card-shot" src="/assets/primeri/plus-cvecara-lala-280.webp" srcset="/assets/primeri/plus-cvecara-lala-280.webp 280w, /assets/primeri/plus-cvecara-lala.webp 560w" sizes="(max-width: 559px) calc(100vw - 84px), (max-width: 899px) calc(50vw - 60px), 260px" width="560" height="777" loading="lazy" decoding="async" alt="Kako izgleda sajt Cvećara Lala na telefonu">
           <p class="card-craft">Cvećara, buket sa dostavom</p>
           <h3 class="card-name">Cvećara Lala</h3>
           <a class="card-link" href="/plus/cvecara-lala/">Otvori primer<span class="sr"> za Cvećara Lala</span></a>
         </li>
         <li class="card" data-paket="2" data-group="hrana" style="--bg:#22223B;--ac:#C9ADA7;--fg:#F2E9E4">
           <p class="card-pkg">Paket 2 · Porudžbine</p>
+          <img class="card-shot" src="/assets/primeri/plus-mesara-razanj-280.webp" srcset="/assets/primeri/plus-mesara-razanj-280.webp 280w, /assets/primeri/plus-mesara-razanj.webp 560w" sizes="(max-width: 559px) calc(100vw - 84px), (max-width: 899px) calc(50vw - 60px), 260px" width="560" height="777" loading="lazy" decoding="async" alt="Kako izgleda sajt Mesara Ražanj na telefonu">
           <p class="card-craft">Mesara, porudžbina za preuzimanje</p>
           <h3 class="card-name">Mesara Ražanj</h3>
           <a class="card-link" href="/plus/mesara-razanj/">Otvori primer<span class="sr"> za Mesara Ražanj</span></a>

@@ -332,6 +332,9 @@
   .card[data-paket="1"] .card-pkg { opacity: .78; }
   .brand { min-height: 44px; align-items: center; }
   .menu-btn { min-height: 44px; }
+  /* Snimak ekrana u kartici primera */
+  .card-shot { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: top;
+    border-radius: 4px; margin: 4px 0 16px; box-shadow: 0 0 0 1px rgba(0,0,0,.12); }
 </style>
 </head>
 <body>
@@ -405,18 +408,21 @@
       <ul class="cards">
         <li class="card" data-paket="3" data-group="lepota" style="--bg:#F2E8D5;--ac:#5C1A1B;--fg:#1F3B2D">
           <p class="card-pkg">Paket 3 · Plus</p>
+          <img class="card-shot" src="/assets/primeri/plus-pomada-berbernica-280.webp" srcset="/assets/primeri/plus-pomada-berbernica-280.webp 280w, /assets/primeri/plus-pomada-berbernica.webp 560w" sizes="(max-width: 559px) calc(100vw - 84px), (max-width: 899px) calc(50vw - 60px), 260px" width="560" height="777" loading="lazy" decoding="async" alt="Kako izgleda sajt Berbernica Pomada na telefonu">
           <p class="card-craft">Berbernica, 2 berberina</p>
           <h3 class="card-name">Berbernica Pomada</h3>
           <a class="card-link" href="/plus/pomada-berbernica/">Otvori primer<span class="sr"> za Berbernica Pomada</span></a>
         </li>
         <li class="card" data-paket="1" data-group="lepota" style="--bg:#141414;--ac:#C9A227;--fg:#F6F5F1">
           <p class="card-pkg">Paket 1 · Osnovni</p>
+          <img class="card-shot" src="/assets/primeri/berbernica-brko-280.webp" srcset="/assets/primeri/berbernica-brko-280.webp 280w, /assets/primeri/berbernica-brko.webp 560w" sizes="(max-width: 559px) calc(100vw - 84px), (max-width: 899px) calc(50vw - 60px), 260px" width="560" height="777" loading="lazy" decoding="async" alt="Kako izgleda sajt Berbernica Brko na telefonu">
           <p class="card-craft">Berbernica</p>
           <h3 class="card-name">Berbernica Brko</h3>
           <a class="card-link" href="/berbernica-brko/">Otvori primer<span class="sr"> za Berbernica Brko</span></a>
         </li>
         <li class="card" data-paket="1" data-group="lepota" style="--bg:#F3E3DC;--ac:#4A2C3A;--fg:#111111">
           <p class="card-pkg">Paket 1 · Osnovni</p>
+          <img class="card-shot" src="/assets/primeri/salon-lana-280.webp" srcset="/assets/primeri/salon-lana-280.webp 280w, /assets/primeri/salon-lana.webp 560w" sizes="(max-width: 559px) calc(100vw - 84px), (max-width: 899px) calc(50vw - 60px), 260px" width="560" height="777" loading="lazy" decoding="async" alt="Kako izgleda sajt Studio Lana na telefonu">
           <p class="card-craft">Ženski frizer</p>
           <h3 class="card-name">Studio Lana</h3>
           <a class="card-link" href="/salon-lana/">Otvori primer<span class="sr"> za Studio Lana</span></a>
