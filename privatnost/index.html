@@ -117,7 +117,7 @@
   .plan.featured .plan-block h4 { color: var(--paper); }
   .plan.featured :focus-visible { outline-color: var(--paper); }
   .plan-num { font-family: var(--serif); font-size: 3.6rem; line-height: .8; }
-  .plan-tag { position: absolute; top: 0; right: 0; background: var(--signal); color: var(--ink); font-size: .82rem; font-weight: 600; padding: 7px 12px; border-bottom-left-radius: var(--radius); }
+  .plan-tag { position: absolute; top: 0; right: 0; background: var(--signal); color: var(--ink); font-size: .875rem; font-weight: 600; padding: 7px 12px; border-bottom-left-radius: var(--radius); }
   .plan h3 { font-size: 2.1rem; line-height: 1.02; margin-top: 18px; }
   .plan-sub { color: var(--gray); margin-top: 8px; }
   .plan-block { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--rule); }
@@ -129,7 +129,7 @@
   .plan-price { margin-top: auto; padding-top: 26px; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
   .price { font-family: var(--serif); font-size: 2rem; line-height: 1; }
   .price small { font-family: var(--sans); font-size: .9rem; color: inherit; opacity: .75; }
-  .price .upkeep { display: block; font-family: var(--sans); font-size: .85rem; line-height: 1.4; opacity: .8; margin-top: 8px; max-width: 30ch; }
+  .price .upkeep { display: block; font-family: var(--sans); font-size: .875rem; line-height: 1.4; opacity: .8; margin-top: 8px; max-width: 30ch; }
   .plan-link { font-weight: 600; text-underline-offset: 4px; text-decoration-thickness: 1.5px; display: inline-block; padding: 10px 0; }
   .plan.featured .plan-link { color: var(--paper); }
 
@@ -205,7 +205,7 @@
   .dot { display: inline-block; width: .19em; height: .19em; margin-left: .05em; background: var(--plava); vertical-align: baseline; }
   .label, .eyebrow, .filter-label, .sk-label, .plan-block h4 {
     font-family: var(--sans); font-weight: 600; text-transform: uppercase; letter-spacing: .08em;
-    color: var(--plava); font-size: .78rem; line-height: 1.4;
+    color: var(--plava); font-size: .875rem; line-height: 1.4;
   }
   .eyebrow { margin-bottom: 18px; }
   .hero h1 { letter-spacing: -.03em; }
@@ -277,7 +277,7 @@
   @media (min-width: 860px) and (max-width: 1139px) { .nav .nav-mail { display: none; } }
   .foot-meta .foot-line a { white-space: nowrap; }
   .foot-links { margin-top: 28px; padding-top: 22px; border-top: 1px solid rgba(245,245,242,.12); display: grid; gap: 10px; }
-  .foot-label { font-family: var(--sans); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; line-height: 1.4; color: var(--siva-tamno); }
+  .foot-label { font-family: var(--sans); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: .875rem; line-height: 1.4; color: var(--siva-tamno); }
   .foot-links ul { display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: .95rem; }
 
   .hero-actions { display: grid; gap: 12px; margin-top: 32px; }
@@ -294,6 +294,8 @@
   .ex-note-sm { color: var(--gray); max-width: 52ch; }
   .plan-alt { margin-top: 16px; color: var(--gray); max-width: 60ch; }
   .plan-one { max-width: 560px; }
+  .brand { min-height: 44px; align-items: center; }
+  .menu-btn { min-height: 44px; }
 </style>
 </head>
 <body>
@@ -304,7 +306,7 @@
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meni"><span class="bars" aria-hidden="true"></span>Meni</button>
     <nav class="nav" id="meni" aria-label="Glavna navigacija">
       <ul>
-        <li><a href="/#ukljuceno">Šta je uključeno</a></li>
+        <li><a href="/#ukljuceno">Šta dobijate</a></li>
         <li><a href="/#kako-radimo">Kako radimo</a></li>
         <li><a href="/paketi/">Paketi</a></li>
         <li><a href="/primeri/">Primeri</a></li>
@@ -330,14 +332,14 @@
         <!-- NACRT: tekst je napisan prema tome kako sajt sada radi. Zamenite ga svojim ili ga proverite pre objave, pa obrišite ovaj okvir. -->
         <p class="draft-note"><strong>Nacrt.</strong> Ovaj tekst treba proveriti pre objave.</p>
         <h2>Ko je odgovoran za Vaše podatke</h2>
-        <p>Rukovalac podacima je [ime i prezime ili naziv firme, adresa], Beograd. Za sva pitanja o podacima pišite na <a href="mailto:kontakt@opsforma.rs">kontakt@opsforma.rs</a>.</p>
+        <p>Rukovalac podacima je [RUKOVALAC PODACIMA — dopuniti]. Za sva pitanja o podacima pišite na <a href="mailto:kontakt@opsforma.rs">kontakt@opsforma.rs</a>.</p>
         <h2>Koje podatke primamo</h2>
         <ul>
           <li>Kroz kontakt formu: ime, telefon, naziv firme, poruku i, ako ih upišete, naziv radnje i link na Google mapu.</li>
           <li>Kad nam pišete mejlom ili na Instagramu: ono što nam pošaljete i Vašu adresu ili profil.</li>
         </ul>
         <h2>Zašto ih koristimo</h2>
-        <p>Samo da Vam odgovorimo, dogovorimo posao i, ako to tražite, napravimo besplatan nacrt sajta. Ne šaljemo reklame, ne prodajemo podatke i ne delimo ih radi marketinga. Osnov za obradu je Vaš zahtev, odnosno radnje pre zaključenja ugovora.</p>
+        <p>Samo da Vam odgovorimo na upit, dogovorimo posao i, ako to tražite, napravimo besplatan nacrt sajta. Ne šaljemo reklame, ne prodajemo podatke i ne delimo ih radi marketinga. Osnov za obradu je Vaš zahtev, odnosno radnje pre zaključenja ugovora.</p>
         <h2>Ko još vidi podatke</h2>
         <ul>
           <li>Web3Forms, servis koji poruku iz forme prosleđuje na naš mejl.</li>
@@ -347,13 +349,13 @@
         </ul>
         <p>Ovi servisi mogu da obrađuju podatke i van Srbije.</p>
         <h2>Koliko dugo čuvamo podatke</h2>
-        <p>Dok traje dogovor. Ako ne postanete klijent, poruke brišemo najkasnije 12 meseci posle poslednjeg javljanja. Podatke klijenata čuvamo onoliko koliko traže propisi, na primer za račune.</p>
+        <p>Dok traje komunikacija, a najduže 12 meseci posle poslednjeg javljanja, ako ne postanete klijent. Podatke klijenata čuvamo onoliko koliko traže propisi, na primer za račune.</p>
         <h2>Kolačići i statistika</h2>
-        <p>Sajt ne koristi kolačiće za praćenje ni za reklame. Fontovi se učitavaju sa našeg sajta, pa se pri otvaranju stranice ništa ne šalje Google-u. Za broj poseta koristimo Cloudflare Web Analytics, koji ne koristi kolačiće i ne prati pojedinačne posetioce.</p>
+        <p>Sajt ne koristi kolačiće za praćenje ni za reklame, pa nema ni obaveštenja o kolačićima. Fontovi se učitavaju sa našeg sajta, pa se pri otvaranju stranice ništa ne šalje Google-u. Za broj poseta koristimo Cloudflare Web Analytics, koji ne koristi kolačiće i ne prati pojedinačne posetioce.</p>
         <h2>Primeri sajtova</h2>
         <p>Primeri na ovom sajtu su za izmišljene firme. Podatke koje upišete u forme za zakazivanje i porudžbine u primerima ne primamo ni mi ni iko drugi. Neki primeri učitavaju Google fontove ili Google mapu, pa Google tada vidi Vašu IP adresu.</p>
         <h2>Vaša prava</h2>
-        <p>Možete da tražite uvid u svoje podatke, ispravku, brisanje ili ograničenje obrade, i da se usprotivite obradi. Pišite nam na <a href="mailto:kontakt@opsforma.rs">kontakt@opsforma.rs</a>; odgovaramo najkasnije u roku od 30 dana. Ako mislite da Vaše podatke ne obrađujemo kako treba, možete da podnesete pritužbu Povereniku za informacije od javnog značaja i zaštitu podataka o ličnosti (<a href="https://www.poverenik.rs" rel="noopener">poverenik.rs</a>).</p>
+        <p>Možete da tražite uvid u svoje podatke, ispravku, brisanje ili ograničenje obrade, i da se usprotivite obradi. Pišite nam na Viber, na Instagramu <a href="https://www.instagram.com/opsformars/" rel="noopener">@opsformars</a> ili na <a href="mailto:kontakt@opsforma.rs">kontakt@opsforma.rs</a>; odgovaramo najkasnije u roku od 30 dana. Ako mislite da Vaše podatke ne obrađujemo kako treba, možete da podnesete pritužbu Povereniku za informacije od javnog značaja i zaštitu podataka o ličnosti (<a href="https://www.poverenik.rs" rel="noopener">poverenik.rs</a>).</p>
         <h2>Izmene</h2>
         <p>Ako promenimo način rada sa podacima, ažuriramo ovu stranu. Poslednja izmena: [datum objave].</p>
       </div>

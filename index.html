@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://opsforma.rs/">
-<title>opsforma | Sajtovi i online zakazivanje za firme</title>
-<meta name="description" content="opsforma: pravimo sajtove za firme koje žele bolju vidljivost na internetu: brzi na telefonu, sa cenama, radnim vremenom, mapom, dugmetom za poziv i po potrebi online zakazivanjem ili porudžbinama.">
+<title>Izrada sajta za male firme — od 19.900 din | opsforma</title>
+<meta name="description" content="Sajt za berbernicu, frizera, perionicu, servis ili radnju: cene, radno vreme, mapa i dugme za poziv i Viber. Gotov za 3 dana.">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -14,8 +14,8 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="opsforma">
 <meta property="og:url" content="https://opsforma.rs/">
-<meta property="og:title" content="opsforma | Sajtovi i online zakazivanje za firme">
-<meta property="og:description" content="opsforma: pravimo sajtove za firme koje žele bolju vidljivost na internetu: brzi na telefonu, sa cenama, radnim vremenom, mapom, dugmetom za poziv i po potrebi online zakazivanjem ili porudžbinama.">
+<meta property="og:title" content="Izrada sajta za male firme — od 19.900 din | opsforma">
+<meta property="og:description" content="Sajt za berbernicu, frizera, perionicu, servis ili radnju: cene, radno vreme, mapa i dugme za poziv i Viber. Gotov za 3 dana.">
 <meta property="og:image" content="https://opsforma.rs/og-slika-1200x630.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -27,13 +27,14 @@
   "@type": "ProfessionalService",
   "name": "opsforma",
   "url": "https://opsforma.rs/",
+  "logo": "https://opsforma.rs/icon-512.png",
+  "image": "https://opsforma.rs/og-slika-1200x630.png",
+  "description": "Izrada sajtova za male firme: berbernice, frizere, perionice, servise i radnje.",
   "email": "kontakt@opsforma.rs",
-  "areaServed": "Beograd",
+  "priceRange": "19.900–99.900 RSD",
   "sameAs": [
     "https://www.instagram.com/opsformars/"
-  ],
-  "image": "https://opsforma.rs/og-slika-1200x630.png",
-  "description": "Sajtovi, online zakazivanje i porudžbine za radnje i firme u Beogradu."
+  ]
 }
 </script>
 <link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -330,7 +331,7 @@
   @media (min-width: 900px) { .ex-custom { grid-template-columns: 1fr auto; gap: 40px; } }
   .ex-note a { text-underline-offset: 4px; text-decoration-color: var(--signal); text-decoration-thickness: 2px; white-space: nowrap; }
   .card-pkg {
-    align-self: flex-start; font-size: .78rem; font-weight: 600; letter-spacing: .01em;
+    align-self: flex-start; font-size: .875rem; font-weight: 600; letter-spacing: .01em;
     padding: 4px 9px; border: 1px solid currentColor; border-radius: 999px; margin-bottom: 14px; margin-right: 52px;
   }
   .card[data-paket="1"] .card-pkg { opacity: .78; }
@@ -359,7 +360,7 @@
   .dot { display: inline-block; width: .19em; height: .19em; margin-left: .05em; background: var(--plava); vertical-align: baseline; }
   .label, .eyebrow, .filter-label, .sk-label, .plan-block h4 {
     font-family: var(--sans); font-weight: 600; text-transform: uppercase; letter-spacing: .08em;
-    color: var(--plava); font-size: .78rem; line-height: 1.4;
+    color: var(--plava); font-size: .875rem; line-height: 1.4;
   }
   .eyebrow { margin-bottom: 18px; }
   .hero h1 { letter-spacing: -.03em; }
@@ -431,7 +432,7 @@
   @media (min-width: 860px) and (max-width: 1139px) { .nav .nav-mail { display: none; } }
   .foot-meta .foot-line a { white-space: nowrap; }
   .foot-links { margin-top: 28px; padding-top: 22px; border-top: 1px solid rgba(245,245,242,.12); display: grid; gap: 10px; }
-  .foot-label { font-family: var(--sans); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; line-height: 1.4; color: var(--siva-tamno); }
+  .foot-label { font-family: var(--sans); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: .875rem; line-height: 1.4; color: var(--siva-tamno); }
   .foot-links ul { display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: .95rem; }
 
   /* Besplatan nacrt iznad forme */
@@ -443,14 +444,71 @@
   .form-note a { text-underline-offset: 3px; }
   /* Primeri na naslovnoj */
   .ex-all { margin-top: 28px; }
-  /* Pozovite / Viber (HTML je zakomentarisan, CSS je spreman) */
+  /* Pozovite / Viber u kontaktu (HTML je zakomentarisan, CSS je spreman) */
   .call-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; max-width: 420px; }
   .call-actions .btn { min-height: 56px; font-size: 1.0625rem; }
+
+  /* ===== Izmene posle analize, oktobar 2026 ===== */
+  /* Viber dugmad: skrivena dok se u /assets/viber.js ne upiše broj */
+  [data-viber][hidden], [data-bez-vibera][hidden] { display: none !important; }
+
+  /* Hero */
+  .hero h1 { font-size: clamp(2.5rem, 9vw, 4.75rem); line-height: 1; max-width: 16ch; }
+  .hero h1 .h1-price { display: block; color: var(--plava); }
+  .nowrap { white-space: nowrap; }
+  .brand { min-height: 44px; align-items: center; }
+  .menu-btn { min-height: 44px; }
+  .hero-meta { margin-top: 16px; color: var(--gray); font-size: 1rem; }
+  .hero-shot { width: 100%; max-width: 300px; justify-self: center; margin: 0;
+    border: 1.5px solid var(--grafit); border-radius: 30px; padding: 10px; background: #fff; }
+  .hero-shot img { width: 100%; height: auto; border-radius: 20px; }
+  @media (max-width: 899px) { .hero-shot { max-width: 240px; } }
+
+  /* Paketi */
+  .pk-price { display: block; margin-top: 6px; font-family: var(--head); font-weight: 800; font-size: 1.5rem;
+    line-height: 1.15; letter-spacing: -.02em; color: var(--grafit); }
+  .pk-price small { font-family: var(--sans); font-weight: 500; font-size: 1rem; letter-spacing: 0; color: var(--gray); }
+  @media (min-width: 900px) { .pk-list { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 1180px) { .pk-list { grid-template-columns: repeat(5, 1fr); } }
+  .pay { margin-top: 40px; padding: clamp(20px, 3vw, 28px); background: #fff; border-left: 6px solid var(--plava); display: grid; gap: 10px; }
+  .pay h3 { font-size: 1.5rem; line-height: 1.15; }
+  .pay p { max-width: 70ch; }
+
+  /* Česta pitanja */
+  .faq { border-top: 1px solid var(--grafit); }
+  .faq details { border-bottom: 1px solid var(--linija); }
+  .faq summary { cursor: pointer; list-style: none; padding: 18px 40px 18px 0; position: relative; font-weight: 600; min-height: 44px; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; position: absolute; right: 4px; top: 12px; font-size: 1.8rem; line-height: 1; }
+  .faq details[open] summary::after { content: "−"; }
+  .faq details p { padding: 0 0 20px; max-width: 60ch; }
+  .faq-more { margin-top: 24px; }
+  .faq-more a { font-weight: 600; text-underline-offset: 4px; text-decoration-color: var(--plava); text-decoration-thickness: 2px; display: inline-block; padding: 10px 0; }
+
+  /* Ko smo mi */
+  .about { padding: 40px 0; }
+  .about-box { display: grid; gap: 10px; padding: clamp(20px, 3vw, 28px); border: 1.5px solid var(--grafit); border-radius: var(--radius); background: #fff; }
+  .about-box h3 { font-size: clamp(1.4rem, 3vw, 1.75rem); line-height: 1.1; }
+  .about-box p { max-width: 70ch; }
+  @media (min-width: 900px) { .about { padding: 56px 0; } .about-box { grid-template-columns: 4fr 8fr; gap: 48px; align-items: center; } }
+
+  /* Kontakt */
+  .contact-lead { font-size: 1.1875rem; max-width: 36ch; margin-top: 18px; }
+  .contact-lead + .contact-text { font-size: 1.0625rem; color: var(--gray); }
+  .req { color: var(--gray); font-weight: 400; }
+
+  /* Primeri na naslovnoj, sa snimkom ekrana */
+  .card-shot { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: top;
+    border-radius: 4px; margin: 4px 0 16px; box-shadow: 0 0 0 1px rgba(0,0,0,.12); }
+
+  /* Traka na dnu ekrana (samo telefon) */
   .call-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
-    padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom)); background: var(--papir); border-top: 1px solid var(--linija); }
-  .call-bar .btn { min-height: 56px; font-size: 1.0625rem; }
-  body:has(.call-bar) { padding-bottom: calc(78px + env(safe-area-inset-bottom)); }
-  @media (min-width: 860px) { .call-bar { display: none; } body:has(.call-bar) { padding-bottom: 0; } }
+    padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom)); background: var(--papir); border-top: 1px solid var(--linija);
+    transition: transform .2s ease, visibility .2s; }
+  .call-bar .btn { min-height: 52px; font-size: 1.0625rem; padding: 0 12px; }
+  .call-bar.is-hidden { transform: translateY(110%); visibility: hidden; }
+  body:has(.call-bar) { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+  @media (min-width: 768px) { .call-bar { display: none; } body:has(.call-bar) { padding-bottom: 0; } }
 </style>
 </head>
 <body>
@@ -462,9 +520,10 @@
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meni"><span class="bars" aria-hidden="true"></span>Meni</button>
     <nav class="nav" id="meni" aria-label="Glavna navigacija">
       <ul>
-        <li><a href="#ukljuceno">Šta je uključeno</a></li>
+        <li><a href="#ukljuceno">Šta dobijate</a></li>
         <li><a href="#kako-radimo">Kako radimo</a></li>
         <li><a href="#paketi">Paketi</a></li>
+        <li><a href="#pitanja">Pitanja</a></li>
         <li><a href="/primeri/">Primeri</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
         <li class="nav-mail"><a href="mailto:kontakt@opsforma.rs">kontakt@opsforma.rs</a></li>
@@ -477,55 +536,36 @@
   <section class="hero" aria-labelledby="naslov">
     <div class="wrap hero-grid">
       <div>
-        <h1 id="naslov">Budite vidljivi tamo gde Vas traže<span class="dot" aria-hidden="true"></span></h1>
-        <p class="hero-text">Pravimo sajtove za firme koje žele bolju vidljivost na internetu: brze na telefonu, sa jasnim cenama, radnim vremenom, mapom i dugmetom za poziv. Po potrebi i sa online zakazivanjem ili porudžbinama. Osnovni sajt je gotov za 3 dana od kad dobijemo Vaše podatke.</p>
+        <h1 id="naslov">Sajt za Vašu radnju za 3 dana. <span class="h1-price">Od 19.900 <span class="nowrap">dinara<span class="dot" aria-hidden="true"></span></span></span></h1>
+        <p class="hero-text">Za berbernice, frizere, perionice, servise i male radnje. Cene, radno vreme, mapa i dugme za poziv i Viber, da Vas mušterije nađu na telefonu i odmah se jave.</p>
+        <p class="hero-meta">Gotovo za 3 dana · 2 kruga izmena uključena u cenu</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#primeri">Pogledajte primere</a>
-          <a class="btn btn-quiet" href="#nacrt">Besplatan nacrt za Vašu radnju</a>
+          <a class="btn btn-primary" href="#kontakt" data-viber hidden>Pišite nam na Viber</a>
+          <a class="btn btn-primary" href="#kontakt" data-bez-vibera>Pošaljite upit</a>
+          <a class="btn btn-quiet" href="#primeri">Pogledajte primere</a>
         </div>
       </div>
-      <div class="sketch" aria-hidden="true">
-        <div class="sketch-screen">
-          <div>
-            <p class="sk-name">Vaša radnja</p>
-            <p class="sk-open">Otvoreno danas</p>
-          </div>
-          <div>
-            <p class="sk-label">Cenovnik</p>
-            <div class="sk-row"><span class="sk-bar" style="width:58%"></span><span class="sk-bar short"></span></div>
-            <div class="sk-row"><span class="sk-bar" style="width:44%"></span><span class="sk-bar short"></span></div>
-            <div class="sk-row"><span class="sk-bar" style="width:66%"></span><span class="sk-bar short"></span></div>
-          </div>
-          <div>
-            <p class="sk-label">Radno vreme</p>
-            <div class="sk-row"><span class="sk-bar" style="width:30%"></span><span class="sk-bar short" style="width:48px"></span></div>
-            <div class="sk-row"><span class="sk-bar" style="width:24%"></span><span class="sk-bar short" style="width:48px"></span></div>
-          </div>
-          <div class="sk-map"></div>
-          <div class="sk-actions">
-            <span class="sk-btn sk-call">Pozovite</span>
-            <span class="sk-btn sk-viber">Viber</span>
-          </div>
-        </div>
-      </div>
+      <figure class="hero-shot">
+        <img src="/assets/primeri/hero-berbernica-brko.webp" srcset="/assets/primeri/hero-berbernica-brko-280.webp 280w, /assets/primeri/hero-berbernica-brko.webp 560w" sizes="(max-width: 899px) 220px, 280px" width="560" height="1135" alt="Primer sajta za berbernicu na telefonu">
+      </figure>
     </div>
   </section>
 
   <section id="ukljuceno" aria-labelledby="ukljuceno-naslov">
     <div class="wrap sec-grid">
       <div>
-        <h2 class="sec-title" id="ukljuceno-naslov">Šta je uključeno<span class="dot" aria-hidden="true"></span></h2>
+        <h2 class="sec-title" id="ukljuceno-naslov">Šta dobija Vaša radnja<span class="dot" aria-hidden="true"></span></h2>
         <p class="sec-lead">Sve što mušterija traži kad Vas nađe na telefonu.</p>
       </div>
       <ul class="incl">
         <li><h3>Radi na telefonu</h3><p>Većina ljudi Vas traži sa telefona, pa sajt pravimo prvo za mali ekran.</p></li>
         <li><h3>Cenovnik</h3><p>Usluge i cene, da ljudi znaju šta da očekuju pre nego što pozovu.</p></li>
         <li><h3>Radno vreme</h3><p>Po danima, lako za izmenu kad se nešto promeni.</p></li>
-        <li><h3>Google mapa</h3><p>Adresa i mapa, da Vas nađu bez dodatnog pitanja.</p></li>
+        <li><h3>Google mape</h3><p>Adresa i mapa, da Vas nađu bez dodatnog pitanja.</p></li>
         <li><h3>Dugme za poziv i Viber</h3><p>Jedan dodir i zovu Vas ili Vam pišu na Viberu.</p></li>
         <li><h3>Kontakt forma</h3><p>Za upite i zakazivanje. Poruka stiže Vama na mejl.</p></li>
         <li><h3>Podešavanje domena</h3><p>Pomažemo oko izbora adrese sajta i sve podesimo.</p></li>
-        <li><h3>Pomoć da Vas nađu na Guglu</h3><p>Osnovna podešavanja za pretragu i pomoć oko profila firme na Google mapama.</p></li>
+        <li><h3>Pomoć da Vas nađu na Google-u</h3><p>Osnovna podešavanja za pretragu i pomoć oko profila firme na Google mapama.</p></li>
       </ul>
     </div>
   </section>
@@ -533,14 +573,14 @@
   <section id="kako-radimo" class="steps-wide" aria-labelledby="kako-naslov">
     <div class="wrap">
       <div class="sec-grid">
-        <h2 class="sec-title" id="kako-naslov">Kako radimo<span class="dot" aria-hidden="true"></span></h2>
+        <h2 class="sec-title" id="kako-naslov">Kako radimo: sajt za 3 dana<span class="dot" aria-hidden="true"></span></h2>
         <p class="sec-lead" style="margin-top:0;align-self:end;max-width:46ch">Četiri koraka. Vi nam date podatke, mi radimo ostalo.</p>
       </div>
       <ol class="steps">
         <li><span class="step-num" aria-hidden="true">1</span><h3>Kratak razgovor</h3><p>Čujemo se telefonom ili porukom i dogovorimo šta Vam treba.</p></li>
         <li><span class="step-num" aria-hidden="true">2</span><h3>Upitnik</h3><p>Pošaljemo Vam kratak upitnik: usluge, cene, radno vreme i slike. Popunite kad stignete.</p></li>
-        <li><span class="step-num" aria-hidden="true">3</span><h3>Sajt za 3 dana</h3><p>Tri dana od kad dobijemo Vaše podatke, šaljemo Vam link da pogledate sajt. Sa zakazivanjem ili porudžbinama treba nekoliko dana više.</p></li>
-        <li><span class="step-num" aria-hidden="true">4</span><h3>Izmene i predaja</h3><p>Imate dva kruga izmena. Posle toga sajt ide na Vaš domen i predajemo Vam ga.</p></li>
+        <li><span class="step-num" aria-hidden="true">3</span><h3>Sajt za 3 dana</h3><p>Tri dana čim dobijemo Vaše podatke, šaljemo Vam link da pogledate sajt. Sa zakazivanjem ili porudžbinama treba nekoliko dana više.</p></li>
+        <li><span class="step-num" aria-hidden="true">4</span><h3>Izmene i predaja</h3><p>U cenu su uključena dva kruga izmena. Jedan krug je jedna lista izmena koju nam pošaljete odjednom. Posle toga sajt ide na Vaš domen i predajemo Vam ga.</p></li>
       </ol>
     </div>
   </section>
@@ -548,70 +588,66 @@
   <section id="paketi" aria-labelledby="paketi-naslov">
     <div class="wrap">
       <div class="sec-grid">
-        <h2 class="sec-title" id="paketi-naslov">Paketi<span class="dot" aria-hidden="true"></span></h2>
-        <p class="sec-lead" style="margin-top:0;align-self:end;max-width:46ch">Svaki radi sa onim što već koristite: telefonom, Viberom, Gmailom i Google Kalendarom.</p>
+        <h2 class="sec-title" id="paketi-naslov">Cene izrade sajta<span class="dot" aria-hidden="true"></span></h2>
+        <p class="sec-lead" style="margin-top:0;align-self:end;max-width:46ch">Plaćate jednom. Sajt i domen su Vaši. Održavanje je po želji, ne morate ga uzeti.</p>
       </div>
       <ol class="pk-list" style="margin-top:48px">
-        <li><span class="step-num" aria-hidden="true">1</span><h3>Osnovni <span class="pk-price">od 19.900 RSD</span></h3><p>Sajt sa cenama, radnim vremenom, mapom, pozivom i Viberom. Poruke iz forme stižu Vam na mejl.</p></li>
-        <li><span class="step-num" aria-hidden="true">2</span><h3>Zakazivanje ili porudžbine <span class="pk-price">od 34.900 RSD</span></h3><p>Mušterije same biraju slobodan termin ili naruče unapred. Vi ujutru pogledate kalendar na telefonu.</p></li>
-        <li><span class="step-num" aria-hidden="true">3</span><h3>Plus <span class="pk-price">od 49.900 RSD</span></h3><p>Više radnika ili mesta, podsetnik dan ranije, cenovnik koji sami menjate, sajt i na engleskom.</p></li>
-        <li><span class="step-num" aria-hidden="true">4–5</span><h3>Online prodavnica <span class="pk-price">od 59.900 RSD</span></h3><p>Katalog, korpa i poručivanje. Plaćanje pouzećem, uplatnicom ili bankovnim transferom, a u paketu Plus i karticom.</p></li>
+        <li><span class="step-num" aria-hidden="true">1</span><h3>Osnovni <span class="pk-price"><small>od</small> 19.900 <small>RSD</small></span></h3><p>Sajt sa cenama, radnim vremenom, mapom, pozivom i Viberom. Poruke iz forme stižu Vam na mejl.</p></li>
+        <li><span class="step-num" aria-hidden="true">2</span><h3>Zakazivanje ili porudžbine <span class="pk-price"><small>od</small> 34.900 <small>RSD</small></span></h3><p>Mušterije same biraju slobodan termin ili naruče unapred. Vi ujutru pogledate kalendar na telefonu.</p></li>
+        <li><span class="step-num" aria-hidden="true">3</span><h3>Plus <span class="pk-price"><small>od</small> 49.900 <small>RSD</small></span></h3><p>Više radnika ili mesta, podsetnik dan ranije, cenovnik koji sami menjate, sajt i na engleskom.</p></li>
+        <li><span class="step-num" aria-hidden="true">4</span><h3>Prodavnica <span class="pk-price"><small>od</small> 59.900 <small>RSD</small></span></h3><p>Katalog, korpa i poručivanje. Plaćanje pouzećem, uplatnicom ili bankovnim transferom, a u paketu Prodavnica Plus i karticom.</p></li>
+        <li><span class="step-num" aria-hidden="true">5</span><h3>Prodavnica Plus <span class="pk-price"><small>od</small> 99.900 <small>RSD</small></span></h3><p>Sve iz paketa Prodavnica, plus plaćanje karticom preko Vaše banke, veličine i boje proizvoda i stanje zaliha.</p></li>
       </ol>
-      <p class="pk-more"><a class="btn btn-quiet" href="./paketi/">Detaljno o paketima</a></p>
+      <div class="pay">
+        <h3>Kako se plaća<span class="dot" aria-hidden="true"></span></h3>
+        <p>Deo plaćate unapred, pre početka rada, a ostatak kad Vam predamo gotov sajt. Plaćate gotovinom ili uplatom na račun.</p>
+        <p>U cenu su uključena dva kruga izmena. Svaki sledeći krug izmena je 2.000 din.</p>
+        <p>Domen .rs plaćate posebno, oko 2.700 din godišnje.</p>
+      </div>
+      <p class="pk-more"><a class="btn btn-quiet" href="/paketi/">Detaljno o paketima</a></p>
     </div>
   </section>
 
-  <section id="primeri" aria-labelledby="primeri-naslov">
-    <div class="wrap">
-      <div class="ex-head">
-        <h2 class="sec-title" id="primeri-naslov">Primeri<span class="dot" aria-hidden="true"></span></h2>
-        <p class="ex-note">Ovo su primeri za izmišljene firme, da vidite kako bi sajt mogao da izgleda za Vaš zanat. Primeri sa zakazivanjem i porudžbinama rade kao pravi, samo su termini izmišljeni. Nijedan primer nije konačan dizajn: boje, raspored, tekst i funkcije prilagođavamo Vama. <a href="/paketi/">Šta je u kom paketu</a></p>
-      </div>
-      <ul class="cards" id="cards">
-        <li class="card" data-paket="3" data-group="lepota" style="--bg:#F2E8D5;--ac:#5C1A1B;--fg:#1F3B2D">
-          <p class="card-pkg">Paket 3 · Plus</p>
-          <p class="card-craft">Berbernica, 2 berberina</p>
-          <h3 class="card-name">Berbernica Pomada</h3>
-          <a class="card-link" href="./plus/pomada-berbernica/">Otvori primer<span class="sr"> za Berbernica Pomada</span></a>
-        </li>
-        <li class="card" data-paket="2" data-group="auto" style="--bg:#16324F;--ac:#7FB7BE;--fg:#F0F4F8">
-          <p class="card-pkg">Paket 2 · zakazivanje</p>
-          <p class="card-craft">Vulkanizer, sezonska zamena</p>
-          <h3 class="card-name">Vulkanizer Ventil</h3>
-          <a class="card-link" href="./plus/vulkanizer-ventil/">Otvori primer<span class="sr"> za Vulkanizer Ventil</span></a>
-        </li>
-        <li class="card" data-paket="2" data-group="hrana" style="--bg:#1B2F5B;--ac:#D9A441;--fg:#FBF6EC">
-          <p class="card-pkg">Paket 2 · porudžbine</p>
-          <p class="card-craft">Pekara, porudžbine za slave</p>
-          <h3 class="card-name">Pekara Kvasac</h3>
-          <a class="card-link" href="./plus/pekara-kvasac/">Otvori primer<span class="sr"> za Pekara Kvasac</span></a>
-        </li>
-        <li class="card" data-paket="2" data-group="majstori" style="--bg:#1E2A2F;--ac:#B5651D;--fg:#F4F1EC">
-          <p class="card-pkg">Paket 2 · zakazivanje</p>
-          <p class="card-craft">Vodoinstalater, zahtev za izlazak</p>
-          <h3 class="card-name">Vodoinstalater Slavina</h3>
-          <a class="card-link" href="./plus/vodoinstalater-slavina/">Otvori primer<span class="sr"> za Vodoinstalater Slavina</span></a>
-        </li>
-        <li class="card" data-paket="3" data-group="zdravlje" style="--bg:#10372E;--ac:#FF8552;--fg:#F5F1E6">
-          <p class="card-pkg">Paket 3 · Plus</p>
-          <p class="card-craft">Fizioterapija</p>
-          <h3 class="card-name">Fizio kabinet Ravnoteža</h3>
-          <a class="card-link" href="./plus/fizio-ravnoteza/">Otvori primer<span class="sr"> za Fizio kabinet Ravnoteža</span></a>
-        </li>
-        <li class="card" data-paket="4" data-group="prodavnice" style="--bg:#F6F1EA;--ac:#E2733D;--fg:#2A1D17">
-          <p class="card-pkg">Paket 4 · Prodavnica</p>
-          <p class="card-craft">Kafa, online prodavnica</p>
-          <h3 class="card-name">Pržionica kafe Svitanje</h3>
-          <a class="card-link" href="./prodavnica/przionica-svitanje/">Otvori primer<span class="sr"> za Pržionica kafe Svitanje</span></a>
-        </li>
-      </ul>
-      <p class="ex-all"><a class="btn btn-primary" href="/primeri/">Pogledajte svih 85 primera</a></p>
-      <div class="ex-custom">
-        <div>
-          <h3 class="ex-custom-title">Niste pronašli ono što tražite<span class="dot" aria-hidden="true"></span></h3>
-          <p>Primeri su tu da pokažu šta je moguće, a ne da Vas ograniče. Svaki dizajn menjamo po Vašoj želji: boje, fotografije, raspored, tekst i funkcije. Ako imate ideju koju primeri ne pokrivaju, opišite nam je i mi ćemo je realizovati.</p>
+  <section id="pitanja" aria-labelledby="pitanja-naslov">
+    <div class="wrap sec-grid">
+      <h2 class="sec-title" id="pitanja-naslov">Česta pitanja<span class="dot" aria-hidden="true"></span></h2>
+      <div>
+        <div class="faq">
+          <details>
+            <summary>Koliko košta sajt?</summary>
+            <p>Osnovni sajt je od 19.900 din, sajt sa zakazivanjem ili porudžbinama od 34.900 din, a online prodavnica od 59.900 din. Tačan iznos i rok dogovaramo pre početka rada, kad vidimo šta Vam treba. Nema skrivenih troškova.</p>
+          </details>
+          <details>
+            <summary>Kako se plaća?</summary>
+            <p>Deo plaćate unapred, pre početka rada, a ostatak kad Vam predamo gotov sajt. Iznos avansa dogovaramo pre početka. Plaćate gotovinom ili uplatom na račun.</p>
+          </details>
+          <details>
+            <summary>Šta nije uključeno u cenu?</summary>
+            <p>Domen, odnosno adresa sajta. Domen .rs košta oko 2.700 din godišnje i registruje se na Vaše ime ili firmu, pa je zauvek Vaš. Ako želite SMS poruke za mušterije, cenu Vam kažemo unapred.</p>
+          </details>
+          <details>
+            <summary>Koliko izmena je uključeno?</summary>
+            <p>Dva kruga izmena. Jedan krug je jedna lista izmena koju nam pošaljete odjednom. Svaki sledeći krug je 2.000 din. Za veće izmene, kao što su novi delovi sajta ili nove funkcije, cenu Vam kažemo unapred.</p>
+          </details>
+          <details>
+            <summary>Za koliko je sajt gotov?</summary>
+            <p>Osnovni sajt je gotov za 3 dana čim dobijemo Vaše podatke: usluge, cene, radno vreme i slike. Sajt sa zakazivanjem ili porudžbinama traje nekoliko dana duže.</p>
+          </details>
+          <details>
+            <summary>Čiji su sajt i domen?</summary>
+            <p>Vaši. Domen se registruje na Vas, a kad sajt predamo, dobijate sve pristupe sa uputstvom na srpskom.</p>
+          </details>
         </div>
-        <a class="btn btn-primary" href="#kontakt">Opišite nam svoju ideju</a>
+        <p class="faq-more"><a href="/paketi/#pitanja">Sva pitanja</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" aria-label="Ko smo mi">
+    <div class="wrap">
+      <div class="about-box">
+        <h3>Ko smo mi<span class="dot" aria-hidden="true"></span></h3>
+        <p>Mali tim iz Beograda. Sa Vama razgovaramo direktno, pravimo sajt i predajemo ga. Bez posrednika, bez ugovora na godinu dana i bez obavezne mesečne pretplate.</p>
       </div>
     </div>
   </section>
@@ -620,8 +656,8 @@
     <div class="wrap sec-grid">
       <div>
         <h2 class="sec-title" id="kontakt-naslov">Javite se<span class="dot" aria-hidden="true"></span></h2>
+        <p class="contact-lead">Pošaljite nam čime se bavite. Javljamo se istog dana, najkasnije sutra do podne. Bez obaveze.</p>
         <p class="contact-text">Pišite nam na <a href="mailto:kontakt@opsforma.rs">kontakt@opsforma.rs</a>, na Instagramu <a href="https://www.instagram.com/opsformars/" rel="noopener">@opsformars</a> ili ostavite poruku ovde.</p>
-        <p class="contact-who">Mali tim iz Beograda. Isti ljudi sa Vama razgovaraju, prave sajt i predaju ga, bez posrednika.</p>
         <!-- TELEFON I VIBER: skini komentar kad želite da se pozivi i Viber prikažu.
         <div class="call-actions">
           <a class="btn btn-primary" href="tel:+381644990967">Pozovite</a>
@@ -639,7 +675,7 @@
       <form id="forma" action="https://api.web3forms.com/submit" method="post" novalidate>
         <input type="checkbox" name="botcheck" class="sr" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div>
-          <label for="f-ime">Ime</label>
+          <label for="f-ime">Ime <span class="req">(obavezno)</span></label>
           <input id="f-ime" name="ime" type="text" autocomplete="name" required>
         </div>
         <div>
@@ -647,7 +683,7 @@
           <input id="f-firma" name="firma" type="text" autocomplete="organization">
         </div>
         <div class="f-wide">
-          <label for="f-tel">Telefon</label>
+          <label for="f-tel">Telefon <span class="req">(obavezno)</span></label>
           <input id="f-tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required>
         </div>
         <div class="f-wide">
@@ -662,19 +698,80 @@
           <button class="btn btn-primary" type="submit">Pošaljite poruku</button>
           <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
         </div>
-        <p class="f-wide form-note">Podatke iz forme koristimo samo da Vam odgovorimo. Više u <a href="/privatnost/">Politici privatnosti</a>.</p>
+        <p class="f-wide form-note">Podatke koristimo samo da Vam odgovorimo. <a href="/privatnost/">Politika privatnosti</a></p>
       </form>
       </div>
     </div>
   </section>
+  <section id="primeri" aria-labelledby="primeri-naslov">
+    <div class="wrap">
+      <div class="ex-head">
+        <h2 class="sec-title" id="primeri-naslov">Primeri sajtova za berbernice, frizere i servise<span class="dot" aria-hidden="true"></span></h2>
+        <p class="ex-note">Ovo su primeri za izmišljene firme, da vidite kako bi sajt mogao da izgleda za Vaš zanat. Primeri sa zakazivanjem i porudžbinama rade kao pravi, samo su termini izmišljeni. Nijedan primer nije konačan dizajn: boje, raspored, tekst i funkcije prilagođavamo Vama. <a href="/paketi/">Šta je u kom paketu</a></p>
+      </div>
+      <ul class="cards" id="cards">
+        <li class="card" data-paket="1" data-group="lepota" style="--bg:#141414;--ac:#C9A227;--fg:#F6F5F1">
+          <p class="card-pkg">Paket 1 · Osnovni</p>
+          <img class="card-shot" src="/assets/primeri/berbernica-brko-280.webp" srcset="/assets/primeri/berbernica-brko-280.webp 280w, /assets/primeri/berbernica-brko.webp 560w" sizes="(max-width: 559px) calc(100vw - 84px), 300px" width="560" height="777" loading="lazy" decoding="async" alt="Primer sajta za berbernicu na telefonu">
+          <p class="card-craft">Berbernica</p>
+          <h3 class="card-name">Berbernica Brko</h3>
+          <a class="card-link" href="/berbernica-brko/">Otvori primer<span class="sr"> za Berbernica Brko</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="lepota" style="--bg:#F3E3DC;--ac:#4A2C3A;--fg:#111111">
+          <p class="card-pkg">Paket 1 · Osnovni</p>
+          <img class="card-shot" src="/assets/primeri/salon-lana-280.webp" srcset="/assets/primeri/salon-lana-280.webp 280w, /assets/primeri/salon-lana.webp 560w" sizes="(max-width: 559px) calc(100vw - 84px), 300px" width="560" height="777" loading="lazy" decoding="async" alt="Primer sajta za frizerski salon na telefonu">
+          <p class="card-craft">Ženski frizer</p>
+          <h3 class="card-name">Studio Lana</h3>
+          <a class="card-link" href="/salon-lana/">Otvori primer<span class="sr"> za Studio Lana</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="usluge" style="--bg:#1E5BFF;--ac:#FFD23F;--fg:#F6F5F1">
+          <p class="card-pkg">Paket 1 · Osnovni</p>
+          <img class="card-shot" src="/assets/primeri/perionica-pena-280.webp" srcset="/assets/primeri/perionica-pena-280.webp 280w, /assets/primeri/perionica-pena.webp 560w" sizes="(max-width: 559px) calc(100vw - 84px), 300px" width="560" height="777" loading="lazy" decoding="async" alt="Primer sajta za perionicu veša na telefonu">
+          <p class="card-craft">Perionica veša</p>
+          <h3 class="card-name">Perionica Pena</h3>
+          <a class="card-link" href="/perionica-pena/">Otvori primer<span class="sr"> za Perionica Pena</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="usluge" style="--bg:#F7F3EA;--ac:#1B2A41;--fg:#111111">
+          <p class="card-pkg">Paket 1 · Osnovni</p>
+          <img class="card-shot" src="/assets/primeri/hemijsko-cisto-280.webp" srcset="/assets/primeri/hemijsko-cisto-280.webp 280w, /assets/primeri/hemijsko-cisto.webp 560w" sizes="(max-width: 559px) calc(100vw - 84px), 300px" width="560" height="777" loading="lazy" decoding="async" alt="Primer sajta za hemijsko čišćenje na telefonu">
+          <p class="card-craft">Hemijsko čišćenje</p>
+          <h3 class="card-name">Čisto i fino</h3>
+          <a class="card-link" href="/hemijsko-cisto/">Otvori primer<span class="sr"> za Čisto i fino</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="auto" style="--bg:#1F1F1F;--ac:#FF6B00;--fg:#F6F5F1">
+          <p class="card-pkg">Paket 1 · Osnovni</p>
+          <img class="card-shot" src="/assets/primeri/auto-servis-micic-280.webp" srcset="/assets/primeri/auto-servis-micic-280.webp 280w, /assets/primeri/auto-servis-micic.webp 560w" sizes="(max-width: 559px) calc(100vw - 84px), 300px" width="560" height="777" loading="lazy" decoding="async" alt="Primer sajta za auto servis na telefonu">
+          <p class="card-craft">Auto servis</p>
+          <h3 class="card-name">Auto servis Mićić</h3>
+          <a class="card-link" href="/auto-servis-micic/">Otvori primer<span class="sr"> za Auto servis Mićić</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="auto" style="--bg:#0D0D0D;--ac:#C6F432;--fg:#F6F5F1">
+          <p class="card-pkg">Paket 1 · Osnovni</p>
+          <img class="card-shot" src="/assets/primeri/vulkanizer-guma-plus-280.webp" srcset="/assets/primeri/vulkanizer-guma-plus-280.webp 280w, /assets/primeri/vulkanizer-guma-plus.webp 560w" sizes="(max-width: 559px) calc(100vw - 84px), 300px" width="560" height="777" loading="lazy" decoding="async" alt="Primer sajta za vulkanizera na telefonu">
+          <p class="card-craft">Vulkanizer</p>
+          <h3 class="card-name">Vulkanizer Guma Plus</h3>
+          <a class="card-link" href="/vulkanizer-guma-plus/">Otvori primer<span class="sr"> za Vulkanizer Guma Plus</span></a>
+        </li>
+      </ul>
+      <p class="ex-all"><a class="btn btn-primary" href="/primeri/">Pogledajte svih 85 primera</a></p>
+      <div class="ex-custom">
+        <div>
+          <h3 class="ex-custom-title">Niste pronašli ono što tražite?</h3>
+          <p>Primeri su tu da pokažu šta je moguće, a ne da Vas ograniče. Svaki dizajn menjamo po Vašoj želji: boje, fotografije, raspored, tekst i funkcije. Ako imate ideju koju primeri ne pokrivaju, opišite nam je i mi ćemo je napraviti.</p>
+        </div>
+        <a class="btn btn-primary" href="#kontakt">Opišite nam svoju ideju</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
-<!-- TRAKA NA DNU EKRANA (samo telefon): skini komentar kad želite da se prikaže.
-<div class="call-bar">
-  <a class="btn btn-primary" href="tel:+381644990967">Pozovite</a>
-  <a class="btn btn-quiet" href="viber://chat?number=%2B381644990967">Viber</a>
+<!-- TRAKA NA DNU EKRANA (samo telefon). Viber dugme se prikazuje kad se u /assets/viber.js upiše broj. -->
+<div class="call-bar" id="call-bar">
+  <a class="btn btn-primary" href="#kontakt" data-viber hidden>Viber</a>
+  <a class="btn btn-primary" href="/primeri/" data-bez-vibera>Primeri</a>
+  <a class="btn btn-quiet" href="#kontakt">Pošaljite upit</a>
 </div>
--->
 
 <footer class="site-foot">
   <div class="wrap foot-row">
@@ -697,6 +794,7 @@
   </nav>
 </footer>
 
+<script src="/assets/viber.js"></script>
 <script>
 (function () {
   // Mobile menu
@@ -721,6 +819,16 @@
     var qs = location.search;
     if (/[?&](paket|grupa)=/.test(qs)) { location.replace('/primeri/' + qs); }
   } catch (e) {}
+
+  // Viber broj se upisuje u /assets/viber.js
+  var viberHref = window.OPSFORMA_VIBER ? 'viber://chat?number=' + encodeURIComponent(window.OPSFORMA_VIBER) : '';
+
+  // Traka na dnu se sklanja kad je kontakt forma na ekranu
+  var bar = document.getElementById('call-bar');
+  var kontakt = document.getElementById('kontakt');
+  if (bar && kontakt && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (e) { bar.classList.toggle('is-hidden', e[0].isIntersecting); }, { threshold: 0.15 }).observe(kontakt);
+  }
 
   // Kontakt forma -> Web3Forms -> opsformars@gmail.com
   var WEB3FORMS_KEY = '927b5bf9-94be-47c5-9359-83df12195b0b';
@@ -750,11 +858,13 @@
       .then(function (j) {
         if (j && j.success) {
           form.reset();
-          msg.textContent = 'Hvala, poruka je stigla. Javljamo Vam se u toku dana.';
+          msg.textContent = 'Hvala! Javljamo se istog dana.';
         } else { throw new Error('send'); }
       })
       .catch(function () {
-        msg.textContent = 'Poruka nije poslata. Pokušajte ponovo ili nam pišite na kontakt@opsforma.rs.';
+        msg.textContent = viberHref
+          ? 'Poruka nije poslata. Pokušajte ponovo ili nam pišite na Viber.'
+          : 'Poruka nije poslata. Pokušajte ponovo ili nam pišite na kontakt@opsforma.rs.';
       })
       .then(function () { sendBtn.disabled = false; });
   });
