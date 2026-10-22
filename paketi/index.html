@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://opsforma.rs/paketi/">
 <title>Cene izrade sajta — paketi od 19.900 din | opsforma</title>
-<meta name="description" content="Koliko košta sajt za malu firmu: vizitkarta, online zakazivanje, porudžbine ili prodavnica. Plaćate jednom, održavanje po želji.">
+<meta name="description" content="Koliko košta sajt za malu firmu: vizitkarta, online zakazivanje, porudžbine, prodavnica ili Premium. Plaćate jednom, održavanje po želji.">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="opsforma">
 <meta property="og:url" content="https://opsforma.rs/paketi/">
 <meta property="og:title" content="Cene izrade sajta — paketi od 19.900 din | opsforma">
-<meta property="og:description" content="Koliko košta sajt za malu firmu: vizitkarta, online zakazivanje, porudžbine ili prodavnica. Plaćate jednom, održavanje po želji.">
+<meta property="og:description" content="Koliko košta sajt za malu firmu: vizitkarta, online zakazivanje, porudžbine, prodavnica ili Premium. Plaćate jednom, održavanje po želji.">
 <meta property="og:image" content="https://opsforma.rs/og-slika-1200x630.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -31,7 +31,7 @@
       "name": "Koliko košta sajt?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Osnovni sajt je od 19.900 din, sajt sa zakazivanjem ili porudžbinama od 34.900 din, a online prodavnica od 59.900 din. Tačan iznos i rok dogovaramo pre početka rada, kad vidimo šta Vam treba. Nema skrivenih troškova."
+        "text": "Osnovni sajt je od 19.900 din, sajt sa zakazivanjem ili porudžbinama od 34.900 din, online prodavnica od 59.900 din, a Premium od 149.900 din. Tačan iznos i rok dogovaramo pre početka rada, kad vidimo šta Vam treba. Nema skrivenih troškova."
       }
     },
     {
@@ -103,7 +103,15 @@
       "name": "Da li mušterije plaćaju preko sajta?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "U paketima 1–3 ne: mušterije Vam plaćaju kao i do sada, na licu mesta, uplatnicom ili prenosom. U paketu Prodavnica kupci plaćaju pouzećem ili uplatom, a u paketu Prodavnica Plus i karticom preko Vaše banke."
+        "text": "U paketima 1–3 ne: mušterije Vam plaćaju kao i do sada, na licu mesta, uplatnicom ili prenosom. U paketu Prodavnica kupci plaćaju pouzećem ili uplatom, a u paketu Prodavnica Plus i karticom preko Vaše banke. U paketu Premium plaćanje karticom je po izboru: za depozit, vaučere, ulaznice ili porudžbine."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Šta se u paketu Premium plaća mesečno, osim održavanja?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Većina toga je besplatna: server, kalendar, tabela i mejlovi u uobičajenom obimu. Posebno se plaćaju samo dodaci koje izaberete: SMS podsetnici (oko 2,40 din po poruci), prikaz Google recenzija na sajtu kad je poseta velika (najviše oko 20 dolara mesečno) i obaveštenja preko Viber bota (100 evra mesečno, to je Viberova cena). Sve to plaćate direktno servisu, na svoje ime."
       }
     },
     {
@@ -250,6 +258,10 @@
   .price { font-family: var(--serif); font-size: 2rem; line-height: 1; }
   .price small { font-family: var(--sans); font-size: .9rem; color: inherit; opacity: .75; }
   .price .upkeep { display: block; font-family: var(--sans); font-size: .875rem; line-height: 1.4; opacity: .8; margin-top: 8px; max-width: 30ch; }
+  .price .upkeep--siroko { max-width: 40ch; }
+  .plan-shot { display: block; width: 100%; max-width: 280px; height: auto; margin-top: 22px; border: 1.5px solid var(--ink); border-radius: var(--radius); }
+  .plan-steps { margin: 0; padding-left: 1.3rem; display: grid; gap: 6px; list-style: decimal; }
+  .plan-steps li::marker { color: var(--plava, currentColor); font-weight: 600; }
   .plan-link { font-weight: 600; text-underline-offset: 4px; text-decoration-thickness: 1.5px; display: inline-block; padding: 10px 0; }
   .plan.featured .plan-link { color: var(--paper); }
 
@@ -615,6 +627,64 @@
     </div>
   </section>
 
+  <section id="premium" aria-labelledby="premium-naslov">
+    <div class="wrap">
+      <div class="sec-grid">
+        <h2 class="sec-title" id="premium-naslov">Premium<span class="dot" aria-hidden="true"></span></h2>
+        <p class="sec-lead" style="margin-top:0;align-self:end;max-width:52ch">Za firme kojima sajt radi veliki deo posla: više jezika, mnogo sadržaja, nalog za mušterije i povezano sa svim što već koristite.</p>
+      </div>
+      <div class="plans-2">
+        <article class="plan featured" aria-labelledby="p6">
+          <span class="plan-num" aria-hidden="true">6</span>
+          <h3 id="p6">Premium</h3>
+          <p class="plan-sub">Sajt napravljen od nule za Vašu firmu, sa svim što Plus ima i mnogo više.</p>
+          <div class="plan-block">
+            <h4>Šta dobijate</h4>
+            <ul>
+              <li>Sve iz paketa Plus</li>
+              <li>Sajt na srpskom i još jednom ili dva jezika, sa 15 i više stranica: usluge, tim, cene, česta pitanja i blog</li>
+              <li>Svoj izgled: logo, boje i slova napravljeni za Vašu firmu</li>
+              <li>Nalog za mušterije bez lozinke: termini, istorija i bodovi na jednom mestu</li>
+              <li>Pomeranje i otkazivanje termina preko linka iz mejla, SMS podsetnik dan ranije</li>
+              <li>Panel za Vas: termini po danu i po radniku, statistika, cenovnik i spisak mušterija</li>
+              <li>Povezano sa Google Kalendarom, tabelom, Gmailom, Instagramom i Google recenzijama</li>
+              <li>Po izboru plaćanje karticom: depozit za rezervaciju, vaučeri i ulaznice sa QR kodom</li>
+            </ul>
+          </div>
+          <div class="plan-block">
+            <h4>Šta radite Vi</h4>
+            <p>Isto kao do sada: termini i porudžbine stižu u Vaš kalendar i na mejl. Cene menjate sami, u panelu ili u tabeli na telefonu.</p>
+          </div>
+          <div class="plan-block">
+            <h4>Šta radimo mi</h4>
+            <p>Pravimo izgled i tekstove sa Vama, otvaramo sve naloge na Vaše ime, povezujemo ih i proveravamo svaki korak pre puštanja.</p>
+          </div>
+          <div class="plan-price">
+            <p class="price"><small>od</small> 149.900 <small>RSD</small> <span class="upkeep upkeep--siroko">sa plaćanjem karticom od 199.900 RSD · održavanje po želji: 7.900 RSD mesečno · tačnu cenu šaljemo posle kratkog razgovora</span></p>
+            <a class="plan-link" href="/premium/kamea/">Primer<span class="sr"> paketa Premium</span></a>
+          </div>
+        </article>
+        <article class="plan" aria-labelledby="p6-primer">
+          <h3 id="p6-primer">Primer: Kamea</h3>
+          <p class="plan-sub">Stomatološka klinika na srpskom, engleskom i nemačkom. Klinika je izmišljena, a sve na sajtu radi kao pravo.</p>
+          <a href="/premium/kamea/" tabindex="-1" aria-hidden="true"><img class="plan-shot" src="/assets/primeri/kamea-280.webp" srcset="/assets/primeri/kamea-280.webp 280w, /assets/primeri/kamea.webp 560w" sizes="280px" width="560" height="777" loading="lazy" decoding="async" alt=""></a>
+          <div class="plan-block">
+            <h4>Probajte</h4>
+            <ol class="plan-steps">
+              <li>Zakažite termin kod doktora, pa ga pomerite preko linka iz potvrde.</li>
+              <li>Napravite procenu troškova od–do i preuzmite PDF ponudu.</li>
+              <li>Pogledajte šta tom prilikom stiže vlasniku na Viber, mejl i u kalendar.</li>
+              <li>Otvorite panel vlasnika, PIN je 1234.</li>
+            </ol>
+          </div>
+          <div class="plan-price">
+            <a class="plan-link" href="/premium/kamea/">Otvori primer<span class="sr"> Kamea</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section id="zakazivanje" aria-labelledby="zak-naslov">
     <div class="wrap">
       <div class="sec-grid">
@@ -705,7 +775,7 @@
       <div class="faq">
         <details>
           <summary>Koliko košta sajt?</summary>
-          <p>Osnovni sajt je od 19.900 din, sajt sa zakazivanjem ili porudžbinama od 34.900 din, a online prodavnica od 59.900 din. Tačan iznos i rok dogovaramo pre početka rada, kad vidimo šta Vam treba. Nema skrivenih troškova.</p>
+          <p>Osnovni sajt je od 19.900 din, sajt sa zakazivanjem ili porudžbinama od 34.900 din, online prodavnica od 59.900 din, a Premium od 149.900 din. Tačan iznos i rok dogovaramo pre početka rada, kad vidimo šta Vam treba. Nema skrivenih troškova.</p>
         </details>
         <details>
           <summary>Kako se plaća?</summary>
@@ -741,7 +811,11 @@
         </details>
         <details>
           <summary>Da li mušterije plaćaju preko sajta?</summary>
-          <p>U paketima 1–3 ne: mušterije Vam plaćaju kao i do sada, na licu mesta, uplatnicom ili prenosom. U paketu Prodavnica kupci plaćaju pouzećem ili uplatom, a u paketu Prodavnica Plus i karticom preko Vaše banke.</p>
+          <p>U paketima 1–3 ne: mušterije Vam plaćaju kao i do sada, na licu mesta, uplatnicom ili prenosom. U paketu Prodavnica kupci plaćaju pouzećem ili uplatom, a u paketu Prodavnica Plus i karticom preko Vaše banke. U paketu Premium plaćanje karticom je po izboru: za depozit, vaučere, ulaznice ili porudžbine.</p>
+        </details>
+        <details>
+          <summary>Šta se u paketu Premium plaća mesečno, osim održavanja?</summary>
+          <p>Većina toga je besplatna: server, kalendar, tabela i mejlovi u uobičajenom obimu. Posebno se plaćaju samo dodaci koje izaberete: SMS podsetnici (oko 2,40 din po poruci), prikaz Google recenzija na sajtu kad je poseta velika (najviše oko 20 dolara mesečno) i obaveštenja preko Viber bota (100 evra mesečno, to je Viberova cena). Sve to plaćate direktno servisu, na svoje ime.</p>
         </details>
         <details>
           <summary>Šta ako mi neko zakaže telefonom?</summary>

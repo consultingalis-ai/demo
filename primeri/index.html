@@ -460,6 +460,7 @@
             <button class="filter" type="button" data-kind="paket" data-filter="2" aria-pressed="false">Zakazivanje</button>
             <button class="filter" type="button" data-kind="paket" data-filter="3" aria-pressed="false">Plus</button>
             <button class="filter" type="button" data-kind="paket" data-filter="4" aria-pressed="false">Prodavnica</button>
+            <button class="filter" type="button" data-kind="paket" data-filter="6" aria-pressed="false">Premium</button>
           </div>
         </div>
         <div class="filter-row">
@@ -479,9 +480,15 @@
           </div>
         </div>
       </div>
-      <p class="filter-status" id="filter-status" aria-live="polite">Prikazano: 85 primera</p>
+      <p class="filter-status" id="filter-status" aria-live="polite">Prikazano: 86 primera</p>
       <h2 class="sr">Svi primeri</h2>
       <ul class="cards" id="cards">
+        <li class="card" data-paket="6" data-group="zdravlje" style="--bg:#FAF7F2;--ac:#2D4866;--fg:#1D232C">
+          <p class="card-pkg">Paket 6 · Premium</p>
+          <p class="card-craft">Stomatološka klinika, 3 jezika</p>
+          <h3 class="card-name">Kamea</h3>
+          <a class="card-link" href="/premium/kamea/">Otvori primer<span class="sr"> za Kamea</span></a>
+        </li>
         <li class="card" data-paket="1" data-group="lepota" style="--bg:#141414;--ac:#C9A227;--fg:#F6F5F1">
           <p class="card-pkg">Paket 1 · Osnovni</p>
           <p class="card-craft">Berbernica</p>
@@ -1069,7 +1076,7 @@
   try {
     var params = new URLSearchParams(location.search);
     var qp = params.get('paket'), qg = params.get('grupa');
-    if (qp === '1' || qp === '2' || qp === '3' || qp === '4') state.paket = qp;
+    if (qp === '1' || qp === '2' || qp === '3' || qp === '4' || qp === '6') state.paket = qp;
     if (qg && document.querySelector('.filter[data-kind="grupa"][data-filter="' + qg.replace(/[^a-z]/g, '') + '"]')) state.grupa = qg;
     apply();
   } catch (e) {}
