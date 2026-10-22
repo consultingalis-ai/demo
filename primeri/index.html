@@ -1,0 +1,1078 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://opsforma.rs/primeri/">
+<title>Primeri sajtova za radnje i firme | opsforma</title>
+<meta name="description" content="85 primera sajtova za izmišljene firme: frizere, servise, pekare, majstore, ordinacije i online prodavnice. Filtrirajte po paketu i vrsti posla.">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#14161A">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="opsforma">
+<meta property="og:url" content="https://opsforma.rs/primeri/">
+<meta property="og:title" content="Primeri sajtova za radnje i firme | opsforma">
+<meta property="og:description" content="85 primera sajtova za izmišljene firme: frizere, servise, pekare, majstore, ordinacije i online prodavnice. Filtrirajte po paketu i vrsti posla.">
+<meta property="og:image" content="https://opsforma.rs/og-slika-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="opsforma">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/manrope-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
+<style>
+  :root {
+    --paper: #F6F5F1;
+    --ink: #111111;
+    --signal: #FF4D2E;
+    --gray: #6B6B6B;
+    --rule: rgba(17, 17, 17, .16);
+    --serif: "Instrument Serif", "Iowan Old Style", "Palatino Linotype", Georgia, "Times New Roman", serif;
+    --sans: "Instrument Sans", "Helvetica Neue", Arial, system-ui, sans-serif;
+    --gutter: 20px;
+    --max: 1200px;
+    --radius: 4px;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+  }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; margin: 0; letter-spacing: -.005em; }
+  p { margin: 0; }
+  ul, ol { margin: 0; padding: 0; list-style: none; }
+  .sr {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+  :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+  @media (min-width: 900px) { :root { --gutter: 32px; } }
+  .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+
+  .skip {
+    position: absolute; left: var(--gutter); top: -100px; z-index: 50;
+    background: var(--ink); color: var(--paper); padding: 10px 14px; border-radius: var(--radius);
+  }
+  .skip:focus { top: 12px; }
+
+  /* Header */
+  .site-head { border-bottom: 1px solid var(--rule); position: relative; z-index: 10; background: var(--paper); }
+  .head-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
+  .brand { display: inline-flex; padding: 6px 0; text-decoration: none; }
+  .brand img { height: 26px; width: auto; }
+  .menu-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    font: 500 .95rem/1 var(--sans); color: var(--ink);
+    background: none; border: 1px solid var(--ink); border-radius: var(--radius);
+    padding: 10px 14px; cursor: pointer;
+  }
+  .menu-btn .bars { width: 16px; height: 10px; position: relative; }
+  .menu-btn .bars::before, .menu-btn .bars::after {
+    content: ""; position: absolute; left: 0; right: 0; height: 1.5px; background: currentColor; transition: transform .2s;
+  }
+  .menu-btn .bars::before { top: 1px; }
+  .menu-btn .bars::after { bottom: 1px; }
+  .menu-btn[aria-expanded="true"] .bars::before { transform: translateY(3.5px) rotate(45deg); }
+  .menu-btn[aria-expanded="true"] .bars::after { transform: translateY(-3.5px) rotate(-45deg); }
+  .nav { display: none; }
+  .nav.open {
+    display: block; position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--paper); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--ink);
+    padding: 4px var(--gutter) 12px;
+  }
+  .nav a {
+    display: block; padding: 12px 0; text-decoration: none; font-size: 1.125rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav li:last-child a { border-bottom: 0; }
+
+  @media (min-width: 860px) {
+    .menu-btn { display: none; }
+    .head-row { min-height: 84px; }
+    .brand img { height: 30px; }
+    .nav, .nav.open { display: block; position: static; border: 0; padding: 0; background: none; }
+    .nav ul { display: flex; gap: 32px; padding: 0; }
+    .nav a { padding: 6px 0; border: 0; font-size: 1rem; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 6px; text-decoration-thickness: 1.5px; }
+    .nav a:hover { text-decoration-color: var(--signal); }
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 52px; padding: 0 22px;
+    font: 500 1rem/1 var(--sans); text-decoration: none;
+    border-radius: var(--radius); border: 1.5px solid var(--ink);
+    cursor: pointer;
+  }
+  .btn-primary { background: var(--signal); border-color: var(--signal); color: var(--ink); }
+  .btn-primary:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+  .btn-quiet { background: transparent; color: var(--ink); }
+  .btn-quiet:hover { background: var(--ink); color: var(--paper); }
+
+  /* Sections */
+  section { padding: 72px 0; border-top: 1px solid var(--rule); }
+  .sec-grid { display: grid; gap: 28px; }
+  .sec-title { font-size: clamp(2.25rem, 6vw, 3.5rem); line-height: 1.02; }
+  .sec-lead { color: var(--gray); max-width: 34ch; margin-top: 14px; }
+  @media (min-width: 900px) {
+    section { padding: 112px 0; }
+    .sec-grid { grid-template-columns: 4fr 8fr; gap: 48px; }
+  }
+
+  /* Hero */
+  .hero { border-top: 0; padding: 48px 0 64px; }
+  .hero-grid { display: grid; gap: 48px; align-items: end; }
+  .hero h1 {
+    font-size: clamp(3rem, 12.5vw, 6.75rem);
+    line-height: .96;
+    letter-spacing: -.02em;
+    max-width: 11ch;
+  }
+  .hero-text { margin-top: 28px; max-width: 46ch; font-size: 1.1875rem; line-height: 1.5; }
+  .hero-actions { display: grid; gap: 12px; margin-top: 32px; }
+  .hero-note { margin-top: 18px; color: var(--gray); font-size: .95rem; }
+  @media (min-width: 560px) {
+    .hero-actions { display: flex; flex-wrap: wrap; }
+  }
+  @media (min-width: 900px) {
+    .hero { padding: 88px 0 112px; }
+    .hero-grid { grid-template-columns: 1fr 300px; gap: 64px; }
+    .hero-text { font-size: 1.3125rem; }
+    .hero h1 { max-width: 13ch; }
+  }
+
+  /* Phone sketch in hero */
+  .sketch {
+    width: 100%; max-width: 300px; justify-self: center;
+    border: 1.5px solid var(--ink); border-radius: 30px; padding: 12px;
+    background: var(--paper);
+  }
+  .sketch-screen { border: 1px solid var(--rule); border-radius: 20px; padding: 18px 16px 16px; display: grid; gap: 14px; }
+  .sk-name { font-family: var(--serif); font-size: 1.6rem; line-height: 1; }
+  .sk-open { font-size: .78rem; color: var(--gray); display: flex; align-items: center; gap: 6px; }
+  .sk-open::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--ink); }
+  .sk-label { font-size: .72rem; color: var(--gray); margin-bottom: 6px; }
+  .sk-row { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--rule); }
+  .sk-row:last-child { border-bottom: 0; }
+  .sk-bar { height: 7px; border-radius: 4px; background: rgba(17,17,17,.18); }
+  .sk-bar.short { width: 34px; background: rgba(17,17,17,.38); }
+  .sk-map {
+    height: 74px; border-radius: 8px; border: 1px solid var(--rule); position: relative;
+    background-image:
+      linear-gradient(90deg, transparent 47%, rgba(17,17,17,.14) 47%, rgba(17,17,17,.14) 53%, transparent 53%),
+      linear-gradient(20deg, transparent 58%, rgba(17,17,17,.10) 58%, rgba(17,17,17,.10) 63%, transparent 63%),
+      repeating-linear-gradient(0deg, transparent 0 17px, rgba(17,17,17,.06) 17px 18px),
+      repeating-linear-gradient(90deg, transparent 0 17px, rgba(17,17,17,.06) 17px 18px);
+  }
+  .sk-map::after {
+    content: ""; position: absolute; left: calc(50% - 6px); top: calc(50% - 6px);
+    width: 12px; height: 12px; border-radius: 50%; background: var(--ink); box-shadow: 0 0 0 4px var(--paper);
+  }
+  .sk-actions { display: grid; grid-template-columns: 1.4fr 1fr; gap: 8px; }
+  .sk-btn { height: 40px; border-radius: 8px; display: grid; place-items: center; font-size: .82rem; font-weight: 500; }
+  .sk-call { background: var(--signal); color: var(--ink); }
+  .sk-viber { border: 1px solid var(--ink); }
+  @media (max-width: 899px) {
+    .sketch { max-width: 236px; }
+    .sk-name { font-size: 1.4rem; }
+  }
+
+  /* Included */
+  .incl { display: grid; gap: 0; border-top: 1px solid var(--ink); }
+  .incl li { padding: 20px 0 22px; border-bottom: 1px solid var(--rule); display: grid; grid-template-columns: 14px 1fr; gap: 0 16px; }
+  .incl li::before { content: ""; width: 10px; height: 10px; border: 1.5px solid var(--ink); margin-top: 9px; }
+  .incl h3 { font-family: var(--sans); font-weight: 600; font-size: 1.0625rem; line-height: 1.5; }
+  .incl p { grid-column: 2; color: var(--gray); margin-top: 2px; max-width: 44ch; }
+  @media (min-width: 700px) {
+    .incl { grid-template-columns: 1fr 1fr; column-gap: 40px; }
+  }
+
+  /* Steps */
+  .steps { display: grid; gap: 0; counter-reset: step; }
+  .steps li { padding: 22px 0 26px; border-top: 1px solid var(--ink); display: grid; grid-template-columns: 56px 1fr; gap: 0 12px; }
+  .step-num { font-family: var(--serif); font-size: 2.6rem; line-height: .9; grid-row: span 2; }
+  .steps h3 { font-family: var(--sans); font-weight: 600; font-size: 1.0625rem; line-height: 1.5; }
+  .steps p { color: var(--gray); margin-top: 4px; max-width: 40ch; }
+  @media (min-width: 700px) {
+    .steps { grid-template-columns: repeat(2, 1fr); column-gap: 40px; }
+  }
+  @media (min-width: 1100px) {
+    .steps-wide .steps { grid-template-columns: repeat(4, 1fr); column-gap: 28px; }
+    .steps-wide .steps li { grid-template-columns: 1fr; padding-top: 18px; }
+    .steps-wide .step-num { font-size: 3.4rem; margin-bottom: 28px; grid-row: auto; }
+  }
+  .steps-wide .sec-grid { margin-bottom: 0; }
+  .steps-wide .steps { margin-top: 48px; }
+  @media (min-width: 900px) {
+    .steps-wide .steps { margin-top: 56px; }
+  }
+
+  /* Examples */
+  .ex-head { display: grid; gap: 20px; }
+  .ex-note { max-width: 52ch; }
+  @media (min-width: 900px) {
+    .ex-head { grid-template-columns: 4fr 8fr; gap: 48px; align-items: end; }
+  }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 40px; }
+  .filter {
+    font: 500 .95rem/1 var(--sans); color: var(--ink);
+    background: transparent; border: 1px solid var(--rule); border-radius: 999px;
+    padding: 11px 16px; min-height: 44px; cursor: pointer;
+  }
+  .filter:hover { border-color: var(--ink); }
+  .filter[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .filter-status { margin-top: 16px; color: var(--gray); font-size: .95rem; }
+  .cards { display: grid; gap: 12px; margin-top: 24px; }
+  @media (min-width: 560px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 900px) { .cards { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
+  @media (min-width: 1180px) { .cards { grid-template-columns: repeat(4, 1fr); } }
+  .card {
+    position: relative; background: var(--bg); color: var(--fg);
+    border-radius: var(--radius); padding: 22px 22px 20px;
+    min-height: 200px; display: flex; flex-direction: column;
+    outline: 1px solid rgba(17,17,17,.08); outline-offset: -1px;
+  }
+  .card[hidden] { display: none; }
+  .card::before {
+    content: ""; position: absolute; top: 0; right: 0;
+    width: 44px; height: 44px; background: var(--ac);
+    border-top-right-radius: var(--radius);
+  }
+  .card-craft { font-size: .9rem; padding-right: 56px; }
+  .card-name { font-size: 1.85rem; line-height: 1.05; margin-top: 8px; padding-right: 8px; }
+  .card-link {
+    margin-top: auto; padding-top: 22px; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1.5px;
+    align-self: flex-start;
+  }
+  .card-link::after { content: ""; position: absolute; inset: 0; }
+  .card:hover .card-link { text-decoration-thickness: 3px; }
+  .card-link:focus-visible { outline: none; }
+  .card:has(.card-link:focus-visible) { outline: 3px solid var(--ink); outline-offset: 3px; }
+  @media (max-width: 559px) {
+    .card { min-height: 0; }
+    .card-name { font-size: 1.7rem; }
+  }
+
+  /* Contact */
+  .contact-text { font-size: 1.1875rem; max-width: 36ch; margin-top: 18px; }
+  .contact-text a { text-underline-offset: 4px; text-decoration-color: var(--signal); text-decoration-thickness: 2px; }
+  .contact-who { margin-top: 18px; color: var(--gray); max-width: 36ch; }
+  form { display: grid; gap: 18px; }
+  @media (min-width: 700px) {
+    form { grid-template-columns: 1fr 1fr; column-gap: 20px; }
+    .f-wide { grid-column: 1 / -1; }
+  }
+  label { display: block; font-weight: 500; font-size: .95rem; margin-bottom: 6px; }
+  .opt { color: var(--gray); font-weight: 400; }
+  input, textarea {
+    width: 100%; font: 400 1.0625rem/1.4 var(--sans); color: var(--ink);
+    background: #fff; border: 1px solid rgba(17,17,17,.4); border-radius: var(--radius);
+    padding: 13px 14px; min-height: 50px;
+  }
+  textarea { min-height: 140px; resize: vertical; }
+  input:focus-visible, textarea:focus-visible { outline: 2px solid var(--ink); outline-offset: 1px; border-color: var(--ink); }
+  .form-foot { display: grid; gap: 16px; align-items: center; }
+  @media (min-width: 560px) { .form-foot { grid-template-columns: auto 1fr; } }
+  .form-msg { font-size: 1rem; }
+  .form-msg:not(:empty) { padding: 14px 16px; border-left: 3px solid var(--signal); background: #fff; }
+
+  /* Footer */
+  .site-foot { background: var(--ink); color: var(--paper); padding: 48px 0 40px; }
+  .foot-row { display: grid; gap: 22px; }
+  .site-foot img { height: 28px; width: auto; }
+  .foot-meta { display: flex; flex-wrap: wrap; gap: 8px 24px; color: rgba(246,245,241,.78); font-size: .95rem; }
+  .site-foot a { color: var(--paper); text-underline-offset: 4px; }
+  .site-foot :focus-visible { outline-color: var(--paper); }
+  @media (min-width: 760px) {
+    .foot-row { grid-template-columns: auto 1fr; align-items: center; }
+    .foot-meta { justify-content: flex-end; }
+  }
+  .filter-rows { display: grid; gap: 18px; margin-top: 40px; }
+  .filter-row { display: grid; gap: 8px; }
+  .filter-label { font-size: .9rem; color: var(--gray); }
+  .filter-rows .filters { margin-top: 0; }
+  @media (min-width: 900px) { .filter-row { grid-template-columns: 120px 1fr; align-items: center; gap: 16px; } }
+  .ex-custom { margin-top: 48px; padding: clamp(24px, 4vw, 40px); background: var(--svetloplava, #E4EAFD); border-left: 6px solid var(--plava, #2F5BEA); display: grid; gap: 22px; align-items: center; }
+  .ex-custom p { max-width: 62ch; margin-top: 10px; }
+  .ex-custom-title { font-size: clamp(1.5rem, 3.4vw, 2.1rem); line-height: 1.1; letter-spacing: -.02em; }
+  .ex-custom .btn { justify-self: start; }
+  @media (min-width: 900px) { .ex-custom { grid-template-columns: 1fr auto; gap: 40px; } }
+  .ex-note a { text-underline-offset: 4px; text-decoration-color: var(--signal); text-decoration-thickness: 2px; white-space: nowrap; }
+  .card-pkg {
+    align-self: flex-start; font-size: .78rem; font-weight: 600; letter-spacing: .01em;
+    padding: 4px 9px; border: 1px solid currentColor; border-radius: 999px; margin-bottom: 14px; margin-right: 52px;
+  }
+  .card[data-paket="1"] .card-pkg { opacity: .78; }
+  .pk-list { display: grid; gap: 0; border-top: 1px solid var(--ink); }
+  .pk-list li { display: grid; grid-template-columns: 56px 1fr; gap: 0 12px; padding: 20px 0 22px; border-bottom: 1px solid var(--rule); }
+  .pk-list .step-num { font-family: var(--serif); font-size: 2.6rem; line-height: .9; grid-row: span 2; }
+  .pk-list h3 { font-family: var(--sans); font-weight: 600; font-size: 1.0625rem; line-height: 1.5; }
+  .pk-list p { color: var(--gray); margin-top: 4px; max-width: 46ch; }
+  .pk-more { margin-top: 24px; }
+  .pk-price { display: block; font-weight: 400; color: var(--gray); font-size: .95rem; }
+  @media (min-width: 900px) { .pk-list { grid-template-columns: repeat(4, 1fr); column-gap: 28px; } .pk-list li { grid-template-columns: 1fr; } .pk-list .step-num { margin-bottom: 18px; grid-row: auto; } }
+
+  /* ===== Brend opsforma ===== */
+  :root {
+    --grafit: #14161A; --papir: #F5F5F2; --plava: #2F5BEA;
+    --siva: #6B6E73; --siva-tamno: #A4A7AD; --svetloplava: #E4EAFD; --linija: #E2E2DE;
+    --paper: var(--papir); --ink: var(--grafit); --signal: var(--plava); --gray: var(--siva); --rule: var(--linija);
+    --head: "Manrope", "Helvetica Neue", Arial, system-ui, sans-serif;
+    --serif: var(--head);
+    --sans: "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
+    --radius: 6px;
+  }
+  body { font-family: var(--sans); color: var(--grafit); background: var(--papir); }
+  h1, h2, h3 { font-family: var(--head); font-weight: 800; letter-spacing: -.02em; }
+  ::selection { background: var(--svetloplava); color: var(--grafit); }
+  .dot { display: inline-block; width: .19em; height: .19em; margin-left: .05em; background: var(--plava); vertical-align: baseline; }
+  .label, .eyebrow, .filter-label, .sk-label, .plan-block h4 {
+    font-family: var(--sans); font-weight: 600; text-transform: uppercase; letter-spacing: .08em;
+    color: var(--plava); font-size: .78rem; line-height: 1.4;
+  }
+  .eyebrow { margin-bottom: 18px; }
+  .hero h1 { letter-spacing: -.03em; }
+  .hero h1 em { font-style: normal; }
+  .sec-title { letter-spacing: -.025em; }
+  .site-head { border-bottom-color: var(--linija); }
+  .nav a:hover, .nav a[aria-current="page"] { text-decoration-color: var(--plava); }
+  .btn { border-color: var(--grafit); font-weight: 600; }
+  .btn-primary { background: var(--plava); border-color: var(--plava); color: #fff; }
+  .btn-primary:hover { background: var(--grafit); border-color: var(--grafit); color: var(--papir); }
+  .btn-quiet { color: var(--grafit); }
+  .btn-quiet:hover { background: var(--grafit); color: var(--papir); }
+  :focus-visible { outline-color: var(--plava); }
+  input, textarea { border-color: #B9BBB6; }
+  input:focus-visible, textarea:focus-visible { outline-color: var(--plava); border-color: var(--plava); }
+  .form-msg:not(:empty) { border-left-color: var(--plava); background: var(--svetloplava); }
+  .contact-text a, .ex-note a { text-decoration-color: var(--plava); }
+  .filter { border-color: var(--linija); }
+  .filter:hover { border-color: var(--grafit); }
+  .filter[aria-pressed="true"] { background: var(--grafit); color: var(--papir); border-color: var(--grafit); }
+  .filter-label { color: var(--plava); }
+  .card-name { letter-spacing: -.02em; }
+  .card-pkg { font-family: var(--sans); }
+  .step-num, .pk-list .step-num, .plan-num, .need .n, .price { font-family: var(--head); font-weight: 800; letter-spacing: -.03em; }
+  .step-num::after, .pk-list .step-num::after, .plan-num::after, .need .n::after {
+    content: ""; display: inline-block; width: .19em; height: .19em; margin-left: .04em; background: var(--plava);
+  }
+  .incl li::before { width: 8px; height: 8px; border: 0; background: var(--plava); margin-top: 9px; }
+  .plan-block ul li::before { width: 6px; height: 6px; border: 0; background: var(--plava); top: .6em; }
+  .plan-block ul li, .plan-block p, .faq details p { color: #2B2E33; }
+  .site-foot { background: var(--grafit); color: var(--papir); }
+  .foot-meta { color: var(--siva-tamno); }
+  .site-foot a { color: var(--papir); }
+  .site-foot img { height: 28px; }
+  /* skica telefona na naslovnoj */
+  .sketch { border-color: var(--grafit); background: #fff; }
+  .sk-name { font-family: var(--head); font-weight: 800; letter-spacing: -.02em; font-size: 1.35rem; }
+  .sk-open::before { background: var(--plava); }
+  .sk-label { font-size: .62rem; margin-bottom: 6px; }
+  .sk-map::after { background: var(--plava); }
+  .sk-call { background: var(--plava); color: #fff; }
+  .sk-viber { border-color: var(--grafit); }
+  /* paketi */
+  .plan { border-color: var(--grafit); }
+  .plan.featured { background: var(--grafit); }
+  .plan.featured .plan-sub, .plan.featured .plan-block p, .plan.featured .plan-block li { color: #D5D7DB; }
+  .plan.featured .plan-block h4 { color: var(--siva-tamno); }
+  .plan.featured .plan-block { border-top-color: rgba(245,245,242,.18); }
+  .plan-tag { background: var(--plava); color: #fff; }
+  .plan h3, .flow h3, .variant h3 { letter-spacing: -.02em; }
+  .price small, .price .upkeep { font-family: var(--sans); font-weight: 400; letter-spacing: 0; }
+  .tools li { border-color: var(--linija); background: #fff; }
+  .tools svg { color: var(--plava); }
+  .ico { border-color: var(--grafit); background: #fff; }
+  .ico svg { color: var(--grafit); }
+  .flow li h4 span { font-family: var(--head); font-weight: 800; color: var(--plava); }
+  .faq summary::after { font-family: var(--sans); font-weight: 400; color: var(--plava); }
+  .cta { background: var(--grafit); color: var(--papir); }
+  .cta p { color: #D5D7DB; }
+  .cta .btn-quiet { color: var(--papir); border-color: var(--papir); }
+  .cta .btn-quiet:hover { background: var(--papir); color: var(--grafit); }
+  .cta .btn-dark { background: var(--plava); border-color: var(--plava); color: #fff; }
+  .cta .btn-dark:hover { background: var(--papir); border-color: var(--papir); color: var(--grafit); }
+  .cta :focus-visible { outline-color: var(--papir); }
+  .steps li, .pk-list li { align-content: start; }
+  .site-foot { border-top: 1px solid rgba(245,245,242,.12); }
+
+  /* ===== Dodaci, oktobar 2026 ===== */
+  @media (min-width: 860px) and (max-width: 1139px) { .nav .nav-mail { display: none; } }
+  .foot-meta .foot-line a { white-space: nowrap; }
+  .foot-links { margin-top: 28px; padding-top: 22px; border-top: 1px solid rgba(245,245,242,.12); display: grid; gap: 10px; }
+  .foot-label { font-family: var(--sans); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; line-height: 1.4; color: var(--siva-tamno); }
+  .foot-links ul { display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: .95rem; }
+
+  .ex-page { border-top: 0; padding-top: 48px; }
+  @media (min-width: 900px) { .ex-page { padding-top: 88px; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#sadrzaj">Preskoči na sadržaj</a>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="/" aria-label="opsforma, naslovna strana"><img src="/logo-zaglavlje.svg" alt="opsforma" width="477" height="106"></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meni"><span class="bars" aria-hidden="true"></span>Meni</button>
+    <nav class="nav" id="meni" aria-label="Glavna navigacija">
+      <ul>
+        <li><a href="/#ukljuceno">Šta je uključeno</a></li>
+        <li><a href="/#kako-radimo">Kako radimo</a></li>
+        <li><a href="/paketi/">Paketi</a></li>
+        <li><a href="/primeri/" aria-current="page">Primeri</a></li>
+        <li><a href="/#kontakt">Kontakt</a></li>
+        <li class="nav-mail"><a href="mailto:kontakt@opsforma.rs">kontakt@opsforma.rs</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="sadrzaj">
+  <section id="primeri" class="ex-page" aria-labelledby="primeri-naslov">
+    <div class="wrap">
+      <div class="ex-head">
+        <h1 class="sec-title" id="primeri-naslov">Primeri<span class="dot" aria-hidden="true"></span></h1>
+        <p class="ex-note">Ovo su primeri za izmišljene firme, da vidite kako bi sajt mogao da izgleda za Vaš zanat. Primeri sa zakazivanjem i porudžbinama rade kao pravi, samo su termini izmišljeni. Nijedan primer nije konačan dizajn: boje, raspored, tekst i funkcije prilagođavamo Vama. <a href="/paketi/">Šta je u kom paketu</a></p>
+      </div>
+      <div class="filter-rows">
+        <div class="filter-row">
+          <p class="filter-label" id="fl-paket">Paket</p>
+          <div class="filters" role="group" aria-labelledby="fl-paket">
+            <button class="filter" type="button" data-kind="paket" data-filter="sve" aria-pressed="true">Svi paketi</button>
+            <button class="filter" type="button" data-kind="paket" data-filter="1" aria-pressed="false">Osnovni</button>
+            <button class="filter" type="button" data-kind="paket" data-filter="2" aria-pressed="false">Zakazivanje</button>
+            <button class="filter" type="button" data-kind="paket" data-filter="3" aria-pressed="false">Plus</button>
+            <button class="filter" type="button" data-kind="paket" data-filter="4" aria-pressed="false">Prodavnica</button>
+          </div>
+        </div>
+        <div class="filter-row">
+          <p class="filter-label" id="fl-grupa">Vrsta posla</p>
+          <div class="filters" role="group" aria-labelledby="fl-grupa">
+            <button class="filter" type="button" data-kind="grupa" data-filter="sve" aria-pressed="true">Sve</button>
+            <button class="filter" type="button" data-kind="grupa" data-filter="lepota" aria-pressed="false">Lepota i nega</button>
+            <button class="filter" type="button" data-kind="grupa" data-filter="zdravlje" aria-pressed="false">Zdravlje i trening</button>
+            <button class="filter" type="button" data-kind="grupa" data-filter="auto" aria-pressed="false">Auto</button>
+            <button class="filter" type="button" data-kind="grupa" data-filter="hrana" aria-pressed="false">Hrana i radnje</button>
+            <button class="filter" type="button" data-kind="grupa" data-filter="majstori" aria-pressed="false">Majstori</button>
+            <button class="filter" type="button" data-kind="grupa" data-filter="usluge" aria-pressed="false">Usluge u kraju</button>
+            <button class="filter" type="button" data-kind="grupa" data-filter="poslovne" aria-pressed="false">Poslovne usluge</button>
+            <button class="filter" type="button" data-kind="grupa" data-filter="ucenje" aria-pressed="false">Učenje i zabava</button>
+            <button class="filter" type="button" data-kind="grupa" data-filter="prodavnice" aria-pressed="false">Online prodavnice</button>
+            <button class="filter" type="button" data-kind="grupa" data-filter="moda" aria-pressed="false">Butici i moda</button>
+          </div>
+        </div>
+      </div>
+      <p class="filter-status" id="filter-status" aria-live="polite">Prikazano: 85 primera</p>
+      <ul class="cards" id="cards">
+        <li class="card" data-paket="1" data-group="lepota" style="--bg:#141414;--ac:#C9A227;--fg:#F6F5F1">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Berbernica</p>
+          <h3 class="card-name">Berbernica Brko</h3>
+          <a class="card-link" href="/berbernica-brko/">Otvori primer<span class="sr"> za Berbernica Brko</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="lepota" style="--bg:#F3E3DC;--ac:#4A2C3A;--fg:#111111">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Ženski frizer</p>
+          <h3 class="card-name">Studio Lana</h3>
+          <a class="card-link" href="/salon-lana/">Otvori primer<span class="sr"> za Studio Lana</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="lepota" style="--bg:#DDF3EA;--ac:#FF6F59;--fg:#111111">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Nokti i depilacija</p>
+          <h3 class="card-name">Nokti Tačka</h3>
+          <a class="card-link" href="/nokti-tacka/">Otvori primer<span class="sr"> za Nokti Tačka</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="lepota" style="--bg:#FFF1B5;--ac:#B9A7F2;--fg:#111111">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Šišanje pasa</p>
+          <h3 class="card-name">Šapica</h3>
+          <a class="card-link" href="/sapica-grooming/">Otvori primer<span class="sr"> za Šapica</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="auto" style="--bg:#1F1F1F;--ac:#FF6B00;--fg:#F6F5F1">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Auto servis</p>
+          <h3 class="card-name">Auto servis Mićić</h3>
+          <a class="card-link" href="/auto-servis-micic/">Otvori primer<span class="sr"> za Auto servis Mićić</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="auto" style="--bg:#0D0D0D;--ac:#C6F432;--fg:#F6F5F1">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Vulkanizer</p>
+          <h3 class="card-name">Vulkanizer Guma Plus</h3>
+          <a class="card-link" href="/vulkanizer-guma-plus/">Otvori primer<span class="sr"> za Vulkanizer Guma Plus</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="auto" style="--bg:#0A1633;--ac:#00C2D1;--fg:#F6F5F1">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Auto perionica</p>
+          <h3 class="card-name">Auto perionica Sjaj</h3>
+          <a class="card-link" href="/perionica-sjaj/">Otvori primer<span class="sr"> za Auto perionica Sjaj</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="auto" style="--bg:#F1FAEE;--ac:#E63946;--fg:#111111">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Servis bicikala</p>
+          <h3 class="card-name">Servis bicikala Pedala</h3>
+          <a class="card-link" href="/servis-pedala/">Otvori primer<span class="sr"> za Servis bicikala Pedala</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="hrana" style="--bg:#F4E1C1;--ac:#7A4A1E;--fg:#111111">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Pekara</p>
+          <h3 class="card-name">Pekara Klas</h3>
+          <a class="card-link" href="/pekara-klas/">Otvori primer<span class="sr"> za Pekara Klas</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="hrana" style="--bg:#FBF7F0;--ac:#C2185B;--fg:#111111">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Cvećara</p>
+          <h3 class="card-name">Cvećara Neven</h3>
+          <a class="card-link" href="/cvecara-neven/">Otvori primer<span class="sr"> za Cvećara Neven</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="hrana" style="--bg:#EFE6DA;--ac:#9E1B1B;--fg:#111111">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Mesara</p>
+          <h3 class="card-name">Mesara Kod Raše</h3>
+          <a class="card-link" href="/mesara-kod-rase/">Otvori primer<span class="sr"> za Mesara Kod Raše</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="hrana" style="--bg:#FBF8EF;--ac:#6B7F3A;--fg:#111111">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Zdrava hrana</p>
+          <h3 class="card-name">Zdrava hrana Lipa</h3>
+          <a class="card-link" href="/zdrava-hrana-lipa/">Otvori primer<span class="sr"> za Zdrava hrana Lipa</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="majstori" style="--bg:#0B0F19;--ac:#00E599;--fg:#F6F5F1">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Popravka telefona</p>
+          <h3 class="card-name">Ekran servis</h3>
+          <a class="card-link" href="/servis-ekran/">Otvori primer<span class="sr"> za Ekran servis</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="majstori" style="--bg:#15191D;--ac:#F2C14E;--fg:#F6F5F1">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Ključar i bravar</p>
+          <h3 class="card-name">Ključ i brava</h3>
+          <a class="card-link" href="/kljuc-i-brava/">Otvori primer<span class="sr"> za Ključ i brava</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="majstori" style="--bg:#035E7B;--ac:#A2E3F6;--fg:#F6F5F1">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Vodoinstalater</p>
+          <h3 class="card-name">Majstor Voda</h3>
+          <a class="card-link" href="/majstor-voda/">Otvori primer<span class="sr"> za Majstor Voda</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="majstori" style="--bg:#0A0A0A;--ac:#FFE500;--fg:#F6F5F1">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Električar</p>
+          <h3 class="card-name">Struja servis</h3>
+          <a class="card-link" href="/struja-servis/">Otvori primer<span class="sr"> za Struja servis</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="usluge" style="--bg:#1E5BFF;--ac:#FFD23F;--fg:#F6F5F1">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Perionica veša</p>
+          <h3 class="card-name">Perionica Pena</h3>
+          <a class="card-link" href="/perionica-pena/">Otvori primer<span class="sr"> za Perionica Pena</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="usluge" style="--bg:#F7F3EA;--ac:#1B2A41;--fg:#111111">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Hemijsko čišćenje</p>
+          <h3 class="card-name">Čisto i fino</h3>
+          <a class="card-link" href="/hemijsko-cisto/">Otvori primer<span class="sr"> za Čisto i fino</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="usluge" style="--bg:#F5F1E8;--ac:#A61B29;--fg:#111111">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Krojač</p>
+          <h3 class="card-name">Krojačka radnja Ilić</h3>
+          <a class="card-link" href="/krojac-ilic/">Otvori primer<span class="sr"> za Krojačka radnja Ilić</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="usluge" style="--bg:#2B211C;--ac:#A0673A;--fg:#F6F5F1">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Obućar</p>
+          <h3 class="card-name">Obućar Đorđe</h3>
+          <a class="card-link" href="/obucar-djordje/">Otvori primer<span class="sr"> za Obućar Đorđe</span></a>
+        </li>
+        <li class="card" data-paket="3" data-group="lepota" style="--bg:#F2E8D5;--ac:#5C1A1B;--fg:#1F3B2D">
+          <p class="card-pkg">Paket 3 · Plus</p>
+          <p class="card-craft">Berbernica, 2 berberina</p>
+          <h3 class="card-name">Berbernica Pomada</h3>
+          <a class="card-link" href="/plus/pomada-berbernica/">Otvori primer<span class="sr"> za Berbernica Pomada</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="poslovne" style="--bg:#FFFFFF;--ac:#2F7D4F;--fg:#1A1A1A">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Knjigovodstvo</p>
+          <h3 class="card-name">Knjigovodstvena agencija Bilans</h3>
+          <a class="card-link" href="/knjigovodja-bilans/">Otvori primer<span class="sr"> za Knjigovodstvena agencija Bilans</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="poslovne" style="--bg:#FAF8F3;--ac:#2B4ACB;--fg:#1E1E24">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Prevodi i sudski tumač</p>
+          <h3 class="card-name">Prevodilačka agencija Most</h3>
+          <a class="card-link" href="/prevodi-most/">Otvori primer<span class="sr"> za Prevodilačka agencija Most</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="usluge" style="--bg:#EDEBE6;--ac:#A57A4C;--fg:#111111">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Uramljivanje slika</p>
+          <h3 class="card-name">Ram radionica Paspartu</h3>
+          <a class="card-link" href="/ram-paspartu/">Otvori primer<span class="sr"> za Ram radionica Paspartu</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="poslovne" style="--bg:#F7F7F5;--ac:#00A3E0;--fg:#0D0D0D">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Kopirnica i štampa</p>
+          <h3 class="card-name">Kopirnica Toner</h3>
+          <a class="card-link" href="/kopirnica-toner/">Otvori primer<span class="sr"> za Kopirnica Toner</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="majstori" style="--bg:#E8F0F6;--ac:#F26B1D;--fg:#0F2A44">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Servis bele tehnike</p>
+          <h3 class="card-name">Servis bele tehnike Bela</h3>
+          <a class="card-link" href="/servis-bela/">Otvori primer<span class="sr"> za Servis bele tehnike Bela</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="majstori" style="--bg:#F4F1EA;--ac:#B85C38;--fg:#2A2A2A">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Moler i gipsar</p>
+          <h3 class="card-name">Moler Ravno</h3>
+          <a class="card-link" href="/moler-ravno/">Otvori primer<span class="sr"> za Moler Ravno</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="majstori" style="--bg:#EFE9DF;--ac:#5B3A29;--fg:#161412">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Nameštaj po meri</p>
+          <h3 class="card-name">Stolarska radionica Hrast</h3>
+          <a class="card-link" href="/stolarija-hrast/">Otvori primer<span class="sr"> za Stolarska radionica Hrast</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="hrana" style="--bg:#2B1B14;--ac:#E8C4C4;--fg:#FBF7F2">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Kafić</p>
+          <h3 class="card-name">Kafe Pauza</h3>
+          <a class="card-link" href="/kafe-pauza/">Otvori primer<span class="sr"> za Kafe Pauza</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="usluge" style="--bg:#F6F1E7;--ac:#B22222;--fg:#1B1B1B">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Knjižara i antikvarijat</p>
+          <h3 class="card-name">Knjižara Margina</h3>
+          <a class="card-link" href="/knjizara-margina/">Otvori primer<span class="sr"> za Knjižara Margina</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="usluge" style="--bg:#222326;--ac:#A9D6E5;--fg:#FFFFFF">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Optika</p>
+          <h3 class="card-name">Optika Fokus</h3>
+          <a class="card-link" href="/optika-fokus/">Otvori primer<span class="sr"> za Optika Fokus</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="lepota" style="--bg:#E9E4F0;--ac:#5B4BDB;--fg:#22202B">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Kozmetički salon</p>
+          <h3 class="card-name">Kozmetički studio Iris</h3>
+          <a class="card-link" href="/plus/iris-kozmetika/">Otvori primer<span class="sr"> za Kozmetički studio Iris</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="zdravlje" style="--bg:#E8DCCB;--ac:#8E4A2E;--fg:#2E3B3A">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Masaža</p>
+          <h3 class="card-name">Masaža Tišina</h3>
+          <a class="card-link" href="/plus/masaza-tisina/">Otvori primer<span class="sr"> za Masaža Tišina</span></a>
+        </li>
+        <li class="card" data-paket="3" data-group="zdravlje" style="--bg:#10372E;--ac:#FF8552;--fg:#F5F1E6">
+          <p class="card-pkg">Paket 3 · Plus</p>
+          <p class="card-craft">Fizioterapija</p>
+          <h3 class="card-name">Fizio kabinet Ravnoteža</h3>
+          <a class="card-link" href="/plus/fizio-ravnoteza/">Otvori primer<span class="sr"> za Fizio kabinet Ravnoteža</span></a>
+        </li>
+        <li class="card" data-paket="3" data-group="zdravlje" style="--bg:#0B1F17;--ac:#F2B134;--fg:#EAF4EF">
+          <p class="card-pkg">Paket 3 · Plus</p>
+          <p class="card-craft">Stomatolog</p>
+          <h3 class="card-name">Stomatološka ordinacija Emajl</h3>
+          <a class="card-link" href="/plus/stomatologija-emajl/">Otvori primer<span class="sr"> za Stomatološka ordinacija Emajl</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="zdravlje" style="--bg:#121212;--ac:#FF2E63;--fg:#FFFFFF">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Personalni trener</p>
+          <h3 class="card-name">Trening studio Jezgro</h3>
+          <a class="card-link" href="/plus/trening-jezgro/">Otvori primer<span class="sr"> za Trening studio Jezgro</span></a>
+        </li>
+        <li class="card" data-paket="3" data-group="usluge" style="--bg:#2F4F4F;--ac:#F4A261;--fg:#F6F0E1">
+          <p class="card-pkg">Paket 3 · Plus</p>
+          <p class="card-craft">Časovi stranih jezika</p>
+          <h3 class="card-name">Škola jezika Abeceda</h3>
+          <a class="card-link" href="/plus/jezici-abeceda/">Otvori primer<span class="sr"> za Škola jezika Abeceda</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="usluge" style="--bg:#0A0A0A;--ac:#FF4D5E;--fg:#F2F2F2">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Fotograf</p>
+          <h3 class="card-name">Foto studio Blenda</h3>
+          <a class="card-link" href="/plus/foto-blenda/">Otvori primer<span class="sr"> za Foto studio Blenda</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="lepota" style="--bg:#B8F2E6;--ac:#FFA69E;--fg:#3E4452">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Šišanje pasa</p>
+          <h3 class="card-name">Salon za pse Repić</h3>
+          <a class="card-link" href="/plus/salon-repic/">Otvori primer<span class="sr"> za Salon za pse Repić</span></a>
+        </li>
+        <li class="card" data-paket="3" data-group="auto" style="--bg:#263238;--ac:#29B6F6;--fg:#ECEFF1">
+          <p class="card-pkg">Paket 3 · Plus</p>
+          <p class="card-craft">Auto servis, 2 dizalice</p>
+          <h3 class="card-name">Auto centar Zupčanik</h3>
+          <a class="card-link" href="/plus/auto-zupcanik/">Otvori primer<span class="sr"> za Auto centar Zupčanik</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="auto" style="--bg:#16324F;--ac:#7FB7BE;--fg:#F0F4F8">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Vulkanizer, sezonska zamena</p>
+          <h3 class="card-name">Vulkanizer Ventil</h3>
+          <a class="card-link" href="/plus/vulkanizer-ventil/">Otvori primer<span class="sr"> za Vulkanizer Ventil</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="auto" style="--bg:#6A4C93;--ac:#8AC926;--fg:#F7F7FF">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Auto perionica</p>
+          <h3 class="card-name">Auto perionica Kap</h3>
+          <a class="card-link" href="/plus/perionica-kap/">Otvori primer<span class="sr"> za Auto perionica Kap</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="majstori" style="--bg:#0B5D3B;--ac:#C87533;--fg:#F3F0E8">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Popravka telefona</p>
+          <h3 class="card-name">Servis Čip</h3>
+          <a class="card-link" href="/plus/servis-cip/">Otvori primer<span class="sr"> za Servis Čip</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="majstori" style="--bg:#1E2A2F;--ac:#B5651D;--fg:#F4F1EC">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Vodoinstalater, zahtev za izlazak</p>
+          <h3 class="card-name">Vodoinstalater Slavina</h3>
+          <a class="card-link" href="/plus/vodoinstalater-slavina/">Otvori primer<span class="sr"> za Vodoinstalater Slavina</span></a>
+        </li>
+        <li class="card" data-paket="3" data-group="usluge" style="--bg:#023047;--ac:#FFB703;--fg:#FFFFFF">
+          <p class="card-pkg">Paket 3 · Plus</p>
+          <p class="card-craft">Škola vožnje</p>
+          <h3 class="card-name">Auto škola Žmigavac</h3>
+          <a class="card-link" href="/plus/autoskola-zmigavac/">Otvori primer<span class="sr"> za Auto škola Žmigavac</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="usluge" style="--bg:#EADBC8;--ac:#0E6E6E;--fg:#1B1B1B">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Krojač, termin za probu</p>
+          <h3 class="card-name">Krojački atelje Šav</h3>
+          <a class="card-link" href="/plus/atelje-sav/">Otvori primer<span class="sr"> za Krojački atelje Šav</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="hrana" style="--bg:#1B2F5B;--ac:#D9A441;--fg:#FBF6EC">
+          <p class="card-pkg">Paket 2 · porudžbine</p>
+          <p class="card-craft">Pekara, porudžbine za slave</p>
+          <h3 class="card-name">Pekara Kvasac</h3>
+          <a class="card-link" href="/plus/pekara-kvasac/">Otvori primer<span class="sr"> za Pekara Kvasac</span></a>
+        </li>
+        <li class="card" data-paket="3" data-group="hrana" style="--bg:#FFC8DD;--ac:#6B2737;--fg:#4A1825">
+          <p class="card-pkg">Paket 3 · Plus</p>
+          <p class="card-craft">Torte po porudžbini</p>
+          <h3 class="card-name">Poslastičarnica Šlag</h3>
+          <a class="card-link" href="/plus/poslasticarnica-slag/">Otvori primer<span class="sr"> za Poslastičarnica Šlag</span></a>
+        </li>
+        <li class="card" data-paket="3" data-group="hrana" style="--bg:#FDF8F2;--ac:#B8232A;--fg:#2B3D36">
+          <p class="card-pkg">Paket 3 · Plus</p>
+          <p class="card-craft">Cvećara, buket sa dostavom</p>
+          <h3 class="card-name">Cvećara Lala</h3>
+          <a class="card-link" href="/plus/cvecara-lala/">Otvori primer<span class="sr"> za Cvećara Lala</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="hrana" style="--bg:#22223B;--ac:#C9ADA7;--fg:#F2E9E4">
+          <p class="card-pkg">Paket 2 · porudžbine</p>
+          <p class="card-craft">Mesara, porudžbina za preuzimanje</p>
+          <h3 class="card-name">Mesara Ražanj</h3>
+          <a class="card-link" href="/plus/mesara-raznj/">Otvori primer<span class="sr"> za Mesara Ražanj</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="lepota" style="--bg:#F6EEEA;--ac:#A4503F;--fg:#3A2A25">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Trepavice i obrve</p>
+          <h3 class="card-name">Studio Obrva</h3>
+          <a class="card-link" href="/plus/studio-obrva/">Otvori primer<span class="sr"> za Studio Obrva</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="zdravlje" style="--bg:#E9E6DF;--ac:#8A5A40;--fg:#4F5D47">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Joga, grupni časovi</p>
+          <h3 class="card-name">Joga studio Dah</h3>
+          <a class="card-link" href="/plus/joga-dah/">Otvori primer<span class="sr"> za Joga studio Dah</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="zdravlje" style="--bg:#FAF9F6;--ac:#557266;--fg:#3E4A59">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Psihoterapija</p>
+          <h3 class="card-name">Savetovalište Oslonac</h3>
+          <a class="card-link" href="/plus/savetovaliste-oslonac/">Otvori primer<span class="sr"> za Savetovalište Oslonac</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="zdravlje" style="--bg:#FFFFFF;--ac:#2E7D5B;--fg:#1E2B25">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Nutricionista</p>
+          <h3 class="card-name">Nutricionista Mera</h3>
+          <a class="card-link" href="/plus/nutricionista-mera/">Otvori primer<span class="sr"> za Nutricionista Mera</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="zdravlje" style="--bg:#DCE8F5;--ac:#1D4E89;--fg:#0F2440">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Veterinar</p>
+          <h3 class="card-name">Veterinarska ambulanta Njuška</h3>
+          <a class="card-link" href="/plus/veterinar-njuska/">Otvori primer<span class="sr"> za Veterinarska ambulanta Njuška</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="majstori" style="--bg:#0E0E0E;--ac:#57D9A3;--fg:#EDEDED">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Servis računara, zahtev</p>
+          <h3 class="card-name">Servis računara Bajt</h3>
+          <a class="card-link" href="/plus/servis-bajt/">Otvori primer<span class="sr"> za Servis računara Bajt</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="hrana" style="--bg:#F5F0E8;--ac:#6E1E2B;--fg:#1C1414">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Restoran, rezervacija stola</p>
+          <h3 class="card-name">Bistro Sto</h3>
+          <a class="card-link" href="/plus/bistro-sto/">Otvori primer<span class="sr"> za Bistro Sto</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="hrana" style="--bg:#F3EFE6;--ac:#D7372F;--fg:#2E6B3F">
+          <p class="card-pkg">Paket 2 · porudžbine</p>
+          <p class="card-craft">Picerija, dostava</p>
+          <h3 class="card-name">Picerija Kamen</h3>
+          <a class="card-link" href="/plus/picerija-kamen/">Otvori primer<span class="sr"> za Picerija Kamen</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="hrana" style="--bg:#120D0A;--ac:#FF7A1A;--fg:#FFF4E6">
+          <p class="card-pkg">Paket 2 · porudžbine</p>
+          <p class="card-craft">Krilca i piletina, dostava</p>
+          <h3 class="card-name">Hrskavo</h3>
+          <a class="card-link" href="/plus/krilca-hrskavo/">Otvori primer<span class="sr"> za Hrskavo</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="hrana" style="--bg:#F6F0E6;--ac:#C2361D;--fg:#1F1A16">
+          <p class="card-pkg">Paket 2 · porudžbine</p>
+          <p class="card-craft">Roštilj, porudžbine i dostava</p>
+          <h3 class="card-name">Roštilj Žar</h3>
+          <a class="card-link" href="/plus/rostilj-zar/">Otvori primer<span class="sr"> za Roštilj Žar</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="hrana" style="--bg:#FFC300;--ac:#111111;--fg:#111111">
+          <p class="card-pkg">Paket 2 · porudžbine</p>
+          <p class="card-craft">Burgeri, dostava</p>
+          <h3 class="card-name">Burger Dim</h3>
+          <a class="card-link" href="/plus/burger-dim/">Otvori primer<span class="sr"> za Burger Dim</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="hrana" style="--bg:#0D2C54;--ac:#F2B134;--fg:#F7FAFC">
+          <p class="card-pkg">Paket 2 · porudžbine</p>
+          <p class="card-craft">Giros, dostava</p>
+          <h3 class="card-name">Giros Ostrvo</h3>
+          <a class="card-link" href="/plus/giros-ostrvo/">Otvori primer<span class="sr"> za Giros Ostrvo</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="hrana" style="--bg:#FDE8E0;--ac:#E8577A;--fg:#3B2219">
+          <p class="card-pkg">Paket 2 · porudžbine</p>
+          <p class="card-craft">Palačinkarnica, dostava</p>
+          <h3 class="card-name">Palačinkarnica Tiganj</h3>
+          <a class="card-link" href="/plus/palacinke-tiganj/">Otvori primer<span class="sr"> za Palačinkarnica Tiganj</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="hrana" style="--bg:#F2F6F7;--ac:#E8743B;--fg:#0C3B4A">
+          <p class="card-pkg">Paket 2 · porudžbine</p>
+          <p class="card-craft">Ribarnica, porudžbina</p>
+          <h3 class="card-name">Ribarnica Oseka</h3>
+          <a class="card-link" href="/plus/ribarnica-oseka/">Otvori primer<span class="sr"> za Ribarnica Oseka</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="hrana" style="--bg:#FFFDF8;--ac:#F4D58D;--fg:#2C5E8A">
+          <p class="card-pkg">Paket 2 · porudžbine</p>
+          <p class="card-craft">Sir i kajmak, porudžbina</p>
+          <h3 class="card-name">Sirana Skuta</h3>
+          <a class="card-link" href="/plus/sirana-skuta/">Otvori primer<span class="sr"> za Sirana Skuta</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="usluge" style="--bg:#DFF3EF;--ac:#3A7BD5;--fg:#1F2933">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Čišćenje stanova, zahtev</p>
+          <h3 class="card-name">Servis za čišćenje Belo</h3>
+          <a class="card-link" href="/plus/ciscenje-belo/">Otvori primer<span class="sr"> za Servis za čišćenje Belo</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="lepota" style="--bg:#0B0B0B;--ac:#E10600;--fg:#F4F4F2">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Tetoviranje, konsultacije</p>
+          <h3 class="card-name">Studio Linija</h3>
+          <a class="card-link" href="/plus/tetovaza-linija/">Otvori primer<span class="sr"> za Studio Linija</span></a>
+        </li>
+        <li class="card" data-paket="3" data-group="zdravlje" style="--bg:#EFE8DD;--ac:#8FA39A;--fg:#1A1A1A">
+          <p class="card-pkg">Paket 3 · Plus</p>
+          <p class="card-craft">Pilates, 2 instruktorke</p>
+          <h3 class="card-name">Pilates studio Osa</h3>
+          <a class="card-link" href="/plus/pilates-osa/">Otvori primer<span class="sr"> za Pilates studio Osa</span></a>
+        </li>
+        <li class="card" data-paket="3" data-group="ucenje" style="--bg:#FFFFFF;--ac:#EF6F6C;--fg:#1E2B3A">
+          <p class="card-pkg">Paket 3 · Plus</p>
+          <p class="card-craft">Rođendani, 2 sale</p>
+          <h3 class="card-name">Dečja igraonica Balon</h3>
+          <a class="card-link" href="/plus/igraonica-balon/">Otvori primer<span class="sr"> za Dečja igraonica Balon</span></a>
+        </li>
+        <li class="card" data-paket="3" data-group="ucenje" style="--bg:#FBFAF7;--ac:#B08D57;--fg:#141414">
+          <p class="card-pkg">Paket 3 · Plus</p>
+          <p class="card-craft">Muzička škola</p>
+          <h3 class="card-name">Muzička škola Takt</h3>
+          <a class="card-link" href="/plus/muzicka-takt/">Otvori primer<span class="sr"> za Muzička škola Takt</span></a>
+        </li>
+        <li class="card" data-paket="3" data-group="ucenje" style="--bg:#0A0A0A;--ac:#FFB000;--fg:#E9E6DF">
+          <p class="card-pkg">Paket 3 · Plus</p>
+          <p class="card-craft">Escape room, 2 sobe</p>
+          <h3 class="card-name">Escape room Šifra</h3>
+          <a class="card-link" href="/plus/escape-sifra/">Otvori primer<span class="sr"> za Escape room Šifra</span></a>
+        </li>
+        <li class="card" data-paket="3" data-group="zdravlje" style="--bg:#FFFCF7;--ac:#2F5D8C;--fg:#26313D">
+          <p class="card-pkg">Paket 3 · Plus</p>
+          <p class="card-craft">Logoped, 2 logopeda</p>
+          <h3 class="card-name">Logopedski kabinet Reč</h3>
+          <a class="card-link" href="/plus/logoped-rec/">Otvori primer<span class="sr"> za Logopedski kabinet Reč</span></a>
+        </li>
+        <li class="card" data-paket="3" data-group="hrana" style="--bg:#F1ECE2;--ac:#5A6B3B;--fg:#1E1E1E">
+          <p class="card-pkg">Paket 3 · Plus</p>
+          <p class="card-craft">Ketering po porudžbini</p>
+          <h3 class="card-name">Ketering Trpeza</h3>
+          <a class="card-link" href="/plus/ketering-trpeza/">Otvori primer<span class="sr"> za Ketering Trpeza</span></a>
+        </li>
+        <li class="card" data-paket="3" data-group="hrana" style="--bg:#2F3B2C;--ac:#F08A5D;--fg:#FFFFFF">
+          <p class="card-pkg">Paket 3 · Plus</p>
+          <p class="card-craft">Suši, dostava</p>
+          <h3 class="card-name">Suši bar Nori</h3>
+          <a class="card-link" href="/plus/susi-nori/">Otvori primer<span class="sr"> za Suši bar Nori</span></a>
+        </li>
+        <li class="card" data-paket="3" data-group="ucenje" style="--bg:#FFFFFF;--ac:#2541B2;--fg:#111111">
+          <p class="card-pkg">Paket 3 · Plus</p>
+          <p class="card-craft">Plesni studio, 2 sale</p>
+          <h3 class="card-name">Plesni studio Korak</h3>
+          <a class="card-link" href="/plus/ples-korak/">Otvori primer<span class="sr"> za Plesni studio Korak</span></a>
+        </li>
+        <li class="card" data-paket="4" data-group="prodavnice" style="--bg:#F6F1EA;--ac:#E2733D;--fg:#2A1D17">
+          <p class="card-pkg">Paket 4 · Prodavnica</p>
+          <p class="card-craft">Kafa, online prodavnica</p>
+          <h3 class="card-name">Pržionica kafe Svitanje</h3>
+          <a class="card-link" href="/prodavnica/przionica-svitanje/">Otvori primer<span class="sr"> za Pržionica kafe Svitanje</span></a>
+        </li>
+        <li class="card" data-paket="4" data-group="prodavnice" style="--bg:#FBF3E0;--ac:#C98A1A;--fg:#2B2418">
+          <p class="card-pkg">Paket 4 · Prodavnica</p>
+          <p class="card-craft">Med, online prodavnica</p>
+          <h3 class="card-name">Pčelarstvo Saće</h3>
+          <a class="card-link" href="/prodavnica/pcelarstvo-sace/">Otvori primer<span class="sr"> za Pčelarstvo Saće</span></a>
+        </li>
+        <li class="card" data-paket="4" data-group="prodavnice" style="--bg:#B9B3D9;--ac:#7F9B87;--fg:#22252B">
+          <p class="card-pkg">Paket 4 · Prodavnica</p>
+          <p class="card-craft">Ručni sapuni, online prodavnica</p>
+          <h3 class="card-name">Sapunjara Kada</h3>
+          <a class="card-link" href="/prodavnica/sapunjara-kada/">Otvori primer<span class="sr"> za Sapunjara Kada</span></a>
+        </li>
+        <li class="card" data-paket="4" data-group="prodavnice" style="--bg:#F5F2ED;--ac:#3B6E8F;--fg:#1F1D1B">
+          <p class="card-pkg">Paket 5 · Prodavnica Plus</p>
+          <p class="card-craft">Keramika, online prodavnica</p>
+          <h3 class="card-name">Studio Grnčar</h3>
+          <a class="card-link" href="/prodavnica/studio-grncar/">Otvori primer<span class="sr"> za Studio Grnčar</span></a>
+        </li>
+        <li class="card" data-paket="4" data-group="moda" style="--bg:#E9E1D6;--ac:#6B1F2A;--fg:#141414">
+          <p class="card-pkg">Paket 5 · Prodavnica Plus</p>
+          <p class="card-craft">Odeća, online prodavnica</p>
+          <h3 class="card-name">Butik Tkanica</h3>
+          <a class="card-link" href="/prodavnica/butik-tkanica/">Otvori primer<span class="sr"> za Butik Tkanica</span></a>
+        </li>
+        <li class="card" data-paket="4" data-group="prodavnice" style="--bg:#FFF8EE;--ac:#2F6B4F;--fg:#1D2A24">
+          <p class="card-pkg">Paket 5 · Prodavnica Plus</p>
+          <p class="card-craft">Hrana za ljubimce, online prodavnica</p>
+          <h3 class="card-name">Pet shop Zdela</h3>
+          <a class="card-link" href="/prodavnica/pet-shop-zdela/">Otvori primer<span class="sr"> za Pet shop Zdela</span></a>
+        </li>
+        <li class="card" data-paket="1" data-group="moda" style="--bg:#EEEAE4;--ac:#6E6A3C;--fg:#1E1E1E">
+          <p class="card-pkg">Paket 1 · osnovni</p>
+          <p class="card-craft">Ženska odeća</p>
+          <h3 class="card-name">Butik Nit</h3>
+          <a class="card-link" href="/butik-nit/">Otvori primer<span class="sr"> za Butik Nit</span></a>
+        </li>
+        <li class="card" data-paket="2" data-group="moda" style="--bg:#F4ECE8;--ac:#9C7A3C;--fg:#3B2433">
+          <p class="card-pkg">Paket 2 · zakazivanje</p>
+          <p class="card-craft">Proba u radnji, zakazivanje</p>
+          <h3 class="card-name">Butik Kroj</h3>
+          <a class="card-link" href="/plus/butik-kroj/">Otvori primer<span class="sr"> za Butik Kroj</span></a>
+        </li>
+        <li class="card" data-paket="4" data-group="moda" style="--bg:#EFE7DA;--ac:#7A7F4A;--fg:#4A3B2C">
+          <p class="card-pkg">Paket 4 · Prodavnica</p>
+          <p class="card-craft">Lanena odeća, online prodavnica</p>
+          <h3 class="card-name">Lanena</h3>
+          <a class="card-link" href="/prodavnica/butik-lanena/">Otvori primer<span class="sr"> za Lanena</span></a>
+        </li>
+        <li class="card" data-paket="4" data-group="moda" style="--bg:#1C2533;--ac:#3D6FB6;--fg:#F7F6F2">
+          <p class="card-pkg">Paket 5 · Prodavnica Plus</p>
+          <p class="card-craft">Muška odela i košulje, online prodavnica</p>
+          <h3 class="card-name">Kragna</h3>
+          <a class="card-link" href="/prodavnica/musko-kragna/">Otvori primer<span class="sr"> za Kragna</span></a>
+        </li>
+      </ul>
+      <div class="ex-custom">
+        <div>
+          <h3 class="ex-custom-title">Niste pronašli ono što tražite<span class="dot" aria-hidden="true"></span></h3>
+          <p>Primeri su tu da pokažu šta je moguće, a ne da Vas ograniče. Svaki dizajn menjamo po Vašoj želji: boje, fotografije, raspored, tekst i funkcije. Ako imate ideju koju primeri ne pokrivaju, opišite nam je i mi ćemo je realizovati.</p>
+        </div>
+        <a class="btn btn-primary" href="/#kontakt">Opišite nam svoju ideju</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-row">
+    <img src="/logo-zaglavlje-za-tamnu-pozadinu.svg" alt="opsforma" width="477" height="106">
+    <div class="foot-meta">
+      <span class="foot-line">opsforma · Beograd · <a href="mailto:kontakt@opsforma.rs">kontakt@opsforma.rs</a> · <a href="/privatnost/">Politika privatnosti</a></span>
+      <a href="/">Naslovna</a>
+      <a href="https://www.instagram.com/opsformars/" rel="noopener">Instagram @opsformars</a>
+      <span>© <span id="godina">2026</span></span>
+    </div>
+  </div>
+  <nav class="wrap foot-links" aria-labelledby="za-koga">
+    <p class="foot-label" id="za-koga">Za koga pravimo sajtove</p>
+    <ul>
+        <li><a href="/sajt-za-frizere-i-berbernice/">Frizeri i berbernice</a></li>
+        <li><a href="/sajt-za-kozmeticke-salone-i-masazu/">Kozmetički saloni i masaža</a></li>
+        <li><a href="/sajt-za-auto-servis-i-vulkanizera/">Auto servisi i vulkanizeri</a></li>
+        <li><a href="/sajt-za-pekare-cvecare-i-mesare/">Pekare, cvećare i mesare</a></li>
+        <li><a href="/sajt-za-majstore/">Majstori</a></li>
+    </ul>
+  </nav>
+</footer>
+
+<script>
+(function () {
+  var btn = document.querySelector('.menu-btn');
+  var nav = document.getElementById('meni');
+  function setMenu(open) { btn.setAttribute('aria-expanded', open ? 'true' : 'false'); nav.classList.toggle('open', open); }
+  btn.addEventListener('click', function () { setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') { setMenu(false); btn.focus(); }
+  });
+
+  // Filters: paket i vrsta posla zajedno
+  var filters = document.querySelectorAll('.filter');
+  var cards = document.querySelectorAll('#cards .card');
+  var status = document.getElementById('filter-status');
+  var state = { paket: 'sve', grupa: 'sve' };
+  function word(n) {
+    var m10 = n % 10, m100 = n % 100;
+    if (m10 === 1 && m100 !== 11) return 'primer';
+    return 'primera';
+  }
+  function apply() {
+    var n = 0;
+    filters.forEach(function (o) {
+      o.setAttribute('aria-pressed', state[o.getAttribute('data-kind')] === o.getAttribute('data-filter') ? 'true' : 'false');
+    });
+    cards.forEach(function (c) {
+      var show = (state.paket === 'sve' || c.getAttribute('data-paket') === state.paket) &&
+                 (state.grupa === 'sve' || c.getAttribute('data-group') === state.grupa);
+      c.hidden = !show;
+      if (show) n++;
+    });
+    status.textContent = n ? 'Prikazano: ' + n + ' ' + word(n) : 'Nema primera za ovaj izbor. Probajte drugi paket ili vrstu posla.';
+  }
+  filters.forEach(function (f) {
+    f.addEventListener('click', function () {
+      state[f.getAttribute('data-kind')] = f.getAttribute('data-filter');
+      apply();
+    });
+  });
+  try {
+    var params = new URLSearchParams(location.search);
+    var qp = params.get('paket'), qg = params.get('grupa');
+    if (qp === '1' || qp === '2' || qp === '3' || qp === '4') state.paket = qp;
+    if (qg && document.querySelector('.filter[data-kind="grupa"][data-filter="' + qg.replace(/[^a-z]/g, '') + '"]')) state.grupa = qg;
+    apply();
+  } catch (e) {}
+
+  document.getElementById('godina').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
