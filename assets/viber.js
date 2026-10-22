@@ -1,7 +1,7 @@
 /* VIBER: upišite broj u međunarodnom obliku, npr. '+381641234567'.
    Dok je prazno, Viber dugmad na sajtu su skrivena (atribut data-viber),
    a umesto njih se vide zamenska dugmad (atribut data-bez-vibera). */
-window.OPSFORMA_VIBER = '';
+window.OPSFORMA_VIBER = '+381644990967';
 
 (function () {
   var broj = window.OPSFORMA_VIBER;
