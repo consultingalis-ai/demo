@@ -21,9 +21,97 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="opsforma">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&subset=latin-ext&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Da li mušterije plaćaju preko sajta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "U paketima 1, 2 i 3 ne: mušterije Vam plaćaju gotovinom na licu mesta, uplatnicom ili bankovnim transferom, kako Vam odgovara. U paketu Prodavnica kupci plaćaju pouzećem, uplatnicom ili bankovnim transferom, a u paketu Prodavnica Plus i karticom preko Vaše banke."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kako se plaća Vaš sajt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tačan iznos, rok i način plaćanja dogovaramo pre početka rada, kad vidimo šta Vam treba."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Šta je u mesečnom održavanju?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Održavanje nije obavezno. Ako ga uzmete, menjamo Vam cene, radno vreme i tekst kad nam pošaljete izmene, proveravamo da sajt i forma rade i da porudžbine stižu, i brinemo o podešavanjima domena. Domen plaćate Vi, jednom godišnje."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Šta ako mi neko zakaže telefonom?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Upišete termin u svoj Google Kalendar i sajt ga više ne nudi. Kod zahteva za termin to ne morate, jer svaki termin ionako Vi potvrđujete."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Koliko mesečno koštaju alati?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Za većinu radnji 0 dinara: forma, kalendar i hosting imaju besplatne planove. Plaćaju se samo dodaci: SMS poruke (oko 2,40 RSD po poruci) ili zajednički kalendar za više radnika. Tačan iznos Vam kažemo pre početka, da nema iznenađenja."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mogu li da dobijem SMS kad stigne porudžbina ili termin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Da, u paketima 2 do 5. Svaka porudžbina ili termin Vam uvek stiže na mejl. Po želji može i besplatna poruka na Telegramu, ili pravi SMS sa imenom Vaše radnje. SMS ide preko domaćeg servisa, oko 2,40 RSD po poruci, u paketu od najmanje 1.000 poruka, što malim radnjama traje mesecima. Isti servis može da pošalje i kupcu SMS potvrdu ili podsetnik."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mogu li sam da menjam sajt i dodajem fotografije?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Da. Uz sajt može da ide mali panel sa lozinkom, u kom sami menjate obaveštenje, radno vreme, neradne dane, cenovnik i galeriju, i dodajete fotografije sa telefona. Kad sačuvate, sajt se osveži za oko minut. Isprobajte panel na primeru (lozinka: primer)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Šta ako ne želim održavanje ili želim svog programera?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sajt i domen su Vaši. Predajemo Vam ceo sajt na Vaš GitHub i Cloudflare nalog, sa uputstvom na srpskom, i menjamo sve lozinke i ključeve, tako da pristup imate samo Vi. Sajt je običan HTML, pa svaki programer može da nastavi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mogu li kasnije da pređem na veći paket?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Da. Sajt ostaje isti, samo se dodaje zakazivanje ili dodatak koji Vam treba."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Čiji je sajt i domen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vaš. Domen se registruje na Vašu firmu, a zakazivanje radi preko Vašeg Google naloga."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/manrope-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
 <style>
   :root {
     --paper: #F6F5F1;
@@ -272,6 +360,13 @@
   .cta :focus-visible { outline-color: var(--papir); }
   .steps li, .pk-list li { align-content: start; }
   .site-foot { border-top: 1px solid rgba(245,245,242,.12); }
+
+  /* ===== Dodaci, oktobar 2026 ===== */
+  @media (min-width: 860px) and (max-width: 1139px) { .nav .nav-mail { display: none; } }
+  .foot-meta .foot-line a { white-space: nowrap; }
+  .foot-links { margin-top: 28px; padding-top: 22px; border-top: 1px solid rgba(245,245,242,.12); display: grid; gap: 10px; }
+  .foot-label { font-family: var(--sans); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; line-height: 1.4; color: var(--siva-tamno); }
+  .foot-links ul { display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: .95rem; }
 </style>
 </head>
 <body>
@@ -287,8 +382,9 @@
         <li><a href="#prodaja">Online prodaja</a></li>
         <li><a href="#zakazivanje">Kako ide zakazivanje</a></li>
         <li><a href="#pitanja">Pitanja</a></li>
-        <li><a href="../#primeri">Primeri</a></li>
-        <li><a href="../#kontakt">Kontakt</a></li>
+        <li><a href="/primeri/">Primeri</a></li>
+        <li><a href="/#kontakt">Kontakt</a></li>
+        <li class="nav-mail"><a href="mailto:kontakt@opsforma.rs">kontakt@opsforma.rs</a></li>
       </ul>
     </nav>
   </div>
@@ -313,7 +409,7 @@
     <div class="wrap">
       <div class="sec-grid">
         <h2 class="sec-title" id="paketi-naslov">Paketi<span class="dot" aria-hidden="true"></span></h2>
-        <p class="sec-lead" style="margin-top:0;align-self:end;max-width:52ch">Svaki sledeći paket ima sve iz prethodnog. Možete početi sa osnovnim i kasnije dodati zakazivanje.</p>
+        <p class="sec-lead" style="margin-top:0;align-self:end;max-width:52ch">Paketi 1–3 se nadograđuju jedan na drugi: možete početi sa osnovnim i kasnije dodati zakazivanje. Paketi 4 i 5 su za online prodaju.</p>
       </div>
       <div class="plans">
         <article class="plan" aria-labelledby="p1">
@@ -339,7 +435,7 @@
           </div>
           <div class="plan-price">
             <p class="price"><small>od</small> 19.900 <small>RSD</small><span class="upkeep">održavanje po želji: 1.900 RSD mesečno</span></p>
-            <a class="plan-link" href="../?paket=1#primeri">Primeri<span class="sr"> osnovnog paketa</span></a>
+            <a class="plan-link" href="/primeri/?paket=1">Primeri<span class="sr"> osnovnog paketa</span></a>
           </div>
         </article>
 
@@ -366,7 +462,7 @@
           </div>
           <div class="plan-price">
             <p class="price"><small>od</small> 34.900 <small>RSD</small><span class="upkeep">održavanje po želji: 2.900 RSD mesečno</span></p>
-            <a class="plan-link" href="../?paket=2#primeri">Primeri<span class="sr"> paketa sa zakazivanjem</span></a>
+            <a class="plan-link" href="/primeri/?paket=2">Primeri<span class="sr"> paketa sa zakazivanjem</span></a>
           </div>
         </article>
 
@@ -394,7 +490,7 @@
           </div>
           <div class="plan-price">
             <p class="price"><small>od</small> 49.900 <small>RSD</small><span class="upkeep">održavanje po želji: 2.900 RSD mesečno</span></p>
-            <a class="plan-link" href="../?paket=3#primeri">Primeri<span class="sr"> paketa Plus</span></a>
+            <a class="plan-link" href="/primeri/?paket=3">Primeri<span class="sr"> paketa Plus</span></a>
           </div>
         </article>
       </div>
@@ -418,7 +514,7 @@
               <li>Katalog proizvoda sa cenama, korpa i poručivanje</li>
               <li>Plaćanje pouzećem, uplatnicom sa IPS QR kodom, bankovnim transferom po predračunu ili gotovinom u radnji</li>
               <li>Dostava kurirom ili lično preuzimanje, sa cenom dostave u korpi</li>
-              <li>Uslovi kupovine, pravo na odustanak, reklamacije i privatnost, kako zakon traži</li>
+              <li>Šablon uslova kupovine, prava na odustanak, reklamacija i privatnosti, koji pre objave proverite sa svojim knjigovođom ili pravnikom</li>
             </ul>
           </div>
           <div class="plan-block">
@@ -431,7 +527,7 @@
           </div>
           <div class="plan-price">
             <p class="price"><small>od</small> 59.900 <small>RSD</small><span class="upkeep">do 30 proizvoda · održavanje po želji: 4.900 RSD mesečno</span></p>
-            <a class="plan-link" href="../?paket=4#primeri">Primeri<span class="sr"> prodavnica</span></a>
+            <a class="plan-link" href="/primeri/?paket=4">Primeri<span class="sr"> prodavnica</span></a>
           </div>
         </article>
         <article class="plan featured" aria-labelledby="p5">
@@ -457,13 +553,13 @@
           </div>
           <div class="plan-price">
             <p class="price"><small>od</small> 99.900 <small>RSD</small><span class="upkeep">plus povezivanje sa bankom po ponudi · održavanje po želji: 4.900 RSD mesečno</span></p>
-            <a class="plan-link" href="../?paket=4#primeri">Primeri<span class="sr"> prodavnica</span></a>
+            <a class="plan-link" href="/primeri/?paket=4">Primeri<span class="sr"> prodavnica</span></a>
           </div>
         </article>
       </div>
       <h3 style="font-size:2rem;margin-top:64px">Šta je potrebno pre početka</h3>
       <ol class="need">
-        <li><span class="n" aria-hidden="true">1</span><h4>Registrovana firma ili preduzetnička radnja</h4><p>Online prodaja mora da ide preko firme ili radnje. Ako već imate radnju, potrebna je samo odluka o prodaji preko interneta.</p></li>
+        <li><span class="n" aria-hidden="true">1</span><h4>Registrovana firma ili preduzetnička radnja</h4><p>Online prodaja mora da ide preko firme ili radnje. Šta tačno treba za Vašu radnju proverite sa svojim knjigovođom; mi pomažemo oko svega na sajtu.</p></li>
         <li><span class="n" aria-hidden="true">2</span><h4>Fiskalna kasa za online prodaju</h4><p>Za svaku prodaju izdaje se fiskalni račun, uz paket ili elektronski.</p></li>
         <li><span class="n" aria-hidden="true">3</span><h4>Poslovni račun i ugovor sa kurirskom službom</h4><p>Za uplate, predračune i naplatu pouzećem.</p></li>
         <li><span class="n" aria-hidden="true">4</span><h4>Za kartice: ugovor sa bankom</h4><p>Samo za paket Prodavnica Plus. Banka odobrava online naplatu karticama, a mi je povezujemo sa sajtom.</p></li>
@@ -565,7 +661,7 @@
         </details>
         <details>
           <summary>Kako se plaća Vaš sajt?</summary>
-          <p>Uplatnicom, gotovinom ili bankovnim transferom, kako Vam je lakše. Cene na ovoj strani su početne; tačan iznos i rok dogovaramo pre početka rada, kad vidimo šta Vam treba.</p>
+          <p>Tačan iznos, rok i način plaćanja dogovaramo pre početka rada, kad vidimo šta Vam treba.</p>
         </details>
         <details>
           <summary>Šta je u mesečnom održavanju?</summary>
@@ -608,8 +704,8 @@
       <h2 class="sec-title" id="cta-naslov">Niste sigurni koji paket?</h2>
       <p>Javite nam čime se bavite i koliko termina ili porudžbina imate nedeljno. Predložićemo Vam paket, bez obaveze.</p>
       <div class="cta-actions">
-        <a class="btn btn-dark" href="../#kontakt">Javite se</a>
-        <a class="btn btn-quiet" href="../#primeri">Pogledajte primere</a>
+        <a class="btn btn-dark" href="/#kontakt">Javite se</a>
+        <a class="btn btn-quiet" href="/primeri/">Pogledajte primere</a>
       </div>
     </div>
   </section>
@@ -619,12 +715,22 @@
   <div class="wrap foot-row">
     <img src="/logo-zaglavlje-za-tamnu-pozadinu.svg" alt="opsforma" width="477" height="106">
     <div class="foot-meta">
-      <span>opsforma · Beograd</span>
-      <a href="../">Naslovna</a>
+      <span class="foot-line">opsforma · Beograd · <a href="mailto:kontakt@opsforma.rs">kontakt@opsforma.rs</a> · <a href="/privatnost/">Politika privatnosti</a></span>
+      <a href="/">Naslovna</a>
       <a href="https://www.instagram.com/opsformars/" rel="noopener">Instagram @opsformars</a>
       <span>© <span id="godina">2026</span></span>
     </div>
   </div>
+  <nav class="wrap foot-links" aria-labelledby="za-koga">
+    <p class="foot-label" id="za-koga">Za koga pravimo sajtove</p>
+    <ul>
+        <li><a href="/sajt-za-frizere-i-berbernice/">Frizeri i berbernice</a></li>
+        <li><a href="/sajt-za-kozmeticke-salone-i-masazu/">Kozmetički saloni i masaža</a></li>
+        <li><a href="/sajt-za-auto-servis-i-vulkanizera/">Auto servisi i vulkanizeri</a></li>
+        <li><a href="/sajt-za-pekare-cvecare-i-mesare/">Pekare, cvećare i mesare</a></li>
+        <li><a href="/sajt-za-majstore/">Majstori</a></li>
+    </ul>
+  </nav>
 </footer>
 
 <script>
