@@ -1,0 +1,33 @@
+{
+  "obavestenje": {
+    "ukljuceno": true,
+    "tekst": "Od 1. novembra radimo i nedeljom, od 10 do 15 h."
+  },
+  "radnoVreme": [
+    { "dan": "Ponedeljak", "od": "09:00", "do": "20:00", "zatvoreno": false },
+    { "dan": "Utorak", "od": "09:00", "do": "20:00", "zatvoreno": false },
+    { "dan": "Sreda", "od": "09:00", "do": "20:00", "zatvoreno": false },
+    { "dan": "Četvrtak", "od": "09:00", "do": "20:00", "zatvoreno": false },
+    { "dan": "Petak", "od": "09:00", "do": "20:00", "zatvoreno": false },
+    { "dan": "Subota", "od": "09:00", "do": "16:00", "zatvoreno": false },
+    { "dan": "Nedelja", "od": "10:00", "do": "15:00", "zatvoreno": false }
+  ],
+  "neradniDani": [
+    { "datum": "2026-12-31", "opis": "Doček" },
+    { "datum": "2027-01-01", "opis": "Nova godina" },
+    { "datum": "2027-01-07", "opis": "Božić" }
+  ],
+  "cenovnik": [
+    { "kategorija": "Šišanje", "naziv": "Žensko šišanje, kratka kosa", "cena": 1800, "napomena": "" },
+    { "kategorija": "Šišanje", "naziv": "Žensko šišanje, duga kosa", "cena": 2400, "napomena": "" },
+    { "kategorija": "Šišanje", "naziv": "Muško šišanje", "cena": 1200, "napomena": "" },
+    { "kategorija": "Feniranje", "naziv": "Feniranje", "cena": 1000, "napomena": "duga kosa +300" },
+    { "kategorija": "Bojenje", "naziv": "Bojenje izrastka", "cena": 3200, "napomena": "sa farbom" },
+    { "kategorija": "Bojenje", "naziv": "Pramenovi", "cena": 5500, "napomena": "od" }
+  ],
+  "galerija": [
+    { "src": "slike/galerija/primer-1.jpg", "opis": "Kratka frizura sa slojevima" },
+    { "src": "slike/galerija/primer-2.jpg", "opis": "Topli pramenovi" },
+    { "src": "slike/galerija/primer-3.jpg", "opis": "Svečana punđa" }
+  ]
+}

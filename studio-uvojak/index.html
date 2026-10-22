@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="panel-rezim" content="primer">
+<title>Studio Uvojak | Frizerski salon, Vračar</title>
+<meta name="description" content="Studio Uvojak, frizerski salon u Njegoševoj 44 na Vračaru: šišanje, feniranje, bojenje i pramenovi. Cenovnik, radno vreme i zakazivanje pozivom ili na Viberu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&subset=latin-ext&display=swap">
+<!--
+  SADRŽAJ SAJTA
+  Obaveštenje, radno vreme, neradni dani, cenovnik i galerija se čitaju iz fajla sadrzaj.json.
+  Vlasnik ih menja u panelu na adresi /admin/. Ostatak strane (naslov, adresa, telefon) je u ovom fajlu.
+-->
+<style>
+  :root {
+    --krem: #F4EEE7; --sljiva: #2E1F27; --terakota: #A84B25; --siva: #6E6266; --linija: #DCD2C8; --belo: #FFFCF8;
+    --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+    --sans: "Instrument Sans", "Helvetica Neue", Arial, system-ui, sans-serif;
+    --gutter: 20px; --max: 1120px;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--krem); color: var(--sljiva); font: 400 1.0625rem/1.55 var(--sans); -webkit-font-smoothing: antialiased; }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; margin: 0; line-height: 1; }
+  p { margin: 0; }
+  ul { margin: 0; padding: 0; list-style: none; }
+  :focus-visible { outline: 2px solid var(--terakota); outline-offset: 3px; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+  @media (min-width: 900px) { :root { --gutter: 32px; } }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  .obavestenje { background: var(--sljiva); color: var(--krem); font-size: .98rem; }
+  .obavestenje .wrap { padding-top: 12px; padding-bottom: 12px; display: flex; gap: 10px; align-items: baseline; }
+  .obavestenje b { color: #F2B8A0; font-weight: 600; white-space: nowrap; }
+  .obavestenje[hidden] { display: none; }
+
+  header.glava { border-bottom: 1px solid var(--linija); }
+  header.glava .wrap { display: flex; justify-content: space-between; align-items: center; min-height: 68px; gap: 12px; }
+  .ime { font-family: var(--serif); font-size: 1.7rem; text-decoration: none; }
+  .ime i { color: var(--terakota); }
+  header.glava { position: relative; }
+  .meni-dugme { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid var(--sljiva); border-radius: 999px; background: none; font: 600 .95rem/1 var(--sans); color: var(--sljiva); cursor: pointer; }
+  header nav { display: none; }
+  header nav.otvoren { display: grid; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; background: var(--krem); border-bottom: 1px solid var(--linija); padding: 6px var(--gutter) 12px; }
+  header nav a { text-decoration: none; padding: 12px 0; border-bottom: 1px solid var(--linija); }
+  header nav a:last-child { border-bottom: 0; }
+  .tel-mali { display: none; }
+  @media (min-width: 760px) {
+    .meni-dugme { display: none; }
+    header nav, header nav.otvoren { display: flex; gap: 26px; position: static; padding: 0; border: 0; background: none; }
+    header nav a { padding: 6px 0; border: 0; }
+    header nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
+    .tel-mali { display: inline-flex; }
+  }
+  .tel-mali { font-weight: 600; text-decoration: none; border: 1px solid var(--sljiva); border-radius: 999px; padding: 8px 14px; white-space: nowrap; }
+
+  .uvod { padding: 56px 0 64px; }
+  .uvod h1 { font-size: clamp(3.2rem, 12vw, 7rem); letter-spacing: -.01em; max-width: 10ch; }
+  .uvod h1 i { color: var(--terakota); }
+  .uvod p.lid { margin-top: 22px; max-width: 42ch; font-size: 1.2rem; }
+  .status { display: inline-flex; align-items: center; gap: 8px; margin-top: 26px; font-weight: 500; }
+  .status::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--siva); }
+  .status.otvoreno::before { background: #2F7D4F; }
+  .dugmad { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .dugme { display: inline-flex; align-items: center; min-height: 50px; padding: 0 22px; border-radius: 999px; font-weight: 600; text-decoration: none; border: 1.5px solid var(--sljiva); }
+  .dugme.glavno { background: var(--terakota); border-color: var(--terakota); color: var(--belo); }
+  .dugme.glavno:hover { background: var(--sljiva); border-color: var(--sljiva); }
+
+  section { padding: 64px 0; border-top: 1px solid var(--linija); }
+  @media (min-width: 900px) { section { padding: 96px 0; } }
+  .naslov-sekcije { font-size: clamp(2.4rem, 7vw, 3.6rem); margin-bottom: 32px; }
+
+  .cene { display: grid; gap: 36px; }
+  @media (min-width: 760px) { .cene { grid-template-columns: 1fr 1fr; column-gap: 56px; } }
+  .grupa h3 { font-size: 1.6rem; color: var(--terakota); margin-bottom: 8px; }
+  .stavka { display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; padding: 12px 0; border-bottom: 1px solid var(--linija); }
+  .stavka .cena { font-weight: 600; white-space: nowrap; }
+  .stavka .nap { grid-column: 1 / -1; color: var(--siva); font-size: .92rem; }
+
+  .galerija { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  @media (min-width: 760px) { .galerija { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
+  .galerija figure { margin: 0; }
+  .galerija img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 6px; background: var(--linija); }
+  .galerija figcaption { font-size: .92rem; color: var(--siva); margin-top: 6px; }
+  .prazno { color: var(--siva); }
+
+  .vreme-grid { display: grid; gap: 40px; }
+  @media (min-width: 860px) { .vreme-grid { grid-template-columns: 1fr 1fr; gap: 56px; } }
+  table { width: 100%; border-collapse: collapse; }
+  td { padding: 11px 0; border-bottom: 1px solid var(--linija); }
+  td:last-child { text-align: right; }
+  tr.danas td { font-weight: 600; }
+  .neradni { margin-top: 22px; color: var(--siva); }
+  .kontakt p + p { margin-top: 8px; }
+  .mapa { width: 100%; height: 300px; border: 0; border-radius: 6px; background: var(--linija); }
+
+  form { display: grid; gap: 14px; margin-top: 8px; }
+  label { display: block; font-weight: 500; font-size: .95rem; margin-bottom: 6px; }
+  input, textarea { width: 100%; font: inherit; color: inherit; background: var(--belo); border: 1px solid #B9AEA6; border-radius: 6px; padding: 12px; min-height: 48px; }
+  textarea { min-height: 110px; resize: vertical; }
+  button.posalji { justify-self: start; font: 600 1rem/1 var(--sans); background: var(--terakota); color: var(--belo); border: 0; border-radius: 999px; min-height: 50px; padding: 0 24px; cursor: pointer; }
+  .forma-poruka:not(:empty) { padding: 12px 14px; background: var(--belo); border-left: 3px solid var(--terakota); }
+  .demo-bar { background: #14161A; color: #F5F5F2; font-size: .9rem; padding: 10px 20px; text-align: center; }
+  .demo-bar a { color: #F5F5F2; margin-left: 10px; }
+  .panel-link { position: fixed; right: 16px; bottom: 16px; z-index: 20; background: #2F5BEA; color: #fff; font-weight: 600; text-decoration: none; padding: 14px 18px; border-radius: 999px; box-shadow: 0 6px 20px rgba(20,22,26,.25); }
+  .panel-link:hover { background: #14161A; }
+  footer { padding-bottom: 88px; }
+  footer { background: var(--sljiva); color: var(--krem); padding: 36px 0; font-size: .95rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+</style>
+</head>
+<body>
+<div class="demo-bar">Primer sajta sa panelom za izmene · izradio opsforma <a href="../">Svi primeri</a></div>
+<div class="obavestenje" id="obavestenje" hidden><div class="wrap"><b>Obaveštenje</b><span id="obavestenje-tekst"></span></div></div>
+
+<header class="glava">
+  <div class="wrap">
+    <a class="ime" href="./">Studio <i>Uvojak</i></a>
+    <button class="meni-dugme" type="button" aria-expanded="false" aria-controls="meni">Meni</button>
+    <nav id="meni" aria-label="Glavna navigacija"><a href="#cene">Cene</a><a href="#radovi">Radovi</a><a href="#vreme">Radno vreme</a><a href="#kontakt">Kontakt</a></nav>
+    <a class="tel-mali" href="tel:+381600000901">060 000 09 01</a>
+  </div>
+</header>
+
+<main>
+  <section class="uvod" style="border-top:0">
+    <div class="wrap">
+      <h1>Kosa koja Vam <i>stoji</i> i posle feniranja.</h1>
+      <p class="lid">Frizerski salon na Vračaru. Šišanje, feniranje, bojenje i pramenovi, uz razgovor pre nego što uzmemo makaze.</p>
+      <p class="status" id="status" aria-live="polite">Radno vreme pogledajte ispod</p>
+      <div class="dugmad">
+        <a class="dugme glavno" href="tel:+381600000901">Pozovite i zakažite</a>
+        <a class="dugme" href="viber://chat?number=%2B381600000901">Pišite na Viberu</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="cene" aria-labelledby="cene-naslov">
+    <div class="wrap">
+      <h2 class="naslov-sekcije" id="cene-naslov">Cenovnik</h2>
+      <div class="cene" id="cenovnik"><p class="prazno">Cenovnik se učitava…</p></div>
+    </div>
+  </section>
+
+  <section id="radovi" aria-labelledby="radovi-naslov">
+    <div class="wrap">
+      <h2 class="naslov-sekcije" id="radovi-naslov">Naši radovi</h2>
+      <div class="galerija" id="galerija"></div>
+    </div>
+  </section>
+
+  <section id="vreme" aria-labelledby="vreme-naslov">
+    <div class="wrap vreme-grid">
+      <div>
+        <h2 class="naslov-sekcije" id="vreme-naslov">Radno vreme</h2>
+        <table><tbody id="radno-vreme"></tbody></table>
+        <p class="neradni" id="neradni"></p>
+      </div>
+      <div class="kontakt">
+        <h2 class="naslov-sekcije">Gde smo</h2>
+        <p>Njegoševa 44, Vračar, Beograd</p>
+        <p><a href="tel:+381600000901">060 000 09 01</a> · <a href="viber://chat?number=%2B381600000901">Viber</a></p>
+        <iframe class="mapa" title="Mapa: Njegoševa 44, Beograd" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Njego%C5%A1eva%2044%2C%20Beograd&z=16&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="kontakt" aria-labelledby="kontakt-naslov">
+    <div class="wrap vreme-grid">
+      <div>
+        <h2 class="naslov-sekcije" id="kontakt-naslov">Pišite nam</h2>
+        <p class="lid">Za termin je najbrže da pozovete. Za pitanja o bojenju i ceni ostavite poruku, javljamo se istog dana.</p>
+      </div>
+      <!-- PRODUKCIJA: action="https://api.web3forms.com/submit" i skriveno polje access_key sa ključem vlasnika (vidi README). -->
+      <form data-form="kontakt" id="forma" novalidate>
+        <div><label for="f-ime">Ime</label><input id="f-ime" name="ime" autocomplete="name" required></div>
+        <div><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required></div>
+        <div><label for="f-poruka">Poruka</label><textarea id="f-poruka" name="poruka"></textarea></div>
+        <button class="posalji" type="submit">Pošaljite</button>
+        <p class="forma-poruka" id="forma-poruka" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<a class="panel-link" href="admin/">Isprobajte panel</a>
+<footer><div class="wrap"><span>Studio Uvojak · Njegoševa 44, Beograd · Primer sajta, salon je izmišljen. <a href="../">Svi primeri</a></span><span>© <span id="godina">2026</span></span></div></footer>
+
+<script>
+(function () {
+  var DANI = ['Nedelja', 'Ponedeljak', 'Utorak', 'Sreda', 'Četvrtak', 'Petak', 'Subota'];
+  var MESECI = ['januar', 'februar', 'mart', 'april', 'maj', 'jun', 'jul', 'avgust', 'septembar', 'oktobar', 'novembar', 'decembar'];
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function cena(n) { return Number(n).toLocaleString('sr-RS').replace(/,/g, '.') + ' RSD'; }
+  function datum(iso) { var d = iso.split('-'); return Number(d[2]) + '. ' + Number(d[1]) + '.'; }
+  function danasIso() { var d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+
+  function prikazi(s) {
+    // Obaveštenje
+    var ob = document.getElementById('obavestenje');
+    var danas = danasIso();
+    var neradanDanas = (s.neradniDani || []).filter(function (n) { return n.datum === danas; })[0];
+    var tekst = s.obavestenje && s.obavestenje.ukljuceno ? s.obavestenje.tekst : '';
+    if (neradanDanas) tekst = 'Danas ne radimo' + (neradanDanas.opis ? ' (' + neradanDanas.opis + ')' : '') + '.' + (tekst ? ' ' + tekst : '');
+    document.getElementById('obavestenje-tekst').textContent = tekst || '';
+    ob.hidden = !tekst;
+
+    // Cenovnik po kategorijama, redosled kao u panelu
+    var cv = document.getElementById('cenovnik'); cv.textContent = '';
+    var grupe = {}, red = [];
+    (s.cenovnik || []).forEach(function (c) { var k = c.kategorija || 'Usluge'; if (!grupe[k]) { grupe[k] = []; red.push(k); } grupe[k].push(c); });
+    red.forEach(function (k) {
+      var g = el('div', 'grupa'); g.appendChild(el('h3', null, k));
+      grupe[k].forEach(function (c) {
+        var r = el('div', 'stavka'); r.appendChild(el('span', null, c.naziv)); r.appendChild(el('span', 'cena', cena(c.cena)));
+        if (c.napomena) r.appendChild(el('span', 'nap', c.napomena));
+        g.appendChild(r);
+      });
+      cv.appendChild(g);
+    });
+    if (!red.length) cv.appendChild(el('p', 'prazno', 'Cene pitajte telefonom.'));
+
+    // Galerija
+    var ga = document.getElementById('galerija'); ga.textContent = '';
+    (s.galerija || []).forEach(function (f) {
+      var fig = el('figure'); var img = el('img'); img.src = f.src; img.alt = f.opis || 'Fotografija iz salona'; img.loading = 'lazy';
+      fig.appendChild(img); if (f.opis) fig.appendChild(el('figcaption', null, f.opis)); ga.appendChild(fig);
+    });
+    if (!(s.galerija || []).length) ga.appendChild(el('p', 'prazno', 'Fotografije uskoro.'));
+
+    // Radno vreme
+    var tb = document.getElementById('radno-vreme'); tb.textContent = '';
+    var danasIme = DANI[new Date().getDay()];
+    (s.radnoVreme || []).forEach(function (d) {
+      var tr = el('tr', d.dan === danasIme ? 'danas' : null);
+      tr.appendChild(el('td', null, d.dan)); tr.appendChild(el('td', null, d.zatvoreno ? 'ne radimo' : d.od + '–' + d.do));
+      tb.appendChild(tr);
+    });
+    var buduci = (s.neradniDani || []).filter(function (n) { return n.datum >= danas; });
+    document.getElementById('neradni').textContent = buduci.length ? 'Ne radimo: ' + buduci.map(function (n) { return datum(n.datum) + (n.opis ? ' (' + n.opis + ')' : ''); }).join(', ') + '.' : '';
+
+    // Otvoreno sada
+    var st = document.getElementById('status'), sada = new Date();
+    var dan = (s.radnoVreme || []).filter(function (d) { return d.dan === danasIme; })[0];
+    var min = sada.getHours() * 60 + sada.getMinutes();
+    function m(t) { var p = t.split(':'); return Number(p[0]) * 60 + Number(p[1]); }
+    if (dan && !dan.zatvoreno && !neradanDanas && min >= m(dan.od) && min < m(dan.do)) { st.textContent = 'Otvoreno danas do ' + dan.do; st.className = 'status otvoreno'; }
+    else { st.textContent = 'Sada je zatvoreno'; st.className = 'status'; }
+  }
+
+  // Na primeru (opsforma.rs) izmene iz panela se čuvaju samo u Vašem pregledaču.
+  var primer = document.querySelector('meta[name="panel-rezim"][content="primer"]');
+  var lokalno = null;
+  if (primer) { try { lokalno = JSON.parse(localStorage.getItem('uvojak-sadrzaj') || 'null'); } catch (e) {} }
+  if (lokalno) { prikazi(lokalno); }
+  else {
+    fetch('sadrzaj.json', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(prikazi)
+      .catch(function () { document.getElementById('cenovnik').textContent = 'Cene pitajte telefonom: 060 000 09 01.'; });
+  }
+  var dugme = document.querySelector('.meni-dugme'), meni = document.getElementById('meni');
+  dugme.addEventListener('click', function () { var o = dugme.getAttribute('aria-expanded') !== 'true'; dugme.setAttribute('aria-expanded', o); meni.classList.toggle('otvoren', o); });
+  meni.addEventListener('click', function (e) { if (e.target.closest('a')) { dugme.setAttribute('aria-expanded', 'false'); meni.classList.remove('otvoren'); } });
+  document.getElementById('forma').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = e.target, msg = document.getElementById('forma-poruka');
+    if (!f.ime.value.trim() || !f.telefon.value.trim()) { msg.textContent = 'Upišite ime i telefon.'; return; }
+    if (primer || !f.getAttribute('action')) { msg.textContent = 'Ovo je primer sajta. Na pravom sajtu poruka stiže direktno vlasniku na mejl.'; return; }
+    fetch(f.action, { method: 'POST', body: new FormData(f) }).then(function (r) { msg.textContent = r.ok ? 'Hvala, poruka je poslata.' : 'Slanje nije uspelo, pozovite nas.'; f.reset(); })
+      .catch(function () { msg.textContent = 'Slanje nije uspelo, pozovite nas.'; });
+  });
+  document.getElementById('godina').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

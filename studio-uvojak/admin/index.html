@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Panel sajta | Studio Uvojak</title>
+<meta name="sajt-ime" content="Studio Uvojak">
+<meta name="panel-rezim" content="primer">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&subset=latin-ext&display=swap">
+<style>
+  :root {
+    --grafit: #14161A; --papir: #F5F5F2; --plava: #2F5BEA; --siva: #6B6E73; --svetloplava: #E4EAFD; --linija: #E2E2DE;
+    --crvena: #B42318; --zelena: #1F7A45; --belo: #FFFFFF;
+    --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --head: "Manrope", "Inter", system-ui, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--papir); color: var(--grafit); font: 400 1rem/1.5 var(--sans); -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { font-family: var(--head); font-weight: 800; letter-spacing: -.02em; margin: 0; line-height: 1.1; }
+  p { margin: 0; }
+  button, input, textarea, select { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid var(--plava); outline-offset: 2px; }
+  [hidden] { display: none !important; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .tacka { display: inline-block; width: .2em; height: .2em; margin-left: .05em; background: var(--plava); }
+  .oznaka { font-size: .74rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--plava); }
+
+  .omot { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+  .primer-traka { background: var(--svetloplava); color: var(--grafit); font-size: .9rem; }
+  .primer-traka .omot { padding-top: 10px; padding-bottom: 10px; display: flex; flex-wrap: wrap; gap: 6px 14px; justify-content: space-between; align-items: center; }
+  .primer-traka button { background: none; border: 0; padding: 4px 0; text-decoration: underline; cursor: pointer; font-weight: 500; }
+
+  header { background: var(--grafit); color: var(--papir); }
+  header .omot { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 60px; }
+  header h1 { font-size: 1.15rem; }
+  header .pod { color: #A4A7AD; font-size: .85rem; }
+  header a, header button { color: var(--papir); }
+  .zaglavlje-akcije { display: flex; gap: 14px; align-items: center; font-size: .92rem; }
+  .linkdugme { background: none; border: 0; padding: 8px 0; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+
+  /* Prijava */
+  .prijava { max-width: 400px; margin: 64px auto; padding: 0 16px; }
+  .prijava h2 { font-size: 2rem; margin: 10px 0 8px; }
+  .prijava p.opis { color: var(--siva); margin-bottom: 24px; }
+  label { display: block; font-weight: 500; font-size: .92rem; margin-bottom: 6px; }
+  input[type=text], input[type=password], input[type=time], input[type=date], textarea {
+    width: 100%; background: var(--belo); border: 1px solid #B9BBB6; border-radius: 8px; padding: 11px 12px; min-height: 46px; font-size: 1rem;
+  }
+  textarea { min-height: 96px; resize: vertical; }
+  input:focus-visible, textarea:focus-visible { outline: 2px solid var(--plava); outline-offset: 0; border-color: var(--plava); }
+  .dugme { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 20px; border-radius: 8px; border: 1.5px solid var(--grafit); background: transparent; font-weight: 600; cursor: pointer; text-decoration: none; }
+  .dugme.glavno { background: var(--plava); border-color: var(--plava); color: var(--belo); }
+  .dugme.glavno:hover:not(:disabled) { background: var(--grafit); border-color: var(--grafit); }
+  .dugme:disabled { opacity: .45; cursor: not-allowed; }
+  .dugme.ceo { width: 100%; }
+  .poruka { margin-top: 14px; font-size: .95rem; }
+  .poruka.greska { color: var(--crvena); }
+
+  /* Kartice */
+  .kartice { position: sticky; top: 0; z-index: 5; background: var(--papir); border-bottom: 1px solid var(--linija); }
+  .kartice .omot { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+  .kartica { background: none; border: 0; border-bottom: 2px solid transparent; padding: 14px 7px 12px; font-size: .9rem; font-weight: 600; white-space: nowrap; cursor: pointer; color: var(--siva); }
+  .kartica[aria-selected="true"] { color: var(--grafit); border-bottom-color: var(--plava); }
+  .kartica .izm { display: inline-block; width: 6px; height: 6px; background: var(--plava); margin-left: 6px; vertical-align: middle; }
+
+  main { padding: 28px 0 140px; }
+  .deo h2 { font-size: 1.6rem; margin: 6px 0 6px; }
+  .deo > .omot > p.opis { color: var(--siva); margin-bottom: 22px; max-width: 56ch; }
+  .blok { background: var(--belo); border: 1px solid var(--linija); border-radius: 12px; padding: 16px; }
+  .blok + .blok { margin-top: 12px; }
+  .red { display: flex; gap: 10px; align-items: center; }
+  .prekidac { display: flex; align-items: center; gap: 12px; font-weight: 500; cursor: pointer; margin: 0 0 14px; }
+  .prekidac input { width: 22px; height: 22px; accent-color: var(--plava); }
+  .brojac { font-size: .85rem; color: var(--siva); margin-top: 6px; text-align: right; }
+
+  .dan { display: grid; grid-template-columns: 1fr auto; gap: 10px 12px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--linija); }
+  .dan:last-child { border-bottom: 0; }
+  .dan .ime-dana { font-weight: 600; }
+  .dan .zat { display: flex; align-items: center; gap: 8px; font-size: .92rem; cursor: pointer; }
+  .dan .zat input { width: 20px; height: 20px; accent-color: var(--plava); }
+  .dan .sati { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr auto 1fr; gap: 8px; align-items: center; }
+  .dan .sati span { color: var(--siva); }
+  @media (min-width: 620px) { .dan { grid-template-columns: 130px 1fr auto; } .dan .sati { grid-column: auto; grid-row: 1; grid-column-start: 2; } }
+
+  .stavka { background: var(--belo); border: 1px solid var(--linija); border-radius: 12px; padding: 14px; display: grid; gap: 10px; }
+  .stavka + .stavka { margin-top: 10px; }
+  .polja { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; }
+  .polja .sirok { grid-column: 1 / -1; }
+  @media (min-width: 620px) { .polja { grid-template-columns: 2fr 1fr; } }
+  .polja label { font-size: .82rem; color: var(--siva); margin-bottom: 4px; }
+  .alati { display: flex; gap: 6px; justify-content: flex-end; }
+  .ikona { min-width: 44px; min-height: 40px; border: 1px solid var(--linija); background: var(--papir); border-radius: 8px; cursor: pointer; font-weight: 600; padding: 0 10px; }
+  .ikona:hover:not(:disabled) { border-color: var(--grafit); }
+  .ikona:disabled { opacity: .35; cursor: default; }
+  .ikona.brisi { color: var(--crvena); }
+  .dodaj { margin-top: 14px; }
+
+  .slike { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  @media (min-width: 620px) { .slike { grid-template-columns: repeat(3, 1fr); } }
+  .slika { background: var(--belo); border: 1px solid var(--linija); border-radius: 12px; overflow: hidden; display: grid; }
+  .slika img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--linija); }
+  .slika .unutra { padding: 10px; display: grid; gap: 8px; }
+  .slika .nova { font-size: .74rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--plava); }
+  .slika input { min-height: 40px; padding: 8px 10px; font-size: .92rem; }
+  .slika { min-width: 0; }
+  .slika input { min-width: 0; }
+  .slika .alati { justify-content: space-between; flex-wrap: wrap; }
+  .slika .alati .red { gap: 6px; }
+  .slika .ikona { min-width: 40px; padding: 0 8px; }
+  @media (max-width: 479px) { .slika .alati .brisi { flex: 1 1 100%; } }
+  .polja > div { min-width: 0; }
+  .ucitaj { position: relative; display: inline-flex; }
+  .ucitaj input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+  .ucitaj:focus-within .dugme { outline: 2px solid var(--plava); outline-offset: 2px; }
+
+  .traka { position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; background: var(--grafit); color: var(--papir); padding-bottom: env(safe-area-inset-bottom); }
+  .traka .omot { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 72px; }
+  .traka .stanje { font-size: .92rem; color: #D5D7DB; }
+  .traka .stanje.ok { color: #9FE0B6; }
+  .traka .stanje.greska { color: #FFB4AB; }
+  .traka .stanje a { color: var(--papir); }
+  .traka .dugme.glavno:disabled { opacity: .5; }
+</style>
+</head>
+<body>
+<div class="primer-traka" id="primer-traka" hidden>
+  <div class="omot"><span><b>Primer panela.</b> Lozinka je <b>primer</b>. Izmene vidite samo Vi, u ovom pregledaču.</span><button type="button" id="vrati-primer">Vrati početni sadržaj</button></div>
+</div>
+
+<header>
+  <div class="omot">
+    <div><h1 id="naziv-sajta">Panel sajta</h1><p class="pod">Izmene sajta bez programera</p></div>
+    <div class="zaglavlje-akcije"><a href="../" target="_blank" rel="noopener">Otvori sajt</a><button class="linkdugme" type="button" id="odjava" hidden>Odjava</button></div>
+  </div>
+</header>
+
+<!-- Prijava -->
+<section class="prijava" id="prijava" hidden aria-labelledby="prijava-naslov">
+  <p class="oznaka">Panel sajta</p>
+  <h2 id="prijava-naslov">Prijava<span class="tacka" aria-hidden="true"></span></h2>
+  <p class="opis">Unesite lozinku koju ste dobili uz sajt.</p>
+  <form id="forma-prijava">
+    <label for="lozinka">Lozinka</label>
+    <input id="lozinka" type="password" autocomplete="current-password" required>
+    <button class="dugme glavno ceo" type="submit" style="margin-top:16px">Prijavi se</button>
+    <p class="poruka" id="prijava-poruka" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+<!-- Uređivanje -->
+<div id="uredjivanje" hidden>
+  <nav class="kartice" aria-label="Delovi sajta">
+    <div class="omot" role="tablist">
+      <button class="kartica" role="tab" type="button" data-deo="obavestenje" aria-selected="true" aria-controls="deo-obavestenje" id="k-obavestenje">Obaveštenje</button>
+      <button class="kartica" role="tab" type="button" data-deo="vreme" aria-selected="false" aria-controls="deo-vreme" id="k-vreme">Radno vreme</button>
+      <button class="kartica" role="tab" type="button" data-deo="cenovnik" aria-selected="false" aria-controls="deo-cenovnik" id="k-cenovnik">Cenovnik</button>
+      <button class="kartica" role="tab" type="button" data-deo="galerija" aria-selected="false" aria-controls="deo-galerija" id="k-galerija">Galerija</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="deo" id="deo-obavestenje" role="tabpanel" aria-labelledby="k-obavestenje">
+      <div class="omot">
+        <p class="oznaka">Vrh sajta</p>
+        <h2>Obaveštenje<span class="tacka" aria-hidden="true"></span></h2>
+        <p class="opis">Kratka poruka na vrhu sajta: promena radnog vremena, odmor, akcija. Kad Vam ne treba, isključite je.</p>
+        <div class="blok">
+          <label class="prekidac"><input type="checkbox" id="ob-ukljuceno"> Prikaži obaveštenje na sajtu</label>
+          <label for="ob-tekst">Tekst obaveštenja</label>
+          <textarea id="ob-tekst" maxlength="300" placeholder="npr. Od 1. do 10. avgusta smo na odmoru."></textarea>
+          <p class="brojac"><span id="ob-brojac">0</span> / 300</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="deo" id="deo-vreme" role="tabpanel" aria-labelledby="k-vreme" hidden>
+      <div class="omot">
+        <p class="oznaka">Kad radite</p>
+        <h2>Radno vreme<span class="tacka" aria-hidden="true"></span></h2>
+        <p class="opis">Sajt sam piše „Otvoreno danas do…“ ili „Sada je zatvoreno“, prema ovim satima.</p>
+        <div class="blok" id="dani"></div>
+        <h2 style="font-size:1.25rem;margin:32px 0 6px">Neradni dani<span class="tacka" aria-hidden="true"></span></h2>
+        <p class="opis" style="color:var(--siva);margin-bottom:14px">Praznici i odmori. Na taj dan sajt piše „Danas ne radimo“. Prošli datumi se sami sklanjaju sa sajta.</p>
+        <div id="neradni"></div>
+        <button class="dugme dodaj" type="button" id="dodaj-neradni">+ Dodaj neradni dan</button>
+      </div>
+    </section>
+
+    <section class="deo" id="deo-cenovnik" role="tabpanel" aria-labelledby="k-cenovnik" hidden>
+      <div class="omot">
+        <p class="oznaka">Usluge</p>
+        <h2>Cenovnik<span class="tacka" aria-hidden="true"></span></h2>
+        <p class="opis">Usluge sa istom kategorijom stoje zajedno na sajtu. Redosled menjate strelicama.</p>
+        <datalist id="kategorije"></datalist>
+        <div id="cene"></div>
+        <button class="dugme dodaj" type="button" id="dodaj-cenu">+ Dodaj uslugu</button>
+      </div>
+    </section>
+
+    <section class="deo" id="deo-galerija" role="tabpanel" aria-labelledby="k-galerija" hidden>
+      <div class="omot">
+        <p class="oznaka">Fotografije</p>
+        <h2>Galerija<span class="tacka" aria-hidden="true"></span></h2>
+        <p class="opis">Dodajte fotografije sa telefona ili računara. Panel ih sam smanji, pa se sajt brzo učitava. Najbolje izgledaju uspravne fotografije.</p>
+        <div class="slike" id="slike"></div>
+        <div class="ucitaj dodaj">
+          <span class="dugme" aria-hidden="true">+ Dodaj fotografije</span>
+          <input type="file" id="nove-slike" accept="image/jpeg,image/png,image/webp,image/heic,image/*" multiple aria-label="Dodaj fotografije">
+        </div>
+        <p class="poruka" id="slike-poruka" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <div class="traka">
+    <div class="omot">
+      <p class="stanje" id="stanje" role="status" aria-live="polite">Nema izmena.</p>
+      <button class="dugme glavno" type="button" id="sacuvaj" disabled>Sačuvaj i objavi</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var PRIMER = !!document.querySelector('meta[name="panel-rezim"][content="primer"]');
+  var KLJUC_PRIMER = 'uvojak-sadrzaj';
+  var MAX_STRANA = PRIMER ? 900 : 1600;     // najduža strana fotografije u pikselima
+  var KVALITET = PRIMER ? 0.72 : 0.82;
+  var DANI = ['Ponedeljak', 'Utorak', 'Sreda', 'Četvrtak', 'Petak', 'Subota', 'Nedelja'];
+
+  var $ = function (id) { return document.getElementById(id); };
+  var stanje = null;       // sadržaj koji se uređuje
+  var sacuvano = '';       // JSON poslednjeg sačuvanog stanja
+  var obrisane = [];       // postojeće fotografije uklonjene iz galerije
+  var radim = false;
+
+  var ime = document.querySelector('meta[name="sajt-ime"]');
+  if (ime) $('naziv-sajta').textContent = ime.content;
+  if (PRIMER) $('primer-traka').hidden = false;
+
+  // ---------- server ili primer ----------
+  function api(metod, ruta, telo) {
+    return fetch('/api/' + ruta, {
+      method: metod, credentials: 'same-origin',
+      headers: metod === 'POST' ? { 'content-type': 'application/json' } : {},
+      body: metod === 'POST' ? JSON.stringify(telo || {}) : undefined
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (p) {
+        if (!r.ok) { var e = new Error(p.greska || 'Greška ' + r.status); e.status = r.status; throw e; }
+        return p;
+      });
+    });
+  }
+  function proveriSesiju() {
+    if (PRIMER) return Promise.resolve(sessionStorage.getItem('primer-prijava') === '1');
+    return api('GET', 'sesija').then(function (p) { return p.prijavljen; }).catch(function () { return false; });
+  }
+  function prijaviSe(lozinka) {
+    if (PRIMER) {
+      if (lozinka.trim().toLowerCase() !== 'primer') return Promise.reject(new Error('Pogrešna lozinka. Na primeru je lozinka: primer'));
+      sessionStorage.setItem('primer-prijava', '1'); return Promise.resolve();
+    }
+    return api('POST', 'prijava', { lozinka: lozinka });
+  }
+  function ucitajSadrzaj() {
+    if (PRIMER) {
+      var l = null; try { l = JSON.parse(localStorage.getItem(KLJUC_PRIMER) || 'null'); } catch (e) {}
+      if (l) return Promise.resolve(l);
+      return fetch('../sadrzaj.json', { cache: 'no-store' }).then(function (r) { return r.json(); });
+    }
+    return api('GET', 'sadrzaj').then(function (p) { return p.sadrzaj; });
+  }
+
+  // ---------- pomoćne ----------
+  function el(tag, attrs, deca) {
+    var e = document.createElement(tag);
+    Object.keys(attrs || {}).forEach(function (k) {
+      if (k === 'text') e.textContent = attrs[k];
+      else if (k.slice(0, 2) === 'on') e.addEventListener(k.slice(2), attrs[k]);
+      else if (attrs[k] === true) e.setAttribute(k, '');
+      else if (attrs[k] !== false && attrs[k] != null) e.setAttribute(k, attrs[k]);
+    });
+    (deca || []).forEach(function (d) { if (d) e.appendChild(d); });
+    return e;
+  }
+  var brojId = 0; function noviId(p) { brojId += 1; return p + '-' + brojId; }
+  function pomeri(niz, i, smer) { var j = i + smer; if (j < 0 || j >= niz.length) return; var t = niz[i]; niz[i] = niz[j]; niz[j] = t; }
+  function cenaUBroj(v) { var s = String(v).replace(/[\s.]/g, '').replace(',', '.'); return s === '' ? NaN : Number(s); }
+  function prikazSlike(src) { return /^(data:|blob:|https?:)/.test(src) ? src : '../' + src; }
+
+  function cisto() {
+    // sadržaj bez privremenih polja (nove fotografije čuvaju podatke u _podaci)
+    return JSON.parse(JSON.stringify(stanje, function (k, v) { return k.charAt(0) === '_' ? undefined : v; }));
+  }
+  function promenjeno() {
+    var izm = JSON.stringify(cisto()) !== sacuvano || obrisane.length > 0 || stanje.galerija.some(function (f) { return f._podaci; });
+    $('sacuvaj').disabled = !izm || radim;
+    if (!radim) { $('stanje').className = 'stanje'; $('stanje').textContent = izm ? 'Imate nesačuvane izmene.' : 'Nema izmena.'; }
+    return izm;
+  }
+
+  // ---------- crtanje ----------
+  function crtajObavestenje() {
+    $('ob-ukljuceno').checked = !!stanje.obavestenje.ukljuceno;
+    $('ob-tekst').value = stanje.obavestenje.tekst || '';
+    $('ob-brojac').textContent = $('ob-tekst').value.length;
+  }
+
+  function crtajDane() {
+    var box = $('dani'); box.textContent = '';
+    stanje.radnoVreme.forEach(function (d) {
+      var idOd = noviId('od'), idDo = noviId('do');
+      var sati = el('div', { class: 'sati' }, [
+        el('label', { class: 'sr', for: idOd, text: d.dan + ', od' }),
+        el('input', { type: 'time', id: idOd, value: d.od, disabled: d.zatvoreno, oninput: function (e) { d.od = e.target.value; promenjeno(); } }),
+        el('span', { text: 'do', 'aria-hidden': 'true' }),
+        el('label', { class: 'sr', for: idDo, text: d.dan + ', do' }),
+        el('input', { type: 'time', id: idDo, value: d.do, disabled: d.zatvoreno, oninput: function (e) { d.do = e.target.value; promenjeno(); } })
+      ]);
+      var zat = el('input', { type: 'checkbox', checked: d.zatvoreno, onchange: function (e) {
+        d.zatvoreno = e.target.checked;
+        if (!d.zatvoreno && (!d.od || !d.do)) { d.od = d.od || '09:00'; d.do = d.do || '17:00'; }
+        crtajDane(); promenjeno();
+      } });
+      box.appendChild(el('div', { class: 'dan' }, [
+        el('span', { class: 'ime-dana', text: d.dan }), sati,
+        el('label', { class: 'zat' }, [zat, document.createTextNode('ne radimo')])
+      ]));
+    });
+  }
+
+  function crtajNeradne() {
+    var box = $('neradni'); box.textContent = '';
+    stanje.neradniDani.forEach(function (n, i) {
+      var idD = noviId('nd'), idO = noviId('no');
+      box.appendChild(el('div', { class: 'stavka' }, [
+        el('div', { class: 'polja' }, [
+          el('div', null, [el('label', { for: idD, text: 'Datum' }), el('input', { type: 'date', id: idD, value: n.datum, oninput: function (e) { n.datum = e.target.value; promenjeno(); } })]),
+          el('div', null, [el('label', { for: idO, text: 'Opis (nije obavezno)' }), el('input', { type: 'text', id: idO, value: n.opis || '', maxlength: '60', placeholder: 'npr. Nova godina', oninput: function (e) { n.opis = e.target.value; promenjeno(); } })])
+        ]),
+        el('div', { class: 'alati' }, [el('button', { type: 'button', class: 'ikona brisi', text: 'Obriši', 'aria-label': 'Obriši neradni dan', onclick: function () { stanje.neradniDani.splice(i, 1); crtajNeradne(); promenjeno(); } })])
+      ]));
+    });
+  }
+
+  function crtajCene() {
+    var box = $('cene'); box.textContent = '';
+    var kat = {}; stanje.cenovnik.forEach(function (c) { if (c.kategorija) kat[c.kategorija] = 1; });
+    var dl = $('kategorije'); dl.textContent = ''; Object.keys(kat).forEach(function (k) { dl.appendChild(el('option', { value: k })); });
+    stanje.cenovnik.forEach(function (c, i) {
+      var ids = { k: noviId('k'), n: noviId('n'), c: noviId('c'), p: noviId('p') };
+      if (c._cenaTekst == null) c._cenaTekst = String(c.cena);
+      box.appendChild(el('div', { class: 'stavka' }, [
+        el('div', { class: 'polja' }, [
+          el('div', { class: 'sirok' }, [el('label', { for: ids.n, text: 'Naziv usluge' }), el('input', { type: 'text', id: ids.n, value: c.naziv, maxlength: '120', required: true, oninput: function (e) { c.naziv = e.target.value; promenjeno(); } })]),
+          el('div', null, [el('label', { for: ids.k, text: 'Kategorija' }), el('input', { type: 'text', id: ids.k, value: c.kategorija, list: 'kategorije', maxlength: '60', oninput: function (e) { c.kategorija = e.target.value; promenjeno(); } })]),
+          el('div', null, [el('label', { for: ids.c, text: 'Cena (RSD)' }), el('input', { type: 'text', id: ids.c, value: c._cenaTekst, inputmode: 'numeric', oninput: function (e) { c._cenaTekst = e.target.value; c.cena = cenaUBroj(e.target.value); promenjeno(); } })]),
+          el('div', { class: 'sirok' }, [el('label', { for: ids.p, text: 'Napomena (nije obavezno)' }), el('input', { type: 'text', id: ids.p, value: c.napomena || '', maxlength: '120', placeholder: 'npr. od, ili duga kosa +300', oninput: function (e) { c.napomena = e.target.value; promenjeno(); } })])
+        ]),
+        el('div', { class: 'alati' }, [
+          el('button', { type: 'button', class: 'ikona', text: '↑', 'aria-label': 'Pomeri gore: ' + c.naziv, disabled: i === 0, onclick: function () { pomeri(stanje.cenovnik, i, -1); crtajCene(); promenjeno(); } }),
+          el('button', { type: 'button', class: 'ikona', text: '↓', 'aria-label': 'Pomeri dole: ' + c.naziv, disabled: i === stanje.cenovnik.length - 1, onclick: function () { pomeri(stanje.cenovnik, i, 1); crtajCene(); promenjeno(); } }),
+          el('button', { type: 'button', class: 'ikona brisi', text: 'Obriši', 'aria-label': 'Obriši uslugu: ' + c.naziv, onclick: function () {
+            if (!confirm('Obrisati „' + (c.naziv || 'uslugu') + '“ iz cenovnika?')) return;
+            stanje.cenovnik.splice(i, 1); crtajCene(); promenjeno();
+          } })
+        ])
+      ]));
+    });
+  }
+
+  function crtajSlike() {
+    var box = $('slike'); box.textContent = '';
+    stanje.galerija.forEach(function (f, i) {
+      var idO = noviId('so');
+      box.appendChild(el('figure', { class: 'slika', style: 'margin:0' }, [
+        el('img', { src: f._podaci || f._prikaz || prikazSlike(f.src), alt: f.opis || 'Fotografija ' + (i + 1) }),
+        el('div', { class: 'unutra' }, [
+          f._podaci ? el('span', { class: 'nova', text: 'Nova, još nije objavljena' }) : null,
+          el('label', { class: 'sr', for: idO, text: 'Opis fotografije ' + (i + 1) }),
+          el('input', { type: 'text', id: idO, value: f.opis || '', maxlength: '120', placeholder: 'Opis (nije obavezno)', oninput: function (e) { f.opis = e.target.value; promenjeno(); } }),
+          el('div', { class: 'alati' }, [
+            el('span', { class: 'red' }, [
+              el('button', { type: 'button', class: 'ikona', text: '←', 'aria-label': 'Pomeri ranije', disabled: i === 0, onclick: function () { pomeri(stanje.galerija, i, -1); crtajSlike(); promenjeno(); } }),
+              el('button', { type: 'button', class: 'ikona', text: '→', 'aria-label': 'Pomeri kasnije', disabled: i === stanje.galerija.length - 1, onclick: function () { pomeri(stanje.galerija, i, 1); crtajSlike(); promenjeno(); } })
+            ]),
+            el('button', { type: 'button', class: 'ikona brisi', text: 'Obriši', 'aria-label': 'Obriši fotografiju ' + (i + 1), onclick: function () {
+              if (!confirm('Skloniti ovu fotografiju sa sajta?')) return;
+              if (!f._podaci && !/^data:/.test(f.src)) obrisane.push(f.src);
+              stanje.galerija.splice(i, 1); crtajSlike(); promenjeno();
+            } })
+          ])
+        ])
+      ]));
+    });
+    if (!stanje.galerija.length) box.appendChild(el('p', { class: 'opis', text: 'Galerija je prazna.' }));
+  }
+
+  function crtajSve() { crtajObavestenje(); crtajDane(); crtajNeradne(); crtajCene(); crtajSlike(); promenjeno(); }
+
+  // ---------- fotografije: smanjivanje u pregledaču ----------
+  function smanji(fajl) {
+    var otvori = window.createImageBitmap
+      ? createImageBitmap(fajl, { imageOrientation: 'from-image' })
+      : new Promise(function (ok, ne) { var i = new Image(); i.onload = function () { ok(i); }; i.onerror = ne; i.src = URL.createObjectURL(fajl); });
+    return otvori.then(function (slika) {
+      var w = slika.width, h = slika.height, k = Math.min(1, MAX_STRANA / Math.max(w, h));
+      var c = document.createElement('canvas'); c.width = Math.round(w * k); c.height = Math.round(h * k);
+      c.getContext('2d').drawImage(slika, 0, 0, c.width, c.height);
+      return c.toDataURL('image/jpeg', KVALITET);
+    });
+  }
+  $('nove-slike').addEventListener('change', function (e) {
+    var fajlovi = Array.prototype.slice.call(e.target.files || []);
+    e.target.value = '';
+    if (!fajlovi.length) return;
+    if (stanje.galerija.length + fajlovi.length > (PRIMER ? 9 : 60)) { $('slike-poruka').className = 'poruka greska'; $('slike-poruka').textContent = PRIMER ? 'Na primeru može najviše 9 fotografija.' : 'Galerija može da ima najviše 60 fotografija.'; return; }
+    $('slike-poruka').className = 'poruka'; $('slike-poruka').textContent = 'Pripremam fotografije…';
+    var neuspele = 0;
+    fajlovi.reduce(function (p, f) {
+      return p.then(function () {
+        return smanji(f).then(function (podaci) {
+          stanje.galerija.push({ src: '', opis: '', _podaci: podaci });
+        }).catch(function () { neuspele += 1; });
+      });
+    }, Promise.resolve()).then(function () {
+      crtajSlike(); promenjeno();
+      $('slike-poruka').className = neuspele ? 'poruka greska' : 'poruka';
+      $('slike-poruka').textContent = neuspele
+        ? neuspele + ' fotografij' + (neuspele === 1 ? 'u' : 'e') + ' nismo mogli da otvorimo. Probajte JPG ili PNG.'
+        : 'Fotografije su dodate. Kliknite „Sačuvaj i objavi“.';
+    });
+  });
+
+  // ---------- provera i čuvanje ----------
+  function problem() {
+    if (stanje.obavestenje.ukljuceno && !stanje.obavestenje.tekst.trim()) return ['obavestenje', 'Obaveštenje je uključeno, a tekst je prazan.'];
+    for (var i = 0; i < stanje.radnoVreme.length; i++) {
+      var d = stanje.radnoVreme[i];
+      if (!d.zatvoreno && (!d.od || !d.do || d.od >= d.do)) return ['vreme', 'Radno vreme za dan ' + d.dan + ': početak mora biti pre kraja.'];
+    }
+    for (var j = 0; j < stanje.neradniDani.length; j++) if (!stanje.neradniDani[j].datum) return ['vreme', 'Neradni dan nema datum.'];
+    for (var k = 0; k < stanje.cenovnik.length; k++) {
+      var c = stanje.cenovnik[k];
+      if (!c.naziv.trim()) return ['cenovnik', 'Jedna usluga nema naziv.'];
+      if (!isFinite(c.cena) || c.cena < 0) return ['cenovnik', 'Cena za „' + c.naziv + '“ nije broj. Upišite samo broj, npr. 1800.'];
+    }
+    return null;
+  }
+
+  function javi(tekst, vrsta) { $('stanje').className = 'stanje' + (vrsta ? ' ' + vrsta : ''); $('stanje').textContent = tekst; }
+
+  function sacuvaj() {
+    var p = problem();
+    if (p) { izaberi(p[0]); javi(p[1], 'greska'); return; }
+    radim = true; $('sacuvaj').disabled = true;
+    stanje.neradniDani.sort(function (a, b) { return a.datum < b.datum ? -1 : 1; });
+
+    if (PRIMER) {
+      stanje.galerija.forEach(function (f) { if (f._podaci) { f.src = f._podaci; delete f._podaci; } });
+      try { localStorage.setItem(KLJUC_PRIMER, JSON.stringify(cisto())); }
+      catch (e) { radim = false; javi('Pregledač nema mesta za ove fotografije. Obrišite neku pa probajte opet.', 'greska'); return; }
+      sacuvano = JSON.stringify(cisto()); obrisane = []; radim = false; crtajSve();
+      $('stanje').className = 'stanje ok'; $('stanje').innerHTML = 'Sačuvano. <a href="../" target="_blank" rel="noopener">Pogledajte sajt</a>';
+      return;
+    }
+
+    var nove = stanje.galerija.filter(function (f) { return f._podaci; });
+    var noveSlike = [];
+    nove.reduce(function (pr, f, i) {
+      return pr.then(function () {
+        javi('Šaljem fotografiju ' + (i + 1) + ' od ' + nove.length + '…');
+        return api('POST', 'slika', { base64: f._podaci.split(',')[1] }).then(function (r) {
+          f.src = r.putanja; f._poslato = r.sha; noveSlike.push({ putanja: r.putanja, sha: r.sha });
+        });
+      });
+    }, Promise.resolve()).then(function () {
+      javi('Čuvam izmene…');
+      return api('POST', 'sacuvaj', { sadrzaj: cisto(), noveSlike: noveSlike, obrisane: obrisane });
+    }).then(function () {
+      stanje.galerija.forEach(function (f) { delete f._poslato; });
+      // fotografije ostaju prikazane iz memorije dok se sajt ne objavi
+      sacuvano = JSON.stringify(cisto()); obrisane = []; radim = false;
+      stanje.galerija.forEach(function (f) { if (f._podaci) { f._prikaz = f._podaci; delete f._podaci; } });
+      crtajSlike(); promenjeno();
+      $('stanje').className = 'stanje ok';
+      $('stanje').innerHTML = 'Sačuvano. Sajt prikazuje izmene za oko minut. <a href="../" target="_blank" rel="noopener">Otvori sajt</a>';
+    }).catch(function (e) {
+      radim = false; promenjeno();
+      stanje.galerija.forEach(function (f) { if (f._podaci && f._poslato) { f.src = ''; delete f._poslato; } });
+      if (e.status === 401) { javi('Sesija je istekla. Prijavite se ponovo, izmene su sačuvane u panelu.', 'greska'); pokaziPrijavu(); return; }
+      javi(e.message || 'Čuvanje nije uspelo.', 'greska');
+    });
+  }
+
+  // ---------- kartice ----------
+  function izaberi(deo) {
+    document.querySelectorAll('.kartica').forEach(function (k) {
+      var da = k.getAttribute('data-deo') === deo; k.setAttribute('aria-selected', da ? 'true' : 'false'); k.tabIndex = da ? 0 : -1;
+      $('deo-' + k.getAttribute('data-deo')).hidden = !da;
+    });
+    window.scrollTo(0, 0);
+  }
+  document.querySelectorAll('.kartica').forEach(function (k, i, sve) {
+    k.addEventListener('click', function () { izaberi(k.getAttribute('data-deo')); });
+    k.addEventListener('keydown', function (e) {
+      var j = e.key === 'ArrowRight' ? i + 1 : e.key === 'ArrowLeft' ? i - 1 : -1;
+      if (j >= 0 && j < sve.length) { sve[j].focus(); izaberi(sve[j].getAttribute('data-deo')); }
+    });
+  });
+
+  // ---------- događaji ----------
+  $('ob-ukljuceno').addEventListener('change', function (e) { stanje.obavestenje.ukljuceno = e.target.checked; promenjeno(); });
+  $('ob-tekst').addEventListener('input', function (e) { stanje.obavestenje.tekst = e.target.value; $('ob-brojac').textContent = e.target.value.length; promenjeno(); });
+  $('dodaj-neradni').addEventListener('click', function () { stanje.neradniDani.push({ datum: '', opis: '' }); crtajNeradne(); promenjeno(); var p = $('neradni').querySelectorAll('input[type=date]'); if (p.length) p[p.length - 1].focus(); });
+  $('dodaj-cenu').addEventListener('click', function () {
+    var posl = stanje.cenovnik[stanje.cenovnik.length - 1];
+    stanje.cenovnik.push({ kategorija: posl ? posl.kategorija : '', naziv: '', cena: NaN, napomena: '', _cenaTekst: '' });
+    crtajCene(); promenjeno();
+    var p = $('cene').querySelectorAll('.stavka'); p[p.length - 1].querySelector('input').focus();
+  });
+  $('sacuvaj').addEventListener('click', sacuvaj);
+  window.addEventListener('beforeunload', function (e) { if (stanje && promenjeno()) { e.preventDefault(); e.returnValue = ''; } });
+
+  $('odjava').addEventListener('click', function () {
+    if (stanje && promenjeno() && !confirm('Imate nesačuvane izmene. Ipak se odjaviti?')) return;
+    (PRIMER ? Promise.resolve(sessionStorage.removeItem('primer-prijava')) : api('POST', 'odjava')).then(function () { location.reload(); });
+  });
+  $('vrati-primer').addEventListener('click', function () {
+    if (!confirm('Vratiti početni sadržaj primera? Vaše izmene će nestati.')) return;
+    localStorage.removeItem(KLJUC_PRIMER); stanje = null; location.reload();
+  });
+
+  function pokaziPrijavu() { $('prijava').hidden = false; $('uredjivanje').hidden = true; $('odjava').hidden = true; $('lozinka').focus(); }
+  function pokaziPanel() {
+    $('prijava').hidden = true; $('odjava').hidden = false;
+    if (stanje) { $('uredjivanje').hidden = false; promenjeno(); return Promise.resolve(); }
+    javi('Učitavam…');
+    return ucitajSadrzaj().then(function (s) {
+      stanje = s; sacuvano = JSON.stringify(s);
+      if (!stanje.neradniDani) stanje.neradniDani = [];
+      // radno vreme uvek ima svih 7 dana u istom redu
+      stanje.radnoVreme = DANI.map(function (d) { return (stanje.radnoVreme || []).filter(function (x) { return x.dan === d; })[0] || { dan: d, od: '09:00', do: '17:00', zatvoreno: true }; });
+      sacuvano = JSON.stringify(cisto());
+      $('uredjivanje').hidden = false; crtajSve();
+    }).catch(function (e) {
+      if (e.status === 401) return pokaziPrijavu();
+      $('prijava').hidden = false; $('prijava-poruka').className = 'poruka greska'; $('prijava-poruka').textContent = 'Sadržaj nije učitan: ' + (e.message || 'proverite internet vezu.');
+    });
+  }
+
+  $('forma-prijava').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = e.target.querySelector('button'); btn.disabled = true;
+    $('prijava-poruka').className = 'poruka'; $('prijava-poruka').textContent = 'Proveravam…';
+    prijaviSe($('lozinka').value).then(function () {
+      $('lozinka').value = ''; $('prijava-poruka').textContent = '';
+      return pokaziPanel();
+    }).catch(function (err) {
+      $('prijava-poruka').className = 'poruka greska'; $('prijava-poruka').textContent = err.message || 'Prijava nije uspela.';
+    }).then(function () { btn.disabled = false; });
+  });
+
+  proveriSesiju().then(function (da) { if (da) pokaziPanel(); else pokaziPrijavu(); });
+})();
+</script>
+</body>
+</html>
