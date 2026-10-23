@@ -186,6 +186,11 @@
   .site-foot img { height: 28px; width: auto; }
   .foot-meta { display: flex; flex-wrap: wrap; gap: 8px 24px; color: rgba(246,245,241,.78); font-size: .95rem; }
   .site-foot a { color: var(--paper); text-underline-offset: 4px; }
+  .foot-ig { display: inline-flex; align-items: center; gap: 8px; min-height: 32px; text-decoration: none; }
+  .foot-ig svg { flex: none; transition: opacity .15s; }
+  .foot-ig:hover span { text-decoration: underline; }
+  .foot-ig:hover svg { opacity: .8; }
+  .site-foot .foot-meta { align-items: center; }
   .site-foot :focus-visible { outline-color: var(--paper); }
   @media (min-width: 760px) { .foot-row { grid-template-columns: auto 1fr; align-items: center; } .foot-meta { justify-content: flex-end; } }
 
@@ -369,7 +374,7 @@
     <div class="foot-meta">
       <span class="foot-line">opsforma · Beograd · <a href="mailto:kontakt@opsforma.rs">kontakt@opsforma.rs</a> · <a href="/privatnost/">Politika privatnosti</a></span>
       <a href="/">Naslovna</a>
-      <a href="https://www.instagram.com/opsformars/" rel="noopener">Instagram @opsformars</a>
+      <a class="foot-ig" href="https://www.instagram.com/opsformars/" rel="noopener" aria-label="Instagram @opsformars"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><rect x="2.75" y="2.75" width="18.5" height="18.5" rx="5.25" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.25" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.15" fill="currentColor"/></svg><span>@opsformars</span></a>
       <span>© <span id="godina">2026</span></span>
     </div>
   </div>
