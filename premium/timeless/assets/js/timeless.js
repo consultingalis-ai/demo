@@ -195,6 +195,28 @@
     /* senka zaglavlja kad se skroluje */
     if (glava) { var skrol = function () { glava.classList.toggle('skrolovano', w.pageYOffset > 8); }; w.addEventListener('scroll', skrol, { passive: true }); skrol(); }
 
+    /* tema: bez izbora prati uređaj; izbor se pamti (OF.store 'tema'), a kad je isti kao na uređaju, briše se i sajt opet prati uređaj.
+       Prvu temu postavlja skripta u <head> (pre prikaza), ovde samo dugme, promena na uređaju i drugi otvoreni prozori. */
+    var koren = d.documentElement, mq = w.matchMedia ? w.matchMedia('(prefers-color-scheme: dark)') : null;
+    var temaUredjaja = function () { return mq && mq.matches ? 'tamna' : 'svetla'; };
+    var primeniTemu = function (t) {
+      if (koren.getAttribute('data-tema') === t) return;
+      koren.classList.add('t-bez-prelaza');
+      koren.setAttribute('data-tema', t);
+      var m = OF.$('meta[name="theme-color"]'); if (m && m.getAttribute('data-' + t)) m.setAttribute('content', m.getAttribute('data-' + t));
+      w.requestAnimationFrame(function () { w.requestAnimationFrame(function () { koren.classList.remove('t-bez-prelaza'); }); });
+      OF.emit('tema', t);
+    };
+    OF.$$('[data-t-tema]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var t = koren.getAttribute('data-tema') === 'tamna' ? 'svetla' : 'tamna';
+        if (t === temaUredjaja()) OF.store.remove('tema'); else OF.store.set('tema', t);
+        primeniTemu(t);
+      });
+    });
+    if (mq) { var promenaUredjaja = function () { if (!OF.store.get('tema')) primeniTemu(temaUredjaja()); }; if (mq.addEventListener) mq.addEventListener('change', promenaUredjaja); else if (mq.addListener) mq.addListener(promenaUredjaja); }
+    w.addEventListener('storage', function (e) { if (e.key && /:tema$/.test(e.key)) primeniTemu(OF.store.get('tema') || temaUredjaja()); });
+
     /* poklon vaučer */
     var vf = OF.$('[data-t-vaucer]');
     if (vf) {
