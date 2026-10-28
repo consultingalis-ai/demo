@@ -111,7 +111,7 @@
       "name": "Šta se u paketu Premium plaća mesečno, osim održavanja?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Većina toga je besplatna: server, kalendar, tabela i mejlovi u uobičajenom obimu. Posebno se plaćaju samo dodaci koje izaberete: SMS podsetnici (oko 2,40 din po poruci), prikaz Google recenzija na sajtu kad je poseta velika (najviše oko 20 dolara mesečno) i obaveštenja preko Viber bota (100 evra mesečno, to je Viberova cena). Sve to plaćate direktno servisu, na svoje ime."
+        "text": "Većina toga je besplatna: server, kalendar, tabela i mejlovi u uobičajenom obimu. Posebno se plaćaju samo dodaci koje izaberete: SMS podsetnici (oko 2,40 din po poruci), prikaz Google recenzija na sajtu kad je poseta velika (najviše oko 20 dolara mesečno) i obaveštenja preko Viber bota (100 evra mesečno, to je Viberova cena). Za prodavnicu sa plaćanjem karticom dodaju se server za porudžbine i plaćanje (oko 5 dolara mesečno), servis za elektronski fiskalni račun (oko 370–800 din mesečno) i naknada banke za kartice, koju banka daje u ponudi. Sve to plaćate direktno servisu, na svoje ime."
       }
     },
     {
@@ -267,6 +267,8 @@
 
   .plans-2 { display: grid; gap: 16px; margin-top: 48px; }
   @media (min-width: 980px) { .plans-2 { grid-template-columns: repeat(2, 1fr); gap: 20px; } }
+  @media (min-width: 980px) and (max-width: 1179px) { .plans-2 > .plan.featured { grid-column: 1 / -1; } }
+  @media (min-width: 1180px) { .plans-2 { grid-template-columns: repeat(3, 1fr); } }
   .need { display: grid; gap: 0; border-top: 1px solid var(--ink); margin-top: 40px; }
   .need li { display: grid; grid-template-columns: 40px 1fr; gap: 0 12px; padding: 16px 0 18px; border-bottom: 1px solid var(--rule); }
   .need .n { font-family: var(--serif); font-size: 1.8rem; line-height: 1; }
@@ -646,14 +648,15 @@
           <div class="plan-block">
             <h4>Šta dobijate</h4>
             <ul>
-              <li>Sve iz paketa Plus</li>
+              <li>Sve iz paketa Plus, a za prodavnicu sve iz paketa Prodavnica Plus</li>
               <li>Sajt na srpskom i još jednom ili dva jezika, sa 15 i više stranica: usluge, tim, cene, česta pitanja i blog</li>
               <li>Svoj izgled: logo, boje i slova napravljeni za Vašu firmu</li>
               <li>Nalog za mušterije bez lozinke: termini, istorija i bodovi na jednom mestu</li>
               <li>Pomeranje i otkazivanje termina preko linka iz mejla, SMS podsetnik dan ranije</li>
               <li>Panel za Vas: termini po danu i po radniku, statistika, cenovnik i spisak mušterija</li>
               <li>Povezano sa Google Kalendarom, tabelom, Gmailom, Instagramom i Google recenzijama</li>
-              <li>Po izboru plaćanje karticom: depozit za rezervaciju, vaučeri i ulaznice sa QR kodom</li>
+              <li>Za prodavnicu: veličine i zalihe za svaki komad, praćenje porudžbine, povraćaj preko obrasca i nalog sa istorijom kupovina</li>
+              <li>Po izboru plaćanje karticom i IPS-om: kupovina u prodavnici, depozit za rezervaciju, poklon vaučeri i ulaznice sa QR kodom</li>
             </ul>
           </div>
           <div class="plan-block">
@@ -666,7 +669,7 @@
           </div>
           <div class="plan-price">
             <p class="price"><small>od</small> 149.900 <small>RSD</small> <span class="upkeep upkeep--siroko">sa plaćanjem karticom od 199.900 RSD · održavanje po želji: 7.900 RSD mesečno · tačnu cenu šaljemo posle kratkog razgovora</span></p>
-            <a class="plan-link" href="/premium/kamea/">Primer<span class="sr"> paketa Premium</span></a>
+            <a class="plan-link" href="/primeri/?paket=6">Primeri<span class="sr"> paketa Premium</span></a>
           </div>
         </article>
         <article class="plan" aria-labelledby="p6-primer">
@@ -684,6 +687,23 @@
           </div>
           <div class="plan-price">
             <a class="plan-link" href="/premium/kamea/">Otvori primer<span class="sr"> Kamea</span></a>
+          </div>
+        </article>
+        <article class="plan" aria-labelledby="p6-primer-2">
+          <h3 id="p6-primer-2">Primer: Timeless</h3>
+          <p class="plan-sub">Online prodavnica srebrnog nakita na srpskom i engleskom, sa 56 proizvoda i plaćanjem karticom. Radnja je izmišljena, a kupovina radi kao prava; plaćanje je simulirano.</p>
+          <a href="/premium/timeless/" tabindex="-1" aria-hidden="true"><img class="plan-shot" src="/assets/primeri/timeless-280.webp" srcset="/assets/primeri/timeless-280.webp 280w, /assets/primeri/timeless.webp 560w" sizes="280px" width="560" height="777" loading="lazy" decoding="async" alt=""></a>
+          <div class="plan-block">
+            <h4>Probajte</h4>
+            <ol class="plan-steps">
+              <li>Izaberite prsten i veličinu, pa upišite gravuru i pogledajte kako izgleda.</li>
+              <li>Platite test karticom, IPS-om ili uplatnicom; kod DOBRODOSLI10 daje 10% popusta.</li>
+              <li>Pogledajte šta tom prilikom stiže vlasniku na Viber i mejl, pa status porudžbine.</li>
+              <li>Otvorite panel vlasnika, PIN je 1234.</li>
+            </ol>
+          </div>
+          <div class="plan-price">
+            <a class="plan-link" href="/premium/timeless/">Otvori primer<span class="sr"> Timeless</span></a>
           </div>
         </article>
       </div>
@@ -820,7 +840,7 @@
         </details>
         <details>
           <summary>Šta se u paketu Premium plaća mesečno, osim održavanja?</summary>
-          <p>Većina toga je besplatna: server, kalendar, tabela i mejlovi u uobičajenom obimu. Posebno se plaćaju samo dodaci koje izaberete: SMS podsetnici (oko 2,40 din po poruci), prikaz Google recenzija na sajtu kad je poseta velika (najviše oko 20 dolara mesečno) i obaveštenja preko Viber bota (100 evra mesečno, to je Viberova cena). Sve to plaćate direktno servisu, na svoje ime.</p>
+          <p>Većina toga je besplatna: server, kalendar, tabela i mejlovi u uobičajenom obimu. Posebno se plaćaju samo dodaci koje izaberete: SMS podsetnici (oko 2,40 din po poruci), prikaz Google recenzija na sajtu kad je poseta velika (najviše oko 20 dolara mesečno) i obaveštenja preko Viber bota (100 evra mesečno, to je Viberova cena). Za prodavnicu sa plaćanjem karticom dodaju se server za porudžbine i plaćanje (oko 5 dolara mesečno), servis za elektronski fiskalni račun (oko 370–800 din mesečno) i naknada banke za kartice, koju banka daje u ponudi. Sve to plaćate direktno servisu, na svoje ime.</p>
         </details>
         <details>
           <summary>Šta ako mi neko zakaže telefonom?</summary>
