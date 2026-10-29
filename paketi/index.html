@@ -267,8 +267,19 @@
 
   .plans-2 { display: grid; gap: 16px; margin-top: 48px; }
   @media (min-width: 980px) { .plans-2 { grid-template-columns: repeat(2, 1fr); gap: 20px; } }
-  @media (min-width: 980px) and (max-width: 1179px) { .plans-2 > .plan.featured { grid-column: 1 / -1; } }
-  @media (min-width: 1180px) { .plans-2 { grid-template-columns: repeat(3, 1fr); } }
+  /* Premium: paket preko cele širine (tri kolone u kartici), ispod tri primera u redu */
+  @media (min-width: 980px) {
+    .plans-premium { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .plans-premium > .plan.featured { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: auto auto auto 1fr; column-gap: 40px; }
+    .plans-premium > .plan.featured > .plan-num { grid-column: 1; grid-row: 1; }
+    .plans-premium > .plan.featured > h3 { grid-column: 1; grid-row: 2; }
+    .plans-premium > .plan.featured > .plan-sub { grid-column: 1; grid-row: 3; }
+    .plans-premium > .plan.featured > .plan-price { grid-column: 1; grid-row: 4; align-self: end; }
+    .plans-premium > .plan.featured > .plan-block { margin-top: 0; }
+    .plans-premium > .plan.featured > .plan-block:nth-of-type(1) { grid-column: 2; grid-row: 1 / span 4; }
+    .plans-premium > .plan.featured > .plan-block:nth-of-type(2) { grid-column: 3; grid-row: 1 / span 2; }
+    .plans-premium > .plan.featured > .plan-block:nth-of-type(3) { grid-column: 3; grid-row: 3 / span 2; align-self: start; margin-top: 22px; }
+  }
   .need { display: grid; gap: 0; border-top: 1px solid var(--ink); margin-top: 40px; }
   .need li { display: grid; grid-template-columns: 40px 1fr; gap: 0 12px; padding: 16px 0 18px; border-bottom: 1px solid var(--rule); }
   .need .n { font-family: var(--serif); font-size: 1.8rem; line-height: 1; }
@@ -640,7 +651,7 @@
         <h2 class="sec-title" id="premium-naslov">Premium<span class="dot" aria-hidden="true"></span></h2>
         <p class="sec-lead" style="margin-top:0;align-self:end;max-width:52ch">Za firme kojima sajt radi veliki deo posla: više jezika, mnogo sadržaja, nalog za mušterije i povezano sa svim što već koristite.</p>
       </div>
-      <div class="plans-2">
+      <div class="plans-2 plans-premium">
         <article class="plan featured" aria-labelledby="p6">
           <span class="plan-num" aria-hidden="true">6</span>
           <h3 id="p6">Premium</h3>
@@ -656,7 +667,7 @@
               <li>Panel za Vas: termini po danu i po radniku, statistika, cenovnik i spisak mušterija</li>
               <li>Povezano sa Google Kalendarom, tabelom, Gmailom, Instagramom i Google recenzijama</li>
               <li>Za prodavnicu: veličine i zalihe za svaki komad, praćenje porudžbine, povraćaj preko obrasca i nalog sa istorijom kupovina</li>
-              <li>Po izboru plaćanje karticom i IPS-om: kupovina u prodavnici, depozit za rezervaciju, poklon vaučeri i ulaznice sa QR kodom</li>
+              <li>Po izboru plaćanje karticom i IPS-om: kupovina u prodavnici, depozit za rezervaciju, mesečna članarina sa automatskom naplatom, poklon vaučeri i ulaznice sa QR kodom</li>
             </ul>
           </div>
           <div class="plan-block">
@@ -704,6 +715,23 @@
           </div>
           <div class="plan-price">
             <a class="plan-link" href="/premium/timeless/">Otvori primer<span class="sr"> Timeless</span></a>
+          </div>
+        </article>
+        <article class="plan" aria-labelledby="p6-primer-3">
+          <h3 id="p6-primer-3">Primer: Sloj</h3>
+          <p class="plan-sub">Studio za auto detailing i keramičku zaštitu na srpskom i engleskom, sa depozitom i članarinom karticom i prodavnicom auto kozmetike. Studio je izmišljen, a sve radi kao pravo; plaćanje je simulirano.</p>
+          <a href="/premium/sloj/" tabindex="-1" aria-hidden="true"><img class="plan-shot" src="/assets/primeri/sloj-280.webp" srcset="/assets/primeri/sloj-280.webp 280w, /assets/primeri/sloj.webp 560w" sizes="280px" width="560" height="777" loading="lazy" decoding="async" alt=""></a>
+          <div class="plan-block">
+            <h4>Probajte</h4>
+            <ol class="plan-steps">
+              <li>Izračunajte cenu za svoje vozilo, pa zakažite ostavljanje i platite depozit test karticom.</li>
+              <li>Pratite vozilo uživo kroz faze rada i preuzmite garantni list sa merenjima laka.</li>
+              <li>Učlanite se u redovno pranje sa mesečnom naplatom, pa ga pauzirajte u nalogu.</li>
+              <li>Otvorite panel vlasnika, PIN je 1234.</li>
+            </ol>
+          </div>
+          <div class="plan-price">
+            <a class="plan-link" href="/premium/sloj/">Otvori primer<span class="sr"> Sloj</span></a>
           </div>
         </article>
       </div>
