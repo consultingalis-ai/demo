@@ -11,6 +11,12 @@ pregled-keramike,Godišnji pregled keramike,Keramička zaštita,4000,4500,5500,6
 folija-zone,Folija na rizične zone,Zaštitna folija,49500,58000,69500,81000,2026-10-29
 folija-prednji,Folija na ceo prednji deo,Zaštitna folija,140500,165000,198000,231000,2026-10-29
 folija-celo,Folija na celo vozilo,Zaštitna folija,"po pregledu, od 480000","po pregledu, od 480000","po pregledu, od 480000","po pregledu, od 480000",2026-10-29
+wrap-celo,"Promena boje, celo vozilo",Promena boje folijom,208500,245000,294000,343000,2026-10-29
+wrap-delovi,"Krov, retrovizori i spojler",Promena boje folijom,22000,26000,31000,36500,2026-10-29
+wrap-hrom,Hrom delete,Promena boje folijom,16000,19000,23000,26500,2026-10-29
+zatamnjivanje-zadnja,"Zadnja stakla, standardna folija",Zatamnjivanje stakala,13000,15000,18000,21000,2026-10-29
+zatamnjivanje-keramika,"Zadnja stakla, keramička folija",Zatamnjivanje stakala,20500,24000,29000,33500,2026-10-29
+zatamnjivanje-prednja,"Prednja bočna stakla, toplotna folija",Zatamnjivanje stakala,8000,9500,11500,13500,2026-10-29
 felne,Felne i čeljusti,Felne i farovi,12000,12000,12000,12000,2026-10-29
 farovi,Poliranje farova sa zaštitom,Felne i farovi,6500,6500,6500,6500,2026-10-29
 motor,Pranje motornog prostora,Felne i farovi,4500,4500,4500,4500,2026-10-29
@@ -23,6 +29,9 @@ dodatak-farovi,Poliranje farova sa zaštitom,Dodatak,6500,6500,6500,6500,2026-10
 dodatak-motor,Pranje motornog prostora,Dodatak,4500,4500,4500,4500,2026-10-29
 dodatak-ozon,Ozon i dezinfekcija klime,Dodatak,5500,5500,5500,5500,2026-10-29
 dodatak-folija-zone,Folija na rizične zone,Dodatak,49500,58000,69500,81000,2026-10-29
+dodatak-wrap-hrom,Hrom delete: lajsne i ukrasi u crno,Dodatak,16000,19000,23000,26500,2026-10-29
+dodatak-zatamnjivanje-zadnja,Zatamnjivanje zadnjih stakala,Dodatak,13000,15000,18000,21000,2026-10-29
+dodatak-zatamnjivanje-prednja,Toplotna folija na prednjim bočnim staklima (70%),Dodatak,8000,9500,11500,13500,2026-10-29
 SL-P-001,Šampon pH 7,Prodavnica,1290,1290,1290,1290,2026-10-29
 SL-P-002,Aktivna pena,Prodavnica,1890,1890,1890,1890,2026-10-29
 SL-P-003,"Rukavica za pranje, mikrofiber",Prodavnica,1190,1190,1190,1190,2026-10-29

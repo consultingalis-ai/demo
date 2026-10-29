@@ -45,9 +45,9 @@
     var c = S.clanstvo(x), plan = c && OF.clanstvo.plan(c.plan), popust = plan && plan.popust ? z500(ukupno * plan.popust / 100) : 0;   // članovi: popust na ostale usluge
     var konacno = ukupno - popust;
     // keramika i folija se suše (IR lampe, pa noć): vozilo se preuzima najranije sledećeg radnog dana
-    var nocenje = u.grupa === 'keramika' || u.grupa === 'folija' || (x.dodaci || []).indexOf('folija-zone') >= 0;
+    var nocenje = u.grupa === 'keramika' || u.grupa === 'folija' || u.grupa === 'wrap' || (x.dodaci || []).indexOf('folija-zone') >= 0;
     return { stavke: stavke, ukupno: konacno, bezPopusta: ukupno, popust: popust, popustProcenat: plan && plan.popust, depozit: S.depozitZa(konacno), sati: sati, nocenje: nocenje,
-      dana: (x.dodaci || []).length ? danaTekst(sati, susenje, u) : OF.tx(u.dana), garancija: u.godina ? OF.t('vz.garancija_god', { n: u.godina, s: OF.garancija.slojevi(u.slojeva) }) : u.grupa === 'folija' ? OF.t('vz.garancija_folija', { n: (OF.d.garancija || {}).ugradnjaGodina || 2, m: (OF.d.garancija || {}).folijaGodina || 10 }) : null, naUpit: !!u.naUpit };
+      dana: (x.dodaci || []).length ? danaTekst(sati, susenje, u) : OF.tx(u.dana), garancija: u.godina ? OF.t('vz.garancija_god', { n: u.godina, s: OF.garancija.slojevi(u.slojeva) }) : u.grupa === 'folija' ? OF.t('vz.garancija_folija', { n: (OF.d.garancija || {}).ugradnjaGodina || 2, m: (OF.d.garancija || {}).folijaGodina || 10 }) : u.garancija ? OF.tx(u.garancija) : null, naUpit: !!u.naUpit };
   };
   function danaTekst(sati, susenje, u) {
     if (sati <= 6 && !susenje) return OF.t('vz.isti_dan');
@@ -66,7 +66,7 @@
   S.izbor = function (koren, stanje, naPromenu, o) {
     o = o || {};
     var c = o.clanovi !== false && S.clanstvo();
-    var grupe = ['pranje', 'enterijer', 'poliranje', 'keramika', 'folija', 'felne'];
+    var grupe = ['pranje', 'enterijer', 'poliranje', 'keramika', 'folija', 'wrap', 'zatamnjivanje', 'felne'];
     if (!stanje.velicina) stanje.velicina = 'srednje';
     if (stanje.paket && stanje.paket !== CLAN && S.usluga(stanje.paket)) stanje.grupa = S.usluga(stanje.paket).grupa;
     if (stanje.paket === CLAN && !c) stanje.paket = null;
@@ -160,6 +160,7 @@
   /* korak „usluga i vozilo“ u zakazivanju */
   var OPCIJE_ZAKAZIVANJA = {
     pocetnoStanje: function (stanje) {      // link sa ?paket= preskače prvi korak: sati rada za kapacitet dana
+      if (OF.upit('napomena') && !stanje.napomena) stanje.napomena = String(OF.upit('napomena')).slice(0, 300);   // npr. izabrana boja folije ili zatamnjenje
       var c = S.clanstvo();
       if (!stanje.velicina && c && stanje.paket === CLAN) stanje.velicina = c.velicina ? 'suv' : 'srednje';   // veličina iz članstva
       stanje.velicina = stanje.velicina || 'srednje';
@@ -265,6 +266,114 @@
   });
 
   /* =====================================================================
+     IZBOR BOJE FOLIJE: ista fotografija, karoserija prebojena po maski
+     (R = karoserija, G = odsjaji na njoj). Isti postupak pravi i par
+     pre/posle u _izvor/brend/radovi.py.
+     ===================================================================== */
+  var ZAVRSNI = { sjaj: [1, 0.9, 0], saten: [0.85, 0.6, 0.45], mat: [0.7, 0.35, 0.8], metalik: [1, 0.85, 0] };   // senke, svetla mesta, gašenje odsjaja
+  function ucitajSliku(src) { return new Promise(function (ok, ne) { var im = new Image(); im.decoding = 'async'; im.onload = function () { ok(im); }; im.onerror = ne; im.src = src; }); }
+  function izabrano(koren, ime) { var x = OF.$('input[name="' + ime + '"]:checked', koren); return x ? x.value : null; }
+  function velicinaNaziv(id) { return OF.tx(S.velicina(id).naziv); }
+
+  S.konfiguratorFolije = function (koren) {
+    if (!koren) return;
+    var F = OF.d.folijaBoje || {}, slika = OF.$('[data-s-konf-slika]', koren), platno = OF.$('canvas', koren), natpis = OF.$('[data-s-konf-natpis]', koren);
+    var cena = OF.$('[data-s-konf-cena]', koren), zakazi = OF.$('[data-s-konf-zakazi]', koren), u = S.usluga(F.usluga);
+    var osnova = null, maska = null, priprema = null;
+    var T = {}; try { T = JSON.parse(koren.getAttribute('data-tekst') || '{}'); } catch (e) {}
+    var tekst = function (k, v) { var t = T[k] || ''; return v ? t.replace(/\{(\w+)\}/g, function (m, x) { return v[x] != null ? v[x] : m; }) : t; };
+    function pripremi() {
+      if (priprema) return priprema;
+      priprema = Promise.all([ucitajSliku(slika.currentSrc || slika.src), ucitajSliku(koren.getAttribute('data-maska'))]).then(function (x) {
+        var c = d.createElement('canvas'); c.width = platno.width; c.height = platno.height; var cx = c.getContext('2d');
+        cx.drawImage(x[0], 0, 0, c.width, c.height); osnova = cx.getImageData(0, 0, c.width, c.height);
+        cx.clearRect(0, 0, c.width, c.height); cx.drawImage(x[1], 0, 0, c.width, c.height); maska = cx.getImageData(0, 0, c.width, c.height).data;
+      });
+      return priprema;
+    }
+    function crtaj() {
+      var bojaIn = OF.$('input[name="kf-boja"]:checked', koren), zav = izabrano(koren, 'kf-zavrsni'), vel = izabrano(koren, 'kf-vel') || 'srednje';
+      var fab = !bojaIn || bojaIn.value === 'fabricka';
+      var nazivBoje = bojaIn ? OF.$('label[for="' + bojaIn.id + '"] .of-sr', koren).textContent : '';
+      var nazivZav = zav ? OF.$('label[for="kfz-' + zav + '"]', koren).textContent : '';
+      natpis.textContent = fab ? nazivBoje : nazivBoje + ' · ' + nazivZav;
+      if (u) cena.textContent = OF.din(S.cenaUsluge(u, vel));
+      if (zakazi) zakazi.href = OF.link('zakazivanje', 'paket=' + encodeURIComponent(F.usluga) + '&velicina=' + vel + (fab ? '' : '&napomena=' + encodeURIComponent(tekst('napomenaBoje', { boja: nazivBoje, zavrsni: nazivZav.toLowerCase() }))));
+      slika.alt = tekst('slikaAria', { boja: natpis.textContent });
+      if (fab) { platno.hidden = true; return; }
+      pripremi().then(function () {
+        var rgb = function (hx) { return [1, 3, 5].map(function (k) { return parseInt(hx.substr(k, 2), 16) / 255; }); };
+        var svetlina = function (c) { return c[0] * 0.299 + c[1] * 0.587 + c[2] * 0.114; };
+        var z = ZAVRSNI[zav] || ZAVRSNI.sjaj, met = zav === 'metalik', baza = rgb(bojaIn.getAttribute('data-boja')), Ly = svetlina(baza);
+        // fabrička boja na fotografiji je referenca: piksel te svetline dobija baš boju uzorka; svetle boje imaju mekše senke
+        var fabIn = OF.$('#kf-fabricka', koren), ref = fabIn ? svetlina(rgb(fabIn.getAttribute('data-boja'))) : 0.27;
+        var sr = ref - (ref - 0.12) * Ly, eSenka = z[0] * (1 - 0.45 * Ly), eSvetlo = z[1] * 0.9;
+        var ravno = baza.map(function (v) { return (v + (1 - v) * 0.08) * 255; });   // mat i saten: odsjaj se gasi u ravnu boju
+        var o = osnova.data, slikaNova = new ImageData(osnova.width, osnova.height), n = slikaNova.data, nova = [0, 0, 0];
+        for (var i = 0; i < o.length; i += 4) {
+          var t = maska[i] / 255, gs = maska[i + 1] / 255 * z[2], r = o[i], g = o[i + 1], b = o[i + 2];
+          if (t > 0.004) {
+            var sh = Math.max((r * 0.299 + g * 0.587 + b * 0.114) / 255 / sr, 0.001), f = Math.pow(sh, sh <= 1 ? eSenka : eSvetlo);
+            var beo = sh > 1.8 ? Math.min((sh - 1.8) / 3, 1) * z[1] * 0.7 : 0;   // jaki odsjaji idu ka beloj, kao na laku
+            var zrno = met ? 1 + (((i >> 2) * 2654435761 % 1000) / 1000 - 0.5) * 0.12 : 1;   // sitno zrno za metalik, uvek isto
+            for (var c = 0; c < 3; c++) { var v = (baza[c] * f * (1 - beo) + beo) * zrno; nova[c] = (v > 1 ? 1 : v) * 255; }
+            r = r * (1 - t) + nova[0] * t; g = g * (1 - t) + nova[1] * t; b = b * (1 - t) + nova[2] * t;
+          }
+          if (gs > 0.004) { r = r * (1 - gs) + ravno[0] * gs; g = g * (1 - gs) + ravno[1] * gs; b = b * (1 - gs) + ravno[2] * gs; }
+          n[i] = r; n[i + 1] = g; n[i + 2] = b; n[i + 3] = 255;
+        }
+        platno.getContext('2d').putImageData(slikaNova, 0, 0); platno.hidden = false;
+      }, function () { platno.hidden = true; });
+    }
+    OF.$$('input', koren).forEach(function (x) {
+      x.addEventListener('change', function () {
+        if (x.name === 'kf-boja' && x.getAttribute('data-zavrsni')) { var zz = OF.$('#kfz-' + x.getAttribute('data-zavrsni'), koren); if (zz) zz.checked = true; }   // boja dolazi sa svojim uobičajenim završnim slojem
+        crtaj();
+      });
+    });
+    // maska i proračun se pripremaju tek kad posetilac priđe izboru (bez troška pri učitavanju stranice)
+    ['pointerenter', 'touchstart', 'focusin'].forEach(function (ev) { koren.addEventListener(ev, function () { pripremi(); }, { once: true, passive: true }); });
+    crtaj();
+  };
+
+  /* IZBOR ZATAMNJENJA: stakla na fotografiji se zatamne po izabranoj propustljivosti */
+  S.konfiguratorStakala = function (koren) {
+    if (!koren) return;
+    var Z = OF.d.zatamnjenje || {}, slika = OF.$('[data-s-konf-slika]', koren), platno = OF.$('canvas', koren), natpis = OF.$('[data-s-konf-natpis]', koren);
+    var cena = OF.$('[data-s-konf-cena]', koren), zakazi = OF.$('[data-s-konf-zakazi]', koren), osnova = null;
+    var T = {}; try { T = JSON.parse(koren.getAttribute('data-tekst') || '{}'); } catch (e) {}
+    var tekst = function (k, v) { var t = T[k] || ''; return v ? t.replace(/\{(\w+)\}/g, function (m, x) { return v[x] != null ? v[x] : m; }) : t; };
+    var nivo = function (vlt) { return (Z.nivoi || []).filter(function (n) { return n.vlt === vlt; })[0]; };
+    function staklo(cx, tacke, f) {
+      var kx = platno.width / 1200, ky = platno.height / 675;
+      cx.save(); cx.beginPath(); tacke.forEach(function (t, i) { cx[i ? 'lineTo' : 'moveTo'](t[0] * kx, t[1] * ky); }); cx.closePath();
+      cx.globalCompositeOperation = 'multiply'; var v = Math.round(f * 255); cx.fillStyle = 'rgb(' + v + ',' + v + ',' + v + ')'; cx.fill(); cx.restore();
+    }
+    function crtaj() {
+      var zadnja = +izabrano(koren, 'ks-zadnja'), prednja = +izabrano(koren, 'ks-prednja'), tip = izabrano(koren, 'ks-tip'), vel = izabrano(koren, 'ks-vel') || 'srednje';
+      var bez = OF.$('label[for="ksz-0"]', koren).textContent; bez = bez.charAt(0).toLowerCase() + bez.slice(1); var zt = zadnja ? zadnja + '%' : bez, pt = prednja ? prednja + '%' : bez;
+      natpis.textContent = tekst('natpisStakla', { zadnja: zt, prednja: pt });
+      OF.$$('input[name="ks-tip"]', koren).forEach(function (x) { x.disabled = !zadnja; });
+      var uZ = S.usluga(tip), uP = S.usluga('zatamnjivanje-prednja');
+      var ukupno = (zadnja && uZ ? S.cenaUsluge(uZ, vel) : 0) + (prednja && uP ? S.cenaUsluge(uP, vel) : 0);
+      cena.textContent = ukupno ? OF.din(ukupno) : '–';
+      var paket = zadnja ? tip : 'zatamnjivanje-prednja';
+      zakazi.hidden = !ukupno;
+      zakazi.href = OF.link('zakazivanje', 'paket=' + paket + '&velicina=' + vel + (zadnja && prednja ? '&dodaci=zatamnjivanje-prednja' : '') + '&napomena=' + encodeURIComponent(tekst('napomenaStakla', { zadnja: zt, prednja: pt })));
+      slika.alt = tekst('staklaAria', { zadnja: zt, prednja: pt });
+      var crtajSve = function () {
+        var cx = platno.getContext('2d'); cx.globalCompositeOperation = 'source-over'; cx.drawImage(osnova, 0, 0, platno.width, platno.height);
+        if (zadnja) (Z.stakla.zadnja || []).forEach(function (t) { staklo(cx, t, nivo(zadnja).f); });
+        if (prednja) staklo(cx, Z.stakla.prednje, nivo(prednja).f);
+        platno.hidden = false;
+      };
+      if (osnova) crtajSve(); else ucitajSliku(slika.currentSrc || slika.src).then(function (im) { osnova = im; crtajSve(); }, function () {});
+    }
+    OF.$$('input', koren).forEach(function (x) { x.addEventListener('change', crtaj); });
+    if ('IntersectionObserver' in w) { var io = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { io.disconnect(); crtaj(); } }, { rootMargin: '200px' }); io.observe(koren); } else crtaj();
+  };
+
+  /* =====================================================================
      STRANICA
      ===================================================================== */
   OF.spremno(function () {
@@ -273,11 +382,12 @@
     var mmDugme = OF.$('[data-s-mm]'), mm = d.getElementById('s-mm');
     if (mmDugme && mm) {
       var zatvoriMm = function (fokus) { mmDugme.setAttribute('aria-expanded', 'false'); mm.hidden = true; if (fokus) mmDugme.focus(); };
-      mmDugme.addEventListener('click', function () { var o = mmDugme.getAttribute('aria-expanded') !== 'true'; mmDugme.setAttribute('aria-expanded', String(o)); mm.hidden = !o; });
+      var hoverOd = 0;   // meni otvoren prelaskom miša: klik odmah posle toga ga ne zatvara
+      mmDugme.addEventListener('click', function () { if (!mm.hidden && Date.now() - hoverOd < 700) return; var o = mmDugme.getAttribute('aria-expanded') !== 'true'; mmDugme.setAttribute('aria-expanded', String(o)); mm.hidden = !o; });
       d.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !mm.hidden) zatvoriMm(true); });
       d.addEventListener('click', function (e) { if (!mm.hidden && !mm.contains(e.target) && !mmDugme.contains(e.target)) zatvoriMm(); });
       var tajmer; [mmDugme.parentNode, mm].forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (!w.matchMedia('(hover: hover)').matches) return; clearTimeout(tajmer); mmDugme.setAttribute('aria-expanded', 'true'); mm.hidden = false; });
+        el.addEventListener('mouseenter', function () { if (!w.matchMedia('(hover: hover)').matches) return; clearTimeout(tajmer); if (mm.hidden) hoverOd = Date.now(); mmDugme.setAttribute('aria-expanded', 'true'); mm.hidden = false; });
         el.addEventListener('mouseleave', function () { if (!w.matchMedia('(hover: hover)').matches) return; tajmer = setTimeout(zatvoriMm, 160); });
       });
     }
@@ -353,6 +463,10 @@
       var postavi = function () { pp.style.setProperty('--pp', ulaz.value + '%'); };
       ulaz.addEventListener('input', postavi); postavi();
     });
+
+    /* izbor boje folije i zatamnjenja (stranice usluga) */
+    S.konfiguratorFolije(OF.$('[data-s-konf-folija]'));
+    S.konfiguratorStakala(OF.$('[data-s-konf-stakla]'));
 
     /* brojači (početna): broje do vrednosti kad se pojave, bez pomeranja kod smanjenog kretanja */
     var brojaci = OF.$$('[data-s-broji]');

@@ -898,6 +898,194 @@
    }
   }
  },
+ "wrap-01": {
+  "alt": {
+   "sr": "Lepljenje plave folije za promenu boje na vrata belog automobila u studiju",
+   "en": "Applying blue colour-change film to the door of a white car in the studio"
+  },
+  "boja": "#6f6e78",
+  "izvor": "Auto Records · Pexels (https://www.pexels.com/photo/a-man-putting-on-a-blue-sticker-on-the-car-door-10162528/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/wrap-01-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/wrap-01-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/wrap-01-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/wrap-01-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1200,
+    "h": 1200,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/wrap-01-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/wrap-01-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/wrap-01-kvadrat-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
+ "wrap-02": {
+  "alt": {
+   "sr": "Zagrevanje plave folije toplim vazduhom dok se rakelom utiskuje uz ivicu",
+   "en": "Heating blue film with warm air while a squeegee presses it along the edge"
+  },
+  "boja": "#646e96",
+  "izvor": "Auto Records · Pexels (https://www.pexels.com/photo/a-man-holding-a-power-tool-and-blue-sheet-10162529/)",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1200,
+    "h": 1200,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/wrap-02-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/wrap-02-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/wrap-02-kvadrat-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
+ "zatamnjivanje-01": {
+  "alt": {
+   "sr": "Majstor rakelom utiskuje foliju za zatamnjivanje na zadnje bočno staklo",
+   "en": "A fitter pressing tint film onto a rear side window with a squeegee"
+  },
+  "boja": "#61615e",
+  "izvor": "Bulat843 · Pexels (https://www.pexels.com/photo/man-installing-tinted-window-film-on-car-31154212/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/zatamnjivanje-01-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/zatamnjivanje-01-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/zatamnjivanje-01-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/zatamnjivanje-01-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "uspravna": {
+    "razmera": "4:5",
+    "w": 1200,
+    "h": 1500,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 500,
+      "fajl": "assets/img/zatamnjivanje-01-uspravna-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 1000,
+      "fajl": "assets/img/zatamnjivanje-01-uspravna-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1500,
+      "fajl": "assets/img/zatamnjivanje-01-uspravna-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1500"
+   }
+  }
+ },
+ "zatamnjivanje-02": {
+  "alt": {
+   "sr": "Postavljanje folije na bočno staklo, odraz majstora u staklu",
+   "en": "Fitting film to a side window, the fitter reflected in the glass"
+  },
+  "boja": "#646664",
+  "izvor": "Helena Jankovičová Kováčová · Pexels (https://www.pexels.com/photo/man-with-dreadlocks-working-by-car-window-20522462/)",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1200,
+    "h": 1200,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/zatamnjivanje-02-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/zatamnjivanje-02-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/zatamnjivanje-02-kvadrat-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
  "felne-01": {
   "alt": {
    "sr": "Čišćenje felne i gume mekom detailing četkom",
@@ -1541,6 +1729,386 @@
       "w": 1600,
       "h": 900,
       "fajl": "assets/img/rad-04-posle-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×900"
+   }
+  }
+ },
+ "rad-05-pre": {
+  "alt": {
+   "sr": "",
+   "en": ""
+  },
+  "boja": "#45494c",
+  "izvor": "Tima Miroshnichenko · Pexels (https://www.pexels.com/photo/a-black-car-parked-in-the-carwash-garage-6872595/); „pre“ je računarska simulacija",
+  "varijante": {
+   "siroka": {
+    "razmera": "16:9",
+    "w": 1600,
+    "h": 900,
+    "velicine": [
+     {
+      "w": 640,
+      "h": 360,
+      "fajl": "assets/img/rad-05-pre-siroka-640.webp"
+     },
+     {
+      "w": 960,
+      "h": 540,
+      "fajl": "assets/img/rad-05-pre-siroka-960.webp"
+     },
+     {
+      "w": 1280,
+      "h": 720,
+      "fajl": "assets/img/rad-05-pre-siroka-1280.webp"
+     },
+     {
+      "w": 1600,
+      "h": 900,
+      "fajl": "assets/img/rad-05-pre-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×900"
+   }
+  }
+ },
+ "rad-05-posle": {
+  "alt": {
+   "sr": "",
+   "en": ""
+  },
+  "boja": "#404448",
+  "izvor": "Tima Miroshnichenko · Pexels (https://www.pexels.com/photo/a-black-car-parked-in-the-carwash-garage-6872595/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "16:9",
+    "w": 1600,
+    "h": 900,
+    "velicine": [
+     {
+      "w": 640,
+      "h": 360,
+      "fajl": "assets/img/rad-05-posle-siroka-640.webp"
+     },
+     {
+      "w": 960,
+      "h": 540,
+      "fajl": "assets/img/rad-05-posle-siroka-960.webp"
+     },
+     {
+      "w": 1280,
+      "h": 720,
+      "fajl": "assets/img/rad-05-posle-siroka-1280.webp"
+     },
+     {
+      "w": 1600,
+      "h": 900,
+      "fajl": "assets/img/rad-05-posle-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×900"
+   }
+  }
+ },
+ "rad-06-pre": {
+  "alt": {
+   "sr": "",
+   "en": ""
+  },
+  "boja": "#202429",
+  "izvor": "Alasdair Braxton · Pexels (https://www.pexels.com/photo/black-ferrari-car-17092455/); „pre“ je računarska simulacija",
+  "varijante": {
+   "siroka": {
+    "razmera": "16:9",
+    "w": 1600,
+    "h": 900,
+    "velicine": [
+     {
+      "w": 640,
+      "h": 360,
+      "fajl": "assets/img/rad-06-pre-siroka-640.webp"
+     },
+     {
+      "w": 960,
+      "h": 540,
+      "fajl": "assets/img/rad-06-pre-siroka-960.webp"
+     },
+     {
+      "w": 1280,
+      "h": 720,
+      "fajl": "assets/img/rad-06-pre-siroka-1280.webp"
+     },
+     {
+      "w": 1600,
+      "h": 900,
+      "fajl": "assets/img/rad-06-pre-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×900"
+   }
+  }
+ },
+ "rad-06-posle": {
+  "alt": {
+   "sr": "",
+   "en": ""
+  },
+  "boja": "#191d23",
+  "izvor": "Alasdair Braxton · Pexels (https://www.pexels.com/photo/black-ferrari-car-17092455/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "16:9",
+    "w": 1600,
+    "h": 900,
+    "velicine": [
+     {
+      "w": 640,
+      "h": 360,
+      "fajl": "assets/img/rad-06-posle-siroka-640.webp"
+     },
+     {
+      "w": 960,
+      "h": 540,
+      "fajl": "assets/img/rad-06-posle-siroka-960.webp"
+     },
+     {
+      "w": 1280,
+      "h": 720,
+      "fajl": "assets/img/rad-06-posle-siroka-1280.webp"
+     },
+     {
+      "w": 1600,
+      "h": 900,
+      "fajl": "assets/img/rad-06-posle-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×900"
+   }
+  }
+ },
+ "rad-07-pre": {
+  "alt": {
+   "sr": "",
+   "en": ""
+  },
+  "boja": "#585f62",
+  "izvor": "Jae Park · Pexels (https://www.pexels.com/photo/black-bmw-m-3-coupe-3849554/); „pre“ je računarska simulacija",
+  "varijante": {
+   "siroka": {
+    "razmera": "16:9",
+    "w": 1600,
+    "h": 900,
+    "velicine": [
+     {
+      "w": 640,
+      "h": 360,
+      "fajl": "assets/img/rad-07-pre-siroka-640.webp"
+     },
+     {
+      "w": 960,
+      "h": 540,
+      "fajl": "assets/img/rad-07-pre-siroka-960.webp"
+     },
+     {
+      "w": 1280,
+      "h": 720,
+      "fajl": "assets/img/rad-07-pre-siroka-1280.webp"
+     },
+     {
+      "w": 1600,
+      "h": 900,
+      "fajl": "assets/img/rad-07-pre-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×900"
+   }
+  }
+ },
+ "rad-07-posle": {
+  "alt": {
+   "sr": "",
+   "en": ""
+  },
+  "boja": "#585f62",
+  "izvor": "Jae Park · Pexels (https://www.pexels.com/photo/black-bmw-m-3-coupe-3849554/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "16:9",
+    "w": 1600,
+    "h": 900,
+    "velicine": [
+     {
+      "w": 640,
+      "h": 360,
+      "fajl": "assets/img/rad-07-posle-siroka-640.webp"
+     },
+     {
+      "w": 960,
+      "h": 540,
+      "fajl": "assets/img/rad-07-posle-siroka-960.webp"
+     },
+     {
+      "w": 1280,
+      "h": 720,
+      "fajl": "assets/img/rad-07-posle-siroka-1280.webp"
+     },
+     {
+      "w": 1600,
+      "h": 900,
+      "fajl": "assets/img/rad-07-posle-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×900"
+   }
+  }
+ },
+ "rad-08-pre": {
+  "alt": {
+   "sr": "",
+   "en": ""
+  },
+  "boja": "#4b4f55",
+  "izvor": "Arth · Pexels (https://www.pexels.com/photo/sleek-blue-sedan-parked-on-urban-street-34965674/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "16:9",
+    "w": 1600,
+    "h": 900,
+    "velicine": [
+     {
+      "w": 640,
+      "h": 360,
+      "fajl": "assets/img/rad-08-pre-siroka-640.webp"
+     },
+     {
+      "w": 960,
+      "h": 540,
+      "fajl": "assets/img/rad-08-pre-siroka-960.webp"
+     },
+     {
+      "w": 1280,
+      "h": 720,
+      "fajl": "assets/img/rad-08-pre-siroka-1280.webp"
+     },
+     {
+      "w": 1600,
+      "h": 900,
+      "fajl": "assets/img/rad-08-pre-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×900"
+   }
+  }
+ },
+ "rad-08-posle": {
+  "alt": {
+   "sr": "",
+   "en": ""
+  },
+  "boja": "#5a5859",
+  "izvor": "Arth · Pexels (https://www.pexels.com/photo/sleek-blue-sedan-parked-on-urban-street-34965674/); „posle“ je računarska simulacija",
+  "varijante": {
+   "siroka": {
+    "razmera": "16:9",
+    "w": 1600,
+    "h": 900,
+    "velicine": [
+     {
+      "w": 640,
+      "h": 360,
+      "fajl": "assets/img/rad-08-posle-siroka-640.webp"
+     },
+     {
+      "w": 960,
+      "h": 540,
+      "fajl": "assets/img/rad-08-posle-siroka-960.webp"
+     },
+     {
+      "w": 1280,
+      "h": 720,
+      "fajl": "assets/img/rad-08-posle-siroka-1280.webp"
+     },
+     {
+      "w": 1600,
+      "h": 900,
+      "fajl": "assets/img/rad-08-posle-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×900"
+   }
+  }
+ },
+ "rad-09-pre": {
+  "alt": {
+   "sr": "",
+   "en": ""
+  },
+  "boja": "#55605a",
+  "izvor": "R9 Media Photo Collective · Pexels (https://www.pexels.com/photo/sleek-green-suv-parked-in-scenic-outdoor-setting-33365663/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "16:9",
+    "w": 1600,
+    "h": 900,
+    "velicine": [
+     {
+      "w": 640,
+      "h": 360,
+      "fajl": "assets/img/rad-09-pre-siroka-640.webp"
+     },
+     {
+      "w": 960,
+      "h": 540,
+      "fajl": "assets/img/rad-09-pre-siroka-960.webp"
+     },
+     {
+      "w": 1280,
+      "h": 720,
+      "fajl": "assets/img/rad-09-pre-siroka-1280.webp"
+     },
+     {
+      "w": 1600,
+      "h": 900,
+      "fajl": "assets/img/rad-09-pre-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×900"
+   }
+  }
+ },
+ "rad-09-posle": {
+  "alt": {
+   "sr": "",
+   "en": ""
+  },
+  "boja": "#515c55",
+  "izvor": "R9 Media Photo Collective · Pexels (https://www.pexels.com/photo/sleek-green-suv-parked-in-scenic-outdoor-setting-33365663/); „posle“ je računarska simulacija",
+  "varijante": {
+   "siroka": {
+    "razmera": "16:9",
+    "w": 1600,
+    "h": 900,
+    "velicine": [
+     {
+      "w": 640,
+      "h": 360,
+      "fajl": "assets/img/rad-09-posle-siroka-640.webp"
+     },
+     {
+      "w": 960,
+      "h": 540,
+      "fajl": "assets/img/rad-09-posle-siroka-960.webp"
+     },
+     {
+      "w": 1280,
+      "h": 720,
+      "fajl": "assets/img/rad-09-posle-siroka-1280.webp"
+     },
+     {
+      "w": 1600,
+      "h": 900,
+      "fajl": "assets/img/rad-09-posle-siroka-1600.webp"
      }
     ],
     "preporuka": "1600×900"
