@@ -66,7 +66,7 @@
         for (var j = 0; j < br; j++) { var a = artikli[Math.floor(OF.seme(iso + i + 'a' + j) * artikli.length)]; stavke.push({ naziv: OF.tx(a.naziv), kategorija: OF.tx(a.kategorija), cena: a.cena, kolicina: 1 + Math.floor(OF.seme(iso + i + 'k' + j) * (a.maks || 2)) }); }
         var uk = stavke.reduce(function (s, x) { return s + x.cena * x.kolicina; }, 0);
         var mn = 600 + Math.floor(r * 660); if (k === 0) { mn = Math.min(mn, OF.sad().min - 12 - i * 9); if (mn < 0) continue; }
-        primer.push({ id: 'PR-' + iso.slice(5).replace('-', '') + i, vreme: iso + 'T' + D.uHHMM(mn) + ':00', kupac: { ime: ['Marija P.', 'Nikola J.', 'Ana S.', 'Stefan M.', 'Jovana K.', 'Milan D.'][i % 6], email: 'kupac' + (i % 6) + '@primer.rs', telefon: '060 000 00 0' + (i % 6) }, stavke: stavke, ukupno: uk, status: k === 0 && i === n - 1 ? 'primljeno' : 'zavrseno', izvor: 'primer', primer: true });
+        primer.push({ id: ((OF.d.prodaja || {}).prefiks || 'P') + '-' + iso.slice(5).replace('-', '') + String.fromCharCode(65 + i % 26) + Math.floor(i / 26), vreme: iso + 'T' + D.uHHMM(mn) + ':00', kupac: { ime: ['Marija P.', 'Nikola J.', 'Ana S.', 'Stefan M.', 'Jovana K.', 'Milan D.'][i % 6], email: 'kupac' + (i % 6) + '@primer.rs', telefon: '060 000 00 0' + (i % 6) }, stavke: stavke, ukupno: uk, status: k === 0 && i === n - 1 ? 'primljeno' : 'zavrseno', izvor: 'primer', primer: true });
       }
     }
     return stvarne.concat(primer).sort(function (a, b) { return a.vreme > b.vreme ? -1 : 1; });
@@ -139,7 +139,7 @@
       if (r.status === 401 || r.status === 403) throw new Error('pristup');
       if (!r.ok) throw new Error('server'); return r.json();
     }).then(function (o) {
-      ['termini', 'porudzbine', 'kodovi', 'newsletter', 'podsetnici', 'procene', 'integracije-dnevnik', 'zalihe-izmene', 'kuponi-izmene', 'odustanci', 'reklamacije', 'zaliha-javi'].forEach(function (k) { if (o[k]) OF.store.set(k, o[k]); });
+      ['termini', 'porudzbine', 'kodovi', 'newsletter', 'podsetnici', 'procene', 'integracije-dnevnik', 'zalihe-izmene', 'kuponi-izmene', 'odustanci', 'reklamacije', 'zaliha-javi', 'clanstva', 'garantni'].forEach(function (k) { if (o[k]) OF.store.set(k, o[k]); });
       if (o.cene) OF.store.set('cene-izmene', o.cene);
       crtaj(koren);
     }).catch(function (e) {
@@ -168,10 +168,15 @@
     koren.innerHTML = '';
     var f = OF.d.firma, sekcije = [];
     sekcije.push({ id: 'danas', naziv: OF.t('p.pregled'), crtaj: sekcijaPregled });
-    if (tip()) sekcije.push({ id: 'termini', naziv: tip() === 'sto' ? OF.t('p.rezervacije') : tip() === 'vozilo' ? OF.t('p.vozila') : OF.t('p.termini'), crtaj: sekcijaTermini });
+    if (tip()) sekcije.push({ id: 'termini', naziv: tip() === 'sto' ? OF.t('p.rezervacije') : OF.t('p.termini'), crtaj: sekcijaTermini });
     if (OF.d.prodaja) sekcije.push({ id: 'prodaja', naziv: OF.t('p.prodaja'), crtaj: sekcijaProdaja });
     sekcije.push({ id: 'skener', naziv: OF.t('p.provera'), crtaj: sekcijaSkener });
-    sekcije = sekcije.concat(P.sekcije);
+    // dodatne sekcije (prodavnica, vozila): „posle“ = id sekcije iza koje stoje, inače pre Cenovnika
+    P.sekcije.forEach(function (x) {
+      var i = x.posle ? sekcije.map(function (y) { return y.id; }).indexOf(x.posle) : -1;
+      if (i >= 0) { var k = i + 1; while (k < sekcije.length && sekcije[k].posle === x.posle) k++; sekcije.splice(k, 0, x); }
+      else sekcije.push(x);
+    });
     sekcije.push({ id: 'cene', naziv: OF.t('p.cenovnik'), crtaj: sekcijaCene });
     sekcije.push({ id: 'musterije', naziv: OF.t('p.musterije'), crtaj: sekcijaMusterije });
     sekcije.push({ id: 'integracije', naziv: OF.t('p.integracije'), crtaj: sekcijaIntegracije });
@@ -206,6 +211,7 @@
       if (P._zaustaviKameru && id !== 'skener') P._zaustaviKameru();
     }
     idi(trenutna);
+    w.addEventListener('hashchange', function () { var h = (w.location.hash || '').slice(1); if (h && h !== trenutna && sekcije.some(function (x) { return x.id === h; })) idi(h); });
     OF.on('integracija', function () { if (trenutna === 'integracije' || trenutna === 'danas') idi(trenutna); });
   }
 
@@ -217,7 +223,7 @@
     if (tip()) {
       var t = P.terminiDana(danas), sada = OF.sad().min;
       var sledeci = t.filter(function (x) { return D.uMin(x.vreme) >= sada; })[0];
-      kartice.appendChild(kartica(tip() === 'sto' ? OF.t('p.rezervacija_danas') : tip() === 'vozilo' ? OF.t('p.vozila_danas') : OF.t('p.termina_danas'), String(t.length), sledeci ? OF.t('p.sledeci', { vreme: D.vreme(sledeci.vreme), ime: sledeci.ime }) : OF.t('p.nema_vise')));
+      kartice.appendChild(kartica(tip() === 'sto' ? OF.t('p.rezervacija_danas') : tip() === 'vozilo' ? OF.t('p.vozila_danas') : OF.t('p.termina_danas'), String(t.length), tip() === 'vozilo' ? (sledeci ? OF.t('pv.sledece_ostavljanje', { vreme: D.vreme(sledeci.vreme), reg: sledeci.registracija || sledeci.ime }) : OF.t('pv.nema_vise_ostavljanja')) : sledeci ? OF.t('p.sledeci', { vreme: D.vreme(sledeci.vreme), ime: sledeci.ime }) : OF.t('p.nema_vise')));
     }
     if (OF.d.prodaja) {
       var por = P.porudzbine().filter(function (p) { return OF.datum.lokalno(p.vreme).iso === danas; });
@@ -301,7 +307,7 @@
   var FAZE = function () { return (OF.d.pracenje && OF.d.pracenje.faze) || []; };
   function listaVozila(lista) {
     return OF.h('ul', { class: 'of-panel__lista', role: 'list' }, lista.map(function (t) {
-      var faza = t.faza || 0, faze = FAZE();
+      var faza = P.fazaVozila ? P.fazaVozila(t) : (t.faza || 0), faze = FAZE();   // -1 = čeka prijem
       return OF.h('li', { class: 'of-panel__vozilo' }, [
         OF.h('div', null, [OF.h('strong', null, D.vreme(t.vreme) + ' · ' + (t.registracija || '')), OF.h('p', null, [t.vozilo, ' · ', t.paketNaziv, ' · ', t.ime].join(''))]),
         faze.length ? OF.h('ol', { class: 'of-faze', 'aria-label': OF.t('p.faza') }, faze.map(function (f, i) { return OF.h('li', { class: i < faza ? 'gotovo' : i === faza ? 'trenutno' : '', 'aria-current': i === faza ? 'step' : null }, OF.tx(f.naziv)); })) : null,
@@ -560,5 +566,6 @@
     }));
   }
 
-  OF.spremno(function () { P.pokreni(OF.$('[data-of-panel]')); });
+  // posle svih skripti iz paketa (dodatne sekcije: of-panel-prodavnica, of-panel-vozila)
+  OF.spremno(function () { setTimeout(function () { P.pokreni(OF.$('[data-of-panel]')); }, 0); });
 })(window, document);

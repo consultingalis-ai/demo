@@ -2,7 +2,7 @@
    Generator upisuje verziju i spisak fajlova koji se čuvaju unapred.
    Stranice: prvo mreža, pa sačuvana kopija, pa offline stranica sa osnovnim informacijama.
    Slike, fontovi, CSS i JS: sačuvana kopija odmah, osvežava se u pozadini. */
-var VERZIJA = '560be4c7';
+var VERZIJA = 'eb595620';
 var UNAPRED = ["./","offline.html","config.js","assets/js/podaci.js","assets/css/sajt.css","manifest.webmanifest","assets/js/sajt.sr.js","assets/js/sajt.en.js","assets/js/panel.sr.js","assets/js/panel.en.js","en/","kontakt/","en/contact/","assets/img/logo.svg","assets/img/znak.svg","assets/fonts/eb-garamond-400.woff2","assets/fonts/jost-400.woff2"];
 var KES = 'of-' + VERZIJA;
 

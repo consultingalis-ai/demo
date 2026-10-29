@@ -25,7 +25,7 @@
     'zak.koraci': 'Booking steps', 'zak.korak_od': 'Step {n} of {uk}', 'zak.k_usluga': 'Service', 'zak.k_osoba': 'Who you’ll see', 'zak.k_termin': 'Date and time', 'zak.k_sto': 'Table', 'zak.k_paket': 'Package', 'zak.k_podaci': 'Your details', 'zak.k_pregled': 'Review',
     'zak.vas_izbor': 'Your selection', 'zak.usluga': 'Service', 'zak.cena': 'Price', 'zak.trajanje': 'Duration', 'zak.min': '{n} min', 'zak.osoba': 'With', 'zak.bilo_ko': 'No preference', 'zak.bilo_ko_opis': 'First available slot with any of us',
     'zak.osoba_broj': 'Number of people', 'zak.prostor': 'Seating', 'zak.paket': 'Package', 'zak.vozilo': 'Vehicle', 'zak.datum': 'Date', 'zak.vreme': 'Time', 'zak.kada': 'When', 'zak.ostavljanje': 'Drop-off', 'zak.ostavljanje_vozila': 'Drop-off time',
-    'zak.gotovo': 'Ready (approx.)', 'zak.placen_depozit': 'Deposit paid', 'zak.adresa': 'Address', 'zak.broj': 'Booking number', 'zak.termin': 'Booking',
+    'zak.gotovo': 'Ready (approx.)', 'zak.kredit_pokriva': 'You have credit from cancelled booking {termin}: it covers the whole {iznos} deposit, so there’s nothing to pay today.', 'zak.kredit_delom': 'Credit from cancelled booking {termin} covers {iznos} of the deposit. You’ll pay the remaining {ostatak} by card in the next step.', 'zak.iz_kredita': '{iznos} from booking {termin} credit', 'zak.placen_depozit': 'Deposit paid', 'zak.adresa': 'Address', 'zak.broj': 'Booking number', 'zak.termin': 'Booking',
     'zak.prethodni_mesec': 'Previous month', 'zak.sledeci_mesec': 'Next month', 'zak.ima_termina': 'slots available', 'zak.nema_termina': 'fully booked', 'zak.legenda': 'slots available',
     'zak.izaberite_dan': 'Choose a day in the calendar.', 'zak.nema_termina_dan': 'There are no free slots on this day. Please choose another day.', 'zak.pre_podne': 'Morning', 'zak.posle_podne': 'Afternoon', 'zak.uvece': 'Evening', 'zak.malo_mesta': 'few spots left',
     'zak.vise_osoba': 'For more than {n} people, send us an', 'zak.upit_proslava': 'event enquiry.', 'zak.depozit_info': 'For {n} or more people, we confirm the table with a card deposit of {iznos}, which comes off your bill.', 'zak.sezona': 'from {od} to {do}',
@@ -36,7 +36,9 @@
     'moj.vas_termin': 'Your booking', 'moj.status': 'Status', 'moj.potvrdjen': 'confirmed', 'moj.otkazan': 'cancelled', 'moj.prosao': 'past', 'moj.pomeren': 'rescheduled',
     'moj.pomeri': 'Reschedule', 'moj.otkazi': 'Cancel booking', 'moj.novo_vreme': 'Choose a new time', 'moj.sacuvaj': 'Save new time', 'moj.pomereno': 'Your booking has been moved. We’ve emailed you a new confirmation.',
     'moj.otkazi_naslov': 'Cancel booking', 'moj.otkazi_pitanje': 'Are you sure you want to cancel your booking for {kad}?', 'moj.ne_hvala': 'No, go back', 'moj.da_otkazi': 'Yes, cancel', 'moj.otkazano': 'Your booking has been cancelled.',
-    'moj.kasno': 'Your booking is less than {sati} hours away. To make changes, please call us – we’re happy to help.', 'moj.novi': 'Make a new booking', 'moj.nalog': 'My account',
+    'moj.vec_pomeren': 'This booking has already been moved once. To change it again, please call us.', 'moj.depozit_placen': 'Deposit paid: {iznos}.',
+    'r.depozit_kredit': 'Deposit {iznos} stays as credit until {do}.', 'r.mejl_depozit_povracaj': 'We’ll refund your {iznos} deposit to your card within 5 working days.', 'r.mejl_depozit_kredit': 'Your {iznos} deposit stays as credit for a new booking until {do}.',
+    'moj.kasno': 'Your booking is less than {sati} hours away. To make changes, please call us. We’re happy to help.', 'moj.novi': 'Make a new booking', 'moj.nalog': 'My account',
     'moj.nije_nadjen': 'Booking not found', 'moj.nije_nadjen_opis': 'The link may be old or incomplete. Call us, or sign in to your account to see your bookings.',
 
     'r.opis': '', 'r.sto_opis': 'Table for {n} · {prostor}', 'r.radionica': 'Workshop', 'r.prva_poseta': 'First visit', 'r.pozovi': 'Call', 'r.otvori_panel': 'Open dashboard',
@@ -51,7 +53,7 @@
     'r.mejl_poruka_naslov': '{firma}: we’ve received your message', 'r.mejl_poruka_h1': 'We’ve received your message', 'r.mejl_poruka_uvod': 'We reply during opening hours. Here’s a copy of what you sent:',
     'r.mejl_newsletter_naslov': '{firma}: please confirm your subscription', 'r.mejl_newsletter_h1': 'Just one more click', 'r.mejl_newsletter_uvod': 'Please confirm that you’d like to receive our news. We won’t send you anything until you do.', 'r.mejl_newsletter_napomena': 'If you didn’t sign up, just ignore this email.', 'r.potvrdi_prijavu': 'Confirm subscription',
     'r.brevo_tekst': 'Contact {email} has been added to the list as “awaiting confirmation”. Once the link is clicked, it becomes “active”.',
-    'r.mejl_nalog_naslov': '{firma}: your sign-in link', 'r.mejl_nalog_h1': 'Your sign-in link', 'r.mejl_nalog_uvod': 'Click the button to sign in to your account. The link is valid for 30 minutes and works once.', 'r.mejl_nalog_napomena': 'Didn’t ask to sign in? Just ignore this email – your account is safe.', 'r.prijavi_se': 'Sign in',
+    'r.mejl_nalog_naslov': '{firma}: your sign-in link', 'r.mejl_nalog_h1': 'Your sign-in link', 'r.mejl_nalog_uvod': 'Click the button to sign in to your account. The link is valid for 30 minutes and works once.', 'r.mejl_nalog_napomena': 'Didn’t ask to sign in? Just ignore this email. Your account is safe.', 'r.prijavi_se': 'Sign in',
     'r.mejl_recenzija_naslov': '{firma}: how did it go?', 'r.mejl_recenzija_h1': 'Thanks for visiting, {ime}.', 'r.mejl_recenzija_uvod': 'If you were happy, a short Google review helps others find us. If something wasn’t right, just reply to this email.', 'r.mejl_recenzija_napomena': 'We only send this email once, after your visit.', 'r.ostavi_recenziju': 'Leave a review',
     'r.sms_podsetnik': '{firma}: reminder of your booking on {kada}. To change or cancel: {tel}', 'r.sms_recenzija': '{firma}: thanks for visiting. If you’d like, leave us a review via the link in our email.', 'r.sms_spremno': '{firma}: order {broj} is ready for collection.',
     'r.dan_pre': 'sent the day before, {datum}', 'r.posle_posete': 'sent after the visit', 'r.kad_spremno': 'sent when the order is ready',
@@ -60,12 +62,13 @@
 
     'k.korpa_broj': 'Basket, items: {n}', 'k.dodato': 'Added to basket: {naziv}', 'k.prazna': 'Your basket is empty.', 'k.nastavi_kupovinu': 'Continue shopping', 'k.manje': 'Decrease quantity: {naziv}', 'k.vise': 'Increase quantity: {naziv}', 'k.kolicina': 'quantity',
     'k.kupon': 'Discount code', 'k.primeni': 'Apply', 'k.kupon_nepostoji': 'That code isn’t valid.', 'k.kupon_istekao': 'This code has expired.', 'k.kupon_min': 'This code applies to orders of {iznos} or more.', 'k.kupon_ok': 'Code applied: {opis}', 'k.kupon_primenjen': 'Code {kod} applied.',
-    'k.medjuzbir': 'Subtotal', 'k.popust': 'Discount', 'k.dostava': 'Delivery', 'k.pdv': 'Prices include VAT.', 'k.dostava_kasnije': 'You’ll choose delivery in the next step.', 'k.na_placanje': 'Go to checkout',
+    'k.medjuzbir': 'Subtotal', 'k.popust_clan': 'Member discount ({n}%)', 'k.popust': 'Discount', 'k.dostava': 'Delivery', 'k.pdv': 'Prices include VAT.', 'k.dostava_kasnije': 'You’ll choose delivery in the next step.', 'k.na_placanje': 'Go to checkout',
     'k.vasi_podaci': 'Your details', 'k.email_pomoc': 'We’ll send your receipt and documents to this address.', 'k.besplatno_od': 'free from {iznos}', 'k.adresa': 'Street and house number', 'k.postanski': 'Postcode', 'k.mesto': 'Town/city',
     'k.preuzimanje': 'Collection', 'k.izaberite_vreme': 'Choose a time', 'k.vreme_preuzimanja': 'Collection time', 'k.priprema': 'Your order takes about {min} minutes to prepare.', 'k.preuzimate_na': 'Collect your order at {adresa}.',
     'k.prihvatam': 'I accept the', 'k.uslove': 'terms of sale', 'k.plati': 'Pay {iznos}', 'k.sigurno': 'Payment goes through the bank’s secure page. We never see or store your card details.',
     'k.porudzbina_opis': 'Order · {firma}', 'k.placeno': 'Paid', 'k.hvala': 'Thank you, {ime}.', 'k.broj_porudzbine': 'Order number', 'k.posiljka': 'Parcel', 'k.racun_mejlom': 'Your receipt has been sent to {email}.', 'k.preuzmi_pdf': 'Download PDF', 'k.u_nalogu': 'View in your account',
 
+    'pl.ponavljanje': 'This is the first monthly charge. The payment processor keeps the card for the next ones ({iznos}, on day {dan} of each month); cancel in your account.',
     'pl.naslov': 'Card payment', 'pl.demo_oznaka': 'DEMO PAYMENT.', 'pl.ne_unosite': 'Never enter real card details. Only the test numbers below are accepted.',
     'pl.test_kartice': 'Test cards', 'pl.test_uspeh': 'successful payment', 'pl.test_odbijena': 'declined card', 'pl.upisi': 'Use',
     'pl.ime_na_kartici': 'Name on card', 'pl.broj': 'Card number', 'pl.vazi': 'Expiry date (MM/YY)', 'pl.vazi_primer': 'MM/YY', 'pl.logotipi': 'Accepted cards', 'pl.sitno': 'On the live site, this step is the bank’s or payment provider’s own page. Card details never pass through the website.',
@@ -104,6 +107,6 @@
     'pm.kontakt_tekst': 'Phone and Viber: {tel}\nEmail: {email}', 'pm.otkazivanje': 'You can reschedule or cancel via the link in your confirmation email, or in your account.',
     'pm.zakazivanje': 'You can book on the site in a couple of minutes: pick the service, who you’d like to see, the day and the time. Your confirmation comes by email.', 'pm.cene_opste': 'All prices are in the price list. Type the name of a service and I’ll tell you the price.',
     'pm.zdravo': 'Hello. What would you like to know about {firma}?', 'pm.nisam_razumeo': 'Sorry, I didn’t understand that. Try different words, or pick one of the common questions.',
-    'pm.ai_napomena': 'This answer was written by AI from the shop’s data. For anything important, check the page or ask us.', 'pm.ne_znam': 'I don’t have a reliable answer to that. Message us directly – we reply during opening hours.', 'pm.wa_uvod': 'Hi, I have a question from your website:'
+    'pm.ai_napomena': 'This answer was written by AI from the shop’s data. For anything important, check the page or ask us.', 'pm.ne_znam': 'I don’t have a reliable answer to that. Message us directly and we’ll reply during opening hours.', 'pm.wa_uvod': 'Hi, I have a question from your website:'
   };
 })(window);

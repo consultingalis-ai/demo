@@ -9,7 +9,7 @@
 
   N.prijavljen = function () { return OF.nalog(); };
   N.odjava = function () {
-    OF.store.remove('nalog'); OF.emit('nalog', null);
+    OF.store.remove('nalog'); N.aktivnaKartica = null; OF.emit('nalog', null);
     if (!OF.demo) fetch(OF.int.api('/nalog/odjava'), { method: 'POST', credentials: 'same-origin' }).catch(function () {});
   };
 
@@ -38,6 +38,7 @@
           (o.termini || []).forEach(function (t) { if (OF.zak) OF.zak.sacuvaj(t); });
           (o.porudzbine || []).forEach(function (x) { OF.store.set('porudzbine', [x].concat(OF.store.get('porudzbine', []).filter(function (y) { return y.id !== x.id; }))); });
           (o.kodovi || []).forEach(function (x) { OF.store.set('kodovi', [x].concat(OF.store.get('kodovi', []).filter(function (y) { return y.kod !== x.kod; }))); });
+          OF.emit('nalog.server', o);                       // moduli sajta (članstvo, garantni listovi) uzimaju svoje
           var profil = { ime: o.ime || '', telefon: o.telefon || '', bodovi: o.bodovi || 0 }; (OF.d.nalogPolja || []).forEach(function (p) { if (o[p.ime] != null) profil[p.ime] = o[p.ime]; });
           return N.otvori(o.email, profil);
         });
@@ -119,7 +120,8 @@
         });
       });
       k.appendChild(forma);
-      k.appendChild(OF.h('ul', { class: 'of-nalog__prednosti' }, [OF.t('n.prednost_1'), OF.t('n.prednost_2'), OF.t('n.prednost_3')].map(function (x) { return OF.h('li', null, x); })));
+      var prednosti = OF.d.nalogPrednosti ? OF.d.nalogPrednosti.map(function (x) { return OF.tx(x); }) : [OF.t('n.prednost_1'), OF.t('n.prednost_2'), OF.t('n.prednost_3')];   // sajt može da ima svoje
+      k.appendChild(OF.h('ul', { class: 'of-nalog__prednosti' }, prednosti.map(function (x) { return OF.h('li', null, x); })));
       return k;
     }
 
@@ -146,7 +148,12 @@
         paneli.appendChild(OF.h('div', { role: 'tabpanel', id: 'np-' + x[0], 'aria-labelledby': 'nt-' + x[0], hidden: i !== 0, class: 'of-tabovi__panel', tabindex: '0' }, x[2]));
       });
       var tb = OF.h('div', { class: 'of-tabovi' }, [tabovi, paneli]);
-      k.appendChild(tb); OF.ui.tabovi(tb);
+      k.appendChild(tb);
+      // posle izmene (pauza, plan, podaci…) nalog se crta ponovo: ostajemo na kartici na kojoj je kupac bio
+      var izaberi = OF.ui.tabovi(tb), zapamti = function () { var t = OF.$('[role=tab][aria-selected=true]', tabovi); if (t) N.aktivnaKartica = t.id.slice(3); };
+      tabovi.addEventListener('click', zapamti); tabovi.addEventListener('keyup', zapamti);
+      var idx = delovi.map(function (x) { return x[0]; }).indexOf(N.aktivnaKartica);
+      if (idx > 0) izaberi(idx);
       return k;
     }
 
@@ -245,6 +252,7 @@
     OF.store.set('porudzbine', OF.store.get('porudzbine', []).filter(function (p) { return !p.kupac || p.kupac.email !== email; }));
     OF.store.set('kodovi', OF.store.get('kodovi', []).filter(function (k) { return k.kupac !== email; }));
     var sve = OF.store.get('nalozi', {}); delete sve[email]; OF.store.set('nalozi', sve);
+    OF.emit('nalog.obrisi', email);                // moduli sajta brišu svoje (članstvo, vozila, garancije)
     if (!OF.demo) fetch(OF.int.api('/nalog/obrisi'), { method: 'POST', credentials: 'same-origin' }).catch(function () {});
     N.odjava();
   };

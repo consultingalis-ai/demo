@@ -130,7 +130,7 @@
   // gravura: izrada se produžava za PODACI.prodaja.gravuraDana (podrazumevano 2 radna dana)
   PR.isporukaTekst = function (izradaDana, gravura) {
     var g = gravura ? (PROD().gravuraDana || 2) : 0;
-    var i = PR.isporuka((izradaDana || 0) + g), dan = function (iso) { return iso === D.dodaj(OF.sad().iso, 1) ? OF.t('sutra') : D.format(iso, { weekday: 'long', day: 'numeric', month: 'long' }); };
+    var i = PR.isporuka((izradaDana || 0) + g), dan = function (iso) { return iso === D.dodaj(OF.sad().iso, 1) ? OF.t('sutra') : D.uDan(iso); };
     if (izradaDana) return OF.t('pr.isporuka_izrada', { dana: izradaDana + g, dan: dan(i.stize) });
     if (g) return OF.t('pr.isporuka_gravura', { dana: g, dan: dan(i.stize) });
     return i.danas ? OF.t('pr.isporuka_danas', { sat: i.doSata, dan: dan(i.stize) }) : OF.t('pr.isporuka_kasnije', { slanje: dan(i.slanje), dan: dan(i.stize) });
@@ -700,6 +700,7 @@
     if (!broj) { koren.innerHTML = ''; koren.appendChild(OF.h('p', null, OF.t('pr.nije_nadjena'))); return; }
     fetch(OF.int.api('/placanje/status?id=' + encodeURIComponent(broj)), { credentials: 'same-origin' }).then(function (r) { return r.json(); }).then(function (o) {
       koren.innerHTML = '';
+      if (o.vrsta === 'depozit' || o.vrsta === 'clanarina') return povratakVozila(koren, o, broj, u);
       var b = o.banka || {};
       var redovi = [[OF.t('k.broj_porudzbine'), broj], [OF.t('pl.status'), o.uspeh ? OF.t('pl.uspeh') : OF.t('pl.neuspeh')], [OF.t('ukupno'), OF.din(o.iznos || 0)],
         [OF.t('pl.odobrenje'), b.authCode || '–'], [OF.t('pl.transakcija'), b.transId || '–'], [OF.t('pl.kod_odgovora'), b.procReturnCode || '–'], ['3D Secure', b.mdStatus || '–'], [OF.t('pl.kartica'), b.kartica || '–'], [OF.t('pl.vreme'), b.vreme || '–']];
@@ -712,6 +713,26 @@
       if (o.uspeh) { OF.korpa.isprazni(); OF.store.remove('placanje-u-toku'); if (o.porudzbina) OF.emit('porudzbina', o.porudzbina); }
     }).catch(function () { koren.innerHTML = ''; koren.appendChild(OF.h('p', null, OF.t('pl.greska_veza'))); });
   };
+
+  /* povratak posle depozita za termin ili prve članarine (detailing) */
+  function povratakVozila(koren, o, broj, u) {
+    var b = o.banka || {}, dep = o.vrsta === 'depozit', dugmad = [];
+    var redovi = [[OF.t('pl.status'), o.uspeh ? OF.t('pl.uspeh') : o.ceka ? OF.t('pl.proveravam') : OF.t('pl.neuspeh')], [OF.t('ukupno'), OF.din(o.iznos || 0)],
+      [OF.t('pl.odobrenje'), b.authCode || '–'], [OF.t('pl.transakcija'), b.transId || '–'], [OF.t('pl.kartica'), b.kartica || '–']];
+    if (dep && o.termin) {
+      var t = Object.assign({ tip: 'vozilo', status: 'potvrdjen', email: (u && u.email) || '' }, o.termin);
+      redovi.unshift([OF.t('zak.broj'), t.id], [OF.t('zak.paket'), t.paketNaziv || ''], [OF.t('zak.ostavljanje'), D.dug(t.datum) + ', ' + D.vreme(t.vreme)]);
+      if (o.uspeh && OF.zak) { OF.zak.sacuvaj(t); dugmad.push(OF.h('a', { class: 'of-dugme of-dugme--glavno', href: OF.zak.linkMojTermin(t) }, OF.t('vz.moj_termin'))); if (OF.pracenje) dugmad.push(OF.h('a', { class: 'of-dugme of-dugme--sporedno', href: OF.pracenje.link(t) }, OF.t('vz.sacuvaj_link'))); }
+    }
+    if (!dep && o.clanstvo && o.uspeh && OF.clanstvo) { OF.clanstvo.sacuvaj(o.clanstvo); dugmad.push(OF.h('a', { class: 'of-dugme of-dugme--glavno', href: OF.link('zakazivanje', 'paket=clan-pranje') }, OF.t('cl.zakazi_pranje')), OF.h('a', { class: 'of-dugme of-dugme--sporedno', href: OF.link('nalog') }, OF.t('cl.u_nalog'))); }
+    if (!o.uspeh && !o.ceka) dugmad.push(OF.h('a', { class: 'of-dugme of-dugme--glavno', href: OF.link(dep ? 'zakazivanje' : 'clanstvo') }, dep ? OF.t('vz.zakazi_ponovo') : OF.t('cl.pokusaj_ponovo')));
+    koren.appendChild(OF.h('section', { class: 'of-potvrda' }, [OF.h('h2', { tabindex: '-1' }, o.uspeh ? (dep ? OF.t('vz.depozit_placen_naslov') : OF.t('pl.uspeh')) : OF.t('pl.neuspeh_naslov')),
+      OF.h('p', null, o.uspeh ? (dep ? OF.t('vz.depozit_placen_opis') : OF.t('cl.placanje_uspeh_opis')) : (dep ? OF.t('vz.depozit_neuspeh_opis') : OF.t('cl.placanje_neuspeh_opis'))),
+      OF.h('dl', { class: 'of-pregled' }, [].concat.apply([], redovi.map(function (r) { return [OF.h('dt', null, r[0]), OF.h('dd', null, r[1])]; }))),
+      OF.h('p', { class: 'of-kasa__sitno' }, OF.t('pl.trgovac') + ': ' + OF.d.firma.punoIme + ', ' + OF.int.adresa() + ', PIB ' + OF.d.firma.pib),
+      OF.h('div', { class: 'of-zak__dugmad' }, dugmad)]));
+    if (o.uspeh) OF.store.remove('placanje-u-toku');
+  }
 
   /* pošalji korpu na mejl (kupac sam traži: link za nastavak kupovine sa drugog uređaja) */
   PR.linkKorpe = function () {

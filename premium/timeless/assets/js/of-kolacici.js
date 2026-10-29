@@ -99,6 +99,12 @@
         OF.h('button', { type: 'button', class: 'of-dugme of-dugme--glavno', onclick: function () { zatvori(A.sacuvaj(true, true)); } }, OF.t('kol.prihvati_sve'))
       ])
     ]);
+    // Escape: zatvara podešavanja (izbor ostaje kakav je bio); pri prvom izboru samo skuplja detalje
+    baner.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      if (A.izbor()) { e.preventDefault(); var b = baner; baner = null; b.remove(); return; }
+      if (!detalji.hidden) { e.preventDefault(); detalji.hidden = true; sacuvajIzbor.hidden = true; dugmePodesavanja.hidden = false; dugmePodesavanja.focus(); }
+    });
     d.body.appendChild(baner);
     if (podesavanja) baner.focus();
     function zatvori(x) {
@@ -109,7 +115,8 @@
 
   OF.spremno(function () {
     var x = A.izbor();
-    if (x) primeni(x); else setTimeout(function () { if (!A.izbor()) A.baner(false); }, 900);   // posle prvog prikaza, da ne smeta učitavanju
+    var panel = !!OF.$('[data-of-panel]');   // panel vlasnika: bez trake, analitika se tu ne učitava
+    if (x) { if (!panel) primeni(x); } else if (!panel) setTimeout(function () { if (!A.izbor()) A.baner(false); }, 900);   // posle prvog prikaza, da ne smeta učitavanju
     OF.$$('[data-of-kolacici]').forEach(function (b) { b.addEventListener('click', function (e) { e.preventDefault(); A.baner(true); }); });
   });
 })(window, document);

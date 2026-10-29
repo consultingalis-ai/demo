@@ -1,0 +1,50 @@
+﻿Šifra,Usluga,Grupa,"Cena Malo (RSD, sa PDV-om)","Cena Srednje (RSD, sa PDV-om)","Cena SUV i karavan (RSD, sa PDV-om)","Cena Kombi i veliki SUV (RSD, sa PDV-om)",Datum
+pranje,Detaljno pranje i dekontaminacija,Pranje,5500,6500,8000,9000,2026-10-29
+enterijer,Dubinsko čišćenje enterijera,Enterijer,12000,14000,17000,19500,2026-10-29
+poliranje-1,Jednofazno poliranje,Poliranje,20500,24000,29000,33500,2026-10-29
+poliranje-2,Dvofazno poliranje,Poliranje,32500,38000,45500,53000,2026-10-29
+poliranje-3,Višefazno poliranje,Poliranje,46000,54000,65000,75500,2026-10-29
+keramika-1,Keramika 1 godina,Keramička zaštita,30500,36000,43000,50500,2026-10-29
+keramika-3,Keramika 3 godine,Keramička zaštita,52500,62000,74500,87000,2026-10-29
+keramika-5,Keramika 5 godina,Keramička zaštita,78000,92000,110500,129000,2026-10-29
+pregled-keramike,Godišnji pregled keramike,Keramička zaštita,4000,4500,5500,6500,2026-10-29
+folija-zone,Folija na rizične zone,Zaštitna folija,49500,58000,69500,81000,2026-10-29
+folija-prednji,Folija na ceo prednji deo,Zaštitna folija,140500,165000,198000,231000,2026-10-29
+folija-celo,Folija na celo vozilo,Zaštitna folija,"po pregledu, od 480000","po pregledu, od 480000","po pregledu, od 480000","po pregledu, od 480000",2026-10-29
+felne,Felne i čeljusti,Felne i farovi,12000,12000,12000,12000,2026-10-29
+farovi,Poliranje farova sa zaštitom,Felne i farovi,6500,6500,6500,6500,2026-10-29
+motor,Pranje motornog prostora,Felne i farovi,4500,4500,4500,4500,2026-10-29
+dodatak-enterijer,Dubinsko čišćenje enterijera,Dodatak,12000,14000,17000,19500,2026-10-29
+dodatak-koza,Keramička zaštita kože i tekstila,Dodatak,13000,15000,18000,21000,2026-10-29
+dodatak-stakla,Keramika na svim staklima,Dodatak,12000,12000,12000,12000,2026-10-29
+dodatak-vetrobran,Keramika na vetrobranu,Dodatak,4500,4500,4500,4500,2026-10-29
+dodatak-felne,Felne i čeljusti sa skidanjem točkova,Dodatak,12000,12000,12000,12000,2026-10-29
+dodatak-farovi,Poliranje farova sa zaštitom,Dodatak,6500,6500,6500,6500,2026-10-29
+dodatak-motor,Pranje motornog prostora,Dodatak,4500,4500,4500,4500,2026-10-29
+dodatak-ozon,Ozon i dezinfekcija klime,Dodatak,5500,5500,5500,5500,2026-10-29
+dodatak-folija-zone,Folija na rizične zone,Dodatak,49500,58000,69500,81000,2026-10-29
+SL-P-001,Šampon pH 7,Prodavnica,1290,1290,1290,1290,2026-10-29
+SL-P-002,Aktivna pena,Prodavnica,1890,1890,1890,1890,2026-10-29
+SL-P-003,"Rukavica za pranje, mikrofiber",Prodavnica,1190,1190,1190,1190,2026-10-29
+SL-P-004,Peškir za sušenje 60 × 90 cm,Prodavnica,2490,2490,2490,2490,2026-10-29
+SL-P-005,Kofa 20 l sa rešetkom za pesak,Prodavnica,2990,2990,2990,2990,2026-10-29
+SL-P-006,Čistač felni koji menja boju,Prodavnica,1790,1790,1790,1790,2026-10-29
+SL-P-007,"Četke za felne, set 3",Prodavnica,2290,2290,2290,2290,2026-10-29
+SL-P-008,"Zaštita guma, mat",Prodavnica,1290,1290,1290,1290,2026-10-29
+SL-P-009,Keramički sprej,Prodavnica,2890,2890,2890,2890,2026-10-29
+SL-P-010,Brzi detailer,Prodavnica,1490,1490,1490,1490,2026-10-29
+SL-P-011,Uklanjač gvozdenih čestica,Prodavnica,1790,1790,1790,1790,2026-10-29
+SL-P-012,Glina za dekontaminaciju sa lubrikantom,Prodavnica,2490,2490,2490,2490,2026-10-29
+SL-P-013,Booster za keramiku,Prodavnica,3490,3490,3490,3490,2026-10-29
+SL-P-014,Čistač enterijera,Prodavnica,1390,1390,1390,1390,2026-10-29
+SL-P-015,Čistač kože,Prodavnica,1690,1690,1690,1690,2026-10-29
+SL-P-016,"Zaštita kože, mleko",Prodavnica,1990,1990,1990,1990,2026-10-29
+SL-P-017,"Četke za enterijer, set 3",Prodavnica,1590,1590,1590,1590,2026-10-29
+SL-P-018,Neutralizator mirisa,Prodavnica,990,990,990,990,2026-10-29
+SL-P-019,Čistač stakla bez tragova,Prodavnica,990,990,990,990,2026-10-29
+SL-P-020,Keramika za stakla,Prodavnica,1990,1990,1990,1990,2026-10-29
+SL-P-021,"Mikrofiber krpe 40 × 40 cm, set 5",Prodavnica,1490,1490,1490,1490,2026-10-29
+SL-P-022,"Aplikatori za poliranje i keramiku, set 4",Prodavnica,990,990,990,990,2026-10-29
+SL-P-023,Boca sa raspršivačem 750 ml,Prodavnica,490,490,490,490,2026-10-29
+SL-P-024,Set za negu keramike,Prodavnica,5490,5490,5490,5490,2026-10-29
+SL-P-025,Početni set za pranje,Prodavnica,5290,5290,5290,5290,2026-10-29

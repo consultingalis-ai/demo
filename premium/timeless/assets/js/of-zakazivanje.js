@@ -127,17 +127,45 @@
   };
 
   /* ---------- detailing: ostavljanje vozila ---------- */
-  Z.kapacitetDana = function (iso, sati) {
+  /* raspored rada jednog vozila po danima (jedno radno mesto): [{ datum, sati }] od ostavljanja dok ne bude gotovo */
+  Z.raspodela = function (iso, odMin, sati) {
+    var dan = iso, ost = (sati || 3) * 60, vreme = odMin || 0, rez = [], sigurnost = 0;
+    while (ost > 0 && sigurnost++ < 30) {
+      var iv = OF.intervali(dan), uDanu = 0;
+      for (var i = 0; i < iv.length && ost > 0; i++) {
+        var od = Math.max(iv[i][0], vreme), dO = iv[i][1];
+        if (dO <= od) continue;
+        var moze = Math.min(dO - od, ost); ost -= moze; uDanu += moze; vreme = od + moze;
+      }
+      if (uDanu) rez.push({ datum: dan, sati: uDanu / 60 });
+      if (ost > 0) { dan = D.dodaj(dan, 1); vreme = 0; }
+    }
+    return rez;
+  };
+  Z.kapacitetDana = function (iso, sati, ignorisiId) {
     var iv = OF.intervali(iso); if (!iv.length) return { slobodno: 0 };
     var mesta = cfg().radnaMesta || 2, ukupno = 0; iv.forEach(function (a) { ukupno += (a[1] - a[0]) / 60; });
     ukupno *= mesta;
-    var zauzeto = OF.demo ? ukupno * Math.min(0.92, OF.seme(OF.sajt + 'kap' + iso) * 0.9 + (D.razlika(OF.sad().iso, iso) < 5 ? 0.25 : 0)) : (Z.server['kapacitet|' + iso] || 0);
-    if (OF.demo) Z.termini().forEach(function (t) { if (t.status !== 'otkazan' && t.datum === iso) zauzeto += (t.sati || 3); });
+    var zauzeto = OF.demo ? ukupno * Math.min(0.92, OF.seme(OF.sajt + 'kap' + iso) * 0.75 + (D.razlika(OF.sad().iso, iso) < 4 ? 0.2 : 0)) : (Z.server['kapacitet|' + iso] || 0);
+    if (OF.demo) Z.termini().forEach(function (t) {     // vozila koja su tog dana kod nas (i ona ostavljena ranije)
+      if (t.status === 'otkazan' || t.id === ignorisiId || t.datum > iso || !t.datum || !t.vreme) return;
+      Z.raspodela(t.datum, D.uMin(t.vreme), t.sati || 3).forEach(function (r) { if (r.datum === iso) zauzeto += r.sati; });
+    });
     return { slobodno: Math.max(0, ukupno - zauzeto), ukupno: ukupno };
   };
-  Z.slobodnoVozilo = function (iso, sati) {
-    var k = Z.kapacitetDana(iso, sati); if (k.slobodno < (sati || 3)) return [];
-    var prozori = cfg().ostavljanje || [['08:00', '10:00']], korak = cfg().korakMinuta || 30, sada = OF.sad(), rez = [];
+  /* prozori za ostavljanje: jedan spisak za sve dane ili po danu ({ pon: [['08:00','10:00']], sub: [...], ned: [] }) */
+  Z.prozoriOstavljanja = function (iso) {
+    var o = cfg().ostavljanje;
+    if (!o) return [['08:00', '10:00']];
+    return Array.isArray(o) ? o : (o[OF.DANI[D.danUNedelji(iso)]] || []);
+  };
+  Z.slobodnoVozilo = function (iso, sati, ignorisiId) {
+    if (OF.praznik(iso)) return [];
+    var prozori = Z.prozoriOstavljanja(iso), korak = cfg().korakMinuta || 30, sada = OF.sad(), rez = [];
+    if (!prozori.length) return [];
+    // svaki dan na kome je vozilo kod nas mora da ima mesta za deo posla koji pada tog dana
+    var stane = Z.raspodela(iso, D.uMin(prozori[0][0]), sati || 3).every(function (r) { return Z.kapacitetDana(r.datum, r.sati, ignorisiId).slobodno >= r.sati; });
+    if (!stane) return [];
     prozori.forEach(function (p) {
       for (var t = D.uMin(p[0]); t <= D.uMin(p[1]); t += korak) {
         if (iso === sada.iso && t < sada.min + 60) continue;
@@ -148,20 +176,22 @@
     return rez;
   };
   /* kada je vozilo gotovo: dodaje radne sate posle ostavljanja */
-  Z.gotovo = function (iso, t, sati) {
-    var dan = iso, ost = sati * 60 / ((cfg().radnaMesta || 2) > 1 ? 1 : 1), vreme = t, sigurnost = 0;
-    while (ost > 0 && sigurnost++ < 30) {
-      var iv = OF.intervali(dan);
-      for (var i = 0; i < iv.length && ost > 0; i++) {
-        var od = Math.max(iv[i][0], vreme), dO = iv[i][1];
-        if (dO <= od) continue;
-        var moze = Math.min(dO - od, ost); ost -= moze; vreme = od + moze;
-      }
-      if (ost > 0) { dan = D.dodaj(dan, 1); vreme = 0; }
-    }
+  Z.gotovo = function (iso, t, sati, nocenje) {
+    var r = Z.raspodela(iso, t, sati || 3), posl = r[r.length - 1];
+    if (!posl) return { datum: iso, vreme: D.uHHMM(t) };
+    // kraj rada poslednjeg dana + pola sata za kontrolu, zaokruženo na pola sata, najkasnije do zatvaranja
+    var iv = OF.intervali(posl.datum), ost = posl.sati * 60, vreme = posl.datum === iso ? t : 0;
+    for (var i = 0; i < iv.length && ost > 0; i++) { var od = Math.max(iv[i][0], vreme), dO = iv[i][1]; if (dO <= od) continue; var moze = Math.min(dO - od, ost); ost -= moze; vreme = od + moze; }
     var zavrseno = Math.ceil((vreme + 30) / 30) * 30;
-    var ivd = OF.intervali(dan); if (ivd.length && zavrseno > ivd[ivd.length - 1][1]) zavrseno = ivd[ivd.length - 1][1];
-    return { datum: dan, vreme: D.uHHMM(zavrseno) };
+    if (nocenje) {   // keramika i folija: još oko 3 sata sušenja pod IR lampama; ako to prelazi zatvaranje, vozilo je spremno sledećeg radnog dana pre podne
+      zavrseno = Math.ceil((vreme + 180) / 30) * 30;
+      if (iv.length && zavrseno > iv[iv.length - 1][1]) {
+        var d = posl.datum;
+        for (var k = 0; k < 14; k++) { d = D.dodaj(d, 1); var ivn = OF.intervali(d); if (ivn.length) return { datum: d, vreme: D.uHHMM(Math.min(ivn[0][0] + 120, ivn[ivn.length - 1][1])) }; }
+      }
+    }
+    if (iv.length && zavrseno > iv[iv.length - 1][1]) zavrseno = iv[iv.length - 1][1];
+    return { datum: posl.datum, vreme: D.uHHMM(zavrseno) };
   };
 
   /* ---------- dani u kalendaru: koliko je slobodno ---------- */
@@ -221,6 +251,7 @@
     var i = 0;
     if (stanje.usluga && Z.usluga(stanje.usluga) && koraci[0] === 'usluga') i = 1;
     if (tip === 'vozilo' && stanje.paket && koraci[0] === 'paket') i = 1;
+    if (opcije.pocetnoStanje) opcije.pocetnoStanje(stanje);   // npr. sati rada kada se prvi korak preskoči
 
     koren.innerHTML = '';
     koren.classList.add('of-zak');
@@ -393,7 +424,7 @@
             var praznik = OF.praznik(iso);
             var opisDana = D.dug(iso) + (praznik ? ', ' + OF.tx(praznik) : '') + (n ? ', ' + OF.t('zak.ima_termina') : ', ' + OF.t('zak.nema_termina'));
             var b = OF.h('button', { type: 'button', role: 'gridcell', class: 'of-kal-izbor__dan' + (iso === danas ? ' danas' : '') + (!uMesecu ? ' van' : '') + (n && n < 4 ? ' malo' : ''),
-              'aria-label': opisDana, 'aria-pressed': stanje.datum === iso ? 'true' : 'false', disabled: n ? null : true, 'data-iso': iso },
+              'aria-label': opisDana, 'aria-selected': stanje.datum === iso ? 'true' : 'false', disabled: n ? null : true, 'data-iso': iso },
               [OF.h('span', null, String(+iso.slice(8))), n ? OF.h('span', { class: 'of-kal-izbor__tacka', 'aria-hidden': 'true' }) : null]);
             (function (iso) { b.addEventListener('click', function () { stanje.datum = iso; stanje.vreme = null; crtajKal(); crtajVremena(); crtajSazetak(); dalje.disabled = true; var prvoVreme = OF.$('input', vremena); if (prvoVreme && w.matchMedia('(max-width: 760px)').matches) vremena.scrollIntoView({ block: 'start', behavior: OF.manjePokreta() ? 'auto' : 'smooth' }); }); })(iso);
             red.appendChild(b); dan = D.dodaj(dan, 1);
@@ -431,6 +462,7 @@
       s.appendChild(OF.h('div', { class: 'of-zak__kal-raspored' }, [kal, vremena]));
       dalje = dugmad(s, { zakljucano: !stanje.vreme });
       function prikazi() {
+        if (stanje.datum && !Z.dostupnostDana(stanje, stanje.datum)) { stanje.datum = null; stanje.vreme = null; }   // izbor se promenio pa dan više nije slobodan
         if (!stanje.datum) {   // predloži prvi slobodan dan
           for (var k = 0; k < (c.unapredDana || 45); k++) { var iso = D.dodaj(OF.sad().iso, k); if (Z.dostupnostDana(stanje, iso)) { stanje.datum = iso; mesec = iso.slice(0, 7); break; } }
         }
@@ -484,11 +516,14 @@
       if (stanje.napomena) redovi.push([OF.t('f.napomena'), stanje.napomena]);
       s.appendChild(OF.h('dl', { class: 'of-pregled' }, [].concat.apply([], redovi.map(function (r) { return [OF.h('dt', null, r[0]), OF.h('dd', null, r[1])]; }))));
       var depozit = iznosDepozita();
-      if (depozit) s.appendChild(OF.h('p', { class: 'of-zak__depozit' }, OF.t('zak.depozit_placa', { iznos: OF.din(depozit) })));
+      // kredit od kasno otkazanog termina (isti mejl) pokriva depozit; u pravom režimu ga server ponovo proverava i uračunava
+      var kredit = depozit ? Z.kreditZa(stanje.email) : null, zaUplatu = kredit ? Math.max(0, depozit - kredit.iznos) : depozit;
+      if (kredit) s.appendChild(OF.h('p', { class: 'of-zak__depozit' }, OF.t(zaUplatu ? 'zak.kredit_delom' : 'zak.kredit_pokriva', { iznos: OF.din(Math.min(kredit.iznos, depozit)), termin: kredit.termin, ostatak: OF.din(zaUplatu) })));
+      else if (depozit) s.appendChild(OF.h('p', { class: 'of-zak__depozit' }, OF.t('zak.depozit_placa', { iznos: OF.din(depozit) })));
       if (c.pravilaOtkazivanja) s.appendChild(OF.h('p', { class: 'of-zak__napomena' }, OF.tx(c.pravilaOtkazivanja)));
-      dugmad(s, { tekst: depozit ? OF.t('zak.plati_depozit', { iznos: OF.din(depozit) }) : OF.tx(c.tekstPotvrde) || OF.t('zak.potvrdi'), naKlik: function (dugme) {
+      dugmad(s, { tekst: zaUplatu ? OF.t('zak.plati_depozit', { iznos: OF.din(zaUplatu) }) : OF.tx(c.tekstPotvrde) || OF.t('zak.potvrdi'), naKlik: function (dugme) {
         dugme.disabled = true; dugme.setAttribute('aria-busy', 'true');
-        posalji(depozit).then(function () {}, function () { dugme.disabled = false; dugme.removeAttribute('aria-busy'); });
+        posalji(depozit, kredit).then(function () {}, function () { dugme.disabled = false; dugme.removeAttribute('aria-busy'); });
       } });
     };
     function iznosDepozita() {
@@ -496,7 +531,7 @@
       if (tip === 'vozilo' && c.depozitVozilo) return opcije.depozit ? opcije.depozit(stanje) : c.depozitVozilo;
       return 0;
     }
-    function posalji(depozit) {
+    function posalji(depozit, kredit) {
       var t = { tip: tip, ime: stanje.ime, telefon: stanje.telefon, email: stanje.email, napomena: stanje.napomena, datum: stanje.datum, vreme: stanje.vreme };
       (c.dodatnaPolja || []).forEach(function (p) { t[p.ime] = stanje[p.ime]; });
       if (tip === 'termin') {
@@ -509,10 +544,18 @@
         if (u.video) t.meet = OF.demo ? 'https://meet.google.com/' + ['abc', 'kmd', 'pvx', 'rta'][Math.floor(OF.seme(t.vreme + t.datum) * 4)] + '-' + OF.id().slice(0, 4).toLowerCase() + '-' + OF.id().slice(0, 3).toLowerCase() : null;
       }
       if (tip === 'sto') { t.osobe = stanje.osoba; t.prostor = stanje.prostor; t.sto = stanje.sto; t.trajanje = stanje.osoba >= 6 ? (c.trajanjeGrupe || 150) : (c.trajanje || 120); }
-      if (tip === 'vozilo') { if (opcije.uTermin) opcije.uTermin(t, stanje); t.trajanje = 30; t.gotovo = Z.gotovo(stanje.datum, D.uMin(stanje.vreme), t.sati || 3); }
-      var korak = depozit ? OF.placanje.pokreni({ iznos: depozit, opis: OF.t('zak.depozit_opis', { firma: OF.d.firma.ime }), tip: 'depozit', kupac: { ime: t.ime, email: t.email, telefon: t.telefon } }) : Promise.resolve(null);
+      if (tip === 'vozilo') { if (opcije.uTermin) opcije.uTermin(t, stanje); t.trajanje = 30; t.gotovo = Z.gotovo(stanje.datum, D.uMin(stanje.vreme), t.sati || 3, t.nocenje); }
+      if (depozit && !OF.demo) return Z.depozitNaServeru(t, depozit).then(function (o) {   // ovde stiže samo kad je kredit pokrio ceo depozit
+        Object.assign(t, o.termin); Z.sacuvaj(t); potvrda(t);
+      }, function (greska) {
+        if (greska && greska.zauzeto) { Z.osveziZauzeto(); stanje.vreme = null; setTimeout(function () { idi(koraci.indexOf('termin')); }, 50); }
+        if (greska && greska.poruka) OF.obavesti(greska.poruka, 'greska'); throw greska;
+      });
+      var kr = kredit ? Math.min(kredit.iznos, depozit) : 0, zaUplatu = depozit - kr;
+      var korak = zaUplatu ? OF.placanje.pokreni({ iznos: zaUplatu, opis: OF.t('zak.depozit_opis', { firma: OF.d.firma.ime }), tip: 'depozit', kupac: { ime: t.ime, email: t.email, telefon: t.telefon } }) : Promise.resolve(null);
       return korak.then(function (pl) {
         if (pl) { t.depozit = depozit; t.placanje = pl; }
+        if (kr) { t.depozit = depozit; t.kredit = { termin: kredit.termin, iznos: kr }; OF.store.izmeni('termini', kredit.termin, function (x) { x.kreditIskoriscen = true; return x; }); }
         Z.pripremi(t);
         return OF.int.dogadjaj('termin.novi', { termin: t, link: Z.linkMojTermin(t) }).then(function (r) {
           if (!OF.demo && (!r || !r.ok)) {          // npr. termin je upravo zauzet: osveži kalendar
@@ -540,13 +583,13 @@
       var redovi = [[OF.t('zak.broj'), t.id]].concat(tip === 'termin' ? [[OF.t('zak.usluga'), OF.tx(Z.usluga(t.usluga).naziv)], [OF.t('zak.osoba'), Z.osoba(t.osoba).ime]] : tip === 'sto' ? [[OF.t('zak.osoba_broj'), String(t.osobe)], [OF.t('zak.prostor'), nazivProstora(t.prostor)]] : (opcije.redoviPotvrde ? opcije.redoviPotvrde(t) : []))
         .concat([[OF.t('zak.datum'), D.dug(t.datum)], [tip === 'vozilo' ? OF.t('zak.ostavljanje') : OF.t('zak.vreme'), D.vreme(t.vreme)]]);
       if (t.gotovo) redovi.push([OF.t('zak.gotovo'), D.dug(t.gotovo.datum) + ', ' + D.vreme(t.gotovo.vreme)]);
-      if (t.depozit) redovi.push([OF.t('zak.placen_depozit'), OF.din(t.depozit)]);
+      if (t.depozit) redovi.push([OF.t('zak.placen_depozit'), Z.depozitTekst(t)]);
       if (t.meet) redovi.push(['Google Meet', t.meet]);
       s.appendChild(OF.h('dl', { class: 'of-pregled' }, [].concat.apply([], redovi.map(function (r) { return [OF.h('dt', null, r[0]), OF.h('dd', null, r[1])]; }))));
       s.appendChild(OF.h('p', null, OF.t('zak.stize_mejl', { email: t.email })));
       var akcije = OF.h('div', { class: 'of-zak__dugmad of-zak__dugmad--potvrda' }, [
         OF.h('button', { type: 'button', class: 'of-dugme of-dugme--glavno', onclick: function () { Z.preuzmiIcs(t); } }, OF.t('zak.dodaj_kalendar')),
-        OF.h('a', { class: 'of-dugme of-dugme--sporedno', href: OF.int.googleKalendarLink(dog), target: '_blank', rel: 'noopener' }, 'Google Kalendar'),
+        OF.h('a', { class: 'of-dugme of-dugme--sporedno', href: OF.int.googleKalendarLink(dog), target: '_blank', rel: 'noopener' }, OF.t('int.kalendar')),
         OF.h('a', { class: 'of-dugme of-dugme--tekst', href: Z.linkMojTermin(t) }, OF.t('zak.pomeri_otkazi'))
       ]);
       s.appendChild(akcije);
@@ -558,6 +601,41 @@
     }
     idi(i);
     return { stanje: stanje, idi: idi };
+  };
+
+  /* PRAVI režim, termin sa depozitom: server proverava termin, sam računa cenu i depozit, čuva termin kao
+     „čeka depozit“ (mesto je zadržano 30 minuta) i vraća adresu stranice procesora plaćanja. Posle plaćanja
+     procesor javlja serveru (webhook), termin postaje potvrđen, a kupac se vraća na stranicu „povratak“. */
+  Z.depozitNaServeru = function (t, depozit) {
+    OF.store.set('placanje-u-toku', { tip: 'depozit', termin: { tip: t.tip, datum: t.datum, vreme: t.vreme }, vreme: Date.now() });
+    return fetch(OF.int.api('/termin/depozit'), {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'same-origin',
+      body: JSON.stringify({ termin: t, ocekivaniDepozit: depozit, jezik: OF.jezik, povratak: OF.int.apsolutno(OF.link('placanje-povratak')) })
+    }).then(function (r) { return r.json().then(function (o) { return { ok: r.ok, o: o }; }); }).then(function (x) {
+      if (x.ok && x.o.termin && x.o.termin.token && !(x.o.url || x.o.forma)) { OF.store.remove('placanje-u-toku'); return x.o; }   // kredit je pokrio depozit
+      if (!x.ok || !(x.o.url || x.o.forma)) throw { poruka: x.o && x.o.zauzeto ? OF.t('zak.zauzet') : (x.o && x.o.poruka) || OF.t('zak.server_greska'), zauzeto: !!(x.o && x.o.zauzeto) };
+      OF.store.set('placanje-u-toku', { tip: 'depozit', id: 'DEP-' + x.o.termin.id, email: t.email, vreme: Date.now() });
+      OF.placanje.idiNaBanku(x.o);
+      return new Promise(function () {});
+    }, function (e) { throw e && e.poruka ? e : { poruka: OF.t('pl.greska_veza') }; });
+  };
+
+  /* kredit od kasno otkazanog termina: isti mejl, rok važi, nije iskorišćen (lokalno: demo i termini iz naloga) */
+  Z.kreditZa = function (email) {
+    email = String(email || '').trim().toLowerCase(); if (!email) return null;
+    var danas = OF.sad().iso;
+    var k = (OF.store.get('termini', []) || []).filter(function (x) { return x.status === 'otkazan' && x.depozitIshod === 'kredit' && x.depozit && !x.kreditIskoriscen && (!x.kreditDo || x.kreditDo >= danas) && String(x.email || '').toLowerCase() === email; })[0];
+    return k ? { termin: k.id, iznos: k.depozit, do: k.kreditDo } : null;
+  };
+  Z.depozitTekst = function (t) { return OF.din(t.depozit) + (t.kredit ? ' (' + OF.t('zak.iz_kredita', { iznos: OF.din(t.kredit.iznos), termin: t.kredit.termin }) + ')' : ''); };
+
+  /* depozit pri otkazivanju: vraća se ako je do ostavljanja ostalo bar „vracanjeSati“, inače ostaje kao kredit */
+  Z.ishodDepozita = function (t) {
+    var dp = OF.d.depozit || {}, sati = dp.vracanjeSati || cfg().povracajSati || 0;
+    if (!t.depozit) return null;
+    var doTermina = (D.uUTC(t.datum, t.vreme) - new Date()) / 3600000;
+    if (!sati || doTermina >= sati) return { vrsta: 'povracaj', tekst: OF.tx(cfg().povracajDepozita) };
+    return { vrsta: 'kredit', dana: dp.kreditDana || 90, tekst: OF.tx(cfg().kreditDepozita) || OF.tx(cfg().povracajDepozita) };
   };
 
   /* =====================================================================
@@ -590,9 +668,12 @@
     var kutija = OF.h('div', { class: 'of-moj' }, [OF.h('p', { class: 'of-moj__oznaka' }, OF.t('moj.vas_termin')), OF.h('h2', null, t.ime), OF.h('dl', { class: 'of-pregled' }, detalji)]);
     koren.appendChild(kutija);
     if (otkazan || prosao) { kutija.appendChild(OF.h('a', { class: 'of-dugme of-dugme--glavno', href: OF.link('zakazivanje') }, OF.t('moj.novi'))); return; }
+    var vecPomeren = c.pomeranjeJednom && t.pomeren;
     if (kasno) kutija.appendChild(OF.h('p', { class: 'of-zak__napomena' }, OF.t('moj.kasno', { sati: c.otkazivanjeSati || 24 })));
-    var akcije = OF.h('div', { class: 'of-zak__dugmad' });
-    if (!kasno && tip !== 'vozilo') akcije.appendChild(OF.h('button', { type: 'button', class: 'of-dugme of-dugme--glavno', onclick: pomeri }, OF.t('moj.pomeri')));
+    else if (vecPomeren) kutija.appendChild(OF.h('p', { class: 'of-zak__napomena' }, OF.t('moj.vec_pomeren')));
+    if (t.depozit) kutija.appendChild(OF.h('p', { class: 'of-zak__napomena' }, OF.t('moj.depozit_placen', { iznos: OF.din(t.depozit) }) + ' ' + ((Z.ishodDepozita(t) || {}).tekst || '')));
+    var akcije = OF.h('div', { class: 'of-zak__dugmad of-zak__dugmad--potvrda' });
+    if (!kasno && !vecPomeren) akcije.appendChild(OF.h('button', { type: 'button', class: 'of-dugme of-dugme--glavno', onclick: pomeri }, OF.t('moj.pomeri')));
     akcije.appendChild(OF.h('button', { type: 'button', class: 'of-dugme of-dugme--sporedno', onclick: otkazi }, OF.t('moj.otkazi')));
     akcije.appendChild(OF.h('button', { type: 'button', class: 'of-dugme of-dugme--tekst', onclick: function () { Z.preuzmiIcs(t); } }, OF.t('zak.dodaj_kalendar')));
     kutija.appendChild(akcije);
@@ -602,14 +683,17 @@
     function otkazi() {
       var dl = OF.dijalog({ naslov: OF.t('moj.otkazi_naslov'), id: 'otk', sadrzaj: OF.h('div', null, [
         OF.h('p', null, OF.t('moj.otkazi_pitanje', { kad: D.dug(t.datum) + ', ' + D.vreme(t.vreme) })),
-        t.depozit ? OF.h('p', { class: 'of-zak__napomena' }, OF.tx(c.povracajDepozita) || '') : null,
+        t.depozit ? OF.h('p', { class: 'of-zak__napomena' }, (Z.ishodDepozita(t) || {}).tekst || '') : null,
         OF.h('div', { class: 'of-zak__dugmad' }, [
           OF.h('button', { type: 'button', class: 'of-dugme of-dugme--sporedno', onclick: function () { dl.zatvori(); } }, OF.t('moj.ne_hvala')),
           OF.h('button', { type: 'button', class: 'of-dugme of-dugme--glavno', onclick: function () {
             var novi = Object.assign({}, t, { status: 'otkazan', otkazan: new Date().toISOString() });
+            var ishod = Z.ishodDepozita(t);
+            if (ishod) { novi.depozitIshod = ishod.vrsta; if (ishod.vrsta === 'kredit') novi.kreditDo = D.dodaj(OF.sad().iso, ishod.dana); }
             OF.int.dogadjaj('termin.otkazan', { termin: novi }).then(function (r) {
               if (!OF.demo && (!r || !r.ok)) { OF.obavesti((r && r.poruka) || OF.t('zak.server_greska'), 'greska'); return; }
-              OF.store.izmeni('termini', t.id, function (x) { x.status = 'otkazan'; x.otkazan = novi.otkazan; return x; });
+              OF.store.izmeni('termini', t.id, function (x) { x.status = 'otkazan'; x.otkazan = novi.otkazan; if (novi.depozitIshod) { x.depozitIshod = novi.depozitIshod; x.kreditDo = novi.kreditDo; } return x; });
+              if (novi.depozitIshod === 'kredit') OF.emit('zak.kredit', { iznos: t.depozit, do: novi.kreditDo, termin: t.id });
               dl.zatvori(); Z.mojTermin(koren, true); OF.obavesti(OF.t('moj.otkazano'));
             });
           } }, OF.t('moj.da_otkazi'))
@@ -626,7 +710,7 @@
       var dani = [], danas = OF.sad().iso;
       for (var k = 0; k < (c.unapredDana || 45) && dani.length < 14; k++) {
         var iso = D.dodaj(danas, k);
-        var lista = tip === 'sto' ? Z.slobodnoSto(iso, t.osobe, t.prostor, t.id).map(function (x) { return x.t; }) : Z.slobodno(t.usluga, t.osoba, iso, t.id);
+        var lista = tip === 'sto' ? Z.slobodnoSto(iso, t.osobe, t.prostor, t.id).map(function (x) { return x.t; }) : tip === 'vozilo' ? Z.slobodnoVozilo(iso, t.sati, t.id).map(function (x) { return x.t; }) : Z.slobodno(t.usluga, t.osoba, iso, t.id);
         if (lista.length) dani.push({ iso: iso, lista: lista });
       }
       var izabran = null, vreme = null;
@@ -639,7 +723,8 @@
         sacuvaj.disabled = true;
         OF.int.dogadjaj('termin.pomeren', { termin: novi, stari: stari, link: Z.linkMojTermin(t) }).then(function (r) {
           if (!OF.demo && (!r || !r.ok)) { sacuvaj.disabled = false; Z.osveziZauzeto(); OF.obavesti((r && r.poruka) || OF.t('zak.server_greska'), 'greska'); return; }
-          OF.store.izmeni('termini', t.id, function (x) { x.datum = novi.datum; x.vreme = novi.vreme; x.pomeren = novi.pomeren; if (novi.sto) x.sto = novi.sto; return x; });
+          if (tip === 'vozilo') novi.gotovo = Z.gotovo(novi.datum, D.uMin(novi.vreme), t.sati || 3, t.nocenje);
+          OF.store.izmeni('termini', t.id, function (x) { x.datum = novi.datum; x.vreme = novi.vreme; x.pomeren = novi.pomeren; if (novi.sto) x.sto = novi.sto; if (novi.gotovo) x.gotovo = novi.gotovo; return x; });
           OF.obavesti(OF.t('moj.pomereno')); Z.mojTermin(koren, true);
         });
       } }, OF.t('moj.sacuvaj'));

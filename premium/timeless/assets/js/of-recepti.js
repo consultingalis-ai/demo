@@ -28,7 +28,7 @@
     if (t.tip === 'vozilo') { redovi.push([OF.t('zak.paket'), t.paketNaziv || ''], [OF.t('zak.vozilo'), (t.vozilo || '') + (t.registracija ? ' · ' + t.registracija : '')]); }
     redovi.push([t.tip === 'vozilo' ? OF.t('zak.ostavljanje') : OF.t('zak.kada'), kada]);
     if (t.gotovo) redovi.push([OF.t('zak.gotovo'), D.dug(t.gotovo.datum) + ', ' + D.vreme(t.gotovo.vreme)]);
-    if (t.depozit) redovi.push([OF.t('zak.placen_depozit'), OF.din(t.depozit)]);
+    if (t.depozit) redovi.push([OF.t('zak.placen_depozit'), OF.zak.depozitTekst(t)]);
     if (t.meet) redovi.push(['Google Meet', t.meet]);
     if (!t.meet) redovi.push([OF.t('zak.adresa'), OF.int.adresa()]);
     var sms = [{ tekst: OF.t('r.sms_podsetnik', { firma: f.ime, kada: D.format(t.datum, { weekday: 'long' }) + ' ' + D.vreme(t.vreme), tel: telKupcu() }), kada: OF.t('r.dan_pre', { datum: D.kratko(D.dodaj(t.datum, -1)) }) }];
@@ -37,7 +37,7 @@
       opis: [t.telefon, t.email, t.napomena ? OF.t('f.napomena') + ': ' + t.napomena : '', t.tip === 'termin' && t.prvaPoseta ? OF.t('r.prva_poseta') : ''].filter(Boolean).join('\n'), meet: t.meet };
     return {
       sazetak: OF.t('r.sazetak_termin', { ime: t.ime, kada: kada }),
-      viber: { tekst: OF.t('r.viber_termin_naslov') + '\n' + opisTermina(t) + '\n' + kada + '\n' + t.ime + ' · ' + t.telefon + (t.napomena ? '\n„' + t.napomena + '“' : '') + (t.depozit ? '\n' + OF.t('zak.placen_depozit') + ': ' + OF.din(t.depozit) : ''), dugmad: [OF.t('r.pozovi'), OF.t('r.otvori_panel')] },
+      viber: { tekst: OF.t('r.viber_termin_naslov') + '\n' + opisTermina(t) + '\n' + kada + '\n' + t.ime + ' · ' + t.telefon + (t.napomena ? '\n„' + t.napomena + '“' : '') + (t.depozit ? '\n' + OF.t('zak.placen_depozit') + ': ' + OF.zak.depozitTekst(t) : ''), dugmad: [OF.t('r.pozovi'), OF.t('r.otvori_panel')] },
       kalendar: kal,
       mejlKupcu: { za: t.email, naslov: OF.t('r.mejl_termin_naslov', { firma: f.ime, kada: D.kratko(t.datum) + ' ' + D.vreme(t.vreme) }), prilozi: [OF.sajt + '-' + t.id + '.ics'],
         html: OF.int.mejl({ naslov: OF.tx((OF.d.zakazivanje || {}).mejlNaslov) || OF.t('r.mejl_termin_h1', { ime: t.ime.split(' ')[0] }), uvod: OF.tx((OF.d.zakazivanje || {}).mejlUvod) || OF.t('r.mejl_termin_uvod'), redovi: redovi, html: p.dodatakMejla || '',
@@ -63,9 +63,9 @@
     var t = p.termin, f = F(), kada = OF.int.vreme(t);
     return {
       sazetak: OF.t('r.sazetak_otkazan', { ime: t.ime, kada: kada }),
-      viber: { tekst: OF.t('r.viber_otkazan') + '\n' + opisTermina(t) + '\n' + kada + '\n' + t.ime + ' · ' + t.telefon + (t.depozit ? '\n' + OF.t('r.depozit_vratiti', { iznos: OF.din(t.depozit) }) : '') },
+      viber: { tekst: OF.t('r.viber_otkazan') + '\n' + opisTermina(t) + '\n' + kada + '\n' + t.ime + ' · ' + t.telefon + (t.depozit ? '\n' + (t.depozitIshod === 'kredit' ? OF.t('r.depozit_kredit', { iznos: OF.din(t.depozit), do: D.dug(t.kreditDo) }) : OF.t('r.depozit_vratiti', { iznos: OF.din(t.depozit) })) : '') },
       kalendar: { datum: t.datum, od: t.vreme, do: D.uHHMM(D.uMin(t.vreme) + (t.trajanje || 60)), naslov: OF.t('r.kal_otkazano') + ' · ' + opisTermina(t), kalendar: t.tip === 'termin' ? osobaIme(t) : '', opis: OF.t('r.kal_otkazano_opis') },
-      mejlKupcu: { za: t.email, naslov: OF.t('r.mejl_otkazan_naslov', { firma: f.ime }), html: OF.int.mejl({ naslov: OF.t('r.mejl_otkazan_h1'), uvod: OF.t('r.mejl_otkazan_uvod', { kada: kada }), dugmad: [{ href: OF.int.apsolutno(OF.link('zakazivanje')), tekst: OF.t('moj.novi') }] }) },
+      mejlKupcu: { za: t.email, naslov: OF.t('r.mejl_otkazan_naslov', { firma: f.ime }), html: OF.int.mejl({ naslov: OF.t('r.mejl_otkazan_h1'), uvod: OF.t('r.mejl_otkazan_uvod', { kada: kada }) + (t.depozit && t.depozitIshod ? ' ' + OF.t(t.depozitIshod === 'kredit' ? 'r.mejl_depozit_kredit' : 'r.mejl_depozit_povracaj', { iznos: OF.din(t.depozit), do: t.kreditDo ? D.dug(t.kreditDo) : '' }) : ''), dugmad: [{ href: OF.int.apsolutno(OF.link('zakazivanje')), tekst: OF.t('moj.novi') }] }) },
       tabela: { list: OF.t('r.list_termini'), kolone: kolone({ sr: ['Broj', 'Status'], en: ['ID', 'Status'] }), red: [t.id, OF.t('moj.otkazan')] }
     };
   };

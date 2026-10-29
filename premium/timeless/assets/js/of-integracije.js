@@ -69,10 +69,10 @@
     var r = fn(p) || {};
     // poruke vlasniku (Viber, mejl, kalendar, tabela) uvek na jeziku vlasnika, a mušteriji na jeziku stranice
     var jv = OF.c.jezikVlasnika || 'sr';
-    // na serveru su svi jezici učitani; u demo prikazu na stranici drugog jezika prevod vlasnikovog jezika
-    // postoji samo ako je učitan ili ako sajt ima svoje tekstove (PODACI.tekstovi), a ključ koji fali
-    // uzima se sa jezika stranice (OF.t), da vlasnik nikad ne vidi sirov ključ
-    if (OF.jezik !== jv && ((OF.I18N && OF.I18N[jv]) || OF.d.tekstovi)) {
+    // na serveru su svi jezici učitani; u demo prikazu na stranici drugog jezika vlasnikov jezik postoji samo
+    // ako je učitan. Ako nije, i poruke vlasniku ostaju na jeziku stranice (ceo tekst na jednom jeziku,
+    // a ne naslovi na jednom, a datumi i iznosi na drugom)
+    if (OF.jezik !== jv && OF.I18N && OF.I18N[jv]) {
       var stari = OF.jezik; OF.jezik = jv; OF.jezikStrane = stari;
       try { var v = fn(p) || {}; ['sazetak', 'viber', 'mejlVlasniku', 'kalendar', 'tabela', 'ostalo'].forEach(function (k) { if (v[k] !== undefined) r[k] = v[k]; }); }
       catch (e) { console.error(e); } finally { OF.jezik = stari; OF.jezikStrane = null; }

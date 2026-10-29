@@ -116,7 +116,7 @@
     'pp.broj_posiljke': 'Broj pošiljke', 'pp.oznaci_poslato': 'Označi kao poslato', 'pp.poslato_ok': 'Označeno kao poslato; kupac je obavešten.', 'pp.kurir': 'Kurirska služba',
     'pp.posiljalac': 'Pošiljalac', 'pp.primalac': 'Primalac', 'pp.otkupnina': 'Otkupnina (pouzeće)', 'pp.placeno': 'Plaćeno unapred, bez otkupnine', 'pp.sadrzaj': 'Sadržaj', 'pp.stampaj': 'Štampaj',
     'pp.adresnica_demo': 'Demo adresnica. Na pravom sajtu adresnicu može da napravi i sistem kurira (API).',
-    'pp.demo': 'Demo: porudžbine sa oznakom „primer“ služe za probu. Promena statusa šalje kupcu mejl (vidi se u prikazu „Šta je stiglo“).',
+    'pp.demo': 'Demo: porudžbine sa oznakom „primer“ služe za probu. Promena statusa šalje kupcu mejl (vidi se u prikazu „Šta je upravo poslato“).',
     'pp.zalihe_demo': 'Demo: izmene zaliha važe u ovom pregledaču. Prodaja na sajtu ih sama umanjuje.', 'pp.zalihe_pravi': 'Zalihe se smanjuju same pri porudžbini; ovde ih dopunjujete posle izrade.',
     'pp.artikala': 'Proizvoda', 'pp.varijanti': '{n} varijanti', 'pp.malo': 'Malo na stanju', 'pp.malo_opis': 'stiže Viber poruka', 'pp.nema_zaliha': 'Nema na stanju', 'pp.nema_opis': 'kupci mogu da traže obaveštenje',
     'pp.samo_malo': 'Samo malo ili nema', 'pp.proizvod': 'Proizvod', 'pp.sifra': 'Šifra', 'pp.varijanta': 'Varijanta', 'pp.na_stanju': 'Na stanju', 'pp.cekaju': 'Čekaju',

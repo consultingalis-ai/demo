@@ -100,8 +100,12 @@
     if (nd.besplatnoOd && osnovica >= nd.besplatnoOd) c = 0;
     return c;
   };
+  /* popust za članove na robu (npr. članstvo u detailing studiju); sajt daje procenat preko OF.korpaClanPopust,
+     server ga postavlja iz baze (K.clanPopustServer). Popusti se ne sabiraju: važi veći od kupona i popusta za članove. */
+  K.clanPopustServer = null;
+  K.clanPopust = function () { return K.clanPopustServer != null ? K.clanPopustServer : OF.korpaClanPopust ? (OF.korpaClanPopust() || 0) : 0; };
   K.obracun = function (nacinDostave) {
-    var a = K.stavke(), medjuzbir = K.medjuzbir(a), popust = 0, kod = K.kupon(), k = null;
+    var a = K.stavke(), medjuzbir = K.medjuzbir(a), popust = 0, kod = K.kupon(), k = null, clan = 0;
     var proizvodi = a.filter(function (x) { return x.tip === 'proizvod'; }), imaRobu = proizvodi.length > 0;
     if (kod) k = (P().kuponi || []).filter(function (x) { return x.kod === kod; })[0] || null;
     var nacini = P().dostava || [];
@@ -113,10 +117,15 @@
       else if (k.tip === 'procenat') popust = Math.round(osn * k.vrednost / 100);
       else if (k.tip === 'iznos') popust = Math.min(osn, k.vrednost);
     }
+    var pc = K.clanPopust(), popustClana = pc && robaMedjuzbir ? Math.round(robaMedjuzbir * pc / 100) : 0;
     var prag = (nacini.filter(function (x) { return x.besplatnoOd; })[0] || {}).besplatnoOd || null;
     var osnovicaDostave = robaMedjuzbir - (k && (!k.za || k.za.indexOf('proizvod') >= 0) ? popust : 0);
     var dostava = imaRobu ? K.dostavaPorudzbine(nd, osnovicaDostave) : 0;
     if (k && k.tip === 'dostava') popust = dostava;
+    if (popustClana > popust) {                         // popust za članove je veći: kupon se ne primenjuje
+      popust = popustClana; k = null; clan = pc;
+      dostava = imaRobu ? K.dostavaPorudzbine(nd, robaMedjuzbir - popustClana) : 0;
+    }
     var poklon = K.poklon(), pp = P().poklonPakovanje;
     var pakovanje = imaRobu && poklon.pakovanje && pp ? (pp.cena || 0) : 0;
     var pre = Math.max(0, medjuzbir - popust + dostava + pakovanje);
@@ -124,9 +133,10 @@
     var vauceriUKorpi = K.medjuzbir(a.filter(function (x) { return x.tip === 'vaucer'; }));
     var v = K.vaucer(), vaucer = v ? Math.min(v.iznos, Math.max(0, pre - vauceriUKorpi)) : 0;
     var ukupno = pre - vaucer;
-    return { stavke: a, medjuzbir: medjuzbir, popust: popust, kupon: k, dostava: dostava, nacin: nd, pakovanje: pakovanje, poklon: poklon,
+    if (clan) osnovicaDostave = robaMedjuzbir - popustClana;
+    return { stavke: a, medjuzbir: medjuzbir, popust: popust, kupon: k, clanPopust: clan, dostava: dostava, nacin: nd, pakovanje: pakovanje, poklon: poklon,
       vaucer: v ? { kod: v.kod, iznos: v.iznos, iskorisceno: vaucer } : null, ukupno: ukupno, imaRobu: imaRobu,
-      pragDostave: prag, doBesplatne: prag && imaRobu ? Math.max(0, prag - osnovicaDostave) : null };
+      pragDostave: prag, doBesplatne: prag && imaRobu && !(k && k.tip === 'dostava') ? Math.max(0, prag - osnovicaDostave) : prag && imaRobu ? 0 : null };   // kupon za besplatnu dostavu: prag je dostignut
   };
 
   /* ---------- bedž sa brojem stavki ---------- */
@@ -166,7 +176,7 @@
     opcije = opcije || {};
     var r = [];
     redObracuna(r, OF.t('k.medjuzbir'), OF.din(o.medjuzbir));
-    if (o.popust) redObracuna(r, OF.t('k.popust') + (o.kupon ? ' (' + o.kupon.kod + ')' : ''), '− ' + OF.din(o.popust));
+    if (o.popust) redObracuna(r, o.clanPopust ? OF.t('k.popust_clan', { n: o.clanPopust }) : OF.t('k.popust') + (o.kupon ? ' (' + o.kupon.kod + ')' : ''), '− ' + OF.din(o.popust));
     if (o.pakovanje) redObracuna(r, OF.t('k.pakovanje'), OF.din(o.pakovanje));
     if (o.imaRobu) redObracuna(r, OF.t('k.dostava'), opcije.dostavaKasnije && !o.nacin ? OF.t('k.dostava_u_kasi') : o.dostava ? OF.din(o.dostava) : OF.t('besplatno'));
     if (o.vaucer && o.vaucer.iskorisceno) redObracuna(r, OF.t('k.vaucer_iskorisceno', { kod: o.vaucer.kod }), '− ' + OF.din(o.vaucer.iskorisceno));

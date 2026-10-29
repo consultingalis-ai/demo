@@ -1,0 +1,2463 @@
+{
+ "pranje-01": {
+  "alt": {
+   "sr": "Crni automobil prekriven aktivnom penom u tamnom boksu za pranje",
+   "en": "Black car covered in snow foam in a dark wash bay"
+  },
+  "boja": "#5b6065",
+  "izvor": "Tima Miroshnichenko · Pexels (https://www.pexels.com/photo/a-bentley-continental-gt-at-a-car-wash-6872161/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/pranje-01-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/pranje-01-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/pranje-01-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/pranje-01-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "uspravna": {
+    "razmera": "4:5",
+    "w": 1200,
+    "h": 1500,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 500,
+      "fajl": "assets/img/pranje-01-uspravna-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 1000,
+      "fajl": "assets/img/pranje-01-uspravna-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1500,
+      "fajl": "assets/img/pranje-01-uspravna-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1500"
+   }
+  }
+ },
+ "pranje-02": {
+  "alt": {
+   "sr": "Ispiranje pene sa crnog automobila mlazom vode u boksu za pranje",
+   "en": "Rinsing foam off a black car with a pressure washer in the wash bay"
+  },
+  "boja": "#4d5056",
+  "izvor": "Tima Miroshnichenko · Pexels (https://www.pexels.com/photo/a-woman-in-black-sweater-washing-the-black-car-using-pressure-washer-hose-6872599/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/pranje-02-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/pranje-02-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/pranje-02-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/pranje-02-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   }
+  }
+ },
+ "pranje-03": {
+  "alt": {
+   "sr": "Ruka drži sunđer pun pene ispred vrata automobila prekrivenih penom",
+   "en": "A hand holding a sudsy sponge in front of a foam-covered car door"
+  },
+  "boja": "#55544f",
+  "izvor": "Tima Miroshnichenko · Pexels (https://www.pexels.com/photo/a-person-using-a-sponge-in-washing-car-6872575/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/pranje-03-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/pranje-03-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/pranje-03-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/pranje-03-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   }
+  }
+ },
+ "pranje-04": {
+  "alt": {
+   "sr": "Sušenje crnog laka mekom mikrofiber krpom ispod bočnog stakla",
+   "en": "Drying black paint below the side window with a soft microfibre towel"
+  },
+  "boja": "#3b3d41",
+  "izvor": "Tima Miroshnichenko · Pexels (https://www.pexels.com/photo/person-wiping-the-black-car-using-gray-fabric-6872570/)",
+  "varijante": {
+   "uspravna": {
+    "razmera": "4:5",
+    "w": 1200,
+    "h": 1500,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 500,
+      "fajl": "assets/img/pranje-04-uspravna-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 1000,
+      "fajl": "assets/img/pranje-04-uspravna-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1500,
+      "fajl": "assets/img/pranje-04-uspravna-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1500"
+   }
+  }
+ },
+ "enterijer-01": {
+  "alt": {
+   "sr": "Nastavak ekstraktora izvlači prljavštinu iz platnenog sedišta",
+   "en": "An extractor nozzle pulling dirt out of a fabric seat"
+  },
+  "boja": "#76716e",
+  "izvor": "Khunkorn Laowisit · Pexels (https://www.pexels.com/photo/a-person-deep-cleaning-a-car-seat-5233285/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/enterijer-01-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/enterijer-01-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/enterijer-01-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/enterijer-01-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   }
+  }
+ },
+ "enterijer-02": {
+  "alt": {
+   "sr": "Zadnja klupa od crne kože sa belim šavovima, čista i nahranjena",
+   "en": "Black leather rear bench with white stitching, clean and conditioned"
+  },
+  "boja": "#444a4d",
+  "izvor": "Luke Miller · Pexels (https://www.pexels.com/photo/back-seat-of-a-car-14667496/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/enterijer-02-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/enterijer-02-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/enterijer-02-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/enterijer-02-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1200,
+    "h": 1200,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/enterijer-02-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/enterijer-02-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/enterijer-02-kvadrat-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
+ "enterijer-03": {
+  "alt": {
+   "sr": "Brisanje kožnog volana mekom krpom u tamnoj kabini",
+   "en": "Wiping a leather steering wheel with a soft cloth in a dark cabin"
+  },
+  "boja": "#24272a",
+  "izvor": "Tima Miroshnichenko · Pexels (https://www.pexels.com/photo/person-in-black-long-sleeves-sitting-on-the-driver-s-seat-while-wiping-the-stirring-wheel-6872585/)",
+  "varijante": {
+   "uspravna": {
+    "razmera": "4:5",
+    "w": 1200,
+    "h": 1500,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 500,
+      "fajl": "assets/img/enterijer-03-uspravna-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 1000,
+      "fajl": "assets/img/enterijer-03-uspravna-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1500,
+      "fajl": "assets/img/enterijer-03-uspravna-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1500"
+   }
+  }
+ },
+ "enterijer-04": {
+  "alt": {
+   "sr": "Usisavanje prljavog tepiha poda automobila",
+   "en": "Vacuuming a dirty car floor carpet"
+  },
+  "boja": "#686560",
+  "izvor": "Khunkorn Laowisit · Pexels (https://www.pexels.com/photo/hand-holding-a-car-vacuum-cleaner-5233264/)",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1200,
+    "h": 1200,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/enterijer-04-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/enterijer-04-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/enterijer-04-kvadrat-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
+ "poliranje-01": {
+  "alt": {
+   "sr": "Orbitalna polirka sa žutim sunđerom na crnoj haubi, u laku se odražavaju svetla",
+   "en": "An orbital polisher with a yellow pad on a black bonnet, lights reflecting in the paint"
+  },
+  "boja": "#6c6d70",
+  "izvor": "Khunkorn Laowisit · Pexels (https://www.pexels.com/photo/a-person-polishing-the-black-car-5233259/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/poliranje-01-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/poliranje-01-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/poliranje-01-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/poliranje-01-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1200,
+    "h": 1200,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/poliranje-01-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/poliranje-01-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/poliranje-01-kvadrat-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
+ "poliranje-02": {
+  "alt": {
+   "sr": "Poliranje blatobrana crnog automobila, na laku tragovi paste",
+   "en": "Polishing the wing of a black car, traces of compound on the paint"
+  },
+  "boja": "#5e6064",
+  "izvor": "Gustavo Fring · Pexels (https://www.pexels.com/photo/a-person-buffing-a-car-6870296/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/poliranje-02-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/poliranje-02-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/poliranje-02-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/poliranje-02-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1200,
+    "h": 1200,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/poliranje-02-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/poliranje-02-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/poliranje-02-kvadrat-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
+ "poliranje-04": {
+  "alt": {
+   "sr": "Polirka sa manjim narandžastim sunđerom na crnom laku uz far",
+   "en": "A polisher with a small orange pad on black paint next to the headlight"
+  },
+  "boja": "#737372",
+  "izvor": "Luke Miller · Pexels (https://www.pexels.com/photo/person-cleaning-a-black-car-14231684/)",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1200,
+    "h": 1200,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/poliranje-04-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/poliranje-04-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/poliranje-04-kvadrat-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
+ "keramika-01": {
+  "alt": {
+   "sr": "Brisanje laka mikrofiber krpom pre nanošenja keramike",
+   "en": "Wiping the paint with a microfibre cloth before applying a coating"
+  },
+  "boja": "#6a6261",
+  "izvor": "Dextar Studio ™ · Pexels (https://www.pexels.com/photo/hand-wiping-a-car-with-a-cloth-14615260/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/keramika-01-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/keramika-01-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/keramika-01-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/keramika-01-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1200,
+    "h": 1200,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/keramika-01-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/keramika-01-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/keramika-01-kvadrat-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
+ "keramika-02": {
+  "alt": {
+   "sr": "Okrugle kapi vode na tamnoplavom laku sa keramičkom zaštitom",
+   "en": "Round water beads on dark blue coated paint"
+  },
+  "boja": "#5d6d83",
+  "izvor": "GoGoNano Official · Pexels (https://www.pexels.com/photo/water-droplets-on-a-car-surface-7417885/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/keramika-02-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/keramika-02-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/keramika-02-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/keramika-02-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "uspravna": {
+    "razmera": "4:5",
+    "w": 1200,
+    "h": 1500,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 500,
+      "fajl": "assets/img/keramika-02-uspravna-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 1000,
+      "fajl": "assets/img/keramika-02-uspravna-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1500,
+      "fajl": "assets/img/keramika-02-uspravna-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1500"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1200,
+    "h": 1200,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/keramika-02-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/keramika-02-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/keramika-02-kvadrat-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
+ "keramika-03": {
+  "alt": {
+   "sr": "Krupne kapi vode na crnom i belom lakiranom delu automobila",
+   "en": "Large water beads on black and white painted panels"
+  },
+  "boja": "#7d7f80",
+  "izvor": "Adonyi Gábor · Pexels (https://www.pexels.com/photo/water-drop-metal-and-plastic-car-parts-17216298/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/keramika-03-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/keramika-03-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/keramika-03-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/keramika-03-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   }
+  }
+ },
+ "lak-01": {
+  "alt": {
+   "sr": "Kapi vode na tamnoj haubi, u laku se odražavaju uspravne svetlosne cevi",
+   "en": "Water drops on a dark bonnet, vertical light tubes reflected in the paint"
+  },
+  "boja": "#262f31",
+  "izvor": "Kağan Karatay · Pexels (https://www.pexels.com/photo/close-up-of-sleek-car-hood-with-water-droplets-29909550/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/lak-01-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/lak-01-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/lak-01-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/lak-01-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "uspravna": {
+    "razmera": "4:5",
+    "w": 1200,
+    "h": 1500,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 500,
+      "fajl": "assets/img/lak-01-uspravna-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 1000,
+      "fajl": "assets/img/lak-01-uspravna-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1500,
+      "fajl": "assets/img/lak-01-uspravna-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1500"
+   }
+  }
+ },
+ "lak-02": {
+  "alt": {
+   "sr": "Svetlosivi lak uz bočno staklo sa oštrim odrazima svetla",
+   "en": "Light grey paint beside the side window with sharp light reflections"
+  },
+  "boja": "#7e848c",
+  "izvor": "Tima Miroshnichenko · Pexels (https://www.pexels.com/photo/water-droplets-on-a-white-car-6873177/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/lak-02-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/lak-02-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/lak-02-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/lak-02-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   }
+  }
+ },
+ "lak-03": {
+  "alt": {
+   "sr": "Zadnji deo srebrnog klasičnog automobila sa mekim odrazima u laku",
+   "en": "The rear of a silver classic car with soft reflections in the paint"
+  },
+  "boja": "#646465",
+  "izvor": "the iop · Pexels (https://www.pexels.com/photo/classic-grey-car-rear-with-distinct-tail-lights-31671959/)",
+  "varijante": {
+   "uspravna": {
+    "razmera": "4:5",
+    "w": 1200,
+    "h": 1500,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 500,
+      "fajl": "assets/img/lak-03-uspravna-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 1000,
+      "fajl": "assets/img/lak-03-uspravna-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1500,
+      "fajl": "assets/img/lak-03-uspravna-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1500"
+   }
+  }
+ },
+ "folija-01": {
+  "alt": {
+   "sr": "Utiskivanje providne zaštitne folije rakelom uz ivicu vrata",
+   "en": "Pressing clear protection film along the door edge with a squeegee"
+  },
+  "boja": "#485b66",
+  "izvor": "Tejas JR · Pexels (https://www.pexels.com/photo/applying-paint-protection-film-on-a-car-door-36021355/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/folija-01-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/folija-01-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/folija-01-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/folija-01-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1200,
+    "h": 1200,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/folija-01-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/folija-01-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/folija-01-kvadrat-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
+ "folija-02": {
+  "alt": {
+   "sr": "Zagrevanje i zatezanje folije na haubi toplim vazduhom",
+   "en": "Heating and stretching film over a bonnet with warm air"
+  },
+  "boja": "#838183",
+  "izvor": "Auto Records · Pexels (https://www.pexels.com/photo/a-person-heating-the-wrap-of-a-car-10126666/)",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1200,
+    "h": 1200,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/folija-02-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/folija-02-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/folija-02-kvadrat-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
+ "felne-01": {
+  "alt": {
+   "sr": "Čišćenje felne i gume mekom detailing četkom",
+   "en": "Cleaning a wheel and tyre with a soft detailing brush"
+  },
+  "boja": "#36383b",
+  "izvor": "Tima Miroshnichenko · Pexels (https://www.pexels.com/photo/a-person-cleaning-tire-of-a-car-6872175/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/felne-01-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/felne-01-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/felne-01-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/felne-01-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   },
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1200,
+    "h": 1200,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/felne-01-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/felne-01-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/felne-01-kvadrat-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
+ "felne-02": {
+  "alt": {
+   "sr": "Crna felna prekrivena penom, iza nje kočiona čeljust",
+   "en": "A black wheel covered in foam with the brake caliper behind"
+  },
+  "boja": "#4f504d",
+  "izvor": "Luke Miller · Pexels (https://www.pexels.com/photo/close-up-shot-of-a-car-wheel-during-car-wash-14231678/)",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1200,
+    "h": 1200,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/felne-02-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/felne-02-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/felne-02-kvadrat-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
+ "farovi-01": {
+  "alt": {
+   "sr": "Okrugli farovi crnog automobila, providna stakla posle poliranja",
+   "en": "Round headlights on a black car, clear lenses after polishing"
+  },
+  "boja": "#333538",
+  "izvor": "Tima Miroshnichenko · Pexels (https://www.pexels.com/photo/front-headlight-of-a-black-car-6873190/)",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1200,
+    "h": 1200,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/farovi-01-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/farovi-01-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/farovi-01-kvadrat-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
+ "motor-01": {
+  "alt": {
+   "sr": "Čist motorni prostor posle pranja",
+   "en": "A clean engine bay after washing"
+  },
+  "boja": "#363635",
+  "izvor": "Jacob Moore · Pexels (https://www.pexels.com/photo/photo-of-a-car-engine-bay-and-headlight-12330644/)",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1200,
+    "h": 1200,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/motor-01-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/motor-01-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/motor-01-kvadrat-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1200"
+   }
+  }
+ },
+ "studio-01": {
+  "alt": {
+   "sr": "Crni automobil sa upaljenim farovima u tamnom boksu sa svetlosnim cevima",
+   "en": "A black car with its headlights on in a dark bay under light tubes"
+  },
+  "boja": "#3b3f42",
+  "izvor": "Tima Miroshnichenko · Pexels (https://www.pexels.com/photo/a-black-car-parked-in-the-carwash-garage-6872595/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/studio-01-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/studio-01-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/studio-01-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/studio-01-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   }
+  }
+ },
+ "studio-02": {
+  "alt": {
+   "sr": "Mat crni automobil u studiju pod šestougaonim LED svetlima",
+   "en": "A matte black car in the studio under hexagonal LED lights"
+  },
+  "boja": "#71797e",
+  "izvor": "Jae Park · Pexels (https://www.pexels.com/photo/black-bmw-m-3-coupe-3849554/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/studio-02-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/studio-02-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/studio-02-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/studio-02-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   }
+  }
+ },
+ "tim-01": {
+  "alt": {
+   "sr": "Radnica u crnom kombinezonu ide ka automobilu u boksu za pranje",
+   "en": "A technician in black overalls walking towards a car in the wash bay"
+  },
+  "boja": "#3a3d41",
+  "izvor": "Tima Miroshnichenko · Pexels (https://www.pexels.com/photo/backside-of-a-woman-working-in-a-carwash-6873187/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/tim-01-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/tim-01-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/tim-01-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/tim-01-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   }
+  }
+ },
+ "tim-03": {
+  "alt": {
+   "sr": "Istiskivanje vode ispod zaštitne folije na haubi sportskog automobila",
+   "en": "Squeezing water out from under protection film on a sports car bonnet"
+  },
+  "boja": "#646566",
+  "izvor": "WAVYVISUALS · Pexels (https://www.pexels.com/photo/man-wiping-hood-of-sports-car-20051461/)",
+  "varijante": {
+   "uspravna": {
+    "razmera": "4:5",
+    "w": 1200,
+    "h": 1500,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 500,
+      "fajl": "assets/img/tim-03-uspravna-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 1000,
+      "fajl": "assets/img/tim-03-uspravna-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1500,
+      "fajl": "assets/img/tim-03-uspravna-1200.webp"
+     }
+    ],
+    "preporuka": "1200×1500"
+   }
+  }
+ },
+ "prijem-01": {
+  "alt": {
+   "sr": "Predaja ključa automobila pri prijemu vozila",
+   "en": "Handing over the car key at check-in"
+  },
+  "boja": "#b2b1b5",
+  "izvor": "Negative Space · Pexels (https://www.pexels.com/photo/person-in-grey-shirt-handing-keys-97079/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/prijem-01-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/prijem-01-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/prijem-01-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/prijem-01-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   }
+  }
+ },
+ "rad-01-pre": {
+  "alt": {
+   "sr": "",
+   "en": ""
+  },
+  "boja": "#2b343c",
+  "izvor": "Kağan Karatay · Pexels (https://www.pexels.com/photo/stylish-dark-blue-mini-cooper-countryman-in-showroom-29909542/); „pre“ je računarska simulacija",
+  "varijante": {
+   "siroka": {
+    "razmera": "16:9",
+    "w": 1600,
+    "h": 900,
+    "velicine": [
+     {
+      "w": 640,
+      "h": 360,
+      "fajl": "assets/img/rad-01-pre-siroka-640.webp"
+     },
+     {
+      "w": 960,
+      "h": 540,
+      "fajl": "assets/img/rad-01-pre-siroka-960.webp"
+     },
+     {
+      "w": 1280,
+      "h": 720,
+      "fajl": "assets/img/rad-01-pre-siroka-1280.webp"
+     },
+     {
+      "w": 1600,
+      "h": 900,
+      "fajl": "assets/img/rad-01-pre-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×900"
+   }
+  }
+ },
+ "rad-01-posle": {
+  "alt": {
+   "sr": "",
+   "en": ""
+  },
+  "boja": "#232e36",
+  "izvor": "Kağan Karatay · Pexels (https://www.pexels.com/photo/stylish-dark-blue-mini-cooper-countryman-in-showroom-29909542/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "16:9",
+    "w": 1600,
+    "h": 900,
+    "velicine": [
+     {
+      "w": 640,
+      "h": 360,
+      "fajl": "assets/img/rad-01-posle-siroka-640.webp"
+     },
+     {
+      "w": 960,
+      "h": 540,
+      "fajl": "assets/img/rad-01-posle-siroka-960.webp"
+     },
+     {
+      "w": 1280,
+      "h": 720,
+      "fajl": "assets/img/rad-01-posle-siroka-1280.webp"
+     },
+     {
+      "w": 1600,
+      "h": 900,
+      "fajl": "assets/img/rad-01-posle-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×900"
+   }
+  }
+ },
+ "rad-02-pre": {
+  "alt": {
+   "sr": "",
+   "en": ""
+  },
+  "boja": "#767c83",
+  "izvor": "Tima Miroshnichenko · Pexels (https://www.pexels.com/photo/water-droplets-on-a-white-car-6873177/); „pre“ je računarska simulacija",
+  "varijante": {
+   "siroka": {
+    "razmera": "16:9",
+    "w": 1600,
+    "h": 900,
+    "velicine": [
+     {
+      "w": 640,
+      "h": 360,
+      "fajl": "assets/img/rad-02-pre-siroka-640.webp"
+     },
+     {
+      "w": 960,
+      "h": 540,
+      "fajl": "assets/img/rad-02-pre-siroka-960.webp"
+     },
+     {
+      "w": 1280,
+      "h": 720,
+      "fajl": "assets/img/rad-02-pre-siroka-1280.webp"
+     },
+     {
+      "w": 1600,
+      "h": 900,
+      "fajl": "assets/img/rad-02-pre-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×900"
+   }
+  }
+ },
+ "rad-02-posle": {
+  "alt": {
+   "sr": "",
+   "en": ""
+  },
+  "boja": "#777d85",
+  "izvor": "Tima Miroshnichenko · Pexels (https://www.pexels.com/photo/water-droplets-on-a-white-car-6873177/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "16:9",
+    "w": 1600,
+    "h": 900,
+    "velicine": [
+     {
+      "w": 640,
+      "h": 360,
+      "fajl": "assets/img/rad-02-posle-siroka-640.webp"
+     },
+     {
+      "w": 960,
+      "h": 540,
+      "fajl": "assets/img/rad-02-posle-siroka-960.webp"
+     },
+     {
+      "w": 1280,
+      "h": 720,
+      "fajl": "assets/img/rad-02-posle-siroka-1280.webp"
+     },
+     {
+      "w": 1600,
+      "h": 900,
+      "fajl": "assets/img/rad-02-posle-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×900"
+   }
+  }
+ },
+ "rad-03-pre": {
+  "alt": {
+   "sr": "",
+   "en": ""
+  },
+  "boja": "#333330",
+  "izvor": "Tima Miroshnichenko · Pexels (https://www.pexels.com/photo/front-headlight-of-a-black-car-6873190/); „pre“ je računarska simulacija",
+  "varijante": {
+   "siroka": {
+    "razmera": "16:9",
+    "w": 1600,
+    "h": 900,
+    "velicine": [
+     {
+      "w": 640,
+      "h": 360,
+      "fajl": "assets/img/rad-03-pre-siroka-640.webp"
+     },
+     {
+      "w": 960,
+      "h": 540,
+      "fajl": "assets/img/rad-03-pre-siroka-960.webp"
+     },
+     {
+      "w": 1280,
+      "h": 720,
+      "fajl": "assets/img/rad-03-pre-siroka-1280.webp"
+     },
+     {
+      "w": 1600,
+      "h": 900,
+      "fajl": "assets/img/rad-03-pre-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×900"
+   }
+  }
+ },
+ "rad-03-posle": {
+  "alt": {
+   "sr": "",
+   "en": ""
+  },
+  "boja": "#353739",
+  "izvor": "Tima Miroshnichenko · Pexels (https://www.pexels.com/photo/front-headlight-of-a-black-car-6873190/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "16:9",
+    "w": 1600,
+    "h": 900,
+    "velicine": [
+     {
+      "w": 640,
+      "h": 360,
+      "fajl": "assets/img/rad-03-posle-siroka-640.webp"
+     },
+     {
+      "w": 960,
+      "h": 540,
+      "fajl": "assets/img/rad-03-posle-siroka-960.webp"
+     },
+     {
+      "w": 1280,
+      "h": 720,
+      "fajl": "assets/img/rad-03-posle-siroka-1280.webp"
+     },
+     {
+      "w": 1600,
+      "h": 900,
+      "fajl": "assets/img/rad-03-posle-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×900"
+   }
+  }
+ },
+ "rad-04-pre": {
+  "alt": {
+   "sr": "",
+   "en": ""
+  },
+  "boja": "#4b5053",
+  "izvor": "Luke Miller · Pexels (https://www.pexels.com/photo/back-seat-of-a-car-14667496/); „pre“ je računarska simulacija",
+  "varijante": {
+   "siroka": {
+    "razmera": "16:9",
+    "w": 1600,
+    "h": 900,
+    "velicine": [
+     {
+      "w": 640,
+      "h": 360,
+      "fajl": "assets/img/rad-04-pre-siroka-640.webp"
+     },
+     {
+      "w": 960,
+      "h": 540,
+      "fajl": "assets/img/rad-04-pre-siroka-960.webp"
+     },
+     {
+      "w": 1280,
+      "h": 720,
+      "fajl": "assets/img/rad-04-pre-siroka-1280.webp"
+     },
+     {
+      "w": 1600,
+      "h": 900,
+      "fajl": "assets/img/rad-04-pre-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×900"
+   }
+  }
+ },
+ "rad-04-posle": {
+  "alt": {
+   "sr": "",
+   "en": ""
+  },
+  "boja": "#454c4f",
+  "izvor": "Luke Miller · Pexels (https://www.pexels.com/photo/back-seat-of-a-car-14667496/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "16:9",
+    "w": 1600,
+    "h": 900,
+    "velicine": [
+     {
+      "w": 640,
+      "h": 360,
+      "fajl": "assets/img/rad-04-posle-siroka-640.webp"
+     },
+     {
+      "w": 960,
+      "h": 540,
+      "fajl": "assets/img/rad-04-posle-siroka-960.webp"
+     },
+     {
+      "w": 1280,
+      "h": 720,
+      "fajl": "assets/img/rad-04-posle-siroka-1280.webp"
+     },
+     {
+      "w": 1600,
+      "h": 900,
+      "fajl": "assets/img/rad-04-posle-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×900"
+   }
+  }
+ },
+ "hero-01": {
+  "alt": {
+   "sr": "Tamnoplavi SUV u tamnom studiju, svetlosne cevi se odražavaju kao bele linije u laku",
+   "en": "A dark blue SUV in a dark studio, light tubes reflecting as white lines in the paint"
+  },
+  "boja": "#29343c",
+  "izvor": "Kağan Karatay · Pexels (https://www.pexels.com/photo/stylish-dark-blue-mini-cooper-countryman-in-showroom-29909542/)",
+  "varijante": {
+   "siroka": {
+    "razmera": "3:2",
+    "w": 1600,
+    "h": 1067,
+    "velicine": [
+     {
+      "w": 480,
+      "h": 320,
+      "fajl": "assets/img/hero-01-siroka-480.webp"
+     },
+     {
+      "w": 800,
+      "h": 533,
+      "fajl": "assets/img/hero-01-siroka-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 800,
+      "fajl": "assets/img/hero-01-siroka-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1067,
+      "fajl": "assets/img/hero-01-siroka-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1067"
+   }
+  }
+ },
+ "p-aktivna-pena": {
+  "alt": "",
+  "boja": "#31363b",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-aktivna-pena-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-aktivna-pena-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-aktivna-pena-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-aktivna-pena-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-aplikatori": {
+  "alt": "",
+  "boja": "#2b3031",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-aplikatori-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-aplikatori-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-aplikatori-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-aplikatori-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-boca-rasprsivac": {
+  "alt": "",
+  "boja": "#262b30",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-boca-rasprsivac-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-boca-rasprsivac-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-boca-rasprsivac-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-boca-rasprsivac-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-booster-keramike": {
+  "alt": "",
+  "boja": "#2f3436",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-booster-keramike-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-booster-keramike-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-booster-keramike-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-booster-keramike-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-brzi-detailer": {
+  "alt": "",
+  "boja": "#2f3439",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-brzi-detailer-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-brzi-detailer-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-brzi-detailer-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-brzi-detailer-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-cetke-enterijer": {
+  "alt": "",
+  "boja": "#25292e",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-cetke-enterijer-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-cetke-enterijer-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-cetke-enterijer-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-cetke-enterijer-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-cetke-felne": {
+  "alt": "",
+  "boja": "#272b31",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-cetke-felne-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-cetke-felne-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-cetke-felne-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-cetke-felne-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-cistac-enterijera": {
+  "alt": "",
+  "boja": "#2f3439",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-cistac-enterijera-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-cistac-enterijera-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-cistac-enterijera-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-cistac-enterijera-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-cistac-felni": {
+  "alt": "",
+  "boja": "#33373c",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-cistac-felni-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-cistac-felni-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-cistac-felni-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-cistac-felni-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-cistac-koze": {
+  "alt": "",
+  "boja": "#2f3339",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-cistac-koze-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-cistac-koze-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-cistac-koze-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-cistac-koze-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-cistac-stakla": {
+  "alt": "",
+  "boja": "#2f3439",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-cistac-stakla-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-cistac-stakla-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-cistac-stakla-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-cistac-stakla-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-glina-set": {
+  "alt": "",
+  "boja": "#2d3238",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-glina-set-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-glina-set-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-glina-set-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-glina-set-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-keramicki-sprej": {
+  "alt": "",
+  "boja": "#333839",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-keramicki-sprej-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-keramicki-sprej-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-keramicki-sprej-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-keramicki-sprej-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-keramika-stakla": {
+  "alt": "",
+  "boja": "#2c3133",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-keramika-stakla-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-keramika-stakla-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-keramika-stakla-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-keramika-stakla-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-kofa": {
+  "alt": "",
+  "boja": "#23282c",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-kofa-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-kofa-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-kofa-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-kofa-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-mikrofiber-set": {
+  "alt": "",
+  "boja": "#2f3536",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-mikrofiber-set-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-mikrofiber-set-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-mikrofiber-set-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-mikrofiber-set-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-neutralizator-mirisa": {
+  "alt": "",
+  "boja": "#2f3338",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-neutralizator-mirisa-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-neutralizator-mirisa-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-neutralizator-mirisa-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-neutralizator-mirisa-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-peskir-susenje": {
+  "alt": "",
+  "boja": "#31363c",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-peskir-susenje-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-peskir-susenje-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-peskir-susenje-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-peskir-susenje-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-rukavica": {
+  "alt": "",
+  "boja": "#32373d",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-rukavica-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-rukavica-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-rukavica-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-rukavica-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-sampon-ph7": {
+  "alt": "",
+  "boja": "#31353a",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-sampon-ph7-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-sampon-ph7-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-sampon-ph7-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-sampon-ph7-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-set-keramika": {
+  "alt": "",
+  "boja": "#343a3c",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-set-keramika-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-set-keramika-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-set-keramika-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-set-keramika-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-set-pocetni": {
+  "alt": "",
+  "boja": "#383d42",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-set-pocetni-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-set-pocetni-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-set-pocetni-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-set-pocetni-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-uklanjac-gvozdja": {
+  "alt": "",
+  "boja": "#2f3338",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-uklanjac-gvozdja-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-uklanjac-gvozdja-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-uklanjac-gvozdja-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-uklanjac-gvozdja-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-zastita-guma": {
+  "alt": "",
+  "boja": "#31353a",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-zastita-guma-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-zastita-guma-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-zastita-guma-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-zastita-guma-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ },
+ "p-zastita-koze": {
+  "alt": "",
+  "boja": "#2b3035",
+  "izvor": "Ilustracija proizvoda (demo), Sloj",
+  "varijante": {
+   "kvadrat": {
+    "razmera": "1:1",
+    "w": 1600,
+    "h": 1600,
+    "velicine": [
+     {
+      "w": 400,
+      "h": 400,
+      "fajl": "assets/img/p-zastita-koze-kvadrat-400.webp"
+     },
+     {
+      "w": 800,
+      "h": 800,
+      "fajl": "assets/img/p-zastita-koze-kvadrat-800.webp"
+     },
+     {
+      "w": 1200,
+      "h": 1200,
+      "fajl": "assets/img/p-zastita-koze-kvadrat-1200.webp"
+     },
+     {
+      "w": 1600,
+      "h": 1600,
+      "fajl": "assets/img/p-zastita-koze-kvadrat-1600.webp"
+     }
+    ],
+    "preporuka": "1600×1600"
+   }
+  }
+ }
+}

@@ -30,6 +30,7 @@
     otkazi: ['otkazati', 'otkazem', 'pomeriti', 'pomerim', 'otkazivanje', 'cancel', 'reschedule', 'change', 'stornieren', 'absagen', 'verschieben'],
     placanje: ['placanje', 'platiti', 'platim', 'kartica', 'kartice', 'karticom', 'gotovina', 'gotovinom', 'rate', 'pay', 'payment', 'card', 'cash', 'bezahlen', 'zahlung', 'karte', 'bar'],
     jezik: ['engleski', 'nemacki', 'jezik', 'jezici', 'english', 'german', 'language', 'speak', 'englisch', 'deutsch', 'sprache', 'sprechen'],
+    trajanje: ['traje', 'trajanje', 'dugo', 'long', 'duration', 'dauert', 'dauer'],
     zdravo: ['zdravo', 'cao', 'pozdrav', 'dobar', 'hello', 'hi', 'hallo', 'guten', 'servus']
   };
   function radnoVremeTekst() {
@@ -59,7 +60,7 @@
     if (prvi) return prvi.a;
     odgovori = odgovori.concat(sajtovi);
     // cene konkretne stavke
-    if (sadrzi(r, K.cena) && (OF.d.usluge || OF.d.cenovnikDodatno || OF.d.pomocnikStavke)) {
+    if (sadrzi(r, K.cena) && !sadrzi(r, K.trajanje) && (OF.d.usluge || OF.d.cenovnikDodatno || OF.d.pomocnikStavke)) {   // „koliko traje“ nije pitanje o ceni
       var st = stavkeCena().map(function (x) { return { x: x, s: poklapanje(r, x.naziv) }; }).filter(function (y) { return y.s > 0.3; }).sort(function (a, b) { return b.s - a.s; }).slice(0, 4);
       if (st.length) return { tekst: st.map(function (y) { return y.x.naziv + ': ' + OF.cenaTekst(y.x.cena); }).join('\n') + (OF.d.pomocnikNapomenaCene ? '\n\n' + OF.tx(OF.d.pomocnikNapomenaCene) : ''),
         akcije: [st[0].x.zakazi ? { tekst: OF.t('pm.zakazi'), href: OF.link('zakazivanje', 'usluga=' + st[0].x.id) } : null, { tekst: OF.t('pm.cenovnik'), href: OF.link('cenovnik') }].filter(Boolean) };

@@ -1,0 +1,46 @@
+{
+  "name": "Sloj · Detailing i keramička zaštita",
+  "short_name": "Sloj",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0A0C0F",
+  "theme_color": "#0A0C0F",
+  "lang": "sr",
+  "description": "Studio za detailing i keramičku zaštitu na Zvezdari: merenje laka pre poliranja, praćenje vozila uživo, digitalni garantni list i prodavnica opreme za negu automobila.",
+  "icons": [
+    {
+      "src": "assets/img/ikona-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/ikona-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/ikona-maska-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Zakažite termin",
+      "short_name": "Zakažite",
+      "url": "zakazivanje/"
+    },
+    {
+      "name": "Praćenje vozila",
+      "short_name": "Praćenje",
+      "url": "pracenje-vozila/"
+    },
+    {
+      "name": "Prodavnica",
+      "short_name": "Prodavnica",
+      "url": "prodavnica/"
+    }
+  ]
+}

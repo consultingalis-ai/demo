@@ -23,8 +23,17 @@
     var s = (I[OF.jezik] && I[OF.jezik][kljuc]) || (OF.jezikStrane && I[OF.jezikStrane] && I[OF.jezikStrane][kljuc]) || (I.sr && I.sr[kljuc]) || kljuc;
     var lok = OF.d.tekstovi && OF.d.tekstovi[kljuc];
     if (lok) s = OF.tx(lok);
-    if (vars) s = s.replace(/\{(\w+)\}/g, function (m, k) { return vars[k] != null ? vars[k] : m; });
+    // datum na srpskom već završava tačkom („14. mart 2026.“), pa „{do}.“ ne sme da da dve tačke
+    if (vars) s = s.replace(/\{(\w+)\}(\.?)/g, function (m, k, t) { if (vars[k] == null) return m; var v = String(vars[k]); return v + (t && v.slice(-1) === '.' ? '' : t); });
     return s;
+  };
+  /* množina: ključ_1 (1, 21…), ključ_2 (2–4, 22–24…), ključ_5 (ostalo); ako oblika nema, koristi se sam ključ */
+  OF.tn = function (kljuc, n, vars) {
+    var d = Math.abs(n) % 10, s = Math.abs(n) % 100;
+    var oblik = OF.jezik === 'sr' ? (d === 1 && s !== 11 ? '_1' : d >= 2 && d <= 4 && (s < 12 || s > 14) ? '_2' : '_5') : (n === 1 ? '_1' : '_5');
+    var k = kljuc + oblik, I = OF.I18N || {};
+    var ima = (OF.d.tekstovi && OF.d.tekstovi[k]) || (I[OF.jezik] && I[OF.jezik][k]) || (I.sr && I.sr[k]);
+    return OF.t(ima ? k : kljuc, Object.assign({ n: n }, vars || {}));
   };
   OF.esc = function (s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
@@ -146,9 +155,24 @@
   };
   D.uHHMM = function (min) { return ('0' + Math.floor(min / 60)).slice(-2) + ':' + ('0' + (min % 60)).slice(-2); };
   var LOC = function () { return OF.jezik === 'en' ? 'en-GB' : OF.jezik === 'de' ? 'de-DE' : 'sr-Latn-RS'; };
+  var GENITIV = { januar: 'januara', februar: 'februara', mart: 'marta', april: 'aprila', maj: 'maja', jun: 'juna', jul: 'jula', avgust: 'avgusta', septembar: 'septembra', oktobar: 'oktobra', novembar: 'novembra', decembar: 'decembra' };
   D.format = function (iso, opcije) {
-    return new Intl.DateTimeFormat(LOC(), Object.assign({ timeZone: 'UTC' }, opcije || { weekday: 'long', day: 'numeric', month: 'long' })).format(D.uDate(iso));
+    var o = Object.assign({ timeZone: 'UTC' }, opcije || { weekday: 'long', day: 'numeric', month: 'long' });
+    var s = new Intl.DateTimeFormat(LOC(), o).format(D.uDate(iso));
+    // srpski: mesec uz dan ide u genitivu („29. novembra“), kako se piše u rečenici
+    if (LOC() === 'sr-Latn-RS' && o.day && o.month === 'long') s = s.replace(/(\d+\.\s*)(januar|februar|mart|april|maj|jun|jul|avgust|septembar|oktobar|novembar|decembar)(?![a-z])/g, function (m, a, b) { return a + GENITIV[b]; });
+    return s;
   };
+  /* „u sredu, 4. novembra“ / „on Wednesday 4 November“ / „am Mittwoch, 4. November“ (za rečenice tipa „stiže …“) */
+  var AKUZATIV = { sreda: 'sredu', subota: 'subotu', nedelja: 'nedelju' };
+  D.uDan = function (iso) {
+    var s = D.format(iso, { weekday: 'long', day: 'numeric', month: 'long' });
+    if (OF.jezik === 'en') return 'on ' + s;
+    if (OF.jezik === 'de') return 'am ' + s;
+    return 'u ' + s.replace(/^(sreda|subota|nedelja)/, function (m) { return AKUZATIV[m]; });
+  };
+  D.datum = function (iso) { return D.format(iso, { day: 'numeric', month: 'long', year: 'numeric' }); };   // bez dana u nedelji, za „do 29. novembra 2026.“
+  D.sGodinom = function (iso) { return D.format(iso, { day: 'numeric', month: 'numeric', year: 'numeric' }); };
   D.kratko = function (iso) { return D.format(iso, { weekday: 'short', day: 'numeric', month: 'numeric' }); };
   D.dug = function (iso) { return D.format(iso, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }); };
   D.vreme = function (hhmm) { return OF.jezik === 'en' ? hhmm : hhmm.replace(/^0/, ''); };

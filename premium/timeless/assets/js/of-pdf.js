@@ -62,7 +62,7 @@
   }
   /* napravi PDF po šablonu: sinhrono kad su jsPDF i font već učitani (na serveru uvek jesu, za priloge mejla), inače posle učitavanja */
   PDF.napraviOdmah = function (sablon, podaci, opcije) {
-    var fn = typeof sablon === 'function' ? sablon : PDF.sabloni[sablon];
+    var fn = typeof sablon === 'function' ? sablon : PDF.sabloni[sablon] || (OF.pdfDodatno || {})[sablon];   // moduli sajta dodaju šablone u OF.pdfDodatno (učitavaju se i pre ovog fajla)
     if (!fn) throw new Error('Nema PDF šablona: ' + sablon);
     var doc = noviDokument(opcije);
     var a = alati(doc);

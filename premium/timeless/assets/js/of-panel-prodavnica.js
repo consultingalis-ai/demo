@@ -230,8 +230,8 @@
     tabela(OF.t('pp.cekaju_zalihu'), javi, [OF.t('pp.proizvod'), OF.t('pp.varijanta'), OF.t('f.email'), OF.t('p.status')], function (x) { var p = PR.proizvod(x.proizvod); return [p ? OF.tx(p.naziv) : x.proizvod, (x.kombinacija || '–').replace(/\|/g, ' · '), x.email, x.obavesten ? OF.t('pp.obavesten', { datum: D.kratko(x.obavesten.slice(0, 10)) }) : OF.t('pp.ceka')]; });
   }
 
-  PN.sekcije.push({ id: 'porudzbine', naziv: OF.t('pp.porudzbine'), crtaj: sekcijaPorudzbine });
-  PN.sekcije.push({ id: 'zalihe', naziv: OF.t('pp.zalihe'), crtaj: sekcijaZalihe });
-  PN.sekcije.push({ id: 'kuponi', naziv: OF.t('pp.kuponi'), crtaj: sekcijaKuponi });
-  PN.sekcije.push({ id: 'zahtevi', naziv: OF.t('pp.zahtevi'), crtaj: sekcijaZahtevi });
+  PN.sekcije.push({ id: 'porudzbine', naziv: OF.t('pp.porudzbine'), crtaj: sekcijaPorudzbine, posle: 'prodaja' });
+  PN.sekcije.push({ id: 'zalihe', naziv: OF.t('pp.zalihe'), crtaj: sekcijaZalihe, posle: 'prodaja' });
+  PN.sekcije.push({ id: 'kuponi', naziv: OF.t('pp.kuponi'), crtaj: sekcijaKuponi, posle: 'prodaja' });
+  PN.sekcije.push({ id: 'zahtevi', naziv: OF.t('pp.zahtevi'), crtaj: sekcijaZahtevi, posle: 'prodaja' });
 })(window, document);

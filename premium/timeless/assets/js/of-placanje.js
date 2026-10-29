@@ -29,6 +29,16 @@
       return new Promise(function () {});        // stranica odlazi
     }).catch(function () { throw { poruka: OF.t('pl.greska_veza') }; });
   }
+  /* odlazak na stranicu banke/procesora: adresa ({ url }) ili potpisana POST forma ({ forma: { url, polja } }: NestPay, WSPay) */
+  P.idiNaBanku = function (o) {
+    if (o && o.forma && o.forma.url) {
+      var f = OF.h('form', { method: 'POST', action: o.forma.url, hidden: true });
+      Object.keys(o.forma.polja || {}).forEach(function (k) { f.appendChild(OF.h('input', { type: 'hidden', name: k, value: o.forma.polja[k] })); });
+      d.body.appendChild(f); f.submit();
+    } else if (o && o.url) w.location.href = o.url;
+    else return false;
+    return true;
+  };
   P.proveriPovratak = function () {
     var id = OF.upit('porudzbina');
     return fetch(OF.int.api('/placanje/status?id=' + encodeURIComponent(id)), { credentials: 'omit' }).then(function (r) { return r.json(); });
@@ -46,6 +56,7 @@
       telo.innerHTML = '';
       telo.appendChild(OF.h('div', { class: 'of-pl__demo', role: 'note' }, [OF.h('strong', null, OF.t('pl.demo_oznaka')), ' ', OF.t('pl.ne_unosite')]));
       telo.appendChild(OF.h('div', { class: 'of-pl__iznos' }, [OF.h('span', null, n.opis || ''), OF.h('strong', null, OF.din(n.iznos))]));
+      if (n.ponavljanje) telo.appendChild(OF.h('p', { class: 'of-pl__sitno' }, OF.t('pl.ponavljanje', { iznos: OF.din(n.ponavljanje.iznos || n.iznos), dan: n.ponavljanje.dan || '' })));
       var testovi = OF.h('div', { class: 'of-pl__test' }, [OF.h('p', { class: 'of-pl__test-naslov' }, OF.t('pl.test_kartice')),
         testRed(TEST.uspeh, OF.t('pl.test_uspeh')), testRed(TEST.odbijena, OF.t('pl.test_odbijena'))]);
       telo.appendChild(testovi);
@@ -84,8 +95,12 @@
         korak3ds(cist === TEST.uspeh, poslednje);
       });
       telo.appendChild(forma);
-      if (greska) telo.insertBefore(OF.h('p', { class: 'of-pl__greska', role: 'alert' }, greska), telo.children[1]);
-      OF.$('input', forma).focus();
+      if (greska) {   // odbijena kartica: poruka stoji dok kupac ne počne da upisuje novu karticu; fokus na broj kartice (ime je već upisano)
+        var baner = OF.h('p', { class: 'of-pl__greska', role: 'alert' }, greska);
+        telo.insertBefore(baner, telo.children[1]);
+        forma.addEventListener('input', function ukloni() { baner.remove(); forma.removeEventListener('input', ukloni); });
+      }
+      (greska && forma.elements.ime.value ? ulazBroj : OF.$('input', forma)).focus();
       function testRed(br, opis) {
         return OF.h('div', { class: 'of-pl__test-red' }, [OF.h('code', null, grupisi(br)), OF.h('span', null, opis),
           OF.h('button', { type: 'button', class: 'of-dugme of-dugme--mini', onclick: function () {
@@ -143,6 +158,7 @@
       var dlg = OF.dijalog({ naslov: OF.t('pl.ips_naslov'), id: 'ips', klasa: 'of-dialog--placanje', sadrzaj: telo, naZatvaranje: function () { if (!zavrseno) { zavrseno = true; ne({ prekinuto: true, poruka: OF.t('pl.prekinuto') }); } } });
       telo.appendChild(OF.h('div', { class: 'of-pl__demo', role: 'note' }, [OF.h('strong', null, OF.t('pl.demo_oznaka')), ' ', OF.t('pl.ips_demo')]));
       telo.appendChild(OF.h('div', { class: 'of-pl__iznos' }, [OF.h('span', null, n.opis || ''), OF.h('strong', null, OF.din(n.iznos))]));
+      if (n.ponavljanje) telo.appendChild(OF.h('p', { class: 'of-pl__sitno' }, OF.t('pl.ponavljanje', { iznos: OF.din(n.ponavljanje.iznos || n.iznos), dan: n.ponavljanje.dan || '' })));
       var qr = OF.h('div', { class: 'of-pl__qr', role: 'img', 'aria-label': OF.t('pl.ips_qr_oznaka') });
       telo.appendChild(OF.h('div', { class: 'of-pl__ips' }, [qr, OF.h('ol', { class: 'of-pl__koraci' }, [OF.t('pl.ips_k1'), OF.t('pl.ips_k2'), OF.t('pl.ips_k3')].map(function (x) { return OF.h('li', null, x); }))]));
       OF.pdf.qrNaEkranu(qr, 'DEMO · opsforma · ' + OF.t('pl.ips_qr_demo_tekst') + ' · ' + (n.porudzbinaId || ''), 168);

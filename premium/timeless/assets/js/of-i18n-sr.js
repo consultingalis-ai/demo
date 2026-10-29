@@ -25,7 +25,7 @@
     'zak.koraci': 'Koraci zakazivanja', 'zak.korak_od': 'Korak {n} od {uk}', 'zak.k_usluga': 'Usluga', 'zak.k_osoba': 'Kod koga', 'zak.k_termin': 'Datum i vreme', 'zak.k_sto': 'Sto', 'zak.k_paket': 'Paket', 'zak.k_podaci': 'Vaši podaci', 'zak.k_pregled': 'Pregled',
     'zak.vas_izbor': 'Vaš izbor', 'zak.usluga': 'Usluga', 'zak.cena': 'Cena', 'zak.trajanje': 'Trajanje', 'zak.min': '{n} min', 'zak.osoba': 'Kod koga', 'zak.bilo_ko': 'Svejedno', 'zak.bilo_ko_opis': 'Prvi slobodan termin kod bilo koga od nas',
     'zak.osoba_broj': 'Broj osoba', 'zak.prostor': 'Gde sedite', 'zak.paket': 'Paket', 'zak.vozilo': 'Vozilo', 'zak.datum': 'Datum', 'zak.vreme': 'Vreme', 'zak.kada': 'Kada', 'zak.ostavljanje': 'Ostavljanje vozila', 'zak.ostavljanje_vozila': 'Vreme ostavljanja vozila',
-    'zak.gotovo': 'Gotovo okvirno', 'zak.placen_depozit': 'Plaćen depozit', 'zak.adresa': 'Adresa', 'zak.broj': 'Broj', 'zak.termin': 'Termin',
+    'zak.gotovo': 'Gotovo okvirno', 'zak.kredit_pokriva': 'Imate kredit od otkazanog termina {termin}: pokriva ceo depozit od {iznos}, pa danas ne plaćate ništa.', 'zak.kredit_delom': 'Kredit od otkazanog termina {termin} pokriva {iznos} depozita. Ostatak od {ostatak} plaćate karticom u sledećem koraku.', 'zak.iz_kredita': '{iznos} iz kredita termina {termin}', 'zak.placen_depozit': 'Plaćen depozit', 'zak.adresa': 'Adresa', 'zak.broj': 'Broj', 'zak.termin': 'Termin',
     'zak.prethodni_mesec': 'Prethodni mesec', 'zak.sledeci_mesec': 'Sledeći mesec', 'zak.ima_termina': 'ima slobodnih termina', 'zak.nema_termina': 'nema slobodnih termina', 'zak.legenda': 'ima slobodnih termina',
     'zak.izaberite_dan': 'Izaberite dan u kalendaru.', 'zak.nema_termina_dan': 'Za ovaj dan nema slobodnih termina. Izaberite drugi dan.', 'zak.pre_podne': 'Pre podne', 'zak.posle_podne': 'Posle podne', 'zak.uvece': 'Uveče', 'zak.malo_mesta': 'još malo mesta',
     'zak.vise_osoba': 'Za više od {n} osoba pošaljite', 'zak.upit_proslava': 'upit za proslavu.', 'zak.depozit_info': 'Za {n} i više osoba sto potvrđujemo depozitom karticom: {iznos}, odbija se od računa.', 'zak.sezona': 'od {od} do {do}',
@@ -36,6 +36,8 @@
     'moj.vas_termin': 'Vaš termin', 'moj.status': 'Status', 'moj.potvrdjen': 'potvrđen', 'moj.otkazan': 'otkazan', 'moj.prosao': 'prošao', 'moj.pomeren': 'pomeren',
     'moj.pomeri': 'Pomeri termin', 'moj.otkazi': 'Otkaži termin', 'moj.novo_vreme': 'Izaberite novo vreme', 'moj.sacuvaj': 'Sačuvaj novo vreme', 'moj.pomereno': 'Termin je pomeren. Nova potvrda je poslata mejlom.',
     'moj.otkazi_naslov': 'Otkazivanje termina', 'moj.otkazi_pitanje': 'Da li sigurno otkazujete termin za {kad}?', 'moj.ne_hvala': 'Ne, vrati me', 'moj.da_otkazi': 'Da, otkaži', 'moj.otkazano': 'Termin je otkazan.',
+    'moj.vec_pomeren': 'Termin je već jednom pomeren. Za novu promenu nas pozovite.', 'moj.depozit_placen': 'Plaćen depozit: {iznos}.',
+    'r.depozit_kredit': 'Depozit {iznos} ostaje kao kredit do {do}.', 'r.mejl_depozit_povracaj': 'Depozit od {iznos} vraćamo na karticu u roku od 5 radnih dana.', 'r.mejl_depozit_kredit': 'Depozit od {iznos} ostaje kao kredit za novi termin do {do}.',
     'moj.kasno': 'Do termina je manje od {sati} h. Za promenu nas pozovite, rado ćemo pomoći.', 'moj.novi': 'Zakaži novi termin', 'moj.nalog': 'Moj nalog',
     'moj.nije_nadjen': 'Termin nije pronađen', 'moj.nije_nadjen_opis': 'Link je možda star ili nepotpun. Pozovite nas ili se prijavite u nalog da vidite svoje termine.',
 
@@ -60,12 +62,13 @@
 
     'k.korpa_broj': 'Korpa, stavki: {n}', 'k.dodato': 'Dodato u korpu: {naziv}', 'k.prazna': 'Korpa je prazna.', 'k.nastavi_kupovinu': 'Nastavi kupovinu', 'k.manje': 'Manje: {naziv}', 'k.vise': 'Više: {naziv}', 'k.kolicina': 'količina',
     'k.kupon': 'Kupon kod', 'k.primeni': 'Primeni', 'k.kupon_nepostoji': 'Taj kod ne postoji.', 'k.kupon_istekao': 'Kod je istekao.', 'k.kupon_min': 'Kod važi za porudžbine od {iznos}.', 'k.kupon_ok': 'Kod je primenjen: {opis}', 'k.kupon_primenjen': 'Kod {kod} je primenjen.',
-    'k.medjuzbir': 'Međuzbir', 'k.popust': 'Popust', 'k.dostava': 'Dostava', 'k.pdv': 'Cene su sa PDV-om.', 'k.dostava_kasnije': 'Dostavu birate u sledećem koraku.', 'k.na_placanje': 'Nastavi na plaćanje',
+    'k.medjuzbir': 'Međuzbir', 'k.popust_clan': 'Popust za članove ({n}%)', 'k.popust': 'Popust', 'k.dostava': 'Dostava', 'k.pdv': 'Cene su sa PDV-om.', 'k.dostava_kasnije': 'Dostavu birate u sledećem koraku.', 'k.na_placanje': 'Nastavi na plaćanje',
     'k.vasi_podaci': 'Vaši podaci', 'k.email_pomoc': 'Na ovaj mejl stižu račun i dokumenti.', 'k.besplatno_od': 'besplatno od {iznos}', 'k.adresa': 'Ulica i broj', 'k.postanski': 'Poštanski broj', 'k.mesto': 'Mesto',
     'k.preuzimanje': 'Preuzimanje', 'k.izaberite_vreme': 'Izaberite vreme', 'k.vreme_preuzimanja': 'Vreme preuzimanja', 'k.priprema': 'Priprema traje oko {min} minuta.', 'k.preuzimate_na': 'Preuzimate na adresi {adresa}.',
     'k.prihvatam': 'Prihvatam', 'k.uslove': 'uslove kupovine', 'k.plati': 'Plati {iznos}', 'k.sigurno': 'Plaćanje ide preko zaštićene stranice banke. Mi ne vidimo i ne čuvamo podatke kartice.',
     'k.porudzbina_opis': 'Porudžbina · {firma}', 'k.placeno': 'Plaćeno', 'k.hvala': 'Hvala, {ime}.', 'k.broj_porudzbine': 'Broj porudžbine', 'k.posiljka': 'Pošiljka', 'k.racun_mejlom': 'Račun je poslat na {email}.', 'k.preuzmi_pdf': 'Preuzmi PDF', 'k.u_nalogu': 'Pogledaj u nalogu',
 
+    'pl.ponavljanje': 'Ovo je prva mesečna naplata. Procesor plaćanja pamti karticu za sledeće ({iznos}, {dan}. u mesecu); otkazujete u nalogu.',
     'pl.naslov': 'Plaćanje karticom', 'pl.demo_oznaka': 'DEMO PLAĆANJE.', 'pl.ne_unosite': 'Ne unosite prave podatke kartice. Prihvataju se samo test brojevi ispod.',
     'pl.test_kartice': 'Test kartice', 'pl.test_uspeh': 'uspešno plaćanje', 'pl.test_odbijena': 'odbijena kartica', 'pl.upisi': 'Upiši',
     'pl.ime_na_kartici': 'Ime na kartici', 'pl.broj': 'Broj kartice', 'pl.vazi': 'Važi do (MM/GG)', 'pl.vazi_primer': 'MM/GG', 'pl.logotipi': 'Prihvaćene kartice', 'pl.sitno': 'Na pravom sajtu ovaj korak je stranica banke ili procesora plaćanja. Podaci kartice ne prolaze kroz sajt.',
