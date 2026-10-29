@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){var t;try{t=localStorage.getItem('opsforma-tema')}catch(e){}if(t!=='tamna'&&t!=='svetla')t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'tamna':'svetla';document.documentElement.setAttribute('data-tema',t)})()</script>
 <link rel="canonical" href="https://opsforma.rs/sajt-za-frizere-i-berbernice/">
 <title>Sajt sa online zakazivanjem za frizere i berbernice | opsforma</title>
 <meta name="description" content="Sajt za frizerski salon ili berbernicu: cenovnik, radno vreme, mapa i zakazivanje termina koje se upisuje u Vaš Google Kalendar.">
@@ -341,6 +342,8 @@
   .card-shot { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: top;
     border-radius: 4px; margin: 4px 0 16px; box-shadow: 0 0 0 1px rgba(0,0,0,.12); }
 </style>
+<link rel="stylesheet" href="/assets/tema.css">
+<script src="/assets/tema.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -378,7 +381,7 @@
 <a class="skip" href="#sadrzaj">Preskoči na sadržaj</a>
 <header class="site-head">
   <div class="wrap head-row">
-    <a class="brand" href="/" aria-label="opsforma, naslovna strana"><img src="/logo-zaglavlje.svg" alt="opsforma" width="477" height="106"></a>
+    <a class="brand" href="/" aria-label="opsforma, naslovna strana"><img class="logo-svetla" src="/logo-zaglavlje.svg" alt="opsforma" width="477" height="106"><img class="logo-tamna" src="/logo-zaglavlje-za-tamnu-pozadinu.svg" alt="opsforma" width="477" height="106"></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meni"><span class="bars" aria-hidden="true"></span>Meni</button>
     <nav class="nav" id="meni" aria-label="Glavna navigacija">
       <ul>
@@ -390,6 +393,7 @@
         <li class="nav-mail"><a href="mailto:kontakt@opsforma.rs">kontakt@opsforma.rs</a></li>
       </ul>
     </nav>
+    <button class="tema-btn" type="button" data-tema-dugme aria-pressed="false" aria-label="Tamna tema" title="Tamna tema"><svg class="ik-mesec" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg><svg class="ik-sunce" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
   </div>
 </header>
 
@@ -397,7 +401,7 @@
   <section class="hero" aria-labelledby="naslov">
     <div class="wrap">
       <p class="eyebrow">Za koga pravimo sajtove</p>
-      <h1 id="naslov">Sajt za frizere i berbernice<span class="dot" aria-hidden="true"></span></h1>
+      <h1 id="naslov">Sajt za frizere i <span class="nowrap">berbernice<span class="dot" aria-hidden="true"></span></span></h1>
       <p class="hero-text">Mušterije Vas najčešće traže na telefonu, i to uveče, kad više ne odgovarate na pozive. Na sajtu vide cene i radno vreme i same izaberu slobodan termin, bez poziva i bez pravljenja naloga. Termin se upiše u Google Kalendar na Vašem telefonu, a Vi ujutru samo pogledate ko dolazi. Kad nekoga zakažete telefonom, upišete ga u isti kalendar i sajt taj termin više ne nudi.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="/#nacrt">Besplatan nacrt za Vašu radnju</a>
@@ -409,7 +413,7 @@
   <section id="paket" aria-labelledby="paket-naslov">
     <div class="wrap sec-grid">
       <div>
-        <h2 class="sec-title" id="paket-naslov">Koji paket<span class="dot" aria-hidden="true"></span></h2>
+        <h2 class="sec-title" id="paket-naslov">Koji <span class="nowrap">paket<span class="dot" aria-hidden="true"></span></span></h2>
         <p class="sec-lead">Za salon ili berbernicu sa jednim rasporedom dovoljno je zakazivanje.</p>
       </div>
       <div class="plan-one">
@@ -439,7 +443,7 @@
   <section id="primeri" aria-labelledby="primeri-naslov">
     <div class="wrap">
       <div class="sec-grid">
-        <h2 class="sec-title" id="primeri-naslov">Primeri<span class="dot" aria-hidden="true"></span></h2>
+        <h2 class="sec-title" id="primeri-naslov"><span class="nowrap">Primeri<span class="dot" aria-hidden="true"></span></span></h2>
         <p class="ex-note-sm" style="align-self:end">Izmišljene radnje, da vidite kako bi izgledalo. Prvi primer ima zakazivanje kod dva berberina, druga dva su osnovni sajt na koji se zakazivanje dodaje.</p>
       </div>
       <ul class="cards">
@@ -470,7 +474,7 @@
 
   <section id="pitanja" aria-labelledby="pit-naslov">
     <div class="wrap sec-grid">
-      <h2 class="sec-title" id="pit-naslov">Pitanja<span class="dot" aria-hidden="true"></span></h2>
+      <h2 class="sec-title" id="pit-naslov"><span class="nowrap">Pitanja<span class="dot" aria-hidden="true"></span></span></h2>
       <div class="faq">
         <details>
           <summary>Da li mušterija mora da napravi nalog?</summary>

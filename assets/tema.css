@@ -1,0 +1,72 @@
+/* opsforma · tamna tema (pravi ga tema_css.py; svetla je podrazumevana) */
+:root {
+  --povrsina: #fff;
+  --tekst-2: #2B2E33;
+  --polje-ivica: #B9BBB6;
+  --plava-dugme: #2F5BEA;
+  --obris: rgba(17,17,17,.08);
+  --obris-slike: rgba(0,0,0,.12);
+}
+
+/* zajedničko za obe teme: boje koje su bile upisane direktno sada idu preko tokena */
+input, textarea { background: var(--povrsina); border-color: var(--polje-ivica); color: var(--grafit); }
+.sketch, .hero-shot, .tools li, .ico, .pay, .about-box { background: var(--povrsina); }
+.btn-primary, .plan-tag, .sk-call, .cta .btn-dark { background: var(--plava-dugme); border-color: var(--plava-dugme); }
+.plan-block ul li, .plan-block p, .faq details p, .prose p, .prose ul { color: var(--tekst-2); }
+.card { outline-color: var(--obris); }
+.card-shot { box-shadow: 0 0 0 1px var(--obris-slike); }
+html { background: var(--papir); }
+.nowrap { white-space: nowrap; }   /* tačka posle naslova ne prelazi sama u novi red */
+
+/* logo u zaglavlju: tamna varijanta samo u tamnoj temi */
+.brand .logo-tamna { display: none; }
+
+/* dugme za temu u zaglavlju */
+.brand { margin-right: auto; }
+.tema-btn {
+  flex: none; display: inline-grid; place-items: center; width: 44px; height: 44px; padding: 0;
+  border: 1px solid var(--linija); border-radius: var(--radius); background: transparent; color: var(--grafit); cursor: pointer;
+}
+.tema-btn:hover { border-color: var(--grafit); }
+.tema-btn svg { width: 20px; height: 20px; }
+.tema-btn .ik-sunce { display: none; }
+html:not([data-tema]) .tema-btn { display: none; }   /* bez JavaScript-a dugme ne radi, pa se ne prikazuje */
+@media (min-width: 860px) { .tema-btn { margin-left: 8px; } }
+
+/* tamna tema: izbor dugmetom ili podešavanje uređaja */
+html[data-tema="tamna"] {
+  --papir: #111316; --grafit: #ECEDE9; --siva: #A3A7AE; --siva-tamno: #8E939B; --linija: #2A2E35;
+  --svetloplava: #19223B; --plava: #7D97FF;
+  --paper: var(--papir); --ink: var(--grafit); --gray: var(--siva); --rule: var(--linija); --signal: var(--plava);
+  --povrsina: #1A1D22; --tekst-2: #CDD0D4; --polje-ivica: #474D56; --plava-dugme: #3B60EC;
+  --obris: rgba(255,255,255,.09); --obris-slike: rgba(255,255,255,.1);
+  color-scheme: dark;
+}
+html[data-tema="tamna"] :is(.site-foot, .cta, .plan.featured) { --papir: #F5F5F2; --paper: #F5F5F2; --siva: #A4A7AD; --gray: #A4A7AD; --siva-tamno: #A4A7AD; --linija: rgba(245,245,242,.16); --rule: rgba(245,245,242,.16); --tekst-2: #D5D7DB; }
+html[data-tema="tamna"] .site-foot { --grafit: #0A0B0D; --ink: #0A0B0D; }
+html[data-tema="tamna"] :is(.cta, .plan.featured) { --grafit: #1D2127; --ink: #1D2127; }
+html[data-tema="tamna"] .plan.featured { border-color: rgba(245,245,242,.16); }
+html[data-tema="tamna"] .brand .logo-svetla { display: none; }
+html[data-tema="tamna"] .brand .logo-tamna { display: block; }
+html[data-tema="tamna"] .tema-btn .ik-mesec { display: none; }
+html[data-tema="tamna"] .tema-btn .ik-sunce { display: block; }
+
+/* bez JavaScript-a: prati uređaj */
+@media (prefers-color-scheme: dark) {
+html:not([data-tema]) {
+  --papir: #111316; --grafit: #ECEDE9; --siva: #A3A7AE; --siva-tamno: #8E939B; --linija: #2A2E35;
+  --svetloplava: #19223B; --plava: #7D97FF;
+  --paper: var(--papir); --ink: var(--grafit); --gray: var(--siva); --rule: var(--linija); --signal: var(--plava);
+  --povrsina: #1A1D22; --tekst-2: #CDD0D4; --polje-ivica: #474D56; --plava-dugme: #3B60EC;
+  --obris: rgba(255,255,255,.09); --obris-slike: rgba(255,255,255,.1);
+  color-scheme: dark;
+}
+html:not([data-tema]) :is(.site-foot, .cta, .plan.featured) { --papir: #F5F5F2; --paper: #F5F5F2; --siva: #A4A7AD; --gray: #A4A7AD; --siva-tamno: #A4A7AD; --linija: rgba(245,245,242,.16); --rule: rgba(245,245,242,.16); --tekst-2: #D5D7DB; }
+html:not([data-tema]) .site-foot { --grafit: #0A0B0D; --ink: #0A0B0D; }
+html:not([data-tema]) :is(.cta, .plan.featured) { --grafit: #1D2127; --ink: #1D2127; }
+html:not([data-tema]) .plan.featured { border-color: rgba(245,245,242,.16); }
+html:not([data-tema]) .brand .logo-svetla { display: none; }
+html:not([data-tema]) .brand .logo-tamna { display: block; }
+html:not([data-tema]) .tema-btn .ik-mesec { display: none; }
+html:not([data-tema]) .tema-btn .ik-sunce { display: block; }
+}

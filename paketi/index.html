@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){var t;try{t=localStorage.getItem('opsforma-tema')}catch(e){}if(t!=='tamna'&&t!=='svetla')t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'tamna':'svetla';document.documentElement.setAttribute('data-tema',t)})()</script>
 <link rel="canonical" href="https://opsforma.rs/paketi/">
 <title>Cene izrade sajta: paketi od 19.900 din | opsforma</title>
 <meta name="description" content="Koliko košta sajt za malu firmu: vizitkarta, online zakazivanje, porudžbine, prodavnica ili Premium. Plaćate jednom, održavanje po želji.">
@@ -434,13 +435,15 @@
   .pay p { max-width: 70ch; }
   .brand { min-height: 44px; align-items: center; }
 </style>
+<link rel="stylesheet" href="/assets/tema.css">
+<script src="/assets/tema.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#sadrzaj">Preskoči na sadržaj</a>
 
 <header class="site-head">
   <div class="wrap head-row">
-    <a class="brand" href="../" aria-label="opsforma, naslovna strana"><img src="/logo-zaglavlje.svg" alt="opsforma" width="477" height="106"></a>
+    <a class="brand" href="../" aria-label="opsforma, naslovna strana"><img class="logo-svetla" src="/logo-zaglavlje.svg" alt="opsforma" width="477" height="106"><img class="logo-tamna" src="/logo-zaglavlje-za-tamnu-pozadinu.svg" alt="opsforma" width="477" height="106"></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meni"><span class="bars" aria-hidden="true"></span>Meni</button>
     <nav class="nav" id="meni" aria-label="Glavna navigacija">
       <ul>
@@ -453,6 +456,7 @@
         <li class="nav-mail"><a href="mailto:kontakt@opsforma.rs">kontakt@opsforma.rs</a></li>
       </ul>
     </nav>
+    <button class="tema-btn" type="button" data-tema-dugme aria-pressed="false" aria-label="Tamna tema" title="Tamna tema"><svg class="ik-mesec" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg><svg class="ik-sunce" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
   </div>
 </header>
 
@@ -474,7 +478,7 @@
   <section id="paketi" aria-labelledby="paketi-naslov">
     <div class="wrap">
       <div class="sec-grid">
-        <h2 class="sec-title" id="paketi-naslov">Paketi<span class="dot" aria-hidden="true"></span></h2>
+        <h2 class="sec-title" id="paketi-naslov"><span class="nowrap">Paketi<span class="dot" aria-hidden="true"></span></span></h2>
         <p class="sec-lead" style="margin-top:0;align-self:end;max-width:52ch">Plaćate jednom. Sajt i domen su Vaši. Održavanje je po želji, ne morate ga uzeti. Paketi 1–3 se nadograđuju jedan na drugi: možete početi sa osnovnim i kasnije dodati zakazivanje. Paketi 4 i 5 su za online prodaju.</p>
       </div>
       <div class="plans">
@@ -561,7 +565,7 @@
         </article>
       </div>
       <div class="pay">
-        <h3>Kako se plaća<span class="dot" aria-hidden="true"></span></h3>
+        <h3>Kako se <span class="nowrap">plaća<span class="dot" aria-hidden="true"></span></span></h3>
         <p>Deo plaćate unapred, pre početka rada, a ostatak kad Vam predamo gotov sajt. Plaćate gotovinom ili uplatom na račun.</p>
         <p>U cenu su uključena dva kruga izmena. Svaki sledeći krug izmena je 2.000 din.</p>
         <p>Domen .rs plaćate posebno, oko 2.700 din godišnje.</p>
@@ -572,7 +576,7 @@
   <section id="prodaja" aria-labelledby="prodaja-naslov">
     <div class="wrap">
       <div class="sec-grid">
-        <h2 class="sec-title" id="prodaja-naslov">Online prodaja<span class="dot" aria-hidden="true"></span></h2>
+        <h2 class="sec-title" id="prodaja-naslov">Online <span class="nowrap">prodaja<span class="dot" aria-hidden="true"></span></span></h2>
         <p class="sec-lead" style="margin-top:0;align-self:end;max-width:52ch">Za radnje koje žele da prodaju i preko sajta: katalog, korpa i poručivanje, sa plaćanjem koje Vašim kupcima odgovara.</p>
       </div>
       <div class="plans-2">
@@ -630,7 +634,7 @@
         </article>
       </div>
       <div class="pay">
-        <h3>Kako se plaća<span class="dot" aria-hidden="true"></span></h3>
+        <h3>Kako se <span class="nowrap">plaća<span class="dot" aria-hidden="true"></span></span></h3>
         <p>Deo plaćate unapred, pre početka rada, a ostatak kad Vam predamo gotov sajt. Plaćate gotovinom ili uplatom na račun.</p>
         <p>U cenu su uključena dva kruga izmena. Svaki sledeći krug izmena je 2.000 din.</p>
         <p>Domen .rs plaćate posebno, oko 2.700 din godišnje.</p>
@@ -648,7 +652,7 @@
   <section id="premium" aria-labelledby="premium-naslov">
     <div class="wrap">
       <div class="sec-grid">
-        <h2 class="sec-title" id="premium-naslov">Premium<span class="dot" aria-hidden="true"></span></h2>
+        <h2 class="sec-title" id="premium-naslov"><span class="nowrap">Premium<span class="dot" aria-hidden="true"></span></span></h2>
         <p class="sec-lead" style="margin-top:0;align-self:end;max-width:52ch">Za firme kojima sajt radi veliki deo posla: više jezika, mnogo sadržaja, nalog za mušterije i povezano sa svim što već koristite.</p>
       </div>
       <div class="plans-2 plans-premium">
@@ -741,7 +745,7 @@
   <section id="zakazivanje" aria-labelledby="zak-naslov">
     <div class="wrap">
       <div class="sec-grid">
-        <h2 class="sec-title" id="zak-naslov">Kako ide zakazivanje<span class="dot" aria-hidden="true"></span></h2>
+        <h2 class="sec-title" id="zak-naslov">Kako ide <span class="nowrap">zakazivanje<span class="dot" aria-hidden="true"></span></span></h2>
         <p class="sec-lead" style="margin-top:0;align-self:end;max-width:52ch">Isti termin, dva pogleda: šta vidi mušterija, a šta Vi.</p>
       </div>
       <div class="flows">
@@ -804,7 +808,7 @@
   <section id="varijante" aria-labelledby="var-naslov">
     <div class="wrap sec-grid">
       <div>
-        <h2 class="sec-title" id="var-naslov">Dva načina, birate Vi<span class="dot" aria-hidden="true"></span></h2>
+        <h2 class="sec-title" id="var-naslov">Dva načina, birate <span class="nowrap">Vi<span class="dot" aria-hidden="true"></span></span></h2>
         <p class="sec-lead">U paketu 2 i Plus. Možete početi sa prvim, pa preći na drugi.</p>
       </div>
       <div class="variants">
@@ -824,7 +828,7 @@
 
   <section id="pitanja" aria-labelledby="pit-naslov">
     <div class="wrap sec-grid">
-      <h2 class="sec-title" id="pit-naslov">Česta pitanja<span class="dot" aria-hidden="true"></span></h2>
+      <h2 class="sec-title" id="pit-naslov">Česta <span class="nowrap">pitanja<span class="dot" aria-hidden="true"></span></span></h2>
       <div class="faq">
         <details>
           <summary>Koliko košta sajt?</summary>

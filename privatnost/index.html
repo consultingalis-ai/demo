@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){var t;try{t=localStorage.getItem('opsforma-tema')}catch(e){}if(t!=='tamna'&&t!=='svetla')t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'tamna':'svetla';document.documentElement.setAttribute('data-tema',t)})()</script>
 <link rel="canonical" href="https://opsforma.rs/privatnost/">
 <title>Politika privatnosti | opsforma</title>
 <meta name="description" content="Koje podatke opsforma prima preko sajta i kontakt forme, zašto ih koristi, koliko ih čuva i kako možete da tražite uvid ili brisanje.">
@@ -302,12 +303,14 @@
   .brand { min-height: 44px; align-items: center; }
   .menu-btn { min-height: 44px; }
 </style>
+<link rel="stylesheet" href="/assets/tema.css">
+<script src="/assets/tema.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#sadrzaj">Preskoči na sadržaj</a>
 <header class="site-head">
   <div class="wrap head-row">
-    <a class="brand" href="/" aria-label="opsforma, naslovna strana"><img src="/logo-zaglavlje.svg" alt="opsforma" width="477" height="106"></a>
+    <a class="brand" href="/" aria-label="opsforma, naslovna strana"><img class="logo-svetla" src="/logo-zaglavlje.svg" alt="opsforma" width="477" height="106"><img class="logo-tamna" src="/logo-zaglavlje-za-tamnu-pozadinu.svg" alt="opsforma" width="477" height="106"></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meni"><span class="bars" aria-hidden="true"></span>Meni</button>
     <nav class="nav" id="meni" aria-label="Glavna navigacija">
       <ul>
@@ -319,6 +322,7 @@
         <li class="nav-mail"><a href="mailto:kontakt@opsforma.rs">kontakt@opsforma.rs</a></li>
       </ul>
     </nav>
+    <button class="tema-btn" type="button" data-tema-dugme aria-pressed="false" aria-label="Tamna tema" title="Tamna tema"><svg class="ik-mesec" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg><svg class="ik-sunce" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
   </div>
 </header>
 
@@ -326,7 +330,7 @@
   <section class="hero" aria-labelledby="naslov">
     <div class="wrap">
       <p class="eyebrow">Pravno · opsforma</p>
-      <h1 id="naslov">Politika privatnosti<span class="dot" aria-hidden="true"></span></h1>
+      <h1 id="naslov">Politika <span class="nowrap">privatnosti<span class="dot" aria-hidden="true"></span></span></h1>
       <p class="hero-text">Koje podatke primamo preko ovog sajta, zašto, koliko ih čuvamo i šta možete da tražite od nas.</p>
     </div>
   </section>
@@ -356,13 +360,13 @@
         <h2>Koliko dugo čuvamo podatke</h2>
         <p>Dok traje komunikacija, a najduže 12 meseci posle poslednjeg javljanja, ako ne postanete klijent. Podatke klijenata čuvamo onoliko koliko traže propisi, na primer za račune.</p>
         <h2>Kolačići i statistika</h2>
-        <p>Sajt ne koristi kolačiće za praćenje ni za reklame, pa nema ni obaveštenja o kolačićima. Fontovi se učitavaju sa našeg sajta, pa se pri otvaranju stranice ništa ne šalje Google-u. Za broj poseta koristimo Cloudflare Web Analytics, koji ne koristi kolačiće i ne prati pojedinačne posetioce.</p>
+        <p>Sajt ne koristi kolačiće za praćenje ni za reklame, pa nema ni obaveštenja o kolačićima. Fontovi se učitavaju sa našeg sajta, pa se pri otvaranju stranice ništa ne šalje Google-u. Za broj poseta koristimo Cloudflare Web Analytics, koji ne koristi kolačiće i ne prati pojedinačne posetioce. Ako dugmetom u zaglavlju izaberete svetlu ili tamnu temu, Vaš pregledač pamti taj izbor na Vašem uređaju; to se nikome ne šalje.</p>
         <h2>Primeri sajtova</h2>
         <p>Primeri na ovom sajtu su za izmišljene firme. Podatke koje upišete u forme za zakazivanje i porudžbine u primerima ne primamo ni mi ni iko drugi. Neki primeri učitavaju Google fontove ili Google mapu, pa Google tada vidi Vašu IP adresu.</p>
         <h2>Vaša prava</h2>
         <p>Možete da tražite uvid u svoje podatke, ispravku, brisanje ili ograničenje obrade, i da se usprotivite obradi. Pišite nam na Viber, na Instagramu <a href="https://www.instagram.com/opsformars/" rel="noopener">@opsformars</a> ili na <a href="mailto:kontakt@opsforma.rs">kontakt@opsforma.rs</a>; odgovaramo najkasnije u roku od 30 dana. Ako mislite da Vaše podatke ne obrađujemo kako treba, možete da podnesete pritužbu Povereniku za informacije od javnog značaja i zaštitu podataka o ličnosti (<a href="https://www.poverenik.rs" rel="noopener">poverenik.rs</a>).</p>
         <h2>Izmene</h2>
-        <p>Ako promenimo način rada sa podacima, ažuriramo ovu stranu. Poslednja izmena: 22. oktobar 2026.</p>
+        <p>Ako promenimo način rada sa podacima, ažuriramo ovu stranu. Poslednja izmena: 30. oktobar 2026.</p>
       </div>
     </div>
   </section>

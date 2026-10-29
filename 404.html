@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){var t;try{t=localStorage.getItem('opsforma-tema')}catch(e){}if(t!=='tamna'&&t!=='svetla')t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'tamna':'svetla';document.documentElement.setAttribute('data-tema',t)})()</script>
 <title>Stranica ne postoji | opsforma</title>
 <meta name="robots" content="noindex">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -294,12 +295,14 @@
   @media (min-width: 560px) { .nf-actions { display: flex; flex-wrap: wrap; } }
   [data-viber][hidden], [data-bez-vibera][hidden] { display: none !important; }
 </style>
+<link rel="stylesheet" href="/assets/tema.css">
+<script src="/assets/tema.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#sadrzaj">Preskoči na sadržaj</a>
 <header class="site-head">
   <div class="wrap head-row">
-    <a class="brand" href="/" aria-label="opsforma, naslovna strana"><img src="/logo-zaglavlje.svg" alt="opsforma" width="477" height="106"></a>
+    <a class="brand" href="/" aria-label="opsforma, naslovna strana"><img class="logo-svetla" src="/logo-zaglavlje.svg" alt="opsforma" width="477" height="106"><img class="logo-tamna" src="/logo-zaglavlje-za-tamnu-pozadinu.svg" alt="opsforma" width="477" height="106"></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="meni"><span class="bars" aria-hidden="true"></span>Meni</button>
     <nav class="nav" id="meni" aria-label="Glavna navigacija">
       <ul>
@@ -311,6 +314,7 @@
         <li class="nav-mail"><a href="mailto:kontakt@opsforma.rs">kontakt@opsforma.rs</a></li>
       </ul>
     </nav>
+    <button class="tema-btn" type="button" data-tema-dugme aria-pressed="false" aria-label="Tamna tema" title="Tamna tema"><svg class="ik-mesec" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg><svg class="ik-sunce" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
   </div>
 </header>
 
@@ -318,7 +322,7 @@
   <section class="hero" aria-labelledby="naslov">
     <div class="wrap">
       <p class="eyebrow">Greška 404</p>
-      <h1 id="naslov">Ova stranica ne postoji<span class="dot" aria-hidden="true"></span></h1>
+      <h1 id="naslov">Ova stranica ne <span class="nowrap">postoji<span class="dot" aria-hidden="true"></span></span></h1>
       <p class="hero-text">Možda je adresa pogrešno upisana ili je stranica premeštena. Evo kuda možete dalje:</p>
       <div class="nf-actions">
         <a class="btn btn-primary" href="/">Naslovna</a>
