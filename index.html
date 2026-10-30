@@ -717,7 +717,7 @@
           <label for="f-radnja">Naziv radnje i link na Google mapu <span class="opt">(ako postoji)</span></label>
           <input id="f-radnja" name="radnja_i_google_mapa" type="text" autocomplete="off">
         </div>
-        <div class="f-wide hcaptcha-polje" id="hcaptcha"></div>
+        <div class="f-wide hcaptcha-polje" id="hcaptcha-mesto"></div>
         <div class="f-wide form-foot">
           <button class="btn btn-primary" type="submit">Pošaljite poruku</button>
           <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
@@ -864,7 +864,7 @@
   var sendBtn = form.querySelector('button[type="submit"]');
 
   // hCaptcha se učitava tek kad posetilac počne da popunjava formu (brža stranica, manje podataka trećoj strani).
-  var hc = { mesto: document.getElementById('hcaptcha'), id: null, ucitava: false, greska: false };
+  var hc = { mesto: document.getElementById('hcaptcha-mesto'), id: null, ucitava: false, greska: false };
   function ucitajHcaptcha() {
     if (!HCAPTCHA_SITEKEY || hc.ucitava || !hc.mesto) return;
     hc.ucitava = true;
