@@ -1,0 +1,4 @@
+Contact: mailto:kontakt@opsforma.rs
+Expires: 2027-10-30T00:00:00.000Z
+Preferred-Languages: sr, en
+Canonical: https://opsforma.rs/.well-known/security.txt

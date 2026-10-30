@@ -316,6 +316,8 @@
   input:focus-visible, textarea:focus-visible { outline: 2px solid var(--ink); outline-offset: 1px; border-color: var(--ink); }
   .form-foot { display: grid; gap: 16px; align-items: center; }
   @media (min-width: 560px) { .form-foot { grid-template-columns: auto 1fr; } }
+  .hcaptcha-polje { min-height: 78px; }
+  .hcaptcha-polje:empty { min-height: 0; }
   .form-msg { font-size: 1rem; }
   .form-msg:not(:empty) { padding: 14px 16px; border-left: 3px solid var(--signal); background: #fff; }
 
@@ -690,7 +692,9 @@
         <!-- ROK za nacrt: promeni "2 radna dana" ovde ako se dogovorimo drugačije -->
         <p>Pošaljite nam naziv radnje, a mi Vam za 2 radna dana pravimo nacrt sajta sa Vašim imenom i cenama. Bez obaveze.</p>
       </div>
-      <!-- Poruke idu preko Web3Forms na opsformars@gmail.com. Ključ je u WEB3FORMS_KEY u skripti ispod. -->
+      <!-- Poruke idu preko Web3Forms na naš mejl. Ključ je u WEB3FORMS_KEY u skripti ispod.
+           Zaštita od spama: hCaptcha (besplatna, preko Web3Forms). Učitava se kad posetilac počne da popunjava formu.
+           Web3Forms je zahteva tek kad se u njegovim podešavanjima izabere hCaptcha. -->
       <form id="forma" action="https://api.web3forms.com/submit" method="post" novalidate>
         <input type="checkbox" name="botcheck" class="sr" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div>
@@ -713,6 +717,7 @@
           <label for="f-radnja">Naziv radnje i link na Google mapu <span class="opt">(ako postoji)</span></label>
           <input id="f-radnja" name="radnja_i_google_mapa" type="text" autocomplete="off">
         </div>
+        <div class="f-wide hcaptcha-polje" id="hcaptcha"></div>
         <div class="f-wide form-foot">
           <button class="btn btn-primary" type="submit">Pošaljite poruku</button>
           <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
@@ -849,11 +854,45 @@
     new IntersectionObserver(function (e) { bar.classList.toggle('is-hidden', e[0].isIntersecting); }, { threshold: 0.15 }).observe(kontakt);
   }
 
-  // Kontakt forma -> Web3Forms -> opsformars@gmail.com
+  // Kontakt forma -> Web3Forms -> naš mejl
   var WEB3FORMS_KEY = '927b5bf9-94be-47c5-9359-83df12195b0b';
+  // hCaptcha preko Web3Forms (besplatan zajednički ključ iz njihove dokumentacije).
+  // Prazno = bez hCaptcha. Web3Forms je proverava tek kad je u njegovim podešavanjima izabrana.
+  var HCAPTCHA_SITEKEY = '50b2fe65-b00b-4b9e-ad62-3ba471098be2';
   var form = document.getElementById('forma');
   var msg = document.getElementById('form-msg');
   var sendBtn = form.querySelector('button[type="submit"]');
+
+  // hCaptcha se učitava tek kad posetilac počne da popunjava formu (brža stranica, manje podataka trećoj strani).
+  var hc = { mesto: document.getElementById('hcaptcha'), id: null, ucitava: false, greska: false };
+  function ucitajHcaptcha() {
+    if (!HCAPTCHA_SITEKEY || hc.ucitava || !hc.mesto) return;
+    hc.ucitava = true;
+    window.opsformaHcaptcha = function () {
+      try {
+        hc.id = window.hcaptcha.render(hc.mesto, {
+          sitekey: HCAPTCHA_SITEKEY,
+          theme: document.documentElement.getAttribute('data-tema') === 'tamna' ? 'dark' : 'light'
+        });
+      } catch (er) { hc.greska = true; }
+    };
+    var s = document.createElement('script');
+    s.src = 'https://js.hcaptcha.com/1/api.js?render=explicit&onload=opsformaHcaptcha&recaptchacompat=off&hl=sr';
+    s.async = true;
+    s.onerror = function () { hc.greska = true; };
+    document.head.appendChild(s);
+  }
+  form.addEventListener('focusin', ucitajHcaptcha);
+  form.addEventListener('pointerdown', ucitajHcaptcha);
+  function hcaptchaOdgovor() {
+    if (!HCAPTCHA_SITEKEY || hc.greska) return 'nije-potrebno';
+    if (hc.id === null || !window.hcaptcha) return '';
+    try { return window.hcaptcha.getResponse(hc.id) || ''; } catch (er) { return ''; }
+  }
+  function resetujHcaptcha() {
+    if (hc.id !== null && window.hcaptcha) { try { window.hcaptcha.reset(hc.id); } catch (er) {} }
+  }
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var ime = form.elements.ime.value.trim(), tel = form.elements.telefon.value.trim();
@@ -864,6 +903,12 @@
     }
     if (!WEB3FORMS_KEY) {
       msg.textContent = 'Forma se upravo povezuje. Do tada nam pišite na Instagramu @opsformars ili na kontakt@opsforma.rs.';
+      return;
+    }
+    var provera = hcaptchaOdgovor();
+    if (!provera) {
+      ucitajHcaptcha();
+      msg.textContent = 'Još samo jedan korak: potvrdite da niste robot (polje iznad dugmeta), pa pošaljite ponovo.';
       return;
     }
     var data = new FormData(form);
@@ -885,7 +930,7 @@
           ? 'Poruka nije poslata. Pokušajte ponovo ili nam pišite na Viber.'
           : 'Poruka nije poslata. Pokušajte ponovo ili nam pišite na kontakt@opsforma.rs.';
       })
-      .then(function () { sendBtn.disabled = false; });
+      .then(function () { sendBtn.disabled = false; resetujHcaptcha(); });
   });
 
   document.getElementById('godina').textContent = new Date().getFullYear();
