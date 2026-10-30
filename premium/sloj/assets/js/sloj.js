@@ -293,8 +293,14 @@
     var tekst = function (k, v) { var t = T[k] || ''; return v ? t.replace(/\{(\w+)\}/g, function (m, x) { return v[x] != null ? v[x] : m; }) : t; };
     function pripremi() {
       if (priprema) return priprema;
-      priprema = Promise.all([ucitajSliku(slika.currentSrc || slika.src), ucitajSliku(koren.getAttribute('data-maska'))]).then(function (x) {
-        var w = platno.width, h = platno.height, c = d.createElement('canvas'); c.width = w; c.height = h * 2; var cx = c.getContext('2d', { willReadFrequently: true });
+      var adresa = koren.getAttribute('data-maska'), w = platno.width, h = platno.height;
+      priprema = Promise.all([ucitajSliku(slika.currentSrc || slika.src), ucitajSliku(adresa)]).then(function (x) {
+        // maska mora biti tačno 1280×1440; ako stigne stara kopija iz keša, učitava se ponovo sa mreže, a ako ni tada ne valja, ostaje fotografija
+        if (x[1].naturalWidth === w && x[1].naturalHeight === h * 2) return x;
+        return ucitajSliku(adresa + (adresa.indexOf('?') < 0 ? '?' : '&') + 'r=' + Date.now()).then(function (m) { x[1] = m; return x; });
+      }).then(function (x) {
+        if (x[1].naturalWidth !== w || x[1].naturalHeight !== h * 2) throw new Error('maska');
+        var c = d.createElement('canvas'); c.width = w; c.height = h * 2; var cx = c.getContext('2d', { willReadFrequently: true });
         cx.drawImage(x[0], 0, 0, w, h); osnova = cx.getImageData(0, 0, w, h);
         cx.clearRect(0, 0, w, h * 2); cx.drawImage(x[1], 0, 0, w, h * 2); maska = cx.getImageData(0, 0, w, h * 2).data;
       });
