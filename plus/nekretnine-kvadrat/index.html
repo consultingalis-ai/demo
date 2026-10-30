@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, follow">
+<title>Kvadrat, agencija za nekretnine · Beograd</title>
+<meta name="description" content="Agencija za nekretnine Kvadrat: stanovi i kuće za prodaju i izdavanje u Beogradu. Pogledajte ponudu i zakažite razgledanje sa agentom online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+  /* Agencija za nekretnine: tlocrti umesto fotografija, beton i duboka zelena, cene u evrima kao na tržištu */
+  :root {
+    --zid: #F1F2EF; --bela: #FFFFFF; --beton: #DFE2DD; --tinta: #17201D; --siva: #5B6560; --zelena: #22614F; --zelena-svetla: #E1EEE8; --linija: #D2D7D2; --oker: #B7892E;
+    --font: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--zid); color: var(--tinta); font: 400 1.0625rem/1.6 var(--font); font-stretch: 100%; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  h1, h2, h3 { margin: 0; font-weight: 800; font-stretch: 75%; line-height: 1; letter-spacing: -.005em; text-transform: uppercase; }
+  p { margin: 0; }
+  :focus-visible { outline: 3px solid var(--oker); outline-offset: 2px; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+  .broj { font-variant-numeric: tabular-nums; }
+
+  .demo { background: var(--tinta); color: #DDE3DF; font-size: .8125rem; }
+  .demo .wrap { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; padding-block: 8px; }
+  .demo a { color: #fff; font-weight: 500; margin-left: auto; }
+  .znacka { font-size: .75rem; font-weight: 600; padding: 2px 8px; background: var(--oker); color: #1B1404; }
+
+  .top { background: var(--zid); border-bottom: 2px solid var(--tinta); position: sticky; top: 0; z-index: 10; }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
+  .logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; font-stretch: 75%; font-size: 1.6rem; text-transform: uppercase; letter-spacing: .02em; }
+  .logo i { width: 22px; height: 22px; border: 3px solid var(--tinta); display: inline-block; position: relative; }
+  .logo i::after { content: ""; position: absolute; right: -3px; bottom: -3px; width: 10px; height: 10px; background: var(--zelena); }
+  .meni-dugme { font: 600 .95rem var(--font); background: none; border: 2px solid var(--tinta); padding: 8px 14px; min-height: 44px; cursor: pointer; color: var(--tinta); }
+  .glavni { display: none; }
+  .glavni.otvoren { display: block; position: absolute; left: 0; right: 0; top: 100%; background: var(--zid); border-bottom: 2px solid var(--tinta); }
+  .glavni ul { list-style: none; margin: 0; padding: 4px 20px 12px; }
+  .glavni a { display: block; padding: 12px 0; text-decoration: none; border-bottom: 1px solid var(--linija); font-weight: 500; }
+  @media (min-width: 860px) {
+    .meni-dugme { display: none; }
+    .glavni, .glavni.otvoren { display: block; position: static; border: 0; background: none; }
+    .glavni ul { display: flex; gap: 26px; padding: 0; }
+    .glavni a { border: 0; padding: 6px 0; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+    .glavni a:hover { text-decoration-color: var(--zelena); }
+  }
+
+  .hero .wrap { padding-block: 44px 48px; display: grid; gap: 28px; }
+  .hero h1 { font-size: clamp(3rem, 11vw, 6.4rem); max-width: 10ch; }
+  .hero h1 span { color: var(--zelena); }
+  .uvod { font-size: 1.15rem; max-width: 50ch; color: var(--siva); }
+  .akcije { display: flex; flex-wrap: wrap; gap: 10px; }
+  .dugme { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 20px; border: 2px solid var(--tinta); background: transparent; color: var(--tinta); font: 600 1rem var(--font); text-decoration: none; cursor: pointer; }
+  .dugme.glavno { background: var(--zelena); border-color: var(--zelena); color: #fff; }
+  .dugme.glavno:hover { background: var(--tinta); border-color: var(--tinta); }
+  .dugme:not(.glavno):hover { background: var(--tinta); color: var(--zid); }
+  .brojke { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid var(--tinta); }
+  .brojke div { padding: 14px 12px 0 0; }
+  .brojke b { display: block; font-weight: 800; font-stretch: 75%; font-size: 2rem; line-height: 1; }
+  .brojke span { font-size: .9rem; color: var(--siva); }
+  @media (min-width: 900px) { .hero .wrap { grid-template-columns: 1.3fr 1fr; align-items: end; gap: 56px; padding-block: 64px; } .hero .desno { display: grid; gap: 24px; } }
+
+  .blok { padding-block: 56px; border-top: 1px solid var(--linija); }
+  .glava { display: grid; gap: 10px; margin-bottom: 24px; }
+  .glava h2 { font-size: clamp(2.2rem, 6vw, 3.4rem); }
+  .glava p { color: var(--siva); max-width: 60ch; }
+
+  .filteri { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .filteri button { font: 600 .95rem var(--font); padding: 10px 16px; min-height: 44px; border: 2px solid var(--tinta); background: transparent; color: var(--tinta); cursor: pointer; }
+  .filteri button[aria-pressed="true"] { background: var(--tinta); color: var(--zid); }
+  .stanovi { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+  @media (min-width: 640px) { .stanovi { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1000px) { .stanovi { grid-template-columns: repeat(3, 1fr); } }
+  .stan { background: var(--bela); border: 1px solid var(--linija); display: grid; grid-template-rows: auto 1fr; }
+  .stan[hidden] { display: none; }
+  .tlocrt { position: relative; background: var(--zelena-svetla); aspect-ratio: 4 / 3; max-width: 100%; border-bottom: 1px solid var(--linija); }
+  .tlocrt svg { width: 100%; height: 100%; display: block; }
+  .tip { position: absolute; left: 12px; top: 12px; font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: 3px 9px; background: var(--tinta); color: #fff; }
+  .tip.izdavanje { background: var(--oker); color: #1B1404; }
+  .stan-telo { padding: 16px 16px 18px; display: grid; gap: 10px; align-content: start; }
+  .stan h3 { font-size: 1.55rem; }
+  .gde { color: var(--siva); font-size: .95rem; }
+  .podaci { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: .95rem; margin: 0; }
+  .podaci div { display: flex; gap: 6px; }
+  .podaci dt { color: var(--siva); }
+  .podaci dd { margin: 0; font-weight: 600; }
+  .cena-red { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding-top: 10px; border-top: 1px solid var(--linija); }
+  .cena { font-weight: 800; font-stretch: 75%; font-size: 1.8rem; }
+  .po-m2 { color: var(--siva); font-size: .9rem; }
+  .stan .dugme { width: 100%; }
+
+  .agenti { display: grid; gap: 16px; }
+  @media (min-width: 760px) { .agenti { grid-template-columns: 1fr 1fr; } }
+  .agent { display: grid; grid-template-columns: 72px 1fr; gap: 16px; align-items: center; background: var(--bela); border: 1px solid var(--linija); padding: 18px; }
+  .inicijali { width: 72px; height: 72px; display: grid; place-items: center; background: var(--tinta); color: #fff; font-weight: 800; font-stretch: 75%; font-size: 1.6rem; }
+  .agent h3 { font-size: 1.4rem; }
+  .agent p { color: var(--siva); font-size: .95rem; }
+
+  /* razgledanje */
+  .zak { background: var(--bela); border: 2px solid var(--tinta); padding: 20px; display: grid; gap: 22px; }
+  .zak-zag { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; color: var(--siva); font-size: .9rem; }
+  .korak { display: grid; gap: 10px; }
+  .korak > span { font-weight: 700; font-size: 1.05rem; }
+  .korak > span b { display: inline-grid; place-items: center; width: 26px; height: 26px; background: var(--tinta); color: #fff; font-size: .85rem; margin-right: 8px; }
+  select, input[type=text], input[type=tel], input[type=email] { width: 100%; font: 400 1rem/1.4 var(--font); color: var(--tinta); background: var(--zid); border: 1px solid #8E9892; padding: 12px 13px; min-height: 48px; border-radius: 0; }
+  .agent-mali { color: var(--siva); font-size: .95rem; }
+  .dani { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; }
+  .dan { flex: none; display: grid; justify-items: center; min-width: 58px; padding: 8px 4px; border: 2px solid var(--linija); background: var(--bela); cursor: pointer; font: 500 .9rem var(--font); color: var(--tinta); }
+  .dan small { font-size: .72rem; color: var(--siva); text-transform: uppercase; }
+  .dan b { font-weight: 800; font-stretch: 75%; font-size: 1.4rem; line-height: 1.1; }
+  .dan[aria-pressed="true"] { border-color: var(--zelena); background: var(--zelena-svetla); }
+  .dan:disabled { opacity: .35; cursor: not-allowed; }
+  .vremena { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 8px; }
+  .vremena button { font: 600 1rem var(--font); min-height: 46px; border: 2px solid var(--linija); background: var(--bela); cursor: pointer; color: var(--tinta); font-variant-numeric: tabular-nums; }
+  .vremena button[aria-pressed="true"] { background: var(--zelena); border-color: var(--zelena); color: #fff; }
+  .vremena .nema { grid-column: 1 / -1; color: var(--siva); }
+  .polja { display: grid; gap: 12px; }
+  @media (min-width: 700px) { .polja { grid-template-columns: 1fr 1fr; } }
+  label.l { display: block; font-weight: 600; font-size: .95rem; margin-bottom: 6px; }
+  .cek { display: flex; gap: 10px; align-items: flex-start; font-size: .95rem; }
+  .cek input { width: 20px; height: 20px; margin-top: 3px; accent-color: var(--zelena); }
+  .greska { color: #B3261E; font-weight: 600; min-height: 1.2em; }
+  .potvrda { display: grid; gap: 14px; }
+  .potvrda h3 { font-size: 2rem; color: var(--zelena); }
+  .potvrda dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; margin: 0; }
+  .potvrda dt { color: var(--siva); }
+  .potvrda dd { margin: 0; font-weight: 600; }
+
+  .dvokol { display: grid; gap: 28px; }
+  @media (min-width: 900px) { .dvokol { grid-template-columns: 1fr 1fr; gap: 56px; } }
+  .provizija { display: grid; gap: 0; margin: 0; border-top: 2px solid var(--tinta); }
+  .provizija div { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--linija); }
+  .provizija dt { font-weight: 600; }
+  .provizija dd { margin: 0; font-weight: 800; font-stretch: 75%; font-size: 1.3rem; text-align: right; }
+  .sati { width: 100%; border-collapse: collapse; }
+  .sati th, .sati td { padding: 10px 0; border-bottom: 1px solid var(--linija); text-align: left; font-weight: 400; }
+  .sati td { text-align: right; font-variant-numeric: tabular-nums; }
+  .sati tr.danas th, .sati tr.danas td { color: var(--zelena); font-weight: 700; }
+  .tel { font-weight: 800; font-stretch: 75%; font-size: 2.2rem; text-decoration: none; display: inline-block; margin: 6px 0 14px; }
+  footer { background: var(--tinta); color: #C9D1CC; font-size: .9rem; padding-block: 24px 36px; }
+  footer .wrap { display: grid; gap: 8px; }
+  footer a { color: #fff; }
+  @media (min-width: 760px) { footer .wrap { grid-template-columns: 1fr auto; } }
+</style>
+</head>
+<body>
+
+<div class="demo">
+  <div class="wrap">
+    <span>Primer sajta · izradio opsforma</span>
+    <span class="znacka">Paket 3: Plus</span>
+    <a href="../../">Svi primeri</a>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#pocetak"><i aria-hidden="true"></i>Kvadrat</a>
+    <button class="meni-dugme" type="button" aria-expanded="false" aria-controls="meni">Meni</button>
+    <nav class="glavni" id="meni" aria-label="Glavni meni">
+      <ul>
+        <li><a href="#ponuda">Ponuda</a></li>
+        <li><a href="#razgledanje">Razgledanje</a></li>
+        <li><a href="#prodajete">Prodajete?</a></li>
+        <li><a href="#agenti">Agenti</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="pocetak">
+  <section class="hero" aria-labelledby="naslov">
+    <div class="wrap">
+      <div style="display:grid;gap:22px">
+        <h1 id="naslov">Stan koji ste <span>tražili.</span></h1>
+        <p class="uvod">Stanovi i kuće za prodaju i izdavanje u Beogradu. Svaki oglas smo lično obišli, a razgledanje zakazujete ovde, kod agenta koji zna stan.</p>
+        <div class="akcije">
+          <a class="dugme glavno" href="#ponuda">Pogledajte ponudu</a>
+          <a class="dugme" href="tel:+381600000833">060 000 08 33</a>
+        </div>
+      </div>
+      <div class="desno">
+        <div class="brojke">
+          <div><b class="broj">6</b><span>stanova u ponudi</span></div>
+          <div><b class="broj">2</b><span>agenta</span></div>
+          <div><b class="broj">2%</b><span>provizija</span></div>
+        </div>
+        <p class="agent-mali">Upisani u Registar posrednika u prometu i zakupu nepokretnosti. Provizija se plaća tek posle potpisanog ugovora.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="blok" id="ponuda" aria-labelledby="h-ponuda">
+    <div class="wrap">
+      <div class="glava"><h2 id="h-ponuda">Ponuda</h2><p>Tlocrti su okvirni. Ponudu i cene agencija menja sama, u tabeli na telefonu.</p></div>
+      <div class="filteri" role="group" aria-label="Prikaži">
+        <button type="button" data-f="sve" aria-pressed="true">Sve</button>
+        <button type="button" data-f="prodaja" aria-pressed="false">Prodaja</button>
+        <button type="button" data-f="izdavanje" aria-pressed="false">Izdavanje</button>
+      </div>
+      <ul class="stanovi" id="stanovi"></ul>
+    </div>
+  </section>
+
+  <!--
+    PRODUKCIJA (paket Plus)
+    Svaki agent ima svoj Google Kalendar. Slobodni termini za razgledanje čitaju se iz kalendara agenta
+    zaduženog za stan, a zakazano razgledanje se upisuje u njegov kalendar. Podsetnik dan ranije šalje se
+    SMS-om ili mejlom. Ponuda (stanovi, cene, agent) se vodi u Google tabeli.
+    U demou su termini izmišljeni i ništa se ne šalje.
+  -->
+  <section class="blok" id="razgledanje" aria-labelledby="h-razg">
+    <div class="wrap">
+      <div class="glava"><h2 id="h-razg">Razgledanje</h2><p>Izaberite stan, dan i vreme. Razgledanje vodi agent zadužen za taj stan i dan ranije Vam šaljemo podsetnik.</p></div>
+      <div class="zak">
+        <div class="zak-zag"><span class="znacka">Paket 3: Plus</span><span>Primer: termini su izmišljeni</span></div>
+        <form id="forma" novalidate style="display:grid;gap:22px">
+          <div class="korak">
+            <label class="l" for="z-stan" style="margin:0"><span style="font-weight:700;font-size:1.05rem"><b style="display:inline-grid;place-items:center;width:26px;height:26px;background:var(--tinta);color:#fff;font-size:.85rem;margin-right:8px">1</b>Stan</span></label>
+            <select id="z-stan" name="stan"></select>
+            <p class="agent-mali" id="z-agent"></p>
+          </div>
+          <div class="korak" role="group" aria-labelledby="k2"><span id="k2"><b>2</b>Dan</span><div class="dani" id="dani"></div></div>
+          <div class="korak" role="group" aria-labelledby="k3"><span id="k3"><b>3</b>Vreme</span><div class="vremena" id="vremena" aria-live="polite"><p class="nema">Prvo izaberite dan.</p></div></div>
+          <div class="korak"><span><b>4</b>Vaši podaci</span>
+            <div class="polja">
+              <div><label class="l" for="z-ime">Ime i prezime</label><input type="text" id="z-ime" name="ime" autocomplete="name"></div>
+              <div><label class="l" for="z-tel">Telefon</label><input type="tel" id="z-tel" name="telefon" inputmode="tel" autocomplete="tel"></div>
+            </div>
+            <label class="cek"><input type="checkbox" id="z-pods" name="podsetnik" checked><span>Pošaljite mi podsetnik dan ranije</span></label>
+          </div>
+          <p class="greska" id="greska" role="alert"></p>
+          <div><button class="dugme glavno" type="submit">Zakažite razgledanje</button></div>
+        </form>
+        <div class="potvrda" id="potvrda" hidden tabindex="-1">
+          <h3>Razgledanje je zakazano</h3>
+          <dl id="sazetak"></dl>
+          <p class="agent-mali">Ovo je primer: na pravom sajtu termin se upisuje u kalendar agenta, a Vama stiže potvrda i podsetnik dan ranije.</p>
+          <div class="akcije"><button class="dugme glavno" type="button" id="ics">Dodaj u kalendar</button><button class="dugme" type="button" id="novi">Novo razgledanje</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blok" id="prodajete" aria-labelledby="h-prod">
+    <div class="wrap dvokol">
+      <div class="glava" style="margin:0"><h2 id="h-prod">Prodajete ili izdajete?</h2><p>Dođemo, pogledamo stan i kažemo realnu cenu. Procena je besplatna i ne obavezuje Vas.</p><div class="akcije" style="margin-top:8px"><a class="dugme glavno" href="#kontakt">Zatražite procenu</a></div></div>
+      <dl class="provizija">
+        <div><dt>Kupovina ili prodaja</dt><dd>2% od cene</dd></div>
+        <div><dt>Zakup</dt><dd>50% prve kirije</dd></div>
+        <div><dt>Procena stana</dt><dd>besplatno</dd></div>
+        <div><dt>Kada se plaća</dt><dd>posle ugovora</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="blok" id="agenti" aria-labelledby="h-ag">
+    <div class="wrap">
+      <div class="glava"><h2 id="h-ag">Agenti</h2></div>
+      <div class="agenti">
+        <article class="agent"><span class="inicijali" aria-hidden="true">AM</span><div><h3>Ana Marković</h3><p>Prodaja stanova, centar i Vračar. Razgledanja radnim danima i subotom pre podne.</p></div></article>
+        <article class="agent"><span class="inicijali" aria-hidden="true">MI</span><div><h3>Milan Ilić</h3><p>Kuće i izdavanje, Novi Beograd i Voždovac. Razgledanja i posle 17 h.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="blok" id="kontakt" aria-labelledby="h-kon">
+    <div class="wrap dvokol">
+      <div>
+        <div class="glava"><h2 id="h-kon">Kontakt</h2></div>
+        <p>Kancelarija: Bulevar kralja Aleksandra 96<br>Beograd</p>
+        <a class="tel" href="tel:+381600000833">060 000 08 33</a>
+      </div>
+      <table class="sati" aria-label="Radno vreme">
+        <tbody>
+          <tr data-dan="1"><th scope="row">Ponedeljak</th><td>09:00–19:00</td></tr>
+          <tr data-dan="2"><th scope="row">Utorak</th><td>09:00–19:00</td></tr>
+          <tr data-dan="3"><th scope="row">Sreda</th><td>09:00–19:00</td></tr>
+          <tr data-dan="4"><th scope="row">Četvrtak</th><td>09:00–19:00</td></tr>
+          <tr data-dan="5"><th scope="row">Petak</th><td>09:00–19:00</td></tr>
+          <tr data-dan="6"><th scope="row">Subota</th><td>10:00–14:00</td></tr>
+          <tr data-dan="0"><th scope="row">Nedelja</th><td>zatvoreno</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Kvadrat, agencija za nekretnine, Beograd</span>
+    <span>Primer sajta · izradio opsforma · <a href="../../">Svi primeri</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var $ = function (id) { return document.getElementById(id); };
+  var mb = document.querySelector('.meni-dugme'), meni = $('meni');
+  function postavi(o){ mb.setAttribute('aria-expanded', String(o)); meni.classList.toggle('otvoren', o); }
+  mb.addEventListener('click', function(){ postavi(mb.getAttribute('aria-expanded') !== 'true'); });
+  meni.addEventListener('click', function(e){ if (e.target.closest('a')) postavi(false); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && mb.getAttribute('aria-expanded') === 'true'){ postavi(false); mb.focus(); } });
+  var red = document.querySelector('.sati tr[data-dan="' + new Date().getDay() + '"]'); if (red) red.classList.add('danas');
+
+  var AGENTI = { ana: { ime: 'Ana Marković', rv: { 1: [10, 18], 2: [10, 18], 3: [10, 18], 4: [10, 18], 5: [10, 18], 6: [10, 13] } },
+                 milan: { ime: 'Milan Ilić', rv: { 1: [12, 20], 2: [12, 20], 3: [12, 20], 4: [12, 20], 5: [12, 20], 6: null } } };
+  var STANOVI = [
+    { id: 'v58', naslov: 'Dvosoban stan', gde: 'Vračar, kod Kalenić pijace', tip: 'prodaja', str: '2.0', m2: 58, sprat: '4/5', lift: 'da', cena: 185000, agent: 'ana', sobe: 2 },
+    { id: 'z41', naslov: 'Jednoiposoban stan', gde: 'Zvezdara, Đeram', tip: 'prodaja', str: '1.5', m2: 41, sprat: '2/4', lift: 'ne', cena: 98000, agent: 'milan', sobe: 1 },
+    { id: 'nb74', naslov: 'Trosoban stan', gde: 'Novi Beograd, blok 45', tip: 'izdavanje', str: '3.0', m2: 74, sprat: '7/12', lift: 'da', cena: 950, agent: 'milan', sobe: 3 },
+    { id: 'kv140', naslov: 'Kuća sa dvorištem', gde: 'Voždovac, Kumodraž', tip: 'prodaja', str: 'kuća', m2: 140, sprat: 'P+1', lift: 'plac 4 ara', cena: 245000, agent: 'milan', sobe: 4 },
+    { id: 'd28', naslov: 'Garsonjera', gde: 'Dorćol, blizu Dunava', tip: 'izdavanje', str: '0.5', m2: 28, sprat: '3/5', lift: 'ne', cena: 480, agent: 'ana', sobe: 0 },
+    { id: 'bb63', naslov: 'Dvoiposoban stan', gde: 'Banovo brdo', tip: 'prodaja', str: '2.5', m2: 63, sprat: '1/4', lift: 'ne', cena: 139000, agent: 'ana', sobe: 2 }
+  ];
+  function eur(n) { return n.toLocaleString('sr-RS').replace(/\s|,/g, '.') + ' €'; }
+  function rnd(s) { var h = 2166136261; for (var i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } h ^= h >>> 15; return (h >>> 0) / 4294967296; }
+
+  // tlocrt: prostorije nacrtane po broju soba, isti crtež za isti stan
+  function tlocrt(s) {
+    var W = 400, H = 300, x0 = 40, y0 = 34, w = 320, h = 232, p = [], r = function (k) { return rnd(s.id + k); };
+    p.push('<rect x="' + x0 + '" y="' + y0 + '" width="' + w + '" height="' + h + '" fill="#fff" stroke="#17201D" stroke-width="6"/>');
+    var podela = 0.38 + r('a') * 0.24, xd = x0 + w * podela;
+    p.push('<line x1="' + xd + '" y1="' + y0 + '" x2="' + xd + '" y2="' + (y0 + h) + '" stroke="#17201D" stroke-width="3"/>');
+    var n = Math.max(1, s.sobe), korak = h / n;
+    for (var i = 1; i < n; i++) p.push('<line x1="' + xd + '" y1="' + (y0 + korak * i) + '" x2="' + (x0 + w) + '" y2="' + (y0 + korak * i) + '" stroke="#17201D" stroke-width="3"/>');
+    var yk = y0 + h * (0.45 + r('b') * 0.15);
+    p.push('<line x1="' + x0 + '" y1="' + yk + '" x2="' + xd + '" y2="' + yk + '" stroke="#17201D" stroke-width="3"/>');
+    p.push('<path d="M' + (xd - 2) + ' ' + (yk + 18) + ' a22 22 0 0 1 -22 22" fill="none" stroke="#22614F" stroke-width="2"/>');
+    var t = 'font-family="Archivo,Arial" font-size="13" fill="#5B6560" text-anchor="middle"';
+    p.push('<text x="' + (x0 + (xd - x0) / 2) + '" y="' + (y0 + (yk - y0) / 2 + 4) + '" ' + t + '>' + (s.sobe ? 'dnevna' : 'soba') + '</text>');
+    p.push('<text x="' + (x0 + (xd - x0) / 2) + '" y="' + (yk + (y0 + h - yk) / 2 + 4) + '" ' + t + '>kuhinja</text>');
+    for (var j = 0; j < n; j++) p.push('<text x="' + (xd + (x0 + w - xd) / 2) + '" y="' + (y0 + korak * j + korak / 2 + 4) + '" ' + t + '>' + (s.sobe ? 'soba ' + (j + 1) : 'kupatilo') + '</text>');
+    p.push('<text x="' + (W - 40) + '" y="' + (H - 12) + '" font-family="Archivo,Arial" font-size="14" font-weight="700" fill="#17201D" text-anchor="end">' + s.m2 + ' m²</text>');
+    return '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Okvirni tlocrt: ' + s.naslov.toLowerCase() + ', ' + s.m2 + ' m²">' + p.join('') + '</svg>';
+  }
+
+  var lista = $('stanovi');
+  STANOVI.forEach(function (s) {
+    var li = document.createElement('li'); li.className = 'stan'; li.dataset.tip = s.tip;
+    var cena = s.tip === 'prodaja' ? eur(s.cena) : eur(s.cena) + ' mesečno';
+    var m2 = s.tip === 'prodaja' ? '<span class="po-m2">' + eur(Math.round(s.cena / s.m2)) + '/m²</span>' : '<span class="po-m2">depozit 1 kirija</span>';
+    li.innerHTML = '<div class="tlocrt"><span class="tip ' + s.tip + '">' + (s.tip === 'prodaja' ? 'Prodaja' : 'Izdavanje') + '</span>' + tlocrt(s) + '</div>' +
+      '<div class="stan-telo"><h3>' + s.naslov + '</h3><p class="gde">' + s.gde + '</p>' +
+      '<dl class="podaci"><div><dt>Površina</dt><dd>' + s.m2 + ' m²</dd></div><div><dt>Struktura</dt><dd>' + s.str + '</dd></div><div><dt>Sprat</dt><dd>' + s.sprat + '</dd></div><div><dt>' + (s.str === 'kuća' ? 'Plac' : 'Lift') + '</dt><dd>' + (s.str === 'kuća' ? '4 ara' : s.lift) + '</dd></div></dl>' +
+      '<div class="cena-red"><span class="cena">' + cena + '</span>' + m2 + '</div>' +
+      '<a class="dugme glavno" href="#razgledanje" data-stan="' + s.id + '">Zakažite razgledanje</a></div>';
+    lista.appendChild(li);
+  });
+  document.querySelectorAll('.filteri button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.querySelectorAll('.filteri button').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      lista.querySelectorAll('.stan').forEach(function (li) { li.hidden = b.dataset.f !== 'sve' && li.dataset.tip !== b.dataset.f; });
+    });
+  });
+
+  // razgledanje
+  var DANI = ['nedelja','ponedeljak','utorak','sreda','četvrtak','petak','subota'], KR = ['ned','pon','uto','sre','čet','pet','sub'];
+  var MES = ['januara','februara','marta','aprila','maja','juna','jula','avgusta','septembra','oktobra','novembra','decembra'];
+  var st = { stan: STANOVI[0].id, dan: null, vreme: null, poslato: null };
+  var sel = $('z-stan');
+  STANOVI.forEach(function (s) { var o = document.createElement('option'); o.value = s.id; o.textContent = s.naslov + ', ' + s.gde + ' (' + s.m2 + ' m²)'; sel.appendChild(o); });
+  function stan() { return STANOVI.filter(function (s) { return s.id === st.stan; })[0]; }
+  function datum(d) { return DANI[d.getDay()] + ', ' + d.getDate() + '. ' + MES[d.getMonth()]; }
+  function hh(m) { return String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0'); }
+  var danas = new Date(); danas.setHours(0, 0, 0, 0);
+  function termini(d) {
+    var a = AGENTI[stan().agent], r = a.rv[d.getDay()]; if (!r) return [];
+    var out = [], sad = new Date();
+    for (var t = r[0] * 60; t + 30 <= r[1] * 60; t += 30) {
+      if (d.getTime() === danas.getTime() && t <= sad.getHours() * 60 + sad.getMinutes() + 60) continue;
+      if (rnd(stan().agent + d.toDateString() + t) < 0.42) continue;
+      out.push(t);
+    }
+    return out;
+  }
+  function crtajDane() {
+    var box = $('dani'); box.innerHTML = '';
+    for (var i = 0; i < 14; i++) {
+      var d = new Date(danas); d.setDate(danas.getDate() + i);
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'dan'; b._d = d;
+      b.innerHTML = '<small>' + KR[d.getDay()] + '</small><b>' + d.getDate() + '</b><small>' + MES[d.getMonth()].slice(0, 3) + '</small>';
+      var n = termini(d).length; b.disabled = !n; b.setAttribute('aria-label', datum(d) + (n ? ', ' + n + ' slobodnih termina' : ', nema termina'));
+      b.setAttribute('aria-pressed', String(!!(st.dan && st.dan.getTime() === d.getTime())));
+      b.addEventListener('click', function () { st.dan = this._d; st.vreme = null; crtajDane(); crtajVremena(); });
+      box.appendChild(b);
+    }
+  }
+  function crtajVremena() {
+    var box = $('vremena'); box.innerHTML = '';
+    if (!st.dan) { box.innerHTML = '<p class="nema">Prvo izaberite dan.</p>'; return; }
+    var t = termini(st.dan);
+    if (!t.length) { box.innerHTML = '<p class="nema">Tog dana nema slobodnih termina.</p>'; return; }
+    t.forEach(function (m) {
+      var b = document.createElement('button'); b.type = 'button'; b.textContent = hh(m); b.setAttribute('aria-pressed', String(st.vreme === m));
+      b.addEventListener('click', function () { st.vreme = m; crtajVremena(); });
+      box.appendChild(b);
+    });
+  }
+  function promenaStana() { $('z-agent').textContent = 'Razgledanje vodi: ' + AGENTI[stan().agent].ime; st.dan = null; st.vreme = null; crtajDane(); crtajVremena(); }
+  sel.addEventListener('change', function () { st.stan = sel.value; promenaStana(); });
+  document.addEventListener('click', function (e) { var a = e.target.closest('[data-stan]'); if (!a) return; sel.value = a.dataset.stan; st.stan = sel.value; promenaStana(); });
+  promenaStana();
+
+  $('forma').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var g = $('greska');
+    if (!st.dan) { g.textContent = 'Izaberite dan.'; return; }
+    if (st.vreme === null) { g.textContent = 'Izaberite vreme.'; return; }
+    if ($('z-ime').value.trim().length < 2) { g.textContent = 'Upišite ime i prezime.'; $('z-ime').focus(); return; }
+    if ($('z-tel').value.replace(/[^\d+]/g, '').length < 6) { g.textContent = 'Upišite telefon, da bi Vas agent pozvao.'; $('z-tel').focus(); return; }
+    g.textContent = '';
+    var s = stan(), redovi = [['Stan', s.naslov + ', ' + s.gde], ['Termin', datum(st.dan) + ' u ' + hh(st.vreme)], ['Agent', AGENTI[s.agent].ime], ['Ime', $('z-ime').value.trim()], ['Podsetnik', $('z-pods').checked ? 'dan ranije' : 'ne']];
+    var dl = $('sazetak'); dl.innerHTML = '';
+    redovi.forEach(function (r) { var dt = document.createElement('dt'); dt.textContent = r[0]; var dd = document.createElement('dd'); dd.textContent = r[1]; dl.appendChild(dt); dl.appendChild(dd); });
+    st.poslato = { s: s, d: st.dan, v: st.vreme };
+    $('forma').hidden = true; $('potvrda').hidden = false; $('potvrda').focus();
+  });
+  $('ics').addEventListener('click', function () {
+    var x = st.poslato, p = new Date(x.d); p.setHours(0, x.v, 0, 0); var k = new Date(p.getTime() + 30 * 60000);
+    var z = function (d) { return d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, ''); };
+    var L = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//opsforma//Kvadrat//SR', 'BEGIN:VEVENT', 'UID:' + Date.now() + '@nekretnine-kvadrat.primer', 'DTSTAMP:' + z(new Date()), 'DTSTART:' + z(p), 'DTEND:' + z(k),
+      'SUMMARY:Razgledanje: ' + x.s.naslov + ', ' + x.s.gde, 'DESCRIPTION:Agent ' + AGENTI[x.s.agent].ime + ', telefon 060 000 08 33', 'END:VEVENT', 'END:VCALENDAR'];
+    var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([L.join('\r\n') + '\r\n'], { type: 'text/calendar;charset=utf-8' })); a.download = 'razgledanje-kvadrat.ics';
+    document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+  });
+  $('novi').addEventListener('click', function () { $('forma').reset(); st.dan = null; st.vreme = null; $('potvrda').hidden = true; $('forma').hidden = false; promenaStana(); sel.focus(); });
+})();
+</script>
+</body>
+</html>

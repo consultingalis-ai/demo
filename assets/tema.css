@@ -9,7 +9,7 @@
 }
 
 /* zajedničko za obe teme: boje koje su bile upisane direktno sada idu preko tokena */
-input, textarea { background: var(--povrsina); border-color: var(--polje-ivica); color: var(--grafit); }
+input, textarea, select { background-color: var(--povrsina); border-color: var(--polje-ivica); color: var(--grafit); }
 .sketch, .hero-shot, .tools li, .ico, .pay, .about-box { background: var(--povrsina); }
 .btn-primary, .plan-tag, .sk-call, .cta .btn-dark { background: var(--plava-dugme); border-color: var(--plava-dugme); }
 .plan-block ul li, .plan-block p, .faq details p, .prose p, .prose ul { color: var(--tekst-2); }

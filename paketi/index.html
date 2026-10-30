@@ -434,6 +434,17 @@
   .pay h3 { font-size: 1.5rem; line-height: 1.15; }
   .pay p { max-width: 70ch; }
   .brand { min-height: 44px; align-items: center; }
+
+  /* ===== Kako izgleda na telefonu (oktobar 2026) ===== */
+  .izgled { display: grid; gap: 0; margin-top: 40px; border-top: 1px solid var(--grafit); }
+  .izgled-red { display: grid; gap: 16px; padding: 24px 0 28px; border-bottom: 1px solid var(--linija); }
+  .izgled-paket { font-size: .875rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--plava); }
+  .izgled-opis h3 { font-size: 1.5rem; line-height: 1.15; margin-top: 6px; letter-spacing: -.02em; }
+  .izgled-link { display: inline-block; margin-top: 10px; padding: 8px 0; font-weight: 600; text-underline-offset: 4px; text-decoration-color: var(--plava); text-decoration-thickness: 2px; }
+  .izgled-slike { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; max-width: 640px; }
+  .izgled-slike a { display: block; border-radius: 14px; overflow: hidden; box-shadow: 0 0 0 1px var(--obris-slike, rgba(0,0,0,.12)); }
+  .izgled-slike img { width: 100%; height: auto; display: block; }
+  @media (min-width: 900px) { .izgled-red { grid-template-columns: 4fr 8fr; gap: 48px; align-items: center; } .izgled-slike { gap: 16px; } }
 </style>
 <link rel="stylesheet" href="/assets/tema.css">
 <script src="/assets/tema.js" defer></script>
@@ -742,6 +753,65 @@
     </div>
   </section>
 
+  <section id="izgled" aria-labelledby="izgled-naslov">
+    <div class="wrap">
+      <div class="sec-grid">
+        <h2 class="sec-title" id="izgled-naslov">Kako izgleda na <span class="nowrap">telefonu<span class="dot" aria-hidden="true"></span></span></h2>
+        <p class="sec-lead" style="margin-top:0;align-self:end;max-width:52ch">Po jedan primer za svaki paket, onako kako ga mušterija vidi na telefonu. Firme su izmišljene, a sve u primerima radi kao pravo.</p>
+      </div>
+      <ul class="izgled">
+        <li class="izgled-red" id="izgled-1">
+          <div class="izgled-opis">
+            <p class="izgled-paket">Paket 1 · Osnovni</p>
+            <h3>Berbernica Brko</h3>
+            <a class="izgled-link" href="/berbernica-brko/">Otvori primer<span class="sr"> Berbernica Brko</span></a>
+          </div>
+          <ul class="izgled-slike" aria-label="Snimci ekrana: Berbernica Brko"><li><a href="/assets/primeri/paketi/1-osnovni-1-780.webp" target="_blank" rel="noopener"><img src="/assets/primeri/paketi/1-osnovni-1-360.webp" width="360" height="779" loading="lazy" decoding="async" alt="Berbernica Brko: prvi ekran: ime, radno vreme i poziv"></a></li><li><a href="/assets/primeri/paketi/1-osnovni-2-780.webp" target="_blank" rel="noopener"><img src="/assets/primeri/paketi/1-osnovni-2-360.webp" width="360" height="779" loading="lazy" decoding="async" alt="Berbernica Brko: cenovnik"></a></li><li><a href="/assets/primeri/paketi/1-osnovni-3-780.webp" target="_blank" rel="noopener"><img src="/assets/primeri/paketi/1-osnovni-3-360.webp" width="360" height="779" loading="lazy" decoding="async" alt="Berbernica Brko: radno vreme i adresa"></a></li></ul>
+        </li>
+        <li class="izgled-red" id="izgled-2">
+          <div class="izgled-opis">
+            <p class="izgled-paket">Paket 2 · Zakazivanje</p>
+            <h3>Kozmetički studio Iris</h3>
+            <a class="izgled-link" href="/plus/iris-kozmetika/">Otvori primer<span class="sr"> Kozmetički studio Iris</span></a>
+          </div>
+          <ul class="izgled-slike" aria-label="Snimci ekrana: Kozmetički studio Iris"><li><a href="/assets/primeri/paketi/2-zakazivanje-1-780.webp" target="_blank" rel="noopener"><img src="/assets/primeri/paketi/2-zakazivanje-1-360.webp" width="360" height="779" loading="lazy" decoding="async" alt="Kozmetički studio Iris: prvi ekran"></a></li><li><a href="/assets/primeri/paketi/2-zakazivanje-2-780.webp" target="_blank" rel="noopener"><img src="/assets/primeri/paketi/2-zakazivanje-2-360.webp" width="360" height="779" loading="lazy" decoding="async" alt="Kozmetički studio Iris: tretmani i cene"></a></li><li><a href="/assets/primeri/paketi/2-zakazivanje-3-780.webp" target="_blank" rel="noopener"><img src="/assets/primeri/paketi/2-zakazivanje-3-360.webp" width="360" height="779" loading="lazy" decoding="async" alt="Kozmetički studio Iris: zakazivanje: izbor dana"></a></li></ul>
+        </li>
+        <li class="izgled-red" id="izgled-3">
+          <div class="izgled-opis">
+            <p class="izgled-paket">Paket 3 · Plus</p>
+            <h3>Berbernica Pomada</h3>
+            <a class="izgled-link" href="/plus/pomada-berbernica/">Otvori primer<span class="sr"> Berbernica Pomada</span></a>
+          </div>
+          <ul class="izgled-slike" aria-label="Snimci ekrana: Berbernica Pomada"><li><a href="/assets/primeri/paketi/3-plus-1-780.webp" target="_blank" rel="noopener"><img src="/assets/primeri/paketi/3-plus-1-360.webp" width="360" height="779" loading="lazy" decoding="async" alt="Berbernica Pomada: prvi ekran"></a></li><li><a href="/assets/primeri/paketi/3-plus-2-780.webp" target="_blank" rel="noopener"><img src="/assets/primeri/paketi/3-plus-2-360.webp" width="360" height="779" loading="lazy" decoding="async" alt="Berbernica Pomada: usluge i cene"></a></li><li><a href="/assets/primeri/paketi/3-plus-3-780.webp" target="_blank" rel="noopener"><img src="/assets/primeri/paketi/3-plus-3-360.webp" width="360" height="779" loading="lazy" decoding="async" alt="Berbernica Pomada: termini kod dva berberina"></a></li></ul>
+        </li>
+        <li class="izgled-red" id="izgled-4">
+          <div class="izgled-opis">
+            <p class="izgled-paket">Paket 4 · Prodavnica</p>
+            <h3>Pržionica kafe Svitanje</h3>
+            <a class="izgled-link" href="/prodavnica/przionica-svitanje/">Otvori primer<span class="sr"> Pržionica kafe Svitanje</span></a>
+          </div>
+          <ul class="izgled-slike" aria-label="Snimci ekrana: Pržionica kafe Svitanje"><li><a href="/assets/primeri/paketi/4-prodavnica-1-780.webp" target="_blank" rel="noopener"><img src="/assets/primeri/paketi/4-prodavnica-1-360.webp" width="360" height="779" loading="lazy" decoding="async" alt="Pržionica kafe Svitanje: prvi ekran"></a></li><li><a href="/assets/primeri/paketi/4-prodavnica-2-780.webp" target="_blank" rel="noopener"><img src="/assets/primeri/paketi/4-prodavnica-2-360.webp" width="360" height="779" loading="lazy" decoding="async" alt="Pržionica kafe Svitanje: ponuda sa pakovanjem i mlevenjem"></a></li><li><a href="/assets/primeri/paketi/4-prodavnica-3-780.webp" target="_blank" rel="noopener"><img src="/assets/primeri/paketi/4-prodavnica-3-360.webp" width="360" height="779" loading="lazy" decoding="async" alt="Pržionica kafe Svitanje: korpa sa dostavom"></a></li></ul>
+        </li>
+        <li class="izgled-red" id="izgled-5">
+          <div class="izgled-opis">
+            <p class="izgled-paket">Paket 5 · Prodavnica Plus</p>
+            <h3>Butik Tkanica</h3>
+            <a class="izgled-link" href="/prodavnica/butik-tkanica/">Otvori primer<span class="sr"> Butik Tkanica</span></a>
+          </div>
+          <ul class="izgled-slike" aria-label="Snimci ekrana: Butik Tkanica"><li><a href="/assets/primeri/paketi/5-prodavnica-plus-1-780.webp" target="_blank" rel="noopener"><img src="/assets/primeri/paketi/5-prodavnica-plus-1-360.webp" width="360" height="779" loading="lazy" decoding="async" alt="Butik Tkanica: prvi ekran, srpski i engleski"></a></li><li><a href="/assets/primeri/paketi/5-prodavnica-plus-2-780.webp" target="_blank" rel="noopener"><img src="/assets/primeri/paketi/5-prodavnica-plus-2-360.webp" width="360" height="779" loading="lazy" decoding="async" alt="Butik Tkanica: kolekcija sa bojama i veličinama"></a></li><li><a href="/assets/primeri/paketi/5-prodavnica-plus-3-780.webp" target="_blank" rel="noopener"><img src="/assets/primeri/paketi/5-prodavnica-plus-3-360.webp" width="360" height="779" loading="lazy" decoding="async" alt="Butik Tkanica: proizvod pre dodavanja u korpu"></a></li></ul>
+        </li>
+        <li class="izgled-red" id="izgled-6">
+          <div class="izgled-opis">
+            <p class="izgled-paket">Paket 6 · Premium</p>
+            <h3>Sloj</h3>
+            <a class="izgled-link" href="/premium/sloj/">Otvori primer<span class="sr"> Sloj</span></a>
+          </div>
+          <ul class="izgled-slike" aria-label="Snimci ekrana: Sloj"><li><a href="/assets/primeri/paketi/6-premium-1-780.webp" target="_blank" rel="noopener"><img src="/assets/primeri/paketi/6-premium-1-360.webp" width="360" height="779" loading="lazy" decoding="async" alt="Sloj: prvi ekran"></a></li><li><a href="/assets/primeri/paketi/6-premium-2-780.webp" target="_blank" rel="noopener"><img src="/assets/primeri/paketi/6-premium-2-360.webp" width="360" height="779" loading="lazy" decoding="async" alt="Sloj: izbor boje folije na fotografiji"></a></li><li><a href="/assets/primeri/paketi/6-premium-3-780.webp" target="_blank" rel="noopener"><img src="/assets/primeri/paketi/6-premium-3-360.webp" width="360" height="779" loading="lazy" decoding="async" alt="Sloj: kalkulator cene"></a></li></ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
   <section id="zakazivanje" aria-labelledby="zak-naslov">
     <div class="wrap">
       <div class="sec-grid">
@@ -921,9 +991,17 @@
     <ul>
         <li><a href="/sajt-za-frizere-i-berbernice/">Frizeri i berbernice</a></li>
         <li><a href="/sajt-za-kozmeticke-salone-i-masazu/">Kozmetički saloni i masaža</a></li>
-        <li><a href="/sajt-za-auto-servis-i-vulkanizera/">Auto servisi i vulkanizeri</a></li>
+        <li><a href="/sajt-za-ordinacije-i-terapeute/">Ordinacije i terapeuti</a></li>
+        <li><a href="/sajt-za-veterinare-i-salone-za-pse/">Veterinari i saloni za pse</a></li>
+        <li><a href="/sajt-za-treninge-i-casove/">Treninzi, časovi i škole</a></li>
+        <li><a href="/sajt-za-restorane-i-dostavu/">Restorani i dostava</a></li>
         <li><a href="/sajt-za-pekare-cvecare-i-mesare/">Pekare, cvećare i mesare</a></li>
+        <li><a href="/sajt-za-auto-servis-i-vulkanizera/">Auto servisi i vulkanizeri</a></li>
         <li><a href="/sajt-za-majstore/">Majstori</a></li>
+        <li><a href="/sajt-za-perionice-i-popravke/">Perionice i popravke</a></li>
+        <li><a href="/sajt-za-butike-i-krojace/">Butici i krojači</a></li>
+        <li><a href="/sajt-za-poslovne-usluge/">Poslovne usluge</a></li>
+        <li><a href="/izrada-online-prodavnice/">Online prodavnice</a></li>
     </ul>
   </nav>
 </footer>

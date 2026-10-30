@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, follow">
+<title>Polazak, savetovanje za preduzetnike · Beograd i onlajn</title>
+<meta name="description" content="Polazak: savetovanje za preduzetnike. Paušal ili DOO, PDV, e-fakture i poslovni plan za kredit. Zakažite konsultaciju uživo ili onlajn.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+  /* Savetnik za preduzetnike: indigo kao ozbiljnost, ćilibar kao „krećemo“, kartice tema kao spisak pitanja sa prvog sastanka */
+  :root {
+    --pozadina: #F6F6FA; --bela: #FFFFFF; --indigo: #221E45; --indigo-2: #3A3470; --tekst: #1F1D33; --siva: #5E5C74; --linija: #DCDBE7;
+    --cilibar: #F0A31B; --cilibar-svetli: #FFF1D6; --cilibar-tamni: #7A4C00;
+    --naslov: "Bricolage Grotesque", "Segoe UI", Arial, sans-serif;
+    --font: "Figtree", "Segoe UI", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--pozadina); color: var(--tekst); font: 400 1.0625rem/1.6 var(--font); -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: var(--naslov); font-weight: 800; margin: 0; line-height: 1.04; letter-spacing: -.02em; }
+  p { margin: 0; }
+  :focus-visible { outline: 3px solid var(--cilibar); outline-offset: 2px; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+  .demo { background: var(--indigo); color: #D8D6EE; font-size: .8125rem; }
+  .demo .wrap { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; padding-block: 8px; }
+  .demo a { color: #fff; font-weight: 500; margin-left: auto; }
+  .znacka { font-size: .75rem; font-weight: 600; padding: 2px 9px; border-radius: 999px; background: var(--cilibar); color: #2A1A00; }
+
+  .top { background: var(--pozadina); border-bottom: 1px solid var(--linija); position: sticky; top: 0; z-index: 10; }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
+  .logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--naslov); font-weight: 800; font-size: 1.45rem; color: var(--indigo); }
+  .logo svg { width: 30px; height: 30px; }
+  .meni-dugme { font: 600 .95rem var(--font); color: var(--indigo); background: none; border: 1.5px solid var(--indigo); border-radius: 999px; padding: 8px 16px; min-height: 44px; cursor: pointer; }
+  .glavni { display: none; }
+  .glavni.otvoren { display: block; position: absolute; left: 0; right: 0; top: 100%; background: var(--pozadina); border-bottom: 1px solid var(--linija); }
+  .glavni ul { list-style: none; margin: 0; padding: 4px 20px 12px; }
+  .glavni a { display: block; padding: 12px 0; text-decoration: none; border-bottom: 1px solid var(--linija); font-weight: 500; }
+  @media (min-width: 860px) {
+    .meni-dugme { display: none; }
+    .glavni, .glavni.otvoren { display: block; position: static; border: 0; background: none; }
+    .glavni ul { display: flex; gap: 26px; padding: 0; }
+    .glavni a { border: 0; padding: 6px 0; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+    .glavni a:hover { text-decoration-color: var(--cilibar); }
+  }
+
+  .hero .wrap { padding-block: 48px 56px; display: grid; gap: 32px; }
+  .hero h1 { font-size: clamp(2.5rem, 8vw, 4.6rem); color: var(--indigo); max-width: 13ch; }
+  .hero h1 mark { background: linear-gradient(transparent 58%, var(--cilibar) 58%, var(--cilibar) 92%, transparent 92%); color: inherit; padding: 0 .05em; }
+  .uvod { font-size: 1.15rem; max-width: 50ch; margin-top: 18px; color: var(--siva); }
+  .akcije { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .dugme { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 22px; border-radius: 999px; border: 1.5px solid var(--indigo); background: transparent; color: var(--indigo); font: 600 1rem var(--font); text-decoration: none; cursor: pointer; }
+  .dugme.glavno { background: var(--indigo); color: #fff; }
+  .dugme.glavno:hover { background: var(--indigo-2); border-color: var(--indigo-2); }
+  .pitanja-kartice { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; align-content: start; }
+  .pitanja-kartice li { background: var(--bela); border: 1px solid var(--linija); border-radius: 14px; padding: 14px 16px; font-weight: 500; display: flex; gap: 12px; align-items: baseline; }
+  .pitanja-kartice li::before { content: "?"; font-family: var(--naslov); font-weight: 800; color: var(--cilibar-tamni); background: var(--cilibar-svetli); width: 26px; height: 26px; border-radius: 50%; display: inline-grid; place-items: center; flex: none; }
+  @media (min-width: 900px) { .hero .wrap { grid-template-columns: 1.3fr 1fr; align-items: center; gap: 56px; padding-block: 72px; } }
+
+  .blok { padding-block: 60px; border-top: 1px solid var(--linija); }
+  .glava { display: grid; gap: 10px; margin-bottom: 26px; }
+  .glava h2 { font-size: clamp(2rem, 5vw, 2.9rem); color: var(--indigo); }
+  .glava p { color: var(--siva); max-width: 60ch; }
+
+  .teme { display: grid; gap: 14px; }
+  @media (min-width: 700px) { .teme { grid-template-columns: 1fr 1fr; } }
+  .tema { background: var(--bela); border: 1px solid var(--linija); border-radius: 18px; padding: 20px; display: grid; gap: 8px; align-content: start; }
+  .tema h3 { font-size: 1.35rem; color: var(--indigo); }
+  .tema p { color: var(--siva); }
+  .tema .cena { font-family: var(--naslov); font-weight: 600; color: var(--tekst); }
+
+  .zak { background: var(--bela); border: 1px solid var(--linija); border-radius: 22px; padding: 20px; display: grid; gap: 22px; }
+  .zak-zag { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; color: var(--siva); font-size: .9rem; }
+  fieldset { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; gap: 10px; }
+  legend { font-family: var(--naslov); font-weight: 600; font-size: 1.15rem; color: var(--indigo); padding: 0; margin-bottom: 10px; }
+  .izbori { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+  .izbor { position: relative; }
+  .izbor input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .izbor span { display: grid; gap: 2px; padding: 12px 14px; min-height: 52px; border: 1.5px solid var(--linija); border-radius: 14px; cursor: pointer; font-weight: 600; }
+  .izbor small { font-weight: 400; color: var(--siva); }
+  .izbor input:checked + span { border-color: var(--indigo); background: #ECEAF7; }
+  .izbor input:focus-visible + span { outline: 3px solid var(--cilibar); outline-offset: 2px; }
+  .dani { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; }
+  .dan { flex: none; display: grid; justify-items: center; min-width: 60px; padding: 8px 4px; border: 1.5px solid var(--linija); border-radius: 14px; background: var(--bela); cursor: pointer; font: 500 .9rem var(--font); color: var(--tekst); }
+  .dan small { font-size: .72rem; color: var(--siva); text-transform: uppercase; }
+  .dan b { font-family: var(--naslov); font-size: 1.35rem; line-height: 1.1; }
+  .dan[aria-pressed="true"] { border-color: var(--indigo); background: #ECEAF7; }
+  .dan:disabled { opacity: .35; cursor: not-allowed; }
+  .vremena { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 8px; }
+  .vremena button { font: 600 1rem var(--font); min-height: 46px; border-radius: 12px; border: 1.5px solid var(--linija); background: var(--bela); cursor: pointer; color: var(--tekst); font-variant-numeric: tabular-nums; }
+  .vremena button[aria-pressed="true"] { background: var(--indigo); border-color: var(--indigo); color: #fff; }
+  .nema { grid-column: 1 / -1; color: var(--siva); }
+  .polja { display: grid; gap: 12px; }
+  @media (min-width: 700px) { .polja { grid-template-columns: 1fr 1fr; } }
+  label.l { display: block; font-weight: 600; font-size: .95rem; margin-bottom: 6px; }
+  input[type=text], input[type=tel], input[type=email] { width: 100%; font: 400 1rem/1.4 var(--font); color: var(--tekst); background: var(--pozadina); border: 1px solid #A3A1B8; border-radius: 12px; padding: 12px 13px; min-height: 48px; }
+  .greska { color: #B3261E; font-weight: 600; min-height: 1.2em; }
+  .potvrda { display: grid; gap: 14px; }
+  .potvrda h3 { font-size: 1.9rem; color: var(--indigo); }
+  .potvrda dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; margin: 0; }
+  .potvrda dt { color: var(--siva); }
+  .potvrda dd { margin: 0; font-weight: 600; }
+
+  .dvokol { display: grid; gap: 28px; }
+  @media (min-width: 900px) { .dvokol { grid-template-columns: 1fr 1fr; gap: 56px; } }
+  .sati { width: 100%; border-collapse: collapse; }
+  .sati th, .sati td { padding: 10px 0; border-bottom: 1px solid var(--linija); text-align: left; font-weight: 400; }
+  .sati td { text-align: right; font-variant-numeric: tabular-nums; }
+  .sati tr.danas th, .sati tr.danas td { color: var(--indigo); font-weight: 700; }
+  .tel { font-family: var(--naslov); font-weight: 800; font-size: 2rem; text-decoration: none; display: inline-block; margin: 6px 0 14px; color: var(--indigo); }
+  .napomena { color: var(--siva); font-size: .95rem; margin-top: 14px; max-width: 70ch; }
+  footer { background: var(--indigo); color: #CFCDE6; font-size: .9rem; padding-block: 24px 36px; }
+  footer .wrap { display: grid; gap: 8px; }
+  footer a { color: #fff; }
+  @media (min-width: 760px) { footer .wrap { grid-template-columns: 1fr auto; } }
+</style>
+</head>
+<body>
+
+<div class="demo">
+  <div class="wrap">
+    <span>Primer sajta · izradio opsforma</span>
+    <span class="znacka">Paket 2: zakazivanje</span>
+    <a href="../../">Svi primeri</a>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#pocetak"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="13" fill="#221E45"/><path d="M10 20 L20 10 M13 10 H20 V17" fill="none" stroke="#F0A31B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Polazak</a>
+    <button class="meni-dugme" type="button" aria-expanded="false" aria-controls="meni">Meni</button>
+    <nav class="glavni" id="meni" aria-label="Glavni meni">
+      <ul>
+        <li><a href="#teme">Teme i cene</a></li>
+        <li><a href="#konsultacija">Zakažite</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="pocetak">
+  <section class="hero" aria-labelledby="naslov">
+    <div class="wrap">
+      <div>
+        <h1 id="naslov">Otvarate firmu? <mark>Prvo sat</mark> razgovora.</h1>
+        <p class="uvod">Savetovanje za preduzetnike: paušal ili DOO, PDV, e-fakture i poslovni plan za kredit. Za sat vremena znate šta Vam treba, koliko košta i kojim redom.</p>
+        <div class="akcije">
+          <a class="dugme glavno" href="#konsultacija">Zakažite konsultaciju</a>
+          <a class="dugme" href="tel:+381600000844">060 000 08 44</a>
+        </div>
+      </div>
+      <ul class="pitanja-kartice" aria-label="Pitanja sa kojima ljudi dolaze">
+        <li>Paušal ili knjige, šta mi se više isplati?</li>
+        <li>Kada moram da uđem u sistem PDV-a?</li>
+        <li>Kako da šaljem e-fakture firmama?</li>
+        <li>Šta banka traži za kredit za početnike?</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="blok" id="teme" aria-labelledby="h-teme">
+    <div class="wrap">
+      <div class="glava"><h2 id="h-teme">Teme i cene</h2><p>Konsultacija traje 60 minuta, uživo u kancelariji ili onlajn. Posle razgovora dobijate kratak pisani rezime sa koracima.</p></div>
+      <div class="teme">
+        <article class="tema"><h3>Otvaranje radnje ili firme</h3><p>Paušal, preduzetnik na knjigama ili DOO, šifra delatnosti, šta ide u APR i šta posle.</p><p class="cena">5.000 RSD · 60 min</p></article>
+        <article class="tema"><h3>Porezi i PDV</h3><p>Limiti za paušal, ulazak u PDV, šta i kada plaćate svakog meseca.</p><p class="cena">5.000 RSD · 60 min</p></article>
+        <article class="tema"><h3>E-fakture i SEF</h3><p>Prijava na sistem, prva faktura, šta knjigovođa radi, a šta Vi.</p><p class="cena">4.000 RSD · 45 min</p></article>
+        <article class="tema"><h3>Poslovni plan</h3><p>Plan za kredit ili subvenciju, sa brojkama koje banka očekuje.</p><p class="cena">od 15.000 RSD · po dogovoru</p></article>
+      </div>
+      <p class="napomena">Ako posle konsultacije uzmete i registraciju ili poslovni plan, cena konsultacije se odbija. Savetovanje ne zamenjuje knjigovođu: pomažemo da izaberete i znate šta da pitate.</p>
+    </div>
+  </section>
+
+  <!--
+    PRODUKCIJA
+    Varijanta b) Povezan kalendar: slobodni termini se čitaju iz Google Kalendara savetnika, a zakazana
+    konsultacija se upisuje u kalendar; za onlajn termin automatski se pravi link za video poziv.
+    Potvrda stiže mejlom. U demou su termini izmišljeni i ništa se ne šalje.
+  -->
+  <section class="blok" id="konsultacija" aria-labelledby="h-zak">
+    <div class="wrap">
+      <div class="glava"><h2 id="h-zak">Zakažite konsultaciju</h2><p>Izaberite temu, način, dan i vreme. Potvrdu dobijate odmah, a za onlajn razgovor i link.</p></div>
+      <div class="zak">
+        <div class="zak-zag"><span class="znacka">Paket 2: zakazivanje</span><span>Primer: termini su izmišljeni</span></div>
+        <form id="forma" novalidate style="display:grid;gap:22px">
+          <fieldset>
+            <legend>Tema</legend>
+            <div class="izbori">
+              <label class="izbor"><input type="radio" name="tema" value="Otvaranje radnje ili firme" checked><span>Otvaranje<small>radnja ili DOO</small></span></label>
+              <label class="izbor"><input type="radio" name="tema" value="Porezi i PDV"><span>Porezi i PDV<small>limiti i rokovi</small></span></label>
+              <label class="izbor"><input type="radio" name="tema" value="E-fakture i SEF"><span>E-fakture<small>45 minuta</small></span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Kako Vam odgovara?</legend>
+            <div class="izbori">
+              <label class="izbor"><input type="radio" name="nacin" value="onlajn" checked><span>Onlajn<small>link stiže mejlom</small></span></label>
+              <label class="izbor"><input type="radio" name="nacin" value="uživo"><span>Uživo<small>Takovska 12</small></span></label>
+            </div>
+          </fieldset>
+          <fieldset><legend>Dan</legend><div class="dani" id="dani" role="group" aria-label="Dani u naredne dve nedelje"></div></fieldset>
+          <fieldset><legend>Vreme</legend><div class="vremena" id="vremena" aria-live="polite"><p class="nema">Prvo izaberite dan.</p></div></fieldset>
+          <fieldset><legend>Vaši podaci</legend>
+            <div class="polja">
+              <div><label class="l" for="z-ime">Ime i prezime</label><input type="text" id="z-ime" name="ime" autocomplete="name"></div>
+              <div><label class="l" for="z-mejl">Mejl</label><input type="email" id="z-mejl" name="mejl" autocomplete="email"></div>
+              <div><label class="l" for="z-tel">Telefon</label><input type="tel" id="z-tel" name="telefon" inputmode="tel" autocomplete="tel"></div>
+            </div>
+          </fieldset>
+          <p class="greska" id="greska" role="alert"></p>
+          <div><button class="dugme glavno" type="submit">Zakažite</button></div>
+        </form>
+        <div class="potvrda" id="potvrda" hidden tabindex="-1">
+          <h3>Vidimo se.</h3>
+          <dl id="sazetak"></dl>
+          <p style="color:var(--siva)">Ovo je primer: na pravom sajtu termin se upisuje u kalendar savetnika, a Vama stiže potvrda mejlom, za onlajn razgovor sa linkom.</p>
+          <div class="akcije" style="margin-top:0"><button class="dugme glavno" type="button" id="ics">Dodaj u kalendar</button><button class="dugme" type="button" id="novi">Novi termin</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blok" id="kontakt" aria-labelledby="h-kon">
+    <div class="wrap dvokol">
+      <div>
+        <div class="glava"><h2 id="h-kon">Kontakt</h2></div>
+        <p>Takovska 12, treći sprat<br>Beograd, ili onlajn iz cele Srbije</p>
+        <a class="tel" href="tel:+381600000844">060 000 08 44</a>
+      </div>
+      <table class="sati" aria-label="Radno vreme">
+        <tbody>
+          <tr data-dan="1"><th scope="row">Ponedeljak</th><td>09:00–17:00</td></tr>
+          <tr data-dan="2"><th scope="row">Utorak</th><td>09:00–17:00</td></tr>
+          <tr data-dan="3"><th scope="row">Sreda</th><td>12:00–20:00</td></tr>
+          <tr data-dan="4"><th scope="row">Četvrtak</th><td>09:00–17:00</td></tr>
+          <tr data-dan="5"><th scope="row">Petak</th><td>09:00–15:00</td></tr>
+          <tr data-dan="6"><th scope="row">Subota</th><td>zatvoreno</td></tr>
+          <tr data-dan="0"><th scope="row">Nedelja</th><td>zatvoreno</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Polazak, savetovanje za preduzetnike, Takovska 12, Beograd</span>
+    <span>Primer sajta · izradio opsforma · <a href="../../">Svi primeri</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var $ = function (id) { return document.getElementById(id); };
+  var mb = document.querySelector('.meni-dugme'), meni = $('meni');
+  function postavi(o){ mb.setAttribute('aria-expanded', String(o)); meni.classList.toggle('otvoren', o); }
+  mb.addEventListener('click', function(){ postavi(mb.getAttribute('aria-expanded') !== 'true'); });
+  meni.addEventListener('click', function(e){ if (e.target.closest('a')) postavi(false); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && mb.getAttribute('aria-expanded') === 'true'){ postavi(false); mb.focus(); } });
+  var red = document.querySelector('.sati tr[data-dan="' + new Date().getDay() + '"]'); if (red) red.classList.add('danas');
+
+  var RV = { 1: [9, 17], 2: [9, 17], 3: [12, 20], 4: [9, 17], 5: [9, 15] };
+  var DANI = ['nedelja','ponedeljak','utorak','sreda','četvrtak','petak','subota'], KR = ['ned','pon','uto','sre','čet','pet','sub'];
+  var MES = ['januara','februara','marta','aprila','maja','juna','jula','avgusta','septembra','oktobra','novembra','decembra'];
+  function rnd(s) { var h = 2166136261; for (var i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } h ^= h >>> 15; return (h >>> 0) / 4294967296; }
+  function datum(d) { return DANI[d.getDay()] + ', ' + d.getDate() + '. ' + MES[d.getMonth()]; }
+  function hh(m) { return String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0'); }
+  function vr(ime) { var x = document.querySelector('input[name="' + ime + '"]:checked'); return x ? x.value : ''; }
+  var danas = new Date(); danas.setHours(0, 0, 0, 0);
+  var st = { dan: null, vreme: null, poslato: null };
+  function trajanje() { return vr('tema') === 'E-fakture i SEF' ? 45 : 60; }
+  function termini(d) {
+    var r = RV[d.getDay()]; if (!r) return [];
+    var out = [], sad = new Date(), min = trajanje();
+    for (var t = r[0] * 60; t + min <= r[1] * 60; t += 60) {
+      if (d.getTime() === danas.getTime() && t <= sad.getHours() * 60 + sad.getMinutes() + 60) continue;
+      if (rnd(vr('nacin') + d.toDateString() + t) < 0.45) continue;
+      out.push(t);
+    }
+    return out;
+  }
+  function crtajDane() {
+    var box = $('dani'); box.innerHTML = '';
+    for (var i = 0; i < 14; i++) {
+      var d = new Date(danas); d.setDate(danas.getDate() + i);
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'dan'; b._d = d;
+      b.innerHTML = '<small>' + KR[d.getDay()] + '</small><b>' + d.getDate() + '</b><small>' + MES[d.getMonth()].slice(0, 3) + '</small>';
+      var n = termini(d).length; b.disabled = !n; b.setAttribute('aria-label', datum(d) + (n ? ', ' + n + ' slobodnih termina' : ', nema termina'));
+      b.setAttribute('aria-pressed', String(!!(st.dan && st.dan.getTime() === d.getTime())));
+      b.addEventListener('click', function () { st.dan = this._d; st.vreme = null; crtajDane(); crtajVremena(); });
+      box.appendChild(b);
+    }
+  }
+  function crtajVremena() {
+    var box = $('vremena'); box.innerHTML = '';
+    if (!st.dan) { box.innerHTML = '<p class="nema">Prvo izaberite dan.</p>'; return; }
+    var t = termini(st.dan);
+    if (!t.length) { box.innerHTML = '<p class="nema">Tog dana nema slobodnih termina.</p>'; return; }
+    t.forEach(function (m) {
+      var b = document.createElement('button'); b.type = 'button'; b.textContent = hh(m); b.setAttribute('aria-pressed', String(st.vreme === m));
+      b.addEventListener('click', function () { st.vreme = m; crtajVremena(); });
+      box.appendChild(b);
+    });
+  }
+  $('forma').addEventListener('change', function (e) { if (e.target.name === 'tema' || e.target.name === 'nacin') { st.dan = null; st.vreme = null; crtajDane(); crtajVremena(); } });
+  crtajDane();
+
+  $('forma').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var g = $('greska');
+    if (!st.dan) { g.textContent = 'Izaberite dan.'; return; }
+    if (st.vreme === null) { g.textContent = 'Izaberite vreme.'; return; }
+    if ($('z-ime').value.trim().length < 2) { g.textContent = 'Upišite ime i prezime.'; $('z-ime').focus(); return; }
+    if (!/.+@.+\..+/.test($('z-mejl').value.trim())) { g.textContent = 'Upišite mejl, na njega stiže potvrda.'; $('z-mejl').focus(); return; }
+    g.textContent = '';
+    var redovi = [['Tema', vr('tema')], ['Termin', datum(st.dan) + ' u ' + hh(st.vreme) + ', ' + trajanje() + ' min'], ['Način', vr('nacin') === 'onlajn' ? 'onlajn, link stiže mejlom' : 'uživo, Takovska 12'], ['Ime', $('z-ime').value.trim()]];
+    var dl = $('sazetak'); dl.innerHTML = '';
+    redovi.forEach(function (r) { var dt = document.createElement('dt'); dt.textContent = r[0]; var dd = document.createElement('dd'); dd.textContent = r[1]; dl.appendChild(dt); dl.appendChild(dd); });
+    st.poslato = { d: st.dan, v: st.vreme, t: vr('tema'), n: vr('nacin'), min: trajanje() };
+    $('forma').hidden = true; $('potvrda').hidden = false; $('potvrda').focus();
+  });
+  $('ics').addEventListener('click', function () {
+    var x = st.poslato, p = new Date(x.d); p.setHours(0, x.v, 0, 0); var k = new Date(p.getTime() + x.min * 60000);
+    var z = function (d) { return d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, ''); };
+    var L = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//opsforma//Polazak//SR', 'BEGIN:VEVENT', 'UID:' + Date.now() + '@savetnik-polazak.primer', 'DTSTAMP:' + z(new Date()), 'DTSTART:' + z(p), 'DTEND:' + z(k),
+      'SUMMARY:Konsultacija: ' + x.t, 'LOCATION:' + (x.n === 'onlajn' ? 'onlajn' : 'Takovska 12\\, Beograd'), 'END:VEVENT', 'END:VCALENDAR'];
+    var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([L.join('\r\n') + '\r\n'], { type: 'text/calendar;charset=utf-8' })); a.download = 'konsultacija-polazak.ics';
+    document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+  });
+  $('novi').addEventListener('click', function () { $('forma').reset(); st.dan = null; st.vreme = null; $('potvrda').hidden = true; $('forma').hidden = false; crtajDane(); crtajVremena(); });
+})();
+</script>
+</body>
+</html>

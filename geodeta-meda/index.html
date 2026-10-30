@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, follow">
+<title>Međa, geodetski biro · Vojislava Ilića 88, Zvezdara</title>
+<meta name="description" content="Geodetski biro Međa: snimanje objekata, parcelacija, iskolčenje i upis u katastar. Izlazak na teren u celom Beogradu, cene unapred.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&subset=latin-ext&display=swap" rel="stylesheet">
+<style>
+  /* Geodetski biro: papir za skicu terena, izohipse, crveno-bela geodetska letva */
+  :root {
+    --papir: #F3F5F1; --linija: #CBD3CB; --mastilo: #1D2823; --siva: #56645C; --crvena: #C8352B; --bela: #FFFFFF; --izohipsa: rgba(29,40,35,.09);
+    --naslov: "IBM Plex Sans Condensed", "Arial Narrow", Arial, sans-serif;
+    --tekst: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--papir); color: var(--mastilo); font: 400 1.0625rem/1.6 var(--tekst); -webkit-font-smoothing: antialiased; }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: var(--naslov); font-weight: 700; margin: 0; line-height: 1.05; letter-spacing: -.01em; }
+  p { margin: 0; }
+  :focus-visible { outline: 2px solid var(--crvena); outline-offset: 3px; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+  .primer { background: var(--mastilo); color: #E9EEE9; font-size: .8125rem; }
+  .primer .wrap { display: flex; justify-content: space-between; gap: 12px; padding-block: 8px; }
+  .primer a { color: #fff; font-weight: 500; }
+
+  /* letva: crveno-bela traka kao geodetska letva */
+  .letva { height: 8px; background: repeating-linear-gradient(90deg, var(--crvena) 0 40px, var(--bela) 40px 80px); border-block: 1px solid var(--mastilo); }
+
+  .top { background: var(--papir); border-bottom: 1px solid var(--linija); position: sticky; top: 0; z-index: 10; }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; min-height: 64px; gap: 16px; }
+  .logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo svg { width: 30px; height: 30px; }
+  .logo b { font-family: var(--naslov); font-size: 1.5rem; letter-spacing: .02em; }
+  .logo span { font-family: var(--mono); font-size: .72rem; color: var(--siva); text-transform: uppercase; letter-spacing: .08em; }
+  .meni-dugme { font: 500 .95rem var(--tekst); background: none; border: 1.5px solid var(--mastilo); padding: 9px 14px; min-height: 44px; cursor: pointer; color: var(--mastilo); }
+  .glavni { display: none; }
+  .glavni.otvoren { display: block; position: absolute; left: 0; right: 0; top: 100%; background: var(--papir); border-bottom: 1px solid var(--mastilo); }
+  .glavni ul { list-style: none; margin: 0; padding: 4px 20px 12px; }
+  .glavni a { display: block; padding: 12px 0; text-decoration: none; border-bottom: 1px solid var(--linija); }
+  @media (min-width: 860px) {
+    .meni-dugme { display: none; }
+    .glavni, .glavni.otvoren { display: block; position: static; border: 0; background: none; }
+    .glavni ul { display: flex; gap: 28px; padding: 0; }
+    .glavni a { border: 0; padding: 6px 0; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+    .glavni a:hover { text-decoration-color: var(--crvena); }
+  }
+
+  .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--linija); }
+  .hero::before { content: ""; position: absolute; inset: 0; background-image: var(--izohipse); background-size: 520px 520px; opacity: 1; pointer-events: none; }
+  .hero .wrap { position: relative; padding-block: 56px 64px; display: grid; gap: 32px; }
+  .koord { font-family: var(--mono); font-size: .8rem; color: var(--siva); letter-spacing: .04em; }
+  .hero h1 { font-size: clamp(2.6rem, 8vw, 4.6rem); max-width: 14ch; margin-top: 14px; }
+  .hero h1 em { font-style: normal; color: var(--crvena); }
+  .uvod { font-size: 1.15rem; max-width: 52ch; margin-top: 18px; }
+  .akcije { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .dugme { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 20px; border: 1.5px solid var(--mastilo); background: transparent; color: var(--mastilo); font: 500 1rem var(--tekst); text-decoration: none; cursor: pointer; }
+  .dugme.glavno { background: var(--crvena); border-color: var(--crvena); color: #fff; }
+  .dugme.glavno:hover { background: var(--mastilo); border-color: var(--mastilo); }
+  .dugme:not(.glavno):hover { background: var(--mastilo); color: var(--papir); }
+  .cinjenice { display: grid; gap: 0; margin: 0; border-top: 1.5px solid var(--mastilo); }
+  .cinjenice div { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--linija); align-items: baseline; }
+  .cinjenice dt { color: var(--siva); font-size: .95rem; }
+  .cinjenice dd { margin: 0; font-family: var(--mono); font-weight: 500; text-align: right; }
+  @media (min-width: 900px) { .hero .wrap { grid-template-columns: 1.4fr 1fr; align-items: end; gap: 56px; } }
+
+  .blok { padding-block: 64px; border-bottom: 1px solid var(--linija); }
+  .blok h2 { font-size: clamp(2rem, 5vw, 2.8rem); }
+  .blok .podnaslov { color: var(--siva); margin-top: 10px; max-width: 56ch; }
+  .glava { display: grid; gap: 8px; margin-bottom: 32px; }
+  .oznaka { font-family: var(--mono); font-size: .78rem; color: var(--crvena); letter-spacing: .08em; text-transform: uppercase; }
+
+  .usluge { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; background: var(--linija); border: 1px solid var(--linija); }
+  .usluge li { background: var(--bela); padding: 22px 20px 24px; display: grid; gap: 8px; align-content: start; }
+  .usluge h3 { font-size: 1.35rem; }
+  .usluge p { color: var(--siva); font-size: .98rem; }
+  .usluge .kod { font-family: var(--mono); font-size: .75rem; color: var(--crvena); }
+  @media (min-width: 640px) { .usluge { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 980px) { .usluge { grid-template-columns: repeat(3, 1fr); } }
+
+  .cene { width: 100%; border-collapse: collapse; background: var(--bela); border: 1px solid var(--linija); }
+  .cene th, .cene td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--linija); vertical-align: top; }
+  .cene th { font-weight: 500; }
+  .cene th small { display: block; color: var(--siva); font-weight: 400; font-size: .9rem; margin-top: 2px; }
+  .cene td { font-family: var(--mono); white-space: nowrap; text-align: right; }
+  .cene tr:last-child th, .cene tr:last-child td { border-bottom: 0; }
+  .napomena { color: var(--siva); font-size: .95rem; margin-top: 14px; max-width: 70ch; }
+
+  .koraci { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; counter-reset: k; }
+  .koraci li { counter-increment: k; display: grid; grid-template-columns: 64px 1fr; gap: 4px 16px; padding: 18px 0; border-top: 1px solid var(--linija); }
+  .koraci li::before { content: "T" counter(k); grid-row: span 2; font-family: var(--mono); font-weight: 500; color: var(--crvena); border: 1.5px solid var(--crvena); width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; font-size: .9rem; }
+  .koraci h3 { font-size: 1.25rem; }
+  .koraci p { color: var(--siva); }
+  @media (min-width: 900px) { .koraci { grid-template-columns: repeat(4, 1fr); gap: 0 24px; } .koraci li { grid-template-columns: 1fr; } .koraci li::before { grid-row: auto; margin-bottom: 8px; } }
+
+  .dvokol { display: grid; gap: 32px; }
+  @media (min-width: 900px) { .dvokol { grid-template-columns: 1fr 1fr; gap: 56px; } }
+  .sati { width: 100%; border-collapse: collapse; }
+  .sati th, .sati td { padding: 10px 0; border-bottom: 1px solid var(--linija); text-align: left; font-weight: 400; }
+  .sati td { text-align: right; font-family: var(--mono); }
+  .sati tr.danas th, .sati tr.danas td { color: var(--crvena); font-weight: 500; }
+  .sati tr.danas th::after { content: " · danas"; font-family: var(--mono); font-size: .8rem; }
+  .mapa { margin-top: 20px; border: 1px solid var(--linija); aspect-ratio: 4 / 3; width: 100%; max-width: 100%; }
+  .mapa iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+  form { display: grid; gap: 16px; background: var(--bela); border: 1px solid var(--linija); padding: 22px 20px; }
+  label { display: block; font-weight: 500; font-size: .95rem; margin-bottom: 6px; }
+  label small { color: var(--siva); font-weight: 400; }
+  input, select, textarea { width: 100%; font: 400 1rem/1.4 var(--tekst); color: var(--mastilo); background: var(--papir); border: 1px solid #9AA59D; padding: 12px 13px; min-height: 48px; border-radius: 0; }
+  input::placeholder, textarea::placeholder { color: #75817A; font-family: var(--mono); font-size: .92rem; }
+  textarea { min-height: 110px; resize: vertical; }
+  input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--crvena); outline-offset: 0; border-color: var(--crvena); }
+  .poruka { padding: 12px 14px; border-left: 3px solid var(--crvena); background: var(--papir); }
+  .tel { font-family: var(--naslov); font-size: 2rem; text-decoration: none; display: inline-block; margin-top: 8px; }
+
+  footer { padding-block: 28px 40px; font-size: .9rem; color: var(--siva); }
+  footer .wrap { display: grid; gap: 8px; }
+  @media (min-width: 760px) { footer .wrap { grid-template-columns: 1fr auto; } }
+</style>
+</head>
+<body>
+
+<div class="primer"><div class="wrap"><span>Primer sajta · izradio opsforma</span><a href="../">Svi primeri</a></div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#pocetak" aria-label="Međa, geodetski biro, na vrh"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M15 2 L27 26 H3 Z" fill="none" stroke="#1D2823" stroke-width="2"/><circle cx="15" cy="18" r="3" fill="#C8352B"/></svg><b>Međa</b><span>geodetski biro</span></a>
+    <button class="meni-dugme" type="button" aria-expanded="false" aria-controls="glavni-meni">Meni</button>
+    <nav class="glavni" id="glavni-meni" aria-label="Glavni meni">
+      <ul>
+        <li><a href="#usluge">Usluge</a></li>
+        <li><a href="#cene">Cene</a></li>
+        <li><a href="#kako">Kako radimo</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="letva" aria-hidden="true"></div>
+
+<main id="pocetak">
+  <section class="hero" aria-labelledby="naslov">
+    <div class="wrap">
+      <div>
+        <p class="koord" aria-hidden="true">N 44° 47′ 31″ · E 20° 29′ 52″ · Vojislava Ilića 88</p>
+        <h1 id="naslov">Merimo, crtamo i <em>upisujemo u katastar.</em></h1>
+        <p class="uvod">Snimanje objekata, parcelacija, iskolčenje i obnova međa. Izlazimo na teren u celom Beogradu, a elaborat predajemo katastru umesto Vas.</p>
+        <div class="akcije">
+          <a class="dugme glavno" href="tel:+381600000811">Pozovite 060 000 08 11</a>
+          <a class="dugme" href="#kontakt">Pošaljite broj parcele</a>
+        </div>
+      </div>
+      <dl class="cinjenice">
+        <div><dt>Izlazak na teren</dt><dd>za 3–5 radnih dana</dd></div>
+        <div><dt>Elaborat za katastar</dt><dd>7–15 dana</dd></div>
+        <div><dt>Cena</dt><dd>unapred, pisano</dd></div>
+        <div><dt>Licenca</dt><dd>RGZ, geodetska org.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="blok" id="usluge" aria-labelledby="h-usluge">
+    <div class="wrap">
+      <div class="glava"><p class="oznaka">Usluge</p><h2 id="h-usluge">Šta radimo</h2><p class="podnaslov">Za vlasnike kuća i stanova, investitore i projektante. Ako niste sigurni šta Vam treba, pošaljite list nepokretnosti i reći ćemo Vam.</p></div>
+      <ul class="usluge">
+        <li><span class="kod">01</span><h3>Snimanje objekta</h3><p>Za upis kuće ili stana u katastar, legalizaciju ili prodaju. Merimo objekat i pravimo elaborat.</p></li>
+        <li><span class="kod">02</span><h3>Parcelacija i preparcelacija</h3><p>Deoba ili spajanje parcela, uz projekat i predaju katastru.</p></li>
+        <li><span class="kod">03</span><h3>Iskolčenje objekta</h3><p>Pre gradnje obeležavamo na placu gde tačno ide objekat, po građevinskoj dozvoli.</p></li>
+        <li><span class="kod">04</span><h3>Obnova i utvrđivanje međa</h3><p>Kad niste sigurni gde je granica sa komšijom. Obeležimo tačke belegama na terenu.</p></li>
+        <li><span class="kod">05</span><h3>Topografski snimak</h3><p>Plan placa sa visinama, za projektanta i lokacijske uslove.</p></li>
+        <li><span class="kod">06</span><h3>Zastupanje pred katastrom</h3><p>Predajemo zahteve, pratimo predmet i javljamo kad je upis gotov.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="blok" id="cene" aria-labelledby="h-cene">
+    <div class="wrap">
+      <div class="glava"><p class="oznaka">Cene</p><h2 id="h-cene">Okvirne cene</h2><p class="podnaslov">Tačnu cenu javljamo pisano, kad pogledamo list nepokretnosti i lokaciju.</p></div>
+      <table class="cene">
+        <caption class="sr">Okvirne cene geodetskih usluga</caption>
+        <tbody>
+          <tr><th scope="row">Snimanje kuće<small>do 150 m² osnove, sa elaboratom</small></th><td>od 30.000 RSD</td></tr>
+          <tr><th scope="row">Snimanje stana ili poslovnog prostora<small>posebni deo objekta</small></th><td>od 20.000 RSD</td></tr>
+          <tr><th scope="row">Iskolčenje objekta<small>do 8 tačaka</small></th><td>od 25.000 RSD</td></tr>
+          <tr><th scope="row">Parcelacija<small>deoba na dve parcele</small></th><td>od 45.000 RSD</td></tr>
+          <tr><th scope="row">Obnova međe<small>do 4 tačke, sa belegama</small></th><td>od 18.000 RSD</td></tr>
+          <tr><th scope="row">Topografski snimak<small>plac do 10 ari</small></th><td>od 25.000 RSD</td></tr>
+        </tbody>
+      </table>
+      <p class="napomena">Takse Republičkog geodetskog zavoda plaćaju se posebno, po važećem tarifniku. Izlazak van Beograda dogovaramo posebno.</p>
+    </div>
+  </section>
+
+  <section class="blok" id="kako" aria-labelledby="h-kako">
+    <div class="wrap">
+      <div class="glava"><p class="oznaka">Kako radimo</p><h2 id="h-kako">Od poziva do upisa</h2></div>
+      <ol class="koraci">
+        <li><h3>Pošaljete parcelu</h3><p>Broj katastarske parcele i opštinu, ili list nepokretnosti. Može i fotografija.</p></li>
+        <li><h3>Cena i dan</h3><p>Javljamo pisano cenu i dan izlaska na teren.</p></li>
+        <li><h3>Merenje</h3><p>Na terenu smo obično sat do dva. Ne morate biti prisutni ceo dan.</p></li>
+        <li><h3>Predaja</h3><p>Elaborat predajemo katastru i javljamo Vam kad je upisano.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="blok" id="kontakt" aria-labelledby="h-kontakt">
+    <div class="wrap dvokol">
+      <div>
+        <div class="glava"><p class="oznaka">Kontakt</p><h2 id="h-kontakt">Biro i radno vreme</h2></div>
+        <p>Vojislava Ilića 88, prizemlje<br>Zvezdara, Beograd</p>
+        <a class="tel" href="tel:+381600000811">060 000 08 11</a>
+        <table class="sati" aria-label="Radno vreme">
+          <tbody>
+            <tr data-dan="1"><th scope="row">Ponedeljak</th><td>08:00–16:00</td></tr>
+            <tr data-dan="2"><th scope="row">Utorak</th><td>08:00–16:00</td></tr>
+            <tr data-dan="3"><th scope="row">Sreda</th><td>08:00–16:00</td></tr>
+            <tr data-dan="4"><th scope="row">Četvrtak</th><td>08:00–16:00</td></tr>
+            <tr data-dan="5"><th scope="row">Petak</th><td>08:00–15:00</td></tr>
+            <tr data-dan="6"><th scope="row">Subota</th><td>teren po dogovoru</td></tr>
+            <tr data-dan="0"><th scope="row">Nedelja</th><td>zatvoreno</td></tr>
+          </tbody>
+        </table>
+        <div class="mapa"><iframe title="Mapa: Vojislava Ilića 88, Beograd" loading="lazy" src="https://maps.google.com/maps?q=Vojislava%20Ili%C4%87a%2088%2C%20Beograd&z=15&output=embed"></iframe></div>
+      </div>
+      <!--
+        PRODUKCIJA (Web3Forms): forma dobija action="https://api.web3forms.com/submit" method="POST"
+        i skriveno polje access_key (ključ vezan za mejl biroa). Poruka tada stiže direktno vlasniku.
+        U ovom primeru JS samo prikazuje napomenu.
+      -->
+      <form data-form="upit" novalidate>
+        <h3>Pošaljite upit</h3>
+        <div><label for="f-ime">Ime i prezime</label><input id="f-ime" name="ime" autocomplete="name"></div>
+        <div><label for="f-kontakt">Telefon ili mejl</label><input id="f-kontakt" name="kontakt" autocomplete="tel"></div>
+        <div><label for="f-vrsta">Šta Vam treba</label>
+          <select id="f-vrsta" name="vrsta">
+            <option value="">Izaberite</option>
+            <option>Snimanje objekta</option>
+            <option>Parcelacija</option>
+            <option>Iskolčenje</option>
+            <option>Obnova međe</option>
+            <option>Topografski snimak</option>
+            <option>Nisam siguran</option>
+          </select></div>
+        <div><label for="f-parcela">Parcela <small>(ako znate)</small></label><input id="f-parcela" name="parcela" placeholder="npr. KP 2417/3, KO Mirijevo"></div>
+        <div><label for="f-poruka">Poruka</label><textarea id="f-poruka" name="poruka"></textarea></div>
+        <div><button class="dugme glavno" type="submit">Pošaljite upit</button></div>
+        <p class="poruka" role="status" aria-live="polite" hidden></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Geodetski biro Međa, Vojislava Ilića 88, Beograd</span>
+    <span>Primer sajta · izradio opsforma · <a href="../">Svi primeri</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // izohipse u pozadini naslova: SVG napravljen u kodu (bez slike sa strane)
+  var p = '';
+  for (var i = 0; i < 9; i++) {
+    var r = 40 + i * 30, d = 'M' + (260 - r) + ' 260';
+    for (var a = 0; a <= 360; a += 20) {
+      var t = a * Math.PI / 180, k = r * (1 + 0.12 * Math.sin(3 * t + i * .7) + 0.06 * Math.cos(5 * t));
+      d += (a ? ' L' : ' M') + (260 + k * Math.cos(t)).toFixed(1) + ' ' + (260 + k * .78 * Math.sin(t)).toFixed(1);
+    }
+    p += '<path d="' + d + 'Z" fill="none" stroke="rgba(29,40,35,.09)" stroke-width="1.2"/>';
+  }
+  var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="520" height="520">' + p + '</svg>';
+  document.querySelector('.hero').style.setProperty('--izohipse', 'url("data:image/svg+xml,' + encodeURIComponent(svg) + '")');
+
+  var dugme = document.querySelector('.meni-dugme'), meni = document.getElementById('glavni-meni');
+  function postavi(o){ dugme.setAttribute('aria-expanded', String(o)); meni.classList.toggle('otvoren', o); }
+  dugme.addEventListener('click', function(){ postavi(dugme.getAttribute('aria-expanded') !== 'true'); });
+  meni.addEventListener('click', function(e){ if (e.target.closest('a')) postavi(false); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && dugme.getAttribute('aria-expanded') === 'true'){ postavi(false); dugme.focus(); } });
+
+  var red = document.querySelector('.sati tr[data-dan="' + new Date().getDay() + '"]'); if (red) red.classList.add('danas');
+
+  var forma = document.querySelector('form[data-form="upit"]');
+  forma.addEventListener('submit', function(e){
+    e.preventDefault();
+    var p = forma.querySelector('.poruka');
+    p.textContent = 'Ovo je primer sajta. Na pravom sajtu upit stiže direktno birou, sa brojem parcele.';
+    p.hidden = false;
+  });
+})();
+</script>
+</body>
+</html>
