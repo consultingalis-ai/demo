@@ -266,11 +266,20 @@
   });
 
   /* =====================================================================
-     IZBOR BOJE FOLIJE: ista fotografija, karoserija prebojena po maski
-     (R = karoserija, G = odsjaji na njoj). Isti postupak pravi i par
-     pre/posle u _izvor/brend/radovi.py.
+     IZBOR BOJE FOLIJE: ista fotografija, karoserija prebojena po slojevima
+     iz folija-maska.png (1280×1440): gore R = karoserija, G = senčenje laka,
+     B = odsjaj; dole R = senčenje za mat, G i B = razliveni odsjaj.
+     Nova boja = senčenje × boja folije + odsjaj (u linearnom svetlu); mat i
+     saten gase i razlivaju odsjaje. Isti postupak pravi par pre/posle u
+     _izvor/brend/radovi.py (razlozi, nova_boja).
      ===================================================================== */
-  var ZAVRSNI = { sjaj: [1, 0.9, 0], saten: [0.85, 0.6, 0.45], mat: [0.7, 0.35, 0.8], metalik: [1, 0.85, 0] };   // senke, svetla mesta, gašenje odsjaja
+  var LIN = new Float32Array(256), IZLAZ = null;
+  for (var li = 0; li < 256; li++) { var lv = li / 255; LIN[li] = lv <= 0.04045 ? lv / 12.92 : Math.pow((lv + 0.055) / 1.055, 2.4); }
+  function tablicaIzlaza() {   // linearno svetlo 0–4 → sRGB 0–255, svetli delovi se meko zasićuju
+    if (IZLAZ) return IZLAZ; IZLAZ = new Uint8ClampedArray(16384);
+    for (var k = 0; k < 16384; k++) { var x = k / 4096; if (x > 0.8) x = 0.8 + 0.2 * (1 - Math.exp(-(x - 0.8) / 0.2)); IZLAZ[k] = Math.round(255 * (x <= 0.0031308 ? x * 12.92 : 1.055 * Math.pow(x, 1 / 2.4) - 0.055)); }
+    return IZLAZ;
+  }
   function ucitajSliku(src) { return new Promise(function (ok, ne) { var im = new Image(); im.decoding = 'async'; im.onload = function () { ok(im); }; im.onerror = ne; im.src = src; }); }
   function izabrano(koren, ime) { var x = OF.$('input[name="' + ime + '"]:checked', koren); return x ? x.value : null; }
   function velicinaNaziv(id) { return OF.tx(S.velicina(id).naziv); }
@@ -285,9 +294,9 @@
     function pripremi() {
       if (priprema) return priprema;
       priprema = Promise.all([ucitajSliku(slika.currentSrc || slika.src), ucitajSliku(koren.getAttribute('data-maska'))]).then(function (x) {
-        var c = d.createElement('canvas'); c.width = platno.width; c.height = platno.height; var cx = c.getContext('2d');
-        cx.drawImage(x[0], 0, 0, c.width, c.height); osnova = cx.getImageData(0, 0, c.width, c.height);
-        cx.clearRect(0, 0, c.width, c.height); cx.drawImage(x[1], 0, 0, c.width, c.height); maska = cx.getImageData(0, 0, c.width, c.height).data;
+        var w = platno.width, h = platno.height, c = d.createElement('canvas'); c.width = w; c.height = h * 2; var cx = c.getContext('2d', { willReadFrequently: true });
+        cx.drawImage(x[0], 0, 0, w, h); osnova = cx.getImageData(0, 0, w, h);
+        cx.clearRect(0, 0, w, h * 2); cx.drawImage(x[1], 0, 0, w, h * 2); maska = cx.getImageData(0, 0, w, h * 2).data;
       });
       return priprema;
     }
@@ -302,25 +311,19 @@
       slika.alt = tekst('slikaAria', { boja: natpis.textContent });
       if (fab) { platno.hidden = true; return; }
       pripremi().then(function () {
-        var rgb = function (hx) { return [1, 3, 5].map(function (k) { return parseInt(hx.substr(k, 2), 16) / 255; }); };
-        var svetlina = function (c) { return c[0] * 0.299 + c[1] * 0.587 + c[2] * 0.114; };
-        var z = ZAVRSNI[zav] || ZAVRSNI.sjaj, met = zav === 'metalik', baza = rgb(bojaIn.getAttribute('data-boja')), Ly = svetlina(baza);
-        // fabrička boja na fotografiji je referenca: piksel te svetline dobija baš boju uzorka; svetle boje imaju mekše senke
-        var fabIn = OF.$('#kf-fabricka', koren), ref = fabIn ? svetlina(rgb(fabIn.getAttribute('data-boja'))) : 0.27;
-        var sr = ref - (ref - 0.12) * Ly, eSenka = z[0] * (1 - 0.45 * Ly), eSvetlo = z[1] * 0.9;
-        var ravno = baza.map(function (v) { return (v + (1 - v) * 0.08) * 255; });   // mat i saten: odsjaj se gasi u ravnu boju
-        var o = osnova.data, slikaNova = new ImageData(osnova.width, osnova.height), n = slikaNova.data, nova = [0, 0, 0];
-        for (var i = 0; i < o.length; i += 4) {
-          var t = maska[i] / 255, gs = maska[i + 1] / 255 * z[2], r = o[i], g = o[i + 1], b = o[i + 2];
-          if (t > 0.004) {
-            var sh = Math.max((r * 0.299 + g * 0.587 + b * 0.114) / 255 / sr, 0.001), f = Math.pow(sh, sh <= 1 ? eSenka : eSvetlo);
-            var beo = sh > 1.8 ? Math.min((sh - 1.8) / 3, 1) * z[1] * 0.7 : 0;   // jaki odsjaji idu ka beloj, kao na laku
-            var zrno = met ? 1 + (((i >> 2) * 2654435761 % 1000) / 1000 - 0.5) * 0.12 : 1;   // sitno zrno za metalik, uvek isto
-            for (var c = 0; c < 3; c++) { var v = (baza[c] * f * (1 - beo) + beo) * zrno; nova[c] = (v > 1 ? 1 : v) * 255; }
-            r = r * (1 - t) + nova[0] * t; g = g * (1 - t) + nova[1] * t; b = b * (1 - t) + nova[2] * t;
-          }
-          if (gs > 0.004) { r = r * (1 - gs) + ravno[0] * gs; g = g * (1 - gs) + ravno[1] * gs; b = b * (1 - gs) + ravno[2] * gs; }
-          n[i] = r; n[i + 1] = g; n[i + 2] = b; n[i + 3] = 255;
+        var hx = bojaIn.getAttribute('data-boja'), boja = [1, 3, 5].map(function (k) { return LIN[parseInt(hx.substr(k, 2), 16)]; });
+        var z = zav || 'sjaj', met = z === 'metalik', o = osnova.data, N = o.length, M = maska, iz = tablicaIzlaza();
+        var odsjajBoja = boja.map(function (v) { return met ? 0.75 + 0.5 * v : 1; });   // metalik malo boji odsjaje
+        var slikaNova = new ImageData(osnova.width, osnova.height), n = slikaNova.data; n.set(o);
+        for (var i = 0; i < N; i += 4) {
+          var a = M[i]; if (!a) continue;
+          var D = LIN[M[i + 1]] * 4, Sp = LIN[M[i + 2]], j = i + N, kb, kd;   // j: isti piksel u donjoj polovini maske
+          if (z === 'mat') { kb = LIN[M[j]] * 4; kd = 0.12 * LIN[M[j + 2]] + 0.004; }
+          else if (z === 'saten') { kb = 0.5 * D + 2 * LIN[M[j]]; kd = 0.2 * Sp + 0.3 * LIN[M[j + 1]]; }
+          else if (met) { kb = D * (1 + ((((i >> 2) * 2654435761) >>> 0) % 1000 / 1000 - 0.5) * 0.2); kd = Sp; }   // sitno zrno, uvek isto
+          else { kb = D; kd = Sp; }
+          var t = a / 255, ost = 1 - t;
+          for (var c = 0; c < 3; c++) { var q = (kb * boja[c] + kd * odsjajBoja[c]) * 4096; n[i + c] = o[i + c] * ost + iz[q > 16383 ? 16383 : q | 0] * t; }
         }
         platno.getContext('2d').putImageData(slikaNova, 0, 0); platno.hidden = false;
       }, function () { platno.hidden = true; });
